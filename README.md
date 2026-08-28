@@ -75,20 +75,25 @@ git clone https://github.com/IDEA-Research/Grounded-SAM-2.git third_party/Ground
 git clone https://github.com/Physical-Intelligence/openpi.git third_party/openpi
 
 # Install Grounded-SAM-2
+```bash
 cd third_party/Grounded-SAM-2
 pip install -e .
 cd ../..
-
+```
 # Install OpenPI
+```bash
 cd third_party/openpi
 pip install -e .
 cd ../..
-
+```
 ### 3. Replace the inference server script for remote VLA policy execution
-cp src/vla_execution/serve_api.py third_party/openpi/serve_api.py
-
+```bash
+python serve_api.py
+```
 #  Deploy the robot execution client for Agilex Piper
-cp src/robot_control/inference.py third_party/openpi/inference.py
+```bash
+uv run inference.py
+```
 
 ### 4.Script Functionality Overview:
 serve_api.py (VLA Inference Server): Hosts the fine-tuned π0.5 foundation policy on a dedicated GPU server. It continuously receives synchronized multi-camera RGB streams and natural-language prompts from the perception client, returning predicted action chunks.

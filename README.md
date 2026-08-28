@@ -21,9 +21,8 @@ This repository provides an end-to-end **tri-level shared-control architecture**
 3. **VLA Execution Module:** Fine-tunes **$\pi_{0.5}$ (via OpenPI)** policies, integrated with an **Asynchronous Action Smoother** (EMA filtering, deadband filtering, and motion interpolation) for continuous dual-arm manipulation (e.g., cloth folding and fruit sorting).
 
 <p align="center">
-  <img src="assets/pipeline.png" width="95%" alt="System Pipeline"/>
+<img width="2012" height="930" alt="image" src="https://github.com/user-attachments/assets/731df27f-6e1d-4537-b451-eaa0578b1a12" />
 </p>
-
 
 ---
 

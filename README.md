@@ -47,7 +47,7 @@ The project integrates the following core components:
 ---
 ## 📦 Installation & Setup
 
-### 1. Environment Preparation
+### Environment Preparation
 We recommend using Conda to manage environment dependencies.
 
 ```bash
@@ -59,7 +59,7 @@ conda activate bci-vla
 ```bash
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
 ```
-### 2. Clone the main repository
+### Clone the main repository
 ```bash
 git clone --recursive https://github.com/oyjt-hub/Scene-aware-BCI-VLA.git
 cd Scene-aware-BCI-VLA
@@ -86,7 +86,7 @@ cd third_party/openpi
 pip install -e .
 cd ../..
 ```
-### 3. Replace the inference server script for remote VLA policy execution
+### Replace the inference server script for remote VLA policy execution
 ```bash
 python serve_api.py
 ```
@@ -95,11 +95,11 @@ python serve_api.py
 uv run inference.py
 ```
 
-### 4.Script Functionality Overview:
+### Script Functionality Overview:
 serve_api.py (VLA Inference Server): Hosts the fine-tuned π0.5 foundation policy on a dedicated GPU server. It continuously receives synchronized multi-camera RGB streams and natural-language prompts from the perception client, returning predicted action chunks.
 inference.py (Robot Deployment Client): Executes on the local host machine connected to the Agilex Piper 14-DoF dual-arm robot. It handles real-time action consumption, temporal motion smoothing, deadband gripper filtering, and linear interpolation for continuous physical execution.
 
-### 5. Hardware Configuration & EEG Customization
+### Hardware Configuration & EEG Customization
 info
 Adapting to Custom EEG Hardware:
 In our paper, online EEG decoding was validated using a 9-channel Neuracle (NeuSenW) wireless acquisition system at 1000 Hz.

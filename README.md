@@ -67,12 +67,9 @@ cd Scene-aware-BCI-VLA
 
 # Clone upstream dependencies
 ```bash
-git clone https://github.com/IDEA-Research/Grounded-SAM-2.git third_party/Grounded-SAM-2
-git clone https://github.com/Physical-Intelligence/openpi.git third_party/openpi
+git clone https://github.com/IDEA-Research/Grounded-SAM-2.git
+git clone https://github.com/Physical-Intelligence/openpi.git
 ```
-# Clone upstream dependencies
-git clone https://github.com/IDEA-Research/Grounded-SAM-2.git third_party/Grounded-SAM-2
-git clone https://github.com/Physical-Intelligence/openpi.git third_party/openpi
 
 # Install Grounded-SAM-2
 ```bash

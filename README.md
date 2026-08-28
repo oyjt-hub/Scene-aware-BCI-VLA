@@ -58,17 +58,13 @@ conda activate bci-vla
 # Install PyTorch with appropriate CUDA support
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
 
-# Clone the main repository
+### 2. Clone the main repository
 git clone --recursive https://github.com/oyjt-hub/Scene-aware-BCI-VLA.git
 cd Scene-aware-BCI-VLA
 
 # Clone upstream dependencies
 git clone https://github.com/IDEA-Research/Grounded-SAM-2.git third_party/Grounded-SAM-2
 git clone https://github.com/Physical-Intelligence/openpi.git third_party/openpi
-
-# Clone the main repository
-git clone --recursive https://github.com/oyjt-hub/Scene-aware-BCI-VLA.git
-cd Scene-aware-BCI-VLA
 
 # Clone upstream dependencies
 git clone https://github.com/IDEA-Research/Grounded-SAM-2.git third_party/Grounded-SAM-2
@@ -84,17 +80,17 @@ cd third_party/openpi
 pip install -e .
 cd ../..
 
-# 1. Replace the inference server script for remote VLA policy execution
+### 3. Replace the inference server script for remote VLA policy execution
 cp src/vla_execution/serve_api.py third_party/openpi/serve_api.py
 
-# 2. Deploy the robot execution client for Agilex Piper
+#  Deploy the robot execution client for Agilex Piper
 cp src/robot_control/inference.py third_party/openpi/inference.py
 
-Script Functionality Overview:
+### 4.Script Functionality Overview:
 serve_api.py (VLA Inference Server): Hosts the fine-tuned π0.5 foundation policy on a dedicated GPU server. It continuously receives synchronized multi-camera RGB streams and natural-language prompts from the perception client, returning predicted action chunks.
 inference.py (Robot Deployment Client): Executes on the local host machine connected to the Agilex Piper 14-DoF dual-arm robot. It handles real-time action consumption, temporal motion smoothing, deadband gripper filtering, and linear interpolation for continuous physical execution.
 
-4. Hardware Configuration & EEG Customization
+### 5. Hardware Configuration & EEG Customization
 info
 Adapting to Custom EEG Hardware:
 In our paper, online EEG decoding was validated using a 9-channel Neuracle (NeuSenW) wireless acquisition system at 1000 Hz.

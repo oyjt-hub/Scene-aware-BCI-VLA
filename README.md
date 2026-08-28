@@ -93,11 +93,11 @@ uv run inference.py
 ```
 
 ### Script Functionality Overview:
-serve_api.py (VLA Inference Server): Hosts the fine-tuned π0.5 foundation policy on a dedicated GPU server. It continuously receives synchronized multi-camera RGB streams and natural-language prompts from the perception client, returning predicted action chunks.
-inference.py (Robot Deployment Client): Executes on the local host machine connected to the Agilex Piper 14-DoF dual-arm robot. It handles real-time action consumption, temporal motion smoothing, deadband gripper filtering, and linear interpolation for continuous physical execution.
+**serve_api.py**: Hosts the fine-tuned π0.5 foundation policy on a dedicated GPU server. It continuously receives synchronized multi-camera RGB streams and natural-language prompts from the perception client, returning predicted action chunks.
+**inference.py**: Executes on the local host machine connected to the Agilex Piper 14-DoF dual-arm robot. It handles real-time action consumption, temporal motion smoothing, deadband gripper filtering, and linear interpolation for continuous physical execution.
 
 ### Hardware Configuration & EEG Customization
 info
-Adapting to Custom EEG Hardware:
+**Adapting to Custom EEG Hardware**:
 In our paper, online EEG decoding was validated using a 9-channel Neuracle (NeuSenW) wireless acquisition system at 1000 Hz.
 Please adapt or write the real-time EEG streaming interface to match your specific EEG hardware SDK.

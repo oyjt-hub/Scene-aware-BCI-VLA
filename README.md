@@ -32,7 +32,7 @@ The project integrates the following core components:
 * **Perception:** [Grounded-SAM-2](https://github.com/IDEA-Research/Grounded-SAM-2) (Florence-2-large + SAM-2-hiera-large) for dynamic target extraction and visual mask rendering.
 * **BCI Decoding:** 11-channel EEG acquisition (Neuracle NeuSenW) decoded via Filter Bank Canonical Correlation Analysis (FBCCA).
 * **Cognitive Middleware:** Gemini-2.5-flash for intent disambiguation and task instruction synthesis.
-* **Embodied Policy:** [OpenPI ($\pi_{0.5}$)](https://github.com/Physical-Intelligence/openpi) for real-world dual-arm execution & [StarVLA](https://github.com/starvla/starvla) for simulation.
+* **Embodied Policy:** [OpenPI](https://github.com/Physical-Intelligence/openpi) for real-world dual-arm execution & [StarVLA](https://github.com/starvla/starvla) for simulation.
 * **Kinematic Layer:** Asynchronous producer-consumer control thread with receding horizon ($H=50$) and temporal Exponential Moving Average ($\beta=0.35$).
 
 ---
@@ -45,13 +45,57 @@ The project integrates the following core components:
 * **Compute:** At least 48GB for inference and 100GB for fine-turning.
 
 ---
+## 📦 Installation & Setup
 
-## 📦 Installation
+### 1. Environment Preparation
+We recommend using Conda to manage environment dependencies.
 
-### 1. Clone the repository and submodules
 ```bash
+# Create and activate a clean conda environment
+conda create -n bci-vla python=3.10 -y
+conda activate bci-vla
+
+# Install PyTorch with appropriate CUDA support
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+
+# Clone the main repository
 git clone --recursive https://github.com/oyjt-hub/Scene-aware-BCI-VLA.git
 cd Scene-aware-BCI-VLA
 
-# If you haven't cloned submodules recursively:
-git submodule update --init --recursive
+# Clone upstream dependencies
+git clone https://github.com/IDEA-Research/Grounded-SAM-2.git third_party/Grounded-SAM-2
+git clone https://github.com/Physical-Intelligence/openpi.git third_party/openpi
+
+# Clone the main repository
+git clone --recursive https://github.com/oyjt-hub/Scene-aware-BCI-VLA.git
+cd Scene-aware-BCI-VLA
+
+# Clone upstream dependencies
+git clone https://github.com/IDEA-Research/Grounded-SAM-2.git third_party/Grounded-SAM-2
+git clone https://github.com/Physical-Intelligence/openpi.git third_party/openpi
+
+# Install Grounded-SAM-2
+cd third_party/Grounded-SAM-2
+pip install -e .
+cd ../..
+
+# Install OpenPI
+cd third_party/openpi
+pip install -e .
+cd ../..
+
+# 1. Replace the inference server script for remote VLA policy execution
+cp src/vla_execution/serve_api.py third_party/openpi/serve_api.py
+
+# 2. Deploy the robot execution client for Agilex Piper
+cp src/robot_control/inference.py third_party/openpi/inference.py
+
+Script Functionality Overview:
+serve_api.py (VLA Inference Server): Hosts the fine-tuned π0.5 foundation policy on a dedicated GPU server. It continuously receives synchronized multi-camera RGB streams and natural-language prompts from the perception client, returning predicted action chunks.
+inference.py (Robot Deployment Client): Executes on the local host machine connected to the Agilex Piper 14-DoF dual-arm robot. It handles real-time action consumption, temporal motion smoothing, deadband gripper filtering, and linear interpolation for continuous physical execution.
+
+4. Hardware Configuration & EEG Customization
+info
+Adapting to Custom EEG Hardware:
+In our paper, online EEG decoding was validated using a 9-channel Neuracle (NeuSenW) wireless acquisition system at 1000 Hz.
+Please adapt or write the real-time EEG streaming interface to match your specific EEG hardware SDK.

@@ -18,17 +18,12 @@ Deploying Vision-Language-Action (VLA) foundation models in assistive robotics f
 This repository provides an end-to-end **tri-level shared-control architecture**:
 1. **Scene-Aware Visual Interface:** Uses **Florence-2** and **Grounded-SAM-2** to extract candidate targets and dynamically overlays multi-frequency SSVEP flickering masks directly on actionable objects.
 2. **Context-Aware Reasoning Module:** Decodes sparse EEG selections via **FBCCA** and prompts an LLM (**Gemini-2.5-flash**) with scene context to infer precise manipulation instructions.
-3. **VLA Execution Module:** Fine-tunes **$\pi_{0.5}$ (via OpenPI)** and **StarVLA** policies, integrated with an **Asynchronous Action Smoother** (EMA filtering, deadband filtering, and motion interpolation) for continuous dual-arm manipulation (e.g., cloth folding and fruit sorting).
+3. **VLA Execution Module:** Fine-tunes **$\pi_{0.5}$ (via OpenPI)** policies, integrated with an **Asynchronous Action Smoother** (EMA filtering, deadband filtering, and motion interpolation) for continuous dual-arm manipulation (e.g., cloth folding and fruit sorting).
 
 <p align="center">
   <img src="assets/pipeline.png" width="95%" alt="System Pipeline"/>
 </p>
 
-### 🚀 Key Highlights
-- **Ultra-Low User Effort:** Reduces Human Effort Ratio (HER) down to **4.0%**, completing tasks with only **1 to 3 discrete BCI triggers**.
-- **Deformable Object Manipulation:** Expands BCI-robot manipulation from rigid pick-and-place to high-DoF deformable object tasks (e.g., dual-arm cloth folding).
-- **High Success Rate:** Achieves **96.0%** success rate across 10 simulation tasks on the LIBERO-Goal benchmark.
-- **Low Cognitive Workload:** Verified by NASA-TLX subjective evaluations (averaging between 1.4 and 3.6 across all dimensions).
 
 ---
 

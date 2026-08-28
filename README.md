@@ -54,18 +54,22 @@ We recommend using Conda to manage environment dependencies.
 # Create and activate a clean conda environment
 conda create -n bci-vla python=3.10 -y
 conda activate bci-vla
-
+```
 # Install PyTorch with appropriate CUDA support
+```bash
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
-
+```
 ### 2. Clone the main repository
+```bash
 git clone --recursive https://github.com/oyjt-hub/Scene-aware-BCI-VLA.git
 cd Scene-aware-BCI-VLA
+```
 
 # Clone upstream dependencies
+```bash
 git clone https://github.com/IDEA-Research/Grounded-SAM-2.git third_party/Grounded-SAM-2
 git clone https://github.com/Physical-Intelligence/openpi.git third_party/openpi
-
+```
 # Clone upstream dependencies
 git clone https://github.com/IDEA-Research/Grounded-SAM-2.git third_party/Grounded-SAM-2
 git clone https://github.com/Physical-Intelligence/openpi.git third_party/openpi

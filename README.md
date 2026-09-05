@@ -26,11 +26,8 @@ This repository provides an end-to-end **tri-level shared-control architecture**
 
 ---
 
-<p align="center">
-  <video src="https://github.com/user-attachments/assets/0945ad3f-e3a9-48cb-a4dd-8e2bd7b8d0d1" autoplay loop muted playsinline width="100%">
-  </video>
-</p>
 
+video src="https://github.com/user-attachments/assets/0945ad3f-e3a9-48cb-a4dd-8e2bd7b8d0d1
 
 
 

@@ -25,11 +25,14 @@ This repository provides an end-to-end **tri-level shared-control architecture**
 </p>
 
 ---
-<center>
-  <video src="https://github.com/user-attachments/assets/0945ad3f-e3a9-48cb-a4dd-8e2bd7b8d0d1" width="85%" autoplay loop muted playsinline controls>
-  </video>
-</center>
-
+<table align="center" style="border: none; background: transparent;">
+  <tr style="border: none; background: transparent;">
+    <td align="center" style="border: none; background: transparent;">
+      <video src="https://github.com/user-attachments/assets/0945ad3f-e3a9-48cb-a4dd-8e2bd7b8d0d1" width="85%" autoplay loop muted playsinline controls>
+      </video>
+    </td>
+  </tr>
+</table>
 ## 🏗️ System Architecture & Submodules
 
 The project integrates the following core components:

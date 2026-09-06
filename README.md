@@ -56,7 +56,7 @@ The project integrates the following core components:
 ## 🛠️ Hardware Requirements
 
 * **Dual-Arm Platform:** Agilex Piper 14-DoF dual-arm collaborative robot.
-* **RGB-D Vision:** 3$\times$ Intel RealSense D435i cameras (1 overhead global view, 2 wrist-mounted views).
+* **RGB-D Vision:** 3 Intel RealSense D435i cameras (1 overhead global view, 2 wrist-mounted views).
 * **EEG Acquisition:** Neuracle NeuSenW wireless EEG system (Sampling rate: 1000 Hz; Channels: Fp1, Fp2, Pz, PO5, PO3, POz, PO4, PO6, O1, Oz, O2).
 * **Compute:** At least 48GB for inference and 100GB for fine-turning.
 

@@ -18,7 +18,7 @@ Deploying Vision-Language-Action (VLA) foundation models in assistive robotics f
 This repository provides an end-to-end **tri-level shared-control architecture**:
 1. **Scene-Aware Visual Interface:** Uses **Florence-2** and **Grounded-SAM-2** to extract candidate targets and dynamically overlays multi-frequency SSVEP flickering masks directly on actionable objects.
 2. **Context-Aware Reasoning Module:** Decodes sparse EEG selections via **FBCCA** and prompts an LLM (**Gemini-2.5-flash**) with scene context to infer precise manipulation instructions.
-3. **VLA Execution Module:** Fine-tunes **$\pi_{0.5}$ (via OpenPI)** policies, integrated with an **Asynchronous Action Smoother** (EMA filtering, deadband filtering, and motion interpolation) for continuous dual-arm manipulation (e.g., cloth folding and fruit sorting).
+3. **VLA Execution Module:** Fine-tunes **$\pi_{0.5}$ ** policies, integrated with an **Asynchronous Action Smoother** (EMA filtering, deadband filtering, and motion interpolation) for continuous dual-arm manipulation .
 
 <p align="center">
 <img width="2012" height="930" alt="image" src="https://github.com/user-attachments/assets/731df27f-6e1d-4537-b451-eaa0578b1a12" />

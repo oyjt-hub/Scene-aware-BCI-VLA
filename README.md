@@ -33,7 +33,7 @@ This repository provides an end-to-end **tri-level shared-control architecture**
     </td>
   </tr>
 </table>
-## 🏗️ System Architecture & Submodules
+
 <table align="center" style="border: none; background: transparent;">
   <tr style="border: none; background: transparent;">
     <td align="center" style="border: none; background: transparent;">
@@ -43,11 +43,7 @@ This repository provides an end-to-end **tri-level shared-control architecture**
   </tr>
 </table>
 
-
-
-
-
-
+## 🏗️ System Architecture & Submodules
 The project integrates the following core components:
 * **Perception:** [Grounded-SAM-2](https://github.com/IDEA-Research/Grounded-SAM-2) (Florence-2-large + SAM-2-hiera-large) for dynamic target extraction and visual mask rendering.
 * **BCI Decoding:** 11-channel EEG acquisition (Neuracle NeuSenW) decoded via Filter Bank Canonical Correlation Analysis (FBCCA).

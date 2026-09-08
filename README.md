@@ -10,6 +10,7 @@
 > **Authors:** Jun Song, Jietong Ouyang, Jason J. R. Liu, Hak-Keung Lam, Shuping He, Changyin Sun.
 
 ---
+[![Demo](https://img.shields.io/badge/Demo-Bilibili-FB7299?logo=bilibili&logoColor=white)](https://www.bilibili.com/video/BV1zHYH6VEew/)
 
 ## 🌟 Overview
 
@@ -25,23 +26,7 @@ This repository provides an end-to-end **tri-level shared-control architecture**
 </p>
 
 ---
-<table align="center" style="border: none; background: transparent;">
-  <tr style="border: none; background: transparent;">
-    <td align="center" style="border: none; background: transparent;">
-      <video src="https://github.com/user-attachments/assets/0945ad3f-e3a9-48cb-a4dd-8e2bd7b8d0d1" width="85%" autoplay loop muted playsinline controls>
-      </video>
-    </td>
-  </tr>
-</table>
 
-<table align="center" style="border: none; background: transparent;">
-  <tr style="border: none; background: transparent;">
-    <td align="center" style="border: none; background: transparent;">
-      <video src="https://github.com/user-attachments/assets/f10198b5-28d2-43c7-9d83-6b3de0ec413f" width="85%" autoplay loop muted playsinline controls>
-      </video>
-    </td>
-  </tr>
-</table>
 
 ## 🏗️ System Architecture & Submodules
 The project integrates the following core components:

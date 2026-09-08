@@ -10,7 +10,7 @@
 > **Authors:** Jun Song, Jietong Ouyang, Jason J. R. Liu, Hak-Keung Lam, Shuping He, Changyin Sun.
 
 ---
-[![Demo](https://img.shields.io/badge/Demo-Bilibili-FB7299?logo=bilibili&logoColor=white)](https://www.bilibili.com/video/BV1zHYH6VEew/)
+[![Demo](https://img.shields.io/badge/Demo-Bilibili-FB7299?logo=bilibili&logoColor=white)](https://www.bilibili.com/video/BV1YaYH6iESB/?spm_id_from=333.1387.homepage.video_card.click&vd_source=628cfed84bbf2057bb65b782c484b8b6)
 
 ## 🌟 Overview
 

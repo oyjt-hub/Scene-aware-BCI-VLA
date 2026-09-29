@@ -1,13 +1,27 @@
-cat << 'EOF' > .gitignore
+# Python
 __pycache__/
 *.pyc
+*.egg-info/
+.venv/
+.env
+
+# Model weights & checkpoints
+checkpoints/
 *.pth
 *.pt
 *.bin
-*.h5
-*.log
-.env
-checkpoints/
+*.safetensors
+*.ckpt
+*.onnx
+
+# Data & outputs
 data/
 outputs/
-EOF
+cv_features/
+exp_logs/
+sav_dataset/
+wandb/
+*.log
+
+# Compiled artifacts
+*.so

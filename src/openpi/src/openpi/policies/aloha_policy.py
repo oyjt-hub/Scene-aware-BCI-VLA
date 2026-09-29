@@ -1,0 +1,222 @@
+import dataclasses
+from typing import ClassVar
+
+import einops
+import numpy as np
+import math
+from openpi import transforms
+
+
+def make_aloha_example() -> dict:
+    """Creates a random input example for the Aloha policy."""
+    return {
+        "state": np.ones((14,)),
+        "images": {
+            "cam_high": np.random.randint(256, size=(3, 224, 224), dtype=np.uint8),
+            "cam_low": np.random.randint(256, size=(3, 224, 224), dtype=np.uint8),
+            "cam_left_wrist": np.random.randint(256, size=(3, 224, 224), dtype=np.uint8),
+            "cam_right_wrist": np.random.randint(256, size=(3, 224, 224), dtype=np.uint8),
+        },
+        "prompt": "do something",
+    }
+
+
+@dataclasses.dataclass(frozen=True)
+class AlohaInputs(transforms.DataTransformFn):
+    """Inputs for the Aloha policy.
+
+    Expected inputs:
+    - images: dict[name, img] where img is [channel, height, width]. name must be in EXPECTED_CAMERAS.
+    - state: [14]
+    - actions: [action_horizon, 14]
+    """
+
+    # If true, this will convert the joint and gripper values from the standard Aloha space to
+    # the space used by the pi internal runtime which was used to train the base model.
+    adapt_to_pi: bool = True
+
+    # The expected cameras names. All input cameras must be in this set. Missing cameras will be
+    # replaced with black images and the corresponding `image_mask` will be set to False.
+    EXPECTED_CAMERAS: ClassVar[tuple[str, ...]] = ("cam_high", "cam_low", "cam_left_wrist", "cam_right_wrist")
+
+    def __call__(self, data: dict) -> dict:
+        data = _decode_aloha(data, adapt_to_pi=self.adapt_to_pi)
+
+        in_images = data["images"]
+        if set(in_images) - set(self.EXPECTED_CAMERAS):
+            raise ValueError(f"Expected images to contain {self.EXPECTED_CAMERAS}, got {tuple(in_images)}")
+
+        # Assume that base image always exists.
+        base_image = in_images["cam_high"]
+
+        images = {
+            "base_0_rgb": base_image,
+        }
+        image_masks = {
+            "base_0_rgb": np.True_,
+        }
+
+        # Add the extra images.
+        extra_image_names = {
+            "left_wrist_0_rgb": "cam_left_wrist",
+            "right_wrist_0_rgb": "cam_right_wrist",
+        }
+        for dest, source in extra_image_names.items():
+            if source in in_images:
+                images[dest] = in_images[source]
+                image_masks[dest] = np.True_
+            else:
+                images[dest] = np.zeros_like(base_image)
+                image_masks[dest] = np.False_
+
+        inputs = {
+            "image": images,
+            "image_mask": image_masks,
+            "state": data["state"],
+        }
+
+        # Actions are only available during training.
+        if "actions" in data:
+            actions = np.asarray(data["actions"])
+            actions = _encode_actions_inv(actions, adapt_to_pi=self.adapt_to_pi)
+            inputs["actions"] = actions
+
+        if "prompt" in data:
+            inputs["prompt"] = data["prompt"]
+
+        return inputs
+
+
+@dataclasses.dataclass(frozen=True)
+class AlohaOutputs(transforms.DataTransformFn):
+    """Outputs for the Aloha policy."""
+
+    # If true, this will convert the joint and gripper values from the standard Aloha space to
+    # the space used by the pi internal runtime which was used to train the base model.
+    adapt_to_pi: bool = True
+
+    def __call__(self, data: dict) -> dict:
+        # Only return the first 14 dims.
+        actions = np.asarray(data["actions"][:, :14])
+        return {"actions": _encode_actions(actions, adapt_to_pi=self.adapt_to_pi)}
+
+
+def _joint_flip_mask() -> np.ndarray:
+    """Used to convert between aloha and pi joint angles."""
+    return np.array([1, -1, -1, 1, 1, 1, 1, 1, -1, -1, 1, 1, 1, 1])
+
+
+def _normalize(x, min_val, max_val):
+    return (x - min_val) / (max_val - min_val)
+
+
+def _unnormalize(x, min_val, max_val):
+    return x * (max_val - min_val) + min_val
+
+def _gripper_to_angular(width):
+
+    x_dm = np.clip(width / 2 + 0.15, 0.15, 0.85)
+    x = x_dm * 100 
+
+    term = (x**2 - 299) / (46 * np.sqrt(x**2 + 196))
+    term = np.clip(term, -1.0, 1.0)  
+    angle_rad = np.arctan2(14, x) + np.arccos(term)
+
+    normalized_angle = _normalize(angle_rad, min_val=0.6716, max_val=2.4002)
+    return normalized_angle
+
+def _gripper_from_angular(model_action):
+    # 1. 还原弧度 (r=23, l=32, h=14)
+    theta = _unnormalize(model_action, 0.6716, 2.4002)
+    
+    # 2. 计算 x_mm (偏置滑块正解公式)
+    # 1024 是 32^2，使用 maximum(..., 0) 防止根号下出现极小负数
+    x_mm = 23 * np.cos(theta) + np.sqrt(np.maximum(1024 - (14 - 23 * np.sin(theta))**2, 0))
+    
+    # 3. 转回宽度 (dm)
+    return np.clip((x_mm / 100 - 0.15) * 2, 0.0, 0.7)
+
+# --- 3. 逆运算函数 (数据集 -> 模型输入) ---
+def _gripper_from_angular_inv(opening_width_dm):
+    """
+    将物理宽度转为模型所需的 0-1 输入。
+    实际上就是调用 _gripper_to_angular。
+    """
+    return _gripper_to_angular(opening_width_dm)
+
+# MIN_WIDTH = 0.0
+# MAX_WIDTH = 0.7
+
+# # --- 1. 数据集 -> 模型输入 (反向) ---
+# def _gripper_to_angular(width):
+#     """
+#     输入: 0.0 (闭合) -> 输出: 1.0
+#     输入: 0.7 (张开) -> 输出: 0.0
+#     """
+#     # 先归一化到 0-1
+#     norm = np.clip((width - MIN_WIDTH) / (MAX_WIDTH - MIN_WIDTH), 0.0, 1.0)
+#     # 然后反转
+#     return 1.0 - norm
+
+# # --- 2. 模型输出 -> 物理执行 (反向) ---
+# def _gripper_from_angular(model_action):
+#     """
+#     输入: 1.0 -> 输出: 0.0 (闭合)
+#     输入: 0.0 -> 输出: 0.7 (张开)
+#     """
+#     # 先反转回来
+#     inverted_action = 1.0 - model_action
+#     # 再还原物理数值
+#     return inverted_action * (MAX_WIDTH - MIN_WIDTH) + MIN_WIDTH
+
+# # --- 3. 逆运算函数 (数据集 -> 模型输入) ---
+# def _gripper_from_angular_inv(opening_width_dm):
+#     """
+#     将物理宽度转为模型所需的 0-1 输入。
+#     实际上就是调用 _gripper_to_angular。
+#     """
+#     return _gripper_to_angular(opening_width_dm)
+
+def _decode_aloha(data: dict, *, adapt_to_pi: bool = False) -> dict:
+
+    state = np.asarray(data["state"])
+    state = _decode_state(state, adapt_to_pi=adapt_to_pi)
+
+    def convert_image(img):
+        img = np.asarray(img)
+        # Convert to uint8 if using float images.
+        if np.issubdtype(img.dtype, np.floating):
+            img = (255 * img).astype(np.uint8)
+        # Convert from [channel, height, width] to [height, width, channel].
+        return einops.rearrange(img, "c h w -> h w c")
+
+    images = data["images"]
+    images_dict = {name: convert_image(img) for name, img in images.items()}
+
+    data["images"] = images_dict
+    data["state"] = state
+    return data
+
+
+def _decode_state(state: np.ndarray, *, adapt_to_pi: bool = False) -> np.ndarray:
+    if adapt_to_pi:
+        # Flip the joints.
+        state = _joint_flip_mask() * state
+        # Reverse the gripper transformation that is being applied by the Aloha runtime.
+        state[[6, 13]] = _gripper_to_angular(state[[6, 13]])
+    return state
+
+
+def _encode_actions(actions: np.ndarray, *, adapt_to_pi: bool = False) -> np.ndarray:
+    if adapt_to_pi:
+        # Flip the joints.
+        actions = _joint_flip_mask() * actions
+        actions[:, [6, 13]] = _gripper_from_angular(actions[:, [6, 13]])
+    return actions
+
+
+def _encode_actions_inv(actions: np.ndarray, *, adapt_to_pi: bool = False) -> np.ndarray:
+    if adapt_to_pi:
+        actions = _joint_flip_mask() * actions
+        actions[:, [6, 13]] = _gripper_from_angular_inv(actions[:, [6, 13]])
+    return actions

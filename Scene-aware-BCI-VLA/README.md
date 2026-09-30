@@ -1,4 +1,8 @@
-# Scene-aware-BCI-VLA
-Please pull the following base.
-git clone https://github.com/Physical-Intelligence/openpi.git
-git clone https://github.com/IDEA-Research/Grounded-SAM-2.git
+# Scene-aware-BCI-VLA — BCI Decoding Module
+
+This directory implements the SSVEP-BCI decoding stage of the project:
+SSVEP flicker stimulation (`triggerBox.py`), EEG acquisition (`interface.py`),
+frequency decoding (`fbcca.py`), and raw dataset construction (`creat_raw_data.py`).
+
+See the [main README](../README.md) for the full project documentation,
+architecture overview, and setup instructions.

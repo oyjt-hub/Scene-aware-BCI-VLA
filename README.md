@@ -100,7 +100,7 @@ A modified fork of [IDEA-Research/Grounded-SAM-2](https://github.com/IDEA-Resear
 | `scripts/robot/SSVEP_inference.py` | SSVEP online-control variant with Gemini-based scene reasoning (`USE_LLM` ablation switch). |
 | `scripts/bci/` | EEG streaming (`dataServer.py`), BCI mapping (`BCIMAP.py`), and decoding utilities on the robot side. |
 | `scripts/training/` | Fine-tuning and normalization-statistics scripts (`train*.py`, `serve_policy.py`, `compute_norm_stats.py`). |
-| `scripts/data_tools/` | Dataset conversion to LeRobot format (`convert_to_lerobot.py`, `ros_to_lerobot.py`). |
+| `scripts/data_tools/` | Dataset conversion to LeRobot format (`convert_to_lerobot.py`, `ros_to_lerobot.py`) and inference-log duration analysis (`check.py`). |
 | `scripts/docker/` | Dockerfile / compose files for reproducible policy serving. |
 
 ---

@@ -1,0 +1,174 @@
+{
+  "checkpoint_candidates": [
+    {
+      "path": "/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/checkpoints/uniform",
+      "exists": true,
+      "children": [
+        {
+          "name": "uniform24_horizon100_0326",
+          "is_directory": true,
+          "children": [
+            "1000",
+            "10000",
+            "11000",
+            "12000",
+            "13000",
+            "14000",
+            "15000",
+            "16000",
+            "17000",
+            "18000",
+            "19000",
+            "2000"
+          ]
+        },
+        {
+          "name": "uniform_horizon100_0320",
+          "is_directory": true,
+          "children": [
+            "1000",
+            "10000",
+            "11000",
+            "12000",
+            "13000",
+            "14000",
+            "15000",
+            "16000",
+            "17000",
+            "18000",
+            "19000",
+            "2000"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/checkpoints/uniform_rtc_v2",
+      "exists": true,
+      "children": [
+        {
+          "name": "uniform24_rtc_v2",
+          "is_directory": true,
+          "children": [
+            "10000",
+            "5000",
+            "wandb_id.txt"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/checkpoints/uniform_table_rtc_v2",
+      "exists": true,
+      "children": [
+        {
+          "name": "uniform24_table_rtc_v2",
+          "is_directory": true,
+          "children": [
+            "10000",
+            "15000",
+            "19999",
+            "wandb_id.txt"
+          ]
+        },
+        {
+          "name": "uniform24_table_rtc_v2_clean_20261008",
+          "is_directory": true,
+          "children": [
+            "10000",
+            "15000",
+            "20000",
+            "25000",
+            "5000"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/checkpoints/uniform_table_rtc_v2_pruned16",
+      "exists": true,
+      "children": [
+        {
+          "name": "19999",
+          "is_directory": true,
+          "children": [
+            "assets",
+            "params",
+            "pruning.json"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/checkpoints/cloth",
+      "exists": true,
+      "children": [
+        {
+          "name": "cloth_horizon100_0320",
+          "is_directory": true,
+          "children": [
+            "1000",
+            "10000",
+            "11000",
+            "12000",
+            "13000",
+            "14000",
+            "15000",
+            "16000",
+            "17000",
+            "18000",
+            "19000",
+            "2000"
+          ]
+        },
+        {
+          "name": "cloth_horizon25_0319",
+          "is_directory": true,
+          "children": [
+            "1000",
+            "10000",
+            "11000",
+            "12000",
+            "13000",
+            "14000",
+            "15000",
+            "16000",
+            "17000",
+            "18000",
+            "19000",
+            "2000"
+          ]
+        }
+      ]
+    }
+  ],
+  "dataset_info": {
+    "path": "/home/oyjt/.cache/huggingface/lerobot/oy/uniform24_v21/meta/info.json",
+    "exists": true,
+    "sha256": "24543e976f8f7c33a066de38e4dd1affaf6e69ca20ce29aacf5dd1327fb80868",
+    "summary": {
+      "codebase_version": "v2.1",
+      "robot_type": "bi_piper_follower",
+      "total_episodes": 24,
+      "total_frames": 38944,
+      "total_tasks": 1,
+      "fps": 30,
+      "splits": {
+        "train": "0:24"
+      }
+    },
+    "feature_keys": [
+      "action",
+      "observation.state",
+      "observation.images.front",
+      "observation.images.left",
+      "observation.images.right",
+      "timestamp",
+      "frame_index",
+      "episode_index",
+      "index",
+      "task_index"
+    ]
+  },
+  "final_git_status": ""
+}

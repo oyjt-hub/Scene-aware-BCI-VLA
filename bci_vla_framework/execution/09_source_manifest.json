@@ -1,0 +1,148 @@
+{
+  "date": "2026-10-16",
+  "plan_version": "V2",
+  "step_id": "09",
+  "scope": "offline_illustrative_diagnostic_policy",
+  "files": [
+    {
+      "path": "D:\\Scene_Aware\\BCI_VLA通用交互框架_逐步执行手册.txt",
+      "kind": "input",
+      "sha256": "13b5813bec3a9d1bcdf44b13f46eb51d8ca57b8338a40bb90ce0c8608169b213"
+    },
+    {
+      "path": "D:\\Scene_Aware\\BCI_VLA框架_主动诊断核心方案_V2.txt",
+      "kind": "input",
+      "sha256": "e663f493594195ad2d9876614d7c486ea6d2b31a8171e294825d149ed2e34f72"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\protocols.py",
+      "kind": "input",
+      "sha256": "3de0e8a42c1462f37af4f2a1769aea907a5996c9733e15b0ea522a23ac44c424"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\core\\joint_belief.py",
+      "kind": "input",
+      "sha256": "54665ff8c8a4dd0e1d47efce4c2684a91ca9676d5a1ac1dc0e81724abe8896a3"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\models\\channel.py",
+      "kind": "input",
+      "sha256": "ed34ef25a4c9b9faf3165ea2daf210885ebb95f239504f10d176af553fe45190"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\models\\consequence.py",
+      "kind": "input",
+      "sha256": "d4ff58d9c80be558fb1730fdddd20c4cbc386778b2fee2e0fb29017b2f0b9a2c"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\configs\\channels\\simulation_binary_v1.json",
+      "kind": "input",
+      "sha256": "3b567fa9cda392b0a202b0b12f8936e8adaba34fa76cd3548dbd1210eae916c4"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\configs\\belief\\simulation_binary_filter.json",
+      "kind": "input",
+      "sha256": "39dd26586373ad76cd6e3b2441cec6e8d89f3a4ab565427dab05f7f193c9368a"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\configs\\belief\\simulation_canonical_transition.json",
+      "kind": "input",
+      "sha256": "e17e0836d631b07ff0e1798c47a4a84dfdf5d0954c7e5db1b51f62379a21c44f"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\configs\\consequences\\simulation_outcome_table.json",
+      "kind": "input",
+      "sha256": "cb15f0504018a2aac3d7a5516436c0eb8746073e532ba9d8b13ee2bdd6c84583"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\docs\\07_outcome_model.txt",
+      "kind": "input",
+      "sha256": "967041c7043b0094710091c165cc6370800634d1deb8b7a0abb453ac3bc9b201"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\docs\\08_update_rules.txt",
+      "kind": "input",
+      "sha256": "fc35bcb52997be45b3f5a4d524730710f4a49ce1fce3b8bd5bc3e32234728026"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\core\\diagnostic_actions.py",
+      "kind": "software_or_analytic_fixture",
+      "sha256": "4e459bb67097572ea53cda45d21b28790dc92c1d43c6951b44c4f3daa67712f4"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\core\\diagnostic_policy.py",
+      "kind": "software_or_analytic_fixture",
+      "sha256": "5214c9b94e8eb512c32fd658cb4ac34c88fd03dd2525a6b2259d7fa385e16e83"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\configs\\diagnosis.json",
+      "kind": "software_or_analytic_fixture",
+      "sha256": "d86eb661c99ee1621c780968c575c01692439e0b9356a2f1f0f33c6f6dc52eeb"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\configs\\consequences\\simulation_canonical_outcomes.json",
+      "kind": "software_or_analytic_fixture",
+      "sha256": "5d8741a056c33393df4fc50bd6bcb6ab1ee652f792017efc663d8deafda7d3ae"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\docs\\09_policy.txt",
+      "kind": "software_or_analytic_fixture",
+      "sha256": "dc13c620c8f488da9ed21627e00bf5ba7493dd763e1b8e0d329dae601120c13c"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\examples\\diagnosis\\state.json",
+      "kind": "software_or_analytic_fixture",
+      "sha256": "b1757b2b36622e97d3158df56dacc9538705ba92169975714dd0d7d32b23e71a"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\examples\\diagnosis\\README.txt",
+      "kind": "software_or_analytic_fixture",
+      "sha256": "188a5b5dc82279d994cec644e5ac878880f1ff0fc8386b5addf8e2bf6eb1d36b"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\tests\\test_diagnostic_policy.py",
+      "kind": "software_or_analytic_fixture",
+      "sha256": "b072cff72f6d0b2429f864030b9f9870bf26e60f2d792632ec1967545b5d5f29"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\run_step09_tests.py",
+      "kind": "software_or_analytic_fixture",
+      "sha256": "0d4b764845ca3746cc4f260a99f006ef1fbd8cd3bf560ac6972afbff645ab905"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\replay_step09_policy.py",
+      "kind": "software_or_analytic_fixture",
+      "sha256": "237e0de7cba392b21f3095afd235d2afb3d696af6d2715bb846e1642c0a061db"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\prepare_step09_assets.py",
+      "kind": "software_or_analytic_fixture",
+      "sha256": "bb8705c61febf66303a8e06846fe6f13ac7cb2d51d7c280b2165c699e4838df8"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\finalize_step09.py",
+      "kind": "software_or_analytic_fixture",
+      "sha256": "e69753c91dcba19ef550142288c3ae6c90713a60ab92d0343dfb3e6ff17e18a7"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\09_acceptance.txt",
+      "kind": "software_or_analytic_fixture",
+      "sha256": "f57318d84718cc8531d13c16ffa8077300970cb8e5137a423e0b53f4ad138dff"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\09_test_result.json",
+      "kind": "software_or_analytic_fixture",
+      "sha256": "18d0bbcaf3114c5282f706abdaa385f1ebc5236a775514e176162a0761e2ba1d"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\09_test_output.txt",
+      "kind": "software_or_analytic_fixture",
+      "sha256": "7d3a6795909ecee53c9a342eea5c584a18762d0a006284aaebd3cb24b0810e13"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\09_policy_trace.json",
+      "kind": "software_or_analytic_fixture",
+      "sha256": "de3d2673f01cdd24b68ebde5c277aa0a8a2fc8acd70aecded20c049279aaf54b"
+    }
+  ]
+}

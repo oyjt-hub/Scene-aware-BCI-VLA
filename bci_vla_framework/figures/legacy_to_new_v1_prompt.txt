@@ -1,0 +1,25 @@
+﻿Edit the attached OLD paper architecture figure into the NEW current BCI–VLA framework. This is a substantial architecture redesign using the old figure as the visual source, NOT just relabeling the LLM. Retain the recognizable original photographic insets: the robot pick-and-place scene, blue-shirt folding scene, overhead fruit/bowl scene, segmentation heatmap and masks, frequency-highlighted targets, and EEG-cap user facing the display. Preserve these photos as source insets, without inventing new experimental photographs or changing the person. You may resize and rearrange panels for a coherent figure.
+
+Style: clean top-tier robotics conference overview, wide landscape approximately 2.1:1, high resolution, restrained deep-blue headers and navy borders echoing the original, white or very pale blue INTERIORS of boxes, crisp Chinese labels, clear orthogonal directional arrows, balanced whitespace. Preserve the source's transparent outer background. Do not introduce a black opaque background. No logos or Gemini sparkle. No LLM or DiT module. No performance numbers.
+
+Main title: "脑机—VLA 通用交互框架"
+
+Suggested layout retaining the old composition:
+LEFT: keep the two original robot task photos, under a unified panel "任务场景示例", with sublabels "拾放任务" and "柔性物体任务". Small note "历史场景图像".
+TOP CENTER: keep the original overhead view → heatmap → segmentation illustrations, modernized under "场景感知与候选任务". Add short context tags "对象与空间关系" and "任务历史／契约版本". Its output arrow feeds the new central inference core, not an LLM.
+RIGHT: retain the highlighted object display and original EEG user photo, arranged under "脑机交互接口". Rename old frequency-only mapping to "任务提问／已知目标探测". Connect the display to the user, then to the EEG waveform/decoder using the original EEG-strip visual. Near its output insert a compact card "证据来源区分" with three separate tags "任务应答 TASK" / "通道探测 PROBE" / "含噪确认 CONFIRM". Send that evidence to the central core.
+CENTER LOWER: completely replace the old "LLM Context-Aware Reasoning" and its instruction bubble by a large dominant group "来源约束的主动诊断核心". Inside, two main blocks connected in order:
+1. "任务—通道联合信念" with large correct math "b_t(g,z)" and a small correlated 2×2 probability-grid icon. Small sublabel "任务目标 g × 通道模式 z".
+2. "任务后果约束的诊断策略", sublabel "信息价值＋交互时间＋剩余预算". Display compact action choices "澄清任务" / "探测通道" / "请求确认" / "暂停退出".
+A model/context input card above the core reads "通道模型／任务后果／时间预算". Small label "当前为模拟模型".
+A clearly visible feedback arrow from the diagnostic policy to the right-hand display reads "下一轮问题／探测提示". The response goes through the EEG decoder and evidence-source card before returning to joint belief, forming the diagnostic interaction loop.
+Include a distinct amber branch from the policy labeled "未知／超时／预算不足 → 暂停".
+IMPORTANT: the known PROBE marker must NEVER be drawn as a robot task instruction, and user goals and channel changes are NOT mutually exclusive classes.
+BOTTOM CENTER or LOWER LEFT: redesign the old Fine-tuned VLA and Action Smoother area as a compact DASHED planned-execution chain:
+"版本化任务契约" → "含噪确认与独立授权" → "VLA适配器（如π0.5）" → "执行监督／机器人".
+Use dashed borders and dashed arrows for this downstream integration, labeled "执行闭环：待接入". Its robot-output arrow may point toward the left task photo panel, ALSO DASHED. A dashed scene/outcome-feedback arrow can return to scene context. Do not label the VLA newly trained or claim it has already been integrated with this new framework.
+Independent red "STOP 停止请求" path from the user interface directly toward execution supervision, bypassing the diagnostic scoring core.
+Small detached footer: "离线比较：强基线／机制消融／同信息O1与全知O2参考". No arrows from these references into online inference.
+Legend in Chinese: "实线：离线已实现" and "虚线：尚待接入". Additional small note "照片仅示意任务与接口，非新框架实验结果".
+
+Precise logical requirements: scene context plus source-tagged BCI observations → correlated task/channel belief → risk/time-aware diagnostic action → either another user query/probe, pause, or proposed contract; only the separate version-bound noisy-confirmation and authorization gate can lead to the planned VLA chain. The current research build is OFFLINE finite models through step10, NOT a deployed live loop. Keep this distinction clear without cluttering the figure. Use fewer large clear labels rather than many tiny sentences. Ensure no text overlap, cropped photos or intersecting arrows through box titles.

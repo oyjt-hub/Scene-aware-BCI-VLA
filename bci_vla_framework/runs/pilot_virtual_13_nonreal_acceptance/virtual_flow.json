@@ -1,0 +1,159 @@
+{
+  "scope": "deterministic_software_lifecycle_not_human_pilot",
+  "modes": [
+    "TASK_QUERY",
+    "CHANNEL_PROBE",
+    "CONFIRM"
+  ],
+  "views": [
+    {
+      "scope": "software_fixture_only",
+      "mode": "TASK_QUERY",
+      "banner": "任务选择：选择目标",
+      "request_id": "request-step13-software-fixture-1",
+      "context": {
+        "session_id": "step13-software-fixture",
+        "task_id": "fixture-task",
+        "task_revision": 1,
+        "scene_id": "fixture-scene",
+        "scene_revision": 1,
+        "mapping_id": "binary-v1",
+        "stimulus_version": "stimulus-v1",
+        "channel_profile_id": "simulation-binary-v1"
+      },
+      "options": [
+        {
+          "option_id": "left-choice",
+          "symbol": "0",
+          "semantic_ref": "goal:task-9cad706e60e745cf3c01a413"
+        },
+        {
+          "option_id": "right-choice",
+          "symbol": "1",
+          "semantic_ref": "goal:task-d5fc9bc832047df78f51c84f"
+        }
+      ],
+      "probe_prompt": null,
+      "contract": null,
+      "execution_authority": false,
+      "stimulus_presented": false
+    },
+    {
+      "scope": "software_fixture_only",
+      "mode": "CHANNEL_PROBE",
+      "banner": "通道探测：按提示选择，不下发任务",
+      "request_id": "request-step13-software-fixture-2",
+      "context": {
+        "session_id": "step13-software-fixture",
+        "task_id": "fixture-task",
+        "task_revision": 1,
+        "scene_id": "fixture-scene",
+        "scene_revision": 1,
+        "mapping_id": "binary-v1",
+        "stimulus_version": "stimulus-v1",
+        "channel_profile_id": "simulation-binary-v1"
+      },
+      "options": [
+        {
+          "option_id": "probe-0",
+          "symbol": "0",
+          "semantic_ref": "probe:0"
+        },
+        {
+          "option_id": "probe-1",
+          "symbol": "1",
+          "semantic_ref": "probe:1"
+        }
+      ],
+      "probe_prompt": {
+        "symbol": "0",
+        "source": "display_controller",
+        "presented_at": {
+          "host_id": "ui",
+          "at": "2026-10-15T00:00:02+00:00",
+          "offset_ms": 0,
+          "uncertainty_ms": 0
+        },
+        "presentation_ack": true
+      },
+      "contract": null,
+      "execution_authority": false,
+      "stimulus_presented": false
+    },
+    {
+      "scope": "software_fixture_only",
+      "mode": "CONFIRM",
+      "banner": "任务确认：核对后接受或拒绝",
+      "request_id": "request-step13-software-fixture-3",
+      "context": {
+        "session_id": "step13-software-fixture",
+        "task_id": "fixture-task",
+        "task_revision": 1,
+        "scene_id": "fixture-scene",
+        "scene_revision": 1,
+        "mapping_id": "binary-v1",
+        "stimulus_version": "stimulus-v1",
+        "channel_profile_id": "simulation-binary-v1"
+      },
+      "options": [
+        {
+          "option_id": "accept",
+          "symbol": "0",
+          "semantic_ref": "confirmation:accept"
+        },
+        {
+          "option_id": "reject",
+          "symbol": "1",
+          "semantic_ref": "confirmation:reject"
+        }
+      ],
+      "probe_prompt": null,
+      "contract": {
+        "contract_id": "contract-task-9cad706e60e745cf3c01a413",
+        "task_id": "fixture-task",
+        "revision": 1,
+        "scene_id": "fixture-scene",
+        "scene_revision": 1,
+        "intent": {
+          "action": "place",
+          "source_id": "grape",
+          "destination_id": "bowl-left"
+        },
+        "status": "proposed",
+        "valid_until": "2026-10-15T00:01:00Z",
+        "confirmation_event_id": null
+      },
+      "execution_authority": false,
+      "stimulus_presented": false
+    }
+  ],
+  "stages": [
+    "COLLECTING",
+    "COLLECTING",
+    "AWAITING_AUTHORIZATION",
+    "EXECUTING",
+    "VERIFYING",
+    "SUCCEEDED"
+  ],
+  "final_state": "SUCCEEDED",
+  "fake_backend_submissions": 1,
+  "planner_ref": {
+    "version": "authorization-aware-finite/2.0",
+    "gate": {
+      "version": "authorization-aware-finite/2.0",
+      "minimum_goal_probability": 0.8,
+      "max_confirmation_age_s": 2.0,
+      "return_s": 0.01
+    },
+    "role": "external_advisory_proposer_not_execution_authority"
+  },
+  "replay_matches_each_checkpoint": true,
+  "stimulus_presented": false,
+  "hardware_calls": 0,
+  "cloud_calls": 0,
+  "robot_commands": 0,
+  "real_eeg_trials": 0,
+  "decoder_accuracy": null,
+  "probe_compliance": null,
+  "G3_passed": false
+}

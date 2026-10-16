@@ -1,0 +1,45 @@
+{
+  "schema_version": "execution-session/1.0",
+  "scope": "offline_fake_only",
+  "physical_execution_allowed": false,
+  "backend_id": "simulation-pi05-interface",
+  "predicate_version": "endpoint-v1",
+  "minimum_goal_probability": 0.8,
+  "max_observation_age_s": 2.0,
+  "max_confirmation_age_s": 2.0,
+  "accept_symbol": "0",
+  "request_host": "ui",
+  "response_hosts": [
+    "bci"
+  ],
+  "control_hosts": [
+    "ui"
+  ],
+  "probe_compliance_id": "imperfect",
+  "task_binding": {
+    "question": "Place the grapes in the left bowl (0) or right bowl (1)?",
+    "mapping_id": "binary-v1",
+    "stimulus_version": "stimulus-v1",
+    "options": [
+      {
+        "option_id": "left-choice",
+        "symbol": "0",
+        "semantic_ref": "goal:task-9cad706e60e745cf3c01a413"
+      },
+      {
+        "option_id": "right-choice",
+        "symbol": "1",
+        "semantic_ref": "goal:task-d5fc9bc832047df78f51c84f"
+      }
+    ]
+  },
+  "policy_provenance": "illustrative_not_tuned",
+  "crash_recovery": "audit_only_no_automatic_reconnect_or_submit",
+  "simulation_supported_actions": [
+    "pick",
+    "place"
+  ],
+  "endpoint_hosts": [
+    "fixture-annotator"
+  ]
+}

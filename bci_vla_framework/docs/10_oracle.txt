@@ -1,0 +1,12 @@
+﻿步骤10 oracle边界与可复现检查
+O1：独立ExactOracle树枚举，同信息belief、同合法动作、K_a、后果、时间与含噪确认；horizon最多3，当前M2对照horizon2。
+不调用DiagnosticPolicy.plan/_evaluate/_branches；单测mock使它们抛异常仍能求解，避免拿自己验证自己。
+共享channel/transition/outcome/catalog是有意保持同模型；不是独立重新估计校准数据或另加oracle信息。
+O1不按TV或纯解释结果剪枝，枚举所有可评估合法动作；无模型的重编码/重校准不自动假定成功。
+time accounting和固定窗条件与09一致；拒绝/NR暂停，不是完整无限时域POMDP的oracle。
+同horizon决策regret=O1对被选动作的精确Q - O1最小Q；不能用M自己的近似估值代替。
+同时报告planning_value_difference与实际本机perf_counter_ns。horizon差异单独标注，不当作近似误差。
+O2在每个后续决策揭示真实g/z，返回状态条件动作期望，仍保留共同含噪最终确认；非现实信息参考、execution_allowed=false。
+4个手写fixture：alias、known_normal、mixed_prior、no_budget；不是统计样本、验证集或真实任务。
+12项同展望核对最大决策regret为0；只证明这些小例的一致性，不证明任意状态最优、实时可用或两步优越。
+原始结果execution/10_oracle_audit.json；代码bci_vla/baselines/oracle.py。

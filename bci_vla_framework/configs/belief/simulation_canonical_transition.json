@@ -1,0 +1,15 @@
+{
+  "status": "simulation_only",
+  "provenance": "illustrative_not_fitted",
+  "goal_ids": [
+    "task-9cad706e60e745cf3c01a413",
+    "task-d5fc9bc832047df78f51c84f"
+  ],
+  "mode_ids": [
+    "normal",
+    "flip"
+  ],
+  "goal_rate_per_s": 0.01,
+  "channel_rate_per_s": 0.02,
+  "joint_rate_per_s": 0.005
+}

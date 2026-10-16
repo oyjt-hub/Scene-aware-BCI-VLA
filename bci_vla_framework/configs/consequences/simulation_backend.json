@@ -1,0 +1,23 @@
+{
+  "executor_id": "simulation-pi05-interface",
+  "checkpoint_ref": null,
+  "status": "simulation_only",
+  "predicate_version": "endpoint-v1",
+  "tasks": {
+    "pick": {
+      "support": "simulation_only",
+      "endpoint_predicate": "holding",
+      "evidence_ref": "handwritten-software-fixture"
+    },
+    "place": {
+      "support": "simulation_only",
+      "endpoint_predicate": "inside",
+      "evidence_ref": "handwritten-software-fixture"
+    },
+    "fold": {
+      "support": "unknown",
+      "endpoint_predicate": "folded",
+      "evidence_ref": null
+    }
+  }
+}

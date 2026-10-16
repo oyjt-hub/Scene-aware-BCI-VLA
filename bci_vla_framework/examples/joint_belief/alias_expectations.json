@@ -1,0 +1,15 @@
+{
+  "provenance": "analytic_expectations_not_experimental_results",
+  "expected_task_alias_p_A": 0.5,
+  "expected_compliant_probe_after_one_match_p_A": "18/19",
+  "expected_after_two_independent_matches_p_A": "324/325",
+  "expected_match_then_mismatch_p_A": "1/2",
+  "explanation": "C_probe normal correct=.9 and flipped match=.05 with omission=.05; unlike the earlier no-omission .9/.1 example, the likelihood ratio here is 18.",
+  "do_not_mix_aliases": {
+    "goal-0": "task-9cad706e60e745cf3c01a413",
+    "goal-1": "task-d5fc9bc832047df78f51c84f",
+    "old": "task-9cad706e60e745cf3c01a413",
+    "new": "task-d5fc9bc832047df78f51c84f"
+  },
+  "alias_mapping_is_demo_only_not_automatically_applied": true
+}

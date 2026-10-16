@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-16",
+  "scope": "offline_diagnostic_policy_delivery",
+  "result": "PASS",
+  "count": 14,
+  "checks": [
+    "01-09 remain complete",
+    "progress may advance beyond 09",
+    "G1 conditional G2-G4 unstarted",
+    "126 tests pass",
+    "simulation-only declaration",
+    "same one/two-step fixture outcome no superiority",
+    "each root candidate has reasons cost branches",
+    "no authorization and no hardware/cloud",
+    "pause stop no-budget explicit",
+    "explicit cross-task fresh goal prior",
+    "all 09.1-09.10 mapped",
+    "09 frozen sources match",
+    "08 frozen sources match",
+    "TXT BOM CRLF intact"
+  ],
+  "not_evaluated": [
+    "real calibration and user time",
+    "strategy superiority",
+    "within-window change kernel",
+    "multi-task anticipatory value",
+    "robot execution",
+    "G2-G4"
+  ]
+}

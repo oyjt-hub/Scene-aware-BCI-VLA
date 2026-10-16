@@ -1,0 +1,168 @@
+{
+  "date": "2026-10-16",
+  "plan_version": "V2",
+  "step_id": "11",
+  "scope": "offline_fake_lifecycle",
+  "files": [
+    {
+      "path": "D:\\Scene_Aware\\BCI_VLA通用交互框架_逐步执行手册.txt",
+      "kind": "input",
+      "sha256": "13b5813bec3a9d1bcdf44b13f46eb51d8ca57b8338a40bb90ce0c8608169b213"
+    },
+    {
+      "path": "D:\\Scene_Aware\\BCI_VLA框架_主动诊断核心方案_V2.txt",
+      "kind": "input",
+      "sha256": "e663f493594195ad2d9876614d7c486ea6d2b31a8171e294825d149ed2e34f72"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\10_source_manifest.json",
+      "kind": "input",
+      "sha256": "2c21654d6e5f9761f7bdf88b9b96219e359ad13123a34d5be0de4d4999fb2259"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\verify_step10_delivery.py",
+      "kind": "input",
+      "sha256": "d2443690e243befee6375b97ae9327792cf58a5219a8a0ba6b0cd93ffb5f9157"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\adapters\\vla\\__init__.py",
+      "kind": "offline_software_or_fixture",
+      "sha256": "9c95baf836e442040bfd2278a4351596cc4f55a2067558ed0fc3aa6e1cd2a694"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\adapters\\vla\\fake.py",
+      "kind": "offline_software_or_fixture",
+      "sha256": "8c60ddedaf358837595190915f412d7fedea5bd91629b992fd3475a401bf89ce"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\contracts\\__init__.py",
+      "kind": "offline_software_or_fixture",
+      "sha256": "1bcaa20757a45cda1e57c8f872a7c9b36719547628fa6cff265fa9700a0cdb30"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\contracts\\records.py",
+      "kind": "offline_software_or_fixture",
+      "sha256": "34cf6ea26a4b6ec40b0f0dbc68313c4a04077620b3a6b322e627a2d146a69303"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\contracts\\replay.py",
+      "kind": "offline_software_or_fixture",
+      "sha256": "a99388b0a72a772cee3c2583eef4d5a9299be9b9df5da8ce569e0d9f5eba66c0"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\contracts\\session.py",
+      "kind": "offline_software_or_fixture",
+      "sha256": "7d46d82290e675e6fb7ecf580bbeaa6a0a152755b714acaff8a0b5e9607fc325"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\monitoring\\__init__.py",
+      "kind": "offline_software_or_fixture",
+      "sha256": "092b0b044051bce6cf1b01bfce97c805a72af47cc52cd687ec53ff830c8f8196"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\monitoring\\journal.py",
+      "kind": "offline_software_or_fixture",
+      "sha256": "0d87c8a96233a3ecad131dd9f464f6e98e19d99c09b71a34b72c943b43b702ba"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\configs\\execution\\fake_vla_interface.json",
+      "kind": "offline_software_or_fixture",
+      "sha256": "82ad8037cdfd3ecaacebc6007c58c2ab1cc41b7fb5c33408dd60dfe34d1b6d15"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\configs\\execution\\session.json",
+      "kind": "offline_software_or_fixture",
+      "sha256": "e7b78ec993ba43614c390dfffc9a33f87ad0edc489f9dc14e315cbb20636c865"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\docs\\11_execution_contract.txt",
+      "kind": "offline_software_or_fixture",
+      "sha256": "3e49af3e5b8dca4e20c6a64af1800bfaeaee991f883067de0125b5053c0a9b62"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\docs\\11_pi05_interface_checklist.txt",
+      "kind": "offline_software_or_fixture",
+      "sha256": "39b2d58360c63b11a7f7953c9b843c454bfd7a41f92175fb1722a58dc6ed75fc"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\11_acceptance.txt",
+      "kind": "offline_software_or_fixture",
+      "sha256": "46ff685b679078db8c96cf06aa7a28b772b751d76da4a60c27c98f6a919a570c"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\11_lifecycle_trace.json",
+      "kind": "offline_software_or_fixture",
+      "sha256": "23f06026fe88ca2674bb57481d643ae697576887e1048220c160399f2f213ce7"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\11_replay_result.json",
+      "kind": "offline_software_or_fixture",
+      "sha256": "a5ae22c858c4d4c519ae7f769bbfd5ce2787148b9c41f96191d23f0f9b543efd"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\11_session_events.jsonl",
+      "kind": "offline_software_or_fixture",
+      "sha256": "e2a01bcb29f461514d875658faebe5bfe93a2a322ded1154651fd7e3ccc7d20a"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\11_test_output.txt",
+      "kind": "offline_software_or_fixture",
+      "sha256": "264d12af862b1c82755459e7f64634aeb08da76883f4317a78b917dbb8400548"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\11_test_result.json",
+      "kind": "offline_software_or_fixture",
+      "sha256": "28bc80af3e28b8122302b288ba2aba727a3dd3adc25ba0c971a6ebdcb0d58b28"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\11_unknown_stop_events.jsonl",
+      "kind": "offline_software_or_fixture",
+      "sha256": "4e2b5e80200717ec0ba845765bf0a840303362bde17103017a47423896b72550"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\finalize_step11.py",
+      "kind": "offline_software_or_fixture",
+      "sha256": "6a039a1718c49a919719164a4f14b59a01379ab1c110789755791c7aa1728957"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\replay_step11_session.py",
+      "kind": "offline_software_or_fixture",
+      "sha256": "e1fee5d05226816111832d4c0a1f0748348a0af5eaf65dd8d89c6645b0b744c7"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\run_step11_tests.py",
+      "kind": "offline_software_or_fixture",
+      "sha256": "f8651b7854dc0320367f1ef39d6cf3bee11486de0d462ce990e59c19419343c6"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\tests\\test_contract_records.py",
+      "kind": "offline_software_or_fixture",
+      "sha256": "785ac1dc6d8d710769c7f1c0f2291f100d8a2fad27e09c71115c8b4963007118"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\tests\\test_execution_binding_regressions.py",
+      "kind": "offline_software_or_fixture",
+      "sha256": "6393a09b6f8528cd08437096bf0b1d668cdc06d03db3f50264179625176d228f"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\tests\\test_execution_journal.py",
+      "kind": "offline_software_or_fixture",
+      "sha256": "0db6d28a0a4f55e08545bc139495608ba407e4e2f3186c1ef95a6168c6685e17"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\tests\\test_execution_session.py",
+      "kind": "offline_software_or_fixture",
+      "sha256": "4756471ffa3cb0d6d6bd76c05184f3149bf391be307ac1ef8b10b61de58785dc"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\tests\\test_session_replay_events.py",
+      "kind": "offline_software_or_fixture",
+      "sha256": "635d22da4f93e2b839d45a0d472b27f014087e53b6cc8c13ce61a0b92c523a38"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\tests\\test_vla_adapter.py",
+      "kind": "offline_software_or_fixture",
+      "sha256": "d7bafb2be91993f28dba5003e62d2bec5365e8884ac008255db4f178d36637ed"
+    }
+  ]
+}

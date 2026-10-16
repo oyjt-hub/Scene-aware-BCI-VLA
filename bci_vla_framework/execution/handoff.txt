@@ -1,0 +1,17 @@
+﻿2026-10-16 步骤15C：非真实完整框架迁移工程分支完成，401测试PASS。四个软件编码/VLA单元各10场景；真实2×2未测试，失败结果及G2/G3限制见docs/15C_full_transfer_report.txt。
+
+2026-10-16 步骤14C更新：非真实完整框架工程闭环完成，398测试PASS；5个功能抓取成功。执行中换目标控制恢复通过但抓取失败，留出0/2。真实BCI/机器人未开展；G2/G3不升级。最新报告docs/14C_full_simulation_report.txt，历史14/15报告仅保留原范围。
+
+交接2026-10-16：用户执行步骤15，保留无真实BCI与LIBERO范围。
+可执行部分完成：两回放编码TASK/PROBE/CONFIRM/授权/提交检查点与日志语义一致，各自独立重放；核心25份来源SHA未变。
+第二VLA选现有RLinf-Pi05-LIBERO-SFT，实际OpenPI服务＋LIBERO完成2任务，1PROBE/STOP故障检查通过；385软件回归PASS。
+最终runs/transfer_step15_pi05_final/v4/results/；主报告docs/15_transfer_matrix.txt；配置configs/transfer/step15_binding.json。
+v1缺Transformers补丁退出；v2输出越界被门控阻断；v3加控制器裁剪两个任务成功但终点残留队列；v4清空终点队列并完整重跑。
+π0.5已反归一化，不再用StarVLA统计/夹爪翻转；按实际env.action_spec七维[-1,1]裁剪，次数保留；NaN拒绝。
+隔离目录/home/oyjt/Scene-aware-BCI-VLA-runs/step15_libero_20261016_v4；GPU0、127.0.0.1:16815所属服务已结束，原环境不修改。
+task-local Transformers4.53.2补仓库transformers_replace，torch.compile关闭；不做速度或正式成功率对照。
+新增PacketReplayTransport为synthetic_codec_fixture，不是第二真实BCI；未知真实BCI/probe/通道校准保持未测。
+14的任务本体—联合信念—runtime_v2—原会话授权—LIBERO反馈尚未完整整合。15真实2×2/留出/后果校准未做。
+下一条确定工作：先补14核心与实际LIBERO后端整合，再做模拟通道/目标变化的两后端公平测试。
+G2研究未通过、G3未验证；14/15整体进行中；16/17未开始。不把当前接口证据包装成完整迁移或创新研究结论。
+验收verify_step15_delivery.py；旧12R/13/14重验另存after_step15，不覆盖旧结果。TXT为UTF-8 BOM+CRLF。

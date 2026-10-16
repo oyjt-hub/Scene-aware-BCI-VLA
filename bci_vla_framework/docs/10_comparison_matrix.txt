@@ -1,0 +1,102 @@
+﻿步骤10：强基线、消融与小规模oracle比较矩阵
+V2；日期2026-10-16；授权“步骤10实行”。范围：离线有限模型实现及软件验收。
+
+一、完成情况与不能扩大解释的边界
+新增bci_vla/baselines/finite_model.py、methods.py、oracle.py、selection.py和configs/comparisons/。
+B0—B10、M、O1/O2均列清单，另保留B1P预测纠正、M2两步候选两个变体。
+其中B0明确缺外部原LLM调用记录和完整实测时间，返回unavailable而非填假结果；其余为当前二元模拟适配。
+43项新增软件检查，加旧126项共169项通过，0失败/错误/跳过。
+4个手写小例、12项同信息同展望的oracle核对，决策后悔值均0，并记录实际本机计算耗时。
+不是独立验证集、真实BCI/机器人数据或正式实验；不把169项测试写成成功率，不把4例当G2通过。
+真实“最强可部署基线”暂为空；需独立先导校准、成套验证集调参和部署审计。10离线首版完成不代表这项实证已完成。
+
+二、输入与共同约束
+共同输入为PlanningState的公开联合信念、场景/契约版本、参考时刻、剩余秒预算，以及公共历史/质量/预测记忆。
+每种可比方法可用同一目标词表、校准数据、probe标记、问题、合法时长、执行后果模型。
+各方法对信息/动作的刻意限制逐项如下，不能偷偷不给强基线probe。
+所有方法共享最终CONFIRM误码/耗时、STOP与期限检查；execution_allowed始终false。
+没有真实执行后端比较：executor同为07已标未验证的模拟接口，未核准多目的地真机能力。
+质量未知保持None，不填好质量；predicted_goal须来自独立公共预测器，样例只是显式手写预测，不能来自真g/z。
+API拒绝true_goal、true_channel等私有记忆字段；O2不在choose在线方法列表。
+observe只处理有限模拟离散观察，不处理真实事件/原始分数，不宣称具备05/08实际事件去重能力。
+后续接真实数据时仍必须用05合法输入、06最终前缀与08来源/时钟/去重规则；不将此模拟桥替换生产协议。
+
+三、逐方法矩阵：ID | 行为/信息差异 | 当前范围
+B0 | 原固定补选LLM链，源码身份见02冻结清单 | 外部API/完整查询与推理耗时、真实proposal记录缺失；不实际调用，不填0耗时或预测。
+B1 | NOIR-inspired固定选择：置信不足任务查询，足够后共同最终确认 | 用当前两个完整目标替代原对象/技能层级，非完整NOIR复现。
+B1P | 外部预测与公开belief一致且足够明确时直接最终确认；不一致/不明确时查询核验，回答支持另一目标则纠正 | 不把预测或核验当授权，不反复确认到同意；预测拒绝后的信息来自含噪任务证据。
+B2 | 固定normal通道假设，每次推断投影固定通道；目标仍随时间/证据可变 | 实际评分世界仍允许通道变化，不拿错误模型当真实世界。
+B3 | 独立通道边缘监测，目标gap保持、证据可改目标，g/z独立重组，无主动probe | 目标惯性/被动监测的明确简化，不是最强已发表漂移估计器复现。
+B4 | 相关联合belief，允许任务澄清，不主动已知目标探测 | 主动probe被明确删除，其余共同终端规则不变。
+B5 | 固定诊断次数周期，首次处探测相位；到期选同模型风险最低probe，否则任务阶段 | period可调1/2/3/4，未声称已充分调参；固定周期不按隐藏变化时刻对齐。
+B6 | 公共历史目标冲突超过阈值时重复任务问题或合法新窗重试/延长 | 无新鲜窗/最终前缀许可则不能重用；与无噪确认不同。
+B7 | 历史目标冲突或实际可得信号质量阈值触发probe | 质量缺失不假造，阈值待独立验证集选。
+B8 | 在通道不确定时选每秒I(Z;Y)最大的合法probe，随后单独语义澄清 | 参数信息收益不同于任务后果，不能用真实标签替在线熵。
+B9 | 标准一步任务VoI，完整枚举同一问题、probe与后续含噪终端 | 独立枚举实现，可和M的09代码互核；不是弱化版VoI。
+B10 | RBC-inspired递归Bayes证据＋MI问题选择＋最终窗置信停时＋语义VoI/probe | 仅单一已验证二元码本，不能代表完整MMI重编码或窗内动态停时；未训练actor-critic。
+M | 步骤09原默认一步任务VoI/主动诊断 | 与B9同模型同信息，当前没有独立算法优势。
+M2 | 步骤09有限两步候选 | 对照horizon2的O1，不能用horizon1差距冒称近似误差。
+O1 | 同belief、同动作/转移/后果/期限/预算/含噪确认，独立精确有限树 | 不调用09的plan/_evaluate/_branches；不读取真实隐状态。
+O2 | 每个决策揭示g/z的条件策略期望 | 非现实信息参考，仍付同样确认费用并承受误码；不是O1，也不能部署。
+完整机器可读清单configs/comparisons/method_registry.json；不改02历史冻结的baseline_manifest。
+
+四、公平评分与“相同信息”的确切含义
+FiniteModel独立实现T(setup)、条件固定窗发射、相关Bayes、终端后果和只计一次的时间。
+共享ActionCatalog保证时长/菜单/契约限制一致；保留原08/09源文件哈希，不为基线放宽实际授权。
+同信息O1的未知状态是联合belief，不是某个点真值。O2单独记录状态条件动作，不给在线方法单个“完美”答案。
+所有方法的remaining_s随动作实际时长扣减。公共剩余诊断horizon耗尽后转合法终端/暂停，最终确认仍付同一秒预算。
+一次终端确认拒绝或NO_RESPONSE按共同规则暂停；没有免费无误确认或重复问到同意。
+与09相同：窗前T按秒转移、窗内状态固定；无窗内变点和随机延迟核。本步不扩大模型有效性。
+固定策略evaluate将“真实评分belief”和“方法内部belief”分开，按原始世界发射和原始后果/时间评分。
+因此B2的错误通道假设、消融的来源混用/因子化/去后果/免probe计划费用，都不能篡改评分世界。
+各分支记忆深拷贝，伪标签计数不串分支，也不修改06冻结校准模型。
+evaluate是小树解析一致性审计，不是收集整集指标的正式实验引擎；完整机制/fault sweep留12。
+
+五、消融清单与执行限制
+A_no_probe：删probe，保留任务澄清/共同确认。
+A_factorized：预测与每次观察后强行b(g)b(z)，不仅在根打印一个因子化结果。
+A_periodic：固定周期替主动选择，周期需充分独立验证调参。
+A_no_task_consequence：规划用对称目标0/1损失，实际评分仍是07原后果表。
+A_mix_sources：故意把PROBE响应当TASK_QUERY答案，世界仍按真正probe发射。
+A_pseudo_labels：拿自己先验预测的任务/通道作标签，给TASK emission累积伪计数；CONFIRM不当完美真值更新。
+A_ignore_probe_cost：规划probe费用置0，但实际时间、预算和评分费用仍完整收取。
+A_fixed_duration：限制1秒最终窗；不复制短前缀为独立长窗。
+所有消融标virtual_only、deployment_allowed=false，保留共同STOP/含噪确认/版本与期限；拒绝execution_mode=live。
+错误场景/通道先验、遵从下降等额外环境敏感性列在配置，完整扫描留12，不能写成已跑完。
+
+六、NOIR/RBC/停时/语义VoI来源与适配差异
+NOIR作者论文： https://proceedings.mlr.press/v229/zhang23f.html
+作者摘要已有用户适应和意图预测。本步B1/B1P为同执行接口的二元交互适配，不能称原NOIR完整复现，也不宣称原文没有上下文。
+NOIR2作者预印本元数据核对： https://arxiv.org/abs/2511.20848
+RBC作者摘要： https://pubmed.ncbi.nlm.nih.gov/27416602/ （DOI 10.1109/TNSRE.2016.2590959）
+其递归Bayes、混淆矩阵与MMI编码是已有基础。单一码本下B10的编码搜索退化；不将该受限实现包装为完整强RBC。
+动态停时/刺激选择原文： https://www.imstat.org/publications/aoas/aoas_20_1/aoas_20_1.pdf
+作者代码： https://github.com/BangyaoZhao/P300RL
+原方法包含早停与动态刺激选择，本文未复现其actor-critic/GP。本步只实现允许最终离散窗之后的置信停止；真实同窗增量停时需条件似然/前缀模型后再扩展。
+语义VoI作者预印本： https://arxiv.org/abs/2601.06407
+采用既有任务效用与询问成本决策原则，不把Bayes/Bellman/VoI公式说成原创。
+核对日期、访问受限处与来源范围见execution/10_references.json。
+
+七、独立验证集调参与冻结（10.8）
+当前parameters.json仅开发默认，不是经过验证的最优参数；不可跳过B5/7/8/10调参后挑弱对手。
+tuning_and_selection.json声明period/confidence/conflict/quality/channel_entropy搜索集合；真实选优记录和chosen_baseline均为空。
+必须先按用户/会话/物理场景分组划development、calibration、validation、test，整episode及其前缀同组。
+在独立calibration先导数据与任务要求上确定错误启动率和全episode时间上限，写证据source_ref；未填上限时selector拒绝运行。
+然后冻结候选配置清单/哈希，在同一配对validation episode上充分搜索；安全/时限不合格不得入选。
+预先锁定排序：全episode意图忠实完成率降序、错误启动率升序、全episode平均时间升序、弃权率升序、candidate_id确定性打破平局。
+缺完整候选、跨组泄漏、仅成功episode、formal test split、未冻结先导规则或缺配置哈希均拒绝。
+真实入口拒绝simulation_fixture；软件单测可显式simulation_only=True，仅返回simulation_selection_check_only，始终不能部署。
+输出记录规则/记录/分区/获选配置哈希；真实返回也只是validation_choice_pending_deployment_audit，不冒称真机通过。
+若无合格者不能在看正式结果后放宽门槛；回先导/任务范围重设计，再冻结下一版。
+本轮未用这4个解析样例选最强基线，也未执行真实网格调参。
+
+八、实际复现命令与结果
+目录D:\Scene_Aware\bci_vla_framework：
+  python -B execution/run_step10_tests.py
+  python -B execution/replay_step10_comparisons.py
+169项软件检查PASS；4个fixture、22个方法/消融决策记录（B0显式不可用），12项M/M2/B9同展望oracle核对最大后悔值0。
+10_oracle_audit.json保存每候选精确值、O2条件参考、同展望regret和实际perf_counter_ns；单次本机耗时不是延迟benchmark。
+10_decision_trace.json保留所有方法的选择/不可用原因，未采集任何人体/机器人样本。
+这些结果仅支持实现一致性：目前不能回答“比同样有probe的简单方法更好”成立，更不能得出策略优越或创新充分。
+依主计划保留B9和强简单方法，M默认一步；若后续独立实验仍等效则回01/09收窄贡献，不删除强基线或调大惩罚制造差异。
+下一步11办理会话、契约授权、fake VLA适配与监督；G2要等12，G3/G4与真实校准仍待外部条件。

@@ -1,0 +1,67 @@
+﻿旧服务器意图函数摘录（只读冻结，非部署代码）
+版本：d2245527a767707c19d7305caacb02fa5de89dc3
+源文件：scripts/inference.py
+原文件SHA256：324797b38d1a3b6fa2f5ed0528a62a0dfd7f812b1e96464f349d3c73211b0e0c
+凭据行已去除；保留旧失败行为供审计，新框架禁止继承默认抓取。
+
+347: def infer_intent_with_gemini(all_detected_objects, selected_target):
+348:     """
+349:     Infer human intent via Gemini LLM based on all detected objects and the user's selected target.
+350:     Supports USE_LLM switch for ablation study.
+351:     """
+352:     # 🔬 Check if LLM is enabled (Ablation baseline: Direct Target Grounding)
+353:     if not USE_LLM:
+354:         print(f"\n🔬 [Ablation Study - Without LLM] LLM semantic reasoning disabled (Direct Target Grounding).")
+355:         print(f"   Directly passing target object as VLA Prompt: -> {selected_target} <-")
+356:         # Return object name directly without template completion for VLA model
+357:         return selected_target
+358: 
+359:     # 🧠 With LLM branch (Semantic Intent Synthesis)
+360:     print(f"\n🧠 [LLM Intent Inference] Thinking... (Table objects: {all_detected_objects} | User focus: {selected_target})")
+361:     
+362:     try:
+363:         # Use the lightweight and fast gemini-2.5-flash model
+364:         model = genai.GenerativeModel('gemini-2.5-flash')
+365:         
+366:         # prompt = f"""
+367:         # You are an intelligent robotic assistant reasoning about human intent. 
+368:         # Context: A paralyzed user is controlling a robot arm via a Brain-Computer Interface. 
+369:         
+370:         # The camera detects the following objects on the table: {all_detected_objects}. 
+371:         # The user is focusing their BCI selection on this specific target: "{selected_target}". 
+372:         
+373:         # Task: Based on common sense, infer the most logical assistive action the user wants the robot to perform with the selected target, considering the other objects available.
+374:         # For example:
+375:         # - If there is a "bowl" and the user selects an object like "cherry", they likely want to put the cherry in the bowl.
+376:         # - If there is a "cup" and the user selects "bottle", they likely want to pour water into the cup.
+377:         # - If they just select an object with no obvious container, they might just want to pick it up.
+378:         # - if the user selects a cloth, just fold it.
+379:         
+380:         # Output requirement: Return ONLY a short, direct English command string suitable for a Vision-Language-Action (VLA) robot model. Do not include any explanations, reasoning, or quotation marks.
+381:         # """
+382:         prompt = f"""
+383:         # You are an intelligent robotic assistant reasoning about human intent. 
+384:         # Context: A paralyzed user is controlling a robot arm via a Brain-Computer Interface. 
+385:         
+386:         # The camera detects the following objects on the table: {all_detected_objects}. 
+387:         # The user is focusing their BCI selection on this specific target: "{selected_target}". 
+388:         Task: Based on common sense, infer the most logical assistive action the user wants the robot to perform with the selected target, considering the other objects available.
+389:         Return ONLY a short, direct English command string suitable for a Vision-Language-Action (VLA) robot model , choose form the following examples:        
+390:         # pick up the starfruit and put it into the bowl.
+391:         # Pick up the bunch of grapes and put it into the bowl.
+392:         # pick up the cherry and put it into the bowl.
+393:         # fold the cloth.
+394:  
+395:         """  
+396:         response = model.generate_content(prompt)
+397:         inferred_command = response.text.strip().strip('"').strip("'")
+398:         
+399:         print(f"💡 [LLM Intent Inference] Inference complete! Generated VLA instruction: -> {inferred_command} <-")
+400:         return inferred_command
+401:         
+402:     except Exception as e:
+403:         print(f"❌ [LLM Intent Inference] Gemini call failed: {e}")
+404:         # Fallback strategy (network failure, etc.)
+405:         fallback_command = f"pick up the {selected_target}."
+406:         print(f"⚠️ [LLM Intent Inference] Triggering fallback strategy: -> {fallback_command} <-")
+407:         return fallback_command

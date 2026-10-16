@@ -1,0 +1,106 @@
+{
+  "scope": "software_injected_faults_not_EEG_or_physical_safety_validation",
+  "cases": [
+    {
+      "fault": "no_response",
+      "passed": true,
+      "detail": "no default answer or authorization",
+      "final_state": "PAUSED",
+      "backend_submissions": 0,
+      "stop_feedback": "NOT_REQUESTED",
+      "physical_stop_verified": false,
+      "replay_matches": true
+    },
+    {
+      "fault": "old_menu",
+      "passed": true,
+      "detail": "stale mapping quarantined",
+      "final_state": "PAUSED",
+      "backend_submissions": 0,
+      "stop_feedback": "REQUESTED",
+      "physical_stop_verified": false,
+      "replay_matches": true
+    },
+    {
+      "fault": "expired_confirmation",
+      "passed": true,
+      "detail": "expired receipt cannot confirm",
+      "final_state": "PAUSED",
+      "backend_submissions": 0,
+      "stop_feedback": "NOT_REQUESTED",
+      "physical_stop_verified": false,
+      "replay_matches": true
+    },
+    {
+      "fault": "duplicate_confirmation_and_dispatch",
+      "passed": true,
+      "detail": "same payload cached, actual confirmation not reused",
+      "final_state": "SUBMITTED",
+      "backend_submissions": 1,
+      "stop_feedback": "NOT_REQUESTED",
+      "physical_stop_verified": false,
+      "replay_matches": true
+    },
+    {
+      "fault": "target_disappeared",
+      "passed": true,
+      "detail": "scene revision invalidates authorization",
+      "final_state": "PAUSED",
+      "backend_submissions": 0,
+      "stop_feedback": "NOT_REQUESTED",
+      "physical_stop_verified": false,
+      "replay_matches": true
+    },
+    {
+      "fault": "policy_timeout",
+      "passed": true,
+      "detail": "result discarded after measured computation; no hard preemption claim",
+      "final_state": "PAUSED",
+      "backend_submissions": 0,
+      "stop_feedback": "REQUESTED",
+      "physical_stop_verified": false,
+      "replay_matches": true
+    },
+    {
+      "fault": "illegal_action",
+      "passed": true,
+      "detail": "nonfinite action rejected before use",
+      "final_state": "COLLECTING",
+      "backend_submissions": 0,
+      "stop_feedback": "NOT_REQUESTED",
+      "physical_stop_verified": false,
+      "replay_matches": true
+    },
+    {
+      "fault": "cancel_late_response",
+      "passed": true,
+      "detail": "cancel latch rejects late ordinary evidence",
+      "final_state": "CANCELLED",
+      "backend_submissions": 0,
+      "stop_feedback": "REQUESTED",
+      "physical_stop_verified": false,
+      "replay_matches": true
+    },
+    {
+      "fault": "stop_during_execution",
+      "passed": true,
+      "detail": "stop requested first; explicit fake feedback later; physical stop false",
+      "final_state": "CANCELLED",
+      "backend_submissions": 1,
+      "stop_feedback": "SIMULATED_STOPPED",
+      "physical_stop_verified": false,
+      "replay_matches": true
+    },
+    {
+      "fault": "unknown_submission_no_retry",
+      "passed": true,
+      "detail": "exception consumes authorization and prevents new submission",
+      "final_state": "SUBMISSION_UNKNOWN",
+      "backend_submissions": 0,
+      "stop_feedback": "NOT_REQUESTED",
+      "physical_stop_verified": false,
+      "replay_matches": true
+    }
+  ],
+  "all_passed": true
+}

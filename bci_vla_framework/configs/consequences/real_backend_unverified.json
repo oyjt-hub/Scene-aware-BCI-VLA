@@ -1,0 +1,23 @@
+{
+  "executor_id": "existing-pi05-unverified",
+  "checkpoint_ref": null,
+  "status": "unverified",
+  "predicate_version": "endpoint-v1",
+  "tasks": {
+    "pick": {
+      "support": "unknown",
+      "endpoint_predicate": "holding",
+      "evidence_ref": null
+    },
+    "place": {
+      "support": "unknown",
+      "endpoint_predicate": "inside",
+      "evidence_ref": null
+    },
+    "fold": {
+      "support": "unknown",
+      "endpoint_predicate": "folded",
+      "evidence_ref": null
+    }
+  }
+}

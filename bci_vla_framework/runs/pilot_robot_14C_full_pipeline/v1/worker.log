@@ -1,0 +1,24 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/Isaac-GR00T/external_dependencies/LIBERO/libero/libero/../datasets does not exist!
+[Warning]: datasets path /mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/Isaac-GR00T/external_dependencies/LIBERO/libero/libero/../datasets does not exist!
+/home/oyjt/LIBERO/libero/libero/benchmark/__init__.py:164: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  init_states = torch.load(init_states_path)
+Traceback (most recent call last):
+  File "/home/oyjt/Scene-aware-BCI-VLA-runs/step14C_full_20261016_v1/step14C_worker.py", line 93, in <module>
+    for j,session in enumerate(all_sessions):persist_session(session,identifier+'-'+str(j))
+  File "/home/oyjt/Scene-aware-BCI-VLA-runs/step14C_full_20261016_v1/step14C_worker.py", line 27, in persist_session
+    assert replay_session_state(s.journal)==s.snapshot()
+  File "/home/oyjt/Scene-aware-BCI-VLA-runs/step14C_full_20261016_v1/bci_vla/simulation_v3/replay.py", line 500, in replay_session_state
+    return journal.replay(reduce, None)
+  File "/home/oyjt/Scene-aware-BCI-VLA-runs/step14C_full_20261016_v1/bci_vla/monitoring/journal.py", line 184, in replay
+    state = reducer(state, record)
+  File "/home/oyjt/Scene-aware-BCI-VLA-runs/step14C_full_20261016_v1/bci_vla/simulation_v3/replay.py", line 495, in reduce
+    engine.apply(record["kind"], payload["event"], now)
+  File "/home/oyjt/Scene-aware-BCI-VLA-runs/step14C_full_20261016_v1/bci_vla/simulation_v3/replay.py", line 383, in apply
+    require(old_execution_status in {"NOT_STARTED", "UNKNOWN"}, "invalid_execution_transition")
+  File "/home/oyjt/Scene-aware-BCI-VLA-runs/step14C_full_20261016_v1/bci_vla/protocols.py", line 22, in require
+    raise ProtocolError(code)
+bci_vla.protocols.ProtocolError: invalid_execution_transition

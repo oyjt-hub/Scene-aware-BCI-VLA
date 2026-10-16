@@ -1,0 +1,27 @@
+{
+  "scope": "user_directed_LIBERO_backend_smoke_and_simulation_gate",
+  "simulation_backend_tests_completed": true,
+  "full_framework_simulation_completed": false,
+  "real_step14_completed": false,
+  "software_tests": 376,
+  "episodes": 3,
+  "nominal_successes": 2,
+  "nominal_episodes": 2,
+  "fault_stop_episodes": 1,
+  "formal_success_rate_claim": false,
+  "G2_passed": false,
+  "G3_passed": false,
+  "real_BCI_trials": 0,
+  "physical_robot_commands": 0,
+  "effective_run": "runs/pilot_robot_14_libero_simulation_v3/v3/results",
+  "excluded_development_runs": [
+    "v1_missing_dependency",
+    "v2_wrong_gripper_sign"
+  ],
+  "remaining": [
+    "LIBERO ontology/core belief/planner/session integration",
+    "independent consequence calibration",
+    "same-scene intention-change and recovery comparisons",
+    "real BCI/robot excluded"
+  ]
+}

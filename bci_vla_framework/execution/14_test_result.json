@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-16",
+  "scope": "step14_LIBERO_gate_and_frozen_regressions",
+  "tests_run": 376,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "result": "PASS",
+  "physical_robot_commands": 0,
+  "real_BCI_trials": 0,
+  "does_not_prove_G3_or_full_framework_integration": true
+}

@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-16",
+  "scope": "offline_joint_filter_delivery",
+  "result": "PASS",
+  "count": 12,
+  "checks": [
+    "only 01-08 complete",
+    "09 not started",
+    "G1 conditional and G2-G4 unstarted",
+    "offline-only step08 scope",
+    "92 software checks pass",
+    "task aliases remain equally likely",
+    "probe updates via correlation",
+    "factorization does not invent states",
+    "no execution authorization",
+    "all 08.1-08.9 mapped",
+    "source and final software hashes match",
+    "TXT encoding intact"
+  ],
+  "not_evaluated": [
+    "real model validity",
+    "unknown-state emission calibration",
+    "clock uncertainty integration",
+    "active strategy",
+    "authorization or robot execution",
+    "G2-G4"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "scope": "local_calibration_asset_audit",
+  "method": "reviewed step02 frozen inventory plus local project file listing; no server reconnection",
+  "status": "no_independent_EEG_response_calibration_available",
+  "sources": [
+    "execution/02_local_inventory.json",
+    "configs/baseline_manifest.json",
+    "docs/02_inventory.txt",
+    "docs/02_issues.txt"
+  ],
+  "rejected_as_calibration": [
+    {
+      "asset": "context_intent/smoke_data",
+      "reason": "synthetic semantic labels, not EEG responses or compliance"
+    },
+    {
+      "asset": "examples/protocols",
+      "reason": "handwritten software fixtures"
+    },
+    {
+      "asset": "robot LeRobot uniform24_v21 metadata",
+      "reason": "robot trajectories, not EEG response calibration"
+    }
+  ],
+  "real_data_replay_performed": false,
+  "I01_status": "unresolved; raw sampling pipeline has not been replay-verified",
+  "real_calibration_status": "待外部条件"
+}

@@ -1,0 +1,76 @@
+{
+  "schema_version": "grounded-scene/1.0",
+  "scene_id": "fixture-scene",
+  "revision": 1,
+  "observed_at": {
+    "host_id": "fixture-ui",
+    "at": "2026-10-15T00:00:00Z",
+    "offset_ms": 0,
+    "uncertainty_ms": 0
+  },
+  "coordinate_frame": {
+    "name": "image_xy",
+    "unit": "normalized",
+    "width_px": 1000,
+    "height_px": 1000
+  },
+  "identity": {
+    "session_id": "fixture-session",
+    "scope": "session",
+    "tracker_ref": "declared-tracker-fixture"
+  },
+  "objects": [
+    {
+      "instance_id": "grape",
+      "track_token": "tracker-grape",
+      "label": "grapes",
+      "box_xyxy": [
+        0.4,
+        0.4,
+        0.5,
+        0.5
+      ],
+      "visible": true,
+      "affordances": [
+        "pickable"
+      ],
+      "attributes": [],
+      "detection_confidence": null
+    },
+    {
+      "instance_id": "bowl-left",
+      "track_token": "tracker-left",
+      "label": "bowl",
+      "box_xyxy": [
+        0.1,
+        0.2,
+        0.3,
+        0.4
+      ],
+      "visible": true,
+      "affordances": [
+        "container"
+      ],
+      "attributes": [],
+      "detection_confidence": null
+    },
+    {
+      "instance_id": "bowl-right",
+      "track_token": "tracker-right",
+      "label": "bowl",
+      "box_xyxy": [
+        0.7,
+        0.2,
+        0.9,
+        0.4
+      ],
+      "visible": true,
+      "affordances": [
+        "container"
+      ],
+      "attributes": [],
+      "detection_confidence": null
+    }
+  ],
+  "relations": []
+}

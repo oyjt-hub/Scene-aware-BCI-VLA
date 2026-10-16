@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-15",
+  "files": [
+    {
+      "source": "D:\\Scene_Aware\\context_intent\\scene_context\\schema.py",
+      "snapshot": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\scene\\_legacy\\schema.py",
+      "sha256": "3ab59a38c73f29608f418fe209d2f441e463db849c2a61048433edc6be2ae110",
+      "reuse": "grammar, public-slot structural checks and finite renderer only; history/BCI threshold branches not used"
+    },
+    {
+      "source": "D:\\Scene_Aware\\context_intent\\scene_context\\planning.py",
+      "snapshot": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\scene\\_legacy\\planning.py",
+      "sha256": "3133bb2ee2e1d64ba46d3cb4092e112071ed138b8e45500e330c44f13545204a",
+      "reuse": "grammar, public-slot structural checks and finite renderer only; history/BCI threshold branches not used"
+    },
+    {
+      "source": "D:\\Scene_Aware\\context_intent\\scene_context\\rendering.py",
+      "snapshot": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\scene\\_legacy\\rendering.py",
+      "sha256": "08160d2d25a9dff2295f8f69a9d05cf18a896a1286db228b9798b29f64128ceb",
+      "reuse": "grammar, public-slot structural checks and finite renderer only; history/BCI threshold branches not used"
+    }
+  ],
+  "original_files_modified": false
+}

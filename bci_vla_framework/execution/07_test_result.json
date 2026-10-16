@@ -1,0 +1,20 @@
+{
+  "scope": "software_scene_outcome_and_protocol_regression",
+  "command": "python -B execution/run_step07_tests.py",
+  "tests_run": 66,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "result": "PASS",
+  "outcome_model_status": "simulation_only",
+  "real_backend_and_consequence_calibration": "待外部条件",
+  "hardware_calls": 0,
+  "cloud_calls": 0,
+  "not_evaluated": [
+    "actual tracking identity",
+    "real physical predicates",
+    "real recovery/time costs",
+    "checkpoint task capability",
+    "G2-G4"
+  ]
+}

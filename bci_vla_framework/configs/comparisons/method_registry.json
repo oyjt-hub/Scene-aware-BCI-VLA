@@ -1,0 +1,163 @@
+{
+  "schema_version": "comparison-registry/1.0",
+  "status": "offline_implementation_only",
+  "deployment_allowed": false,
+  "shared": [
+    "calibration models",
+    "goal vocabulary",
+    "scene and contracts",
+    "action registry and legal durations",
+    "wall-time budget",
+    "noisy final confirmation",
+    "independent STOP",
+    "original world loss for scoring"
+  ],
+  "methods": [
+    {
+      "id": "B0",
+      "name": "原LLM固定补选链",
+      "status": "external_trace_required",
+      "adaptation": "原服务器源码冻结；缺实际API/完整耗时与共同确认包装，不填假结果",
+      "online_hidden_labels": false,
+      "confirmation": "same_noisy_model",
+      "executor": "same_unverified_simulation_backend"
+    },
+    {
+      "id": "B1",
+      "name": "NOIR-inspired固定选择",
+      "status": "offline_adaptation",
+      "adaptation": "共享二选一目标而非原对象/技能层级；不冒充完整NOIR",
+      "online_hidden_labels": false,
+      "confirmation": "same_noisy_model",
+      "executor": "same_unverified_simulation_backend"
+    },
+    {
+      "id": "B1P",
+      "name": "NOIR-inspired预测核验与纠正",
+      "status": "offline_adaptation",
+      "adaptation": "外部公共目标预测；任务问题核验，冲突后纠正，再共同含噪最终确认",
+      "online_hidden_labels": false,
+      "confirmation": "same_noisy_model",
+      "executor": "same_unverified_simulation_backend"
+    },
+    {
+      "id": "B2",
+      "name": "固定通道允许目标变化",
+      "status": "offline_finite",
+      "adaptation": "每次预测把通道投影到normal；世界模型仍允许通道变",
+      "online_hidden_labels": false,
+      "confirmation": "same_noisy_model",
+      "executor": "same_unverified_simulation_backend"
+    },
+    {
+      "id": "B3",
+      "name": "目标惯性与独立被动通道监测",
+      "status": "offline_finite",
+      "adaptation": "目标gap不变、g/z独立重组；无主动probe；不是最优漂移监测复现",
+      "online_hidden_labels": false,
+      "confirmation": "same_noisy_model",
+      "executor": "same_unverified_simulation_backend"
+    },
+    {
+      "id": "B4",
+      "name": "联合滤波无主动已知目标探测",
+      "status": "offline_finite",
+      "adaptation": "任务澄清允许，probe禁用",
+      "online_hidden_labels": false,
+      "confirmation": "same_noisy_model",
+      "executor": "same_unverified_simulation_backend"
+    },
+    {
+      "id": "B5",
+      "name": "固定周期probe",
+      "status": "offline_finite",
+      "adaptation": "按诊断次数计周期，初次为探测相位；间隔可调，探测题用同模型风险选择",
+      "online_hidden_labels": false,
+      "confirmation": "same_noisy_model",
+      "executor": "same_unverified_simulation_backend"
+    },
+    {
+      "id": "B6",
+      "name": "冲突重复或延长",
+      "status": "offline_finite",
+      "adaptation": "公共历史目标冲突触发；延长需unconsumed许可，重试需fresh许可",
+      "online_hidden_labels": false,
+      "confirmation": "same_noisy_model",
+      "executor": "same_unverified_simulation_backend"
+    },
+    {
+      "id": "B7",
+      "name": "冲突或质量阈值probe",
+      "status": "offline_finite",
+      "adaptation": "质量未知不填成良好；不能读取评价真值",
+      "online_hidden_labels": false,
+      "confirmation": "same_noisy_model",
+      "executor": "same_unverified_simulation_backend"
+    },
+    {
+      "id": "B8",
+      "name": "通道信息增益再语义澄清",
+      "status": "offline_finite",
+      "adaptation": "每秒I(Z;Y)而非任务收益；熵阈值待验证集调参",
+      "online_hidden_labels": false,
+      "confirmation": "same_noisy_model",
+      "executor": "same_unverified_simulation_backend"
+    },
+    {
+      "id": "B9",
+      "name": "标准一步任务VoI",
+      "status": "offline_finite",
+      "adaptation": "与M相同信息、动作、后果、预算、含噪确认；独立树实现",
+      "online_hidden_labels": false,
+      "confirmation": "same_noisy_model",
+      "executor": "same_unverified_simulation_backend"
+    },
+    {
+      "id": "B10",
+      "name": "RBC-inspired递归Bayes/停时/语义VoI组合",
+      "status": "restricted_binary_adaptation",
+      "adaptation": "只有一个已验证二元码本；不能代表完整MMI重编码或窗内动态停时",
+      "online_hidden_labels": false,
+      "confirmation": "same_noisy_model",
+      "executor": "same_unverified_simulation_backend"
+    },
+    {
+      "id": "M",
+      "name": "主动诊断默认一步",
+      "status": "offline_finite",
+      "adaptation": "步骤09原实现；若等价B9就不声称求解器创新",
+      "online_hidden_labels": false,
+      "confirmation": "same_noisy_model",
+      "executor": "same_unverified_simulation_backend"
+    },
+    {
+      "id": "M2",
+      "name": "主动诊断两步候选",
+      "status": "offline_finite",
+      "adaptation": "同一有限模型，多一个诊断展望；与horizon2的O1对照",
+      "online_hidden_labels": false,
+      "confirmation": "same_noisy_model",
+      "executor": "same_unverified_simulation_backend"
+    },
+    {
+      "id": "O1",
+      "name": "同信息精确枚举",
+      "status": "offline_exact_reference",
+      "adaptation": "独立递归，不调用步骤09 plan/_evaluate/_branches；共享校验模型与合法动作",
+      "online_hidden_labels": false,
+      "confirmation": "same_noisy_model",
+      "executor": "same_unverified_simulation_backend"
+    },
+    {
+      "id": "O2",
+      "name": "全知g/z非现实参考",
+      "status": "non_deployable_reference",
+      "adaptation": "每个决策揭示状态，但仍保留同样含噪最终确认和成本，不能作在线方法",
+      "online_hidden_labels": false,
+      "confirmation": "same_noisy_model",
+      "executor": "same_unverified_simulation_backend"
+    }
+  ],
+  "real_deployment_verified": false,
+  "strongest_real_baseline": null
+}

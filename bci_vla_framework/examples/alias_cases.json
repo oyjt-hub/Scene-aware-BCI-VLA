@@ -1,0 +1,170 @@
+{
+  "schema_version": "step03-analytic-example-v1",
+  "plan_version": "V2",
+  "provenance": "analytic_toy_examples_not_empirical_data",
+  "visibility": "evaluation_private_example_only_not_online_protocol",
+  "rational_values": "strings parsed as exact Fraction; not calibrated EEG probabilities",
+  "cases": [
+    {
+      "id": "A01_task_alias",
+      "type": "observational_equivalence",
+      "state_order": [
+        "00",
+        "01",
+        "10",
+        "11"
+      ],
+      "worlds": [
+        {
+          "g": 1,
+          "f": 0
+        },
+        {
+          "g": 0,
+          "f": 1
+        }
+      ],
+      "assumptions": [
+        "fixed state within analysis window",
+        "symmetric conditional noise shared by both worlds",
+        "task query family y=g XOR f XOR e XOR n only"
+      ],
+      "epsilon_task": "1/10",
+      "expected_y1_probability": [
+        "9/10",
+        "9/10"
+      ],
+      "expected_posterior_world_A_equal_prior": "1/2"
+    },
+    {
+      "id": "A02_known_recoding",
+      "type": "algebraic_identity",
+      "encodings": [
+        0,
+        1
+      ],
+      "identity": "y XOR e = g XOR f XOR n",
+      "expected": "same likelihood for A/B under either encoding"
+    },
+    {
+      "id": "A03_anchor_noiseless",
+      "type": "probe_likelihood",
+      "prompt_a": 0,
+      "epsilon_probe": "0",
+      "expected_p_z_equals_a_given_f0": "1",
+      "expected_p_z_equals_a_given_f1": "0"
+    },
+    {
+      "id": "A04_anchor_noisy",
+      "type": "probe_likelihood",
+      "prompt_a": 0,
+      "epsilon_probe": "1/10",
+      "expected_likelihood_ratio_match": "9",
+      "expected_A_after_one_match": "9/10",
+      "expected_A_after_two_independent_matches": "81/82",
+      "expected_A_after_match_then_mismatch": "1/2",
+      "is_execution_threshold": false
+    },
+    {
+      "id": "A05_joint_correlation",
+      "type": "joint_posterior",
+      "state_order": [
+        "00",
+        "01",
+        "10",
+        "11"
+      ],
+      "prior": [
+        "1/4",
+        "1/4",
+        "1/4",
+        "1/4"
+      ],
+      "epsilon_task": "1/10",
+      "task_y": 1,
+      "expected_after_task": [
+        "1/20",
+        "9/20",
+        "9/20",
+        "1/20"
+      ],
+      "prompt_a": 0,
+      "probe_y": 0,
+      "epsilon_probe": "1/10",
+      "expected_after_probe": [
+        "9/100",
+        "9/100",
+        "81/100",
+        "1/100"
+      ],
+      "expected_goal1_marginal": "41/50"
+    },
+    {
+      "id": "F01_random_probe",
+      "type": "failure",
+      "epsilon_probe": "1/2",
+      "expected_channel_likelihoods_equal": true,
+      "required_behavior": "unresolved / pause"
+    },
+    {
+      "id": "F02_unknown_compliance",
+      "type": "failure",
+      "worlds": [
+        {
+          "compliance_flip": 0,
+          "f": 1
+        },
+        {
+          "compliance_flip": 1,
+          "f": 0
+        }
+      ],
+      "identity": "z=a XOR compliance_flip XOR f",
+      "expected": "same distribution; physiology/compliance not separately identified"
+    },
+    {
+      "id": "F03_double_change_no_conflict",
+      "type": "failure",
+      "before": {
+        "g": 0,
+        "f": 0
+      },
+      "after": {
+        "g": 1,
+        "f": 1
+      },
+      "expected_noiseless_task_output_before": 0,
+      "expected_noiseless_task_output_after": 0,
+      "required_behavior": "do not promise conflict-only detection"
+    },
+    {
+      "id": "F04_unlinked_probe_channel",
+      "type": "failure",
+      "task_channel": "unknown and unconstrained by probe mode",
+      "probe_channel": "separate calibrated channel",
+      "expected": "probe does not identify task channel"
+    },
+    {
+      "id": "F05_zero_prior",
+      "type": "failure",
+      "prior_world_A": "0",
+      "expected_posterior_world_A_for_positive_likelihood": "0",
+      "required_behavior": "do not treat support exclusion as identified cause"
+    },
+    {
+      "id": "F06_fast_state_change",
+      "type": "failure",
+      "expected": "probe window does not establish past or future task channel without temporal assumptions"
+    },
+    {
+      "id": "F07_replayed_prefix",
+      "type": "failure",
+      "expected": "repeated event/window is not independent evidence"
+    },
+    {
+      "id": "F08_budget_insufficient",
+      "type": "failure",
+      "expected": "structural identifiability does not ensure finite-budget diagnosis"
+    }
+  ]
+}

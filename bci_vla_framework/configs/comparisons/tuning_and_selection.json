@@ -1,0 +1,65 @@
+{
+  "status": "pending_independent_validation",
+  "chosen_baseline": null,
+  "grids": {
+    "period": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "confidence": [
+      0.7,
+      0.8,
+      0.9,
+      0.95
+    ],
+    "conflict_threshold": [
+      0.2,
+      0.35,
+      0.5,
+      0.7
+    ],
+    "quality_threshold": [
+      0.25,
+      0.5,
+      0.75
+    ],
+    "channel_entropy_stop": [
+      0,
+      0.05,
+      0.2,
+      0.5
+    ]
+  },
+  "splits": [
+    "development",
+    "calibration",
+    "validation",
+    "test"
+  ],
+  "split_unit": "user/session/physical_scene groups; all episode prefixes together",
+  "selection_rule": {
+    "status": "awaiting_independent_pilot_limits",
+    "source_split": "calibration",
+    "source_ref": null,
+    "wrong_start_rate_ceiling": null,
+    "all_episode_mean_time_ceiling_s": null,
+    "rank": [
+      "maximum all-episode faithful completion rate",
+      "minimum wrong-start rate",
+      "minimum all-episode mean time",
+      "minimum abstention rate",
+      "candidate_id"
+    ]
+  },
+  "freeze_required": [
+    "complete paired validation candidate grid",
+    "exact config hashes",
+    "partition hashes",
+    "rule from separate calibration pilot before validation",
+    "common protocol/deployment checks"
+  ],
+  "formal_test_selection_forbidden": true,
+  "performance_claim_allowed": false
+}

@@ -1,0 +1,50 @@
+{
+  "status": "virtual_only",
+  "deployment_allowed": false,
+  "all_keep": [
+    "noisy confirmation",
+    "STOP",
+    "budget",
+    "contract versions"
+  ],
+  "methods": [
+    {
+      "id": "A_no_probe",
+      "change": "remove known-target probes"
+    },
+    {
+      "id": "A_factorized",
+      "change": "factor joint after every predicted and observed update"
+    },
+    {
+      "id": "A_periodic",
+      "change": "replace active choice by tuned fixed-period rule"
+    },
+    {
+      "id": "A_no_task_consequence",
+      "change": "planning uses symmetric goal 0/1 loss; evaluator retains original outcomes"
+    },
+    {
+      "id": "A_mix_sources",
+      "change": "deliberately treat probe response as task answer; world emissions unchanged"
+    },
+    {
+      "id": "A_pseudo_labels",
+      "change": "own predicted goal/mode labels adapt task emission counts; never external truth"
+    },
+    {
+      "id": "A_ignore_probe_cost",
+      "change": "planning probe cost zero; actual time and evaluator cost still charged"
+    },
+    {
+      "id": "A_fixed_duration",
+      "change": "use only 1s final windows; no prefix reuse"
+    }
+  ],
+  "future_environment_sensitivities": [
+    "wrong channel prior",
+    "wrong scene prior",
+    "probe noncompliance"
+  ],
+  "note": "environment sensitivities and complete fault/episode sweep belong to step12; not run here"
+}

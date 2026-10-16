@@ -1,0 +1,15 @@
+{
+  "status": "simulation_only",
+  "provenance": "illustrative_not_fitted",
+  "goal_ids": [
+    "goal-0",
+    "goal-1"
+  ],
+  "mode_ids": [
+    "normal",
+    "flip"
+  ],
+  "goal_rate_per_s": 0.01,
+  "channel_rate_per_s": 0.02,
+  "joint_rate_per_s": 0.005
+}

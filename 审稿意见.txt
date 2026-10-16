@@ -1,0 +1,56 @@
+Dear Prof. Song:
+
+Your manuscript, Scene-Aware SSVEP-BCI Controlled Robotic Manipulation Framework Integrated with Vision-Language-Action Models TNSRE-2026-01326, has been carefully reviewed by the IEEE Transactions on Neural Systems and Rehabilitation Engineering editorial review board.  We regularly receive many more manuscripts than we can possibly publish due to IEEE page limits. This requires us to make difficult decisions not only based on technical comments, but the innovation and impact ratings of the referees and associate editors. Unfortunately, based on the reviews and ratings, we will not be considering a revision of your manuscript. We hope the reviewer comments will be helpful to you as you seek publication in another venue.
+
+If you have any questions, please contact me at the email below.  Thank you for submitting your manuscript to IEEE Transactions.
+
+
+Sincerely,
+Helen Huang  
+Editor-in-chief, IEEE TNSRE
+email:  eictnsre@gmail.com  
+
+
+Associate Editor's Comments:
+Associate Editor
+Comments to the Author:
+Although the integration of SSVEP-based control with autonomous robotic manipulation is promising, the manuscript does not sufficiently establish a substantive advance over existing BCI–VLA approaches. The experimental comparisons do not isolate the contributions of the proposed framework, and the limited human evaluation and statistical reporting do not adequately support the central claims concerning reduced fatigue, robustness and reliable assistive operation. Addressing these concerns would require substantial additional validation and controlled experiments. I therefore regret that I cannot accept the manuscript for publication.
+
+Reviewer's Comments:
+Reviewer: 1
+
+Comments to the Author
+This manuscript addresses a well-recognized bottleneck of SSVEP-BCI-controlled assistive robots—multi-step repetitive triggering that induces fatigue, and rigid skill primitives that cannot handle non-rigid objects.
+
+After reading the manuscript, I have several comments and suggestions:
+
+The Gamepad baseline was executed by a single trained operator (10 trials per task), whereas both BCI-driven modalities involved five subjects × 10 trials. A single operator cannot represent the user population, and the direction of the resulting bias is unknown; direct statistical comparison between N = 10 and N = 50 is also unbalanced. Please have the same five participants complete the Gamepad condition, or acknowledge this limitation and temper the corresponding claims.
+
+The statement “statistical analysis (N = 50) confirms … (p <0.0001) … (p > 0.05)” does not specify the test used. More importantly, the ten trials of each subject are not independent observations; pooling them into N = 50 constitutes pseudoreplication. Please analyze at the subject level or use mixed-effects models, and report confidence intervals for the success rates. For cloth folding (54% vs. 0%), Fisher’s exact test would be appropriate, and the interpretive limits of a 0% baseline should be discussed.
+
+BCI-VLA success is lower than OSC on all three rigid tasks (64% vs. 76%, 82% vs. 92%, 48% vs. 56%). Describing this as trading “minor rigid precision” understates the practical implication: at 48%, nearly half of the attempts fail, and each failure requires the user to restart the trigger–execution cycle. Please provide a failure-mode analysis (BCI decoding vs. LLM reasoning vs. VLA execution) and describe the recovery procedure and its time cost.
+
+The user issues a single blink trigger at initiation and has no interrupt/abort channel during autonomous execution (up to 126 s for cloth folding); the LLM-inferred instruction is likewise not confirmed before execution, so an LLM misinterpretation would be executed directly. For a shared-control system intended for users with disabilities, an instruction-confirmation step (e.g., a secondary BCI selection) and an always-available stop command are basic safety provisions; please add them, or explicitly discuss the current safety boundaries and mitigations. In addition, reliance on a cloud LLM API (Gemini-2.5-flash) raises latency, availability, and privacy concerns that should be discussed, and an end-to-end latency budget (perception, LLM round-trip, VLA inference) should be reported.
+
+The following parameters are not reported and are needed for reproducibility: the actual SSVEP stimulation frequencies f1–f4 and the rationale for their choice on a 60 Hz display (avoiding harmonic aliasing); the FBCCA filter-bank configuration (number of sub-bands, harmonics, and data-window length); EEG preprocessing (e.g., band-pass filtering); the blink-detection algorithm, threshold, and false-trigger rate; the LLM prompt template; the value of the loss-balancing weight λ in Eq. (6); and the gripper smoothing coefficient and deadband threshold. The EMA coefficient λ = 0.35 was chosen from “preliminary experiments”; a sensitivity analysis is recommended.
+
+The interface supports at most four flickering targets (f1–f4), and task R3 already requires three sequential selections. How does the dynamic mapping handle workspaces with more than four actionable objects? This scalability constraint should be stated in the Methods and discussed.
+
+The task labels in Fig. 7 (apparently “Pick …” and “Place orange in bowl”) do not match the starfruit/grape tasks described in the text and Table III; please verify that the figure and the data correspond to the same experimental configuration. Also, since the OOD experiments were “conducted by an experimenter,” please clarify who issued the BCI selections in the 50 trials per condition (automated or simulated selection), to make clear that this experiment isolates policy-level rather than BCI-level variability.
+
+Reviewer: 2
+
+Comments to the Author
+The paper proposes an SSVEP-BCI robotic manipulation framework integrating visual perception, LLM-based reasoning, and VLA models. The system reduces user interactions and supports complex dual-arm manipulation, but several issues remain.
+
+Comments:
+
+The technical novelty is limited, as the framework mainly integrates existing models. The authors should better distinguish their contributions from prior BCI-based robotic systems.
+
+Real-world success rates remain relatively low (48%–82%), and the proposed method underperforms OSC on rigid-object tasks. Further failure analysis is needed.
+
+The baseline comparisons are not fully fair, and ablation studies should separately evaluate the contributions of scene-aware perception, LLM reasoning, and VLA execution.
+
+Only five healthy participants are involved. Stronger user studies and direct workload comparisons are needed to support the claims of reduced cognitive fatigue.
+
+The related work could be strengthened by discussing recent advances in spatial affordance learning for embodied manipulation and spatial relationship understanding in robotics: Embodied Spatial Affordance: Spatial-Aware Affordance Learning for Embodied Navigation and Manipulation, A Spatial Relationship Aware Dataset for Robotics.

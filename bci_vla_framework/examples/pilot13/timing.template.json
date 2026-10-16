@@ -1,0 +1,20 @@
+{
+  "scope": "not_measured",
+  "clock_id": null,
+  "window_start_s": null,
+  "window_end_s": null,
+  "required_phases": [
+    "reading",
+    "switching",
+    "acquisition",
+    "decoding",
+    "network",
+    "retry",
+    "return_to_task",
+    "confirmation",
+    "computation"
+  ],
+  "segments": [],
+  "zero_duration_phases_require_evidence": true,
+  "observed_user_busy_s": null
+}

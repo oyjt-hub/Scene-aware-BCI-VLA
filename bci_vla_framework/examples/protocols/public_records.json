@@ -1,0 +1,101 @@
+{
+  "SceneState": {
+    "scene_id": "fixture-scene",
+    "revision": 1,
+    "observed_at": {
+      "host_id": "ui",
+      "at": "2026-10-15T00:00:00Z",
+      "offset_ms": 0,
+      "uncertainty_ms": 0
+    },
+    "objects": [
+      {
+        "instance_id": "fixture-object",
+        "label": "object",
+        "position_xy": [
+          0.2,
+          0.3
+        ],
+        "affordances": [
+          "pickable"
+        ]
+      }
+    ]
+  },
+  "JointBelief": {
+    "goal_ids": [
+      "left",
+      "right"
+    ],
+    "mode_ids": [
+      "normal",
+      "flip"
+    ],
+    "mass": [
+      {
+        "goal_id": "left",
+        "mode_id": "flip",
+        "probability": 0.5
+      },
+      {
+        "goal_id": "right",
+        "mode_id": "normal",
+        "probability": 0.5
+      }
+    ],
+    "as_of_event_id": "fixture-event"
+  },
+  "ChannelProfile": {
+    "profile_id": "uncalibrated-v1",
+    "mode_ids": [
+      "normal",
+      "flip"
+    ],
+    "calibration_id": null,
+    "status": "uncalibrated",
+    "evidence_kind": "none"
+  },
+  "ProbeModel": {
+    "model_id": "fixture-probe",
+    "channel_profile_id": "uncalibrated-v1",
+    "compliance_model_ref": null,
+    "transfer_calibration_ref": null,
+    "status": "uncalibrated"
+  },
+  "TaskContract": {
+    "contract_id": "fixture-contract",
+    "task_id": "fixture-task",
+    "revision": 1,
+    "scene_id": "fixture-scene",
+    "scene_revision": 1,
+    "intent": {
+      "action": "place",
+      "source_id": "fixture-object",
+      "destination_id": "fixture-bowl"
+    },
+    "status": "proposed",
+    "valid_until": "2026-10-15T00:00:09Z",
+    "confirmation_event_id": null
+  },
+  "ConsequenceModel": {
+    "model_id": "fixture-cost",
+    "executor_id": "fixture-executor",
+    "predicate_version": "v1",
+    "cost_source": "unavailable",
+    "evidence_ref": null,
+    "status": "unavailable"
+  },
+  "ExecutionEvent": {
+    "execution_id": "fixture-execution",
+    "contract_id": "fixture-contract",
+    "contract_revision": 1,
+    "stage": "command_dispatched",
+    "at": {
+      "host_id": "executor",
+      "at": "2026-10-15T00:00:00Z",
+      "offset_ms": 0,
+      "uncertainty_ms": 0
+    },
+    "evidence_ref": null
+  }
+}

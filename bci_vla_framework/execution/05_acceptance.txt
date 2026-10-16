@@ -1,0 +1,18 @@
+﻿步骤05验收：正式消息结构与离线适配器壳
+日期2026-10-15；计划V2；软件schema bci-vla/1.0。
+前置：步骤02/03已完成，步骤04协议已编制；G1仅条件性理论与协议通过。
+05.1 完成：protocols.py的Event具schema/event/session/query/probe/task/revision/有效期字段，未知/缺失字段和不兼容schema拒绝；深度冻结避免登记后篡改。
+05.2 完成：TASK_QUERY、CHANNEL_PROBE、CONFIRM、CANCEL、STOP、EXECUTION_EVENT均有结构定义及合法示例。
+05.3 完成：TASK语义选项与PROBE已知提示分离；只按已登记request绑定response_to与模式，不允许响应自建probe真标签；私有字段含嵌套未知字段拒绝。
+05.4 完成：保留raw_scores、score_kind、calibration_id、quality、时间窗、采样率、映射和刺激版本；不自动归一化原始FBCCA分数。
+05.5 完成：无控制/无响应/无效信号/传输失败/超时区分；非观察状态likelihood_kind=null，无默认选择。
+05.6 完成：跨主机墙钟偏差/不确定性区间与本机monotonic deadline分开；不比较远端单调时钟；实际时钟同步未实施。
+05.7 完成：SceneState、JointBelief、ChannelProfile、ProbeModel、TaskContract、ConsequenceModel、ExecutionEvent七类不可变声明。模型状态/引用不是实际校准或执行证明。
+05.8 完成：重复事件、来源序号乱序、旧菜单/任务/场景版本、过期、非有限值、缺字段及schema错均有拒绝路径；窗口重叠/重用拒绝；模块导入和help无设备/网络副作用。
+产物：bci_vla/protocols.py、adapters/bci/replay.py/ssvep.py、9份合法消息、8种非法结构、7类模型示例和docs/05_protocols.txt。
+实际软件检查：python -B execution/run_step05_tests.py，共28项全部通过，无跳过；完整输出05_test_output.txt、摘要05_test_result.json。
+CLI：python -B -m bci_vla --help及channel_probe_request.json校验均成功，无网络/设备调用。
+交付一致性/前置回归：以05_integrity_result.json和04_integrity_recheck_after_step05.json实际输出为准。
+限制：单线程/内存/单挂起交互，disjoint-only窗口；不实现跨进程认证/持久去重/硬件急停，不证明分数或时钟来源真实。物理停止链仍须后续接通。
+没有实现通道似然、联合更新、诊断策略或机器人执行；confirmed声明/accepted返回值均不自动授权动作。I01—I14未因此解决。
+结论：步骤05的软件协议与壳验收完成；未取得新EEG、真人或机器人效果。步骤06未开始；G2—G4未开始。

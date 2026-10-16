@@ -1,0 +1,27 @@
+{
+  "scope": "documentation",
+  "result": "PASS",
+  "count": 13,
+  "checks": [
+    "17 unique ordered steps",
+    "only step 01 complete",
+    "next step 02 not started",
+    "research gates not passed",
+    "dependency order",
+    "10 nearest-neighbor rows",
+    "mandatory related work",
+    "claims and nonclaims",
+    "scope and gate criteria",
+    "fair baselines and oracle",
+    "required records readable",
+    "TXT UTF8 BOM and CRLF",
+    "source files unchanged"
+  ],
+  "not_evaluated": [
+    "G1-G4",
+    "algorithm",
+    "EEG",
+    "robot",
+    "innovation validity"
+  ]
+}

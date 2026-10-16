@@ -1,0 +1,5263 @@
+{
+  "status": "read_only_success",
+  "evidence": {
+    "repository": "/home/oyjt/Scene-aware-BCI-VLA",
+    "exists": true,
+    "branch": {
+      "exit_code": 0,
+      "stdout": "main",
+      "stderr": ""
+    },
+    "head": {
+      "exit_code": 0,
+      "stdout": "d2245527a767707c19d7305caacb02fa5de89dc3",
+      "stderr": ""
+    },
+    "status": {
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "tracked_count": 1021,
+    "tracked_weight_data_paths": [],
+    "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+    "python_executable": "/usr/bin/python3",
+    "packages_in_default_python": {
+      "torch": null,
+      "jax": null,
+      "numpy": "1.21.5",
+      "flax": null,
+      "openpi": null,
+      "opencv-python": null,
+      "fastapi": null
+    },
+    "files": [
+      {
+        "path": "README.md",
+        "exists": true,
+        "sha256": "8016033cf6bcb8fa451122768564bfd78749aa55224f96759fe0e6f2827aa6e9",
+        "lines": 178,
+        "excerpt": [
+          {
+            "line": 1,
+            "text": "# Scene-Aware SSVEP-BCI Controlled Robotic Manipulation Framework Integrated with Vision-Language-Action Models"
+          },
+          {
+            "line": 2,
+            "text": ""
+          },
+          {
+            "line": 3,
+            "text": "[![Paper](https://img.shields.io/badge/Paper-IEEE%20Format-red)](https://github.com/oyjt-hub/Scene-aware-BCI-VLA)"
+          },
+          {
+            "line": 4,
+            "text": "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)"
+          },
+          {
+            "line": 5,
+            "text": "[![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-brightgreen.svg)](https://www.python.org/)"
+          },
+          {
+            "line": 6,
+            "text": "[![PyTorch](https://img.shields.io/badge/PyTorch-2.2%2B-orange.svg)](https://pytorch.org/)"
+          },
+          {
+            "line": 7,
+            "text": ""
+          },
+          {
+            "line": 8,
+            "text": "> **Official implementation of the paper:**"
+          },
+          {
+            "line": 9,
+            "text": "> *\"Scene-Aware SSVEP-BCI Controlled Robotic Manipulation Framework Integrated with Vision-Language-Action Models\"*"
+          },
+          {
+            "line": 10,
+            "text": "> **Authors:** Jun Song, Jietong Ouyang, Jason J. R. Liu, Hak-Keung Lam, Shuping He, Changyin Sun."
+          },
+          {
+            "line": 11,
+            "text": ""
+          },
+          {
+            "line": 12,
+            "text": "[![Demo](https://img.shields.io/badge/Demo-Bilibili-FB7299?logo=bilibili&logoColor=white)](https://www.bilibili.com/video/BV1YaYH6iESB/?spm_id_from=333.1387.homepage.video_card.click&vd_source=628cfed84bbf2057bb65b782c484b8b6)"
+          },
+          {
+            "line": 13,
+            "text": ""
+          },
+          {
+            "line": 14,
+            "text": "## 🌟 Overview"
+          },
+          {
+            "line": 15,
+            "text": ""
+          },
+          {
+            "line": 16,
+            "text": "Deploying Vision-Language-Action (VLA) foundation models in assistive robotics faces a fundamental communication bottleneck with non-invasive Brain-Computer Interfaces (BCIs): continuous neural control induces severe user fatigue, while discrete BCI triggers lack semantic richness for dexterous tasks."
+          },
+          {
+            "line": 17,
+            "text": ""
+          },
+          {
+            "line": 18,
+            "text": "This repository provides an end-to-end **tri-level shared-control architecture**:"
+          },
+          {
+            "line": 19,
+            "text": ""
+          },
+          {
+            "line": 20,
+            "text": "1. **Scene-Aware Visual Interface:** Uses **Florence-2** and **Grounded-SAM-2** to extract candidate targets and dynamically overlays multi-frequency SSVEP flickering masks directly on actionable objects."
+          },
+          {
+            "line": 21,
+            "text": "2. **Context-Aware Reasoning Module:** Decodes sparse EEG selections via **FBCCA** and prompts an LLM (**Gemini-2.5-flash**) with scene context to infer precise manipulation instructions."
+          },
+          {
+            "line": 22,
+            "text": "3. **VLA Execution Module:** Fine-tunes **π0.5** policies, integrated with an **Asynchronous Action Smoother** (EMA filtering, deadband filtering, and motion interpolation) for continuous dual-arm manipulation."
+          },
+          {
+            "line": 23,
+            "text": ""
+          },
+          {
+            "line": 24,
+            "text": "<p align=\"center\">"
+          },
+          {
+            "line": 25,
+            "text": "<img width=\"2012\" height=\"930\" alt=\"architecture\" src=\"https://github.com/user-attachments/assets/731df27f-6e1d-4537-b451-eaa0578b1a12\" />"
+          },
+          {
+            "line": 26,
+            "text": "</p>"
+          },
+          {
+            "line": 27,
+            "text": ""
+          },
+          {
+            "line": 28,
+            "text": "---"
+          },
+          {
+            "line": 29,
+            "text": ""
+          },
+          {
+            "line": 30,
+            "text": "## 📁 Repository Structure"
+          },
+          {
+            "line": 31,
+            "text": ""
+          },
+          {
+            "line": 32,
+            "text": "The repository is organized into **four parts**: the project's own BCI decoding module, the two upstream base frameworks it builds on, and the system-integration scripts."
+          },
+          {
+            "line": 33,
+            "text": ""
+          },
+          {
+            "line": 34,
+            "text": "```text"
+          },
+          {
+            "line": 35,
+            "text": "."
+          },
+          {
+            "line": 36,
+            "text": "├── Scene-aware-BCI-VLA/     # ① BCI decoding module (this project's core)"
+          },
+          {
+            "line": 37,
+            "text": "│   ├── triggerBox.py        #    SSVEP flicker stimulation & trigger-box synchronization"
+          },
+          {
+            "line": 38,
+            "text": "│   ├── fbcca.py             #    Filter-Bank Canonical Correlation Analysis (FBCCA) decoder"
+          },
+          {
+            "line": 39,
+            "text": "│   ├── interface.py         #    Neuracle NeuSenW wireless EEG acquisition interface"
+          },
+          {
+            "line": 40,
+            "text": "│   └── creat_raw_data.py    #    Raw EEG dataset construction"
+          },
+          {
+            "line": 41,
+            "text": "│"
+          },
+          {
+            "line": 42,
+            "text": "├── openpi/                  # ② VLA policy base — π0.5 fine-tuning & serving (modified fork)"
+          },
+          {
+            "line": 43,
+            "text": "│"
+          },
+          {
+            "line": 44,
+            "text": "├── Grounded-SAM-2/          # ③ Scene perception base — target extraction & SSVEP mask rendering (modified fork)"
+          },
+          {
+            "line": 45,
+            "text": "│"
+          },
+          {
+            "line": 46,
+            "text": "└── scripts/                 # ④ System integration, robot client & utilities"
+          },
+          {
+            "line": 47,
+            "text": "    ├── inference.py         #    Main entry — closed-loop BCI-VLA inference on the robot host"
+          },
+          {
+            "line": 48,
+            "text": "    ├── server_api.py        #    π0.5 policy server hosted on the GPU workstation"
+          },
+          {
+            "line": 49,
+            "text": "    ├── robot/               #    Robot-side execution clients (RTC_inference, SSVEP_inference, ...)"
+          },
+          {
+            "line": 50,
+            "text": "    ├── bci/                 #    Robot-side EEG streaming & decoding utilities"
+          },
+          {
+            "line": 51,
+            "text": "    ├── training/            #    Policy fine-tuning & normalization-statistics scripts"
+          },
+          {
+            "line": 52,
+            "text": "    ├── data_tools/          #    Dataset conversion (LeRobot / ROS)"
+          },
+          {
+            "line": 53,
+            "text": "    └── docker/              #    Dockerfiles & setup scripts for policy serving"
+          },
+          {
+            "line": 54,
+            "text": "```"
+          },
+          {
+            "line": 55,
+            "text": ""
+          },
+          {
+            "line": 56,
+            "text": "> **Note:** `openpi/` and `Grounded-SAM-2/` are included **in full** so the repository is self-contained — no separate cloning of the upstream projects is required. Both keep their original internal structure, with our project-specific modifications on top."
+          },
+          {
+            "line": 57,
+            "text": ""
+          },
+          {
+            "line": 58,
+            "text": "---"
+          },
+          {
+            "line": 59,
+            "text": ""
+          },
+          {
+            "line": 60,
+            "text": "## 🏗️ System Architecture"
+          },
+          {
+            "line": 61,
+            "text": ""
+          },
+          {
+            "line": 62,
+            "text": "The project integrates the following core components:"
+          },
+          {
+            "line": 63,
+            "text": ""
+          },
+          {
+            "line": 64,
+            "text": "* **Perception:** [Grounded-SAM-2](https://github.com/IDEA-Research/Grounded-SAM-2) (Florence-2-large + SAM-2-hiera-large) for dynamic target extraction and visual mask rendering."
+          },
+          {
+            "line": 65,
+            "text": "* **BCI Decoding:** 11-channel EEG acquisition (Neuracle NeuSenW) decoded via Filter Bank Canonical Correlation Analysis (FBCCA)."
+          },
+          {
+            "line": 66,
+            "text": "* **Cognitive Middleware:** Gemini-2.5-flash for intent disambiguation and task instruction synthesis."
+          },
+          {
+            "line": 67,
+            "text": "* **Embodied Policy:** [OpenPI](https://github.com/Physical-Intelligence/openpi) for real-world dual-arm execution & [StarVLA](https://github.com/starvla/starvla) for simulation."
+          },
+          {
+            "line": 68,
+            "text": "* **Kinematic Layer:** Asynchronous producer–consumer control thread with receding horizon ($H=50$) and temporal Exponential Moving Average ($\\beta=0.35$)."
+          },
+          {
+            "line": 69,
+            "text": ""
+          },
+          {
+            "line": 70,
+            "text": "---"
+          },
+          {
+            "line": 71,
+            "text": ""
+          },
+          {
+            "line": 72,
+            "text": "## 🧩 Module Guide"
+          },
+          {
+            "line": 73,
+            "text": ""
+          },
+          {
+            "line": 74,
+            "text": "### ① Scene-aware-BCI-VLA — BCI Decoding"
+          },
+          {
+            "line": 75,
+            "text": ""
+          },
+          {
+            "line": 76,
+            "text": "Implements the SSVEP-BCI pipeline: flicker stimulation, EEG acquisition, and frequency decoding."
+          },
+          {
+            "line": 77,
+            "text": ""
+          },
+          {
+            "line": 78,
+            "text": "| File | Role |"
+          },
+          {
+            "line": 79,
+            "text": "|---|---|"
+          },
+          {
+            "line": 80,
+            "text": "| `triggerBox.py` | Renders multi-frequency SSVEP flicker masks over candidate targets and synchronizes triggers with the EEG amplifier. |"
+          },
+          {
+            "line": 81,
+            "text": "| `fbcca.py` | Online FBCCA decoder that maps the selected SSVEP component to a target ID. |"
+          },
+          {
+            "line": 82,
+            "text": "| `interface.py` | Real-time acquisition interface for the Neuracle NeuSenW wireless EEG system. |"
+          },
+          {
+            "line": 83,
+            "text": "| `creat_raw_data.py` | Constructs and labels raw EEG datasets for offline analysis. |"
+          },
+          {
+            "line": 84,
+            "text": ""
+          },
+          {
+            "line": 85,
+            "text": "### ② openpi — VLA Policy"
+          },
+          {
+            "line": 86,
+            "text": ""
+          },
+          {
+            "line": 87,
+            "text": "A modified fork of [Physical-Intelligence/openpi](https://github.com/Physical-Intelligence/openpi) used to fine-tune and serve the **π0.5** policy for dual-arm manipulation. Key project-specific changes include the WebSocket policy serving stack (`src/openpi/serving/`), real-time-chunking (RTC) inference support, Piper/Aloha policy adaptations (`src/openpi/policies/`), and training configurations (`src/openpi/training/config.py`). See `openpi/docs/rtc_piper_deployment.md` for deployment notes."
+          },
+          {
+            "line": 88,
+            "text": ""
+          },
+          {
+            "line": 89,
+            "text": "### ③ Grounded-SAM-2 — Scene Perception"
+          },
+          {
+            "line": 90,
+            "text": ""
+          },
+          {
+            "line": 91,
+            "text": "A modified fork of [IDEA-Research/Grounded-SAM-2](https://github.com/IDEA-Research/Grounded-SAM-2) (Florence-2 + SAM-2) that detects and segments candidate objects in the workspace and renders the SSVEP flicker masks onto them. `experiment.py` contains the scene-aware perception pipeline used in the paper."
+          },
+          {
+            "line": 92,
+            "text": ""
+          },
+          {
+            "line": 93,
+            "text": "### ④ scripts — System Integration"
+          },
+          {
+            "line": 94,
+            "text": ""
+          },
+          {
+            "line": 95,
+            "text": "| Path | Role |"
+          },
+          {
+            "line": 96,
+            "text": "|---|---|"
+          },
+          {
+            "line": 97,
+            "text": "| `scripts/inference.py` | Closed-loop entry point running on the robot host: consumes BCI selections, queries scene context and the policy server, and drives the arms. |"
+          },
+          {
+            "line": 98,
+            "text": "| `scripts/server_api.py` | Hosts the fine-tuned π0.5 policy on the GPU workstation; receives synchronized multi-view RGB streams and language prompts, returns action chunks. |"
+          },
+          {
+            "line": 99,
+            "text": "| `scripts/robot/RTC_inference.py` | Latest robot execution client with receding-horizon control and asynchronous action smoothing. |"
+          },
+          {
+            "line": 100,
+            "text": "| `scripts/robot/SSVEP_inference.py` | SSVEP online-control variant with Gemini-based scene reasoning (`USE_LLM` ablation switch). |"
+          },
+          {
+            "line": 101,
+            "text": "| `scripts/bci/` | EEG streaming (`dataServer.py`), BCI mapping (`BCIMAP.py`), and decoding utilities on the robot side. |"
+          },
+          {
+            "line": 102,
+            "text": "| `scripts/training/` | Fine-tuning and normalization-statistics scripts (`train*.py`, `serve_policy.py`, `compute_norm_stats.py`). |"
+          },
+          {
+            "line": 103,
+            "text": "| `scripts/data_tools/` | Dataset conversion to LeRobot format (`convert_to_lerobot.py`, `ros_to_lerobot.py`) and inference-log duration analysis (`check.py`). |"
+          },
+          {
+            "line": 104,
+            "text": "| `scripts/docker/` | Dockerfile / compose files for reproducible policy serving. |"
+          },
+          {
+            "line": 105,
+            "text": ""
+          },
+          {
+            "line": 106,
+            "text": "---"
+          },
+          {
+            "line": 107,
+            "text": ""
+          },
+          {
+            "line": 108,
+            "text": "## 🛠️ Hardware Requirements"
+          },
+          {
+            "line": 109,
+            "text": ""
+          },
+          {
+            "line": 110,
+            "text": "* **Dual-Arm Platform:** Agilex Piper 14-DoF dual-arm collaborative robot."
+          },
+          {
+            "line": 111,
+            "text": "* **RGB-D Vision:** 3 Intel RealSense D435i cameras (1 overhead global view, 2 wrist-mounted views)."
+          },
+          {
+            "line": 112,
+            "text": "* **EEG Acquisition:** Neuracle NeuSenW wireless EEG system (Sampling rate: 1000 Hz; Channels: Fp1, Fp2, Pz, PO5, PO3, POz, PO4, PO6, O1, Oz, O2)."
+          },
+          {
+            "line": 113,
+            "text": "* **Compute:** At least 48GB for inference and 100GB for fine-tuning."
+          },
+          {
+            "line": 114,
+            "text": ""
+          },
+          {
+            "line": 115,
+            "text": "---"
+          },
+          {
+            "line": 116,
+            "text": ""
+          },
+          {
+            "line": 117,
+            "text": "## 📦 Installation & Setup"
+          },
+          {
+            "line": 118,
+            "text": ""
+          },
+          {
+            "line": 119,
+            "text": "`openpi/` and `Grounded-SAM-2/` are already included in this repository, so a single clone is enough:"
+          },
+          {
+            "line": 120,
+            "text": ""
+          },
+          {
+            "line": 121,
+            "text": "```bash"
+          },
+          {
+            "line": 122,
+            "text": "# 1. Create and activate a clean conda environment"
+          },
+          {
+            "line": 123,
+            "text": "conda create -n bci-vla python=3.10 -y"
+          },
+          {
+            "line": 124,
+            "text": "conda activate bci-vla"
+          },
+          {
+            "line": 125,
+            "text": ""
+          },
+          {
+            "line": 126,
+            "text": "# 2. Install PyTorch with appropriate CUDA support"
+          },
+          {
+            "line": 127,
+            "text": "pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121"
+          },
+          {
+            "line": 128,
+            "text": ""
+          },
+          {
+            "line": 129,
+            "text": "# 3. Clone the main repository (openpi & Grounded-SAM-2 are bundled inside)"
+          },
+          {
+            "line": 130,
+            "text": "git clone https://github.com/oyjt-hub/Scene-aware-BCI-VLA.git"
+          }
+        ]
+      },
+      {
+        "path": "Scene-aware-BCI-VLA/interface.py",
+        "exists": true,
+        "sha256": "74c7011c304b0b89f9a6e39801a4aeda7bceea3c30229b02b964725ce7de093a",
+        "lines": 323,
+        "excerpt": [
+          {
+            "line": 1,
+            "text": "import os"
+          },
+          {
+            "line": 2,
+            "text": "import sys"
+          },
+          {
+            "line": 3,
+            "text": "import time"
+          },
+          {
+            "line": 4,
+            "text": "import pygame"
+          },
+          {
+            "line": 5,
+            "text": "import numpy as np"
+          },
+          {
+            "line": 6,
+            "text": "import scipy.io as scio"
+          },
+          {
+            "line": 7,
+            "text": "import requests"
+          },
+          {
+            "line": 8,
+            "text": "import base64"
+          },
+          {
+            "line": 9,
+            "text": "import io"
+          },
+          {
+            "line": 10,
+            "text": "import csv"
+          },
+          {
+            "line": 11,
+            "text": "import json"
+          },
+          {
+            "line": 12,
+            "text": "import cv2  # 🌟 新增 cv2 用于处理轮廓"
+          },
+          {
+            "line": 13,
+            "text": ""
+          },
+          {
+            "line": 14,
+            "text": "from dataServer import DataServerThread"
+          },
+          {
+            "line": 15,
+            "text": "from triggerBox import TriggerBox"
+          },
+          {
+            "line": 16,
+            "text": "from creat_raw_data import CreateRawData"
+          },
+          {
+            "line": 17,
+            "text": "from fbcca import FBCCA"
+          },
+          {
+            "line": 18,
+            "text": ""
+          },
+          {
+            "line": 19,
+            "text": "# ================= 配置区域 ================="
+          },
+          {
+            "line": 20,
+            "text": "LINUX_SERVER_IP = \"172.19.5.252\""
+          },
+          {
+            "line": 21,
+            "text": "LINUX_SERVER_PORT = 8000"
+          },
+          {
+            "line": 22,
+            "text": "TRIGGER_COM_PORT = \"COM3\""
+          },
+          {
+            "line": 23,
+            "text": "SAVE_PATH = r'D:\\BCI_Data'"
+          },
+          {
+            "line": 24,
+            "text": ""
+          },
+          {
+            "line": 25,
+            "text": ""
+          },
+          {
+            "line": 26,
+            "text": "# ============================================"
+          },
+          {
+            "line": 27,
+            "text": ""
+          },
+          {
+            "line": 28,
+            "text": "class BCIClient:"
+          },
+          {
+            "line": 29,
+            "text": "    def __init__(self, subject_name):"
+          },
+          {
+            "line": 30,
+            "text": "        self.decoder = FBCCA()"
+          },
+          {
+            "line": 31,
+            "text": "        self.save_data = []"
+          },
+          {
+            "line": 32,
+            "text": "        self.save_label = []"
+          },
+          {
+            "line": 33,
+            "text": "        self.bci_log = []"
+          },
+          {
+            "line": 34,
+            "text": "        self.trial_id = 0"
+          },
+          {
+            "line": 35,
+            "text": "        if not os.path.exists(SAVE_PATH):"
+          },
+          {
+            "line": 36,
+            "text": "            os.makedirs(SAVE_PATH)"
+          },
+          {
+            "line": 37,
+            "text": "        self.save_mat = os.path.join(SAVE_PATH, f'subject_{subject_name}_{int(time.time())}.mat')"
+          },
+          {
+            "line": 38,
+            "text": "        self.save_csv = os.path.join(SAVE_PATH, f'bci_log_{int(time.time())}.csv')"
+          },
+          {
+            "line": 85,
+            "text": "        url = f\"http://{LINUX_SERVER_IP}:{LINUX_SERVER_PORT}/submit_bci_result\""
+          },
+          {
+            "line": 86,
+            "text": "        try:"
+          },
+          {
+            "line": 87,
+            "text": "            requests.post(url, json={\"selected_target\": selected_label}, timeout=5)"
+          },
+          {
+            "line": 88,
+            "text": "            print(\"✅ 结果发送成功！\")"
+          },
+          {
+            "line": 89,
+            "text": "        except Exception as e:"
+          },
+          {
+            "line": 90,
+            "text": "            print(f\"❌ 发送结果失败: {e}\")"
+          },
+          {
+            "line": 91,
+            "text": ""
+          },
+          {
+            "line": 92,
+            "text": "    def save_bci_log(self):"
+          },
+          {
+            "line": 93,
+            "text": "        if not self.bci_log: return"
+          },
+          {
+            "line": 94,
+            "text": "        with open(self.save_csv, 'w', newline='', encoding='utf-8') as f:"
+          },
+          {
+            "line": 95,
+            "text": "            w = csv.writer(f)"
+          },
+          {
+            "line": 96,
+            "text": "            w.writerow(['trial', 'timestamp', 'selection_time_s', 'decode_latency_ms', 'num_targets', 'pred_index',"
+          },
+          {
+            "line": 97,
+            "text": "                        'selected_freq', 'selected_label', 'eeg_samples'])"
+          },
+          {
+            "line": 98,
+            "text": "            w.writerows(self.bci_log)"
+          },
+          {
+            "line": 99,
+            "text": ""
+          },
+          {
+            "line": 100,
+            "text": "    def run(self):"
+          },
+          {
+            "line": 101,
+            "text": "        self.connect_eeg()"
+          },
+          {
+            "line": 102,
+            "text": "        #     try:"
+          },
+          {
+            "line": 103,
+            "text": "        #         triggerbox = TriggerBox(TRIGGER_COM_PORT)"
+          },
+          {
+            "line": 104,
+            "text": "        #         print(f\"✅ TriggerBox 连接成功 ({TRIGGER_COM_PORT})\")"
+          },
+          {
+            "line": 105,
+            "text": "        #     except Exception as e:"
+          },
+          {
+            "line": 106,
+            "text": "        #         print(f\"⚠️ TriggerBox 连接失败: {e}\")"
+          },
+          {
+            "line": 107,
+            "text": "        #         triggerbox = None"
+          },
+          {
+            "line": 108,
+            "text": "        triggerbox = None"
+          },
+          {
+            "line": 109,
+            "text": "        clock = pygame.time.Clock()"
+          },
+          {
+            "line": 110,
+            "text": ""
+          },
+          {
+            "line": 111,
+            "text": "        while True:"
+          },
+          {
+            "line": 112,
+            "text": "            # 1. 待机界面"
+          },
+          {
+            "line": 113,
+            "text": "            self.surface.fill((0, 0, 0))"
+          },
+          {
+            "line": 114,
+            "text": "            ready_text = self.font.render(\"Waiting for signal to begin\", True, (255, 255, 0))"
+          },
+          {
+            "line": 115,
+            "text": "            self.surface.blit(ready_text, ready_text.get_rect(center=(self.screen_w // 2, self.screen_h // 2)))"
+          },
+          {
+            "line": 116,
+            "text": "            pygame.display.update()"
+          },
+          {
+            "line": 117,
+            "text": ""
+          },
+          {
+            "line": 118,
+            "text": "            waiting_for_enter = True"
+          },
+          {
+            "line": 119,
+            "text": "            while waiting_for_enter:"
+          },
+          {
+            "line": 120,
+            "text": "                for event in pygame.event.get():"
+          },
+          {
+            "line": 121,
+            "text": "                    if event.type == pygame.QUIT or (event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE):"
+          },
+          {
+            "line": 122,
+            "text": "                        scio.savemat(self.save_mat, {'data': self.save_data, 'label': self.save_label})"
+          },
+          {
+            "line": 123,
+            "text": "                        self.save_bci_log()"
+          },
+          {
+            "line": 124,
+            "text": "                        self.thread_data_server.stop()"
+          },
+          {
+            "line": 125,
+            "text": "                        pygame.quit()"
+          },
+          {
+            "line": 126,
+            "text": "                        sys.exit()"
+          },
+          {
+            "line": 127,
+            "text": "                    if event.type == pygame.KEYDOWN and ("
+          },
+          {
+            "line": 128,
+            "text": "                            event.key == pygame.K_RETURN or event.key == pygame.K_KP_ENTER):"
+          },
+          {
+            "line": 129,
+            "text": "                        waiting_for_enter = False"
+          },
+          {
+            "line": 130,
+            "text": "                clock.tick(30)"
+          },
+          {
+            "line": 245,
+            "text": "            text = self.font.render(\"Decoding EEG signals...\", True, (255, 255, 255))"
+          },
+          {
+            "line": 246,
+            "text": "            self.surface.blit(text, text.get_rect(center=(self.screen_w // 2, self.screen_h // 2)))"
+          },
+          {
+            "line": 247,
+            "text": "            pygame.display.update()"
+          },
+          {
+            "line": 248,
+            "text": ""
+          },
+          {
+            "line": 249,
+            "text": "            time.sleep(0.5)"
+          },
+          {
+            "line": 250,
+            "text": "            data = self.thread_data_server.GetBufferData()"
+          },
+          {
+            "line": 251,
+            "text": "            data_new = data[0:9, :]"
+          },
+          {
+            "line": 252,
+            "text": "            data_raw = CreateRawData(data_new, 1000)"
+          },
+          {
+            "line": 253,
+            "text": "            data_np = data_raw.get_data()"
+          },
+          {
+            "line": 254,
+            "text": ""
+          },
+          {
+            "line": 255,
+            "text": "            decode_samples_1000hz = int(self.stimulate_time * 1000) - 200"
+          },
+          {
+            "line": 256,
+            "text": "            data_1000hz = data_np[:, 125: 125 + decode_samples_1000hz]"
+          },
+          {
+            "line": 257,
+            "text": "            data_250hz = data_1000hz[:, ::4]"
+          },
+          {
+            "line": 258,
+            "text": "            actual_samples_250hz = data_250hz.shape[1]"
+          },
+          {
+            "line": 259,
+            "text": "            actual_decode_sec = actual_samples_250hz / 250.0"
+          },
+          {
+            "line": 260,
+            "text": "            self.decoder.get_reference_signals(freqs, actual_decode_sec)"
+          },
+          {
+            "line": 261,
+            "text": "            decode_start = time.perf_counter()"
+          },
+          {
+            "line": 262,
+            "text": "            pred_idx = self.decoder.fbcca(data_250hz, 7)"
+          },
+          {
+            "line": 263,
+            "text": "            decode_latency_ms = (time.perf_counter() - decode_start) * 1000"
+          },
+          {
+            "line": 264,
+            "text": ""
+          },
+          {
+            "line": 265,
+            "text": "            if 0 <= pred_idx < len(labels):"
+          },
+          {
+            "line": 266,
+            "text": "                selected_label = labels[pred_idx]"
+          },
+          {
+            "line": 267,
+            "text": "            else:"
+          },
+          {
+            "line": 268,
+            "text": "                selected_label = labels[0]"
+          },
+          {
+            "line": 269,
+            "text": ""
+          },
+          {
+            "line": 270,
+            "text": "            selection_time = time.perf_counter() - stim_begin"
+          },
+          {
+            "line": 271,
+            "text": "            self.bci_log.append([self.trial_id, time.time(), selection_time, decode_latency_ms, len(labels), pred_idx,"
+          },
+          {
+            "line": 272,
+            "text": "                                 freqs[pred_idx] if 0 <= pred_idx < len(freqs) else -1, selected_label,"
+          },
+          {
+            "line": 273,
+            "text": "                                 actual_samples_250hz])"
+          },
+          {
+            "line": 274,
+            "text": "            print(f\"🎯 解码完成！选中目标: {selected_label}\")"
+          },
+          {
+            "line": 275,
+            "text": "            self.save_data.append(data)"
+          },
+          {
+            "line": 276,
+            "text": "            self.save_label.append(selected_label)"
+          },
+          {
+            "line": 277,
+            "text": ""
+          },
+          {
+            "line": 278,
+            "text": "            self.surface.fill((0, 0, 0))"
+          },
+          {
+            "line": 279,
+            "text": ""
+          },
+          {
+            "line": 280,
+            "text": ""
+          },
+          {
+            "line": 281,
+            "text": "            status_surf = self.font.render(\"Object Selected!\", True, (0, 255, 0))  # 绿色高亮"
+          },
+          {
+            "line": 282,
+            "text": "            status_rect = status_surf.get_rect(center=(self.screen_w // 2, self.screen_h // 2 - 40))"
+          },
+          {
+            "line": 283,
+            "text": ""
+          },
+          {
+            "line": 284,
+            "text": ""
+          },
+          {
+            "line": 285,
+            "text": "            result_surf = self.font.render(f\"Result: {selected_label}\", True, (255, 255, 255))  # 白色文字"
+          },
+          {
+            "line": 286,
+            "text": "            result_rect = result_surf.get_rect(center=(self.screen_w // 2, self.screen_h // 2 + 40))"
+          },
+          {
+            "line": 287,
+            "text": ""
+          },
+          {
+            "line": 288,
+            "text": "            self.surface.blit(status_surf, status_rect)"
+          },
+          {
+            "line": 289,
+            "text": "            self.surface.blit(result_surf, result_rect)"
+          },
+          {
+            "line": 290,
+            "text": "            pygame.display.update()"
+          },
+          {
+            "line": 291,
+            "text": "            # =========================================================="
+          },
+          {
+            "line": 292,
+            "text": ""
+          },
+          {
+            "line": 293,
+            "text": "            self.send_result_to_server(selected_label)"
+          },
+          {
+            "line": 294,
+            "text": "            time.sleep(3)"
+          },
+          {
+            "line": 295,
+            "text": ""
+          },
+          {
+            "line": 296,
+            "text": ""
+          },
+          {
+            "line": 297,
+            "text": "if __name__ == '__main__':"
+          },
+          {
+            "line": 298,
+            "text": "    client = BCIClient(subject_name='test_01')"
+          },
+          {
+            "line": 299,
+            "text": "    try:"
+          },
+          {
+            "line": 300,
+            "text": "        client.run()"
+          },
+          {
+            "line": 301,
+            "text": "    except KeyboardInterrupt:"
+          },
+          {
+            "line": 302,
+            "text": "        print(\"\\n⚠️ 收到强制中断信号 (Ctrl+C)，程序准备退出...\")"
+          },
+          {
+            "line": 303,
+            "text": "    except Exception as e:"
+          }
+        ],
+        "syntax": "PASS"
+      },
+      {
+        "path": "Scene-aware-BCI-VLA/creat_raw_data.py",
+        "exists": true,
+        "sha256": "ca6cb11482bf4b9c19d747e05dc610d429946452edfa749bbeb380e312a07026",
+        "lines": 84,
+        "excerpt": [
+          {
+            "line": 1,
+            "text": "import mne"
+          },
+          {
+            "line": 2,
+            "text": "import matplotlib.pyplot as plt"
+          },
+          {
+            "line": 3,
+            "text": "import numpy as np"
+          },
+          {
+            "line": 4,
+            "text": "from scipy import signal"
+          },
+          {
+            "line": 5,
+            "text": ""
+          },
+          {
+            "line": 6,
+            "text": "def CreateRawData(ori_data, sample_rate):"
+          },
+          {
+            "line": 7,
+            "text": "    \"\"\""
+          },
+          {
+            "line": 8,
+            "text": "    接收EEG脑电信号并进行处理"
+          },
+          {
+            "line": 9,
+            "text": "    ori_data = (N_c, N_l)"
+          },
+          {
+            "line": 10,
+            "text": "    返回一个(N_c x N_l)的矩阵"
+          },
+          {
+            "line": 11,
+            "text": "    :param ori_data: ndarray, (N_c, N_l)"
+          },
+          {
+            "line": 12,
+            "text": "    :param sample_rate: int -> 1000"
+          },
+          {
+            "line": 13,
+            "text": "    :return: raw, 降采样至250Hz"
+          },
+          {
+            "line": 14,
+            "text": "    \"\"\""
+          },
+          {
+            "line": 15,
+            "text": "    # 确保 ori_data 的通道数与 info[\"ch_names\"] 的通道数一致"
+          },
+          {
+            "line": 16,
+            "text": "    if ori_data.shape[0] != 9:"
+          },
+          {
+            "line": 17,
+            "text": "        raise ValueError(f\"ori_data 的通道数 {ori_data.shape[0]} 不等于 info['ch_names'] 的通道数 9\")"
+          },
+          {
+            "line": 18,
+            "text": ""
+          },
+          {
+            "line": 19,
+            "text": "    # 9 channels"
+          },
+          {
+            "line": 20,
+            "text": "    info = mne.create_info("
+          },
+          {
+            "line": 21,
+            "text": "        ch_names=['Pz', 'PO5', 'PO3', 'POz', 'PO4', 'PO6', 'O1', 'Oz', 'O2'],"
+          },
+          {
+            "line": 22,
+            "text": "        ch_types=['eeg', 'eeg', 'eeg', 'eeg', 'eeg', 'eeg', 'eeg', 'eeg', 'eeg'],"
+          },
+          {
+            "line": 23,
+            "text": "        sfreq=sample_rate"
+          },
+          {
+            "line": 24,
+            "text": "    )"
+          },
+          {
+            "line": 25,
+            "text": "    raw_date = mne.io.RawArray(ori_data, info)"
+          },
+          {
+            "line": 26,
+            "text": "    montage = mne.channels.make_standard_montage(\"standard_1020\")"
+          },
+          {
+            "line": 27,
+            "text": "    raw_date.set_montage(montage)"
+          },
+          {
+            "line": 28,
+            "text": ""
+          },
+          {
+            "line": 29,
+            "text": "    # 消除基线漂移"
+          },
+          {
+            "line": 30,
+            "text": "    raw_date.filter(l_freq=0.3, h_freq=90, filter_length='auto', phase='zero-double')"
+          },
+          {
+            "line": 31,
+            "text": "    #raw_date.filter(l_freq=4, h_freq=90, filter_length='1s', phase='zero-double')"
+          },
+          {
+            "line": 32,
+            "text": ""
+          },
+          {
+            "line": 33,
+            "text": "    # 陷波滤波"
+          },
+          {
+            "line": 34,
+            "text": "    raw_date.notch_filter(freqs=50, filter_length='auto', phase='zero-double')"
+          },
+          {
+            "line": 35,
+            "text": "    #raw_date.notch_filter(freqs=50, filter_length='0.5s', phase='zero-double')"
+          },
+          {
+            "line": 36,
+            "text": ""
+          },
+          {
+            "line": 37,
+            "text": "    # 降采样"
+          },
+          {
+            "line": 38,
+            "text": "    raw_date.resample(sfreq=250)"
+          },
+          {
+            "line": 39,
+            "text": "    data = raw_date.get_data()"
+          },
+          {
+            "line": 40,
+            "text": ""
+          },
+          {
+            "line": 41,
+            "text": "    return raw_date  # 返回 RawArray 对象"
+          },
+          {
+            "line": 42,
+            "text": ""
+          },
+          {
+            "line": 43,
+            "text": "def Draw_Raw_Data(raw_data):"
+          },
+          {
+            "line": 44,
+            "text": "    scalings = {'eeg': 2}"
+          },
+          {
+            "line": 45,
+            "text": "    raw_data.plot(n_channels=9, scalings=scalings, title='Data from arrays', show=True, block=True)"
+          },
+          {
+            "line": 46,
+            "text": "    plt.show()"
+          },
+          {
+            "line": 47,
+            "text": ""
+          },
+          {
+            "line": 48,
+            "text": "def Draw_All_Data(raw_data):"
+          },
+          {
+            "line": 49,
+            "text": "    sfreq = raw_data.info['sfreq']"
+          },
+          {
+            "line": 50,
+            "text": "    data, times = raw_data[:, int(sfreq * 0):int(sfreq * 1)]"
+          },
+          {
+            "line": 51,
+            "text": "    plt.title(\"Sample channels\")"
+          },
+          {
+            "line": 52,
+            "text": "    plt.plot(times, data.T)"
+          },
+          {
+            "line": 53,
+            "text": "    plt.show()"
+          },
+          {
+            "line": 54,
+            "text": ""
+          },
+          {
+            "line": 55,
+            "text": "def Draw_Raw_Psd(raw_data):"
+          },
+          {
+            "line": 56,
+            "text": "    raw_data.plot_psd(area_mode='range', average=False)"
+          },
+          {
+            "line": 57,
+            "text": "    plt.show()"
+          },
+          {
+            "line": 58,
+            "text": ""
+          },
+          {
+            "line": 59,
+            "text": "def Draw_Raw_Sensors(raw_data):"
+          },
+          {
+            "line": 60,
+            "text": "    raw_data.plot_sensors(ch_type='eeg', show_names=True)"
+          },
+          {
+            "line": 61,
+            "text": "    plt.show()"
+          },
+          {
+            "line": 62,
+            "text": ""
+          },
+          {
+            "line": 63,
+            "text": "if __name__ == \"__main__\":"
+          },
+          {
+            "line": 64,
+            "text": "    N_c = 9  # 确保通道数为 9"
+          },
+          {
+            "line": 65,
+            "text": "    N_l = 3000"
+          },
+          {
+            "line": 66,
+            "text": "    trail_data = np.random.rand(N_c, N_l)"
+          },
+          {
+            "line": 67,
+            "text": ""
+          },
+          {
+            "line": 68,
+            "text": "    raw_data = CreateRawData(trail_data, sample_rate=1000)"
+          },
+          {
+            "line": 69,
+            "text": ""
+          },
+          {
+            "line": 70,
+            "text": "    # 绘制原始数据"
+          }
+        ],
+        "syntax": "PASS"
+      },
+      {
+        "path": "Scene-aware-BCI-VLA/fbcca.py",
+        "exists": true,
+        "sha256": "35eed8c502962de36ed9795f7d1a863485a40fc3c0778cb94af9c7fae55cd2d9",
+        "lines": 166,
+        "excerpt": [
+          {
+            "line": 1,
+            "text": "import sys"
+          },
+          {
+            "line": 2,
+            "text": "# sys.path.append(r\"C:\\Users\\32670\\Desktop\\脑控\\yjj (2)\\yjj\\BCI\")"
+          },
+          {
+            "line": 3,
+            "text": "import os"
+          },
+          {
+            "line": 4,
+            "text": "import math"
+          },
+          {
+            "line": 5,
+            "text": "import numpy as np"
+          },
+          {
+            "line": 6,
+            "text": "import matplotlib.pyplot as plt"
+          },
+          {
+            "line": 7,
+            "text": "from scipy import signal"
+          },
+          {
+            "line": 8,
+            "text": "from sklearn.cross_decomposition import CCA"
+          },
+          {
+            "line": 9,
+            "text": ""
+          },
+          {
+            "line": 10,
+            "text": ""
+          },
+          {
+            "line": 11,
+            "text": "class FBCCA(object):"
+          },
+          {
+            "line": 12,
+            "text": ""
+          },
+          {
+            "line": 13,
+            "text": "    def __init__(self) -> None:"
+          },
+          {
+            "line": 14,
+            "text": ""
+          },
+          {
+            "line": 15,
+            "text": "        self.ref_signals = None"
+          },
+          {
+            "line": 16,
+            "text": "        self.correlated_matrix = None"
+          },
+          {
+            "line": 17,
+            "text": "        self.predicted_result = None"
+          },
+          {
+            "line": 18,
+            "text": ""
+          },
+          {
+            "line": 19,
+            "text": "    def filter(self, data, n_subbanks):"
+          },
+          {
+            "line": 20,
+            "text": ""
+          },
+          {
+            "line": 21,
+            "text": "        \"\"\""
+          },
+          {
+            "line": 22,
+            "text": "        :param data ndarray, (N_c, N_l)"
+          },
+          {
+            "line": 23,
+            "text": "        :param n_subbanks int, 1, ..., 10"
+          },
+          {
+            "line": 24,
+            "text": "        :return filtered_data ndarray, (n_subanks, N_c, N_l)"
+          },
+          {
+            "line": 25,
+            "text": "        \"\"\""
+          },
+          {
+            "line": 26,
+            "text": ""
+          },
+          {
+            "line": 27,
+            "text": "        down_samplerate = 250"
+          },
+          {
+            "line": 28,
+            "text": ""
+          },
+          {
+            "line": 29,
+            "text": "        filtered_data = np.zeros((n_subbanks, data.shape[0], data.shape[1]))"
+          },
+          {
+            "line": 30,
+            "text": "        nyq = down_samplerate / 2"
+          },
+          {
+            "line": 31,
+            "text": ""
+          },
+          {
+            "line": 32,
+            "text": "        pass_band = [6, 14, 22, 30, 38, 46, 54, 62, 70, 78][0:n_subbanks]"
+          },
+          {
+            "line": 33,
+            "text": "        stop_band = [4, 10, 16, 24, 32, 40, 48, 56, 64, 72][0:n_subbanks]"
+          },
+          {
+            "line": 34,
+            "text": "        high_cut_pass, high_cut_stop = 90, 100"
+          },
+          {
+            "line": 35,
+            "text": ""
+          },
+          {
+            "line": 36,
+            "text": "        gpass, gstop, rp = 2, 40, 0.3"
+          },
+          {
+            "line": 37,
+            "text": ""
+          },
+          {
+            "line": 38,
+            "text": "        for i in range(n_subbanks):"
+          },
+          {
+            "line": 39,
+            "text": "            wp = np.array([pass_band[i] / nyq, high_cut_pass / nyq])"
+          },
+          {
+            "line": 40,
+            "text": "            ws = np.array([stop_band[i] / nyq, high_cut_stop / nyq])"
+          },
+          {
+            "line": 41,
+            "text": "            [n, wn] = signal.cheb1ord(wp, ws, gpass, gstop)"
+          },
+          {
+            "line": 42,
+            "text": "            [b, a] = signal.cheby1(n, rp, wn, 'bandpass')"
+          },
+          {
+            "line": 43,
+            "text": "            data = signal.filtfilt(b, a, data, padlen=3 * (max(len(b), len(a)) - 1)).copy()"
+          },
+          {
+            "line": 44,
+            "text": "            filtered_data[i, :, :] = data"
+          },
+          {
+            "line": 45,
+            "text": ""
+          },
+          {
+            "line": 46,
+            "text": "        return filtered_data"
+          },
+          {
+            "line": 47,
+            "text": ""
+          },
+          {
+            "line": 48,
+            "text": "    def calculate_correlation_matrix(self, filtered_data, n_components=1):"
+          },
+          {
+            "line": 49,
+            "text": "        \"\"\""
+          },
+          {
+            "line": 50,
+            "text": "        :param filtered_data ndarray, (n_subbanks, N_c, N_l)"
+          },
+          {
+            "line": 51,
+            "text": "        :retrun correlated_matrix ndarray, (len(Nf_list), n_subbanks)"
+          },
+          {
+            "line": 52,
+            "text": "        \"\"\""
+          },
+          {
+            "line": 53,
+            "text": "        cca = CCA(n_components)"
+          },
+          {
+            "line": 54,
+            "text": "        correlated_matrix = np.zeros((self.ref_signals.shape[0], filtered_data.shape[0]))"
+          },
+          {
+            "line": 55,
+            "text": ""
+          },
+          {
+            "line": 56,
+            "text": "        for freq_idx in range(self.ref_signals.shape[0]):"
+          },
+          {
+            "line": 57,
+            "text": "            for subbank_idx in range(filtered_data.shape[0]):"
+          },
+          {
+            "line": 58,
+            "text": "                matched_X = filtered_data[subbank_idx, :, :]"
+          },
+          {
+            "line": 59,
+            "text": "                # print(matched_X.shape, self.ref_signals[freq_idx, :, :].shape)"
+          },
+          {
+            "line": 60,
+            "text": "                cca.fit(matched_X.T, self.ref_signals[freq_idx, :, :].T)"
+          },
+          {
+            "line": 61,
+            "text": "                x_a, y_b = cca.transform(matched_X.T, self.ref_signals[freq_idx, :].T)"
+          },
+          {
+            "line": 62,
+            "text": "                corr = np.zeros(n_components)"
+          },
+          {
+            "line": 63,
+            "text": "                for i in range(0, n_components):"
+          },
+          {
+            "line": 64,
+            "text": "                    corr[i] = np.corrcoef(x_a[:, i], y_b[:, i])[0, 1]"
+          },
+          {
+            "line": 65,
+            "text": "                    correlated_matrix[freq_idx, subbank_idx] = np.max(corr)"
+          },
+          {
+            "line": 66,
+            "text": "        self.correlated_matrix = correlated_matrix"
+          },
+          {
+            "line": 67,
+            "text": ""
+          },
+          {
+            "line": 68,
+            "text": "    def fbcca(self, data, n_subbanks):"
+          },
+          {
+            "line": 69,
+            "text": ""
+          },
+          {
+            "line": 70,
+            "text": "        fb_coefs = [math.pow(i, -1.25) + 0.25 for i in range(1, n_subbanks + 1)]"
+          },
+          {
+            "line": 71,
+            "text": "        filtered_data = self.filter(data, n_subbanks)"
+          },
+          {
+            "line": 72,
+            "text": "        self.calculate_correlation_matrix(filtered_data)"
+          },
+          {
+            "line": 73,
+            "text": ""
+          },
+          {
+            "line": 74,
+            "text": "        predicted_list = []"
+          },
+          {
+            "line": 75,
+            "text": "        for i in range(self.correlated_matrix.shape[0]):"
+          },
+          {
+            "line": 76,
+            "text": "            cor_vector = self.correlated_matrix[i, :]"
+          },
+          {
+            "line": 77,
+            "text": "            result = 0"
+          },
+          {
+            "line": 78,
+            "text": "            for fb_i in range(0, n_subbanks):"
+          },
+          {
+            "line": 79,
+            "text": "                w = fb_coefs[fb_i]"
+          },
+          {
+            "line": 80,
+            "text": "                rho = cor_vector[fb_i]"
+          },
+          {
+            "line": 81,
+            "text": "                result += w * (rho ** 2)"
+          },
+          {
+            "line": 82,
+            "text": "            predicted_list.append(result)"
+          },
+          {
+            "line": 83,
+            "text": "        self.predicted_result = np.array(predicted_list)"
+          },
+          {
+            "line": 84,
+            "text": ""
+          },
+          {
+            "line": 85,
+            "text": "        return np.argmax(self.predicted_result)"
+          },
+          {
+            "line": 86,
+            "text": ""
+          },
+          {
+            "line": 87,
+            "text": "    def get_filtered_data(self, data, n_subbanks):"
+          },
+          {
+            "line": 88,
+            "text": "        fb_coefs = [math.pow(i, -1.25) + 0.25 for i in range(1, n_subbanks + 1)]"
+          },
+          {
+            "line": 89,
+            "text": "        return self.filter(data, n_subbanks)"
+          },
+          {
+            "line": 90,
+            "text": ""
+          },
+          {
+            "line": 91,
+            "text": ""
+          },
+          {
+            "line": 92,
+            "text": ""
+          },
+          {
+            "line": 93,
+            "text": "    def get_reference_signals(self, Nf_list, N_t, num_harmonics=3, down_samplerate=250):"
+          },
+          {
+            "line": 94,
+            "text": "        \"\"\""
+          },
+          {
+            "line": 95,
+            "text": "        :param Nf_list list"
+          },
+          {
+            "line": 96,
+            "text": "        :param N_l int, length of eeg signal"
+          },
+          {
+            "line": 97,
+            "text": "        :param num_harmonics int"
+          },
+          {
+            "line": 98,
+            "text": "        \"\"\""
+          },
+          {
+            "line": 99,
+            "text": ""
+          },
+          {
+            "line": 100,
+            "text": "        t = np.arange(0, N_t, 1 / 250)"
+          },
+          {
+            "line": 101,
+            "text": "        ref_signals = []"
+          },
+          {
+            "line": 102,
+            "text": ""
+          },
+          {
+            "line": 103,
+            "text": "        for f in Nf_list:"
+          },
+          {
+            "line": 104,
+            "text": "            ref_f = []"
+          },
+          {
+            "line": 105,
+            "text": "            for h in range(num_harmonics):"
+          },
+          {
+            "line": 106,
+            "text": "                sin_ref_sings = np.sin(2 * np.pi * (h + 1) * f * t)"
+          },
+          {
+            "line": 107,
+            "text": "                ref_f.append(sin_ref_sings)"
+          },
+          {
+            "line": 108,
+            "text": "                cos_ref_sings = np.cos(2 * np.pi * (h + 1) * f * t)"
+          },
+          {
+            "line": 109,
+            "text": "                ref_f.append(cos_ref_sings)"
+          },
+          {
+            "line": 110,
+            "text": "            ref_signals.append(ref_f)"
+          },
+          {
+            "line": 111,
+            "text": ""
+          },
+          {
+            "line": 112,
+            "text": "        self.ref_signals = np.array(ref_signals)"
+          },
+          {
+            "line": 113,
+            "text": ""
+          },
+          {
+            "line": 114,
+            "text": ""
+          },
+          {
+            "line": 115,
+            "text": "if __name__ == '__main__':"
+          }
+        ],
+        "syntax": "PASS"
+      },
+      {
+        "path": "scripts/bci/dataServer.py",
+        "exists": true,
+        "sha256": "0f1bd5d17b3188eb2709f60997d6f8b6e7d82b62605028cf06aaae1dfa863259",
+        "lines": 235,
+        "excerpt": [
+          {
+            "line": 1,
+            "text": "# !/usr/bin/env python3"
+          },
+          {
+            "line": 2,
+            "text": "# -*- coding:utf-8 -*-"
+          },
+          {
+            "line": 3,
+            "text": "#"
+          },
+          {
+            "line": 4,
+            "text": "# Author: FANG Junying, fangjunying@neuracle.cn"
+          },
+          {
+            "line": 5,
+            "text": "#"
+          },
+          {
+            "line": 6,
+            "text": "# Versions:"
+          },
+          {
+            "line": 7,
+            "text": "# \tv0.1: 2018-08-14, orignal"
+          },
+          {
+            "line": 8,
+            "text": "#   v1.0: 2020-04-27, add neuroscan parser"
+          },
+          {
+            "line": 9,
+            "text": "# Copyright (c) 2020 Neuracle, Inc. All Rights Reserved. http://neuracle.cn/"
+          },
+          {
+            "line": 10,
+            "text": ""
+          },
+          {
+            "line": 11,
+            "text": "import socket"
+          },
+          {
+            "line": 12,
+            "text": "from struct import unpack"
+          },
+          {
+            "line": 13,
+            "text": "import numpy as np"
+          },
+          {
+            "line": 14,
+            "text": "from threading import Lock, Thread, Event"
+          },
+          {
+            "line": 15,
+            "text": "import select, time"
+          },
+          {
+            "line": 16,
+            "text": ""
+          },
+          {
+            "line": 17,
+            "text": ""
+          },
+          {
+            "line": 18,
+            "text": "## create ringbuffer"
+          },
+          {
+            "line": 19,
+            "text": "class RingBuffer():"
+          },
+          {
+            "line": 20,
+            "text": "    def __init__(self, n_chan, n_points):"
+          },
+          {
+            "line": 21,
+            "text": "        self.n_chan = n_chan"
+          },
+          {
+            "line": 22,
+            "text": "        self.n_points = n_points"
+          },
+          {
+            "line": 23,
+            "text": "        self.buffer = np.zeros((n_chan, n_points))"
+          },
+          {
+            "line": 24,
+            "text": "        self.currentPtr = 0"
+          },
+          {
+            "line": 25,
+            "text": "        self.nUpdate = 0"
+          },
+          {
+            "line": 26,
+            "text": ""
+          },
+          {
+            "line": 27,
+            "text": "    ## append buffer and update current pointer"
+          },
+          {
+            "line": 28,
+            "text": "    def appendBuffer(self, data):"
+          },
+          {
+            "line": 29,
+            "text": "        n = data.shape[1]"
+          },
+          {
+            "line": 30,
+            "text": "        self.buffer[:, np.mod(np.arange(self.currentPtr, self.currentPtr + n), self.n_points)] = data"
+          },
+          {
+            "line": 31,
+            "text": "        self.currentPtr = np.mod(self.currentPtr + n - 1, self.n_points) + 1"
+          },
+          {
+            "line": 32,
+            "text": "        self.nUpdate = self.nUpdate + n"
+          },
+          {
+            "line": 33,
+            "text": ""
+          },
+          {
+            "line": 34,
+            "text": "    ## get data from buffer"
+          },
+          {
+            "line": 35,
+            "text": "    def getData(self):"
+          },
+          {
+            "line": 36,
+            "text": "        data = np.hstack([self.buffer[:, self.currentPtr:], self.buffer[:, :self.currentPtr]])"
+          },
+          {
+            "line": 37,
+            "text": "        return data"
+          },
+          {
+            "line": 38,
+            "text": ""
+          },
+          {
+            "line": 39,
+            "text": "    # reset buffer"
+          },
+          {
+            "line": 40,
+            "text": "    def resetBuffer(self):"
+          },
+          {
+            "line": 41,
+            "text": "        self.buffer = np.zeros((self.n_chan, self.n_points))"
+          },
+          {
+            "line": 42,
+            "text": "        self.currentPtr = 0"
+          },
+          {
+            "line": 43,
+            "text": "        self.nUpdate = 0"
+          },
+          {
+            "line": 44,
+            "text": ""
+          },
+          {
+            "line": 45,
+            "text": ""
+          }
+        ],
+        "syntax": "PASS"
+      },
+      {
+        "path": "scripts/bci/creat_raw_data.py",
+        "exists": true,
+        "sha256": "de9b3a703d2f6f20880b58d99ca0d3a34193a3ea80da92b1f8aac63a3a1ab766",
+        "lines": 97,
+        "excerpt": [
+          {
+            "line": 1,
+            "text": "import mne"
+          },
+          {
+            "line": 2,
+            "text": "import matplotlib.pyplot as plt"
+          },
+          {
+            "line": 3,
+            "text": "import numpy as np"
+          },
+          {
+            "line": 4,
+            "text": "from scipy import signal"
+          },
+          {
+            "line": 5,
+            "text": ""
+          },
+          {
+            "line": 6,
+            "text": ""
+          },
+          {
+            "line": 7,
+            "text": "def CreateRawData(ori_data, sample_rate):"
+          },
+          {
+            "line": 8,
+            "text": ""
+          },
+          {
+            "line": 9,
+            "text": "    \"\"\""
+          },
+          {
+            "line": 10,
+            "text": "    接收EEG脑电信号并进行处理"
+          },
+          {
+            "line": 11,
+            "text": "    ori_data = (N_c, N_l)"
+          },
+          {
+            "line": 12,
+            "text": "    返回一个(N_c x N_l)的矩阵"
+          },
+          {
+            "line": 13,
+            "text": "    :param ori_data: ndarry, (N_c, N_l)"
+          },
+          {
+            "line": 14,
+            "text": "    :param sample_rate: int -> 1000"
+          },
+          {
+            "line": 15,
+            "text": "    :return: raw, 降采样至250Hz"
+          },
+          {
+            "line": 16,
+            "text": "    \"\"\""
+          },
+          {
+            "line": 17,
+            "text": "    # w1 = [2 * 3 / sample_rate]"
+          },
+          {
+            "line": 18,
+            "text": "    # w2 = [2 * 90 / sample_rate]"
+          },
+          {
+            "line": 19,
+            "text": "    # filter_order = 5"
+          },
+          {
+            "line": 20,
+            "text": "    # b, a = signal.butter(filter_order, [w1, w2], 'bandpass')"
+          },
+          {
+            "line": 21,
+            "text": "    # ori_data = signal.filtfilt(b, a, ori_data, axis=-1)"
+          },
+          {
+            "line": 22,
+            "text": "    # info = mne.create_info("
+          },
+          {
+            "line": 23,
+            "text": "    #     ch_names=['Pz', 'P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'P7', 'P8', 'PO1', 'PO3', 'PO4', 'PO5',"
+          },
+          {
+            "line": 24,
+            "text": "    #                               'Oz', 'O1', 'O2'],"
+          },
+          {
+            "line": 25,
+            "text": "    #     ch_types=['eeg', 'eeg', 'eeg', 'eeg', 'eeg', 'eeg', 'eeg', 'eeg','eeg', 'eeg', 'eeg', 'eeg', 'eeg', 'eeg', 'eeg', 'eeg'],"
+          },
+          {
+            "line": 26,
+            "text": "    #     sfreq=sample_rate"
+          },
+          {
+            "line": 27,
+            "text": "    # )"
+          },
+          {
+            "line": 28,
+            "text": "    # 9 channels"
+          },
+          {
+            "line": 29,
+            "text": "    info = mne.create_info("
+          },
+          {
+            "line": 30,
+            "text": "        ch_names=['Pz', 'PO5', 'PO3', 'POz', 'PO4', 'PO6', 'O1', 'Oz', 'O2'],"
+          },
+          {
+            "line": 31,
+            "text": "        ch_types=['eeg', 'eeg', 'eeg', 'eeg', 'eeg', 'eeg', 'eeg', 'eeg','eeg'],"
+          },
+          {
+            "line": 32,
+            "text": "        sfreq=sample_rate"
+          },
+          {
+            "line": 33,
+            "text": "    )"
+          },
+          {
+            "line": 34,
+            "text": "    raw_date = mne.io.RawArray(ori_data, info)"
+          },
+          {
+            "line": 35,
+            "text": "    montage = mne.channels.make_standard_montage(\"standard_1020\")"
+          },
+          {
+            "line": 36,
+            "text": "    raw_date.set_montage(montage)"
+          },
+          {
+            "line": 37,
+            "text": ""
+          },
+          {
+            "line": 38,
+            "text": "    # 消除基线漂移"
+          },
+          {
+            "line": 39,
+            "text": "    raw_date.filter(l_freq=0.3, h_freq=90)"
+          },
+          {
+            "line": 40,
+            "text": "    # 陷波滤波"
+          },
+          {
+            "line": 41,
+            "text": "    raw_date.notch_filter(freqs=50)"
+          },
+          {
+            "line": 42,
+            "text": ""
+          },
+          {
+            "line": 43,
+            "text": "    # 降采样"
+          },
+          {
+            "line": 44,
+            "text": "    raw_date.resample(sfreq=250)"
+          },
+          {
+            "line": 45,
+            "text": "    data = raw_date.get_data()"
+          },
+          {
+            "line": 46,
+            "text": ""
+          },
+          {
+            "line": 47,
+            "text": "    return data"
+          },
+          {
+            "line": 48,
+            "text": "#"
+          },
+          {
+            "line": 49,
+            "text": "#"
+          },
+          {
+            "line": 50,
+            "text": "# def Draw_Raw_Data(raw_data):"
+          },
+          {
+            "line": 51,
+            "text": "#"
+          },
+          {
+            "line": 52,
+            "text": "#     scalings = {'eeg': 2}"
+          },
+          {
+            "line": 53,
+            "text": "#"
+          },
+          {
+            "line": 54,
+            "text": "#     # 原始脑电图"
+          },
+          {
+            "line": 55,
+            "text": "#     raw_data.plot(n_channels=5, scalings=scalings, title='Data from arrays', show=True, block=True)"
+          },
+          {
+            "line": 56,
+            "text": "#     plt.show()"
+          },
+          {
+            "line": 57,
+            "text": "#"
+          },
+          {
+            "line": 58,
+            "text": "#"
+          },
+          {
+            "line": 59,
+            "text": "# def Draw_All_Data(raw_data):"
+          },
+          {
+            "line": 60,
+            "text": "#     # 叠加脑电图"
+          },
+          {
+            "line": 61,
+            "text": "#     sfreq = raw_data.info['sfreq']"
+          },
+          {
+            "line": 62,
+            "text": "#     data, times = raw_data[:, int(sfreq * 0):int(sfreq * 1)]"
+          },
+          {
+            "line": 63,
+            "text": "#     plt.title(\"Sample channels\")"
+          },
+          {
+            "line": 64,
+            "text": "#     plt.plot(times, data.T)"
+          },
+          {
+            "line": 65,
+            "text": "#     plt.show()"
+          },
+          {
+            "line": 66,
+            "text": "#"
+          },
+          {
+            "line": 67,
+            "text": "#"
+          },
+          {
+            "line": 68,
+            "text": "# def Draw_Raw_Psd(raw_data):"
+          },
+          {
+            "line": 69,
+            "text": "#     # 脑电功率图"
+          },
+          {
+            "line": 70,
+            "text": "#     raw_data.plot_psd(area_mode='range', average=False)"
+          }
+        ],
+        "syntax": "PASS"
+      },
+      {
+        "path": "scripts/inference.py",
+        "exists": true,
+        "sha256": "324797b38d1a3b6fa2f5ed0528a62a0dfd7f812b1e96464f349d3c73211b0e0c",
+        "lines": 882,
+        "excerpt": [
+          {
+            "line": 175,
+            "text": "            "
+          },
+          {
+            "line": 176,
+            "text": "            PHYSICAL_MAX_MM = 70.0"
+          },
+          {
+            "line": 177,
+            "text": "            val_l_mm = get_gripper_value(self.piper_left)"
+          },
+          {
+            "line": 178,
+            "text": "            val_r_mm = get_gripper_value(self.piper_right)"
+          },
+          {
+            "line": 179,
+            "text": "            norm_grip_l = np.clip(val_l_mm / PHYSICAL_MAX_MM, 0.0, 1.0)"
+          },
+          {
+            "line": 180,
+            "text": "            norm_grip_r = np.clip(val_r_mm / PHYSICAL_MAX_MM, 0.0, 1.0)"
+          },
+          {
+            "line": 181,
+            "text": ""
+          },
+          {
+            "line": 182,
+            "text": "            state_vec = np.zeros(14, dtype=np.float32)"
+          },
+          {
+            "line": 183,
+            "text": "            state_vec[0:6] = curr_l_rad"
+          },
+          {
+            "line": 184,
+            "text": "            state_vec[6] = norm_grip_l"
+          },
+          {
+            "line": 185,
+            "text": "            state_vec[7:13] = curr_r_rad"
+          },
+          {
+            "line": 186,
+            "text": "            state_vec[13] = norm_grip_r"
+          },
+          {
+            "line": 187,
+            "text": ""
+          },
+          {
+            "line": 188,
+            "text": "            obs = {"
+          },
+          {
+            "line": 189,
+            "text": "                \"images\": {"
+          },
+          {
+            "line": 190,
+            "text": "                    \"cam_high\": process_image(img),"
+          },
+          {
+            "line": 191,
+            "text": "                    \"cam_left_wrist\": process_image(w_l),"
+          },
+          {
+            "line": 192,
+            "text": "                    \"cam_right_wrist\": process_image(w_r),"
+          },
+          {
+            "line": 193,
+            "text": "                },"
+          },
+          {
+            "line": 194,
+            "text": "                \"state\": state_vec.tolist(),"
+          },
+          {
+            "line": 195,
+            "text": "                \"prompt\": TASK_INSTRUCTION,"
+          },
+          {
+            "line": 196,
+            "text": "            }"
+          },
+          {
+            "line": 197,
+            "text": ""
+          },
+          {
+            "line": 198,
+            "text": "            try:"
+          },
+          {
+            "line": 199,
+            "text": "                infer_start = time.perf_counter()"
+          },
+          {
+            "line": 200,
+            "text": ""
+          },
+          {
+            "line": 201,
+            "text": "                resp = self.client.infer(obs)"
+          },
+          {
+            "line": 202,
+            "text": ""
+          },
+          {
+            "line": 203,
+            "text": "                infer_end = time.perf_counter()"
+          },
+          {
+            "line": 204,
+            "text": ""
+          },
+          {
+            "line": 205,
+            "text": "                global latest_infer_latency_ms"
+          },
+          {
+            "line": 206,
+            "text": "                latest_infer_latency_ms = (infer_end - infer_start) * 1000.0"
+          },
+          {
+            "line": 207,
+            "text": "                if resp and \"actions\" in resp:"
+          },
+          {
+            "line": 208,
+            "text": "                    all_actions = np.array(resp[\"actions\"])"
+          },
+          {
+            "line": 209,
+            "text": "                    if all_actions.ndim == 3:  "
+          },
+          {
+            "line": 210,
+            "text": "                        all_actions = all_actions[0]"
+          },
+          {
+            "line": 340,
+            "text": "        writer=csv.writer(f)"
+          },
+          {
+            "line": 341,
+            "text": "        writer.writerow(header)"
+          },
+          {
+            "line": 342,
+            "text": "        writer.writerows(log_data)"
+          },
+          {
+            "line": 343,
+            "text": ""
+          },
+          {
+            "line": 344,
+            "text": "    print(\"Log saved to:\", filename)"
+          },
+          {
+            "line": 345,
+            "text": ""
+          },
+          {
+            "line": 346,
+            "text": "# ================== 🌟 Core: Gemini Intent Inference Logic =================="
+          },
+          {
+            "line": 347,
+            "text": "def infer_intent_with_gemini(all_detected_objects, selected_target):"
+          },
+          {
+            "line": 348,
+            "text": "    \"\"\""
+          },
+          {
+            "line": 349,
+            "text": "    Infer human intent via Gemini LLM based on all detected objects and the user's selected target."
+          },
+          {
+            "line": 350,
+            "text": "    Supports USE_LLM switch for ablation study."
+          },
+          {
+            "line": 351,
+            "text": "    \"\"\""
+          },
+          {
+            "line": 352,
+            "text": "    # 🔬 Check if LLM is enabled (Ablation baseline: Direct Target Grounding)"
+          },
+          {
+            "line": 353,
+            "text": "    if not USE_LLM:"
+          },
+          {
+            "line": 354,
+            "text": "        print(f\"\\n🔬 [Ablation Study - Without LLM] LLM semantic reasoning disabled (Direct Target Grounding).\")"
+          },
+          {
+            "line": 355,
+            "text": "        print(f\"   Directly passing target object as VLA Prompt: -> {selected_target} <-\")"
+          },
+          {
+            "line": 356,
+            "text": "        # Return object name directly without template completion for VLA model"
+          },
+          {
+            "line": 357,
+            "text": "        return selected_target"
+          },
+          {
+            "line": 358,
+            "text": ""
+          },
+          {
+            "line": 359,
+            "text": "    # 🧠 With LLM branch (Semantic Intent Synthesis)"
+          },
+          {
+            "line": 360,
+            "text": "    print(f\"\\n🧠 [LLM Intent Inference] Thinking... (Table objects: {all_detected_objects} | User focus: {selected_target})\")"
+          },
+          {
+            "line": 361,
+            "text": "    "
+          },
+          {
+            "line": 362,
+            "text": "    try:"
+          },
+          {
+            "line": 363,
+            "text": "        # Use the lightweight and fast gemini-2.5-flash model"
+          },
+          {
+            "line": 364,
+            "text": "        model = genai.GenerativeModel('gemini-2.5-flash')"
+          },
+          {
+            "line": 365,
+            "text": "        "
+          },
+          {
+            "line": 366,
+            "text": "        # prompt = f\"\"\""
+          },
+          {
+            "line": 367,
+            "text": "        # You are an intelligent robotic assistant reasoning about human intent. "
+          },
+          {
+            "line": 368,
+            "text": "        # Context: A paralyzed user is controlling a robot arm via a Brain-Computer Interface. "
+          },
+          {
+            "line": 369,
+            "text": "        "
+          },
+          {
+            "line": 370,
+            "text": "        # The camera detects the following objects on the table: {all_detected_objects}. "
+          },
+          {
+            "line": 371,
+            "text": "        # The user is focusing their BCI selection on this specific target: \"{selected_target}\". "
+          },
+          {
+            "line": 372,
+            "text": "        "
+          },
+          {
+            "line": 373,
+            "text": "        # Task: Based on common sense, infer the most logical assistive action the user wants the robot to perform with the selected target, considering the other objects available."
+          },
+          {
+            "line": 374,
+            "text": "        # For example:"
+          },
+          {
+            "line": 375,
+            "text": "        # - If there is a \"bowl\" and the user selects an object like \"cherry\", they likely want to put the cherry in the bowl."
+          },
+          {
+            "line": 376,
+            "text": "        # - If there is a \"cup\" and the user selects \"bottle\", they likely want to pour water into the cup."
+          },
+          {
+            "line": 377,
+            "text": "        # - If they just select an object with no obvious container, they might just want to pick it up."
+          },
+          {
+            "line": 378,
+            "text": "        # - if the user selects a cloth, just fold it."
+          },
+          {
+            "line": 379,
+            "text": "        "
+          },
+          {
+            "line": 380,
+            "text": "        # Output requirement: Return ONLY a short, direct English command string suitable for a Vision-Language-Action (VLA) robot model. Do not include any explanations, reasoning, or quotation marks."
+          },
+          {
+            "line": 381,
+            "text": "        # \"\"\""
+          },
+          {
+            "line": 382,
+            "text": "        prompt = f\"\"\""
+          },
+          {
+            "line": 383,
+            "text": "        # You are an intelligent robotic assistant reasoning about human intent. "
+          },
+          {
+            "line": 384,
+            "text": "        # Context: A paralyzed user is controlling a robot arm via a Brain-Computer Interface. "
+          },
+          {
+            "line": 385,
+            "text": "        "
+          },
+          {
+            "line": 386,
+            "text": "        # The camera detects the following objects on the table: {all_detected_objects}. "
+          },
+          {
+            "line": 387,
+            "text": "        # The user is focusing their BCI selection on this specific target: \"{selected_target}\". "
+          },
+          {
+            "line": 388,
+            "text": "        Task: Based on common sense, infer the most logical assistive action the user wants the robot to perform with the selected target, considering the other objects available."
+          },
+          {
+            "line": 389,
+            "text": "        Return ONLY a short, direct English command string suitable for a Vision-Language-Action (VLA) robot model , choose form the following examples:        "
+          },
+          {
+            "line": 390,
+            "text": "        # pick up the starfruit and put it into the bowl."
+          },
+          {
+            "line": 391,
+            "text": "        # Pick up the bunch of grapes and put it into the bowl."
+          },
+          {
+            "line": 392,
+            "text": "        # pick up the cherry and put it into the bowl."
+          },
+          {
+            "line": 393,
+            "text": "        # fold the cloth."
+          },
+          {
+            "line": 394,
+            "text": " "
+          },
+          {
+            "line": 395,
+            "text": "        \"\"\"  "
+          },
+          {
+            "line": 396,
+            "text": "        response = model.generate_content(prompt)"
+          },
+          {
+            "line": 397,
+            "text": "        inferred_command = response.text.strip().strip('\"').strip(\"'\")"
+          },
+          {
+            "line": 398,
+            "text": "        "
+          },
+          {
+            "line": 399,
+            "text": "        print(f\"💡 [LLM Intent Inference] Inference complete! Generated VLA instruction: -> {inferred_command} <-\")"
+          },
+          {
+            "line": 400,
+            "text": "        return inferred_command"
+          },
+          {
+            "line": 401,
+            "text": "        "
+          },
+          {
+            "line": 402,
+            "text": "    except Exception as e:"
+          },
+          {
+            "line": 403,
+            "text": "        print(f\"❌ [LLM Intent Inference] Gemini call failed: {e}\")"
+          },
+          {
+            "line": 404,
+            "text": "        # Fallback strategy (network failure, etc.)"
+          },
+          {
+            "line": 405,
+            "text": "        fallback_command = f\"pick up the {selected_target}.\""
+          },
+          {
+            "line": 406,
+            "text": "        print(f\"⚠️ [LLM Intent Inference] Triggering fallback strategy: -> {fallback_command} <-\")"
+          },
+          {
+            "line": 407,
+            "text": "        return fallback_command"
+          },
+          {
+            "line": 408,
+            "text": "# ======================================================================"
+          },
+          {
+            "line": 409,
+            "text": ""
+          },
+          {
+            "line": 410,
+            "text": ""
+          },
+          {
+            "line": 550,
+            "text": "        labels, _ = get_bci_ui_from_server(raw_frame)"
+          },
+          {
+            "line": 551,
+            "text": "        "
+          },
+          {
+            "line": 552,
+            "text": "        if len(labels) > 0:"
+          },
+          {
+            "line": 553,
+            "text": "            print(\"✅ Scene uploaded successfully and objects detected!\")"
+          },
+          {
+            "line": 554,
+            "text": "            break"
+          },
+          {
+            "line": 555,
+            "text": "        else:"
+          },
+          {
+            "line": 556,
+            "text": "            print(\"⚠️ No valid target detected, arm locked, retrying in 1s...\")"
+          },
+          {
+            "line": 557,
+            "text": "            time.sleep(1.0)"
+          },
+          {
+            "line": 558,
+            "text": ""
+          },
+          {
+            "line": 559,
+            "text": "    # =========================="
+          },
+          {
+            "line": 560,
+            "text": "    # Step 2: Wait for Windows BCI result"
+          },
+          {
+            "line": 561,
+            "text": "    # =========================="
+          },
+          {
+            "line": 562,
+            "text": "    print(\"\\n⌛ Waiting for Windows BCI decoding result...\")"
+          },
+          {
+            "line": 563,
+            "text": "    result_url = f\"http://{SERVER_HOST}:8000/get_bci_result\""
+          },
+          {
+            "line": 564,
+            "text": "    selected_target = None"
+          },
+          {
+            "line": 565,
+            "text": ""
+          },
+          {
+            "line": 566,
+            "text": "    while True:"
+          },
+          {
+            "line": 567,
+            "text": "        try:"
+          },
+          {
+            "line": 568,
+            "text": "            # 🌟 Fix 2: Add timeout and reduce request rate to prevent overloading server"
+          },
+          {
+            "line": 569,
+            "text": "            response = requests.get(result_url, timeout=5)"
+          },
+          {
+            "line": 570,
+            "text": "            if response.status_code == 200:"
+          },
+          {
+            "line": 571,
+            "text": "                result = response.json()"
+          },
+          {
+            "line": 572,
+            "text": "                if result.get(\"status\") == \"success\" and result.get(\"selected_target\"):"
+          },
+          {
+            "line": 573,
+            "text": "                    selected_target = result[\"selected_target\"]"
+          },
+          {
+            "line": 574,
+            "text": "                    break"
+          },
+          {
+            "line": 575,
+            "text": "        except Exception as e:"
+          },
+          {
+            "line": 576,
+            "text": "            print(f\"⚠️ Waiting for BCI result... ({e})\")"
+          },
+          {
+            "line": 577,
+            "text": "        time.sleep(1.0) "
+          },
+          {
+            "line": 578,
+            "text": ""
+          },
+          {
+            "line": 579,
+            "text": "    print(f\"🧠 BCI Selection result: {selected_target}\")"
+          },
+          {
+            "line": 580,
+            "text": ""
+          },
+          {
+            "line": 581,
+            "text": "    # =========================="
+          },
+          {
+            "line": 582,
+            "text": "    # Step 3: Gemini inference (supports USE_LLM ablation)"
+          },
+          {
+            "line": 583,
+            "text": "    # =========================="
+          },
+          {
+            "line": 584,
+            "text": "    TASK_INSTRUCTION = infer_intent_with_gemini("
+          },
+          {
+            "line": 585,
+            "text": "        all_detected_objects=labels,"
+          },
+          {
+            "line": 586,
+            "text": "        selected_target=selected_target,"
+          },
+          {
+            "line": 587,
+            "text": "    )"
+          },
+          {
+            "line": 588,
+            "text": ""
+          },
+          {
+            "line": 589,
+            "text": "    print(\"\\n==============================\")"
+          },
+          {
+            "line": 590,
+            "text": "    print(\"✨ Final VLA Instruction:\")"
+          },
+          {
+            "line": 591,
+            "text": "    print(TASK_INSTRUCTION)"
+          },
+          {
+            "line": 592,
+            "text": "    print(\"==============================\\n\")"
+          },
+          {
+            "line": 593,
+            "text": ""
+          },
+          {
+            "line": 594,
+            "text": "# ================= Main Program ================="
+          },
+          {
+            "line": 595,
+            "text": ""
+          },
+          {
+            "line": 596,
+            "text": "def main():"
+          },
+          {
+            "line": 597,
+            "text": "    global latest_action_chunk, new_chunk_available, absolute_step_counter"
+          },
+          {
+            "line": 598,
+            "text": ""
+          },
+          {
+            "line": 599,
+            "text": "    piper_left = setup_piper(\"can_left\")"
+          },
+          {
+            "line": 600,
+            "text": "    piper_right = setup_piper(\"can_right\")"
+          },
+          {
+            "line": 601,
+            "text": "    "
+          },
+          {
+            "line": 602,
+            "text": "    print(\"Connecting cameras (multi-threaded)...\")"
+          },
+          {
+            "line": 603,
+            "text": "    cam_main = CameraThread(\"/dev/v4l/by-path/pci-0000:00:14.0-usb-0:3.2:1.0-video-index0\", \"main\")"
+          },
+          {
+            "line": 604,
+            "text": "    cam_wrist_left = CameraThread(\"/dev/v4l/by-path/pci-0000:00:14.0-usb-0:5.2:1.0-video-index0\", \"left\")"
+          },
+          {
+            "line": 605,
+            "text": "    cam_wrist_right = CameraThread(\"/dev/v4l/by-path/pci-0000:00:14.0-usb-0:4.2:1.0-video-index0\", \"right\")"
+          },
+          {
+            "line": 606,
+            "text": ""
+          },
+          {
+            "line": 607,
+            "text": "    # 🌟=== Core insertion: Execute BCI selection before starting arms ==="
+          },
+          {
+            "line": 608,
+            "text": "    bci_selection_phase(cam_main)"
+          },
+          {
+            "line": 609,
+            "text": "    "
+          },
+          {
+            "line": 610,
+            "text": "    if not TASK_INSTRUCTION:"
+          },
+          {
+            "line": 611,
+            "text": "        print(\"No valid control instruction generated, shutting down.\")"
+          },
+          {
+            "line": 612,
+            "text": "        cam_main.stop()"
+          },
+          {
+            "line": 613,
+            "text": "        cam_wrist_left.stop()"
+          },
+          {
+            "line": 614,
+            "text": "        cam_wrist_right.stop()"
+          },
+          {
+            "line": 615,
+            "text": "        return"
+          },
+          {
+            "line": 616,
+            "text": "    # =========================================="
+          },
+          {
+            "line": 617,
+            "text": "    "
+          },
+          {
+            "line": 618,
+            "text": "    if piper_left and piper_right:"
+          },
+          {
+            "line": 619,
+            "text": "        print(\"Waiting for controller to be ready...\")"
+          },
+          {
+            "line": 620,
+            "text": "        time.sleep(2.0)"
+          },
+          {
+            "line": 621,
+            "text": "        print(\">>> Enabling robotic arms <<<\")"
+          },
+          {
+            "line": 622,
+            "text": "        for _ in range(3):"
+          },
+          {
+            "line": 623,
+            "text": "            if piper_left:"
+          },
+          {
+            "line": 624,
+            "text": "                piper_left.EnableArm(motor_num=7, enable_flag=0x02)"
+          },
+          {
+            "line": 625,
+            "text": "                piper_left.GripperCtrl(0, 300, 0x01)"
+          }
+        ],
+        "syntax": "PASS"
+      },
+      {
+        "path": "scripts/server_api.py",
+        "exists": true,
+        "sha256": "9af52c0364aad6771e73184831bf46b1706b78bbe4c3136ddc9160eb281ce977",
+        "lines": 285,
+        "excerpt": [
+          {
+            "line": 215,
+            "text": "            try:"
+          },
+          {
+            "line": 216,
+            "text": "                mask_np = np.array(mask)"
+          },
+          {
+            "line": 217,
+            "text": "                while mask_np.ndim > 2:"
+          },
+          {
+            "line": 218,
+            "text": "                    mask_np = mask_np[0]"
+          },
+          {
+            "line": 219,
+            "text": "                binary_mask = np.zeros((mask_np.shape[0], mask_np.shape[1]), dtype=np.uint8)"
+          },
+          {
+            "line": 220,
+            "text": "                binary_mask[mask_np > 0] = 255"
+          },
+          {
+            "line": 221,
+            "text": "                binary_mask = np.ascontiguousarray(binary_mask)"
+          },
+          {
+            "line": 222,
+            "text": "                success, buffer = cv2.imencode('.png', binary_mask)"
+          },
+          {
+            "line": 223,
+            "text": "                if success:"
+          },
+          {
+            "line": 224,
+            "text": "                    mask_b64s.append(base64.b64encode(buffer).decode('utf-8'))"
+          },
+          {
+            "line": 225,
+            "text": "                else:"
+          },
+          {
+            "line": 226,
+            "text": "                    print(f\"⚠️ Warning: Mask {idx} failed to encode as PNG, shape: {binary_mask.shape}\")"
+          },
+          {
+            "line": 227,
+            "text": "            except Exception as e:"
+          },
+          {
+            "line": 228,
+            "text": "                print(f\"❌ Mask {idx} processing exception: {e}\")"
+          },
+          {
+            "line": 229,
+            "text": ""
+          },
+          {
+            "line": 230,
+            "text": "        GLOBAL_SCENE_DATA = {"
+          },
+          {
+            "line": 231,
+            "text": "            \"status\": \"success\","
+          },
+          {
+            "line": 232,
+            "text": "            \"image_b64\": img_b64,"
+          },
+          {
+            "line": 233,
+            "text": "            \"labels\": final_labels,"
+          },
+          {
+            "line": 234,
+            "text": "            \"bboxes\": final_boxes,"
+          },
+          {
+            "line": 235,
+            "text": "            \"masks\": mask_b64s  "
+          },
+          {
+            "line": 236,
+            "text": "        }"
+          },
+          {
+            "line": 237,
+            "text": "        "
+          },
+          {
+            "line": 238,
+            "text": "        print(f\"✅ [Vision Server] Scene update successful, extracted {len(final_labels)} objects: {final_labels}\")"
+          },
+          {
+            "line": 239,
+            "text": "        return JSONResponse(content={\"status\": \"success\"})"
+          },
+          {
+            "line": 240,
+            "text": "    "
+          },
+          {
+            "line": 241,
+            "text": "    except Exception as e:"
+          },
+          {
+            "line": 242,
+            "text": "        traceback.print_exc()"
+          },
+          {
+            "line": 243,
+            "text": "        if CURRENT_TRIAL:"
+          },
+          {
+            "line": 244,
+            "text": "            CURRENT_TRIAL[\"end_time\"] = time.time()"
+          },
+          {
+            "line": 245,
+            "text": "            CURRENT_TRIAL[\"total_time\"] = CURRENT_TRIAL[\"end_time\"] - CURRENT_TRIAL[\"start_time\"]"
+          },
+          {
+            "line": 246,
+            "text": "            CURRENT_TRIAL[\"success\"] = False"
+          },
+          {
+            "line": 247,
+            "text": "            save_trial()"
+          },
+          {
+            "line": 248,
+            "text": "        return JSONResponse(content={\"status\": \"error\"})"
+          },
+          {
+            "line": 249,
+            "text": ""
+          },
+          {
+            "line": 250,
+            "text": "@app.get(\"/get_bci_scene\")"
+          },
+          {
+            "line": 251,
+            "text": "async def get_bci_scene():"
+          },
+          {
+            "line": 252,
+            "text": "    return JSONResponse(content=GLOBAL_SCENE_DATA)"
+          },
+          {
+            "line": 253,
+            "text": ""
+          },
+          {
+            "line": 254,
+            "text": "@app.post(\"/submit_bci_result\")"
+          },
+          {
+            "line": 255,
+            "text": "async def submit_bci_result(result: BCIResult):"
+          },
+          {
+            "line": 256,
+            "text": "    global GLOBAL_BCI_RESULT, CURRENT_TRIAL"
+          },
+          {
+            "line": 257,
+            "text": ""
+          },
+          {
+            "line": 258,
+            "text": "    GLOBAL_BCI_RESULT = result.selected_target"
+          },
+          {
+            "line": 259,
+            "text": ""
+          },
+          {
+            "line": 260,
+            "text": "    with lock:"
+          },
+          {
+            "line": 261,
+            "text": "        if CURRENT_TRIAL:"
+          },
+          {
+            "line": 262,
+            "text": "            CURRENT_TRIAL[\"selected_target\"] = result.selected_target"
+          },
+          {
+            "line": 263,
+            "text": "            CURRENT_TRIAL[\"n_trigger\"] += 1"
+          },
+          {
+            "line": 264,
+            "text": "            "
+          },
+          {
+            "line": 265,
+            "text": "            CURRENT_TRIAL[\"end_time\"] = time.time()"
+          },
+          {
+            "line": 266,
+            "text": "            if CURRENT_TRIAL[\"start_time\"]:"
+          },
+          {
+            "line": 267,
+            "text": "                CURRENT_TRIAL[\"total_time\"] = CURRENT_TRIAL[\"end_time\"] - CURRENT_TRIAL[\"start_time\"]"
+          },
+          {
+            "line": 268,
+            "text": "            CURRENT_TRIAL[\"success\"] = True "
+          },
+          {
+            "line": 269,
+            "text": "            "
+          },
+          {
+            "line": 270,
+            "text": "            save_trial()"
+          },
+          {
+            "line": 271,
+            "text": "            print(f\"📁 [Logger] Experiment data successfully saved to {LOG_DIR}/{CURRENT_TRIAL['trial_id']}.json\")"
+          },
+          {
+            "line": 272,
+            "text": ""
+          },
+          {
+            "line": 273,
+            "text": "    print(f\"🧠 [BCI Result] Received EEG decoding result from Windows client: {GLOBAL_BCI_RESULT}\")"
+          },
+          {
+            "line": 274,
+            "text": ""
+          },
+          {
+            "line": 275,
+            "text": "    return JSONResponse(content={\"status\": \"success\"})"
+          },
+          {
+            "line": 276,
+            "text": ""
+          },
+          {
+            "line": 277,
+            "text": "@app.get(\"/get_bci_result\")"
+          },
+          {
+            "line": 278,
+            "text": "async def get_bci_result():"
+          },
+          {
+            "line": 279,
+            "text": "    if GLOBAL_BCI_RESULT is not None:"
+          },
+          {
+            "line": 280,
+            "text": "        return JSONResponse(content={\"status\": \"success\", \"selected_target\": GLOBAL_BCI_RESULT})"
+          },
+          {
+            "line": 281,
+            "text": "    else:"
+          },
+          {
+            "line": 282,
+            "text": "        return JSONResponse(content={\"status\": \"waiting\"})"
+          }
+        ],
+        "syntax": "PASS"
+      },
+      {
+        "path": "scripts/training/serve_policy.py",
+        "exists": true,
+        "sha256": "eccc0448b4873fd30a1fff3355c5de7a7c227138e6db04b7dcaa5bb38a6a5809",
+        "lines": 122,
+        "excerpt": [
+          {
+            "line": 25,
+            "text": "    \"\"\"Load a policy from a trained checkpoint.\"\"\""
+          },
+          {
+            "line": 26,
+            "text": ""
+          },
+          {
+            "line": 27,
+            "text": "    # Training config name (e.g., \"pi0_aloha_sim\")."
+          },
+          {
+            "line": 28,
+            "text": "    config: str"
+          },
+          {
+            "line": 29,
+            "text": "    # Checkpoint directory (e.g., \"checkpoints/pi0_aloha_sim/exp/10000\")."
+          },
+          {
+            "line": 30,
+            "text": "    dir: str"
+          },
+          {
+            "line": 31,
+            "text": ""
+          },
+          {
+            "line": 32,
+            "text": ""
+          },
+          {
+            "line": 33,
+            "text": "@dataclasses.dataclass"
+          },
+          {
+            "line": 34,
+            "text": "class Default:"
+          },
+          {
+            "line": 35,
+            "text": "    \"\"\"Use the default policy for the given environment.\"\"\""
+          },
+          {
+            "line": 36,
+            "text": ""
+          },
+          {
+            "line": 37,
+            "text": ""
+          },
+          {
+            "line": 38,
+            "text": "@dataclasses.dataclass"
+          },
+          {
+            "line": 39,
+            "text": "class Args:"
+          },
+          {
+            "line": 40,
+            "text": "    \"\"\"Arguments for the serve_policy script.\"\"\""
+          },
+          {
+            "line": 41,
+            "text": ""
+          },
+          {
+            "line": 42,
+            "text": "    # Environment to serve the policy for. This is only used when serving default policies."
+          },
+          {
+            "line": 43,
+            "text": "    env: EnvMode = EnvMode.ALOHA_SIM"
+          },
+          {
+            "line": 44,
+            "text": ""
+          },
+          {
+            "line": 45,
+            "text": "    # If provided, will be used in case the \"prompt\" key is not present in the data, or if the model doesn't have a default"
+          },
+          {
+            "line": 46,
+            "text": "    # prompt."
+          },
+          {
+            "line": 47,
+            "text": "    default_prompt: str | None = None"
+          },
+          {
+            "line": 48,
+            "text": ""
+          },
+          {
+            "line": 49,
+            "text": "    # Port to serve the policy on."
+          },
+          {
+            "line": 50,
+            "text": "    port: int = 8000"
+          },
+          {
+            "line": 51,
+            "text": "    # Record the policy's behavior for debugging."
+          },
+          {
+            "line": 52,
+            "text": "    record: bool = False"
+          },
+          {
+            "line": 53,
+            "text": ""
+          },
+          {
+            "line": 54,
+            "text": "    # Specifies how to load the policy. If not provided, the default policy for the environment will be used."
+          },
+          {
+            "line": 55,
+            "text": "    policy: Checkpoint | Default = dataclasses.field(default_factory=Default)"
+          },
+          {
+            "line": 56,
+            "text": ""
+          },
+          {
+            "line": 57,
+            "text": ""
+          },
+          {
+            "line": 58,
+            "text": "# Default checkpoints that should be used for each environment."
+          },
+          {
+            "line": 59,
+            "text": "DEFAULT_CHECKPOINT: dict[EnvMode, Checkpoint] = {"
+          },
+          {
+            "line": 60,
+            "text": "    EnvMode.ALOHA: Checkpoint("
+          },
+          {
+            "line": 61,
+            "text": "        config=\"pi05_aloha\","
+          },
+          {
+            "line": 62,
+            "text": "        dir=\"gs://openpi-assets/checkpoints/pi05_base\","
+          },
+          {
+            "line": 63,
+            "text": "    ),"
+          },
+          {
+            "line": 64,
+            "text": "    EnvMode.ALOHA_SIM: Checkpoint("
+          },
+          {
+            "line": 65,
+            "text": "        config=\"pi0_aloha_sim\","
+          },
+          {
+            "line": 66,
+            "text": "        dir=\"gs://openpi-assets/checkpoints/pi0_aloha_sim\","
+          },
+          {
+            "line": 67,
+            "text": "    ),"
+          },
+          {
+            "line": 68,
+            "text": "    EnvMode.DROID: Checkpoint("
+          },
+          {
+            "line": 69,
+            "text": "        config=\"pi05_droid\","
+          },
+          {
+            "line": 70,
+            "text": "        dir=\"gs://openpi-assets/checkpoints/pi05_droid\","
+          },
+          {
+            "line": 71,
+            "text": "    ),"
+          },
+          {
+            "line": 72,
+            "text": "    EnvMode.LIBERO: Checkpoint("
+          },
+          {
+            "line": 73,
+            "text": "        config=\"pi05_libero\","
+          },
+          {
+            "line": 74,
+            "text": "        dir=\"gs://openpi-assets/checkpoints/pi05_libero\","
+          },
+          {
+            "line": 75,
+            "text": "    ),"
+          },
+          {
+            "line": 76,
+            "text": "}"
+          },
+          {
+            "line": 77,
+            "text": ""
+          },
+          {
+            "line": 78,
+            "text": ""
+          },
+          {
+            "line": 79,
+            "text": "def create_default_policy(env: EnvMode, *, default_prompt: str | None = None) -> _policy.Policy:"
+          },
+          {
+            "line": 80,
+            "text": "    \"\"\"Create a default policy for the given environment.\"\"\""
+          },
+          {
+            "line": 81,
+            "text": "    if checkpoint := DEFAULT_CHECKPOINT.get(env):"
+          },
+          {
+            "line": 82,
+            "text": "        return _policy_config.create_trained_policy("
+          },
+          {
+            "line": 83,
+            "text": "            _config.get_config(checkpoint.config), checkpoint.dir, default_prompt=default_prompt"
+          },
+          {
+            "line": 84,
+            "text": "        )"
+          },
+          {
+            "line": 85,
+            "text": "    raise ValueError(f\"Unsupported environment mode: {env}\")"
+          },
+          {
+            "line": 86,
+            "text": ""
+          },
+          {
+            "line": 87,
+            "text": ""
+          },
+          {
+            "line": 88,
+            "text": "def create_policy(args: Args) -> _policy.Policy:"
+          },
+          {
+            "line": 89,
+            "text": "    \"\"\"Create a policy from the given arguments.\"\"\""
+          },
+          {
+            "line": 90,
+            "text": "    match args.policy:"
+          },
+          {
+            "line": 91,
+            "text": "        case Checkpoint():"
+          },
+          {
+            "line": 92,
+            "text": "            return _policy_config.create_trained_policy("
+          },
+          {
+            "line": 93,
+            "text": "                _config.get_config(args.policy.config), args.policy.dir, default_prompt=args.default_prompt"
+          },
+          {
+            "line": 94,
+            "text": "            )"
+          },
+          {
+            "line": 95,
+            "text": "        case Default():"
+          },
+          {
+            "line": 96,
+            "text": "            return create_default_policy(args.env, default_prompt=args.default_prompt)"
+          },
+          {
+            "line": 97,
+            "text": ""
+          },
+          {
+            "line": 98,
+            "text": ""
+          },
+          {
+            "line": 99,
+            "text": "def main(args: Args) -> None:"
+          },
+          {
+            "line": 100,
+            "text": "    policy = create_policy(args)"
+          },
+          {
+            "line": 101,
+            "text": "    policy_metadata = policy.metadata"
+          },
+          {
+            "line": 102,
+            "text": ""
+          },
+          {
+            "line": 103,
+            "text": "    # Record the policy's behavior."
+          },
+          {
+            "line": 104,
+            "text": "    if args.record:"
+          },
+          {
+            "line": 105,
+            "text": "        policy = _policy.PolicyRecorder(policy, \"policy_records\")"
+          },
+          {
+            "line": 106,
+            "text": ""
+          },
+          {
+            "line": 107,
+            "text": "    hostname = socket.gethostname()"
+          },
+          {
+            "line": 108,
+            "text": "    local_ip = socket.gethostbyname(hostname)"
+          },
+          {
+            "line": 109,
+            "text": "    logging.info(\"Creating server (host: %s, ip: %s)\", hostname, local_ip)"
+          },
+          {
+            "line": 110,
+            "text": ""
+          },
+          {
+            "line": 111,
+            "text": "    server = websocket_policy_server.WebsocketPolicyServer("
+          },
+          {
+            "line": 112,
+            "text": "        policy=policy,"
+          },
+          {
+            "line": 113,
+            "text": "        host=\"0.0.0.0\","
+          },
+          {
+            "line": 114,
+            "text": "        port=args.port,"
+          },
+          {
+            "line": 115,
+            "text": "        metadata=policy_metadata,"
+          },
+          {
+            "line": 116,
+            "text": "    )"
+          },
+          {
+            "line": 117,
+            "text": "    server.serve_forever()"
+          },
+          {
+            "line": 118,
+            "text": ""
+          },
+          {
+            "line": 119,
+            "text": ""
+          },
+          {
+            "line": 120,
+            "text": "if __name__ == \"__main__\":"
+          }
+        ],
+        "syntax": "PASS"
+      },
+      {
+        "path": "scripts/robot/RTC_inference.py",
+        "exists": true,
+        "sha256": "bb14d4b9fe152c2e8c34ebe31b81ff454f7a822122f0528619553c2d39763d0c",
+        "lines": 614,
+        "excerpt": [
+          {
+            "line": 385,
+            "text": "            \"硬件输出默认锁定。先用 OPENPI_DRY_RUN=1 检查服务端；确认急停与工作区安全后，\""
+          },
+          {
+            "line": 386,
+            "text": "            \"再设置 OPENPI_ENABLE_ROBOT=1 启动。\""
+          },
+          {
+            "line": 387,
+            "text": "        )"
+          },
+          {
+            "line": 388,
+            "text": ""
+          },
+          {
+            "line": 389,
+            "text": "    print(f\"连接策略服务器: {SERVER_HOST}:{SERVER_PORT}\")"
+          },
+          {
+            "line": 390,
+            "text": "    try:"
+          },
+          {
+            "line": 391,
+            "text": "        client = websocket_client_policy.WebsocketClientPolicy("
+          },
+          {
+            "line": 392,
+            "text": "            host=SERVER_HOST, port=SERVER_PORT"
+          },
+          {
+            "line": 393,
+            "text": "        )"
+          },
+          {
+            "line": 394,
+            "text": "        server_metadata = client.get_server_metadata()"
+          },
+          {
+            "line": 395,
+            "text": "    except Exception as e:"
+          },
+          {
+            "line": 396,
+            "text": "        raise SystemExit(f\"策略服务器连接失败，机械臂未使能: {e}\")"
+          },
+          {
+            "line": 397,
+            "text": ""
+          },
+          {
+            "line": 398,
+            "text": "    rtc_metadata = server_metadata.get(\"openpi_rtc\", {})"
+          },
+          {
+            "line": 399,
+            "text": "    if rtc_metadata.get(\"version\") != 1 or \"realtime\" not in rtc_metadata.get(\"modes\", []):"
+          },
+          {
+            "line": 400,
+            "text": "        raise SystemExit("
+          },
+          {
+            "line": 401,
+            "text": "            \"策略服务器没有声明 OpenPI RTC v1 支持；为避免静默退回普通分块推理，机械臂未使能。\""
+          },
+          {
+            "line": 402,
+            "text": "        )"
+          },
+          {
+            "line": 403,
+            "text": ""
+          },
+          {
+            "line": 404,
+            "text": "    ACTION_HORIZON = int(server_metadata.get(\"action_horizon\", ACTION_HORIZON))"
+          },
+          {
+            "line": 405,
+            "text": "    action_dim = int(server_metadata.get(\"action_dim\", 14))"
+          },
+          {
+            "line": 406,
+            "text": "    if ACTION_HORIZON <= 0 or action_dim != 14:"
+          },
+          {
+            "line": 407,
+            "text": "        raise SystemExit("
+          },
+          {
+            "line": 408,
+            "text": "            f\"服务器策略形状不匹配：action_horizon={ACTION_HORIZON}, action_dim={action_dim}；\""
+          },
+          {
+            "line": 409,
+            "text": "            \"双 Piper 控制要求 action_dim=14。\""
+          },
+          {
+            "line": 410,
+            "text": "        )"
+          },
+          {
+            "line": 411,
+            "text": "    if PREFETCH_STEPS <= 0 or PREFETCH_STEPS >= ACTION_HORIZON:"
+          },
+          {
+            "line": 412,
+            "text": "        raise SystemExit("
+          },
+          {
+            "line": 413,
+            "text": "            f\"OPENPI_PREFETCH_STEPS 必须在 1 到 {ACTION_HORIZON - 1} 之间。\""
+          },
+          {
+            "line": 414,
+            "text": "        )"
+          },
+          {
+            "line": 415,
+            "text": ""
+          },
+          {
+            "line": 416,
+            "text": "    if dry_run:"
+          },
+          {
+            "line": 417,
+            "text": "        print("
+          },
+          {
+            "line": 418,
+            "text": "            f\"✅ 干运行通过：服务端声明 RTC v1，动作形状为 \""
+          },
+          {
+            "line": 419,
+            "text": "            f\"{ACTION_HORIZON}×{action_dim}；没有连接或使能机械臂。\""
+          },
+          {
+            "line": 420,
+            "text": "        )"
+          },
+          {
+            "line": 421,
+            "text": "        client._ws.close()"
+          },
+          {
+            "line": 422,
+            "text": "        return"
+          },
+          {
+            "line": 423,
+            "text": ""
+          },
+          {
+            "line": 424,
+            "text": "    piper_left = setup_piper(\"can_left\")"
+          },
+          {
+            "line": 425,
+            "text": "    piper_right = setup_piper(\"can_right\")"
+          },
+          {
+            "line": 426,
+            "text": "    "
+          },
+          {
+            "line": 427,
+            "text": "    print(\"正在连接摄像头 (多线程)...\")"
+          },
+          {
+            "line": 428,
+            "text": "    cam_main = CameraThread(\"/dev/v4l/by-path/pci-0000:00:14.0-usb-0:6.2:1.0-video-index0\", \"main\")"
+          },
+          {
+            "line": 429,
+            "text": "    cam_wrist_left = CameraThread(\"/dev/v4l/by-path/pci-0000:00:14.0-usb-0:5.2:1.0-video-index0\", \"left\")"
+          },
+          {
+            "line": 430,
+            "text": "    cam_wrist_right = CameraThread(\"/dev/v4l/by-path/pci-0000:00:14.0-usb-0:4.2:1.0-video-index0\", \"right\")"
+          }
+        ],
+        "syntax": "PASS"
+      },
+      {
+        "path": "openpi/src/openpi/training/config.py",
+        "exists": true,
+        "sha256": "58d3d091b2e8f3abd85dfbb2d7ed955f932cfebd7b0cd31355d8f547bc0b8bf6",
+        "lines": 1646,
+        "excerpt": [
+          {
+            "line": 39,
+            "text": "    \"\"\"Determines the location of assets (e.g., norm stats) that will be used to set up the data pipeline."
+          },
+          {
+            "line": 40,
+            "text": ""
+          },
+          {
+            "line": 41,
+            "text": "    These assets will be replicated inside the checkpoint under the `assets/asset_id` directory."
+          },
+          {
+            "line": 42,
+            "text": ""
+          },
+          {
+            "line": 43,
+            "text": "    This can be used to load assets from a different checkpoint (e.g., base model checkpoint) or some other"
+          },
+          {
+            "line": 44,
+            "text": "    centralized location. For example, to load the norm stats for the Trossen robot from the base model checkpoint"
+          },
+          {
+            "line": 45,
+            "text": "    during fine-tuning, use:"
+          },
+          {
+            "line": 46,
+            "text": ""
+          },
+          {
+            "line": 47,
+            "text": "    ```"
+          },
+          {
+            "line": 48,
+            "text": "    AssetsConfig("
+          },
+          {
+            "line": 49,
+            "text": "        assets_dir=\"gs://openpi-assets/checkpoints/pi0_base/assets\","
+          },
+          {
+            "line": 50,
+            "text": "        asset_id=\"trossen\","
+          },
+          {
+            "line": 51,
+            "text": "    )"
+          },
+          {
+            "line": 52,
+            "text": "    ```"
+          },
+          {
+            "line": 54,
+            "text": ""
+          },
+          {
+            "line": 55,
+            "text": "    # Assets directory. If not provided, the config assets_dirs will be used. This is useful to load assets from"
+          },
+          {
+            "line": 56,
+            "text": "    # a different checkpoint (e.g., base model checkpoint) or some other centralized location."
+          },
+          {
+            "line": 57,
+            "text": "    assets_dir: str | None = None"
+          },
+          {
+            "line": 58,
+            "text": ""
+          },
+          {
+            "line": 59,
+            "text": "    # Asset id. If not provided, the repo id will be used. This allows users to reference assets that describe"
+          },
+          {
+            "line": 413,
+            "text": "        # transform based on whether your dataset uses ``absolute`` or ``delta`` actions out of the box."
+          },
+          {
+            "line": 414,
+            "text": ""
+          },
+          {
+            "line": 415,
+            "text": "        # LIBERO already represents actions as deltas, but we have some old Pi0 checkpoints that are trained with this"
+          },
+          {
+            "line": 416,
+            "text": "        # extra delta transform."
+          },
+          {
+            "line": 417,
+            "text": "        if self.extra_delta_transform:"
+          },
+          {
+            "line": 418,
+            "text": "            delta_action_mask = _transforms.make_bool_mask(6, -1)"
+          },
+          {
+            "line": 548,
+            "text": "    # Project name."
+          },
+          {
+            "line": 549,
+            "text": "    project_name: str = \"openpi\""
+          },
+          {
+            "line": 550,
+            "text": "    # Experiment name. Will be used to name the metadata and checkpoint directories."
+          },
+          {
+            "line": 551,
+            "text": "    exp_name: str = tyro.MISSING"
+          },
+          {
+            "line": 552,
+            "text": ""
+          },
+          {
+            "line": 553,
+            "text": "    # Defines the model config. Some attributes (action_dim, action_horizon, and max_token_len) are shared by all models"
+          },
+          {
+            "line": 559,
+            "text": "    weight_loader: weight_loaders.WeightLoader = dataclasses.field(default_factory=weight_loaders.NoOpWeightLoader)"
+          },
+          {
+            "line": 560,
+            "text": ""
+          },
+          {
+            "line": 561,
+            "text": "    # Optional path to a PyTorch checkpoint to load weights from."
+          },
+          {
+            "line": 562,
+            "text": "    pytorch_weight_path: str | None = None"
+          },
+          {
+            "line": 563,
+            "text": ""
+          },
+          {
+            "line": 564,
+            "text": "    # Precision for PyTorch training."
+          },
+          {
+            "line": 577,
+            "text": "    # Base directory for config assets (e.g., norm stats)."
+          },
+          {
+            "line": 578,
+            "text": "    assets_base_dir: str = \"./assets\""
+          },
+          {
+            "line": 579,
+            "text": "    # Base directory for checkpoints."
+          },
+          {
+            "line": 580,
+            "text": "    checkpoint_base_dir: str = \"./checkpoints\""
+          },
+          {
+            "line": 581,
+            "text": ""
+          },
+          {
+            "line": 582,
+            "text": "    # Random seed that will be used by random generators during training."
+          },
+          {
+            "line": 583,
+            "text": "    seed: int = 42"
+          },
+          {
+            "line": 592,
+            "text": "    # How often (in steps) to log training metrics."
+          },
+          {
+            "line": 593,
+            "text": "    log_interval: int = 100"
+          },
+          {
+            "line": 594,
+            "text": "    # How often (in steps) to save checkpoints."
+          },
+          {
+            "line": 595,
+            "text": "    save_interval: int = 1000"
+          },
+          {
+            "line": 596,
+            "text": "    # If set, any existing checkpoints matching step % keep_period == 0 will not be deleted."
+          },
+          {
+            "line": 597,
+            "text": "    keep_period: int | None = 1000"
+          },
+          {
+            "line": 598,
+            "text": ""
+          },
+          {
+            "line": 599,
+            "text": "    # If true, will overwrite the checkpoint directory if it already exists."
+          },
+          {
+            "line": 600,
+            "text": "    overwrite: bool = False"
+          },
+          {
+            "line": 601,
+            "text": "    # If true, will resume training from the last checkpoint."
+          },
+          {
+            "line": 602,
+            "text": "    resume: bool = False"
+          },
+          {
+            "line": 603,
+            "text": ""
+          },
+          {
+            "line": 604,
+            "text": "    # If true, will enable wandb logging."
+          },
+          {
+            "line": 620,
+            "text": ""
+          },
+          {
+            "line": 621,
+            "text": "    @property"
+          },
+          {
+            "line": 622,
+            "text": "    def checkpoint_dir(self) -> pathlib.Path:"
+          },
+          {
+            "line": 623,
+            "text": "        \"\"\"Get the checkpoint directory for this config.\"\"\""
+          },
+          {
+            "line": 624,
+            "text": "        if not self.exp_name:"
+          },
+          {
+            "line": 625,
+            "text": "            raise ValueError(\"--exp_name must be set\")"
+          },
+          {
+            "line": 626,
+            "text": "        return (pathlib.Path(self.checkpoint_base_dir) / self.name / self.exp_name).resolve()"
+          },
+          {
+            "line": 627,
+            "text": ""
+          },
+          {
+            "line": 628,
+            "text": "    @property"
+          },
+          {
+            "line": 629,
+            "text": "    def trainable_filter(self) -> nnx.filterlib.Filter:"
+          },
+          {
+            "line": 724,
+            "text": "    #"
+          },
+          {
+            "line": 725,
+            "text": "    # These train configs define the hyperparameters for fine-tuning the base model on your own dataset."
+          },
+          {
+            "line": 726,
+            "text": "    # They are used to define key elements like the dataset you are training on, the base checkpoint you"
+          },
+          {
+            "line": 727,
+            "text": "    # are using, and other hyperparameters like how many training steps to run or what learning rate to use."
+          },
+          {
+            "line": 728,
+            "text": "    # For your own dataset, you can copy this class and modify the dataset name, and data transforms based on"
+          },
+          {
+            "line": 729,
+            "text": "    # the comments below."
+          },
+          {
+            "line": 748,
+            "text": "            extra_delta_transform=True,"
+          },
+          {
+            "line": 749,
+            "text": "        ),"
+          },
+          {
+            "line": 750,
+            "text": "        # Here you define which pre-trained checkpoint you want to load to initialize the model."
+          },
+          {
+            "line": 751,
+            "text": "        # This should match the model config you chose above -- i.e. in this case we use the pi0 base model."
+          },
+          {
+            "line": 752,
+            "text": "        weight_loader=weight_loaders.CheckpointWeightLoader(\"gs://openpi-assets/checkpoints/pi0_base/params\"),"
+          },
+          {
+            "line": 753,
+            "text": "        # Below you can define other hyperparameters like the learning rate, number of training steps, etc."
+          },
+          {
+            "line": 754,
+            "text": "        # Check the base TrainConfig class for a full list of available hyperparameters."
+          },
+          {
+            "line": 755,
+            "text": "        num_train_steps=30_000,"
+          },
+          {
+            "line": 764,
+            "text": "            extra_delta_transform=True,"
+          },
+          {
+            "line": 765,
+            "text": "        ),"
+          },
+          {
+            "line": 766,
+            "text": "        weight_loader=weight_loaders.CheckpointWeightLoader(\"gs://openpi-assets/checkpoints/pi0_base/params\"),"
+          },
+          {
+            "line": 767,
+            "text": "        num_train_steps=30_000,"
+          },
+          {
+            "line": 768,
+            "text": "        # The freeze filter defines which parameters should be frozen during training."
+          },
+          {
+            "line": 769,
+            "text": "        # We have a convenience function in the model config that returns the default freeze filter"
+          },
+          {
+            "line": 794,
+            "text": "            extra_delta_transform=True,"
+          },
+          {
+            "line": 795,
+            "text": "        ),"
+          },
+          {
+            "line": 796,
+            "text": "        # Note that we load the pi0-FAST base model checkpoint here."
+          },
+          {
+            "line": 797,
+            "text": "        weight_loader=weight_loaders.CheckpointWeightLoader(\"gs://openpi-assets/checkpoints/pi0_fast_base/params\"),"
+          },
+          {
+            "line": 798,
+            "text": "        num_train_steps=30_000,"
+          },
+          {
+            "line": 799,
+            "text": "    ),"
+          },
+          {
+            "line": 800,
+            "text": "    TrainConfig("
+          },
+          {
+            "line": 810,
+            "text": "            extra_delta_transform=True,"
+          },
+          {
+            "line": 811,
+            "text": "        ),"
+          },
+          {
+            "line": 812,
+            "text": "        weight_loader=weight_loaders.CheckpointWeightLoader(\"gs://openpi-assets/checkpoints/pi0_fast_base/params\"),"
+          },
+          {
+            "line": 813,
+            "text": "        num_train_steps=30_000,"
+          },
+          {
+            "line": 814,
+            "text": "        # Again, make sure to match the model config above when extracting the freeze filter"
+          },
+          {
+            "line": 815,
+            "text": "        # that specifies which parameters should be frozen during LoRA finetuning."
+          },
+          {
+            "line": 837,
+            "text": "        optimizer=_optimizer.AdamW(clip_gradient_norm=1.0),"
+          },
+          {
+            "line": 838,
+            "text": "        ema_decay=0.999,"
+          },
+          {
+            "line": 839,
+            "text": "        weight_loader=weight_loaders.CheckpointWeightLoader(\"gs://openpi-assets/checkpoints/pi05_base/params\"),"
+          },
+          {
+            "line": 840,
+            "text": "        pytorch_weight_path=\"/path/to/your/pytorch_weight_path\","
+          },
+          {
+            "line": 841,
+            "text": "        num_train_steps=30_000,"
+          },
+          {
+            "line": 842,
+            "text": "    ),"
+          },
+          {
+            "line": 852,
+            "text": "            repo_id=\"physical-intelligence/aloha_pen_uncap_diverse\","
+          },
+          {
+            "line": 853,
+            "text": "            assets=AssetsConfig("
+          },
+          {
+            "line": 854,
+            "text": "                assets_dir=\"gs://openpi-assets/checkpoints/pi0_base/assets\","
+          },
+          {
+            "line": 855,
+            "text": "                asset_id=\"trossen\","
+          },
+          {
+            "line": 856,
+            "text": "            ),"
+          },
+          {
+            "line": 857,
+            "text": "            default_prompt=\"uncap the pen\","
+          },
+          {
+            "line": 872,
+            "text": "            ),"
+          },
+          {
+            "line": 873,
+            "text": "        ),"
+          },
+          {
+            "line": 874,
+            "text": "        weight_loader=weight_loaders.CheckpointWeightLoader(\"gs://openpi-assets/checkpoints/pi0_base/params\"),"
+          },
+          {
+            "line": 875,
+            "text": "        num_train_steps=20_000,"
+          },
+          {
+            "line": 876,
+            "text": "    ),"
+          },
+          {
+            "line": 877,
+            "text": "    TrainConfig("
+          },
+          {
+            "line": 881,
+            "text": "            repo_id=\"physical-intelligence/aloha_pen_uncap_diverse\","
+          },
+          {
+            "line": 882,
+            "text": "            assets=AssetsConfig("
+          },
+          {
+            "line": 883,
+            "text": "                assets_dir=\"gs://openpi-assets/checkpoints/pi05_base/assets\","
+          },
+          {
+            "line": 884,
+            "text": "                asset_id=\"trossen\","
+          },
+          {
+            "line": 885,
+            "text": "            ),"
+          },
+          {
+            "line": 886,
+            "text": "            default_prompt=\"uncap the pen\","
+          },
+          {
+            "line": 901,
+            "text": "            ),"
+          },
+          {
+            "line": 902,
+            "text": "        ),"
+          },
+          {
+            "line": 903,
+            "text": "        weight_loader=weight_loaders.CheckpointWeightLoader(\"gs://openpi-assets/checkpoints/pi05_base/params\"),"
+          },
+          {
+            "line": 904,
+            "text": "        num_train_steps=20_000,"
+          },
+          {
+            "line": 905,
+            "text": "        batch_size=64,"
+          },
+          {
+            "line": 906,
+            "text": "    ),"
+          },
+          {
+            "line": 924,
+            "text": "            action_space=droid_rlds_dataset.DroidActionSpace.JOINT_POSITION,"
+          },
+          {
+            "line": 925,
+            "text": "        ),"
+          },
+          {
+            "line": 926,
+            "text": "        weight_loader=weight_loaders.CheckpointWeightLoader(\"gs://openpi-assets/checkpoints/pi0_fast_base/params\"),"
+          },
+          {
+            "line": 927,
+            "text": "        lr_schedule=_optimizer.CosineDecaySchedule("
+          },
+          {
+            "line": 928,
+            "text": "            warmup_steps=1_000,"
+          },
+          {
+            "line": 929,
+            "text": "            peak_lr=5e-5,"
+          },
+          {
+            "line": 954,
+            "text": "            action_space=droid_rlds_dataset.DroidActionSpace.JOINT_POSITION,"
+          },
+          {
+            "line": 955,
+            "text": "            assets=AssetsConfig("
+          },
+          {
+            "line": 956,
+            "text": "                assets_dir=\"gs://openpi-assets/checkpoints/pi05_base/assets/\","
+          },
+          {
+            "line": 957,
+            "text": "                asset_id=\"droid\","
+          },
+          {
+            "line": 958,
+            "text": "            ),"
+          },
+          {
+            "line": 959,
+            "text": "        ),"
+          },
+          {
+            "line": 960,
+            "text": "        weight_loader=weight_loaders.CheckpointWeightLoader(\"gs://openpi-assets/checkpoints/pi05_base/params\"),"
+          },
+          {
+            "line": 961,
+            "text": "        lr_schedule=_optimizer.CosineDecaySchedule("
+          },
+          {
+            "line": 962,
+            "text": "            warmup_steps=1_000,"
+          },
+          {
+            "line": 963,
+            "text": "            peak_lr=5e-5,"
+          },
+          {
+            "line": 988,
+            "text": "            assets=AssetsConfig("
+          },
+          {
+            "line": 989,
+            "text": "                # Important: reuse the original DROID norm stats during fine-tuning!"
+          },
+          {
+            "line": 990,
+            "text": "                assets_dir=\"gs://openpi-assets/checkpoints/pi05_droid/assets\","
+          },
+          {
+            "line": 991,
+            "text": "                asset_id=\"droid\","
+          },
+          {
+            "line": 992,
+            "text": "            ),"
+          },
+          {
+            "line": 993,
+            "text": "        ),"
+          },
+          {
+            "line": 994,
+            "text": "        weight_loader=weight_loaders.CheckpointWeightLoader(\"gs://openpi-assets/checkpoints/pi05_droid/params\"),"
+          },
+          {
+            "line": 995,
+            "text": "        num_train_steps=20_000,"
+          },
+          {
+            "line": 996,
+            "text": "        batch_size=32,"
+          },
+          {
+            "line": 997,
+            "text": "    ),"
+          },
+          {
+            "line": 1007,
+            "text": "            use_delta_joint_actions=False,"
+          },
+          {
+            "line": 1008,
+            "text": "        ),"
+          },
+          {
+            "line": 1009,
+            "text": "        weight_loader=weight_loaders.CheckpointWeightLoader(\"gs://openpi-assets/checkpoints/pi0_base/params\"),"
+          },
+          {
+            "line": 1010,
+            "text": "        num_train_steps=20_000,"
+          },
+          {
+            "line": 1011,
+            "text": "    ),"
+          },
+          {
+            "line": 1012,
+            "text": "    #"
+          },
+          {
+            "line": 1029,
+            "text": "        batch_size=2,"
+          },
+          {
+            "line": 1030,
+            "text": "        model=pi0_config.Pi0Config(paligemma_variant=\"dummy\", action_expert_variant=\"dummy\"),"
+          },
+          {
+            "line": 1031,
+            "text": "        weight_loader=weight_loaders.CheckpointWeightLoader(\"./checkpoints/debug/debug/9/params\"),"
+          },
+          {
+            "line": 1032,
+            "text": "        overwrite=True,"
+          },
+          {
+            "line": 1033,
+            "text": "        exp_name=\"debug\","
+          },
+          {
+            "line": 1034,
+            "text": "        num_train_steps=10,"
+          },
+          {
+            "line": 1064,
+            "text": "            adapt_to_pi=True,            "
+          },
+          {
+            "line": 1065,
+            "text": "            assets=AssetsConfig("
+          },
+          {
+            "line": 1066,
+            "text": "                assets_dir=\"/home/oyjt/openpi/assets/pi05_pick_capsule/oy\","
+          },
+          {
+            "line": 1067,
+            "text": "                asset_id=\"pick_coffee_test_v21\","
+          },
+          {
+            "line": 1068,
+            "text": "            ),"
+          },
+          {
+            "line": 1069,
+            "text": "            default_prompt=\"pick up the capsule and put it into the bucket.\","
+          },
+          {
+            "line": 1084,
+            "text": "            ),"
+          },
+          {
+            "line": 1085,
+            "text": "        ),"
+          },
+          {
+            "line": 1086,
+            "text": "        weight_loader=weight_loaders.CheckpointWeightLoader(\"/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/checkpoints/pi05_base/params\"),"
+          },
+          {
+            "line": 1087,
+            "text": "        freeze_filter=pi0_config.Pi0Config("
+          },
+          {
+            "line": 1088,
+            "text": "            pi05=True,"
+          },
+          {
+            "line": 1089,
+            "text": "            action_horizon=100,"
+          },
+          {
+            "line": 1118,
+            "text": "            # action_indices=(0, 1, 2, 3, 4, 5, 6,13,14,15,16,17,18,19), "
+          },
+          {
+            "line": 1119,
+            "text": "            assets=AssetsConfig("
+          },
+          {
+            "line": 1120,
+            "text": "                assets_dir=\"/home/oyjt/openpi/assets/pi05_pour_water/RoboCOIN\","
+          },
+          {
+            "line": 1121,
+            "text": "                asset_id=\"Cobot_Magic_pour_water_a\","
+          },
+          {
+            "line": 1122,
+            "text": "            ),"
+          },
+          {
+            "line": 1123,
+            "text": "            default_prompt=\"picking up a paper cup with the left hand and a bottle of nongfu spring mineral water with the right hand, pouring the water into the paper cup, and then placing them back on the table after completing.\","
+          },
+          {
+            "line": 1138,
+            "text": "            ),"
+          },
+          {
+            "line": 1139,
+            "text": "        ),"
+          },
+          {
+            "line": 1140,
+            "text": "        weight_loader=weight_loaders.CheckpointWeightLoader(\"/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/checkpoints/pi05_base/params\"),"
+          },
+          {
+            "line": 1141,
+            "text": "        freeze_filter=pi0_config.Pi0Config("
+          },
+          {
+            "line": 1142,
+            "text": "            pi05=True,"
+          },
+          {
+            "line": 1143,
+            "text": "            action_horizon=100,"
+          },
+          {
+            "line": 1178,
+            "text": "            # action_indices=(0, 1, 2, 3, 4, 5, 6,13,14,15,16,17,18,19), "
+          },
+          {
+            "line": 1179,
+            "text": "            assets=AssetsConfig("
+          },
+          {
+            "line": 1180,
+            "text": "                assets_dir=\"/home/oyjt/openpi/assets/pi05_fold_clothes/RoboCOIN\","
+          },
+          {
+            "line": 1181,
+            "text": "                asset_id=\"Cobot_Magic_fold_clothes\","
+          },
+          {
+            "line": 1182,
+            "text": "            ),"
+          },
+          {
+            "line": 1183,
+            "text": "            default_prompt=\"fold a grey long-sleeved shirt over a blue coffee tablecloth.\","
+          },
+          {
+            "line": 1198,
+            "text": "            ),"
+          },
+          {
+            "line": 1199,
+            "text": "        ),"
+          },
+          {
+            "line": 1200,
+            "text": "        weight_loader=weight_loaders.CheckpointWeightLoader(\"/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/checkpoints/pi05_base/params\"),"
+          },
+          {
+            "line": 1201,
+            "text": "        freeze_filter=pi0_config.Pi0Config("
+          },
+          {
+            "line": 1202,
+            "text": "            pi05=True,"
+          },
+          {
+            "line": 1203,
+            "text": "            action_horizon=100,"
+          },
+          {
+            "line": 1230,
+            "text": "            adapt_to_pi=True,            "
+          },
+          {
+            "line": 1231,
+            "text": "            assets=AssetsConfig("
+          },
+          {
+            "line": 1232,
+            "text": "                assets_dir=\"/home/oyjt/openpi/assets/cherry\","
+          },
+          {
+            "line": 1233,
+            "text": "                asset_id=\"cherry_v21\","
+          },
+          {
+            "line": 1234,
+            "text": "            ),"
+          },
+          {
+            "line": 1235,
+            "text": "            default_prompt=\"pick up the cherry and put it into the white bowl, then pick up the coffee capsule and put it into the blue bowl.\","
+          },
+          {
+            "line": 1250,
+            "text": "            ),"
+          },
+          {
+            "line": 1251,
+            "text": "        ),"
+          },
+          {
+            "line": 1252,
+            "text": "        weight_loader=weight_loaders.CheckpointWeightLoader(\"/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/checkpoints/pi05_base/params\"),"
+          },
+          {
+            "line": 1253,
+            "text": "        # weight_loader=weight_loaders.CheckpointWeightLoader(\"/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/checkpoints/pi05_droid/params\"),"
+          },
+          {
+            "line": 1254,
+            "text": "        freeze_filter=pi0_config.Pi0Config("
+          },
+          {
+            "line": 1255,
+            "text": "            pi05=True,"
+          },
+          {
+            "line": 1256,
+            "text": "            action_horizon=100,"
+          },
+          {
+            "line": 1290,
+            "text": "            adapt_to_pi=True,            "
+          },
+          {
+            "line": 1291,
+            "text": "            assets=AssetsConfig("
+          },
+          {
+            "line": 1292,
+            "text": "                assets_dir=\"/home/oyjt/openpi/assets/cherry\","
+          },
+          {
+            "line": 1293,
+            "text": "                asset_id=\"cherry_v21\","
+          },
+          {
+            "line": 1294,
+            "text": "            ),"
+          },
+          {
+            "line": 1295,
+            "text": "            default_prompt=\"pick up the cherry and put it into the white bowl, then pick up the coffee capsule and put it into the blue bowl.\","
+          },
+          {
+            "line": 1310,
+            "text": "            ),"
+          },
+          {
+            "line": 1311,
+            "text": "        ),"
+          },
+          {
+            "line": 1312,
+            "text": "        # weight_loader=weight_loaders.CheckpointWeightLoader(\"/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/checkpoints/pi05_base/params\"),"
+          },
+          {
+            "line": 1313,
+            "text": "        weight_loader=weight_loaders.CheckpointWeightLoader(\"/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/checkpoints/pi0_aloha_towel/params\"),"
+          },
+          {
+            "line": 1314,
+            "text": "        freeze_filter=pi0_config.Pi0Config("
+          },
+          {
+            "line": 1315,
+            "text": "            action_horizon=100,"
+          },
+          {
+            "line": 1316,
+            "text": "            paligemma_variant=\"gemma_2b_lora\","
+          },
+          {
+            "line": 1348,
+            "text": "            adapt_to_pi=True,            "
+          },
+          {
+            "line": 1349,
+            "text": "            assets=AssetsConfig("
+          },
+          {
+            "line": 1350,
+            "text": "                assets_dir=\"/home/oyjt/openpi/assets/test\","
+          },
+          {
+            "line": 1351,
+            "text": "                asset_id=\"test\","
+          },
+          {
+            "line": 1352,
+            "text": "            ),"
+          },
+          {
+            "line": 1353,
+            "text": "            default_prompt=\"pick up the capsule and put it into the blue bowl,then pick up the cherry and put it into the white bowl.\","
+          },
+          {
+            "line": 1368,
+            "text": "            ),"
+          },
+          {
+            "line": 1369,
+            "text": "        ),"
+          },
+          {
+            "line": 1370,
+            "text": "        weight_loader=weight_loaders.CheckpointWeightLoader(\"/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/checkpoints/pi05_base/params\"),"
+          },
+          {
+            "line": 1371,
+            "text": "        # weight_loader=weight_loaders.CheckpointWeightLoader(\"/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/checkpoints/pi05_droid/params\"),"
+          },
+          {
+            "line": 1372,
+            "text": "        freeze_filter=pi0_config.Pi0Config("
+          },
+          {
+            "line": 1373,
+            "text": "            pi05=True,"
+          },
+          {
+            "line": 1374,
+            "text": "            action_horizon=100,"
+          },
+          {
+            "line": 1406,
+            "text": "            adapt_to_pi=True,            "
+          },
+          {
+            "line": 1407,
+            "text": "            assets=AssetsConfig("
+          },
+          {
+            "line": 1408,
+            "text": "                assets_dir=\"/home/oyjt/openpi/assets/cloth\","
+          },
+          {
+            "line": 1409,
+            "text": "                asset_id=\"cloth\","
+          },
+          {
+            "line": 1410,
+            "text": "            ),"
+          },
+          {
+            "line": 1411,
+            "text": "            default_prompt=\"fold the cloth.\","
+          },
+          {
+            "line": 1412,
+            "text": "            repack_transforms=_transforms.Group("
+          },
+          {
+            "line": 1413,
+            "text": "                inputs=["
+          },
+          {
+            "line": 1414,
+            "text": "                    _transforms.RepackTransform("
+          },
+          {
+            "line": 1426,
+            "text": "            ),"
+          },
+          {
+            "line": 1427,
+            "text": "        ),"
+          },
+          {
+            "line": 1428,
+            "text": "        weight_loader=weight_loaders.CheckpointWeightLoader(\"/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/checkpoints/pi05_base/params\"),"
+          },
+          {
+            "line": 1429,
+            "text": "        # weight_loader=weight_loaders.CheckpointWeightLoader(\"/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/checkpoints/pi05_droid/params\"),"
+          },
+          {
+            "line": 1430,
+            "text": "        freeze_filter=pi0_config.Pi0Config("
+          },
+          {
+            "line": 1431,
+            "text": "            pi05=True,"
+          },
+          {
+            "line": 1432,
+            "text": "            action_horizon=100,"
+          },
+          {
+            "line": 1446,
+            "text": "    ),"
+          },
+          {
+            "line": 1447,
+            "text": "    TrainConfig("
+          },
+          {
+            "line": 1448,
+            "text": "        name=\"uniform\","
+          },
+          {
+            "line": 1449,
+            "text": "        model=pi0_config.Pi0Config("
+          },
+          {
+            "line": 1450,
+            "text": "            pi05=True,"
+          },
+          {
+            "line": 1451,
+            "text": "            action_horizon=100,"
+          },
+          {
+            "line": 1455,
+            "text": "            action_expert_variant=\"gemma_300m_lora\","
+          },
+          {
+            "line": 1456,
+            "text": "        ),"
+          },
+          {
+            "line": 1457,
+            "text": "        exp_name=\"uniform24_horizon100_0326\","
+          },
+          {
+            "line": 1458,
+            "text": "        data=LeRobotRobocoinDataConfig("
+          },
+          {
+            "line": 1459,
+            "text": "            repo_id=\"oy/uniform24_v21\","
+          },
+          {
+            "line": 1460,
+            "text": "            use_delta_joint_actions=False,"
+          },
+          {
+            "line": 1461,
+            "text": "            base_config=DataConfig("
+          },
+          {
+            "line": 1462,
+            "text": "                prompt_from_task=True,"
+          },
+          {
+            "line": 1464,
+            "text": "            adapt_to_pi=True,            "
+          },
+          {
+            "line": 1465,
+            "text": "            assets=AssetsConfig("
+          },
+          {
+            "line": 1466,
+            "text": "                assets_dir=\"/home/oyjt/openpi/assets/uniform\","
+          },
+          {
+            "line": 1467,
+            "text": "                asset_id=\"uniform24\","
+          },
+          {
+            "line": 1468,
+            "text": "            ),"
+          },
+          {
+            "line": 1469,
+            "text": "            default_prompt=\"fold the cloth.\","
+          },
+          {
+            "line": 1470,
+            "text": "            repack_transforms=_transforms.Group("
+          },
+          {
+            "line": 1471,
+            "text": "                inputs=["
+          },
+          {
+            "line": 1472,
+            "text": "                    _transforms.RepackTransform("
+          },
+          {
+            "line": 1485,
+            "text": "            ),"
+          },
+          {
+            "line": 1486,
+            "text": "        ),"
+          },
+          {
+            "line": 1487,
+            "text": "        weight_loader=weight_loaders.CheckpointWeightLoader(\"/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/checkpoints/pi05_base/params\"),"
+          },
+          {
+            "line": 1488,
+            "text": "        # weight_loader=weight_loaders.CheckpointWeightLoader(\"/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/checkpoints/pi05_droid/params\"),"
+          },
+          {
+            "line": 1489,
+            "text": "        freeze_filter=pi0_config.Pi0Config("
+          },
+          {
+            "line": 1490,
+            "text": "            pi05=True,"
+          },
+          {
+            "line": 1491,
+            "text": "            action_horizon=100,"
+          },
+          {
+            "line": 1524,
+            "text": "            adapt_to_pi=True,            "
+          },
+          {
+            "line": 1525,
+            "text": "            assets=AssetsConfig("
+          },
+          {
+            "line": 1526,
+            "text": "                assets_dir=\"/home/oyjt/openpi/assets/pick\","
+          },
+          {
+            "line": 1527,
+            "text": "                asset_id=\"pick\","
+          },
+          {
+            "line": 1528,
+            "text": "            ),"
+          },
+          {
+            "line": 1529,
+            "text": "            default_prompt=None,"
+          },
+          {
+            "line": 1545,
+            "text": "            ),"
+          },
+          {
+            "line": 1546,
+            "text": "        ),"
+          },
+          {
+            "line": 1547,
+            "text": "        weight_loader=weight_loaders.CheckpointWeightLoader(\"/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/checkpoints/pi05_base/params\"),"
+          },
+          {
+            "line": 1548,
+            "text": "        # weight_loader=weight_loaders.CheckpointWeightLoader(\"/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/checkpoints/pi05_droid/params\"),"
+          },
+          {
+            "line": 1549,
+            "text": "        freeze_filter=pi0_config.Pi0Config("
+          },
+          {
+            "line": 1550,
+            "text": "            pi05=True,"
+          },
+          {
+            "line": 1551,
+            "text": "            action_horizon=100,"
+          },
+          {
+            "line": 1583,
+            "text": "            adapt_to_pi=True,            "
+          },
+          {
+            "line": 1584,
+            "text": "            assets=AssetsConfig("
+          },
+          {
+            "line": 1585,
+            "text": "                assets_dir=\"/home/oyjt/openpi/assets/table\","
+          },
+          {
+            "line": 1586,
+            "text": "                asset_id=\"table\","
+          },
+          {
+            "line": 1587,
+            "text": "            ),"
+          },
+          {
+            "line": 1588,
+            "text": "            default_prompt=None,"
+          },
+          {
+            "line": 1604,
+            "text": "            ),"
+          },
+          {
+            "line": 1605,
+            "text": "        ),"
+          },
+          {
+            "line": 1606,
+            "text": "        weight_loader=weight_loaders.CheckpointWeightLoader(\"/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/checkpoints/pi05_base/params\"),"
+          },
+          {
+            "line": 1607,
+            "text": "        # weight_loader=weight_loaders.CheckpointWeightLoader(\"/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/checkpoints/pi05_droid/params\"),"
+          },
+          {
+            "line": 1608,
+            "text": "        freeze_filter=pi0_config.Pi0Config("
+          },
+          {
+            "line": 1609,
+            "text": "            pi05=True,"
+          },
+          {
+            "line": 1610,
+            "text": "            action_horizon=100,"
+          }
+        ],
+        "syntax": "PASS"
+      }
+    ]
+  }
+}

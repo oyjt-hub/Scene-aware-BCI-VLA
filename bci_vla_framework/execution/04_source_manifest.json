@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-15",
+  "plan_version": "V2",
+  "step_id": "04",
+  "purpose": "input and design version freeze, no collection data",
+  "files": [
+    {
+      "path": "D:\\Scene_Aware\\BCI_VLA通用交互框架_逐步执行手册.txt",
+      "kind": "input",
+      "sha256": "13b5813bec3a9d1bcdf44b13f46eb51d8ca57b8338a40bb90ce0c8608169b213"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\docs\\01_scope.txt",
+      "kind": "input",
+      "sha256": "6388a26587cc5d8d2bdf854a6c5bbf4f522b61b531f3928d7ddf503199f6dfa6"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\docs\\03_identifiability.txt",
+      "kind": "input",
+      "sha256": "fde854bc3d60c1a3fa26bb481d7f97e71c31559a184a1b717b7f50120551c66a"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\docs\\03_protocol_timeline.txt",
+      "kind": "input",
+      "sha256": "118bbfe2cbdad5efff66e3b97d8d8132910dabea65865943674fd1edf43cef44"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\03_acceptance.txt",
+      "kind": "input",
+      "sha256": "0d2b1974a59a956dbdc00241b8caac744cf09a0eaffd8ea5c939e9bd4b3b6b24"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\docs\\02_issues.txt",
+      "kind": "input",
+      "sha256": "80ed87178704775fa1612c87ac1738d89d09612fc7aacd576df4664f848a8cfb"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\docs\\04_benchmark_protocol.txt",
+      "kind": "design",
+      "sha256": "1148f653f07f161c7876a0ab33bdeaf36fe950bd84a5d52c4511ea256885a7e0"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\docs\\04_evaluation_fields.txt",
+      "kind": "design",
+      "sha256": "94c4f9bc2edcfaa0a5603fea132293e3c9f7c2a1683cb9014a7bf2f51a353096"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\docs\\04_change_plan_format.txt",
+      "kind": "design",
+      "sha256": "70259e49ec122bf32e5cabf849be982b051ec3ac4d1167005ec6b0cab90998ec"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\examples\\benchmark_v2\\private_change_plan.template.json",
+      "kind": "design",
+      "sha256": "f4e0851cf361fb298f11d088a942332872e3e92d50b832f151a43d6058f0a6d9"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\examples\\benchmark_v2\\public_event.template.json",
+      "kind": "design",
+      "sha256": "b49c8e2427d13f511bacb7016e8c81bfa2b0e797f1934ec405e6c1c52d0693f9"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\examples\\benchmark_v2\\outcome_record.template.json",
+      "kind": "design",
+      "sha256": "fdf0752e7c70c2cdeff937bfaed386fcfb37e8bb7412ca56331921bb4ba49cc2"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\04_acceptance.txt",
+      "kind": "design",
+      "sha256": "bad0b88ce9aab44888ea476fff9ab24d44107a3ad983cc45004c4d16d1270bc7"
+    }
+  ]
+}

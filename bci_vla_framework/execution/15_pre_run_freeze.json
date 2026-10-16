@@ -1,0 +1,132 @@
+{
+  "scope": "development_transfer_preparation_not_formal_holdout",
+  "created_on": "2026-10-16",
+  "core_changes_allowed": false,
+  "core_threshold_tuning_allowed": false,
+  "real_BCI_enabled": false,
+  "physical_robot_enabled": false,
+  "backend_A": "existing StarVLA Qwen2.5-VL-GR00T LIBERO4in1/30000",
+  "backend_B_checkpoint": "/home/oyjt/workspace/RLinf-RECAP/models/baseline_sft/RLinf-Pi05-LIBERO-SFT",
+  "backend_B_config": "pi05_libero",
+  "selection_reason": "existing local compatible simulation baseline, selected before new outcomes",
+  "common_suite": "libero_goal",
+  "task_ids": [
+    0,
+    1
+  ],
+  "seed": 7,
+  "init_state_index": 0,
+  "max_steps": 300,
+  "settling_steps": 10,
+  "replan_actions": 8,
+  "fault_schedule": {
+    "probe_before_step": 5,
+    "STOP_before_step": 12
+  },
+  "expected_episodes": 3,
+  "training_scope_equivalence_verified": false,
+  "formal_2x2_transfer_claim_allowed": false,
+  "calibration": "no real channel or consequence fitting; retain missing real calibration",
+  "source_files": [
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\contracts\\__init__.py",
+      "sha256": "1bcaa20757a45cda1e57c8f872a7c9b36719547628fa6cff265fa9700a0cdb30"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\contracts\\records.py",
+      "sha256": "34cf6ea26a4b6ec40b0f0dbc68313c4a04077620b3a6b322e627a2d146a69303"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\contracts\\replay.py",
+      "sha256": "a99388b0a72a772cee3c2583eef4d5a9299be9b9df5da8ce569e0d9f5eba66c0"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\contracts\\session.py",
+      "sha256": "7d46d82290e675e6fb7ecf580bbeaa6a0a152755b714acaff8a0b5e9607fc325"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\core\\__init__.py",
+      "sha256": "06e0da41908203f9afebc1d56f96a494c3e5f9b7d0e3dfb9155283abb2a7dbd2"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\core\\diagnostic_actions.py",
+      "sha256": "4e459bb67097572ea53cda45d21b28790dc92c1d43c6951b44c4f3daa67712f4"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\core\\diagnostic_policy.py",
+      "sha256": "5214c9b94e8eb512c32fd658cb4ac34c88fd03dd2525a6b2259d7fa385e16e83"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\core\\joint_belief.py",
+      "sha256": "54665ff8c8a4dd0e1d47efce4c2684a91ca9676d5a1ac1dc0e81724abe8896a3"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\models\\__init__.py",
+      "sha256": "c276abdfaf7c0018a0772053dc15423024cf18c7e79ca421926ddd9ea8d2d5b6"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\models\\channel.py",
+      "sha256": "ed34ef25a4c9b9faf3165ea2daf210885ebb95f239504f10d176af553fe45190"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\models\\consequence.py",
+      "sha256": "d4ff58d9c80be558fb1730fdddd20c4cbc386778b2fee2e0fb29017b2f0b9a2c"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\models\\evidence.py",
+      "sha256": "750d459095db4036ddf31a4cb00c23c4cff91d6b216301eb5ebcc97b38e6fa1c"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\models\\probe_transfer.py",
+      "sha256": "23ccded6f30914f70fa4bdedfc8d8ae7db4d71047a41a71a0e38c172a51efaeb"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\pilot\\libero_gate.py",
+      "sha256": "fdca6f8b87742c8eb724b2bfb02e706f5c5c20a71347d2a924682438c1f7278f"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\runtime_v2\\__init__.py",
+      "sha256": "1d9ad5846c425bcfd7fce06f78c031e8a4d60195225db5876286f8c28ac37c00"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\runtime_v2\\audit.py",
+      "sha256": "0d773e48b88c7a44862774836dd1dbb3bc088f9ca1ee6bbe30046b7e4676e851"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\runtime_v2\\controller.py",
+      "sha256": "af0fdc162a7f56904727926094c394163cf24015578e4f04832982b9de3a9bab"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\runtime_v2\\planning.py",
+      "sha256": "7b01a980aaacbd5034469cc673610be9d2ebb9c2209fac862710b49a2fcb51a0"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\runtime_v2\\runner.py",
+      "sha256": "326dea8c06dc226f94528f9059ce2418f6aeac45455b3f8b6f7040d896b44ff9"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\configs\\channels\\simulation_binary_v1.json",
+      "sha256": "3b567fa9cda392b0a202b0b12f8936e8adaba34fa76cd3548dbd1210eae916c4"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\configs\\comparisons\\parameters.json",
+      "sha256": "e3eeeda53b6f9e4e8d9b6309d9d2941f9dc788d7310e38f77907ccce012b75c7"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\configs\\consequences\\simulation_canonical_outcomes.json",
+      "sha256": "5d8741a056c33393df4fc50bd6bcb6ab1ee652f792017efc663d8deafda7d3ae"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\configs\\diagnosis.json",
+      "sha256": "d86eb661c99ee1621c780968c575c01692439e0b9356a2f1f0f33c6f6dc52eeb"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\configs\\execution\\session.json",
+      "sha256": "e7b78ec993ba43614c390dfffc9a33f87ad0edc489f9dc14e315cbb20636c865"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\step14_libero_worker.py",
+      "sha256": "3c61e513f4e09cf2af898f8a0bb04dc6b9a20fd2a96fcbd454bdd7026a815738"
+    }
+  ]
+}

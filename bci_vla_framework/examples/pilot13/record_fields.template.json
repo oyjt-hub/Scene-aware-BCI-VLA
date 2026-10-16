@@ -1,0 +1,21 @@
+{
+  "document_kind": "record_schema_outline_not_a_trial",
+  "record_id": null,
+  "participant_alias": null,
+  "session_group": null,
+  "recording_group": null,
+  "split": null,
+  "mode": null,
+  "source_kind": null,
+  "label_source": null,
+  "label_validity": null,
+  "intended_symbol": null,
+  "probe_prompt": null,
+  "compliance_annotation": null,
+  "response_status": null,
+  "observed_symbol": null,
+  "window": null,
+  "source_ref": null,
+  "stimulus_context": null,
+  "calibration_condition_ref": null
+}

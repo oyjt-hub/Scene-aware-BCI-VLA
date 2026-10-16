@@ -1,0 +1,3 @@
+﻿步骤14非真实分支验收：完整框架实际模型/LIBERO闭环完成。
+详见docs/14C_full_simulation_report.txt及14C_integrity_result.json。
+控制恢复通过、执行中换目标抓取失败、留出0/2成功。真实EEG/机器人未开展，G2/G3不升级。

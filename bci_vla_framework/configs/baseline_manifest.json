@@ -1,0 +1,340 @@
+{
+  "plan_version": "V2",
+  "step_id": "02",
+  "date": "2026-10-15",
+  "freeze_level": "源码/本地文件指纹/已读配置；非完整部署复现冻结",
+  "local": {
+    "git": "not_a_git_repository",
+    "inventory_evidence": "execution/02_local_inventory.json",
+    "python_executable": "C:\\Program Files\\Python313\\python.exe",
+    "packages": {
+      "torch": null,
+      "numpy": "2.2.4",
+      "paramiko": "5.0.0",
+      "requests": "2.32.3",
+      "pytest": null
+    },
+    "prototype_weights": []
+  },
+  "server": {
+    "repository": "/home/oyjt/Scene-aware-BCI-VLA",
+    "branch": "main",
+    "commit": "d2245527a767707c19d7305caacb02fa5de89dc3",
+    "git_status_before": "",
+    "git_status_after": "",
+    "source_files": [
+      {
+        "path": "README.md",
+        "sha256": "8016033cf6bcb8fa451122768564bfd78749aa55224f96759fe0e6f2827aa6e9",
+        "syntax": null
+      },
+      {
+        "path": "Scene-aware-BCI-VLA/interface.py",
+        "sha256": "74c7011c304b0b89f9a6e39801a4aeda7bceea3c30229b02b964725ce7de093a",
+        "syntax": "PASS"
+      },
+      {
+        "path": "Scene-aware-BCI-VLA/creat_raw_data.py",
+        "sha256": "ca6cb11482bf4b9c19d747e05dc610d429946452edfa749bbeb380e312a07026",
+        "syntax": "PASS"
+      },
+      {
+        "path": "Scene-aware-BCI-VLA/fbcca.py",
+        "sha256": "35eed8c502962de36ed9795f7d1a863485a40fc3c0778cb94af9c7fae55cd2d9",
+        "syntax": "PASS"
+      },
+      {
+        "path": "scripts/bci/dataServer.py",
+        "sha256": "0f1bd5d17b3188eb2709f60997d6f8b6e7d82b62605028cf06aaae1dfa863259",
+        "syntax": "PASS"
+      },
+      {
+        "path": "scripts/bci/creat_raw_data.py",
+        "sha256": "de9b3a703d2f6f20880b58d99ca0d3a34193a3ea80da92b1f8aac63a3a1ab766",
+        "syntax": "PASS"
+      },
+      {
+        "path": "scripts/inference.py",
+        "sha256": "324797b38d1a3b6fa2f5ed0528a62a0dfd7f812b1e96464f349d3c73211b0e0c",
+        "syntax": "PASS"
+      },
+      {
+        "path": "scripts/server_api.py",
+        "sha256": "9af52c0364aad6771e73184831bf46b1706b78bbe4c3136ddc9160eb281ce977",
+        "syntax": "PASS"
+      },
+      {
+        "path": "scripts/training/serve_policy.py",
+        "sha256": "eccc0448b4873fd30a1fff3355c5de7a7c227138e6db04b7dcaa5bb38a6a5809",
+        "syntax": "PASS"
+      },
+      {
+        "path": "scripts/robot/RTC_inference.py",
+        "sha256": "bb14d4b9fe152c2e8c34ebe31b81ff454f7a822122f0528619553c2d39763d0c",
+        "syntax": "PASS"
+      },
+      {
+        "path": "openpi/src/openpi/training/config.py",
+        "sha256": "58d3d091b2e8f3abd85dfbb2d7ed955f932cfebd7b0cd31355d8f547bc0b8bf6",
+        "syntax": "PASS"
+      }
+    ],
+    "openpi_environment": {
+      "executable": "/home/oyjt/openpi/.venv/bin/python",
+      "version": "3.11.14 (main, Dec  5 2025, 20:21:18) [Clang 21.1.4 ]",
+      "packages": {
+        "torch": "2.7.1",
+        "jax": "0.5.3",
+        "jaxlib": "0.5.3",
+        "flax": "0.10.2",
+        "numpy": "1.26.4",
+        "fastapi": null,
+        "openpi": "0.1.0"
+      }
+    },
+    "bci_configuration": {
+      "sample_rate_input_hz": 1000,
+      "receive_channels": 12,
+      "decoder_channels": 9,
+      "stimulus_seconds": 4,
+      "fps": 60,
+      "actual_pipeline_validated": false,
+      "issue": "I01"
+    },
+    "candidate_training_config": {
+      "name": "uniform",
+      "data_repo": "oy/uniform24_v21",
+      "pi05": true,
+      "action_horizon": 100,
+      "default_prompt": "fold the cloth."
+    },
+    "norm_stats": {
+      "path": "/home/oyjt/openpi/assets/uniform/uniform24/norm_stats.json",
+      "exists": true,
+      "sha256": "ed11952f446bb4541534197fd5999b5b1599ee7b78eeb728ed6d9c176f6bd21c",
+      "bytes": 3436
+    },
+    "candidate_checkpoints_evidence": "execution/02_remote_candidates.json",
+    "selected_paper_checkpoint": null,
+    "selected_future_baseline_checkpoint": null,
+    "actual_launch_command": null,
+    "dataset_info": {
+      "path": "/home/oyjt/.cache/huggingface/lerobot/oy/uniform24_v21/meta/info.json",
+      "exists": true,
+      "sha256": "24543e976f8f7c33a066de38e4dd1affaf6e69ca20ce29aacf5dd1327fb80868",
+      "summary": {
+        "codebase_version": "v2.1",
+        "robot_type": "bi_piper_follower",
+        "total_episodes": 24,
+        "total_frames": 38944,
+        "total_tasks": 1,
+        "fps": 30,
+        "splits": {
+          "train": "0:24"
+        }
+      },
+      "feature_keys": [
+        "action",
+        "observation.state",
+        "observation.images.front",
+        "observation.images.left",
+        "observation.images.right",
+        "timestamp",
+        "frame_index",
+        "episode_index",
+        "index",
+        "task_index"
+      ]
+    },
+    "runtime_and_hardware_verified": false
+  },
+  "baselines": [
+    {
+      "id": "legacy_server_llm",
+      "name": "原Gemini自由文本链",
+      "source": "scripts/inference.py:347-407",
+      "status": "source_frozen_not_run",
+      "unresolved": [
+        "API可用性未核；失败默认抓取仅作旧行为记录"
+      ]
+    },
+    {
+      "id": "legacy_server_llm_off",
+      "name": "USE_LLM=False名词链",
+      "source": "scripts/inference.py:353-357",
+      "status": "source_frozen_not_run",
+      "unresolved": [
+        "不是完整规则指令对照"
+      ]
+    },
+    {
+      "id": "local_rule",
+      "name": "旧本地规则候选/模板",
+      "source": "context_intent/scene_context/baselines.py",
+      "status": "source_frozen_software_checked",
+      "unresolved": [
+        "现存smoke只为合成；无V2诊断"
+      ]
+    },
+    {
+      "id": "local_structured_gemini",
+      "name": "旧本地结构化Gemini",
+      "source": "context_intent/scene_context/llm.py",
+      "status": "source_frozen_offline_tests_only",
+      "unresolved": [
+        "本轮未调用真实API"
+      ]
+    },
+    {
+      "id": "local_neural",
+      "name": "关系注意力原型",
+      "source": "context_intent/scene_context/model.py",
+      "status": "source_only_no_checkpoint",
+      "unresolved": [
+        "未训练；本地缺torch"
+      ]
+    },
+    {
+      "id": "legacy_rtc",
+      "name": "固定cloth RTC入口",
+      "source": "scripts/robot/RTC_inference.py",
+      "status": "source_frozen_not_run",
+      "unresolved": [
+        "精确checkpoint/启动命令未知；不等于多目的地能力"
+      ]
+    },
+    {
+      "id": "B1",
+      "name": "NOIR-inspired固定/预测增强",
+      "source": null,
+      "status": "planned_not_implemented",
+      "unresolved": [
+        "不能视为已有实现或已跑基线"
+      ]
+    },
+    {
+      "id": "B2",
+      "name": "固定通道目标变化",
+      "source": null,
+      "status": "planned_not_implemented",
+      "unresolved": [
+        "不能视为已有实现或已跑基线"
+      ]
+    },
+    {
+      "id": "B3",
+      "name": "目标惯性与漂移监测",
+      "source": null,
+      "status": "planned_not_implemented",
+      "unresolved": [
+        "不能视为已有实现或已跑基线"
+      ]
+    },
+    {
+      "id": "B4",
+      "name": "被动联合滤波",
+      "source": null,
+      "status": "planned_not_implemented",
+      "unresolved": [
+        "不能视为已有实现或已跑基线"
+      ]
+    },
+    {
+      "id": "B5",
+      "name": "定期probe",
+      "source": null,
+      "status": "planned_not_implemented",
+      "unresolved": [
+        "不能视为已有实现或已跑基线"
+      ]
+    },
+    {
+      "id": "B6",
+      "name": "重复或延长",
+      "source": null,
+      "status": "planned_not_implemented",
+      "unresolved": [
+        "不能视为已有实现或已跑基线"
+      ]
+    },
+    {
+      "id": "B7",
+      "name": "阈值probe",
+      "source": null,
+      "status": "planned_not_implemented",
+      "unresolved": [
+        "不能视为已有实现或已跑基线"
+      ]
+    },
+    {
+      "id": "B8",
+      "name": "参数信息增益主动校准",
+      "source": null,
+      "status": "planned_not_implemented",
+      "unresolved": [
+        "不能视为已有实现或已跑基线"
+      ]
+    },
+    {
+      "id": "B9",
+      "name": "一步任务VoI",
+      "source": null,
+      "status": "planned_not_implemented",
+      "unresolved": [
+        "不能视为已有实现或已跑基线"
+      ]
+    },
+    {
+      "id": "B10",
+      "name": "RBC/动态停时/VoI组合",
+      "source": null,
+      "status": "planned_not_implemented",
+      "unresolved": [
+        "不能视为已有实现或已跑基线"
+      ]
+    },
+    {
+      "id": "M",
+      "name": "V2候选方法",
+      "source": null,
+      "status": "planned_not_implemented",
+      "unresolved": [
+        "不能视为已有实现或已跑基线"
+      ]
+    },
+    {
+      "id": "O1",
+      "name": "同信息精确Bayes oracle",
+      "source": null,
+      "status": "planned_not_implemented",
+      "unresolved": [
+        "不能视为已有实现或已跑基线"
+      ]
+    },
+    {
+      "id": "O2",
+      "name": "全真值理想上界",
+      "source": null,
+      "status": "planned_not_implemented",
+      "unresolved": [
+        "不能视为已有实现或已跑基线"
+      ]
+    }
+  ],
+  "issue_register": "docs/02_issues.txt",
+  "source_evidence": [
+    "execution/02_remote_inspection.json",
+    "execution/02_remote_assets.json",
+    "execution/02_remote_environment.json",
+    "execution/02_remote_candidates.json"
+  ],
+  "not_performed": [
+    "training",
+    "cloud API call",
+    "EEG acquisition",
+    "robot operation",
+    "policy load",
+    "deployment",
+    "V2 experiments"
+  ]
+}

@@ -1,0 +1,317 @@
+{
+  "scope": "two_synthetic_encodings_by_two_actual_VLA_full_LIBERO_sessions",
+  "nonreal_migration_completed": true,
+  "successful_jobs": {
+    "pi05": "runs/transfer_step15C_full/step15C_full_20261016_v1",
+    "star": "runs/transfer_step15C_full/step15C_star_20261016_v1"
+  },
+  "matrix": [
+    {
+      "model": "StarVLA-14C",
+      "transport": "direct",
+      "episodes": 10,
+      "engineering_checks_passed": true,
+      "task_successes": 5,
+      "actual_sim_steps": 549,
+      "heldout_successes": 0,
+      "heldout_count": 2,
+      "scenarios": [
+        {
+          "id": "nominal_cream",
+          "state": "SUCCEEDED",
+          "steps": 51,
+          "success": true
+        },
+        {
+          "id": "nominal_wine",
+          "state": "SUCCEEDED",
+          "steps": 86,
+          "success": true
+        },
+        {
+          "id": "changed_goal",
+          "state": "SUCCEEDED",
+          "steps": 90,
+          "success": true
+        },
+        {
+          "id": "changed_channel",
+          "state": "SUCCEEDED",
+          "steps": 54,
+          "success": true
+        },
+        {
+          "id": "joint_alias_conflict",
+          "state": "SUCCEEDED",
+          "steps": 91,
+          "success": true
+        },
+        {
+          "id": "late_confirmation",
+          "state": "AWAITING_AUTHORIZATION",
+          "steps": 0,
+          "success": false
+        },
+        {
+          "id": "STOP_during_execution",
+          "state": "CANCELLED",
+          "steps": 8,
+          "success": false
+        },
+        {
+          "id": "goal_change_recovery",
+          "state": "FAILED",
+          "steps": 168,
+          "success": false
+        },
+        {
+          "id": "execution_failure_not_channel",
+          "state": "FAILED",
+          "steps": 1,
+          "success": false
+        },
+        {
+          "id": "inference_failure_not_channel",
+          "state": "CANCELLED",
+          "steps": 0,
+          "success": false
+        }
+      ]
+    },
+    {
+      "model": "pi05",
+      "transport": "direct",
+      "episodes": 10,
+      "engineering_checks_passed": true,
+      "task_successes": 2,
+      "actual_sim_steps": 777,
+      "heldout_successes": 2,
+      "heldout_count": 2,
+      "scenarios": [
+        {
+          "id": "direct-nominal_cream",
+          "state": "SUCCEEDED",
+          "steps": 60,
+          "success": true
+        },
+        {
+          "id": "direct-nominal_wine",
+          "state": "FAILED",
+          "steps": 160,
+          "success": false
+        },
+        {
+          "id": "direct-changed_goal",
+          "state": "FAILED",
+          "steps": 160,
+          "success": false
+        },
+        {
+          "id": "direct-changed_channel",
+          "state": "SUCCEEDED",
+          "steps": 60,
+          "success": true
+        },
+        {
+          "id": "direct-joint_alias_conflict",
+          "state": "FAILED",
+          "steps": 160,
+          "success": false
+        },
+        {
+          "id": "direct-late_confirmation",
+          "state": "AWAITING_AUTHORIZATION",
+          "steps": 0,
+          "success": false
+        },
+        {
+          "id": "direct-STOP_during_execution",
+          "state": "CANCELLED",
+          "steps": 8,
+          "success": false
+        },
+        {
+          "id": "direct-goal_change_recovery",
+          "state": "FAILED",
+          "steps": 168,
+          "success": false
+        },
+        {
+          "id": "direct-execution_failure_not_channel",
+          "state": "FAILED",
+          "steps": 1,
+          "success": false
+        },
+        {
+          "id": "direct-inference_failure_not_channel",
+          "state": "CANCELLED",
+          "steps": 0,
+          "success": false
+        }
+      ]
+    },
+    {
+      "model": "pi05",
+      "transport": "packet",
+      "episodes": 10,
+      "engineering_checks_passed": true,
+      "task_successes": 3,
+      "actual_sim_steps": 698,
+      "heldout_successes": 2,
+      "heldout_count": 2,
+      "scenarios": [
+        {
+          "id": "packet-nominal_cream",
+          "state": "SUCCEEDED",
+          "steps": 62,
+          "success": true
+        },
+        {
+          "id": "packet-nominal_wine",
+          "state": "FAILED",
+          "steps": 160,
+          "success": false
+        },
+        {
+          "id": "packet-changed_goal",
+          "state": "FAILED",
+          "steps": 160,
+          "success": false
+        },
+        {
+          "id": "packet-changed_channel",
+          "state": "SUCCEEDED",
+          "steps": 60,
+          "success": true
+        },
+        {
+          "id": "packet-joint_alias_conflict",
+          "state": "SUCCEEDED",
+          "steps": 79,
+          "success": true
+        },
+        {
+          "id": "packet-late_confirmation",
+          "state": "AWAITING_AUTHORIZATION",
+          "steps": 0,
+          "success": false
+        },
+        {
+          "id": "packet-STOP_during_execution",
+          "state": "CANCELLED",
+          "steps": 8,
+          "success": false
+        },
+        {
+          "id": "packet-goal_change_recovery",
+          "state": "FAILED",
+          "steps": 168,
+          "success": false
+        },
+        {
+          "id": "packet-execution_failure_not_channel",
+          "state": "FAILED",
+          "steps": 1,
+          "success": false
+        },
+        {
+          "id": "packet-inference_failure_not_channel",
+          "state": "CANCELLED",
+          "steps": 0,
+          "success": false
+        }
+      ]
+    },
+    {
+      "model": "star",
+      "transport": "packet",
+      "episodes": 10,
+      "engineering_checks_passed": true,
+      "task_successes": 4,
+      "actual_sim_steps": 659,
+      "heldout_successes": 0,
+      "heldout_count": 2,
+      "scenarios": [
+        {
+          "id": "packet-nominal_cream",
+          "state": "FAILED",
+          "steps": 160,
+          "success": false
+        },
+        {
+          "id": "packet-nominal_wine",
+          "state": "SUCCEEDED",
+          "steps": 86,
+          "success": true
+        },
+        {
+          "id": "packet-changed_goal",
+          "state": "SUCCEEDED",
+          "steps": 90,
+          "success": true
+        },
+        {
+          "id": "packet-changed_channel",
+          "state": "SUCCEEDED",
+          "steps": 54,
+          "success": true
+        },
+        {
+          "id": "packet-joint_alias_conflict",
+          "state": "SUCCEEDED",
+          "steps": 92,
+          "success": true
+        },
+        {
+          "id": "packet-late_confirmation",
+          "state": "AWAITING_AUTHORIZATION",
+          "steps": 0,
+          "success": false
+        },
+        {
+          "id": "packet-STOP_during_execution",
+          "state": "CANCELLED",
+          "steps": 8,
+          "success": false
+        },
+        {
+          "id": "packet-goal_change_recovery",
+          "state": "FAILED",
+          "steps": 168,
+          "success": false
+        },
+        {
+          "id": "packet-execution_failure_not_channel",
+          "state": "FAILED",
+          "steps": 1,
+          "success": false
+        },
+        {
+          "id": "packet-inference_failure_not_channel",
+          "state": "CANCELLED",
+          "steps": 0,
+          "success": false
+        }
+      ]
+    }
+  ],
+  "new_functional_episodes": 30,
+  "new_independent_pi05_calibration_records": 4,
+  "new_independent_pi05_holdout_records": 2,
+  "star_calibration_reused_from14C": true,
+  "real_2x2_completed": false,
+  "second_real_BCI_tested": false,
+  "formal_heldout_transfer_claim": false,
+  "formal_strategy_superiority_claim": false,
+  "real_BCI_trials": 0,
+  "physical_robot_commands": 0,
+  "software_tests": 401,
+  "known_target_probe_capability": "explicit software codec support; not physiological evidence",
+  "remaining_limitations": [
+    "same two pick intents and privileged simulator grounding",
+    "fixed four-probe repair outside planner",
+    "tiny calibration and heldout sample",
+    "training exposure equivalence unknown",
+    "logical clock, no human cost measurements"
+  ]
+}

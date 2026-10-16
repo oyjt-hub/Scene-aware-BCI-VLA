@@ -1,0 +1,1194 @@
+{
+  "plan_version": "V2",
+  "updated_at": "2026-10-16",
+  "authorization": "做步骤15；沿用无真实BCI、LIBERO仿真范围",
+  "current_step": "15",
+  "current_step_status": "步骤15非真实完整框架迁移工程验收完成；真实迁移未开展",
+  "last_completed_step": "12",
+  "research_gates": {
+    "G1": {
+      "status": "已完成",
+      "verdict": "条件性通过",
+      "scope": "conditional_theory_and_protocol_design",
+      "evidence_paths": [
+        "docs/03_identifiability.txt",
+        "docs/03_protocol_timeline.txt",
+        "examples/alias_cases.json",
+        "execution/03_review.txt",
+        "execution/03_acceptance.txt",
+        "execution/03_math_result.json"
+      ],
+      "limitations": [
+        "真实probe理解/遵从与区分度待校准",
+        "task/probe迁移和时变假设未实证",
+        "不代表创新充分或策略优越",
+        "G2研究门槛未通过；G3—G4未开始"
+      ]
+    },
+    "G2": {
+      "status": "未通过",
+      "evidence_paths": [
+        "docs/12_G2_report.txt",
+        "docs/12_repair_plan.txt",
+        "execution/12_coverage.json",
+        "execution/12_runtime_alignment.json",
+        "execution/12_test_result.json",
+        "execution/12_source_manifest.json",
+        "execution/12_integrity_result.json",
+        "execution/11_integrity_recheck_after_step12.json",
+        "runs/offline_step12_acceptance/summary.json",
+        "runs/offline_step12_acceptance/artifacts_manifest.json",
+        "docs/12R_revalidation_report.txt",
+        "docs/12R_claim_scope.txt",
+        "execution/12R_before_after.json",
+        "execution/12R_test_result.json",
+        "execution/12R_source_manifest.json",
+        "execution/12R_integrity_result.json",
+        "runs/offline_step12_repair_v2/summary.json",
+        "runs/offline_step12_repair_v2/oracle_audit.json"
+      ],
+      "verdict": "授权一致性复验通过；额外协议/策略效用未证明",
+      "scope": "L1_synthetic_development_only",
+      "software_checks_passed": true,
+      "research_acceptance_passed": false,
+      "blockers": [
+        "M与B9等效，M2无不增加错误启动的额外效用；研究贡献仍需证据",
+        "无冲突C11别名可导致错误启动，未来额外证据/探测时机须公平验证"
+      ],
+      "engineering_revalidation": "PASS",
+      "authorization_alignment": "resolved_in_external_proposer_v2",
+      "resolved_blockers": [
+        "原09/10接受分支与11授权门槛不一致：新版本已修复，原冻结版本保留作负回归"
+      ],
+      "latest_revalidation": {
+        "planner_version": "authorization-aware-finite/2.0",
+        "engineering_result": "PASS",
+        "software_tests": 330,
+        "synthetic_episodes": 1440,
+        "journal_records": 13394,
+        "research_gate_passed": false,
+        "report": "docs/12R_revalidation_report.txt"
+      }
+    },
+    "G3": {
+      "status": "未验证",
+      "evidence_paths": [
+        "docs/13_G3_report.txt",
+        "execution/13_coverage.json"
+      ],
+      "nonreal_software_checks": "PASS",
+      "real_pilot_trials": 0,
+      "verdict": "非真实软件分支完成，真实G3未验证"
+    },
+    "G4": {
+      "status": "未开始",
+      "evidence_paths": []
+    }
+  },
+  "steps": [
+    {
+      "step_id": "01",
+      "title": "贡献与最近邻差异冻结",
+      "plan_version": "V2",
+      "status": "已完成",
+      "depends_on": [],
+      "changed_files": [
+        "README.txt",
+        "docs/01_claim_map.txt",
+        "docs/01_scope.txt",
+        "execution/progress.json",
+        "execution/source_manifest.json",
+        "execution/worklog.txt",
+        "execution/handoff.txt",
+        "execution/01_acceptance.txt",
+        "execution/verify_step01.py",
+        "execution/01_integrity_result.json"
+      ],
+      "checks": [
+        {
+          "operation": "python D:\\Scene_Aware\\bci_vla_framework\\execution\\verify_step01.py",
+          "result": "PASS（以01_integrity_result.json实际输出为准）",
+          "scope": "documentation",
+          "evidence_path": "execution/01_integrity_result.json"
+        },
+        {
+          "operation": "按01.1—01.7逐项对照文档内容",
+          "result": "完成，见验收映射",
+          "scope": "documentation",
+          "evidence_path": "execution/01_acceptance.txt"
+        }
+      ],
+      "evidence_paths": [
+        "execution/01_acceptance.txt",
+        "execution/01_integrity_result.json"
+      ],
+      "unresolved": [
+        "研究假说未验证，G1—G4未开始；实际资产待步骤02核实"
+      ],
+      "next_action": "用户要求继续时执行步骤02；当前停止于步骤01"
+    },
+    {
+      "step_id": "02",
+      "title": "基线与实际资产盘点",
+      "plan_version": "V2",
+      "status": "已完成",
+      "depends_on": [
+        "01"
+      ],
+      "changed_files": [
+        "docs/02_inventory.txt",
+        "docs/02_issues.txt",
+        "configs/baseline_manifest.json",
+        "configs/02_original_server_intent_excerpt.txt",
+        "configs/02_local_structured_prompt.txt",
+        "execution/02_local_inventory.json",
+        "execution/02_remote_inspection.json",
+        "execution/02_remote_assets.json",
+        "execution/02_remote_environment.json",
+        "execution/02_remote_candidates.json",
+        "execution/02_software_check.json",
+        "execution/02_acceptance.txt",
+        "execution/collect_step02_local.py",
+        "execution/verify_step01.py",
+        "execution/progress.json",
+        "execution/worklog.txt",
+        "execution/handoff.txt",
+        "README.txt",
+        "execution/verify_step02.py",
+        "execution/02_integrity_result.json"
+      ],
+      "checks": [
+        {
+          "operation": "只读SSH：git branch/rev-parse/status/ls-files、关键源文件摘录/哈希、包元信息及指定资产路径",
+          "result": "成功；main d2245527a767707c19d7305caacb02fa5de89dc3，前后工作区无修改",
+          "scope": "inventory_remote_readonly",
+          "evidence_path": "execution/02_remote_inspection.json"
+        },
+        {
+          "operation": "python -B execution/collect_step02_local.py",
+          "result": "39份文件冻结，18个Python文件AST通过；无原型权重",
+          "scope": "inventory_local",
+          "evidence_path": "execution/02_local_inventory.json"
+        },
+        {
+          "operation": "python -B -m unittest discover -v (cwd=context_intent)",
+          "result": "53项，44通过、9跳过",
+          "scope": "software",
+          "evidence_path": "execution/02_software_check.json"
+        },
+        {
+          "operation": "逐项核对02.1—02.8",
+          "result": "盘点完成；部署与研究缺项保留",
+          "scope": "documentation",
+          "evidence_path": "execution/02_acceptance.txt"
+        },
+        {
+          "operation": "python -B execution/verify_step02.py; python -B execution/verify_step01.py（两次独立运行）",
+          "result": "步骤02的14项完整性检查通过，步骤01的13项回归检查通过",
+          "scope": "documentation",
+          "evidence_path": "execution/02_integrity_result.json"
+        }
+      ],
+      "evidence_paths": [
+        "execution/02_acceptance.txt",
+        "configs/baseline_manifest.json",
+        "execution/02_software_check.json",
+        "execution/02_integrity_result.json"
+      ],
+      "unresolved": [
+        "I01—I14见docs/02_issues.txt；尤其原始EEG回放、实际checkpoint/启动参数及任务能力尚待核实"
+      ],
+      "next_action": "收到后续执行要求时进入步骤03；先明确观测混淆、probe假设和失败反例，不进行真实实验"
+    },
+    {
+      "step_id": "03",
+      "title": "可辨识性与诊断协议，G1",
+      "plan_version": "V2",
+      "status": "已完成",
+      "depends_on": [
+        "01",
+        "02"
+      ],
+      "changed_files": [
+        "docs/03_identifiability.txt",
+        "docs/03_protocol_timeline.txt",
+        "examples/alias_cases.json",
+        "execution/verify_step03_math.py",
+        "execution/verify_step03_docs.py",
+        "execution/03_math_result.json",
+        "execution/03_integrity_result.json",
+        "execution/03_review.txt",
+        "execution/03_acceptance.txt",
+        "execution/03_source_manifest.json",
+        "execution/verify_step02.py",
+        "execution/02_integrity_recheck_after_step03.json",
+        "execution/progress.json",
+        "execution/handoff.txt",
+        "execution/worklog.txt",
+        "README.txt"
+      ],
+      "checks": [
+        {
+          "operation": "人工条件性证明与证据来源协议设计，映射03.1—03.8",
+          "result": "完成；限定查询族、噪声、遵从、迁移及时变条件",
+          "scope": "conditional_theory_and_protocol_design",
+          "evidence_path": "docs/03_identifiability.txt"
+        },
+        {
+          "operation": "python -B execution/verify_step03_math.py",
+          "result": "21项精确算术与有限枚举检查PASS；不替代一般证明或EEG实验",
+          "scope": "analytic_identity_check",
+          "evidence_path": "execution/03_math_result.json"
+        },
+        {
+          "operation": "另一执行者/root/step03_independent_review只读审查（03.9）",
+          "result": "无阻断问题，G1条件性通过；两项非阻断建议已补入",
+          "scope": "independent_design_review",
+          "evidence_path": "execution/03_review.txt"
+        },
+        {
+          "operation": "python -B execution/verify_step03_docs.py",
+          "result": "13项文档/记录一致性检查PASS",
+          "scope": "documentation",
+          "evidence_path": "execution/03_integrity_result.json"
+        },
+        {
+          "operation": "python -B execution/verify_step02.py",
+          "result": "14项原资产与文档回归检查PASS；未重新连接服务器",
+          "scope": "documentation_and_inventory_regression",
+          "evidence_path": "execution/02_integrity_recheck_after_step03.json"
+        }
+      ],
+      "evidence_paths": [
+        "docs/03_identifiability.txt",
+        "docs/03_protocol_timeline.txt",
+        "examples/alias_cases.json",
+        "execution/03_review.txt",
+        "execution/03_acceptance.txt",
+        "execution/03_math_result.json",
+        "execution/03_integrity_result.json"
+      ],
+      "unresolved": [
+        "G1仅条件性理论/协议通过；现实假设、参数校准与I01—I14仍待后续证据；没有完成新颖性穷尽检索"
+      ],
+      "next_action": "用户继续时执行步骤04：独立真值、2×2因子任务及评价规范；只设计协议，不自动采数据"
+    },
+    {
+      "step_id": "04",
+      "title": "独立真值、因子任务与评价规范",
+      "plan_version": "V2",
+      "status": "已完成",
+      "depends_on": [
+        "03"
+      ],
+      "changed_files": [
+        "docs/04_benchmark_protocol.txt",
+        "docs/04_evaluation_fields.txt",
+        "docs/04_change_plan_format.txt",
+        "examples/benchmark_v2/private_change_plan.template.json",
+        "examples/benchmark_v2/public_event.template.json",
+        "examples/benchmark_v2/outcome_record.template.json",
+        "execution/verify_step04_docs.py",
+        "execution/04_integrity_result.json",
+        "execution/04_acceptance.txt",
+        "execution/04_source_manifest.json",
+        "execution/verify_step03_docs.py",
+        "execution/03_integrity_recheck_after_step04.json",
+        "execution/progress.json",
+        "execution/worklog.txt",
+        "execution/handoff.txt",
+        "README.txt"
+      ],
+      "checks": [
+        {
+          "operation": "逐项编制并对照04.1—04.9",
+          "result": "完成：独立真值/2×2/时间与未知/分组/指标/私有格式",
+          "scope": "protocol_design",
+          "evidence_path": "execution/04_acceptance.txt"
+        },
+        {
+          "operation": "python -B execution/verify_step04_docs.py",
+          "result": "16项协议/模板设计一致性检查PASS，不代表运行时无泄漏证明",
+          "scope": "protocol_design_lint",
+          "evidence_path": "execution/04_integrity_result.json"
+        },
+        {
+          "operation": "python -B execution/verify_step03_docs.py",
+          "result": "13项步骤03文档回归检查PASS；前置理论及审查文件指纹未变",
+          "scope": "documentation_regression",
+          "evidence_path": "execution/03_integrity_recheck_after_step04.json"
+        }
+      ],
+      "evidence_paths": [
+        "docs/04_benchmark_protocol.txt",
+        "docs/04_evaluation_fields.txt",
+        "docs/04_change_plan_format.txt",
+        "execution/04_acceptance.txt",
+        "execution/04_integrity_result.json"
+      ],
+      "unresolved": [
+        "模板不可执行，人数/时长/预算/划分/效应界及样本量待pilot和正式锁定",
+        "真实独立真值可得性、probe校准、运行时无泄漏、采样链/精确权重等条件尚未验证",
+        "G2—G4未开始"
+      ],
+      "next_action": "用户继续时执行步骤05的正式消息schema及TASK/PROBE适配器；不自动采集数据"
+    },
+    {
+      "step_id": "05",
+      "title": "统一协议及双模式接口",
+      "plan_version": "V2",
+      "status": "已完成",
+      "depends_on": [
+        "02",
+        "03"
+      ],
+      "changed_files": [
+        "bci_vla/protocols.py",
+        "bci_vla/__init__.py",
+        "bci_vla/__main__.py",
+        "bci_vla/adapters/__init__.py",
+        "bci_vla/adapters/bci/replay.py",
+        "bci_vla/adapters/bci/ssvep.py",
+        "bci_vla/adapters/bci/__init__.py",
+        "tests/test_protocols.py",
+        "tests/__init__.py",
+        "examples/protocols/cancel.json",
+        "examples/protocols/channel_probe_request.json",
+        "examples/protocols/channel_probe_response.json",
+        "examples/protocols/confirm_request.json",
+        "examples/protocols/confirm_response.json",
+        "examples/protocols/execution_event.json",
+        "examples/protocols/invalid_cases.json",
+        "examples/protocols/public_records.json",
+        "examples/protocols/README.txt",
+        "examples/protocols/stop.json",
+        "examples/protocols/task_query_request.json",
+        "examples/protocols/task_query_response.json",
+        "pyproject.toml",
+        "docs/05_protocols.txt",
+        "execution/05_acceptance.txt",
+        "execution/05_source_manifest.json",
+        "execution/run_step05_tests.py",
+        "execution/05_test_output.txt",
+        "execution/05_test_result.json",
+        "execution/verify_step05_delivery.py",
+        "execution/05_integrity_result.json",
+        "execution/verify_step04_docs.py",
+        "execution/04_integrity_recheck_after_step05.json",
+        "execution/progress.json",
+        "execution/handoff.txt",
+        "execution/worklog.txt",
+        "README.txt"
+      ],
+      "checks": [
+        {
+          "operation": "python -B execution/run_step05_tests.py",
+          "result": "28项软件检查通过，0失败/错误/跳过；完整输出已保存",
+          "scope": "software_protocol_replay",
+          "evidence_path": "execution/05_test_output.txt"
+        },
+        {
+          "operation": "python -B -m bci_vla --help；python -B -m bci_vla examples/protocols/channel_probe_request.json（分别运行）",
+          "result": "help正常；示例返回VALID REQUEST CHANNEL_PROBE；均无设备调用",
+          "scope": "software_cli",
+          "evidence_path": "execution/05_acceptance.txt"
+        },
+        {
+          "operation": "python -B execution/verify_step05_delivery.py",
+          "result": "9项交付一致性检查PASS，最终Event对象及dict/JSON入口均有测试覆盖",
+          "scope": "software_delivery_integrity",
+          "evidence_path": "execution/05_integrity_result.json"
+        },
+        {
+          "operation": "python -B execution/verify_step04_docs.py",
+          "result": "16项步骤04协议回归检查PASS，前置文档和私有草案未变",
+          "scope": "documentation_regression",
+          "evidence_path": "execution/04_integrity_recheck_after_step05.json"
+        }
+      ],
+      "evidence_paths": [
+        "docs/05_protocols.txt",
+        "execution/05_acceptance.txt",
+        "execution/05_test_result.json",
+        "execution/05_test_output.txt",
+        "execution/05_integrity_result.json"
+      ],
+      "unresolved": [
+        "适配器为离线壳，无现场采集/认证/急停/跨进程状态恢复",
+        "标定引用的真实适用性、probe/task迁移、时钟估计与旧采样率错配待后续验证",
+        "仅disjoint-only证据；条件前缀/通道模型归06，联合滤波归08",
+        "G2—G4未开始，无新增实验效果"
+      ],
+      "next_action": "用户要求时执行06：通道、探测遵从和采样证据模型；无真实校准数据时标simulation_only，不伪造现实参数"
+    },
+    {
+      "step_id": "06",
+      "title": "通道、探测及采样证据模型",
+      "plan_version": "V2",
+      "status": "已完成",
+      "depends_on": [
+        "04",
+        "05"
+      ],
+      "changed_files": [
+        "bci_vla/models/channel.py",
+        "bci_vla/models/evidence.py",
+        "bci_vla/models/probe_transfer.py",
+        "bci_vla/models/__init__.py",
+        "configs/channels/real_ssvep_uncalibrated.template.json",
+        "configs/channels/simulation_binary_v1.json",
+        "configs/channels/simulation_transition_v1.json",
+        "tests/test_channel_models.py",
+        "docs/06_calibration.txt",
+        "execution/06_asset_audit.json",
+        "execution/06_acceptance.txt",
+        "execution/06_source_manifest.json",
+        "execution/run_step06_tests.py",
+        "execution/06_test_result.json",
+        "execution/06_test_output.txt",
+        "execution/verify_step06_delivery.py",
+        "execution/06_integrity_result.json",
+        "execution/verify_step05_delivery.py",
+        "execution/05_integrity_recheck_after_step06.json",
+        "execution/progress.json",
+        "execution/handoff.txt",
+        "execution/worklog.txt",
+        "README.txt"
+      ],
+      "checks": [
+        {
+          "operation": "本地校准资产审计，沿用02冻结清单；未连接服务器",
+          "result": "无独立EEG响应/遵从/迁移校准，真实验收待外部条件",
+          "scope": "asset_audit",
+          "evidence_path": "execution/06_asset_audit.json"
+        },
+        {
+          "operation": "python -B execution/run_step06_tests.py",
+          "result": "47项软件检查PASS，0跳过；含旧28项协议回归",
+          "scope": "software_model_and_protocol_checks",
+          "evidence_path": "execution/06_test_output.txt"
+        },
+        {
+          "operation": "python -B execution/verify_step06_delivery.py",
+          "result": "12项离线交付一致性检查PASS；真实校准仍待外部条件",
+          "scope": "offline_model_delivery_integrity",
+          "evidence_path": "execution/06_integrity_result.json"
+        },
+        {
+          "operation": "python -B execution/verify_step05_delivery.py",
+          "result": "9项步骤05源码/fixture历史冻结回归检查PASS，原协议资产未改",
+          "scope": "software_snapshot_regression",
+          "evidence_path": "execution/05_integrity_recheck_after_step06.json"
+        }
+      ],
+      "evidence_paths": [
+        "docs/06_calibration.txt",
+        "execution/06_acceptance.txt",
+        "execution/06_test_result.json",
+        "execution/06_test_output.txt",
+        "execution/06_integrity_result.json"
+      ],
+      "unresolved": [
+        "真实通道模式/响应矩阵/理解遵从/迁移误差/用户时间/变化率均未校准",
+        "I01采样处理尚未用原始EEG回放验证",
+        "只支持离线、窗口内固定状态和最终一次前缀；不支持score密度或窗内变点事件核",
+        "G2—G4未开始，模拟值不用于现场"
+      ],
+      "next_action": "用户继续时执行07场景/语义候选与后果模型；真实校准缺项继续显式挂起，不冒充已解决",
+      "execution_scope": "offline_simulation_branch",
+      "real_calibration": {
+        "status": "待外部条件",
+        "reason": "缺独立SSVEP任务/探测/遵从/迁移数据，原始采样链未回放验证",
+        "evidence_paths": [
+          "execution/06_asset_audit.json",
+          "configs/channels/real_ssvep_uncalibrated.template.json",
+          "docs/06_calibration.txt"
+        ]
+      }
+    },
+    {
+      "step_id": "07",
+      "title": "场景、候选任务及执行后果模型",
+      "plan_version": "V2",
+      "status": "已完成",
+      "depends_on": [
+        "02",
+        "04",
+        "05"
+      ],
+      "changed_files": [
+        "bci_vla/scene/state.py",
+        "bci_vla/scene/tasks.py",
+        "bci_vla/scene/__init__.py",
+        "bci_vla/scene/_legacy/planning.py",
+        "bci_vla/scene/_legacy/rendering.py",
+        "bci_vla/scene/_legacy/schema.py",
+        "bci_vla/scene/_legacy/__init__.py",
+        "configs/consequences/real_backend_unverified.json",
+        "configs/consequences/real_outcome_uncalibrated.template.json",
+        "configs/consequences/simulation_backend.json",
+        "configs/consequences/simulation_outcome_table.json",
+        "configs/consequences/simulation_weight_sets.json",
+        "examples/scene_outcomes/goal_hypotheses.json",
+        "examples/scene_outcomes/README.txt",
+        "examples/scene_outcomes/scene.json",
+        "examples/scene_outcomes/trajectory.json",
+        "bci_vla/models/consequence.py",
+        "tests/test_scene_outcomes.py",
+        "docs/07_outcome_model.txt",
+        "docs/07_outcome_calibration_checklist.txt",
+        "execution/07_reuse_manifest.json",
+        "execution/07_asset_audit.json",
+        "execution/07_acceptance.txt",
+        "execution/07_source_manifest.json",
+        "execution/run_step07_tests.py",
+        "execution/07_test_result.json",
+        "execution/07_test_output.txt",
+        "execution/verify_step07_delivery.py",
+        "execution/07_integrity_result.json",
+        "execution/verify_step06_delivery.py",
+        "execution/06_integrity_recheck_after_step07.json",
+        "execution/progress.json",
+        "execution/handoff.txt",
+        "execution/worklog.txt",
+        "README.txt"
+      ],
+      "checks": [
+        {
+          "operation": "快照复用3个旧语法文件并核源/副本SHA256",
+          "result": "原文件不改；候选/槽位/有限模板复用且历史约束不沿用",
+          "scope": "source_reuse",
+          "evidence_path": "execution/07_reuse_manifest.json"
+        },
+        {
+          "operation": "python -B execution/run_step07_tests.py",
+          "result": "66项软件测试PASS，0跳过，含47项既有回归",
+          "scope": "software_scene_outcome_and_protocol_regression",
+          "evidence_path": "execution/07_test_output.txt"
+        },
+        {
+          "operation": "python -B execution/verify_step07_delivery.py",
+          "result": "12项步骤07交付一致性检查PASS；真实后果校准仍待外部条件",
+          "scope": "offline_scene_and_outcome_delivery",
+          "evidence_path": "execution/07_integrity_result.json"
+        },
+        {
+          "operation": "python -B execution/verify_step06_delivery.py",
+          "result": "12项步骤06历史冻结资产/配置回归检查PASS；旧来源与输出未改",
+          "scope": "prior_software_snapshot_regression",
+          "evidence_path": "execution/06_integrity_recheck_after_step07.json"
+        }
+      ],
+      "evidence_paths": [
+        "docs/07_outcome_model.txt",
+        "docs/07_outcome_calibration_checklist.txt",
+        "execution/07_acceptance.txt",
+        "execution/07_test_result.json",
+        "execution/07_test_output.txt",
+        "execution/07_integrity_result.json"
+      ],
+      "unresolved": [
+        "真实稳定跟踪、后端精确checkpoint与任务能力未验证",
+        "真实独立终态、目标相关恢复、时间/权重和不确定性未校准；安排14正式比较前独立子任务",
+        "TaskHistory只保存外部确认，不实现授权/执行状态机；不运行机器人",
+        "08需对齐候选hash IDs/演示old-new别名/06二元词表，不能静默混用；unknown/none策略待明确",
+        "G2—G4未开始"
+      ],
+      "next_action": "用户要求时执行08：对齐有限目标/通道词表并实现保持相关性的联合信念，保留未知/无控制和模拟适用边界",
+      "execution_scope": "offline_software_and_simulation_branch",
+      "real_calibration": {
+        "status": "待外部条件",
+        "reason": "未识别精确checkpoint关联的独立终态/恢复/时间标注；真实后端能力未核验",
+        "evidence_paths": [
+          "execution/07_asset_audit.json",
+          "configs/consequences/real_backend_unverified.json",
+          "configs/consequences/real_outcome_uncalibrated.template.json",
+          "docs/07_outcome_calibration_checklist.txt"
+        ]
+      }
+    },
+    {
+      "step_id": "08",
+      "title": "保留相关性的目标—通道联合信念",
+      "plan_version": "V2",
+      "status": "已完成",
+      "depends_on": [
+        "03",
+        "05",
+        "06"
+      ],
+      "changed_files": [
+        "bci_vla/core/joint_belief.py",
+        "bci_vla/core/__init__.py",
+        "configs/belief/simulation_binary_filter.json",
+        "configs/belief/simulation_canonical_transition.json",
+        "examples/joint_belief/alias_events.json",
+        "examples/joint_belief/alias_expectations.json",
+        "examples/joint_belief/fixed_state_transition.json",
+        "examples/joint_belief/README.txt",
+        "tests/test_joint_belief.py",
+        "docs/08_update_rules.txt",
+        "execution/08_acceptance.txt",
+        "execution/08_source_manifest.json",
+        "execution/run_step08_tests.py",
+        "execution/08_test_result.json",
+        "execution/08_test_output.txt",
+        "execution/replay_step08_alias.py",
+        "execution/08_alias_trace.json",
+        "execution/verify_step08_delivery.py",
+        "execution/08_integrity_result.json",
+        "execution/verify_step07_delivery.py",
+        "execution/07_integrity_recheck_after_step08.json",
+        "execution/progress.json",
+        "execution/handoff.txt",
+        "execution/worklog.txt",
+        "README.txt"
+      ],
+      "checks": [
+        {
+          "operation": "python -B execution/run_step08_tests.py",
+          "result": "92项软件检查PASS，无跳过；26项联合信念+66项旧回归",
+          "scope": "offline_joint_filter_and_software_regression",
+          "evidence_path": "execution/08_test_output.txt"
+        },
+        {
+          "operation": "python -B execution/replay_step08_alias.py",
+          "result": "2次固定解析更新通过；任务别名各0.5，示例probe后右目标18/19；execution_allowed=false",
+          "scope": "analytic_fixed_evidence_replay",
+          "evidence_path": "execution/08_alias_trace.json"
+        },
+        {
+          "operation": "python -B execution/verify_step08_delivery.py",
+          "result": "12项08交付一致性检查PASS；条件性模型范围明确",
+          "scope": "offline_joint_filter_delivery",
+          "evidence_path": "execution/08_integrity_result.json"
+        },
+        {
+          "operation": "python -B execution/verify_step07_delivery.py",
+          "result": "12项07历史资产/源文件快照回归检查PASS；旧模型与证据未变",
+          "scope": "prior_software_snapshot_regression",
+          "evidence_path": "execution/07_integrity_recheck_after_step08.json"
+        }
+      ],
+      "evidence_paths": [
+        "docs/08_update_rules.txt",
+        "execution/08_acceptance.txt",
+        "execution/08_test_result.json",
+        "execution/08_test_output.txt",
+        "execution/08_alias_trace.json",
+        "execution/08_integrity_result.json"
+      ],
+      "unresolved": [
+        "首版只覆盖两个规范task目标/两个已建模通道，unknown/none/unknown_channel缺似然时暂停，未解决开放世界推断",
+        "仅离线、精确声明参考窗、窗口内固定状态；窗内变化/时钟不确定积分需事件核扩展",
+        "真实校准、probe迁移、后果/权重及I01—I14仍待条件，未训练或实证性能",
+        "无策略/授权/执行，后续09必须区分点推断ready与paused/未知区间，不把高条件后验当真因"
+      ],
+      "next_action": "用户继续时执行09：合法诊断动作和一步VoI/有限预算策略；尊重相同信息基线、unknown暂停、阶段时间不重复计费，不自动下发机器人",
+      "execution_scope": "offline_binary_joint_inference",
+      "real_validation": {
+        "status": "待外部条件",
+        "reason": "模型/通道/遵从仍仅模拟；未知状态似然、窗内变点和真实时钟尚未标定",
+        "evidence_paths": [
+          "docs/08_update_rules.txt",
+          "docs/06_calibration.txt",
+          "docs/07_outcome_calibration_checklist.txt"
+        ]
+      }
+    },
+    {
+      "step_id": "09",
+      "title": "主动诊断策略与求解器",
+      "plan_version": "V2",
+      "status": "已完成",
+      "depends_on": [
+        "07",
+        "08"
+      ],
+      "changed_files": [
+        "bci_vla/core/diagnostic_actions.py",
+        "bci_vla/core/diagnostic_policy.py",
+        "configs/diagnosis.json",
+        "configs/consequences/simulation_canonical_outcomes.json",
+        "docs/09_policy.txt",
+        "examples/diagnosis/state.json",
+        "examples/diagnosis/README.txt",
+        "tests/test_diagnostic_policy.py",
+        "execution/run_step09_tests.py",
+        "execution/replay_step09_policy.py",
+        "execution/prepare_step09_assets.py",
+        "execution/finalize_step09.py",
+        "execution/09_acceptance.txt",
+        "execution/09_test_result.json",
+        "execution/09_test_output.txt",
+        "execution/09_policy_trace.json",
+        "README.txt",
+        "execution/progress.json",
+        "execution/handoff.txt",
+        "execution/worklog.txt",
+        "execution/verify_step08_delivery.py",
+        "execution/verify_step09_delivery.py"
+      ],
+      "checks": [
+        "126 software tests PASS; 34 new and 92 previous",
+        "analytic one-step/two-step trace and explicit pause/stop/handoff",
+        "step08 frozen source consistency separately rechecked",
+        "14 step09 delivery consistency checks PASS",
+        "12 step08 frozen integrity rechecks PASS"
+      ],
+      "evidence_paths": [
+        "execution/09_acceptance.txt",
+        "execution/09_test_result.json",
+        "execution/09_test_output.txt",
+        "execution/09_policy_trace.json",
+        "execution/09_source_manifest.json",
+        "execution/09_integrity_result.json",
+        "execution/08_integrity_recheck_after_step09.json"
+      ],
+      "unresolved": [
+        "真实通道/后果/时间校准仍待外部条件；I01—I14保留",
+        "窗内变点/随机延迟核未支持；仅稳定窗条件模型",
+        "多任务联合前瞻值及长期误更新效应未实现/验证",
+        "重编码/重校准修复模型缺失；完整授权与闭环留11",
+        "未证明两步额外价值，保留一步VoI默认；强基线/oracle留10"
+      ],
+      "next_action": "用户要求时执行10：强基线、消融、同信息小oracle；不自动推进",
+      "execution_scope": "offline_illustrative_diagnostic_policy",
+      "real_validation": {
+        "status": "待外部条件",
+        "deployment_allowed": false
+      }
+    },
+    {
+      "step_id": "10",
+      "title": "强基线与小规模oracle",
+      "plan_version": "V2",
+      "status": "已完成",
+      "depends_on": [
+        "06",
+        "07",
+        "08",
+        "09"
+      ],
+      "changed_files": [
+        "bci_vla/baselines/__init__.py",
+        "bci_vla/baselines/finite_model.py",
+        "bci_vla/baselines/methods.py",
+        "bci_vla/baselines/oracle.py",
+        "bci_vla/baselines/selection.py",
+        "tests/test_comparison_baselines.py",
+        "configs/comparisons/method_registry.json",
+        "configs/comparisons/parameters.json",
+        "configs/comparisons/tuning_and_selection.json",
+        "configs/comparisons/ablations.json",
+        "docs/10_comparison_matrix.txt",
+        "docs/10_oracle.txt",
+        "execution/10_acceptance.txt",
+        "execution/10_references.json",
+        "execution/10_test_output.txt",
+        "execution/10_test_result.json",
+        "execution/10_decision_trace.json",
+        "execution/10_oracle_audit.json",
+        "execution/run_step10_tests.py",
+        "execution/replay_step10_comparisons.py",
+        "execution/prepare_step10_assets.py",
+        "execution/finalize_step10.py",
+        "README.txt",
+        "execution/handoff.txt",
+        "execution/worklog.txt",
+        "execution/progress.json",
+        "execution/verify_step09_delivery.py",
+        "execution/verify_step10_delivery.py"
+      ],
+      "checks": [
+        "169 software tests PASS (43 new + 126 previous)",
+        "4 handwritten fixtures / 12 same-horizon oracle checks, max regret 0",
+        "real validation selection deliberately unfilled",
+        "17 step10 delivery consistency checks PASS",
+        "14 step09 frozen integrity rechecks PASS"
+      ],
+      "evidence_paths": [
+        "execution/10_acceptance.txt",
+        "execution/10_test_result.json",
+        "execution/10_test_output.txt",
+        "execution/10_oracle_audit.json",
+        "execution/10_decision_trace.json",
+        "execution/10_source_manifest.json",
+        "execution/10_integrity_result.json",
+        "execution/09_integrity_recheck_after_step10.json"
+      ],
+      "unresolved": [
+        "真实通道/后果/耗时/执行能力校准与I01—I14仍待条件",
+        "B0缺外部LLM调用及完整实测时间，不填假结果",
+        "B1/B1P/B10仅明确适配，完整NOIR/RBC/动态停时未复现",
+        "先导上限、充分独立验证调参和最强可部署基线仍待数据",
+        "4解析例非性能证据；同样有probe的VoI目前等效，不扩大算法主张"
+      ],
+      "next_action": "用户要求时执行11：会话/契约/fake VLA适配/监督；不自动接真机",
+      "execution_scope": "offline_comparison_implementations",
+      "real_validation": {
+        "status": "待外部条件",
+        "chosen_baseline": null,
+        "deployment_allowed": false
+      }
+    },
+    {
+      "step_id": "11",
+      "title": "契约、状态机、执行适配及监督",
+      "plan_version": "V2",
+      "status": "已完成",
+      "depends_on": [
+        "05",
+        "07",
+        "08",
+        "09"
+      ],
+      "changed_files": [
+        "bci_vla/contracts/records.py",
+        "bci_vla/contracts/replay.py",
+        "bci_vla/contracts/session.py",
+        "bci_vla/contracts/__init__.py",
+        "bci_vla/adapters/vla/fake.py",
+        "bci_vla/adapters/vla/__init__.py",
+        "bci_vla/monitoring/journal.py",
+        "bci_vla/monitoring/__init__.py",
+        "configs/execution/session.json",
+        "configs/execution/fake_vla_interface.json",
+        "tests/test_contract_records.py",
+        "tests/test_execution_session.py",
+        "tests/test_execution_binding_regressions.py",
+        "tests/test_execution_journal.py",
+        "tests/test_session_replay_events.py",
+        "tests/test_vla_adapter.py",
+        "docs/11_execution_contract.txt",
+        "docs/11_pi05_interface_checklist.txt",
+        "execution/11_acceptance.txt",
+        "execution/run_step11_tests.py",
+        "execution/replay_step11_session.py",
+        "execution/finalize_step11.py",
+        "execution/11_test_output.txt",
+        "execution/11_test_result.json",
+        "execution/11_lifecycle_trace.json",
+        "execution/11_session_events.jsonl",
+        "execution/11_unknown_stop_events.jsonl",
+        "execution/11_replay_result.json",
+        "README.txt",
+        "execution/handoff.txt",
+        "execution/worklog.txt",
+        "execution/progress.json",
+        "execution/11_source_manifest.json",
+        "execution/verify_step10_delivery.py",
+        "execution/verify_step11_delivery.py"
+      ],
+      "checks": [
+        "291 software tests PASS; 0 failures/errors/skips; includes 169 prior checks",
+        "two handwritten lifecycle journals rebuild each checkpoint without backend calls",
+        "11.1-11.12 mapped; real pi0.5 interface remains unverified",
+        "33 step11 delivery consistency checks PASS",
+        "17 step10 frozen integrity rechecks PASS"
+      ],
+      "evidence_paths": [
+        "docs/11_execution_contract.txt",
+        "docs/11_pi05_interface_checklist.txt",
+        "execution/11_acceptance.txt",
+        "execution/11_test_result.json",
+        "execution/11_test_output.txt",
+        "execution/11_lifecycle_trace.json",
+        "execution/11_replay_result.json",
+        "execution/11_source_manifest.json",
+        "execution/11_integrity_result.json",
+        "execution/10_integrity_recheck_after_step11.json"
+      ],
+      "unresolved": [
+        "真实通道/遵从/后果/耗时校准与I01—I14仍待条件",
+        "真实π0.5 checkpoint/观测/归一化/action/RTC与物理控制及停止未核",
+        "内存去重及日志审计不具备跨进程exactly-once提交或发送者认证",
+        "开发概率/时效阈值未校准；仅有限二元模拟与稳定窗模型",
+        "完整episode/机制和故障实验及G2留12，G3/G4未开始"
+      ],
+      "next_action": "用户要求后执行12：离线完整episode/机制及故障验收；不自动接真机或宣称G2通过",
+      "execution_scope": "offline_fake_lifecycle",
+      "real_validation": {
+        "status": "待外部条件",
+        "deployment_allowed": false,
+        "hardware_calls": 0,
+        "cloud_calls": 0
+      }
+    },
+    {
+      "step_id": "12",
+      "title": "离线机制和故障验收，G2",
+      "plan_version": "V2",
+      "status": "已完成",
+      "depends_on": [
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09",
+        "10",
+        "11"
+      ],
+      "changed_files": [
+        "bci_vla/benchmark/audits.py",
+        "bci_vla/benchmark/offline.py",
+        "bci_vla/benchmark/runner.py",
+        "bci_vla/benchmark/runtime_gate.py",
+        "bci_vla/benchmark/synthetic_world.py",
+        "bci_vla/benchmark/__init__.py",
+        "tests/test_offline_benchmark.py",
+        "execution/run_step12_offline.py",
+        "execution/run_step12_tests.py",
+        "execution/finalize_step12.py",
+        "execution/12_test_output.txt",
+        "execution/12_test_result.json",
+        "execution/12_runtime_alignment.json",
+        "execution/12_episode_summary.csv",
+        "execution/12_coverage.json",
+        "execution/12_acceptance.txt",
+        "docs/12_G2_report.txt",
+        "docs/12_repair_plan.txt",
+        "README.txt",
+        "execution/handoff.txt",
+        "execution/worklog.txt",
+        "execution/progress.json",
+        "execution/12_source_manifest.json",
+        "execution/verify_step11_delivery.py",
+        "execution/verify_step12_delivery.py",
+        "bci_vla/runtime_v2/audit.py",
+        "bci_vla/runtime_v2/controller.py",
+        "bci_vla/runtime_v2/planning.py",
+        "bci_vla/runtime_v2/runner.py",
+        "bci_vla/runtime_v2/__init__.py",
+        "tests/test_runtime_v2.py",
+        "execution/run_step12_repair.py",
+        "execution/run_step12_repair_tests.py",
+        "execution/finalize_step12_repair.py",
+        "execution/verify_step12_repair.py",
+        "docs/12R_revalidation_report.txt",
+        "docs/12R_claim_scope.txt",
+        "execution/12R_source_manifest.json",
+        "execution/12R_before_after.json",
+        "execution/12R_comparison.csv",
+        "execution/12R_test_result.json",
+        "execution/12R_test_output.txt",
+        "execution/12R_integrity_result.json",
+        "execution/12_integrity_recheck_after_repair.json"
+      ],
+      "checks": [
+        "311 software tests PASS; 0 failures/errors/skips",
+        "720 synthetic episodes kept and journals replay each checkpoint",
+        "8 mechanism / 10 injected fault checks passed",
+        "80 internal same-horizon oracle checks; max regret0; not complete runtime oracle",
+        "negative G2: authorization gate mismatch and no distinct M over B9 advantage",
+        "33 step12 evidence integrity checks PASS; G2 remains NOT PASSED",
+        "33 step11 historical integrity checks PASS; frozen evidence retained",
+        "330 software checks PASS",
+        "29 actual authorization cases and80 corrected O1 checks PASS",
+        "1440 synthetic episodes replayed; unexpected authorization blocks after planning0; no threshold tuning",
+        "31 repair delivery checks PASS;1440 journals/13394 records intact",
+        "33 original step12 evidence checks PASS; prior negative results preserved"
+      ],
+      "evidence_paths": [
+        "docs/12_G2_report.txt",
+        "docs/12_repair_plan.txt",
+        "execution/12_coverage.json",
+        "execution/12_runtime_alignment.json",
+        "execution/12_test_result.json",
+        "execution/12_source_manifest.json",
+        "execution/12_integrity_result.json",
+        "execution/11_integrity_recheck_after_step12.json",
+        "runs/offline_step12_acceptance/summary.json",
+        "runs/offline_step12_acceptance/artifacts_manifest.json",
+        "docs/12R_revalidation_report.txt",
+        "docs/12R_claim_scope.txt",
+        "execution/12R_before_after.json",
+        "execution/12R_test_result.json",
+        "execution/12R_source_manifest.json",
+        "execution/12R_integrity_result.json",
+        "runs/offline_step12_repair_v2/summary.json",
+        "runs/offline_step12_repair_v2/oracle_audit.json"
+      ],
+      "unresolved": [
+        "M与B9等效，M2无不增加错误启动的额外效用；研究贡献仍需证据",
+        "无冲突C11别名可导致错误启动，未来额外证据/探测时机须公平验证",
+        "4状态/稳定窗限制；真实校准/接口/遵从/迁移及I01—I14仍待条件"
+      ],
+      "next_action": "保留G2未通过；按收窄贡献研究额外协议证据与效用，不自动进入13",
+      "execution_scope": "L1_synthetic_development_acceptance",
+      "acceptance_result": "G2未通过",
+      "real_validation": {
+        "status": "未开展",
+        "deployment_allowed": false,
+        "hardware_calls": 0,
+        "cloud_calls": 0
+      },
+      "engineering_revalidation": "PASS",
+      "active_planner_version": "authorization-aware-finite/2.0"
+    },
+    {
+      "step_id": "13",
+      "title": "真实BCI＋虚拟执行试运行，G3",
+      "plan_version": "V2",
+      "status": "进行中",
+      "depends_on": [
+        "12"
+      ],
+      "changed_files": [
+        "bci_vla/pilot/",
+        "tests/test_pilot_preparation.py",
+        "tests/test_pilot_software_ui.py",
+        "execution/*step13*.py"
+      ],
+      "checks": [
+        "365软件回归PASS",
+        "3模拟TCP条件PASS",
+        "三模式FakeVLA闭环与重放PASS"
+      ],
+      "evidence_paths": [
+        "docs/13_G3_report.txt",
+        "execution/13_coverage.json",
+        "execution/13_test_result.json",
+        "runs/pilot_virtual_13_nonreal_acceptance_v3/summary.json"
+      ],
+      "unresolved": [
+        "真实理解/遵从/迁移/解码/显示时序/用户时间未测",
+        "真实适配器及校准模型实现待补",
+        "G2未通过"
+      ],
+      "next_action": "已完成本轮非真实BCI范围；保留真实pilot未开展状态",
+      "blocked_by": [
+        "G2",
+        "real_BCI_excluded_by_user"
+      ],
+      "nonreal_tests_completed": true,
+      "real_pilot_completed": false
+    },
+    {
+      "step_id": "14",
+      "title": "单BCI—单VLA真实闭环",
+      "plan_version": "V2",
+      "status": "进行中",
+      "depends_on": [
+        "13"
+      ],
+      "changed_files": [
+        "bci_vla/pilot/libero_gate.py",
+        "bci_vla/pilot/libero_actions.py",
+        "execution/*step14*.py",
+        "tests/test_libero_gate.py",
+        "bci_vla/simulation_v3/*.py",
+        "execution/*14C*.py",
+        "tests/test_simulation_v3.py"
+      ],
+      "checks": [
+        "398项软件测试PASS",
+        "10场景工程检查PASS；5个常规/诊断抓取完成",
+        "执行中换目标控制恢复通过但抓取失败；留出0/2"
+      ],
+      "evidence_paths": [
+        "docs/14_closed_loop.txt",
+        "execution/14_coverage.json",
+        "runs/pilot_robot_14_libero_simulation_v3/v3/results/summary.json",
+        "execution/14_libero_assets.json",
+        "docs/14C_full_simulation_report.txt",
+        "execution/14C_coverage.json",
+        "execution/14C_integrity_result.json",
+        "runs/pilot_robot_14C_full_pipeline/v3/results/summary.json"
+      ],
+      "unresolved": [
+        "real BCI/robot excluded",
+        "heldout grasp reliability failed; no research performance claim"
+      ],
+      "next_action": "非真实分支已完成；步骤15接入π0.5完整会话后做独立校准与迁移验证",
+      "scope": "LIBERO_simulation_only",
+      "simulation_backend_tests_completed": true,
+      "full_framework_simulation_completed": true,
+      "real_closed_loop_completed": false,
+      "nonreal_closed_loop_completed": true,
+      "nonreal_scope_status": "已完成"
+    },
+    {
+      "step_id": "15",
+      "title": "冻结核心的跨BCI/跨VLA迁移",
+      "plan_version": "V2",
+      "status": "进行中",
+      "depends_on": [
+        "14"
+      ],
+      "changed_files": [
+        "bci_vla/adapters/bci/packet_replay.py",
+        "bci_vla/adapters/vla/libero_pi05.py",
+        "bci_vla/pilot/transfer_replay.py",
+        "execution/step15_libero_worker.py",
+        "execution/step15_pi05_orchestrator.py",
+        "tests/test_transfer_replay.py",
+        "tests/test_pi05_libero_adapter.py",
+        "bci_vla/simulation_transfer_v4/*.py",
+        "execution/*15C*.py",
+        "tests/test_simulation_transfer_v4.py"
+      ],
+      "checks": [
+        "401项软件测试PASS",
+        "两个软件编码×两个实际VLA完整会话工程检查通过",
+        "独立π0.5后果校准4条、留出2条；失败保留"
+      ],
+      "evidence_paths": [
+        "docs/15_transfer_matrix.txt",
+        "execution/15_coverage.json",
+        "execution/15_adaptation_audit.json",
+        "runs/transfer_step15_pi05_final/v4/results/summary.json",
+        "docs/15C_full_transfer_report.txt",
+        "execution/15C_coverage.json",
+        "execution/15C_integrity_result.json"
+      ],
+      "unresolved": [
+        "second real BCI excluded and uncalibrated",
+        "real 2x2 and statistically adequate migration evaluation not performed"
+      ],
+      "next_action": "非真实分支完成；依用户要求进入步骤16，研究门槛保持未通过/未验证",
+      "scope": "step15_feasible_replay_and_second_VLA_simulation_only",
+      "replay_transport_equivalence_completed": true,
+      "second_VLA_backend_smoke_completed": true,
+      "full_framework_migration_completed": false,
+      "real_2x2_completed": false,
+      "nonreal_migration_completed": true,
+      "nonreal_scope_status": "已完成",
+      "full_framework_simulation_migration_completed": true
+    },
+    {
+      "step_id": "16",
+      "title": "正式实验与预注册判定，G4",
+      "plan_version": "V2",
+      "status": "未开始",
+      "depends_on": [
+        "13",
+        "14",
+        "15"
+      ],
+      "changed_files": [],
+      "checks": [],
+      "evidence_paths": [],
+      "unresolved": [],
+      "next_action": "按主手册及前置依赖执行"
+    },
+    {
+      "step_id": "17",
+      "title": "论文贡献和证据重构",
+      "plan_version": "V2",
+      "status": "未开始",
+      "depends_on": [
+        "16"
+      ],
+      "changed_files": [],
+      "checks": [],
+      "evidence_paths": [],
+      "unresolved": [],
+      "next_action": "按主手册及前置依赖执行"
+    }
+  ],
+  "dependency_notes": "步骤16的迁移证据按实际主张范围适用；步骤17草稿可提前，最终结论依赖步骤16。",
+  "next_step": "补齐14完整框架LIBERO整合，再做15两后端迁移",
+  "next_step_blocked_by": "真实分支仍排除；第二真实BCI/校准及完整框架集成缺失"
+}

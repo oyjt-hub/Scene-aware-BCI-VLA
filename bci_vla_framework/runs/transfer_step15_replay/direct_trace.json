@@ -1,0 +1,1406 @@
+{
+  "scope": "synthetic_transport_equivalence_not_second_real_BCI",
+  "packetized": false,
+  "checkpoints": [
+    {
+      "schema_version": "interaction-session/1.0",
+      "scope": "offline_fake_only",
+      "context": {
+        "session_id": "step15-replay-equivalence",
+        "task_id": "fixture-task",
+        "task_revision": 1,
+        "scene_id": "fixture-scene",
+        "scene_revision": 1,
+        "mapping_id": "binary-v1",
+        "stimulus_version": "stimulus-v1",
+        "channel_profile_id": "simulation-binary-v1"
+      },
+      "state": "COLLECTING",
+      "reason": "evidence_updated_no_execution_authority",
+      "contract": null,
+      "authorization": null,
+      "authorization_consumed": false,
+      "submission": null,
+      "submission_at": null,
+      "completion_feedback_at": null,
+      "submission_contract": null,
+      "stop_latched": false,
+      "stop_feedback": "NOT_REQUESTED",
+      "generation_valid": true,
+      "model_refs": {
+        "channel_profile": "simulation-binary-v1",
+        "channel_sha256": "466673dcce447925a7819dc37c6448190d3fb35e202dac89731b083758e07319",
+        "transition_sha256": "72849810111d89c1d060bd6a4e32390c78dee98faf431fcbd8ba2b3a8c2198e0",
+        "confirmation_sha256": "9519ac42edae398e8485cbaa920aeb142bf90e9744b4dfe5c99291106fc2cad3",
+        "policy_sha256": "11af9b7ed429ff5d89c4fb265eae6e29fa34a5cddf03dcf7f4ac3307d8a359e1",
+        "backend_spec_sha256": "c773d7d5cdba89e0609ddc40e037b5bd96bdf0030211fbcb4c776af926561f52"
+      },
+      "filter": {
+        "status": "ready",
+        "reason": null,
+        "model_validity": "conditional_on_finite_simulation_models",
+        "unmodeled_support_mass": 0.0,
+        "point_inference_ready": true,
+        "execution_allowed": false,
+        "as_of_reference_time": "2026-10-15T00:00:02+00:00",
+        "belief": {
+          "goal_ids": [
+            "task-9cad706e60e745cf3c01a413",
+            "task-d5fc9bc832047df78f51c84f",
+            "unknown",
+            "none"
+          ],
+          "mode_ids": [
+            "normal",
+            "flip",
+            "unknown_channel"
+          ],
+          "mass": [
+            {
+              "goal_id": "task-9cad706e60e745cf3c01a413",
+              "mode_id": "normal",
+              "probability": 1.0
+            },
+            {
+              "goal_id": "task-9cad706e60e745cf3c01a413",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "task-9cad706e60e745cf3c01a413",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "task-d5fc9bc832047df78f51c84f",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "task-d5fc9bc832047df78f51c84f",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "task-d5fc9bc832047df78f51c84f",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            }
+          ],
+          "as_of_event_id": "sample-1"
+        },
+        "goal_marginals": {
+          "task-9cad706e60e745cf3c01a413": 1.0,
+          "task-d5fc9bc832047df78f51c84f": 0.0,
+          "unknown": 0.0,
+          "none": 0.0
+        },
+        "channel_marginals": {
+          "normal": 1.0,
+          "flip": 0.0,
+          "unknown_channel": 0.0
+        }
+      },
+      "execution_allowed": false,
+      "physical_stop_verified": false
+    },
+    {
+      "schema_version": "interaction-session/1.0",
+      "scope": "offline_fake_only",
+      "context": {
+        "session_id": "step15-replay-equivalence",
+        "task_id": "fixture-task",
+        "task_revision": 1,
+        "scene_id": "fixture-scene",
+        "scene_revision": 1,
+        "mapping_id": "binary-v1",
+        "stimulus_version": "stimulus-v1",
+        "channel_profile_id": "simulation-binary-v1"
+      },
+      "state": "COLLECTING",
+      "reason": "evidence_updated_no_execution_authority",
+      "contract": null,
+      "authorization": null,
+      "authorization_consumed": false,
+      "submission": null,
+      "submission_at": null,
+      "completion_feedback_at": null,
+      "submission_contract": null,
+      "stop_latched": false,
+      "stop_feedback": "NOT_REQUESTED",
+      "generation_valid": true,
+      "model_refs": {
+        "channel_profile": "simulation-binary-v1",
+        "channel_sha256": "466673dcce447925a7819dc37c6448190d3fb35e202dac89731b083758e07319",
+        "transition_sha256": "72849810111d89c1d060bd6a4e32390c78dee98faf431fcbd8ba2b3a8c2198e0",
+        "confirmation_sha256": "9519ac42edae398e8485cbaa920aeb142bf90e9744b4dfe5c99291106fc2cad3",
+        "policy_sha256": "11af9b7ed429ff5d89c4fb265eae6e29fa34a5cddf03dcf7f4ac3307d8a359e1",
+        "backend_spec_sha256": "c773d7d5cdba89e0609ddc40e037b5bd96bdf0030211fbcb4c776af926561f52"
+      },
+      "filter": {
+        "status": "ready",
+        "reason": null,
+        "model_validity": "conditional_on_finite_simulation_models",
+        "unmodeled_support_mass": 0.0,
+        "point_inference_ready": true,
+        "execution_allowed": false,
+        "as_of_reference_time": "2026-10-15T00:00:04+00:00",
+        "belief": {
+          "goal_ids": [
+            "task-9cad706e60e745cf3c01a413",
+            "task-d5fc9bc832047df78f51c84f",
+            "unknown",
+            "none"
+          ],
+          "mode_ids": [
+            "normal",
+            "flip",
+            "unknown_channel"
+          ],
+          "mass": [
+            {
+              "goal_id": "task-9cad706e60e745cf3c01a413",
+              "mode_id": "normal",
+              "probability": 1.0
+            },
+            {
+              "goal_id": "task-9cad706e60e745cf3c01a413",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "task-9cad706e60e745cf3c01a413",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "task-d5fc9bc832047df78f51c84f",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "task-d5fc9bc832047df78f51c84f",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "task-d5fc9bc832047df78f51c84f",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            }
+          ],
+          "as_of_event_id": "sample-2"
+        },
+        "goal_marginals": {
+          "task-9cad706e60e745cf3c01a413": 1.0,
+          "task-d5fc9bc832047df78f51c84f": 0.0,
+          "unknown": 0.0,
+          "none": 0.0
+        },
+        "channel_marginals": {
+          "normal": 1.0,
+          "flip": 0.0,
+          "unknown_channel": 0.0
+        }
+      },
+      "execution_allowed": false,
+      "physical_stop_verified": false
+    },
+    {
+      "schema_version": "interaction-session/1.0",
+      "scope": "offline_fake_only",
+      "context": {
+        "session_id": "step15-replay-equivalence",
+        "task_id": "fixture-task",
+        "task_revision": 1,
+        "scene_id": "fixture-scene",
+        "scene_revision": 1,
+        "mapping_id": "binary-v1",
+        "stimulus_version": "stimulus-v1",
+        "channel_profile_id": "simulation-binary-v1"
+      },
+      "state": "AWAITING_AUTHORIZATION",
+      "reason": "noisy_accept_requires_separate_authorization",
+      "contract": {
+        "proposal": {
+          "contract_id": "contract-task-9cad706e60e745cf3c01a413",
+          "task_id": "fixture-task",
+          "revision": 1,
+          "scene_id": "fixture-scene",
+          "scene_revision": 1,
+          "intent": {
+            "action": "place",
+            "source_id": "grape",
+            "destination_id": "bowl-left"
+          },
+          "status": "proposed",
+          "valid_until": "2026-10-15T00:01:00Z",
+          "confirmation_event_id": null
+        },
+        "goal_id": "task-9cad706e60e745cf3c01a413",
+        "instruction": "Put the grapes into the leftmost bowl.",
+        "backend_id": "simulation-pi05-interface",
+        "backend_spec_sha256": "c773d7d5cdba89e0609ddc40e037b5bd96bdf0030211fbcb4c776af926561f52",
+        "scene_fingerprint": "99d6a74d092043c12505b217e4e0537116c380f2a1fe3e34b5f5042512b23d78",
+        "completion": {
+          "predicate_version": "endpoint-v1",
+          "name": "inside",
+          "subject_id": "grape",
+          "object_id": "bowl-left"
+        },
+        "preconditions": {
+          "visible_instance_ids": [
+            "grape",
+            "bowl-left"
+          ],
+          "scene_version_must_match": true
+        },
+        "abort_policy": {
+          "on_scene_or_task_change": "invalidate_and_request_stop",
+          "on_unknown_submission": "pause_no_automatic_resubmit",
+          "on_stop_request": "latch_until_feedback_no_resume"
+        }
+      },
+      "authorization": null,
+      "authorization_consumed": false,
+      "submission": null,
+      "submission_at": null,
+      "completion_feedback_at": null,
+      "submission_contract": null,
+      "stop_latched": false,
+      "stop_feedback": "NOT_REQUESTED",
+      "generation_valid": true,
+      "model_refs": {
+        "channel_profile": "simulation-binary-v1",
+        "channel_sha256": "466673dcce447925a7819dc37c6448190d3fb35e202dac89731b083758e07319",
+        "transition_sha256": "72849810111d89c1d060bd6a4e32390c78dee98faf431fcbd8ba2b3a8c2198e0",
+        "confirmation_sha256": "9519ac42edae398e8485cbaa920aeb142bf90e9744b4dfe5c99291106fc2cad3",
+        "policy_sha256": "11af9b7ed429ff5d89c4fb265eae6e29fa34a5cddf03dcf7f4ac3307d8a359e1",
+        "backend_spec_sha256": "c773d7d5cdba89e0609ddc40e037b5bd96bdf0030211fbcb4c776af926561f52"
+      },
+      "filter": {
+        "status": "ready",
+        "reason": null,
+        "model_validity": "conditional_on_finite_simulation_models",
+        "unmodeled_support_mass": 0.0,
+        "point_inference_ready": true,
+        "execution_allowed": false,
+        "as_of_reference_time": "2026-10-15T00:00:06+00:00",
+        "belief": {
+          "goal_ids": [
+            "task-9cad706e60e745cf3c01a413",
+            "task-d5fc9bc832047df78f51c84f",
+            "unknown",
+            "none"
+          ],
+          "mode_ids": [
+            "normal",
+            "flip",
+            "unknown_channel"
+          ],
+          "mass": [
+            {
+              "goal_id": "task-9cad706e60e745cf3c01a413",
+              "mode_id": "normal",
+              "probability": 1.0
+            },
+            {
+              "goal_id": "task-9cad706e60e745cf3c01a413",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "task-9cad706e60e745cf3c01a413",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "task-d5fc9bc832047df78f51c84f",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "task-d5fc9bc832047df78f51c84f",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "task-d5fc9bc832047df78f51c84f",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            }
+          ],
+          "as_of_event_id": "sample-3"
+        },
+        "goal_marginals": {
+          "task-9cad706e60e745cf3c01a413": 1.0,
+          "task-d5fc9bc832047df78f51c84f": 0.0,
+          "unknown": 0.0,
+          "none": 0.0
+        },
+        "channel_marginals": {
+          "normal": 1.0,
+          "flip": 0.0,
+          "unknown_channel": 0.0
+        }
+      },
+      "execution_allowed": false,
+      "physical_stop_verified": false
+    },
+    {
+      "schema_version": "interaction-session/1.0",
+      "scope": "offline_fake_only",
+      "context": {
+        "session_id": "step15-replay-equivalence",
+        "task_id": "fixture-task",
+        "task_revision": 1,
+        "scene_id": "fixture-scene",
+        "scene_revision": 1,
+        "mapping_id": "binary-v1",
+        "stimulus_version": "stimulus-v1",
+        "channel_profile_id": "simulation-binary-v1"
+      },
+      "state": "AUTHORIZED",
+      "reason": "offline_fake_authorization_only",
+      "contract": {
+        "proposal": {
+          "contract_id": "contract-task-9cad706e60e745cf3c01a413",
+          "task_id": "fixture-task",
+          "revision": 1,
+          "scene_id": "fixture-scene",
+          "scene_revision": 1,
+          "intent": {
+            "action": "place",
+            "source_id": "grape",
+            "destination_id": "bowl-left"
+          },
+          "status": "proposed",
+          "valid_until": "2026-10-15T00:01:00Z",
+          "confirmation_event_id": null
+        },
+        "goal_id": "task-9cad706e60e745cf3c01a413",
+        "instruction": "Put the grapes into the leftmost bowl.",
+        "backend_id": "simulation-pi05-interface",
+        "backend_spec_sha256": "c773d7d5cdba89e0609ddc40e037b5bd96bdf0030211fbcb4c776af926561f52",
+        "scene_fingerprint": "99d6a74d092043c12505b217e4e0537116c380f2a1fe3e34b5f5042512b23d78",
+        "completion": {
+          "predicate_version": "endpoint-v1",
+          "name": "inside",
+          "subject_id": "grape",
+          "object_id": "bowl-left"
+        },
+        "preconditions": {
+          "visible_instance_ids": [
+            "grape",
+            "bowl-left"
+          ],
+          "scene_version_must_match": true
+        },
+        "abort_policy": {
+          "on_scene_or_task_change": "invalidate_and_request_stop",
+          "on_unknown_submission": "pause_no_automatic_resubmit",
+          "on_stop_request": "latch_until_feedback_no_resume"
+        }
+      },
+      "authorization": {
+        "authorization_id": "auth-sample-3",
+        "scope": "offline_fake_only",
+        "contract_sha256": "5f87d0ddf3ea1e9a0ee34f4a1db49cb690674be7164ffbf20e93903d2d5c67e6",
+        "contract_id": "contract-task-9cad706e60e745cf3c01a413",
+        "task_id": "fixture-task",
+        "task_revision": 1,
+        "scene_id": "fixture-scene",
+        "scene_revision": 1,
+        "request": {
+          "session_id": "step15-replay-equivalence",
+          "task_id": "fixture-task",
+          "task_revision": 1,
+          "scene_id": "fixture-scene",
+          "scene_revision": 1,
+          "mapping_id": "binary-v1",
+          "stimulus_version": "stimulus-v1",
+          "channel_profile_id": "simulation-binary-v1",
+          "schema_version": "bci-vla/1.0",
+          "event_id": "request-step15-replay-equivalence-3",
+          "host_id": "ui",
+          "sequence": 3,
+          "kind": "REQUEST",
+          "mode": "CONFIRM",
+          "interaction_id": "interaction-step15-replay-equivalence-3",
+          "response_to": null,
+          "query_id": "query-step15-replay-equivalence-3",
+          "probe_id": null,
+          "sent_at": "2026-10-15T00:00:04.100000+00:00",
+          "expires_at": "2026-10-15T00:00:14.100000+00:00",
+          "clock_offset_ms": 0,
+          "clock_uncertainty_ms": 0,
+          "payload": {
+            "question": "Confirm the exact proposed task and current scene version?",
+            "options": [
+              {
+                "option_id": "accept",
+                "symbol": "0",
+                "semantic_ref": "confirmation:accept"
+              },
+              {
+                "option_id": "reject",
+                "symbol": "1",
+                "semantic_ref": "confirmation:reject"
+              }
+            ],
+            "probe_prompt": null,
+            "contract": {
+              "contract_id": "contract-task-9cad706e60e745cf3c01a413",
+              "task_id": "fixture-task",
+              "revision": 1,
+              "scene_id": "fixture-scene",
+              "scene_revision": 1,
+              "intent": {
+                "action": "place",
+                "source_id": "grape",
+                "destination_id": "bowl-left"
+              },
+              "status": "proposed",
+              "valid_until": "2026-10-15T00:01:00Z",
+              "confirmation_event_id": null
+            }
+          }
+        },
+        "response": {
+          "schema_version": "bci-vla/1.0",
+          "event_id": "sample-3",
+          "host_id": "bci",
+          "sequence": 3,
+          "kind": "RESPONSE",
+          "mode": "CONFIRM",
+          "interaction_id": "interaction-step15-replay-equivalence-3",
+          "response_to": "request-step15-replay-equivalence-3",
+          "query_id": "query-step15-replay-equivalence-3",
+          "probe_id": null,
+          "session_id": "step15-replay-equivalence",
+          "task_id": "fixture-task",
+          "task_revision": 1,
+          "scene_id": "fixture-scene",
+          "scene_revision": 1,
+          "mapping_id": "binary-v1",
+          "stimulus_version": "stimulus-v1",
+          "channel_profile_id": "simulation-binary-v1",
+          "sent_at": "2026-10-15T00:00:06+00:00",
+          "expires_at": "2026-10-15T00:00:14.100000+00:00",
+          "clock_offset_ms": 0,
+          "clock_uncertainty_ms": 0,
+          "payload": {
+            "status": "OBSERVATION",
+            "symbol": "0",
+            "raw_scores": {
+              "0": 0.5,
+              "1": 5.0
+            },
+            "score_kind": "FBCCA_POWER",
+            "calibration_id": null,
+            "quality": {
+              "snr_db": null,
+              "artifact_flags": []
+            },
+            "sample_window": {
+              "window_id": "window-3",
+              "recording_id": "software-public-recording",
+              "sample_start": 30000,
+              "sample_end": 30250,
+              "sample_rate_hz": 250,
+              "channels": [
+                "O1",
+                "Oz",
+                "O2"
+              ],
+              "started_at": "2026-10-15T00:00:05+00:00",
+              "ended_at": "2026-10-15T00:00:06+00:00",
+              "source_kind": "offline_replay"
+            }
+          }
+        },
+        "model_refs": {
+          "channel_profile": "simulation-binary-v1",
+          "channel_sha256": "466673dcce447925a7819dc37c6448190d3fb35e202dac89731b083758e07319",
+          "transition_sha256": "72849810111d89c1d060bd6a4e32390c78dee98faf431fcbd8ba2b3a8c2198e0",
+          "confirmation_sha256": "9519ac42edae398e8485cbaa920aeb142bf90e9744b4dfe5c99291106fc2cad3",
+          "policy_sha256": "11af9b7ed429ff5d89c4fb265eae6e29fa34a5cddf03dcf7f4ac3307d8a359e1",
+          "backend_spec_sha256": "c773d7d5cdba89e0609ddc40e037b5bd96bdf0030211fbcb4c776af926561f52"
+        },
+        "issued_at": "2026-10-15T00:00:06.010000+00:00",
+        "valid_until": "2026-10-15T00:00:14.100000+00:00",
+        "belief_at_confirmation": {
+          "goal_ids": [
+            "task-9cad706e60e745cf3c01a413",
+            "task-d5fc9bc832047df78f51c84f",
+            "unknown",
+            "none"
+          ],
+          "mode_ids": [
+            "normal",
+            "flip",
+            "unknown_channel"
+          ],
+          "mass": [
+            {
+              "goal_id": "task-9cad706e60e745cf3c01a413",
+              "mode_id": "normal",
+              "probability": 1.0
+            },
+            {
+              "goal_id": "task-9cad706e60e745cf3c01a413",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "task-9cad706e60e745cf3c01a413",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "task-d5fc9bc832047df78f51c84f",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "task-d5fc9bc832047df78f51c84f",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "task-d5fc9bc832047df78f51c84f",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            }
+          ],
+          "as_of_event_id": "sample-3"
+        },
+        "belief_at_authorization": {
+          "goal_ids": [
+            "task-9cad706e60e745cf3c01a413",
+            "task-d5fc9bc832047df78f51c84f",
+            "unknown",
+            "none"
+          ],
+          "mode_ids": [
+            "normal",
+            "flip",
+            "unknown_channel"
+          ],
+          "mass": [
+            {
+              "goal_id": "task-9cad706e60e745cf3c01a413",
+              "mode_id": "normal",
+              "probability": 1.0
+            },
+            {
+              "goal_id": "task-9cad706e60e745cf3c01a413",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "task-9cad706e60e745cf3c01a413",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "task-d5fc9bc832047df78f51c84f",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "task-d5fc9bc832047df78f51c84f",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "task-d5fc9bc832047df78f51c84f",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            }
+          ],
+          "as_of_event_id": "sample-3"
+        },
+        "authorization_prediction_gap_s": 0.01,
+        "goal_probability": 1.0,
+        "confirmation_is_noisy": true,
+        "frozen_until_dispatch": true,
+        "consume_once": true,
+        "physical_execution_allowed": false
+      },
+      "authorization_consumed": false,
+      "submission": null,
+      "submission_at": null,
+      "completion_feedback_at": null,
+      "submission_contract": null,
+      "stop_latched": false,
+      "stop_feedback": "NOT_REQUESTED",
+      "generation_valid": true,
+      "model_refs": {
+        "channel_profile": "simulation-binary-v1",
+        "channel_sha256": "466673dcce447925a7819dc37c6448190d3fb35e202dac89731b083758e07319",
+        "transition_sha256": "72849810111d89c1d060bd6a4e32390c78dee98faf431fcbd8ba2b3a8c2198e0",
+        "confirmation_sha256": "9519ac42edae398e8485cbaa920aeb142bf90e9744b4dfe5c99291106fc2cad3",
+        "policy_sha256": "11af9b7ed429ff5d89c4fb265eae6e29fa34a5cddf03dcf7f4ac3307d8a359e1",
+        "backend_spec_sha256": "c773d7d5cdba89e0609ddc40e037b5bd96bdf0030211fbcb4c776af926561f52"
+      },
+      "filter": {
+        "status": "ready",
+        "reason": null,
+        "model_validity": "conditional_on_finite_simulation_models",
+        "unmodeled_support_mass": 0.0,
+        "point_inference_ready": true,
+        "execution_allowed": false,
+        "as_of_reference_time": "2026-10-15T00:00:06+00:00",
+        "belief": {
+          "goal_ids": [
+            "task-9cad706e60e745cf3c01a413",
+            "task-d5fc9bc832047df78f51c84f",
+            "unknown",
+            "none"
+          ],
+          "mode_ids": [
+            "normal",
+            "flip",
+            "unknown_channel"
+          ],
+          "mass": [
+            {
+              "goal_id": "task-9cad706e60e745cf3c01a413",
+              "mode_id": "normal",
+              "probability": 1.0
+            },
+            {
+              "goal_id": "task-9cad706e60e745cf3c01a413",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "task-9cad706e60e745cf3c01a413",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "task-d5fc9bc832047df78f51c84f",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "task-d5fc9bc832047df78f51c84f",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "task-d5fc9bc832047df78f51c84f",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            }
+          ],
+          "as_of_event_id": "sample-3"
+        },
+        "goal_marginals": {
+          "task-9cad706e60e745cf3c01a413": 1.0,
+          "task-d5fc9bc832047df78f51c84f": 0.0,
+          "unknown": 0.0,
+          "none": 0.0
+        },
+        "channel_marginals": {
+          "normal": 1.0,
+          "flip": 0.0,
+          "unknown_channel": 0.0
+        }
+      },
+      "execution_allowed": false,
+      "physical_stop_verified": false
+    },
+    {
+      "schema_version": "interaction-session/1.0",
+      "scope": "offline_fake_only",
+      "context": {
+        "session_id": "step15-replay-equivalence",
+        "task_id": "fixture-task",
+        "task_revision": 1,
+        "scene_id": "fixture-scene",
+        "scene_revision": 1,
+        "mapping_id": "binary-v1",
+        "stimulus_version": "stimulus-v1",
+        "channel_profile_id": "simulation-binary-v1"
+      },
+      "state": "SUBMITTED",
+      "reason": "transport_acceptance_is_not_execution",
+      "contract": {
+        "proposal": {
+          "contract_id": "contract-task-9cad706e60e745cf3c01a413",
+          "task_id": "fixture-task",
+          "revision": 1,
+          "scene_id": "fixture-scene",
+          "scene_revision": 1,
+          "intent": {
+            "action": "place",
+            "source_id": "grape",
+            "destination_id": "bowl-left"
+          },
+          "status": "proposed",
+          "valid_until": "2026-10-15T00:01:00Z",
+          "confirmation_event_id": null
+        },
+        "goal_id": "task-9cad706e60e745cf3c01a413",
+        "instruction": "Put the grapes into the leftmost bowl.",
+        "backend_id": "simulation-pi05-interface",
+        "backend_spec_sha256": "c773d7d5cdba89e0609ddc40e037b5bd96bdf0030211fbcb4c776af926561f52",
+        "scene_fingerprint": "99d6a74d092043c12505b217e4e0537116c380f2a1fe3e34b5f5042512b23d78",
+        "completion": {
+          "predicate_version": "endpoint-v1",
+          "name": "inside",
+          "subject_id": "grape",
+          "object_id": "bowl-left"
+        },
+        "preconditions": {
+          "visible_instance_ids": [
+            "grape",
+            "bowl-left"
+          ],
+          "scene_version_must_match": true
+        },
+        "abort_policy": {
+          "on_scene_or_task_change": "invalidate_and_request_stop",
+          "on_unknown_submission": "pause_no_automatic_resubmit",
+          "on_stop_request": "latch_until_feedback_no_resume"
+        }
+      },
+      "authorization": {
+        "authorization_id": "auth-sample-3",
+        "scope": "offline_fake_only",
+        "contract_sha256": "5f87d0ddf3ea1e9a0ee34f4a1db49cb690674be7164ffbf20e93903d2d5c67e6",
+        "contract_id": "contract-task-9cad706e60e745cf3c01a413",
+        "task_id": "fixture-task",
+        "task_revision": 1,
+        "scene_id": "fixture-scene",
+        "scene_revision": 1,
+        "request": {
+          "session_id": "step15-replay-equivalence",
+          "task_id": "fixture-task",
+          "task_revision": 1,
+          "scene_id": "fixture-scene",
+          "scene_revision": 1,
+          "mapping_id": "binary-v1",
+          "stimulus_version": "stimulus-v1",
+          "channel_profile_id": "simulation-binary-v1",
+          "schema_version": "bci-vla/1.0",
+          "event_id": "request-step15-replay-equivalence-3",
+          "host_id": "ui",
+          "sequence": 3,
+          "kind": "REQUEST",
+          "mode": "CONFIRM",
+          "interaction_id": "interaction-step15-replay-equivalence-3",
+          "response_to": null,
+          "query_id": "query-step15-replay-equivalence-3",
+          "probe_id": null,
+          "sent_at": "2026-10-15T00:00:04.100000+00:00",
+          "expires_at": "2026-10-15T00:00:14.100000+00:00",
+          "clock_offset_ms": 0,
+          "clock_uncertainty_ms": 0,
+          "payload": {
+            "question": "Confirm the exact proposed task and current scene version?",
+            "options": [
+              {
+                "option_id": "accept",
+                "symbol": "0",
+                "semantic_ref": "confirmation:accept"
+              },
+              {
+                "option_id": "reject",
+                "symbol": "1",
+                "semantic_ref": "confirmation:reject"
+              }
+            ],
+            "probe_prompt": null,
+            "contract": {
+              "contract_id": "contract-task-9cad706e60e745cf3c01a413",
+              "task_id": "fixture-task",
+              "revision": 1,
+              "scene_id": "fixture-scene",
+              "scene_revision": 1,
+              "intent": {
+                "action": "place",
+                "source_id": "grape",
+                "destination_id": "bowl-left"
+              },
+              "status": "proposed",
+              "valid_until": "2026-10-15T00:01:00Z",
+              "confirmation_event_id": null
+            }
+          }
+        },
+        "response": {
+          "schema_version": "bci-vla/1.0",
+          "event_id": "sample-3",
+          "host_id": "bci",
+          "sequence": 3,
+          "kind": "RESPONSE",
+          "mode": "CONFIRM",
+          "interaction_id": "interaction-step15-replay-equivalence-3",
+          "response_to": "request-step15-replay-equivalence-3",
+          "query_id": "query-step15-replay-equivalence-3",
+          "probe_id": null,
+          "session_id": "step15-replay-equivalence",
+          "task_id": "fixture-task",
+          "task_revision": 1,
+          "scene_id": "fixture-scene",
+          "scene_revision": 1,
+          "mapping_id": "binary-v1",
+          "stimulus_version": "stimulus-v1",
+          "channel_profile_id": "simulation-binary-v1",
+          "sent_at": "2026-10-15T00:00:06+00:00",
+          "expires_at": "2026-10-15T00:00:14.100000+00:00",
+          "clock_offset_ms": 0,
+          "clock_uncertainty_ms": 0,
+          "payload": {
+            "status": "OBSERVATION",
+            "symbol": "0",
+            "raw_scores": {
+              "0": 0.5,
+              "1": 5.0
+            },
+            "score_kind": "FBCCA_POWER",
+            "calibration_id": null,
+            "quality": {
+              "snr_db": null,
+              "artifact_flags": []
+            },
+            "sample_window": {
+              "window_id": "window-3",
+              "recording_id": "software-public-recording",
+              "sample_start": 30000,
+              "sample_end": 30250,
+              "sample_rate_hz": 250,
+              "channels": [
+                "O1",
+                "Oz",
+                "O2"
+              ],
+              "started_at": "2026-10-15T00:00:05+00:00",
+              "ended_at": "2026-10-15T00:00:06+00:00",
+              "source_kind": "offline_replay"
+            }
+          }
+        },
+        "model_refs": {
+          "channel_profile": "simulation-binary-v1",
+          "channel_sha256": "466673dcce447925a7819dc37c6448190d3fb35e202dac89731b083758e07319",
+          "transition_sha256": "72849810111d89c1d060bd6a4e32390c78dee98faf431fcbd8ba2b3a8c2198e0",
+          "confirmation_sha256": "9519ac42edae398e8485cbaa920aeb142bf90e9744b4dfe5c99291106fc2cad3",
+          "policy_sha256": "11af9b7ed429ff5d89c4fb265eae6e29fa34a5cddf03dcf7f4ac3307d8a359e1",
+          "backend_spec_sha256": "c773d7d5cdba89e0609ddc40e037b5bd96bdf0030211fbcb4c776af926561f52"
+        },
+        "issued_at": "2026-10-15T00:00:06.010000+00:00",
+        "valid_until": "2026-10-15T00:00:14.100000+00:00",
+        "belief_at_confirmation": {
+          "goal_ids": [
+            "task-9cad706e60e745cf3c01a413",
+            "task-d5fc9bc832047df78f51c84f",
+            "unknown",
+            "none"
+          ],
+          "mode_ids": [
+            "normal",
+            "flip",
+            "unknown_channel"
+          ],
+          "mass": [
+            {
+              "goal_id": "task-9cad706e60e745cf3c01a413",
+              "mode_id": "normal",
+              "probability": 1.0
+            },
+            {
+              "goal_id": "task-9cad706e60e745cf3c01a413",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "task-9cad706e60e745cf3c01a413",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "task-d5fc9bc832047df78f51c84f",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "task-d5fc9bc832047df78f51c84f",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "task-d5fc9bc832047df78f51c84f",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            }
+          ],
+          "as_of_event_id": "sample-3"
+        },
+        "belief_at_authorization": {
+          "goal_ids": [
+            "task-9cad706e60e745cf3c01a413",
+            "task-d5fc9bc832047df78f51c84f",
+            "unknown",
+            "none"
+          ],
+          "mode_ids": [
+            "normal",
+            "flip",
+            "unknown_channel"
+          ],
+          "mass": [
+            {
+              "goal_id": "task-9cad706e60e745cf3c01a413",
+              "mode_id": "normal",
+              "probability": 1.0
+            },
+            {
+              "goal_id": "task-9cad706e60e745cf3c01a413",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "task-9cad706e60e745cf3c01a413",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "task-d5fc9bc832047df78f51c84f",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "task-d5fc9bc832047df78f51c84f",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "task-d5fc9bc832047df78f51c84f",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            }
+          ],
+          "as_of_event_id": "sample-3"
+        },
+        "authorization_prediction_gap_s": 0.01,
+        "goal_probability": 1.0,
+        "confirmation_is_noisy": true,
+        "frozen_until_dispatch": true,
+        "consume_once": true,
+        "physical_execution_allowed": false
+      },
+      "authorization_consumed": true,
+      "submission": {
+        "submission_id": "step15-fixture",
+        "contract_id": "contract-task-9cad706e60e745cf3c01a413",
+        "revision": 1,
+        "instruction": "Put the grapes into the leftmost bowl.",
+        "status": "ACCEPTED",
+        "execution_status": "NOT_STARTED",
+        "stop_requested": false,
+        "last_feedback_id": null,
+        "actual_execution": false,
+        "reason": "offline_fake_submission",
+        "duplicate": false
+      },
+      "submission_at": "2026-10-15T00:00:06.010000+00:00",
+      "completion_feedback_at": null,
+      "submission_contract": {
+        "proposal": {
+          "contract_id": "contract-task-9cad706e60e745cf3c01a413",
+          "task_id": "fixture-task",
+          "revision": 1,
+          "scene_id": "fixture-scene",
+          "scene_revision": 1,
+          "intent": {
+            "action": "place",
+            "source_id": "grape",
+            "destination_id": "bowl-left"
+          },
+          "status": "proposed",
+          "valid_until": "2026-10-15T00:01:00Z",
+          "confirmation_event_id": null
+        },
+        "goal_id": "task-9cad706e60e745cf3c01a413",
+        "instruction": "Put the grapes into the leftmost bowl.",
+        "backend_id": "simulation-pi05-interface",
+        "backend_spec_sha256": "c773d7d5cdba89e0609ddc40e037b5bd96bdf0030211fbcb4c776af926561f52",
+        "scene_fingerprint": "99d6a74d092043c12505b217e4e0537116c380f2a1fe3e34b5f5042512b23d78",
+        "completion": {
+          "predicate_version": "endpoint-v1",
+          "name": "inside",
+          "subject_id": "grape",
+          "object_id": "bowl-left"
+        },
+        "preconditions": {
+          "visible_instance_ids": [
+            "grape",
+            "bowl-left"
+          ],
+          "scene_version_must_match": true
+        },
+        "abort_policy": {
+          "on_scene_or_task_change": "invalidate_and_request_stop",
+          "on_unknown_submission": "pause_no_automatic_resubmit",
+          "on_stop_request": "latch_until_feedback_no_resume"
+        }
+      },
+      "stop_latched": false,
+      "stop_feedback": "NOT_REQUESTED",
+      "generation_valid": true,
+      "model_refs": {
+        "channel_profile": "simulation-binary-v1",
+        "channel_sha256": "466673dcce447925a7819dc37c6448190d3fb35e202dac89731b083758e07319",
+        "transition_sha256": "72849810111d89c1d060bd6a4e32390c78dee98faf431fcbd8ba2b3a8c2198e0",
+        "confirmation_sha256": "9519ac42edae398e8485cbaa920aeb142bf90e9744b4dfe5c99291106fc2cad3",
+        "policy_sha256": "11af9b7ed429ff5d89c4fb265eae6e29fa34a5cddf03dcf7f4ac3307d8a359e1",
+        "backend_spec_sha256": "c773d7d5cdba89e0609ddc40e037b5bd96bdf0030211fbcb4c776af926561f52"
+      },
+      "filter": {
+        "status": "ready",
+        "reason": null,
+        "model_validity": "conditional_on_finite_simulation_models",
+        "unmodeled_support_mass": 0.0,
+        "point_inference_ready": true,
+        "execution_allowed": false,
+        "as_of_reference_time": "2026-10-15T00:00:06+00:00",
+        "belief": {
+          "goal_ids": [
+            "task-9cad706e60e745cf3c01a413",
+            "task-d5fc9bc832047df78f51c84f",
+            "unknown",
+            "none"
+          ],
+          "mode_ids": [
+            "normal",
+            "flip",
+            "unknown_channel"
+          ],
+          "mass": [
+            {
+              "goal_id": "task-9cad706e60e745cf3c01a413",
+              "mode_id": "normal",
+              "probability": 1.0
+            },
+            {
+              "goal_id": "task-9cad706e60e745cf3c01a413",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "task-9cad706e60e745cf3c01a413",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "task-d5fc9bc832047df78f51c84f",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "task-d5fc9bc832047df78f51c84f",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "task-d5fc9bc832047df78f51c84f",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            }
+          ],
+          "as_of_event_id": "sample-3"
+        },
+        "goal_marginals": {
+          "task-9cad706e60e745cf3c01a413": 1.0,
+          "task-d5fc9bc832047df78f51c84f": 0.0,
+          "unknown": 0.0,
+          "none": 0.0
+        },
+        "channel_marginals": {
+          "normal": 1.0,
+          "flip": 0.0,
+          "unknown_channel": 0.0
+        }
+      },
+      "execution_allowed": false,
+      "physical_stop_verified": false
+    }
+  ],
+  "replay_matches": true,
+  "physical_execution_allowed": false
+}

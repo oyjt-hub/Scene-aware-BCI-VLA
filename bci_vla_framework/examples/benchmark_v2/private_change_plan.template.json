@@ -1,0 +1,229 @@
+{
+  "schema_version": "step04-plan-design-v1",
+  "plan_version": "V2",
+  "document_kind": "design_template",
+  "status": "draft_not_executable",
+  "visibility": "evaluation_private_only",
+  "ready_for_collection": false,
+  "provenance": "unexecuted_protocol_design_not_data",
+  "freeze_state": {
+    "plan_sha256": null,
+    "locked_at": null,
+    "authorized_collection_scope": null
+  },
+  "parameters": {
+    "participant_count": null,
+    "episodes_per_condition": null,
+    "diagnostic_horizon_s": null,
+    "execution_timeout_s": null,
+    "interaction_budget_s": null,
+    "reaction_guard_interval_s": null,
+    "goal_change_rate": null,
+    "channel_change_rate": null,
+    "change_times_s": null,
+    "joint_change_separation_s": null,
+    "channel_noise_parameters": null,
+    "probe_compliance_model": null,
+    "task_probe_transfer_model": null,
+    "randomization_seed": null,
+    "split_seed": null,
+    "detection_thresholds": null,
+    "effect_size_or_noninferiority_margin": null,
+    "sample_size_rationale": null,
+    "primary_comparisons": null,
+    "multiplicity_rule": null,
+    "analysis_independence_unit": null,
+    "primary_metric_priority": null
+  },
+  "methods": {
+    "frozen_method_set": null,
+    "checkpoints": null,
+    "shared_probe_and_confirmation_rules": null,
+    "same_public_information": true,
+    "runtime_verified": false
+  },
+  "planned_cells": [
+    {
+      "cell_id": "C00",
+      "goal_change_planned": false,
+      "channel_change_planned": false,
+      "independently_controlled_layers": [
+        "L1",
+        "L2"
+      ],
+      "intended_episode_count": null,
+      "schedule": null
+    },
+    {
+      "cell_id": "C10",
+      "goal_change_planned": true,
+      "channel_change_planned": false,
+      "independently_controlled_layers": [
+        "L1",
+        "L2"
+      ],
+      "intended_episode_count": null,
+      "schedule": null
+    },
+    {
+      "cell_id": "C01",
+      "goal_change_planned": false,
+      "channel_change_planned": true,
+      "independently_controlled_layers": [
+        "L1",
+        "L2"
+      ],
+      "intended_episode_count": null,
+      "schedule": null
+    },
+    {
+      "cell_id": "C11",
+      "goal_change_planned": true,
+      "channel_change_planned": true,
+      "independently_controlled_layers": [
+        "L1",
+        "L2"
+      ],
+      "intended_episode_count": null,
+      "schedule": null
+    }
+  ],
+  "stress_conditions": [
+    {
+      "id": "S01",
+      "description": "stable independent random errors",
+      "severity": null,
+      "assigned_cells": null
+    },
+    {
+      "id": "S02",
+      "description": "short correlated error burst",
+      "severity": null,
+      "assigned_cells": null
+    },
+    {
+      "id": "S03",
+      "description": "persistent asymmetric change",
+      "severity": null,
+      "assigned_cells": null
+    },
+    {
+      "id": "S04",
+      "description": "gradual change",
+      "severity": null,
+      "assigned_cells": null
+    },
+    {
+      "id": "S05",
+      "description": "low change rate / long stable periods",
+      "severity": null,
+      "assigned_cells": null
+    },
+    {
+      "id": "S06",
+      "description": "wrong strong prior / low-prior new goal",
+      "severity": null,
+      "assigned_cells": null
+    },
+    {
+      "id": "S07",
+      "description": "probe omission / nonresponse / noncompliance",
+      "severity": null,
+      "assigned_cells": null
+    },
+    {
+      "id": "S08",
+      "description": "unseen goal / unseen or out-of-model channel",
+      "severity": null,
+      "assigned_cells": null
+    },
+    {
+      "id": "S09",
+      "description": "uninformative or random probe",
+      "severity": null,
+      "assigned_cells": null
+    },
+    {
+      "id": "S10",
+      "description": "probe-to-task transfer invalid",
+      "severity": null,
+      "assigned_cells": null
+    },
+    {
+      "id": "S11",
+      "description": "double change without output conflict",
+      "severity": null,
+      "assigned_cells": null
+    },
+    {
+      "id": "S12",
+      "description": "overlapping prefixes / duplicate or delayed events",
+      "severity": null,
+      "assigned_cells": null
+    }
+  ],
+  "required_private_episode_fields": [
+    "episode_alias",
+    "assigned_method",
+    "paired_condition_id",
+    "participant_group",
+    "session_group",
+    "scene_group",
+    "recording_group",
+    "evidence_level",
+    "truth_scope",
+    "task_card_initial",
+    "task_card_changed",
+    "cue_presented_interval",
+    "comprehension_annotation",
+    "goal_validity_interval",
+    "channel_intervention_source",
+    "injection_site",
+    "applies_to_modes",
+    "channel_before",
+    "channel_after",
+    "actual_change_interval",
+    "channel_calibration_uncertainty",
+    "independent_seed",
+    "assigned_schedule",
+    "actual_exposure",
+    "factor_cell_intended",
+    "factor_cell_observed",
+    "endpoint_predicate_version",
+    "clock_uncertainty",
+    "missing_reason"
+  ],
+  "split_policy": {
+    "development_groups": null,
+    "calibration_groups": null,
+    "validation_groups": null,
+    "test_groups": null,
+    "pilot_groups": null,
+    "group_dimensions": [
+      "participant",
+      "session",
+      "physical_scene_or_near_duplicate",
+      "source_recording_or_prefix"
+    ],
+    "no_random_row_split": true,
+    "overlap_policy": "bind related samples before split; if infeasible redesign or narrow generalization claim"
+  },
+  "truth_rules": {
+    "task_card_is_internal_intent": false,
+    "cue_time_is_exact_mental_switch": false,
+    "infer_truth_from_robot_success": false,
+    "digital_corruption_is_physiological_drift": false,
+    "unknown_natural_change_time_allowed": true,
+    "research_confirmation_visible_to_controller": false
+  },
+  "collection_blockers": [
+    "actual collection authorization and study arrangements",
+    "I01 sampling chain replay/fix",
+    "exact policy checkpoint and supported task capability",
+    "independent task cards / comprehension protocol",
+    "independent endpoint predicates",
+    "probe compliance / distinguishability / transfer calibration",
+    "clock and full-time accounting",
+    "split feasibility and pilot-based numeric freeze"
+  ]
+}

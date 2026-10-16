@@ -1,0 +1,266 @@
+{
+  "scope": "user_directed_LIBERO_backend_smoke_and_simulation_gate",
+  "full_framework_simulation_completed": false,
+  "files": [
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\pilot\\libero_actions.py",
+      "sha256": "83af0ce8b41900a88ee9a878e05f7fa339ad39a8288a6ed2b4f3c9bc5304ea87"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\pilot\\libero_gate.py",
+      "sha256": "fdca6f8b87742c8eb724b2bfb02e706f5c5c20a71347d2a924682438c1f7278f"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\configs\\execution\\libero_simulation_v1.json",
+      "sha256": "865ae8f247656bae3d174a716fbc91b7eaa4e57d4316d9b3aadbfd4198893838"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\docs\\14_closed_loop.txt",
+      "sha256": "00543576d5462ededc772efa4bbe0b47d3d8a73b34791e36ff669cf5db19b373"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\docs\\14_deployment_and_rollback.txt",
+      "sha256": "d97b8d20595cad1af77f3d0a4fe544972d4a4ca6540821802591669e493baca1"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\12R_source_manifest.json",
+      "sha256": "3247dfc93860cada3f44101d9fb37ac3a384cd5883c32687955c497b563e48bf"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\13_source_manifest.json",
+      "sha256": "c7afbb14f6300859dd6c493c5d525e3983d0560968a8dd1c717f5978e147e782"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\14_acceptance.txt",
+      "sha256": "30e1673d4df882e419d2090a7e01fcf63f13b9e67028ca9c6cd0510959e0b62f"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\14_coverage.json",
+      "sha256": "1113affbe8eaa724d5bedeedf33d986523bf89d9c6041017d25ff4f36e638605"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\14_executed_sources.json",
+      "sha256": "2ad493f68792ff8c93a82d7fa7091fb346493939aaac9fc861e5ea4f0cc4807d"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\14_libero_assets.json",
+      "sha256": "39000a6db4fe0cccaf2028d47600a7c301a1ada0262b830ccca43fc1099a0c0f"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\14_remote_audit.json",
+      "sha256": "933f8bdcd2ef7e96812693d214e333005c42c4c33fd2e22ed19b5acc20cdad57"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\14_remote_interface_lines.json",
+      "sha256": "90c5b8ba19f6fb54bf52caf3f833449b758c788ce20fedaaae07e284050a6f06"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\14_remote_job.json",
+      "sha256": "4433b19239305f423e64df2b9f33c30ed04f7676bb03cb7dfdc29ed8ae7d2e42"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\14_remote_job_v2.json",
+      "sha256": "4ee7188a000baf37906fadd3e9089aac744624d033fca1d4a2897ec40612de2c"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\14_remote_job_v3.json",
+      "sha256": "9709bbfc7db3796cfa401ca4709c9fb53ad98d9d01a2f135f067dba84690ef63"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\14_test_output.txt",
+      "sha256": "f28434626b8b9424a9650cb85340322e0b1b984d4bc90664b1086e26ca5f703b"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\14_test_result.json",
+      "sha256": "4ffb1190af6e240e8558e24fb2052f7566268ed6758ee9488a385d316ee9c72f"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\14_trace_audit.json",
+      "sha256": "6862000810d46ca8c837c16f623809e0ee52b76f1c0af84e3089aadcee733e6b"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\collect_step14_libero.py",
+      "sha256": "f3e41491880f2c30ffab1210bc49f72eb8429d9bb3359e313e16e4cacab14f78"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\deploy_step14_libero.py",
+      "sha256": "c44efc14588cce0cd059ee072b05267abbe973dbe118723a3192ca43f49c0fc4"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\finalize_step14.py",
+      "sha256": "e578bda044d35625b7f62796c2fc7e7d1f450017650f0f3815df107064fe1b33"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\inspect_step14_libero_assets.py",
+      "sha256": "c4659f750ab943a016ff732b07d3bd6a0d2f5f3e5fe805616684932927cc58ee"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\inspect_step14_remote.py",
+      "sha256": "21931d8524d7fdc857a4b1382f65409f9e7b68915617ac0a9652b2e77b1a13ae"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\run_step14_tests.py",
+      "sha256": "6bccf758db64d8433f8276d46f524c3932ab97597a34a75875a0de72f32106a2"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\step14_libero_orchestrator.py",
+      "sha256": "f1a8c35edbde13aa705b14a6a6de3fc8794a98f17f5415466627ea6bbf478929"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\step14_libero_worker.py",
+      "sha256": "3c61e513f4e09cf2af898f8a0bb04dc6b9a20fd2a96fcbd454bdd7026a815738"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_robot_14_libero_simulation\\collected_manifest.json",
+      "sha256": "c5028c6494409b9aeebd3b199334aacc1714b944a0a29c9d48137bcceea38631"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_robot_14_libero_simulation\\v1\\launcher.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_robot_14_libero_simulation\\v1\\orchestration.json",
+      "sha256": "9ad9d020ce82f26ebe5d42932fa6fa281227427470b8bdad8571824768994c3a"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_robot_14_libero_simulation\\v1\\server.log",
+      "sha256": "070ba7b9fd39a9fcc48a7898c444e56437f59085a027ee88d31ca0ec5d3fe8f9"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_robot_14_libero_simulation\\v2\\launcher.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_robot_14_libero_simulation\\v2\\orchestration.json",
+      "sha256": "5784b8c76cfb27cc6600688a1287fe296192693f231763b865ebe8941c020ebc"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_robot_14_libero_simulation\\v2\\results\\episodes.json",
+      "sha256": "4783df915ad5aad1333fb6038207742112e726a7486f829818295f5f3de7837b"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_robot_14_libero_simulation\\v2\\results\\events.jsonl",
+      "sha256": "a96b69c76a3c6954f9e9b9055cace2ec6b2a28536fb58e9accc211960142c80b"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_robot_14_libero_simulation\\v2\\results\\nominal_task0.mp4",
+      "sha256": "bc8ce1271e790805533d4d62fce719fbfdced892f72ddb1b9137282ccc03da82"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_robot_14_libero_simulation\\v2\\results\\nominal_task0_first.png",
+      "sha256": "3abbbaf803158ae7d1b909b2a7f26a9db5b3040843622d3dbb18ea1e44334c6d"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_robot_14_libero_simulation\\v2\\results\\nominal_task0_last.png",
+      "sha256": "8151133ee15642af2828372bd311befe29416cbcd34556740a1935f8ff5397c6"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_robot_14_libero_simulation\\v2\\results\\nominal_task1.mp4",
+      "sha256": "cb418f89e465f87e7da37d7d3197fed6df60620ce512a2d0fb07fb3aedcf6c02"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_robot_14_libero_simulation\\v2\\results\\nominal_task1_first.png",
+      "sha256": "8f0fbca38a78e3ae10f8fa1e480cc4d1f3736a03de49d73384a7764172d9116b"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_robot_14_libero_simulation\\v2\\results\\nominal_task1_last.png",
+      "sha256": "88ca6fcb011142f6839f5f0bd69c716cd5a015aee0dcee03549c817d157c823c"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_robot_14_libero_simulation\\v2\\results\\probe_stop_task0.mp4",
+      "sha256": "88a6a8109d81063480538091321fd7ec4745be50f93df3047d7ebf361322840e"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_robot_14_libero_simulation\\v2\\results\\probe_stop_task0_first.png",
+      "sha256": "3abbbaf803158ae7d1b909b2a7f26a9db5b3040843622d3dbb18ea1e44334c6d"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_robot_14_libero_simulation\\v2\\results\\probe_stop_task0_last.png",
+      "sha256": "be6f8742c043bd073674efabfb629e81c3b842e5e7db2969e1c2a0ea86a4b2c0"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_robot_14_libero_simulation\\v2\\results\\summary.json",
+      "sha256": "f29ebcf29943e1f95043a13fb5e09e5cdd11587c72a8b95cdc5effed7e50345c"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_robot_14_libero_simulation\\v2\\server.log",
+      "sha256": "9bbe53e1f036a17d91f3b0c97fde02674f176727cd8903585b8161e31d53f945"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_robot_14_libero_simulation\\v2\\worker.log",
+      "sha256": "5adcde7671e18f136a501510975e4fd67fab9553fcc0662a6d3a7a1ec7653e46"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_robot_14_libero_simulation_v3\\collected_manifest.json",
+      "sha256": "e259d96bd0c7c53a9852ee676fa068aa83d0235ca1f3d4e4e3130264229d3eee"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_robot_14_libero_simulation_v3\\v3\\launcher.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_robot_14_libero_simulation_v3\\v3\\orchestration.json",
+      "sha256": "810587fe5f2390be2272a95f18bbb263679c9ff9c74c812f56a1ea0ef0d82159"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_robot_14_libero_simulation_v3\\v3\\results\\episodes.json",
+      "sha256": "62369748a37edc6c8522b0aa7ae2437816daf2b19e9052dc44ff3d16a661636a"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_robot_14_libero_simulation_v3\\v3\\results\\events.jsonl",
+      "sha256": "74c5563945e42d7805d37f5a960482640c265ab6c564b718a5eea8eaa95d60a9"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_robot_14_libero_simulation_v3\\v3\\results\\nominal_task0.mp4",
+      "sha256": "f3e657f697dc5dd93956032bbbd547bba36992ec4eb6bff3448cc4cb5087d339"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_robot_14_libero_simulation_v3\\v3\\results\\nominal_task0_first.png",
+      "sha256": "3abbbaf803158ae7d1b909b2a7f26a9db5b3040843622d3dbb18ea1e44334c6d"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_robot_14_libero_simulation_v3\\v3\\results\\nominal_task0_last.png",
+      "sha256": "6f319eabccad48b037d16bbbba6b3015226094c656bda29c0a0d9b1d9fa1a09b"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_robot_14_libero_simulation_v3\\v3\\results\\nominal_task1.mp4",
+      "sha256": "6a8aa9956b6f6e2be807c3306eff8b21a933760752b2ade2694e6e6373a29f51"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_robot_14_libero_simulation_v3\\v3\\results\\nominal_task1_first.png",
+      "sha256": "8f0fbca38a78e3ae10f8fa1e480cc4d1f3736a03de49d73384a7764172d9116b"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_robot_14_libero_simulation_v3\\v3\\results\\nominal_task1_last.png",
+      "sha256": "504e072352496ab9c6aad400389ee5155ef1a15b4f5230eaa910eddd3c0a1d6d"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_robot_14_libero_simulation_v3\\v3\\results\\probe_stop_task0.mp4",
+      "sha256": "82ade367949b601ecc98998ad24ff2157ea75364e02005426b7071ed90dde953"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_robot_14_libero_simulation_v3\\v3\\results\\probe_stop_task0_first.png",
+      "sha256": "3abbbaf803158ae7d1b909b2a7f26a9db5b3040843622d3dbb18ea1e44334c6d"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_robot_14_libero_simulation_v3\\v3\\results\\probe_stop_task0_last.png",
+      "sha256": "6ecd24261badb148eb059ff381a8045f39493dddd8e176da7a317615982c8a4f"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_robot_14_libero_simulation_v3\\v3\\results\\summary.json",
+      "sha256": "884b0369988a6ac9418bae315c44318ffae4d2f629724721f53560ac32f8c9a1"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_robot_14_libero_simulation_v3\\v3\\server.log",
+      "sha256": "1bf351a78124fb58be87f29297fb455358eb8946cc8214eaddf7582c52770ec0"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_robot_14_libero_simulation_v3\\v3\\worker.log",
+      "sha256": "7caceb42993fe5c3e4fd6cbece203d955fd7563333551daf9d6b64bbe47b8984"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\tests\\test_libero_gate.py",
+      "sha256": "c558bc4f9792b698635dc54a27e91da67d4420fd336eb750d76e2234b309ecb1"
+    }
+  ]
+}

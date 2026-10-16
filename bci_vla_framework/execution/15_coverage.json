@@ -1,0 +1,27 @@
+{
+  "scope": "step15_feasible_replay_and_second_VLA_simulation_only",
+  "replay_encoding_equivalence": "PASS",
+  "second_VLA_simulation_backend": "PASS",
+  "software_tests": 385,
+  "frozen_sources_changed": 0,
+  "real_second_BCI_tested": false,
+  "real_2x2_completed": false,
+  "full_framework_migration_completed": false,
+  "independent_consequence_calibration_completed": false,
+  "formal_held_out_transfer_tested": false,
+  "nominal_pi05_successes": 2,
+  "nominal_pi05_episodes": 2,
+  "stop_injection_episodes": 1,
+  "controller_clipped_values": 207,
+  "real_BCI_trials": 0,
+  "physical_robot_commands": 0,
+  "G2_passed": false,
+  "G3_passed": false,
+  "effective_pi05_run": "runs/transfer_step15_pi05_final/v4/results",
+  "remaining": [
+    "step14 full framework LIBERO integration",
+    "independent consequence calibration",
+    "second real BCI capability and calibration",
+    "complete framework 2x2 with held-out combination"
+  ]
+}

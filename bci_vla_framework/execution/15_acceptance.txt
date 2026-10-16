@@ -1,0 +1,4 @@
+﻿步骤15可执行分支：回放编码等价PASS；第二VLA的LIBERO接入与仿真门控PASS；385软件回归PASS。
+冻结核心/参数来源变更0；两个π0.5任务成功，另1个故障试次按设计停止，终点队列已清空。
+真实第二BCI、完整框架迁移、2×2留出与独立后果校准未完成，步骤15整体保留进行中。
+主报告docs/15_transfer_matrix.txt；冻结来源execution/15_source_manifest.json；不自动通过G2/G3。

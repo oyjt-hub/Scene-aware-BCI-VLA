@@ -1,0 +1,1275 @@
+{
+  "date": "2026-10-16",
+  "scope": "finite_analytic_oracle_consistency_not_experiment",
+  "cases": [
+    {
+      "fixture_id": "alias",
+      "state_belief": {
+        "goal_ids": [
+          "task-9cad706e60e745cf3c01a413",
+          "task-d5fc9bc832047df78f51c84f",
+          "unknown",
+          "none"
+        ],
+        "mode_ids": [
+          "normal",
+          "flip",
+          "unknown_channel"
+        ],
+        "mass": [
+          {
+            "goal_id": "task-d5fc9bc832047df78f51c84f",
+            "mode_id": "normal",
+            "probability": 0.5
+          },
+          {
+            "goal_id": "task-9cad706e60e745cf3c01a413",
+            "mode_id": "flip",
+            "probability": 0.5
+          }
+        ],
+        "as_of_event_id": "handwritten-alias-prior"
+      },
+      "same_information_oracles": {
+        "1": {
+          "scope": "offline_exact_same_information",
+          "horizon": 1,
+          "selected_action": {
+            "action_id": "probe:0:1.0",
+            "kind": "CHANNEL_PROBE",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": "0",
+            "goal_id": null
+          },
+          "value": 0.8713177498731328,
+          "candidates": [
+            {
+              "action_id": "pause",
+              "kind": "PAUSE",
+              "duration_s": 0,
+              "setup_s": 0.0,
+              "elapsed_s": 0.0,
+              "prompt": null,
+              "goal_id": null,
+              "value": 1.0,
+              "observation_branches": 0
+            },
+            {
+              "action_id": "exit",
+              "kind": "EXIT",
+              "duration_s": 0,
+              "setup_s": 0.0,
+              "elapsed_s": 0.0,
+              "prompt": null,
+              "goal_id": null,
+              "value": 1.0,
+              "observation_branches": 0
+            },
+            {
+              "action_id": "confirm:task-9cad706e60e745cf3c01a413",
+              "kind": "CONFIRM",
+              "duration_s": 1.0,
+              "setup_s": 1.0,
+              "elapsed_s": 2.0,
+              "prompt": null,
+              "goal_id": "task-9cad706e60e745cf3c01a413",
+              "value": 1.090677957975536,
+              "observation_branches": 3
+            },
+            {
+              "action_id": "confirm:task-d5fc9bc832047df78f51c84f",
+              "kind": "CONFIRM",
+              "duration_s": 1.0,
+              "setup_s": 1.0,
+              "elapsed_s": 2.0,
+              "prompt": null,
+              "goal_id": "task-d5fc9bc832047df78f51c84f",
+              "value": 1.2743220420244645,
+              "observation_branches": 3
+            },
+            {
+              "action_id": "TASK_QUERY:1.0",
+              "kind": "TASK_QUERY",
+              "duration_s": 1.0,
+              "setup_s": 1.0,
+              "elapsed_s": 2.0,
+              "prompt": null,
+              "goal_id": null,
+              "value": 1.04,
+              "observation_branches": 3
+            },
+            {
+              "action_id": "probe:0:1.0",
+              "kind": "CHANNEL_PROBE",
+              "duration_s": 1.0,
+              "setup_s": 1.0,
+              "elapsed_s": 2.0,
+              "prompt": "0",
+              "goal_id": null,
+              "value": 0.8713177498731328,
+              "observation_branches": 3
+            },
+            {
+              "action_id": "probe:1:1.0",
+              "kind": "CHANNEL_PROBE",
+              "duration_s": 1.0,
+              "setup_s": 1.0,
+              "elapsed_s": 2.0,
+              "prompt": "1",
+              "goal_id": null,
+              "value": 0.8713177498731328,
+              "observation_branches": 3
+            },
+            {
+              "action_id": "probe:0:2.0",
+              "kind": "CHANNEL_PROBE",
+              "duration_s": 2.0,
+              "setup_s": 1.0,
+              "elapsed_s": 3.0,
+              "prompt": "0",
+              "goal_id": null,
+              "value": 0.8913177498731328,
+              "observation_branches": 3
+            },
+            {
+              "action_id": "probe:1:2.0",
+              "kind": "CHANNEL_PROBE",
+              "duration_s": 2.0,
+              "setup_s": 1.0,
+              "elapsed_s": 3.0,
+              "prompt": "1",
+              "goal_id": null,
+              "value": 0.8913177498731328,
+              "observation_branches": 3
+            }
+          ],
+          "compute_ns": 3727100,
+          "reason": null,
+          "execution_allowed": false
+        },
+        "2": {
+          "scope": "offline_exact_same_information",
+          "horizon": 2,
+          "selected_action": {
+            "action_id": "probe:0:1.0",
+            "kind": "CHANNEL_PROBE",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": "0",
+            "goal_id": null
+          },
+          "value": 0.8713177498731328,
+          "candidates": [
+            {
+              "action_id": "pause",
+              "kind": "PAUSE",
+              "duration_s": 0,
+              "setup_s": 0.0,
+              "elapsed_s": 0.0,
+              "prompt": null,
+              "goal_id": null,
+              "value": 1.0,
+              "observation_branches": 0
+            },
+            {
+              "action_id": "exit",
+              "kind": "EXIT",
+              "duration_s": 0,
+              "setup_s": 0.0,
+              "elapsed_s": 0.0,
+              "prompt": null,
+              "goal_id": null,
+              "value": 1.0,
+              "observation_branches": 0
+            },
+            {
+              "action_id": "confirm:task-9cad706e60e745cf3c01a413",
+              "kind": "CONFIRM",
+              "duration_s": 1.0,
+              "setup_s": 1.0,
+              "elapsed_s": 2.0,
+              "prompt": null,
+              "goal_id": "task-9cad706e60e745cf3c01a413",
+              "value": 1.090677957975536,
+              "observation_branches": 3
+            },
+            {
+              "action_id": "confirm:task-d5fc9bc832047df78f51c84f",
+              "kind": "CONFIRM",
+              "duration_s": 1.0,
+              "setup_s": 1.0,
+              "elapsed_s": 2.0,
+              "prompt": null,
+              "goal_id": "task-d5fc9bc832047df78f51c84f",
+              "value": 1.2743220420244645,
+              "observation_branches": 3
+            },
+            {
+              "action_id": "TASK_QUERY:1.0",
+              "kind": "TASK_QUERY",
+              "duration_s": 1.0,
+              "setup_s": 1.0,
+              "elapsed_s": 2.0,
+              "prompt": null,
+              "goal_id": null,
+              "value": 0.9265427131099746,
+              "observation_branches": 3
+            },
+            {
+              "action_id": "probe:0:1.0",
+              "kind": "CHANNEL_PROBE",
+              "duration_s": 1.0,
+              "setup_s": 1.0,
+              "elapsed_s": 2.0,
+              "prompt": "0",
+              "goal_id": null,
+              "value": 0.8713177498731328,
+              "observation_branches": 3
+            },
+            {
+              "action_id": "probe:1:1.0",
+              "kind": "CHANNEL_PROBE",
+              "duration_s": 1.0,
+              "setup_s": 1.0,
+              "elapsed_s": 2.0,
+              "prompt": "1",
+              "goal_id": null,
+              "value": 0.8713177498731328,
+              "observation_branches": 3
+            },
+            {
+              "action_id": "probe:0:2.0",
+              "kind": "CHANNEL_PROBE",
+              "duration_s": 2.0,
+              "setup_s": 1.0,
+              "elapsed_s": 3.0,
+              "prompt": "0",
+              "goal_id": null,
+              "value": 0.8913177498731328,
+              "observation_branches": 3
+            },
+            {
+              "action_id": "probe:1:2.0",
+              "kind": "CHANNEL_PROBE",
+              "duration_s": 2.0,
+              "setup_s": 1.0,
+              "elapsed_s": 3.0,
+              "prompt": "1",
+              "goal_id": null,
+              "value": 0.8913177498731328,
+              "observation_branches": 3
+            }
+          ],
+          "compute_ns": 44952400,
+          "reason": null,
+          "execution_allowed": false
+        }
+      },
+      "omniscient_reference": {
+        "scope": "non_deployable_omniscient_reference",
+        "horizon": 2,
+        "conditional_actions": [
+          {
+            "revealed_state": [
+              "task-9cad706e60e745cf3c01a413",
+              "flip"
+            ],
+            "probability": 0.5,
+            "conditional_action": {
+              "action_id": "confirm:task-9cad706e60e745cf3c01a413",
+              "kind": "CONFIRM",
+              "duration_s": 1.0,
+              "setup_s": 1.0,
+              "elapsed_s": 2.0,
+              "prompt": null,
+              "goal_id": "task-9cad706e60e745cf3c01a413"
+            },
+            "value": 0.9236846859554456
+          },
+          {
+            "revealed_state": [
+              "task-d5fc9bc832047df78f51c84f",
+              "normal"
+            ],
+            "probability": 0.5,
+            "conditional_action": {
+              "action_id": "confirm:task-d5fc9bc832047df78f51c84f",
+              "kind": "CONFIRM",
+              "duration_s": 1.0,
+              "setup_s": 1.0,
+              "elapsed_s": 2.0,
+              "prompt": null,
+              "goal_id": "task-d5fc9bc832047df78f51c84f"
+            },
+            "value": 0.42719973148636353
+          }
+        ],
+        "value": 0.6754422087209045,
+        "compute_ns": 958548300,
+        "confirmation_model": "same_noisy_CONFIRM",
+        "execution_allowed": false
+      },
+      "checks": [
+        {
+          "method": "M",
+          "horizon": 1,
+          "selected_action": "probe:0:1.0",
+          "exact_optimal_value": 0.8713177498731328,
+          "exact_value_of_selected_action": 0.8713177498731328,
+          "decision_regret_at_same_horizon": 0.0,
+          "planning_value_difference": 0.0,
+          "method_compute_ns": 3990900,
+          "oracle_compute_ns": 3727100
+        },
+        {
+          "method": "M2",
+          "horizon": 2,
+          "selected_action": "probe:0:1.0",
+          "exact_optimal_value": 0.8713177498731328,
+          "exact_value_of_selected_action": 0.8713177498731328,
+          "decision_regret_at_same_horizon": 0.0,
+          "planning_value_difference": 0.0,
+          "method_compute_ns": 34385200,
+          "oracle_compute_ns": 44952400
+        },
+        {
+          "method": "B9",
+          "horizon": 1,
+          "selected_action": "probe:0:1.0",
+          "exact_optimal_value": 0.8713177498731328,
+          "exact_value_of_selected_action": 0.8713177498731328,
+          "decision_regret_at_same_horizon": 0.0,
+          "planning_value_difference": 0.0,
+          "method_compute_ns": 3751800,
+          "oracle_compute_ns": 3727100
+        }
+      ]
+    },
+    {
+      "fixture_id": "known_normal",
+      "state_belief": {
+        "goal_ids": [
+          "task-9cad706e60e745cf3c01a413",
+          "task-d5fc9bc832047df78f51c84f"
+        ],
+        "mode_ids": [
+          "normal",
+          "flip"
+        ],
+        "mass": [
+          {
+            "goal_id": "task-9cad706e60e745cf3c01a413",
+            "mode_id": "normal",
+            "probability": 1
+          },
+          {
+            "goal_id": "task-9cad706e60e745cf3c01a413",
+            "mode_id": "flip",
+            "probability": 0
+          },
+          {
+            "goal_id": "task-d5fc9bc832047df78f51c84f",
+            "mode_id": "normal",
+            "probability": 0
+          },
+          {
+            "goal_id": "task-d5fc9bc832047df78f51c84f",
+            "mode_id": "flip",
+            "probability": 0
+          }
+        ],
+        "as_of_event_id": "finite-hypothetical-observation-not-live-evidence"
+      },
+      "same_information_oracles": {
+        "1": {
+          "scope": "offline_exact_same_information",
+          "horizon": 1,
+          "selected_action": {
+            "action_id": "confirm:task-9cad706e60e745cf3c01a413",
+            "kind": "CONFIRM",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": null,
+            "goal_id": "task-9cad706e60e745cf3c01a413"
+          },
+          "value": 0.42719973148636353,
+          "candidates": [
+            {
+              "action_id": "pause",
+              "kind": "PAUSE",
+              "duration_s": 0,
+              "setup_s": 0.0,
+              "elapsed_s": 0.0,
+              "prompt": null,
+              "goal_id": null,
+              "value": 1.0,
+              "observation_branches": 0
+            },
+            {
+              "action_id": "exit",
+              "kind": "EXIT",
+              "duration_s": 0,
+              "setup_s": 0.0,
+              "elapsed_s": 0.0,
+              "prompt": null,
+              "goal_id": null,
+              "value": 1.0,
+              "observation_branches": 0
+            },
+            {
+              "action_id": "confirm:task-9cad706e60e745cf3c01a413",
+              "kind": "CONFIRM",
+              "duration_s": 1.0,
+              "setup_s": 1.0,
+              "elapsed_s": 2.0,
+              "prompt": null,
+              "goal_id": "task-9cad706e60e745cf3c01a413",
+              "value": 0.42719973148636353,
+              "observation_branches": 3
+            },
+            {
+              "action_id": "confirm:task-d5fc9bc832047df78f51c84f",
+              "kind": "CONFIRM",
+              "duration_s": 1.0,
+              "setup_s": 1.0,
+              "elapsed_s": 2.0,
+              "prompt": null,
+              "goal_id": "task-d5fc9bc832047df78f51c84f",
+              "value": 1.257671229995626,
+              "observation_branches": 3
+            },
+            {
+              "action_id": "TASK_QUERY:1.0",
+              "kind": "TASK_QUERY",
+              "duration_s": 1.0,
+              "setup_s": 1.0,
+              "elapsed_s": 2.0,
+              "prompt": null,
+              "goal_id": null,
+              "value": 0.5207522269925826,
+              "observation_branches": 3
+            },
+            {
+              "action_id": "probe:0:1.0",
+              "kind": "CHANNEL_PROBE",
+              "duration_s": 1.0,
+              "setup_s": 1.0,
+              "elapsed_s": 2.0,
+              "prompt": "0",
+              "goal_id": null,
+              "value": 0.5726770042933242,
+              "observation_branches": 3
+            },
+            {
+              "action_id": "probe:1:1.0",
+              "kind": "CHANNEL_PROBE",
+              "duration_s": 1.0,
+              "setup_s": 1.0,
+              "elapsed_s": 2.0,
+              "prompt": "1",
+              "goal_id": null,
+              "value": 0.5726770042933244,
+              "observation_branches": 3
+            },
+            {
+              "action_id": "probe:0:2.0",
+              "kind": "CHANNEL_PROBE",
+              "duration_s": 2.0,
+              "setup_s": 1.0,
+              "elapsed_s": 3.0,
+              "prompt": "0",
+              "goal_id": null,
+              "value": 0.5926770042933243,
+              "observation_branches": 3
+            },
+            {
+              "action_id": "probe:1:2.0",
+              "kind": "CHANNEL_PROBE",
+              "duration_s": 2.0,
+              "setup_s": 1.0,
+              "elapsed_s": 3.0,
+              "prompt": "1",
+              "goal_id": null,
+              "value": 0.5926770042933243,
+              "observation_branches": 3
+            }
+          ],
+          "compute_ns": 3867800,
+          "reason": null,
+          "execution_allowed": false
+        },
+        "2": {
+          "scope": "offline_exact_same_information",
+          "horizon": 2,
+          "selected_action": {
+            "action_id": "confirm:task-9cad706e60e745cf3c01a413",
+            "kind": "CONFIRM",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": null,
+            "goal_id": "task-9cad706e60e745cf3c01a413"
+          },
+          "value": 0.42719973148636353,
+          "candidates": [
+            {
+              "action_id": "pause",
+              "kind": "PAUSE",
+              "duration_s": 0,
+              "setup_s": 0.0,
+              "elapsed_s": 0.0,
+              "prompt": null,
+              "goal_id": null,
+              "value": 1.0,
+              "observation_branches": 0
+            },
+            {
+              "action_id": "exit",
+              "kind": "EXIT",
+              "duration_s": 0,
+              "setup_s": 0.0,
+              "elapsed_s": 0.0,
+              "prompt": null,
+              "goal_id": null,
+              "value": 1.0,
+              "observation_branches": 0
+            },
+            {
+              "action_id": "confirm:task-9cad706e60e745cf3c01a413",
+              "kind": "CONFIRM",
+              "duration_s": 1.0,
+              "setup_s": 1.0,
+              "elapsed_s": 2.0,
+              "prompt": null,
+              "goal_id": "task-9cad706e60e745cf3c01a413",
+              "value": 0.42719973148636353,
+              "observation_branches": 3
+            },
+            {
+              "action_id": "confirm:task-d5fc9bc832047df78f51c84f",
+              "kind": "CONFIRM",
+              "duration_s": 1.0,
+              "setup_s": 1.0,
+              "elapsed_s": 2.0,
+              "prompt": null,
+              "goal_id": "task-d5fc9bc832047df78f51c84f",
+              "value": 1.257671229995626,
+              "observation_branches": 3
+            },
+            {
+              "action_id": "TASK_QUERY:1.0",
+              "kind": "TASK_QUERY",
+              "duration_s": 1.0,
+              "setup_s": 1.0,
+              "elapsed_s": 2.0,
+              "prompt": null,
+              "goal_id": null,
+              "value": 0.5207522269925826,
+              "observation_branches": 3
+            },
+            {
+              "action_id": "probe:0:1.0",
+              "kind": "CHANNEL_PROBE",
+              "duration_s": 1.0,
+              "setup_s": 1.0,
+              "elapsed_s": 2.0,
+              "prompt": "0",
+              "goal_id": null,
+              "value": 0.5726770042933242,
+              "observation_branches": 3
+            },
+            {
+              "action_id": "probe:1:1.0",
+              "kind": "CHANNEL_PROBE",
+              "duration_s": 1.0,
+              "setup_s": 1.0,
+              "elapsed_s": 2.0,
+              "prompt": "1",
+              "goal_id": null,
+              "value": 0.5726770042933244,
+              "observation_branches": 3
+            },
+            {
+              "action_id": "probe:0:2.0",
+              "kind": "CHANNEL_PROBE",
+              "duration_s": 2.0,
+              "setup_s": 1.0,
+              "elapsed_s": 3.0,
+              "prompt": "0",
+              "goal_id": null,
+              "value": 0.5926770042933243,
+              "observation_branches": 3
+            },
+            {
+              "action_id": "probe:1:2.0",
+              "kind": "CHANNEL_PROBE",
+              "duration_s": 2.0,
+              "setup_s": 1.0,
+              "elapsed_s": 3.0,
+              "prompt": "1",
+              "goal_id": null,
+              "value": 0.5926770042933243,
+              "observation_branches": 3
+            }
+          ],
+          "compute_ns": 38017900,
+          "reason": null,
+          "execution_allowed": false
+        }
+      },
+      "omniscient_reference": {
+        "scope": "non_deployable_omniscient_reference",
+        "horizon": 2,
+        "conditional_actions": [
+          {
+            "revealed_state": [
+              "task-9cad706e60e745cf3c01a413",
+              "normal"
+            ],
+            "probability": 1,
+            "conditional_action": {
+              "action_id": "confirm:task-9cad706e60e745cf3c01a413",
+              "kind": "CONFIRM",
+              "duration_s": 1.0,
+              "setup_s": 1.0,
+              "elapsed_s": 2.0,
+              "prompt": null,
+              "goal_id": "task-9cad706e60e745cf3c01a413"
+            },
+            "value": 0.42719973148636353
+          }
+        ],
+        "value": 0.42719973148636353,
+        "compute_ns": 471824300,
+        "confirmation_model": "same_noisy_CONFIRM",
+        "execution_allowed": false
+      },
+      "checks": [
+        {
+          "method": "M",
+          "horizon": 1,
+          "selected_action": "confirm:task-9cad706e60e745cf3c01a413",
+          "exact_optimal_value": 0.42719973148636353,
+          "exact_value_of_selected_action": 0.42719973148636353,
+          "decision_regret_at_same_horizon": 0.0,
+          "planning_value_difference": 0.0,
+          "method_compute_ns": 3843600,
+          "oracle_compute_ns": 3867800
+        },
+        {
+          "method": "M2",
+          "horizon": 2,
+          "selected_action": "confirm:task-9cad706e60e745cf3c01a413",
+          "exact_optimal_value": 0.42719973148636353,
+          "exact_value_of_selected_action": 0.42719973148636353,
+          "decision_regret_at_same_horizon": 0.0,
+          "planning_value_difference": 0.0,
+          "method_compute_ns": 33907200,
+          "oracle_compute_ns": 38017900
+        },
+        {
+          "method": "B9",
+          "horizon": 1,
+          "selected_action": "confirm:task-9cad706e60e745cf3c01a413",
+          "exact_optimal_value": 0.42719973148636353,
+          "exact_value_of_selected_action": 0.42719973148636353,
+          "decision_regret_at_same_horizon": 0.0,
+          "planning_value_difference": 0.0,
+          "method_compute_ns": 3713600,
+          "oracle_compute_ns": 3867800
+        }
+      ]
+    },
+    {
+      "fixture_id": "mixed_prior",
+      "state_belief": {
+        "goal_ids": [
+          "task-9cad706e60e745cf3c01a413",
+          "task-d5fc9bc832047df78f51c84f"
+        ],
+        "mode_ids": [
+          "normal",
+          "flip"
+        ],
+        "mass": [
+          {
+            "goal_id": "task-9cad706e60e745cf3c01a413",
+            "mode_id": "normal",
+            "probability": 0.1
+          },
+          {
+            "goal_id": "task-9cad706e60e745cf3c01a413",
+            "mode_id": "flip",
+            "probability": 0.2
+          },
+          {
+            "goal_id": "task-d5fc9bc832047df78f51c84f",
+            "mode_id": "normal",
+            "probability": 0.3
+          },
+          {
+            "goal_id": "task-d5fc9bc832047df78f51c84f",
+            "mode_id": "flip",
+            "probability": 0.4
+          }
+        ],
+        "as_of_event_id": "finite-hypothetical-observation-not-live-evidence"
+      },
+      "same_information_oracles": {
+        "1": {
+          "scope": "offline_exact_same_information",
+          "horizon": 1,
+          "selected_action": {
+            "action_id": "probe:0:1.0",
+            "kind": "CHANNEL_PROBE",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": "0",
+            "goal_id": null
+          },
+          "value": 0.946223963875204,
+          "candidates": [
+            {
+              "action_id": "pause",
+              "kind": "PAUSE",
+              "duration_s": 0,
+              "setup_s": 0.0,
+              "elapsed_s": 0.0,
+              "prompt": null,
+              "goal_id": null,
+              "value": 1.0,
+              "observation_branches": 0
+            },
+            {
+              "action_id": "exit",
+              "kind": "EXIT",
+              "duration_s": 0,
+              "setup_s": 0.0,
+              "elapsed_s": 0.0,
+              "prompt": null,
+              "goal_id": null,
+              "value": 1.0,
+              "observation_branches": 0
+            },
+            {
+              "action_id": "confirm:task-9cad706e60e745cf3c01a413",
+              "kind": "CONFIRM",
+              "duration_s": 1.0,
+              "setup_s": 1.0,
+              "elapsed_s": 2.0,
+              "prompt": null,
+              "goal_id": "task-9cad706e60e745cf3c01a413",
+              "value": 1.4533360203634398,
+              "observation_branches": 3
+            },
+            {
+              "action_id": "confirm:task-d5fc9bc832047df78f51c84f",
+              "kind": "CONFIRM",
+              "duration_s": 1.0,
+              "setup_s": 1.0,
+              "elapsed_s": 2.0,
+              "prompt": null,
+              "goal_id": "task-d5fc9bc832047df78f51c84f",
+              "value": 1.0476897873401632,
+              "observation_branches": 3
+            },
+            {
+              "action_id": "TASK_QUERY:1.0",
+              "kind": "TASK_QUERY",
+              "duration_s": 1.0,
+              "setup_s": 1.0,
+              "elapsed_s": 2.0,
+              "prompt": null,
+              "goal_id": null,
+              "value": 1.0400000000000003,
+              "observation_branches": 3
+            },
+            {
+              "action_id": "probe:0:1.0",
+              "kind": "CHANNEL_PROBE",
+              "duration_s": 1.0,
+              "setup_s": 1.0,
+              "elapsed_s": 2.0,
+              "prompt": "0",
+              "goal_id": null,
+              "value": 0.946223963875204,
+              "observation_branches": 3
+            },
+            {
+              "action_id": "probe:1:1.0",
+              "kind": "CHANNEL_PROBE",
+              "duration_s": 1.0,
+              "setup_s": 1.0,
+              "elapsed_s": 2.0,
+              "prompt": "1",
+              "goal_id": null,
+              "value": 0.9462239638752041,
+              "observation_branches": 3
+            },
+            {
+              "action_id": "probe:0:2.0",
+              "kind": "CHANNEL_PROBE",
+              "duration_s": 2.0,
+              "setup_s": 1.0,
+              "elapsed_s": 3.0,
+              "prompt": "0",
+              "goal_id": null,
+              "value": 0.966223963875204,
+              "observation_branches": 3
+            },
+            {
+              "action_id": "probe:1:2.0",
+              "kind": "CHANNEL_PROBE",
+              "duration_s": 2.0,
+              "setup_s": 1.0,
+              "elapsed_s": 3.0,
+              "prompt": "1",
+              "goal_id": null,
+              "value": 0.9662239638752039,
+              "observation_branches": 3
+            }
+          ],
+          "compute_ns": 3894800,
+          "reason": null,
+          "execution_allowed": false
+        },
+        "2": {
+          "scope": "offline_exact_same_information",
+          "horizon": 2,
+          "selected_action": {
+            "action_id": "probe:0:1.0",
+            "kind": "CHANNEL_PROBE",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": "0",
+            "goal_id": null
+          },
+          "value": 0.946223963875204,
+          "candidates": [
+            {
+              "action_id": "pause",
+              "kind": "PAUSE",
+              "duration_s": 0,
+              "setup_s": 0.0,
+              "elapsed_s": 0.0,
+              "prompt": null,
+              "goal_id": null,
+              "value": 1.0,
+              "observation_branches": 0
+            },
+            {
+              "action_id": "exit",
+              "kind": "EXIT",
+              "duration_s": 0,
+              "setup_s": 0.0,
+              "elapsed_s": 0.0,
+              "prompt": null,
+              "goal_id": null,
+              "value": 1.0,
+              "observation_branches": 0
+            },
+            {
+              "action_id": "confirm:task-9cad706e60e745cf3c01a413",
+              "kind": "CONFIRM",
+              "duration_s": 1.0,
+              "setup_s": 1.0,
+              "elapsed_s": 2.0,
+              "prompt": null,
+              "goal_id": "task-9cad706e60e745cf3c01a413",
+              "value": 1.4533360203634398,
+              "observation_branches": 3
+            },
+            {
+              "action_id": "confirm:task-d5fc9bc832047df78f51c84f",
+              "kind": "CONFIRM",
+              "duration_s": 1.0,
+              "setup_s": 1.0,
+              "elapsed_s": 2.0,
+              "prompt": null,
+              "goal_id": "task-d5fc9bc832047df78f51c84f",
+              "value": 1.0476897873401632,
+              "observation_branches": 3
+            },
+            {
+              "action_id": "TASK_QUERY:1.0",
+              "kind": "TASK_QUERY",
+              "duration_s": 1.0,
+              "setup_s": 1.0,
+              "elapsed_s": 2.0,
+              "prompt": null,
+              "goal_id": null,
+              "value": 0.9693862904582442,
+              "observation_branches": 3
+            },
+            {
+              "action_id": "probe:0:1.0",
+              "kind": "CHANNEL_PROBE",
+              "duration_s": 1.0,
+              "setup_s": 1.0,
+              "elapsed_s": 2.0,
+              "prompt": "0",
+              "goal_id": null,
+              "value": 0.946223963875204,
+              "observation_branches": 3
+            },
+            {
+              "action_id": "probe:1:1.0",
+              "kind": "CHANNEL_PROBE",
+              "duration_s": 1.0,
+              "setup_s": 1.0,
+              "elapsed_s": 2.0,
+              "prompt": "1",
+              "goal_id": null,
+              "value": 0.9462239638752041,
+              "observation_branches": 3
+            },
+            {
+              "action_id": "probe:0:2.0",
+              "kind": "CHANNEL_PROBE",
+              "duration_s": 2.0,
+              "setup_s": 1.0,
+              "elapsed_s": 3.0,
+              "prompt": "0",
+              "goal_id": null,
+              "value": 0.966223963875204,
+              "observation_branches": 3
+            },
+            {
+              "action_id": "probe:1:2.0",
+              "kind": "CHANNEL_PROBE",
+              "duration_s": 2.0,
+              "setup_s": 1.0,
+              "elapsed_s": 3.0,
+              "prompt": "1",
+              "goal_id": null,
+              "value": 0.9662239638752039,
+              "observation_branches": 3
+            }
+          ],
+          "compute_ns": 37669600,
+          "reason": null,
+          "execution_allowed": false
+        }
+      },
+      "omniscient_reference": {
+        "scope": "non_deployable_omniscient_reference",
+        "horizon": 2,
+        "conditional_actions": [
+          {
+            "revealed_state": [
+              "task-9cad706e60e745cf3c01a413",
+              "normal"
+            ],
+            "probability": 0.1,
+            "conditional_action": {
+              "action_id": "confirm:task-9cad706e60e745cf3c01a413",
+              "kind": "CONFIRM",
+              "duration_s": 1.0,
+              "setup_s": 1.0,
+              "elapsed_s": 2.0,
+              "prompt": null,
+              "goal_id": "task-9cad706e60e745cf3c01a413"
+            },
+            "value": 0.42719973148636353
+          },
+          {
+            "revealed_state": [
+              "task-9cad706e60e745cf3c01a413",
+              "flip"
+            ],
+            "probability": 0.2,
+            "conditional_action": {
+              "action_id": "confirm:task-9cad706e60e745cf3c01a413",
+              "kind": "CONFIRM",
+              "duration_s": 1.0,
+              "setup_s": 1.0,
+              "elapsed_s": 2.0,
+              "prompt": null,
+              "goal_id": "task-9cad706e60e745cf3c01a413"
+            },
+            "value": 0.9236846859554456
+          },
+          {
+            "revealed_state": [
+              "task-d5fc9bc832047df78f51c84f",
+              "normal"
+            ],
+            "probability": 0.3,
+            "conditional_action": {
+              "action_id": "confirm:task-d5fc9bc832047df78f51c84f",
+              "kind": "CONFIRM",
+              "duration_s": 1.0,
+              "setup_s": 1.0,
+              "elapsed_s": 2.0,
+              "prompt": null,
+              "goal_id": "task-d5fc9bc832047df78f51c84f"
+            },
+            "value": 0.42719973148636353
+          },
+          {
+            "revealed_state": [
+              "task-d5fc9bc832047df78f51c84f",
+              "flip"
+            ],
+            "probability": 0.4,
+            "conditional_action": {
+              "action_id": "confirm:task-d5fc9bc832047df78f51c84f",
+              "kind": "CONFIRM",
+              "duration_s": 1.0,
+              "setup_s": 1.0,
+              "elapsed_s": 2.0,
+              "prompt": null,
+              "goal_id": "task-d5fc9bc832047df78f51c84f"
+            },
+            "value": 0.9236846859554456
+          }
+        ],
+        "value": 0.7250907041678128,
+        "compute_ns": 1866955600,
+        "confirmation_model": "same_noisy_CONFIRM",
+        "execution_allowed": false
+      },
+      "checks": [
+        {
+          "method": "M",
+          "horizon": 1,
+          "selected_action": "probe:0:1.0",
+          "exact_optimal_value": 0.946223963875204,
+          "exact_value_of_selected_action": 0.946223963875204,
+          "decision_regret_at_same_horizon": 0.0,
+          "planning_value_difference": -1.1102230246251565e-16,
+          "method_compute_ns": 4548000,
+          "oracle_compute_ns": 3894800
+        },
+        {
+          "method": "M2",
+          "horizon": 2,
+          "selected_action": "probe:0:1.0",
+          "exact_optimal_value": 0.946223963875204,
+          "exact_value_of_selected_action": 0.946223963875204,
+          "decision_regret_at_same_horizon": 0.0,
+          "planning_value_difference": -1.1102230246251565e-16,
+          "method_compute_ns": 33824500,
+          "oracle_compute_ns": 37669600
+        },
+        {
+          "method": "B9",
+          "horizon": 1,
+          "selected_action": "probe:0:1.0",
+          "exact_optimal_value": 0.946223963875204,
+          "exact_value_of_selected_action": 0.946223963875204,
+          "decision_regret_at_same_horizon": 0.0,
+          "planning_value_difference": 0.0,
+          "method_compute_ns": 3673800,
+          "oracle_compute_ns": 3894800
+        }
+      ]
+    },
+    {
+      "fixture_id": "no_budget",
+      "state_belief": {
+        "goal_ids": [
+          "task-9cad706e60e745cf3c01a413",
+          "task-d5fc9bc832047df78f51c84f",
+          "unknown",
+          "none"
+        ],
+        "mode_ids": [
+          "normal",
+          "flip",
+          "unknown_channel"
+        ],
+        "mass": [
+          {
+            "goal_id": "task-d5fc9bc832047df78f51c84f",
+            "mode_id": "normal",
+            "probability": 0.5
+          },
+          {
+            "goal_id": "task-9cad706e60e745cf3c01a413",
+            "mode_id": "flip",
+            "probability": 0.5
+          }
+        ],
+        "as_of_event_id": "handwritten-alias-prior"
+      },
+      "same_information_oracles": {
+        "1": {
+          "scope": "offline_exact_same_information",
+          "horizon": 1,
+          "selected_action": {
+            "action_id": "pause",
+            "kind": "PAUSE",
+            "duration_s": 0,
+            "setup_s": 0.0,
+            "elapsed_s": 0.0,
+            "prompt": null,
+            "goal_id": null
+          },
+          "value": 1.0,
+          "candidates": [
+            {
+              "action_id": "pause",
+              "kind": "PAUSE",
+              "duration_s": 0,
+              "setup_s": 0.0,
+              "elapsed_s": 0.0,
+              "prompt": null,
+              "goal_id": null,
+              "value": 1.0,
+              "observation_branches": 0
+            },
+            {
+              "action_id": "exit",
+              "kind": "EXIT",
+              "duration_s": 0,
+              "setup_s": 0.0,
+              "elapsed_s": 0.0,
+              "prompt": null,
+              "goal_id": null,
+              "value": 1.0,
+              "observation_branches": 0
+            }
+          ],
+          "compute_ns": 17100,
+          "reason": null,
+          "execution_allowed": false
+        },
+        "2": {
+          "scope": "offline_exact_same_information",
+          "horizon": 2,
+          "selected_action": {
+            "action_id": "pause",
+            "kind": "PAUSE",
+            "duration_s": 0,
+            "setup_s": 0.0,
+            "elapsed_s": 0.0,
+            "prompt": null,
+            "goal_id": null
+          },
+          "value": 1.0,
+          "candidates": [
+            {
+              "action_id": "pause",
+              "kind": "PAUSE",
+              "duration_s": 0,
+              "setup_s": 0.0,
+              "elapsed_s": 0.0,
+              "prompt": null,
+              "goal_id": null,
+              "value": 1.0,
+              "observation_branches": 0
+            },
+            {
+              "action_id": "exit",
+              "kind": "EXIT",
+              "duration_s": 0,
+              "setup_s": 0.0,
+              "elapsed_s": 0.0,
+              "prompt": null,
+              "goal_id": null,
+              "value": 1.0,
+              "observation_branches": 0
+            }
+          ],
+          "compute_ns": 16200,
+          "reason": null,
+          "execution_allowed": false
+        }
+      },
+      "omniscient_reference": {
+        "scope": "non_deployable_omniscient_reference",
+        "horizon": 2,
+        "conditional_actions": [
+          {
+            "revealed_state": [
+              "task-9cad706e60e745cf3c01a413",
+              "flip"
+            ],
+            "probability": 0.5,
+            "conditional_action": {
+              "action_id": "pause",
+              "kind": "PAUSE",
+              "duration_s": 0,
+              "setup_s": 0.0,
+              "elapsed_s": 0.0,
+              "prompt": null,
+              "goal_id": null
+            },
+            "value": 1.0
+          },
+          {
+            "revealed_state": [
+              "task-d5fc9bc832047df78f51c84f",
+              "normal"
+            ],
+            "probability": 0.5,
+            "conditional_action": {
+              "action_id": "pause",
+              "kind": "PAUSE",
+              "duration_s": 0,
+              "setup_s": 0.0,
+              "elapsed_s": 0.0,
+              "prompt": null,
+              "goal_id": null
+            },
+            "value": 1.0
+          }
+        ],
+        "value": 1.0,
+        "compute_ns": 28800,
+        "confirmation_model": "same_noisy_CONFIRM",
+        "execution_allowed": false
+      },
+      "checks": [
+        {
+          "method": "M",
+          "horizon": 1,
+          "selected_action": "pause",
+          "exact_optimal_value": 1.0,
+          "exact_value_of_selected_action": 1.0,
+          "decision_regret_at_same_horizon": 0.0,
+          "planning_value_difference": 0.0,
+          "method_compute_ns": 168400,
+          "oracle_compute_ns": 17100
+        },
+        {
+          "method": "M2",
+          "horizon": 2,
+          "selected_action": "pause",
+          "exact_optimal_value": 1.0,
+          "exact_value_of_selected_action": 1.0,
+          "decision_regret_at_same_horizon": 0.0,
+          "planning_value_difference": 0.0,
+          "method_compute_ns": 162800,
+          "oracle_compute_ns": 16200
+        },
+        {
+          "method": "B9",
+          "horizon": 1,
+          "selected_action": "pause",
+          "exact_optimal_value": 1.0,
+          "exact_value_of_selected_action": 1.0,
+          "decision_regret_at_same_horizon": 0.0,
+          "planning_value_difference": 0.0,
+          "method_compute_ns": 78500,
+          "oracle_compute_ns": 17100
+        }
+      ]
+    }
+  ],
+  "max_decision_regret": 0.0,
+  "timing_source": "actual_perf_counter_ns_on_this_host_single_runs",
+  "timing_limitation": "not a latency benchmark; no repeated load or hardware measurement",
+  "real_validation_choice": null,
+  "strategy_superiority_claim": false,
+  "G2_passed": false,
+  "hardware_calls": 0,
+  "cloud_calls": 0
+}

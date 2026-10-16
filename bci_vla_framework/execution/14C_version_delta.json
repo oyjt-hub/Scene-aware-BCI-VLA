@@ -1,0 +1,33 @@
+{
+  "scope": "versioned_simulation_only_session",
+  "unchanged": [
+    "joint filter",
+    "protocol schemas",
+    "confirmation and authorization algebra",
+    "runtime_v2 Bellman solver",
+    "threshold0.8 and age2s"
+  ],
+  "changes": [
+    "real simulator backend spec accepted",
+    "simulation scope instead of fake",
+    "bound checkpoint and independent simulator-state endpoint",
+    "empirical simulator outcome provenance"
+  ],
+  "copies": [
+    {
+      "source": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\contracts\\records.py",
+      "source_sha256": "34cf6ea26a4b6ec40b0f0dbc68313c4a04077620b3a6b322e627a2d146a69303",
+      "versioned_copy": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\simulation_v3\\records.py"
+    },
+    {
+      "source": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\contracts\\session.py",
+      "source_sha256": "7d46d82290e675e6fb7ecf580bbeaa6a0a152755b714acaff8a0b5e9607fc325",
+      "versioned_copy": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\simulation_v3\\session.py"
+    },
+    {
+      "source": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\contracts\\replay.py",
+      "source_sha256": "a99388b0a72a772cee3c2583eef4d5a9299be9b9df5da8ce569e0d9f5eba66c0",
+      "versioned_copy": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\simulation_v3\\replay.py"
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "date": "2026-10-15",
+  "plan_version": "V2",
+  "step_id": "05",
+  "purpose": "input and protocol software snapshot; no deployed or empirical evidence",
+  "files": [
+    {
+      "path": "D:\\Scene_Aware\\BCI_VLA通用交互框架_逐步执行手册.txt",
+      "kind": "input",
+      "sha256": "13b5813bec3a9d1bcdf44b13f46eb51d8ca57b8338a40bb90ce0c8608169b213"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\docs\\03_identifiability.txt",
+      "kind": "input",
+      "sha256": "fde854bc3d60c1a3fa26bb481d7f97e71c31559a184a1b717b7f50120551c66a"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\docs\\04_benchmark_protocol.txt",
+      "kind": "input",
+      "sha256": "1148f653f07f161c7876a0ab33bdeaf36fe950bd84a5d52c4511ea256885a7e0"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\docs\\04_evaluation_fields.txt",
+      "kind": "input",
+      "sha256": "94c4f9bc2edcfaa0a5603fea132293e3c9f7c2a1683cb9014a7bf2f51a353096"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\docs\\04_change_plan_format.txt",
+      "kind": "input",
+      "sha256": "70259e49ec122bf32e5cabf849be982b051ec3ac4d1167005ec6b0cab90998ec"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\04_acceptance.txt",
+      "kind": "input",
+      "sha256": "bad0b88ce9aab44888ea476fff9ab24d44107a3ad983cc45004c4d16d1270bc7"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\protocols.py",
+      "kind": "software_or_documentation",
+      "sha256": "3de0e8a42c1462f37af4f2a1769aea907a5996c9733e15b0ea522a23ac44c424"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\__init__.py",
+      "kind": "software_or_documentation",
+      "sha256": "3fac5721bda7a5a98a1a9fe207e7797900f81e746a0e2905452c1a8ec8d9823b"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\__main__.py",
+      "kind": "software_or_documentation",
+      "sha256": "b03367c0f6d0195320f3873e968ae136c1de6f658eec1988f12b41375115a9dc"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\adapters\\__init__.py",
+      "kind": "software_or_documentation",
+      "sha256": "4becba64ab04ab1a725de7406eccf6248de43cf7a8e3c8b2692b898e76f4ecbf"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\adapters\\bci\\replay.py",
+      "kind": "software_or_documentation",
+      "sha256": "7ca4dd2d5f4003ed373c9edb997b23507433bb81d56160dcf0e44703393adbc2"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\adapters\\bci\\ssvep.py",
+      "kind": "software_or_documentation",
+      "sha256": "e304c9921854dfebdb8261909f2d9339b099183a127a709440d9ad7bb30165ad"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\adapters\\bci\\__init__.py",
+      "kind": "software_or_documentation",
+      "sha256": "3ca9c3fc6edde550ac9526af196387c3c888fad99ff05159b71a1967e6487f87"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\tests\\test_protocols.py",
+      "kind": "software_or_documentation",
+      "sha256": "a8fcedff983116e958607c6b2dbba9409c8268bf3d28229a79122a1202a20bec"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\tests\\__init__.py",
+      "kind": "software_or_documentation",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\examples\\protocols\\cancel.json",
+      "kind": "software_or_documentation",
+      "sha256": "67540b3efe83d5b5c080af4d6b9f41e286683aa847f843f69ee1116bced5364f"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\examples\\protocols\\channel_probe_request.json",
+      "kind": "software_or_documentation",
+      "sha256": "ad2fd815962195761d9fee71d774376e22432767bf65e533a88ba4dba0f849ea"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\examples\\protocols\\channel_probe_response.json",
+      "kind": "software_or_documentation",
+      "sha256": "2f0a19a338b3d8a78b1531c6c30d26c39da0c0193440e5de9d3600acf20f899a"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\examples\\protocols\\confirm_request.json",
+      "kind": "software_or_documentation",
+      "sha256": "79fe474f0105495121c41dccd0d016f9f83d3542d45e4d54ba2e659a2231c937"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\examples\\protocols\\confirm_response.json",
+      "kind": "software_or_documentation",
+      "sha256": "d1b6d8b997c3bc12987056c17815adc28bb3a471c71cc99dd3bf3e8e44345ceb"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\examples\\protocols\\execution_event.json",
+      "kind": "software_or_documentation",
+      "sha256": "cc8583f60c349087b8c2bc1a3e22fa2f4a1a5fe32144830b3e0a0d61ee2887da"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\examples\\protocols\\invalid_cases.json",
+      "kind": "software_or_documentation",
+      "sha256": "e04742bfa808518b602ed6d527de6fe13ba21e7d72e8350a4a33cda70b7c85a9"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\examples\\protocols\\public_records.json",
+      "kind": "software_or_documentation",
+      "sha256": "9c70cf607c26e8e6e754fda0e499671f35a343363e08e6a49aefba1e496a0f1c"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\examples\\protocols\\stop.json",
+      "kind": "software_or_documentation",
+      "sha256": "26c88cf0bfc50265d9b46a882cabb61f79b4dd44b8e9979bcd4ed6a3b21c0c3e"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\examples\\protocols\\task_query_request.json",
+      "kind": "software_or_documentation",
+      "sha256": "bfa1a07706366b8be2269f7180ad66c18e40afa182f0bd3f59ea5a7e0da1bc1d"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\examples\\protocols\\task_query_response.json",
+      "kind": "software_or_documentation",
+      "sha256": "4689c1b31999aeed998c50ce8d5622fdc3786bb2d33c7c5c68c93e570342edf8"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\pyproject.toml",
+      "kind": "software_or_documentation",
+      "sha256": "e814739464caf9af19ce7141dc83f371261fb377c690327d83a4d8ec27ef33a0"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\docs\\05_protocols.txt",
+      "kind": "software_or_documentation",
+      "sha256": "a31273c80201a3c7c715335ff2eee3d51a546134564dc55aacad98aa66089f1d"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\examples\\protocols\\README.txt",
+      "kind": "software_or_documentation",
+      "sha256": "899e3a116df400e8f62957eede2835e8acec732a106d599a7e19f9b60c05daac"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\05_acceptance.txt",
+      "kind": "software_or_documentation",
+      "sha256": "be4c77e59f47a485fa45449815c0fa4c6e4244ec5bfd62249f74188d724c5e1b"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\05_test_result.json",
+      "kind": "software_or_documentation",
+      "sha256": "730c0921110485ad025d2fb0364768aa4093f75d50535b605ecbaa67af160226"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\05_test_output.txt",
+      "kind": "software_or_documentation",
+      "sha256": "a71d265965acd3e499f89abf69702dd59e3139a8ee4ff0a7dafbec5b83713ad1"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\run_step05_tests.py",
+      "kind": "software_or_documentation",
+      "sha256": "e8b810203b4f8ed2acbc726c9c7913ee9d03d516d1c4979e3b62808d7b97e527"
+    }
+  ]
+}

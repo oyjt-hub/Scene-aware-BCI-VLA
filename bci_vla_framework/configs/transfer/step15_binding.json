@@ -1,0 +1,34 @@
+{
+  "scope": "simulation_and_replay_development_only",
+  "core_threshold_changes": false,
+  "frozen_sources_ref": "execution/15_pre_run_freeze.json",
+  "real_BCI_enabled": false,
+  "physical_robot_enabled": false,
+  "backend_A_ref": "configs/execution/libero_simulation_v1.json",
+  "backend_B": {
+    "name": "existing_pi05_LIBERO_SFT",
+    "checkpoint": "/home/oyjt/workspace/RLinf-RECAP/models/baseline_sft/RLinf-Pi05-LIBERO-SFT/model.safetensors",
+    "weight_sha256": "4616e4c1966a5fb063b442ea5d69857f45e873222d839b794634d87d252ab9e7",
+    "norm_stats_sha256": "dae37d79a22108af83df9189c6710a3ec8e077d65b28e34bdf1da724e5ae30f1",
+    "state": "eef_position3 + quaternion_to_axisangle3 + gripper_qpos2",
+    "output": "already unnormalized LIBERO actions",
+    "extra_gripper_flip": false,
+    "extra_unnormalization": false,
+    "replan_steps": 8,
+    "controller_clipping": "explicit env.env.action_spec [-1,1], counts retained"
+  },
+  "second_real_BCI": {
+    "backend_id": null,
+    "modality": null,
+    "supports_known_target_probe": null,
+    "calibration_ref": null,
+    "status": "not_selected_or_tested"
+  },
+  "software_transport": {
+    "name": "PacketReplayTransport",
+    "provenance": "synthetic_codec_fixture",
+    "supports_known_target_probe": true,
+    "not_a_second_physiological_BCI": true
+  },
+  "held_out_real_combination_tested": false
+}

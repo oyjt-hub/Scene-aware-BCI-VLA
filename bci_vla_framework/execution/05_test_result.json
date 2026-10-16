@@ -1,0 +1,22 @@
+{
+  "scope": "software_protocol_replay",
+  "command": "python -B execution/run_step05_tests.py",
+  "tests_run": 28,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "result": "PASS",
+  "duration_s": 0.08884440001565963,
+  "hardware_calls": 0,
+  "cloud_calls": 0,
+  "evidence": "execution/05_test_output.txt",
+  "not_evaluated": [
+    "EEG validity",
+    "live transport",
+    "clock calibration",
+    "channel likelihoods",
+    "belief filtering",
+    "robot execution",
+    "G2-G4"
+  ]
+}

@@ -1,0 +1,236 @@
+{
+  "status": "read_only_success",
+  "evidence": {
+    "paths": [
+      {
+        "path": "/home/oyjt/miniconda3/envs",
+        "exists": false,
+        "is_directory": false,
+        "children": []
+      },
+      {
+        "path": "/home/oyjt/anaconda3/envs",
+        "exists": false,
+        "is_directory": false,
+        "children": []
+      },
+      {
+        "path": "/opt/conda/envs",
+        "exists": false,
+        "is_directory": false,
+        "children": []
+      },
+      {
+        "path": "/home/oyjt/miniforge3/envs",
+        "exists": false,
+        "is_directory": false,
+        "children": []
+      },
+      {
+        "path": "/home/oyjt/openpi/.venv",
+        "exists": true,
+        "is_directory": true,
+        "children": [
+          ".gitignore",
+          ".lock",
+          "CACHEDIR.TAG",
+          "bin",
+          "etc",
+          "lib",
+          "lib64",
+          "pyvenv.cfg",
+          "share"
+        ]
+      },
+      {
+        "path": "/home/oyjt/Scene-aware-BCI-VLA/.venv",
+        "exists": false,
+        "is_directory": false,
+        "children": []
+      },
+      {
+        "path": "/home/oyjt/openpi/assets/uniform",
+        "exists": true,
+        "is_directory": true,
+        "children": [
+          "uniform",
+          "uniform24"
+        ]
+      },
+      {
+        "path": "/home/oyjt/openpi/assets/uniform/uniform24",
+        "exists": true,
+        "is_directory": true,
+        "children": [
+          "norm_stats.json"
+        ]
+      },
+      {
+        "path": "/home/oyjt/openpi/checkpoints",
+        "exists": true,
+        "is_directory": true,
+        "children": [
+          "pi05_pour_water"
+        ]
+      },
+      {
+        "path": "/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/checkpoints/pi05_base/params",
+        "exists": true,
+        "is_directory": true,
+        "children": [
+          "_CHECKPOINT_METADATA",
+          "_METADATA",
+          "_sharding",
+          "array_metadatas",
+          "commit_success.txt",
+          "d",
+          "manifest.ocdbt",
+          "ocdbt.process_0"
+        ]
+      }
+    ],
+    "selected_config_lines": {
+      "scripts/inference.py": [
+        {
+          "line": 31,
+          "text": "SERVER_HOST = \"172.19.5.252\"  # Your 4090 server IP"
+        },
+        {
+          "line": 42,
+          "text": "USE_LLM = True"
+        },
+        {
+          "line": 55,
+          "text": "TASK_INSTRUCTION = \"\" "
+        },
+        {
+          "line": 350,
+          "text": "    Supports USE_LLM switch for ablation study."
+        },
+        {
+          "line": 353,
+          "text": "    if not USE_LLM:"
+        },
+        {
+          "line": 582,
+          "text": "    # Step 3: Gemini inference (supports USE_LLM ablation)"
+        },
+        {
+          "line": 584,
+          "text": "    TASK_INSTRUCTION = infer_intent_with_gemini("
+        },
+        {
+          "line": 663,
+          "text": "        client = websocket_client_policy.WebsocketClientPolicy(host=SERVER_HOST, port=SERVER_PORT)"
+        }
+      ],
+      "scripts/robot/RTC_inference.py": [
+        {
+          "line": 26,
+          "text": "SERVER_HOST = \"172.19.5.252\""
+        },
+        {
+          "line": 28,
+          "text": "TASK_INSTRUCTION = \"fold the cloth.\""
+        },
+        {
+          "line": 29,
+          "text": "# TASK_INSTRUCTION = \"pick up the cherry and put it into the bowl.\""
+        },
+        {
+          "line": 30,
+          "text": "# TASK_INSTRUCTION = \"pick up the brunch of grapes and put it into the bowl.\""
+        },
+        {
+          "line": 382,
+          "text": "    dry_run = os.environ.get(\"OPENPI_DRY_RUN\") == \"1\""
+        },
+        {
+          "line": 383,
+          "text": "    if not enable_robot and not dry_run:"
+        },
+        {
+          "line": 392,
+          "text": "            host=SERVER_HOST, port=SERVER_PORT"
+        },
+        {
+          "line": 416,
+          "text": "    if dry_run:"
+        }
+      ],
+      "scripts/server_api.py": [
+        {
+          "line": 109,
+          "text": "class BCIResult(BaseModel):"
+        },
+        {
+          "line": 110,
+          "text": "    selected_target: str"
+        },
+        {
+          "line": 285,
+          "text": "    uvicorn.run(app, host=\"0.0.0.0\", port=8000)"
+        }
+      ],
+      "openpi/src/openpi/models/pi0.py": [
+        {
+          "line": 55,
+          "text": "    fraction = jnp.linspace(0.0, 1.0, embedding_dim // 2)"
+        },
+        {
+          "line": 67,
+          "text": "    rtc_supported = True"
+        }
+      ],
+      "openpi/src/openpi/policies/policy.py": [
+        {
+          "line": 57,
+          "text": "        self._rtc_supported = bool(not is_pytorch and getattr(model, \"rtc_supported\", False))"
+        },
+        {
+          "line": 88,
+          "text": "            if not self._rtc_supported:"
+        },
+        {
+          "line": 171,
+          "text": "        if self._rtc_supported:"
+        }
+      ],
+      "Scene-aware-BCI-VLA/interface.py": [
+        {
+          "line": 41,
+          "text": "        self.fps = 60"
+        },
+        {
+          "line": 42,
+          "text": "        self.stimulate_time = 4.0"
+        },
+        {
+          "line": 53,
+          "text": "        neuracle = dict(device_name='Neuracle', hostname='127.0.0.1', port=8712, srate=1000, n_chan=12)"
+        },
+        {
+          "line": 58,
+          "text": "        notconnect = self.thread_data_server.connect(hostname=neuracle['hostname'], port=neuracle['port'])"
+        },
+        {
+          "line": 201,
+          "text": "            self.decoder.get_reference_signals(freqs, round(self.stimulate_time, 2))"
+        },
+        {
+          "line": 218,
+          "text": "            while time.time() - start_time < self.stimulate_time:"
+        },
+        {
+          "line": 242,
+          "text": "                clock.tick(self.fps)"
+        },
+        {
+          "line": 255,
+          "text": "            decode_samples_1000hz = int(self.stimulate_time * 1000) - 200"
+        }
+      ]
+    },
+    "repository_status_after": ""
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "schema_version": "outcome-table/1.0",
+  "status": "uncalibrated",
+  "deployment_allowed": false,
+  "checkpoint_ref": null,
+  "rows": null,
+  "independent_trajectory_refs": null,
+  "timing_costs": null,
+  "weights": null,
+  "missing_reason": "No identified checkpoint-linked independent endpoint/recovery annotations are available in the frozen assets."
+}

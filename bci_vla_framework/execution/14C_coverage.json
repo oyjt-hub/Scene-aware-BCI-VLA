@@ -1,0 +1,29 @@
+{
+  "scope": "nonreal_complete_framework_functional_LIBERO_pick",
+  "nonreal_closed_loop_completed": true,
+  "full_framework_simulation_completed": true,
+  "real_step14_completed": false,
+  "real_BCI_trials": 0,
+  "physical_robot_commands": 0,
+  "software_tests": 398,
+  "functional_cases": 10,
+  "engineering_checks_passed": true,
+  "completed_pick_cases": 5,
+  "active_goal_change_control_passed": true,
+  "active_goal_change_grasp_success": false,
+  "independent_calibration_records": 4,
+  "independent_holdout_records": 2,
+  "holdout_grasp_successes": 0,
+  "formal_success_rate_claim": false,
+  "strategy_superiority_claim": false,
+  "G2_passed": false,
+  "G3_passed": false,
+  "scope_limitations": [
+    "two pick intents in LIBERO goal6 scene",
+    "simulator privileged object grounding",
+    "scripted BCI with logical query clock",
+    "fixed four-probe supervisor mapping repair outside planner",
+    "small calibration; both heldout grasps failed",
+    "active goal-change recovered command but grasp failed"
+  ]
+}

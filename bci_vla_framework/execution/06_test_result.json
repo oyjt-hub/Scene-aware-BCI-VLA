@@ -1,0 +1,20 @@
+{
+  "scope": "software_model_and_protocol_checks",
+  "command": "python -B execution/run_step06_tests.py",
+  "tests_run": 47,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "result": "PASS",
+  "models_status": "simulation_only",
+  "real_calibration_status": "待外部条件",
+  "hardware_calls": 0,
+  "cloud_calls": 0,
+  "not_evaluated": [
+    "actual EEG",
+    "real compliance",
+    "empirical transfer error",
+    "real timing costs",
+    "G2-G4"
+  ]
+}

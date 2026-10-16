@@ -1,0 +1,96 @@
+﻿步骤02：原系统、原型与基线资产盘点
+版本：V2；日期：2026-10-15；范围：本地盘点＋服务器只读复核。
+状态：盘点完成；运行配置尚有待核项，不等于系统已复现或可直接运行。
+机器可读清单：configs/baseline_manifest.json；文件指纹：execution/02_local_inventory.json。
+服务器证据：execution/02_remote_inspection.json、02_remote_assets.json、02_remote_environment.json、02_remote_candidates.json。
+
+一、版本冻结与证据等级
+本地D:\Scene_Aware及context_intent未发现可用Git仓库，因此按相对路径、字节数和SHA256冻结文件；不是伪造Git提交。
+服务器/home/oyjt/Scene-aware-BCI-VLA：main，d2245527a767707c19d7305caacb02fa5de89dc3。
+本轮读取前后git status --short均为空；仓库1021个跟踪文件。未向服务器写文件、部署或启动服务。
+当前服务器源码事实可引用本次摘录行号和原文件SHA256；本地论文是文本主张；既有报告只作历史补充。
+目录或checkpoint存在仅表示资产存在；未检查权重完整性、未加载权重、未验证当前服务或设备连通性。
+原系统启动命令、论文各实验对应checkpoint及现场配置尚不能唯一冻结，保留null和问题编号，不任选最新目录。
+
+二、本地原型可复用接口
+P01 scene_context/schema.py
+入口validate_observation、validate_case、public_observation、assert_disjoint_scenes。
+公开观测为objects/relations/selection/context；selection支持object_id与归一化probabilities。
+监督annotation与公开观测分离；场景划分检查可复用。现有概率和历史字段不等于V2通道状态或实时联合后验。
+P02 scene_context/planning.py
+入口generate_candidates、compatible_candidates、structural_clarification、finalize_prediction。
+已有pick/place/fold有限语法、补问source/action/destination、原始提议留存与共享校验。
+现有confirmed_action/goal/selection兼容约束不能原样当作不可变用户意图，V2必须允许真实改目标；详见I08。
+P03 scene_context/rendering.py
+入口render_instruction；英文模板Pick up / Put into / Fold；同类实例用属性或极端横向位置指代，无法区分则报错。
+可复用为受限语言渲染器，不是自由语言生成能力或机器人技能证明。
+P04 scene_context/integration.py
+入口observation_from_detections、ContextIntentAdapter.propose/confirm/cancel。
+由labels与像素框、明确frame_size及capabilities构造观测；同名目标不默认取第一个；生成ID仅在快照内有效。
+已有一次性proposal_id及观测摘要，场景变化失效。confirm接受调用者传入的匹配intent，未建模真实BCI确认噪声，也未调用机器人。
+P05 scene_context/model.py
+IntentModel为默认2层4头关系注意力与条件候选评分，含状态/补问头和消融开关；NeuralPredictor从checkpoint读取。
+它不是DiT自然语言生成模块。代码存在不代表已训练；本地未发现该原型权重。
+P06 scene_context/llm.py
+build_prompt、parse_response、GeminiPredictor，结构化任务输出，共享校验和模板；云调用需显式开启。
+模型配置gemini-2.5-flash为本地配置值，未在线确认服务可用性；本轮不调用云。
+失败保持reject而非猜测抓取。不能与原服务器失败默认抓取行为混为一版基线。
+P07 scene_context/evaluation.py
+evaluate只向predictor传public_observation，统计raw与guarded；失败保留分母，按scene做bootstrap及配对比较。
+可复用观测隔离和报告结构；它当前是单样本语义评价，不覆盖V2跨轮诊断、状态变化时间及执行后果。
+P08 training.py、baselines.py、synthetic.py、cli.py、configs/experiment.json
+训练/规则比较/合成数据接口存在；实验配置状态planned_not_executed。
+旧配置的60场景、8—10参与者等是旧方案计划值，不是采集事实，也不自动成为V2样本量。
+
+三、本地数据、环境与实际检查
+smoke_data：train216、val72、test72，manifest标synthetic_smoke_only。
+runs/local_rule_smoke/aggregate.json：既有规则报告72条、6个scene；只作流水线历史产物，不是训练、真实BCI或论文效果证据。本轮未重跑该smoke实验。
+本地Python 3.13.0，C:\Program Files\Python313\python.exe；NumPy2.2.4、Paramiko5.0.0；torch未安装。
+实际运行python -B -m unittest discover -v（cwd=context_intent）：共53项，44项通过、9项因缺torch跳过；无云请求和机器人调用。
+这是旧原型的软件检查，不是V2机制实验。结果摘要见execution/02_software_check.json。
+本轮还对旧原型Python文件做AST静态解析，并记录文件指纹；未安装依赖、未训练或保存新模型权重。
+
+四、服务器实际链路与基线
+BCI客户端：Scene-aware-BCI-VLA/interface.py。
+预处理：同目录creat_raw_data.py；解码fbcca.py；TCP接收实现位于scripts/bci/dataServer.py。
+视觉/BCI中转：scripts/server_api.py，8000端口；BCIResult只含selected_target字符串。
+上下文到指令：scripts/inference.py::infer_intent_with_gemini，347—407行。
+它接收检测标签与选中标签，调用gemini-2.5-flash并输出英文；obs["prompt"]在195行传入策略。
+USE_LLM=False在353—357行仅返回对象名；402—407行异常降级为pick up the对象。
+旧提示与失败行为已保存在execution/02_remote_inspection.json对应行，并单独保存到configs/02_original_server_intent_excerpt.txt；凭据行已去除。
+本地结构化提示见configs/02_local_structured_prompt.txt；两版需区别报告。
+策略入口：scripts/training/serve_policy.py，默认8000端口，使用显式config与checkpoint或默认环境权重。
+常规集成脚本和RTC脚本不能混用：scripts/robot/RTC_inference.py当前TASK_INSTRUCTION为fold the cloth.，含独立RTC元信息与动作形状检查、dry-run分支。
+RTC在内嵌OpenPI中；pi0.py声明rtc_supported，policy.py对非PyTorch后端启用该支持。未实际启动dry-run或加载策略。
+原LLM、LLM关闭、旧本地规则、旧本地结构化Gemini、未训练神经模型作为不同条目登记；V2诊断基线尚未实现。
+NOIR-inspired、RBC组合、一步VoI等是后续待实现基线，不能把相关论文或名称当成本仓库已存在代码。
+
+五、采样、计时与部署核对
+当前界面配置：60fps、4秒刺激、Neuracle输入1000Hz/12通道；解码预处理选9通道。
+creat_raw_data.py:38已resample至250Hz；interface.py:255—257仍按1000Hz数量切片再::4；259行按250Hz解释时长。
+该组合静态显示采样率处理错配。回放与实际部署元信息未核，不在此修改原代码，也不据此反推论文历史数据一定错误。
+界面回车启动；论文写眨眼触发。第二套scripts/bci/预处理返回数组，不能与返回RawArray的版本直接替换。
+server_api.py:268收到BCI结果即success=True；不是机器人终态成功。必须分开接收、下发和最终结果。
+视觉中转默认8000；策略服务默认8000；机器人客户端配置9000。实际启动覆盖参数未确认，不能仅凭默认值断言现场端口冲突。
+
+六、服务器环境、权重、归一化和数据
+默认/usr/bin/python3无torch/jax；不能据此判断服务器没装训练环境。
+实际发现/home/oyjt/openpi/.venv/bin/python：Python3.11.14、torch2.7.1、jax/jaxlib0.5.3、flax0.10.2、NumPy1.26.4、openpi0.1.0；该环境metadata未发现fastapi。
+以上只读包元信息，未导入GPU库或占用GPU；视觉服务具体环境未知。
+配置openpi/src/openpi/training/config.py:1448起uniform：pi05=True、action_horizon100、repo_id=oy/uniform24_v21，默认prompt为fold the cloth.。
+归一化：/home/oyjt/openpi/assets/uniform/uniform24/norm_stats.json存在，3436字节，SHA256见远程环境证据。
+基础pi05_base/params存在；磁盘另有uniform、uniform_rtc_v2、uniform_table_rtc_v2、pruned16、cloth等候选目录，细分实验与step见02_remote_candidates.json。
+只列目录和少量元数据，未为大型权重逐块计算哈希；未冻结为论文已用或未来主实验指定checkpoint。
+数据/home/oyjt/.cache/huggingface/lerobot/oy/uniform24_v21/meta/info.json存在：v2.1，bi_piper_follower，24episodes、38944frames、30fps、1task，split train0:24。
+这些是现存数据集元数据，不是论文全部数据集汇总或独立测试集。未读取视频、样本内容或参与者原始EEG。
+论文模型/任务和具体数据、norm_stats、checkpoint、推理入口需建立一对一映射后才能宣称可复现。
+
+七、论文—代码映射与首版范围处理
+论文main4.tex:163—164：11个采集电极、9个SSVEP通道＋额部眨眼；代码12通道接收/9通道处理，需核通道顺序与触发部署。
+论文198：二次目的地选择；206：仿真StarVLA、实物π0.5；均为已有主张，不作为新增。
+论文275：Piper14DoF；285：训练描述；300附近示范数据表。当前uniform数据24episode/1task不能直接替代该表。
+论文418附近“单次离散触发”与198二次选择须按任务澄清口径，重建实际日志后再修改论文结论。
+原系统到新框架的可复用部分：场景检测接口、SSVEP链、受限语义模板、策略prompt通道、部分RTC与日志结构。
+缺少：已知提示probe协议、目标—通道联合后验、通道模式校准、真实确认噪声、独立真值因子episode、任务后果模型和诊断策略。
+步骤01研究范围暂保留，pick/place与改目的地仍是待验证候选；当前固定cloth脚本及单task数据不足以证明多目的地策略能力。
+步骤02完成的是资产盘点和缺项定位。步骤03可进行理论协议设计；在问题表中的部署/回放阻断项解决前，不得宣称真实闭环准备就绪。

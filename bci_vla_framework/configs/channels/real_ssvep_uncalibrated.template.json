@@ -1,0 +1,20 @@
+{
+  "schema_version": "channel-model/1.0",
+  "profile_id": "real-ssvep-pending",
+  "status": "uncalibrated",
+  "provenance": "no_independent_response_calibration_available",
+  "deployment_allowed": false,
+  "scope": null,
+  "mode_ids": null,
+  "matrices": null,
+  "compliance": null,
+  "required_evidence": [
+    "I01 verified sampling pipeline and raw metadata",
+    "independent labeled task response blocks",
+    "independent known-prompt compliance and omission blocks",
+    "independent task holdout for probe-transfer validation",
+    "actual layout/stimulus/duration scope",
+    "actual timing intervals and state-stability checks"
+  ],
+  "missing_reason": "Robot LeRobot data, semantic smoke fixtures and protocol examples cannot calibrate EEG response likelihoods."
+}

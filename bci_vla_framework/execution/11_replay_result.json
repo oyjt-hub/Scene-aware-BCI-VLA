@@ -1,0 +1,24 @@
+{
+  "result": "PASS",
+  "cases": [
+    {
+      "session_id": "step11-legal",
+      "records": 15,
+      "final_state": "SUCCEEDED",
+      "exact_state_match": true,
+      "recomputed_each_checkpoint": true,
+      "backend_calls": 0
+    },
+    {
+      "session_id": "step11-unknown",
+      "records": 11,
+      "final_state": "CANCELLED",
+      "exact_state_match": true,
+      "recomputed_each_checkpoint": true,
+      "backend_calls": 0
+    }
+  ],
+  "backend_calls": 0,
+  "scope": "pure_event_reconstruction_and_checkpoint_comparison",
+  "authenticates_physical_events": false
+}

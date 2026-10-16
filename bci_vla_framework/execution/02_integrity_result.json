@@ -1,0 +1,28 @@
+{
+  "scope": "inventory_and_documentation",
+  "result": "PASS",
+  "count": 14,
+  "checks": [
+    "only 01 and 02 complete",
+    "03 not started",
+    "G1-G4 not started",
+    "local frozen files unchanged",
+    "prototype Python AST passed",
+    "remote read-only success and matching commit",
+    "remote before and after clean",
+    "unknown deployment remains explicit",
+    "software outcome not overclaimed",
+    "all baselines labelled",
+    "baseline source evidence exists",
+    "14 tracked issues",
+    "02.1-02.8 acceptance",
+    "TXT encoding"
+  ],
+  "not_evaluated": [
+    "weight integrity",
+    "live services",
+    "EEG replay",
+    "robot capability",
+    "G1-G4"
+  ]
+}

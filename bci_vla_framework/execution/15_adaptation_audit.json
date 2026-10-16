@@ -1,0 +1,26 @@
+{
+  "frozen_sources_count": 25,
+  "frozen_sources_changed": 0,
+  "core_and_threshold_changes": 0,
+  "added_nonblank_lines_by_file": {
+    "bci_vla/adapters/bci/packet_replay.py": 28,
+    "bci_vla/adapters/vla/libero_pi05.py": 13,
+    "bci_vla/pilot/transfer_replay.py": 25,
+    "execution/step15_libero_worker.py": 104,
+    "execution/step15_pi05_orchestrator.py": 45
+  },
+  "generated_worker_derives_from": "frozen step14 worker",
+  "human_engineering_hours_measured": false,
+  "human_engineering_hours": null,
+  "new_real_channel_calibration_records": 0,
+  "new_independent_backend_consequence_calibration_trajectories": 0,
+  "real_second_BCI_tested": false,
+  "changes": [
+    "alternate replay transport",
+    "OpenPI image/state/output mapping",
+    "task-local Transformers patch",
+    "explicit simulator clipping",
+    "terminal queue drain"
+  ],
+  "does_not_prove_zero_adaptation_or_zero_calibration_transfer": true
+}

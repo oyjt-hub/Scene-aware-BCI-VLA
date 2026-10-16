@@ -1,0 +1,124 @@
+10/16 [18:41:00] INFO     | >> [*] Loading from local         share_tools.py:264
+                          checkpoint path                                       
+                          `/home/oyjt/workspace/Qwen2.5-VL-GR                   
+                          00T-LIBERO-4in1/checkpoints/steps_3                   
+                          0000_pytorch_model.pt`                                
+`torch_dtype` is deprecated! Use `dtype` instead!
+You are attempting to use Flash Attention 2 without specifying a torch dtype. This might lead to unexpected behaviour
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.94s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.18s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.29s/it]
+The image processor of type `Qwen2VLImageProcessor` is now loaded as a fast processor by default, even if the model checkpoint was saved with a slow processor. This is a breaking change and may produce slightly different outputs. To continue using the slow processor, instantiate this class with `use_fast=False`. Note that this behavior will be extended to all models in a future release.
+Total number of DiT parameters:  150740992
+10/16 [18:41:30] INFO     | >> server listening on 127.0.0.1:16818 server.py:341
+10/16 [18:41:32] ERROR    | >> opening handshake failed            server.py:365
+                          ╭─ Traceback (most recent call last) ──╮              
+                          │ /home/oyjt/workspace/miniconda3/envs │              
+                          │ /starVLA/lib/python3.10/site-package │              
+                          │ s/websockets/http11.py:138 in parse  │              
+                          │                                      │              
+                          │   135 │   │   # to implement HTTP/1. │              
+                          │   136 │   │                          │              
+                          │   137 │   │   try:                   │              
+                          │ ❱ 138 │   │   │   request_line = yie │              
+                          │   139 │   │   except EOFError as exc │              
+                          │   140 │   │   │   raise EOFError("co │              
+                          │   141                                │              
+                          │                                      │              
+                          │ /home/oyjt/workspace/miniconda3/envs │              
+                          │ /starVLA/lib/python3.10/site-package │              
+                          │ s/websockets/http11.py:320 in        │              
+                          │ parse_line                           │              
+                          │                                      │              
+                          │   317 │                              │              
+                          │   318 │   """                        │              
+                          │   319 │   try:                       │              
+                          │ ❱ 320 │   │   line = yield from read │              
+                          │   321 │   except RuntimeError:       │              
+                          │   322 │   │   raise SecurityError("l │              
+                          │   323 │   # Not mandatory but safe - │              
+                          │                                      │              
+                          │ /home/oyjt/workspace/miniconda3/envs │              
+                          │ /starVLA/lib/python3.10/site-package │              
+                          │ s/websockets/streams.py:46 in        │              
+                          │ read_line                            │              
+                          │                                      │              
+                          │    43 │   │   │   if p > m:          │              
+                          │    44 │   │   │   │   raise RuntimeE │              
+                          │    45 │   │   │   if self.eof:       │              
+                          │ ❱  46 │   │   │   │   raise EOFError │              
+                          │    47 │   │   │   yield              │              
+                          │    48 │   │   if n > m:              │              
+                          │    49 │   │   │   raise RuntimeError │              
+                          ╰──────────────────────────────────────╯              
+                          EOFError: stream ends after 0 bytes,                  
+                          before end of line                                    
+                                                                                
+                          The above exception was the direct cause              
+                          of the following exception:                           
+                                                                                
+                          ╭─ Traceback (most recent call last) ──╮              
+                          │ /home/oyjt/workspace/miniconda3/envs │              
+                          │ /starVLA/lib/python3.10/site-package │              
+                          │ s/websockets/server.py:547 in parse  │              
+                          │                                      │              
+                          │   544 │   def parse(self) -> Generat │              
+                          │   545 │   │   if self.state is CONNE │              
+                          │   546 │   │   │   try:               │              
+                          │ ❱ 547 │   │   │   │   request = yiel │              
+                          │   548 │   │   │   │   │   self.reade │              
+                          │   549 │   │   │   │   )              │              
+                          │   550 │   │   │   except Exception a │              
+                          │                                      │              
+                          │ /home/oyjt/workspace/miniconda3/envs │              
+                          │ /starVLA/lib/python3.10/site-package │              
+                          │ s/websockets/http11.py:140 in parse  │              
+                          │                                      │              
+                          │   137 │   │   try:                   │              
+                          │   138 │   │   │   request_line = yie │              
+                          │   139 │   │   except EOFError as exc │              
+                          │ ❱ 140 │   │   │   raise EOFError("co │              
+                          │   141 │   │                          │              
+                          │   142 │   │   try:                   │              
+                          │   143 │   │   │   method, raw_path,  │              
+                          ╰──────────────────────────────────────╯              
+                          EOFError: connection closed while                     
+                          reading HTTP request line                             
+                                                                                
+                          The above exception was the direct cause              
+                          of the following exception:                           
+                                                                                
+                          ╭─ Traceback (most recent call last) ──╮              
+                          │ /home/oyjt/workspace/miniconda3/envs │              
+                          │ /starVLA/lib/python3.10/site-package │              
+                          │ s/websockets/asyncio/server.py:356   │              
+                          │ in conn_handler                      │              
+                          │                                      │              
+                          │   353 │   │   try:                   │              
+                          │   354 │   │   │   async with asyncio │              
+                          │   355 │   │   │   │   try:           │              
+                          │ ❱ 356 │   │   │   │   │   await conn │              
+                          │   357 │   │   │   │   │   │   self.p │              
+                          │   358 │   │   │   │   │   │   self.p │              
+                          │   359 │   │   │   │   │   │   self.s │              
+                          │                                      │              
+                          │ /home/oyjt/workspace/miniconda3/envs │              
+                          │ /starVLA/lib/python3.10/site-package │              
+                          │ s/websockets/asyncio/server.py:207   │              
+                          │ in handshake                         │              
+                          │                                      │              
+                          │   204 │   │   # response that reject │              
+                          │   205 │   │                          │              
+                          │   206 │   │   if self.protocol.hands │              
+                          │ ❱ 207 │   │   │   raise self.protoco │              
+                          │   208 │                              │              
+                          │   209 │   def process_event(self, ev │              
+                          │   210 │   │   """                    │              
+                          ╰──────────────────────────────────────╯              
+                          InvalidMessage: did not receive a valid               
+                          HTTP request                                          
+10/16 [18:41:38] INFO     | >> connection open                     server.py:531
+                 INFO     | >> Connection from     websocket_policy_server.py:83
+                          ('127.0.0.1', 35216)                                  
+                          opened                                                
+10/16 [18:42:34] INFO     | >> Connection from     websocket_policy_server.py:95
+                          ('127.0.0.1', 35216)                                  
+                          closed                                                

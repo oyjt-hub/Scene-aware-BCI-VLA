@@ -1,0 +1,20 @@
+{
+  "scope": "existing_frozen_asset_review",
+  "server_reconnected": false,
+  "existing_robot_data": "LeRobot metadata only, per step02 evidence",
+  "checkpoint_linked_endpoint_or_recovery_annotations_available": false,
+  "real_consequence_calibration_status": "待外部条件",
+  "real_backend_capability_status": "unverified",
+  "source_refs": [
+    "configs/baseline_manifest.json",
+    "execution/02_remote_candidates.json",
+    "docs/02_issues.txt"
+  ],
+  "not_done": [
+    "load robot samples",
+    "read videos",
+    "run VLA",
+    "operate robot",
+    "infer user truth from actions"
+  ]
+}

@@ -1,0 +1,26 @@
+# Local workspace snapshot; explicitly include only research deliverables.
+/*
+!/.gitignore
+!/BACKUP_README.txt
+!/BACKUP_MANIFEST.json
+!/bci_vla_framework/
+!/context_intent/
+!/BCI_VLA*.txt
+!/论文修改计划_三周冲刺版.md
+!/审稿意见.txt
+!/Scene-aware-BCI-VLA_仓库检查报告.md
+**/__pycache__/
+*.py[cod]
+*.egg-info/
+**/.venv/
+**/.env
+**/.env.*
+**/id_rsa*
+**/id_ed25519*
+*.pem
+*.key
+*.pt
+*.pth
+*.safetensors
+/bci_vla_framework/runs/pilot_virtual_13_streamcheck_01/raw_stream.bin
+/bci_vla_framework/runs/pilot_virtual_13_samplingcheck_01/processed_signal.npy

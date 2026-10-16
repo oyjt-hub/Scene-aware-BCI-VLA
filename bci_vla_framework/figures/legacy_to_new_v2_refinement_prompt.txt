@@ -1,0 +1,9 @@
+﻿Edit this new BCI–VLA architecture diagram with ONLY TWO targeted corrections. Preserve all photographic insets, all existing module text, the Chinese language, typography, navy/blue palette, proportions, main layout, formulas, legend, and planned/dashed execution strip. Preserve actual transparent background; do not add a black or white opaque global background.
+
+Correction 1 — essential arrow semantics:
+The large rightward arrow labeled "下一轮问题／探测提示" currently goes from the central diagnostic POLICY into the bottom-right "证据来源区分" card. This is wrong. Remove that arrow and reroute the outgoing POLICY action along a clean exterior lane UP to the TOP-RIGHT INTERACTION DISPLAY "任务提问／已知目标探测", with its arrowhead on that display panel. Place the exact label "下一轮问题／探测提示" beside this upward feedback lane without overlapping photo, text, decoder, or evidence boxes. The completed loop must be unambiguous: diagnostic POLICY → task/probe DISPLAY → EEG user → 脑电解码与响应 → 证据来源区分 → task/channel JOINT BELIEF. Preserve the existing separate response path from the evidence card back into the belief core, with leftward arrowhead into the core. NO policy-action arrow should enter "证据来源区分". Route the two opposite-direction paths in separate lanes, no intersecting arrows or accidental junctions.
+
+Correction 2 — transparent edge cleanup:
+Remove the stray cyan/blue confetti, ragged halos, and fragments that appear outside module borders in the transparent gaps, especially beside the core, feedback paths, and dashed execution strip. Keep smooth antialiased navy borders, white-filled cards, straight clear connectors, and genuinely transparent empty gaps. Do not erase deliberate solid/dashed arrows, labels, photos, colored header bands, or the red independent STOP request path.
+
+Keep other content unchanged, including all status labels: 实线：离线已实现; 虚线：尚待接入; 执行闭环：待接入; 照片仅示意任务与接口，非新框架实验结果. Deliver a sharp polished academic diagram.

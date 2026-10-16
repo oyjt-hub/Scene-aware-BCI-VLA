@@ -1,0 +1,116 @@
+{
+  "date": "2026-10-16",
+  "scope": "authorization-aware-finite/2.0",
+  "engineering_revalidation": "PASS",
+  "G2_passed": false,
+  "files": [
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\runtime_v2\\__init__.py",
+      "sha256": "1d9ad5846c425bcfd7fce06f78c031e8a4d60195225db5876286f8c28ac37c00"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\runtime_v2\\audit.py",
+      "sha256": "0d773e48b88c7a44862774836dd1dbb3bc088f9ca1ee6bbe30046b7e4676e851"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\runtime_v2\\controller.py",
+      "sha256": "af0fdc162a7f56904727926094c394163cf24015578e4f04832982b9de3a9bab"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\runtime_v2\\planning.py",
+      "sha256": "7b01a980aaacbd5034469cc673610be9d2ebb9c2209fac862710b49a2fcb51a0"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\runtime_v2\\runner.py",
+      "sha256": "326dea8c06dc226f94528f9059ce2418f6aeac45455b3f8b6f7040d896b44ff9"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\docs\\12R_claim_scope.txt",
+      "sha256": "4ca49f57dc84c9dd8ede6cecf4941777945cdc90ddb24d5e006e837040158198"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\docs\\12R_revalidation_report.txt",
+      "sha256": "96ba881c3482e0fc4402e1ec8f4b8399d53bbdffcc27ce489c9787e3d217bc69"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\12_source_manifest.json",
+      "sha256": "2be1668b4f554434e43abfdd27e30d83c71e16017359e70daed4ccba863b221b"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\12R_before_after.json",
+      "sha256": "9943e8b9c568e02b737d7ad5d184179e8ef6ac60f45d75e60d4c880c6213ae08"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\12R_comparison.csv",
+      "sha256": "ab856d0b28d1d258fba8275afe29e1c05540d4e1509ddde308069d6ddd63a633"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\12R_test_output.txt",
+      "sha256": "9a13f84ba1c550a54b8ee4f181981a7544d7dc918d0a8abb8d86ee9067ab58eb"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\12R_test_result.json",
+      "sha256": "58436e2cf3d2fd43c7ca46cf8950b02d4483f53e94c01a3276f73e23409631ee"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\finalize_step12_repair.py",
+      "sha256": "373176c91c22e8ea6bf38e871ec52f25ba33cde23c778b4828d954da11dd0a86"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\run_step12_repair.py",
+      "sha256": "92aa4c5f14682070b627f40c27b6948ed162bfcf0c31da990d210c589b71e69e"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\run_step12_repair_tests.py",
+      "sha256": "5af2863107c7901e4b29d841da2412f7e6bd2264fe8589be4d2bf074e545392a"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\verify_step12_delivery.py",
+      "sha256": "2c103944a8d7c16fccfcb7aa749e0104d462ceda5e5232cb0a725ec515876f12"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\offline_step12_repair_v2\\artifacts_manifest.json",
+      "sha256": "18d254841ebcea149f333de331e8354c8ead192d7939814d10580936abbea3bb"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\offline_step12_repair_v2\\evaluation_joined.jsonl",
+      "sha256": "1484a76ab3ff35db012226380ee2fcaeacd824741ea8e42482d40f8c29cb0dc6"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\offline_step12_repair_v2\\evaluation_private\\run_plan.json",
+      "sha256": "0cf0ca054093ea4d356ff8f06d452ee674658c613099ee48d3103bea85ccd3e0"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\offline_step12_repair_v2\\evaluation_private\\worlds.jsonl",
+      "sha256": "9b76be41e66fcae820d1e9f717f480b3f8840a44685fb33cf7b6493235e5cc5d"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\offline_step12_repair_v2\\fault_acceptance.json",
+      "sha256": "d6a1f6764cd0fd38ff451cba3a6879836b7ce53730c43f47e7e75795b79bd33f"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\offline_step12_repair_v2\\mechanism_checks.json",
+      "sha256": "5107106e4c00bf16177216fcaf3f7213887c298598c2bed925277e606a066ee4"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\offline_step12_repair_v2\\online\\episodes.jsonl",
+      "sha256": "c8251a31783b08090fb5f5731895626aec9bc6ba24d7b4163d7ac0d097f05651"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\offline_step12_repair_v2\\online\\journals.jsonl.gz",
+      "sha256": "1ac5ce0a5dd8e9e8830fe436a94e6648f951a528768b34ebef98ea9111555f3a"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\offline_step12_repair_v2\\oracle_audit.json",
+      "sha256": "0b57543320d91594ce574d5efe4e35d579ddb9314cf576e7236cc556226c1ba7"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\offline_step12_repair_v2\\summary.json",
+      "sha256": "24629b6870abc5554fec41a1e6dd476201606843d98e373616c95aead33a7e7c"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\tests\\test_runtime_v2.py",
+      "sha256": "0168b4cfc5cda91e8003d26a9796a67586e49de1dd99bf9c98aa7dcdb57f7b4c"
+    }
+  ]
+}

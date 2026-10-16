@@ -1,0 +1,10 @@
+{
+  "scope": "owned_simulation_processes_only",
+  "started_at_unix": 1792143581.3012834,
+  "server_port": 16816,
+  "GPU_physical_index": 0,
+  "server_pid": 2090853,
+  "worker_exit_code": 0,
+  "owned_server_stopped": true,
+  "finished_at_unix": 1792143677.6031744
+}

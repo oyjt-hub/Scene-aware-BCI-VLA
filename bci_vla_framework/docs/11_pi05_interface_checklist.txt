@@ -1,0 +1,107 @@
+﻿步骤11：π0.5接口核验清单
+版本：V2；日期：2026-10-16。
+用途：给后续执行者逐项核实真实后端接口。本文件记录现有证据、当前离线规格与尚缺材料。
+本步骤实际范围：只完成本地fake/dry-run适配、记录与测试；没有训练VLA主干、选择或加载真实权重、连接策略服务、相机、EEG设备或机械臂。下面的真实核验动作均为后续任务，不能填写成已完成。
+
+一、先分清三类证据
+
+1. 已查阅的旧接口声明
+本地冻结入口：D:\Scene_Aware\bci_vla_framework\configs\baseline_manifest.json。
+原始静态证据：execution/02_remote_inspection.json、02_remote_assets.json、02_remote_candidates.json、02_remote_environment.json。
+旧服务器仓库：/home/oyjt/Scene-aware-BCI-VLA，main，提交d2245527a767707c19d7305caacb02fa5de89dc3。
+“已读源码、文件存在、记录了SHA256”只证明该次盘点所见内容；不能推出当前服务运行、模型加载成功或机器人能力已验证。
+旧源码scripts/robot/RTC_inference.py:398—419检查openpi_rtc.version=1、modes包含realtime，并要求action_dim=14；这是一段客户端检查逻辑，不是已完成的服务握手。
+候选训练配置uniform声明pi05=true、action_horizon=100，数据仓库oy/uniform24_v21、默认提示fold the cloth.。这不是已唯一定位的论文checkpoint。
+冻结数据元信息出现observation.state及observation.images.front/left/right。数据集字段名称不自动等于模型运行时payload名称。
+
+2. 当前可复查的离线fake规格
+配置：D:\Scene_Aware\bci_vla_framework\configs\execution\fake_vla_interface.json。
+实现：bci_vla/adapters/vla/fake.py；接口版本fake-vla/1.0；scope=offline_fixture；deployment_allowed=false。
+图像键：front、left、right，必须恰好这三个；每张2×2×3，HWC、uint8、RGB数值fixture。
+state：14维，单位均为fixture_unit，范围均为[-1,1]。
+action：固定2×14的chunk，单位均为fixture_unit，范围均为[-1,1]。
+normalization=fixture_identity_v1；coordinate_frame=fixture_joint_frame。
+这些数值、键、单位和坐标仅用于协议测试。2×2图像和2步chunk不代表真实π0.5输入输出；14维state也没有通过旧数据shape或机器人反馈核验。[-1,1]不是物理关节或夹爪安全边界。
+FakeVLAAdapter不推理模型、不平滑动作、不执行机器人；DryRunVLAAdapter仅验格式。live模式明确拒绝。
+submit返回ACCEPTED只表示fake接收；last_feedback_id初始为空；STARTED/COMPLETED/FAILED/STOPPED均需显式模拟反馈。stop只记录请求；physical_execution与physical_stop_verified不因软件测试通过而变真。
+
+3. 真实π0.5仍待核验
+精确checkpoint、运行时图像键与预处理、state维度和顺序及单位、归一化绑定、动作时域与维度及单位/坐标、RTC握手和缓冲、独立停止反馈均未核验。
+与步骤02问题对应：I05权重与启动参数、I06环境和端口、I13任务能力、I14运行状态。本清单不会把这些历史问题改写成已解决。
+
+二、后续逐项执行步骤
+
+核验01：固定精确checkpoint和启动身份
+先收集：原论文实验启动日志、训练配置名、权重绝对路径与训练step、配置文件、代码提交、依赖版本、实际启动命令、所用数据和任务清单。
+操作：逐项比对论文实验与候选uniform/RTC/cloth目录；不要按最大step自动选权重。对选中权重文件及配置记录SHA256或明确的完整性清单，列出未能哈希的文件。
+交付：真实后端身份清单，含checkpoint路径、step、代码提交、配置hash、启动命令、适用任务与证据路径。无法唯一对应时状态保留unverified，不能进入正式基线比较。
+本步骤没有执行此操作；selected_paper_checkpoint和selected_future_baseline_checkpoint仍以02冻结记录中的null为历史状态。
+
+核验02：固定图像字段与预处理链
+先收集：相机序号/视角与真实样例帧、发送端payload构造源码、服务端输入变换源码、模型输入字段声明、模型训练时图像尺寸及变换。
+操作：从相机到请求再到模型逐级记录key、shape、dtype、RGB/BGR、HWC/CHW、缩放范围、裁剪/填充/resize、镜像与相机顺序；检查缺失视角的处理和时间同步。
+特别区分：数据集observation.images.front不等于已验证运行时front；fixture的2×2 RGB不能用于验证真实视觉推理。
+交付：逐视角映射表和一份可离线回放的真实观测包。记录每级预处理前后shape及固定样例摘要；禁止仅凭键名相似填“通过”。
+
+核验03：核实state维度、顺序、单位与时钟
+先收集：数据集feature shape、机器人遥测字段定义、发送端state拼接源码、训练适配器输入变换、带时间戳的静态观测样例。
+操作：逐维列出名称、左右臂、关节或夹爪、原始单位、缩放/偏置、绝对值或相对值、顺序、有效范围、采样时刻；核对夹爪量纲与编码范围。
+当前不能声称真实state=14；RTC旧源码中的action_dim=14不能证明state也为14。
+交付：state逐维字典、时间同步规则、训练/推理顺序对照与最小回放样例。发现缺维或单位未知就停止接入核验，不用补零或猜单位掩盖差异。
+
+核验04：核实normalization与checkpoint绑定
+先收集：选中checkpoint所对应norm_stats原文件、数据统计生成配置、运行时加载路径、归一化/反归一化源码及模型适配器设置。
+冻结记录仅说明/home/oyjt/openpi/assets/uniform/uniform24/norm_stats.json当时存在，3436字节，SHA256为ed11952f446bb4541534197fd5999b5b1599ee7b78eeb728ed6d9c176f6bd21c。
+操作：比对路径、hash、维度、统计键和checkpoint身份；逐维检查state与action使用哪些统计量、分位数/均值方差策略、裁剪、夹爪例外和逆变换顺序。
+交付：checkpoint—配置—norm_stats三者的唯一对应关系，以及固定向量的正向/逆向数值核对。文件存在不能代替绑定检查，fixture_identity_v1不是真实归一化配置。
+禁止在测试集重新拟合统计量后把结果称为原checkpoint表现。
+
+核验05：核实action形状、语义、单位和坐标
+先收集：策略返回元数据与一份不连接机器人获得的动作样例、模型输出变换、控制客户端与驱动映射、实际硬件关节和夹爪限位定义。
+操作：记录batch、horizon、action_dim、左右臂及逐维顺序；区分关节位置/速度/力矩、绝对量/增量、夹爪指令、物理单位、坐标系、符号、偏置、频率和chunk时间跨度；核对NaN/Inf、shape错误与越界时的拒绝规则。
+旧候选horizon=100和RTC要求action_dim=14是待核声明；当前fake的2×14不是其替代验证。
+交付：动作逐维字典与单位/坐标转换表，明确转换责任所在模块。无证据不能自动把radians当degrees，也不能把模型输出直接当硬件命令。
+任何物理限位、速度和加速度边界必须来自已核硬件/控制配置，不能沿用fixture的[-1,1]。
+
+核验06：核实RTC、平滑与取消旧动作
+先收集：实际策略服务版本与openpi_rtc元数据、客户端参数、action_horizon、prefetch、步进频率、缓存/异步队列与平滑实现源码。
+操作：先在无硬件的独立回放中核对RTC版本、realtime支持、horizon/action_dim一致性；记录prefetch是否合法、缓存如何更新、chunk如何拼接、旧指令如何失效、超时/断连如何处理；核对平滑是否改变任务绑定、动作时延或停止响应。
+交付：握手记录、参数清单、回放事件时间线，以及契约版本变化时旧chunk清空或失效的证据。
+无法核实RTC v1时保持不使能，不得静默退回普通分块后继续宣称RTC已验。当前fake完全不实现RTC或动作平滑。
+
+核验07：区分接收、实际执行和独立终态
+先收集：真实后端对每个submission_id提供的ACK、开始、完成/失败反馈定义和唯一事件ID；终态标注或传感器证据规范。
+操作：核清ACCEPTED、STARTED、COMPLETED各自由哪个组件产生，是否能绑定同一session、submission、contract与revision；在断连/延迟场景保留UNKNOWN，不重用一次性授权自动重发。
+交付：状态转换表与事件样例，标明transport ACK不能充当执行开始，COMPLETED不能充当目标满足。
+独立终态必须绑定本次执行、场景与观察时间；校准数据不能同时充当验收终态。当前系统只接受明确标记的离线fixture端点证据，不能作为真实机器人成功率。
+
+核验08：核实停止请求与物理停止反馈
+先收集：独立停止入口、驱动/控制器停机语义、RTC缓冲清空机制、停止确认传感或控制器反馈、反馈来源与时间戳。
+操作：先离线注入STOP、重复STOP、请求后ACK丢失、晚到STARTED、执行中断连等事件，确认“已请求”与“已停止”严格分开；停止锁存期间不能重新提交或恢复旧任务。
+后续真实验证须单独安排，保持明确可观察的停止标准和绑定日志。停止ACK仅证明请求接收时，不可标physical_stop_verified。
+交付：停止请求—控制器接收—动作队列失效—独立停止反馈的完整事件链；无法提供独立反馈时，记录stop_unknown并保持暂停。当前fake的STOPPED是显式模拟证据，不证明实际物理停止。
+
+核验09：核实语言条件下的任务能力
+先收集：选中权重训练任务说明、pick/place/fold对应实例、完整语言提示、目标/目的地标注和既有独立执行记录。
+操作：核对同一场景中改变目的地时语言是否真正改变行为；仅有default_prompt、单task数据或固定cloth入口不能证明多目的地能力。
+交付：能力支持/未知/不支持矩阵及证据。真实意图必须保留；不能为了适配后端把用户目标改成更容易完成的任务。
+新训练或微调不属于本步骤，也不能用本地mock通过代替真实能力验证。
+
+核验10：整理接入材料与完成条件
+将上述身份、图像、state、normalization、action、RTC、反馈与停止证据放入新的执行证据目录，记录日期、操作者、环境、代码与配置hash、原始材料路径、核对动作和结果。
+逐项状态仅写“源码声明已读”“离线格式通过”“真实接口已核”“硬件闭环已核”中有证据支持的层级；缺项写unverified及缺少材料。
+真实接入需在单独任务中据证据建立新的后端配置和适配器，保留本文件与fake规格。不得直接把deployment_allowed改成true或将fixture配置重命名为真实π0.5。
+完成本清单文档不表示真实接入完成；本步骤没有执行以上真实核验、没有联网、没有连接硬件、没有训练VLA主干。
+
+三、交给下一位执行者的最小材料包
+
+A. 精确权重、训练step、代码提交、启动命令和配置指纹。
+B. checkpoint对应的norm_stats及逐维归一化说明。
+C. 一份带时钟、三视角原始图像、逐维state及元数据的实际观测包。
+D. 一份无硬件条件下取得的实际策略输出与完整action语义表。
+E. RTC握手/缓冲/平滑/版本失效规则和离线异常回放。
+F. submission、STARTED、COMPLETED、STOP与独立停止反馈的绑定规范。
+G. 任务能力和独立终态判据；测试/校准分割说明。
+H. 每项未解决问题、证据不足原因与下一个具体核验动作。
+
+当前可交付的是离线实现与软件检验材料；A—G中真实材料仍须按上面步骤补齐。

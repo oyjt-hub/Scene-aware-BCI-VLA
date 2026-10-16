@@ -1,0 +1,324 @@
+{
+  "schema_version": "vla-interface/1.0",
+  "scope": "offline_fixture",
+  "deployment_allowed": false,
+  "interface_version": "fake-vla/1.0",
+  "images": {
+    "keys": [
+      "front",
+      "left",
+      "right"
+    ],
+    "shape_hwc": [
+      2,
+      2,
+      3
+    ],
+    "dtype": "uint8"
+  },
+  "state": {
+    "dimension": 14,
+    "units": [
+      "fixture_unit",
+      "fixture_unit",
+      "fixture_unit",
+      "fixture_unit",
+      "fixture_unit",
+      "fixture_unit",
+      "fixture_unit",
+      "fixture_unit",
+      "fixture_unit",
+      "fixture_unit",
+      "fixture_unit",
+      "fixture_unit",
+      "fixture_unit",
+      "fixture_unit"
+    ],
+    "lower": [
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    "upper": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  "actions": {
+    "dimension": 14,
+    "horizon": 2,
+    "units": [
+      "fixture_unit",
+      "fixture_unit",
+      "fixture_unit",
+      "fixture_unit",
+      "fixture_unit",
+      "fixture_unit",
+      "fixture_unit",
+      "fixture_unit",
+      "fixture_unit",
+      "fixture_unit",
+      "fixture_unit",
+      "fixture_unit",
+      "fixture_unit",
+      "fixture_unit"
+    ],
+    "lower": [
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    "upper": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  "normalization": "fixture_identity_v1",
+  "coordinate_frame": "fixture_joint_frame",
+  "source_evidence": [
+    {
+      "path": "configs/baseline_manifest.json",
+      "finding": "candidate uniform pi05=true/horizon=100; checkpoint not selected; no hardware/runtime validation"
+    },
+    {
+      "path": "execution/02_remote_inspection.json",
+      "source": "scripts/robot/RTC_inference.py:398-419",
+      "finding": "frozen source requires RTC v1 metadata and action_dim=14; observed source is not a live handshake"
+    },
+    {
+      "path": "configs/baseline_manifest.json",
+      "finding": "dataset feature keys observation.images.front/left/right recorded; runtime image key mapping not verified"
+    }
+  ],
+  "unverified_live_fields": [
+    "exact_pi05_checkpoint",
+    "runtime_image_keys_and_shape",
+    "runtime_state_dimension_and_order",
+    "normalization_binding_to_checkpoint",
+    "actual_action_horizon_shape",
+    "units_and_coordinates",
+    "rtc_handshake_and_smoothing",
+    "robot_limits_and_stop_acknowledgment"
+  ],
+  "fixture_observation": {
+    "interface_version": "fake-vla/1.0",
+    "scene_id": "fixture-scene",
+    "scene_revision": 1,
+    "captured_at": "2026-10-15T00:00:00Z",
+    "images": {
+      "front": [
+        [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            255,
+            254,
+            253
+          ],
+          [
+            32,
+            64,
+            128
+          ]
+        ]
+      ],
+      "left": [
+        [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            255,
+            254,
+            253
+          ],
+          [
+            32,
+            64,
+            128
+          ]
+        ]
+      ],
+      "right": [
+        [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            255,
+            254,
+            253
+          ],
+          [
+            32,
+            64,
+            128
+          ]
+        ]
+      ]
+    },
+    "state": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "state_units": [
+      "fixture_unit",
+      "fixture_unit",
+      "fixture_unit",
+      "fixture_unit",
+      "fixture_unit",
+      "fixture_unit",
+      "fixture_unit",
+      "fixture_unit",
+      "fixture_unit",
+      "fixture_unit",
+      "fixture_unit",
+      "fixture_unit",
+      "fixture_unit",
+      "fixture_unit"
+    ],
+    "coordinate_frame": "fixture_joint_frame",
+    "normalization": "fixture_identity_v1"
+  },
+  "fixture_actions": {
+    "interface_version": "fake-vla/1.0",
+    "values": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "units": [
+      "fixture_unit",
+      "fixture_unit",
+      "fixture_unit",
+      "fixture_unit",
+      "fixture_unit",
+      "fixture_unit",
+      "fixture_unit",
+      "fixture_unit",
+      "fixture_unit",
+      "fixture_unit",
+      "fixture_unit",
+      "fixture_unit",
+      "fixture_unit",
+      "fixture_unit"
+    ],
+    "coordinate_frame": "fixture_joint_frame",
+    "normalization": "fixture_identity_v1"
+  }
+}

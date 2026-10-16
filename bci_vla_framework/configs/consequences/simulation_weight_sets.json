@@ -1,0 +1,25 @@
+{
+  "status": "simulation_only",
+  "provenance": "illustrative_not_fitted",
+  "interpretation": "dimensionless error terms plus declared per-second time coefficients; never optimized on test",
+  "weight_sets": {
+    "time_half": {
+      "wrong_start": 1.0,
+      "task_failure": 1.0,
+      "recovery_s": 0.01,
+      "user_time_s": 0.01
+    },
+    "base": {
+      "wrong_start": 1.0,
+      "task_failure": 1.0,
+      "recovery_s": 0.02,
+      "user_time_s": 0.02
+    },
+    "time_double": {
+      "wrong_start": 1.0,
+      "task_failure": 1.0,
+      "recovery_s": 0.04,
+      "user_time_s": 0.04
+    }
+  }
+}

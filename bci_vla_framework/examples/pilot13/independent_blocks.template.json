@@ -1,0 +1,47 @@
+{
+  "document_kind": "unexecuted_collection_design",
+  "visibility": "evaluation_private_only",
+  "provenance": "not_collected",
+  "ready_for_collection": false,
+  "blocks": [
+    {
+      "block_id": "task-calibration",
+      "mode": "TASK_QUERY",
+      "split": "calibration",
+      "trial_count": null,
+      "recording_group": null
+    },
+    {
+      "block_id": "probe-calibration",
+      "mode": "CHANNEL_PROBE",
+      "split": "calibration",
+      "trial_count": null,
+      "recording_group": null
+    },
+    {
+      "block_id": "confirm-calibration",
+      "mode": "CONFIRM",
+      "split": "calibration",
+      "trial_count": null,
+      "recording_group": null
+    },
+    {
+      "block_id": "task-holdout",
+      "mode": "TASK_QUERY",
+      "split": "calibration_holdout",
+      "trial_count": null,
+      "recording_group": null
+    },
+    {
+      "block_id": "paired-pilot",
+      "mode": null,
+      "split": "pilot",
+      "trial_count": null,
+      "recording_group": null
+    }
+  ],
+  "participant_count": null,
+  "duration_choices_s": null,
+  "randomization_ref": null,
+  "real_records": []
+}

@@ -1,0 +1,92 @@
+{
+  "scope": "analytic_L1_fixed_transition_boundary_checks",
+  "checks": {
+    "binary_reencoding_preserves_alias": true,
+    "probe_is_goal_independent_given_channel": true,
+    "informative_probe_reduces_joint_entropy_for_this_observation": true,
+    "correlated_goal_changes_without_overwrite": true,
+    "independent_goal_stays_half": true,
+    "uninformative_probe_preserves_joint": true,
+    "uninformative_probe_has_zero_mutual_information": true,
+    "recode_unavailable_without_separate_calibration": true
+  },
+  "alias_rows": [
+    {
+      "swap_code": false,
+      "output": "0",
+      "right_normal": 0.1,
+      "left_flip": 0.1,
+      "equal": true
+    },
+    {
+      "swap_code": false,
+      "output": "1",
+      "right_normal": 0.85,
+      "left_flip": 0.85,
+      "equal": true
+    },
+    {
+      "swap_code": false,
+      "output": "NO_RESPONSE",
+      "right_normal": 0.05,
+      "left_flip": 0.05,
+      "equal": true
+    },
+    {
+      "swap_code": true,
+      "output": "0",
+      "right_normal": 0.85,
+      "left_flip": 0.85,
+      "equal": true
+    },
+    {
+      "swap_code": true,
+      "output": "1",
+      "right_normal": 0.1,
+      "left_flip": 0.1,
+      "equal": true
+    },
+    {
+      "swap_code": true,
+      "output": "NO_RESPONSE",
+      "right_normal": 0.05,
+      "left_flip": 0.05,
+      "equal": true
+    }
+  ],
+  "prior": [
+    0,
+    0.5,
+    0.5,
+    0
+  ],
+  "informative_posterior": [
+    0.0,
+    0.10233918128654972,
+    0.8976608187134503,
+    0.0
+  ],
+  "uninformative_posterior": [
+    0.0,
+    0.5,
+    0.5,
+    0.0
+  ],
+  "before_goal": {
+    "task-9cad706e60e745cf3c01a413": 0.5,
+    "task-d5fc9bc832047df78f51c84f": 0.5
+  },
+  "after_goal": {
+    "task-9cad706e60e745cf3c01a413": 0.10233918128654972,
+    "task-d5fc9bc832047df78f51c84f": 0.8976608187134503
+  },
+  "before_channel": {
+    "normal": 0.5,
+    "flip": 0.5
+  },
+  "after_channel": {
+    "normal": 0.8976608187134503,
+    "flip": 0.10233918128654972
+  },
+  "caution": "positive observation is a conditional example; not all random observations reduce entropy"
+}

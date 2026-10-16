@@ -1,0 +1,78 @@
+{
+  "plan_version": "V2",
+  "step_id": "03",
+  "date": "2026-10-15",
+  "purpose": "input versions and final reviewed design snapshot, not empirical evidence",
+  "files": [
+    {
+      "path": "D:\\Scene_Aware\\BCI_VLA通用交互框架_逐步执行手册.txt",
+      "kind": "input",
+      "sha256": "13b5813bec3a9d1bcdf44b13f46eb51d8ca57b8338a40bb90ce0c8608169b213"
+    },
+    {
+      "path": "D:\\Scene_Aware\\BCI_VLA框架_主动诊断核心方案_V2.txt",
+      "kind": "input",
+      "sha256": "e663f493594195ad2d9876614d7c486ea6d2b31a8171e294825d149ed2e34f72"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\docs\\01_scope.txt",
+      "kind": "input",
+      "sha256": "6388a26587cc5d8d2bdf854a6c5bbf4f522b61b531f3928d7ddf503199f6dfa6"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\docs\\01_claim_map.txt",
+      "kind": "input",
+      "sha256": "f32f50066ddd003d928ef5172ce6578cd73028c77a6b31bf92582f0153b6853b"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\docs\\02_inventory.txt",
+      "kind": "input",
+      "sha256": "873e1acdb29425c2f502bdeafd69d8dddd1167a1ef742c75476a970f2ed66654"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\docs\\02_issues.txt",
+      "kind": "input",
+      "sha256": "80ed87178704775fa1612c87ac1738d89d09612fc7aacd576df4664f848a8cfb"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\configs\\baseline_manifest.json",
+      "kind": "input",
+      "sha256": "01553ef4eb7493087e3c79790aa9452fc5d8c2fda8ef6faf0b3c193b0e47bd2e"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\docs\\03_identifiability.txt",
+      "kind": "design_or_check",
+      "sha256": "fde854bc3d60c1a3fa26bb481d7f97e71c31559a184a1b717b7f50120551c66a"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\docs\\03_protocol_timeline.txt",
+      "kind": "design_or_check",
+      "sha256": "118bbfe2cbdad5efff66e3b97d8d8132910dabea65865943674fd1edf43cef44"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\examples\\alias_cases.json",
+      "kind": "design_or_check",
+      "sha256": "9339c0f07b3aa699e76dd4a059b668f295adac964aad81b99f0a96b5c869a83b"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\verify_step03_math.py",
+      "kind": "design_or_check",
+      "sha256": "d0e4891793d0ede6d3aa60a537beb347ae20df06694eaeb9a6be3251841a965a"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\03_math_result.json",
+      "kind": "design_or_check",
+      "sha256": "0eb7f083d407e3c197f595ab28dcbd5fe77003ea428ab73f42a715342c7279aa"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\03_review.txt",
+      "kind": "design_or_check",
+      "sha256": "47f28fe70d0d5279435a55387ac6b62bb9617c37c22cb47e6f15a8dc9336151f"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\03_acceptance.txt",
+      "kind": "design_or_check",
+      "sha256": "0d2b1974a59a956dbdc00241b8caac744cf09a0eaffd8ea5c939e9bd4b3b6b24"
+    }
+  ]
+}

@@ -1,0 +1,188 @@
+{
+  "scope": "nonreal_BCI_full_functional_pipeline_not_strategy_superiority",
+  "checkpoint_sha256": "26b36799a702ca920467c987096a8ccb5f476c6965af6c7f2fd419ecb6893bf2",
+  "normalization_sha256": "9b99e12e0853e37612fbfb4ac164da7e2515e8d064fda3fa196537da4cdd21e5",
+  "scene": "LIBERO goal6 objects, independent pick tasks (not official task6 success)",
+  "task_predicate": "gripper grasp contact AND lift>0.03m, stable3 simulation steps",
+  "calibration_init_indices": [
+    0,
+    1
+  ],
+  "holdout_init_indices": [
+    2
+  ],
+  "test_init_indices": [
+    3
+  ],
+  "max_execution_steps": 160,
+  "Beta_prior": [
+    1,
+    1
+  ],
+  "cost_scope": {
+    "task_failure": "Beta-smoothed independent simulator endpoint",
+    "wrong_start": "command-vs-hypothesis identity",
+    "recovery_s": "measured simulator reset wall time",
+    "user_time_s": "declared2s synthetic confirmation allowance, not human measurement"
+  },
+  "real_BCI_enabled": false,
+  "physical_robot_enabled": false,
+  "cases": [
+    {
+      "id": "nominal_cream",
+      "goal": 0,
+      "channel": "normal",
+      "prior": [
+        0.81,
+        0.09,
+        0.09,
+        0.01
+      ]
+    },
+    {
+      "id": "nominal_wine",
+      "goal": 1,
+      "channel": "normal",
+      "prior": [
+        0.09,
+        0.01,
+        0.81,
+        0.09
+      ]
+    },
+    {
+      "id": "changed_goal",
+      "goal": 1,
+      "channel": "normal",
+      "prior": [
+        0.81,
+        0.09,
+        0.09,
+        0.01
+      ]
+    },
+    {
+      "id": "changed_channel",
+      "goal": 0,
+      "channel": "flip",
+      "prior": [
+        0.81,
+        0.09,
+        0.09,
+        0.01
+      ]
+    },
+    {
+      "id": "joint_alias_conflict",
+      "goal": 1,
+      "channel": "flip",
+      "prior": [
+        0.5,
+        0,
+        0,
+        0.5
+      ]
+    },
+    {
+      "id": "late_confirmation",
+      "goal": 0,
+      "channel": "normal",
+      "prior": [
+        0.9,
+        0,
+        0.1,
+        0
+      ],
+      "late_confirmation": true
+    },
+    {
+      "id": "STOP_during_execution",
+      "goal": 0,
+      "channel": "normal",
+      "prior": [
+        0.9,
+        0,
+        0.1,
+        0
+      ],
+      "stop": true
+    },
+    {
+      "id": "goal_change_recovery",
+      "goal": 0,
+      "channel": "normal",
+      "prior": [
+        0.9,
+        0,
+        0.1,
+        0
+      ],
+      "goal_change_during_execution": true
+    },
+    {
+      "id": "execution_failure_not_channel",
+      "goal": 0,
+      "channel": "normal",
+      "prior": [
+        0.9,
+        0,
+        0.1,
+        0
+      ],
+      "execution_failure": true
+    },
+    {
+      "id": "inference_failure_not_channel",
+      "goal": 0,
+      "channel": "normal",
+      "prior": [
+        0.9,
+        0,
+        0.1,
+        0
+      ],
+      "transport_failure": true
+    }
+  ],
+  "old_source_manifest": "execution/15_source_manifest.json",
+  "versioned_sources": [
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\simulation_v3\\__init__.py",
+      "sha256": "8fe287e38312613294a04d763c1c4f11fafd443230dd11bd7769a395803cc623"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\simulation_v3\\backend.py",
+      "sha256": "4c7b7b65ec2aa2e481f09eb2de51210ed21b7170cce88416c44a55193bd4c940"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\simulation_v3\\factory.py",
+      "sha256": "1f6aed41d09eb2245e1a8c58c57e07d369b19d331a83f12299bfb9ce696b17da"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\simulation_v3\\interaction.py",
+      "sha256": "5988fb9c4edf52a36d9d5cb0d98dca8d03600daf0db959f7ffd6b995e1341216"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\simulation_v3\\outcomes.py",
+      "sha256": "f4c5be32168f9d1d532fb3cf94d61c461ebc06b7d88b1cefc8ee6b67b8a67912"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\simulation_v3\\records.py",
+      "sha256": "c09f4966f6b4bb3821e676338c61e4f2c7499718225f50e56ff78644174c7279"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\simulation_v3\\replay.py",
+      "sha256": "e68c2478c817eff3734dc959fc2d9fb301422b658d53b94606e4cdc3396fb69d"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\simulation_v3\\session.py",
+      "sha256": "7eb43a67855d24b6c525be9ec1569c71cf1a78e2317aef34238e6d4ccb6d7df6"
+    }
+  ],
+  "reuse_calibration_json": "/home/oyjt/Scene-aware-BCI-VLA-runs/step14C_full_20261016_v1/results/independent_trajectories.json",
+  "reused_calibration_sha256": "4e1c3656e4cdf5c2bd89c09a09cbe31953957d0b6e9fcf0c22f198203b36896e",
+  "repairs": [
+    "STARTED once per execution; progress separately logged",
+    "per-session synthetic stream identity"
+  ]
+}

@@ -1,0 +1,567 @@
+{
+  "plan_version": "V2",
+  "scope": "local_asset_inventory",
+  "local_git": "not_a_git_repository",
+  "python": "3.13.0 (tags/v3.13.0:60403a5, Oct  7 2024, 09:38:07) [MSC v.1941 64 bit (AMD64)]",
+  "python_executable": "C:\\Program Files\\Python313\\python.exe",
+  "packages": {
+    "torch": null,
+    "numpy": "2.2.4",
+    "paramiko": "5.0.0",
+    "requests": "2.32.3",
+    "pytest": null
+  },
+  "files": [
+    {
+      "path": "D:\\Scene_Aware\\context_intent\\.gitignore",
+      "relative_to_workspace": "context_intent\\.gitignore",
+      "bytes": 103,
+      "sha256": "7d835502d15c289549e28c6b1e98c130dc8e7416671391696a0b8a982768aa64"
+    },
+    {
+      "path": "D:\\Scene_Aware\\context_intent\\API_CONTRACT.md",
+      "relative_to_workspace": "context_intent\\API_CONTRACT.md",
+      "bytes": 4237,
+      "sha256": "12d957f075af00ba71caf317ab81a2b03f75d75bc496d439f985469f63b38b8b"
+    },
+    {
+      "path": "D:\\Scene_Aware\\context_intent\\configs\\experiment.json",
+      "relative_to_workspace": "context_intent\\configs\\experiment.json",
+      "bytes": 4120,
+      "sha256": "1ab204af8409055908ed97012adb431d5b8db74c8fbd00e4b7e8c5c274832546"
+    },
+    {
+      "path": "D:\\Scene_Aware\\context_intent\\docs\\ANNOTATION_ZH.md",
+      "relative_to_workspace": "context_intent\\docs\\ANNOTATION_ZH.md",
+      "bytes": 6943,
+      "sha256": "5ad5e7cac0b5db0cbf817943518ceaca306f01c30a5c2fe53704cfa8fc74a0cc"
+    },
+    {
+      "path": "D:\\Scene_Aware\\context_intent\\docs\\EXPERIMENTS_ZH.md",
+      "relative_to_workspace": "context_intent\\docs\\EXPERIMENTS_ZH.md",
+      "bytes": 13734,
+      "sha256": "7c0d602559a56e402146050e21e1fd86e4360b49862a2174433002fc3535f7b5"
+    },
+    {
+      "path": "D:\\Scene_Aware\\context_intent\\docs\\MODULE_DESIGN_ZH.md",
+      "relative_to_workspace": "context_intent\\docs\\MODULE_DESIGN_ZH.md",
+      "bytes": 9510,
+      "sha256": "d7b2c2a44b5804d1406287f0b0bbdc4f1f43bad434091a8662b11c5cd18d6ded"
+    },
+    {
+      "path": "D:\\Scene_Aware\\context_intent\\pyproject.toml",
+      "relative_to_workspace": "context_intent\\pyproject.toml",
+      "bytes": 468,
+      "sha256": "2ef56acb6da4178220b310ae1cd02f0fee1ac8aeb416934fdc6c1f27fb672e51"
+    },
+    {
+      "path": "D:\\Scene_Aware\\context_intent\\README.md",
+      "relative_to_workspace": "context_intent\\README.md",
+      "bytes": 1964,
+      "sha256": "2d97c5cde45b958b14f418e05d69414a6a9fad566bf8a1a85a80f590c0e98dc8"
+    },
+    {
+      "path": "D:\\Scene_Aware\\context_intent\\runs\\local_rule_smoke\\aggregate.json",
+      "relative_to_workspace": "context_intent\\runs\\local_rule_smoke\\aggregate.json",
+      "bytes": 36036,
+      "sha256": "e881587534f48da06a2c047d518b1a453103b9250e5b4c468257e78da9ce875f"
+    },
+    {
+      "path": "D:\\Scene_Aware\\context_intent\\runs\\local_rule_smoke\\per_case.csv",
+      "relative_to_workspace": "context_intent\\runs\\local_rule_smoke\\per_case.csv",
+      "bytes": 29689,
+      "sha256": "97947cb1a6bdf56d850a2c5e5045b9ec6425eb52de64fe372c81ffec317f0ea2"
+    },
+    {
+      "path": "D:\\Scene_Aware\\context_intent\\runs\\local_rule_smoke\\per_case.jsonl",
+      "relative_to_workspace": "context_intent\\runs\\local_rule_smoke\\per_case.jsonl",
+      "bytes": 109868,
+      "sha256": "78715c352cb07897fe6f96d52684efcc8f4aaf918d26a8b620e780a43023f570"
+    },
+    {
+      "path": "D:\\Scene_Aware\\context_intent\\scene_context\\__init__.py",
+      "relative_to_workspace": "context_intent\\scene_context\\__init__.py",
+      "bytes": 98,
+      "sha256": "7f98a5dbd39888019a527225db8c25e86dce6c228a1308d815b1ff8bda4f77d9",
+      "syntax": "PASS",
+      "top_level_symbols": []
+    },
+    {
+      "path": "D:\\Scene_Aware\\context_intent\\scene_context\\baselines.py",
+      "relative_to_workspace": "context_intent\\scene_context\\baselines.py",
+      "bytes": 2156,
+      "sha256": "c847c232741d73da5268f876634b132272d9e6ff460a7e1df6b3a4165d57e040",
+      "syntax": "PASS",
+      "top_level_symbols": [
+        {
+          "name": "RulePredictor",
+          "line": 11
+        }
+      ]
+    },
+    {
+      "path": "D:\\Scene_Aware\\context_intent\\scene_context\\cli.py",
+      "relative_to_workspace": "context_intent\\scene_context\\cli.py",
+      "bytes": 9528,
+      "sha256": "05077b4a50c8ae54625b21d87e518da2685fe2eb7682105d60d760cb16862700",
+      "syntax": "PASS",
+      "top_level_symbols": [
+        {
+          "name": "_predictor",
+          "line": 14
+        },
+        {
+          "name": "run_suite",
+          "line": 32
+        },
+        {
+          "name": "main",
+          "line": 86
+        }
+      ]
+    },
+    {
+      "path": "D:\\Scene_Aware\\context_intent\\scene_context\\evaluation.py",
+      "relative_to_workspace": "context_intent\\scene_context\\evaluation.py",
+      "bytes": 17304,
+      "sha256": "3407355d2b7ec7dfec92155b89a258a1b08c03bbd64b02040b44884e363d37be",
+      "syntax": "PASS",
+      "top_level_symbols": [
+        {
+          "name": "_intent_key",
+          "line": 24
+        },
+        {
+          "name": "_slot",
+          "line": 33
+        },
+        {
+          "name": "_score",
+          "line": 40
+        },
+        {
+          "name": "_ratio",
+          "line": 66
+        },
+        {
+          "name": "_quantile",
+          "line": 70
+        },
+        {
+          "name": "_aggregate",
+          "line": 79
+        },
+        {
+          "name": "_numeric_metrics",
+          "line": 138
+        },
+        {
+          "name": "_bootstrap",
+          "line": 147
+        },
+        {
+          "name": "evaluate",
+          "line": 168
+        },
+        {
+          "name": "paired_scene_comparison",
+          "line": 271
+        }
+      ]
+    },
+    {
+      "path": "D:\\Scene_Aware\\context_intent\\scene_context\\integration.py",
+      "relative_to_workspace": "context_intent\\scene_context\\integration.py",
+      "bytes": 6140,
+      "sha256": "a6fa20fb73a3f3220b7d93d3ebe3ebc4d4cedab162a402fba7783fd924c1905e",
+      "syntax": "PASS",
+      "top_level_symbols": [
+        {
+          "name": "observation_from_detections",
+          "line": 12
+        },
+        {
+          "name": "ContextIntentAdapter",
+          "line": 60
+        }
+      ]
+    },
+    {
+      "path": "D:\\Scene_Aware\\context_intent\\scene_context\\llm.py",
+      "relative_to_workspace": "context_intent\\scene_context\\llm.py",
+      "bytes": 15654,
+      "sha256": "1f6da451c655a0adf605b50a278c76235ca8865b9446d7074038a5cd709e31a8",
+      "syntax": "PASS",
+      "top_level_symbols": [
+        {
+          "name": "build_prompt",
+          "line": 43
+        },
+        {
+          "name": "_unique_pairs",
+          "line": 79
+        },
+        {
+          "name": "parse_response",
+          "line": 88
+        },
+        {
+          "name": "LLMPredictor",
+          "line": 123
+        }
+      ]
+    },
+    {
+      "path": "D:\\Scene_Aware\\context_intent\\scene_context\\model.py",
+      "relative_to_workspace": "context_intent\\scene_context\\model.py",
+      "bytes": 19589,
+      "sha256": "149bd3fda497d7255e82c7921d4bbdfa2101ad4f4da73e24efd9407297f7bafb",
+      "syntax": "PASS",
+      "top_level_symbols": [
+        {
+          "name": "_bucket",
+          "line": 33
+        },
+        {
+          "name": "_one_hot",
+          "line": 39
+        },
+        {
+          "name": "ModelConfig",
+          "line": 44
+        },
+        {
+          "name": "RelationAttention",
+          "line": 69
+        },
+        {
+          "name": "IntentModel",
+          "line": 111
+        },
+        {
+          "name": "proposal_from_output",
+          "line": 288
+        },
+        {
+          "name": "NeuralPredictor",
+          "line": 311
+        }
+      ]
+    },
+    {
+      "path": "D:\\Scene_Aware\\context_intent\\scene_context\\planning.py",
+      "relative_to_workspace": "context_intent\\scene_context\\planning.py",
+      "bytes": 8154,
+      "sha256": "3133bb2ee2e1d64ba46d3cb4092e112071ed138b8e45500e330c44f13545204a",
+      "syntax": "PASS",
+      "top_level_symbols": [
+        {
+          "name": "candidate_key",
+          "line": 11
+        },
+        {
+          "name": "generate_candidates",
+          "line": 15
+        },
+        {
+          "name": "_selected",
+          "line": 31
+        },
+        {
+          "name": "compatible_candidates",
+          "line": 47
+        },
+        {
+          "name": "structural_clarification",
+          "line": 88
+        },
+        {
+          "name": "finalize_prediction",
+          "line": 115
+        }
+      ]
+    },
+    {
+      "path": "D:\\Scene_Aware\\context_intent\\scene_context\\rendering.py",
+      "relative_to_workspace": "context_intent\\scene_context\\rendering.py",
+      "bytes": 1708,
+      "sha256": "08160d2d25a9dff2295f8f69a9d05cf18a896a1286db228b9798b29f64128ceb",
+      "syntax": "PASS",
+      "top_level_symbols": [
+        {
+          "name": "_describe",
+          "line": 5
+        },
+        {
+          "name": "render_instruction",
+          "line": 25
+        }
+      ]
+    },
+    {
+      "path": "D:\\Scene_Aware\\context_intent\\scene_context\\schema.py",
+      "relative_to_workspace": "context_intent\\scene_context\\schema.py",
+      "bytes": 9771,
+      "sha256": "3ab59a38c73f29608f418fe209d2f441e463db849c2a61048433edc6be2ae110",
+      "syntax": "PASS",
+      "top_level_symbols": [
+        {
+          "name": "_text",
+          "line": 17
+        },
+        {
+          "name": "_prob",
+          "line": 25
+        },
+        {
+          "name": "validate_observation",
+          "line": 31
+        },
+        {
+          "name": "validate_case",
+          "line": 119
+        },
+        {
+          "name": "public_observation",
+          "line": 154
+        },
+        {
+          "name": "load_cases",
+          "line": 158
+        },
+        {
+          "name": "assert_disjoint_scenes",
+          "line": 173
+        }
+      ]
+    },
+    {
+      "path": "D:\\Scene_Aware\\context_intent\\scene_context\\synthetic.py",
+      "relative_to_workspace": "context_intent\\scene_context\\synthetic.py",
+      "bytes": 5316,
+      "sha256": "b9e6dd2c4691b94f42be195da192d301a0f632a9bc92474e1745c97455707da9",
+      "syntax": "PASS",
+      "top_level_symbols": [
+        {
+          "name": "make_synthetic_splits",
+          "line": 12
+        }
+      ]
+    },
+    {
+      "path": "D:\\Scene_Aware\\context_intent\\scene_context\\training.py",
+      "relative_to_workspace": "context_intent\\scene_context\\training.py",
+      "bytes": 12770,
+      "sha256": "0d997a644cdbf58a1deaa1e24503d25969ff9176e1f5d83319576a0af6382f72",
+      "syntax": "PASS",
+      "top_level_symbols": [
+        {
+          "name": "set_seed",
+          "line": 18
+        },
+        {
+          "name": "_digest",
+          "line": 26
+        },
+        {
+          "name": "_key",
+          "line": 30
+        },
+        {
+          "name": "_loss",
+          "line": 36
+        },
+        {
+          "name": "_check_cases",
+          "line": 61
+        },
+        {
+          "name": "_snapshot",
+          "line": 75
+        },
+        {
+          "name": "_temperature",
+          "line": 88
+        },
+        {
+          "name": "_calibrate",
+          "line": 110
+        },
+        {
+          "name": "train_model",
+          "line": 140
+        }
+      ]
+    },
+    {
+      "path": "D:\\Scene_Aware\\context_intent\\smoke_data\\manifest.json",
+      "relative_to_workspace": "context_intent\\smoke_data\\manifest.json",
+      "bytes": 532,
+      "sha256": "5ca929c82fb1decb79dabf7468312c7fa3673fb8784d30d8230ef672cd85f5ba"
+    },
+    {
+      "path": "D:\\Scene_Aware\\context_intent\\smoke_data\\test.jsonl",
+      "relative_to_workspace": "context_intent\\smoke_data\\test.jsonl",
+      "bytes": 205710,
+      "sha256": "ded9f161c5f5cf78b682d130823b1341f7d0e3f6fce257dedd58955c86abe8d0"
+    },
+    {
+      "path": "D:\\Scene_Aware\\context_intent\\smoke_data\\train.jsonl",
+      "relative_to_workspace": "context_intent\\smoke_data\\train.jsonl",
+      "bytes": 608274,
+      "sha256": "dd733720b97f473fc697c37130c117a939f7e439784df8d41bedf6ecbd40bb52"
+    },
+    {
+      "path": "D:\\Scene_Aware\\context_intent\\smoke_data\\val.jsonl",
+      "relative_to_workspace": "context_intent\\smoke_data\\val.jsonl",
+      "bytes": 190086,
+      "sha256": "016c0dcd0ec49432071ee47faafad632cd982af560aef835f32b092e79cdb4f6"
+    },
+    {
+      "path": "D:\\Scene_Aware\\context_intent\\tests\\__init__.py",
+      "relative_to_workspace": "context_intent\\tests\\__init__.py",
+      "bytes": 72,
+      "sha256": "62319323ef0d34eed10a3749e4035044ce7779687b51d2fcbbe9e0436c1e5d50",
+      "syntax": "PASS",
+      "top_level_symbols": []
+    },
+    {
+      "path": "D:\\Scene_Aware\\context_intent\\tests\\fixtures.py",
+      "relative_to_workspace": "context_intent\\tests\\fixtures.py",
+      "bytes": 3166,
+      "sha256": "b9b009da82395cf2bcfcde5dcd46d4203b9abb241c3f9b9037c6c96ea05853de",
+      "syntax": "PASS",
+      "top_level_symbols": [
+        {
+          "name": "observation",
+          "line": 6
+        },
+        {
+          "name": "intent",
+          "line": 27
+        },
+        {
+          "name": "ready_proposal",
+          "line": 31
+        },
+        {
+          "name": "case",
+          "line": 35
+        },
+        {
+          "name": "provider_response",
+          "line": 42
+        },
+        {
+          "name": "rename_instances",
+          "line": 49
+        }
+      ]
+    },
+    {
+      "path": "D:\\Scene_Aware\\context_intent\\tests\\test_contract.py",
+      "relative_to_workspace": "context_intent\\tests\\test_contract.py",
+      "bytes": 8461,
+      "sha256": "0ebe6a6147a6002a1b16a36b25de51958423c0bd93a8c34d05d191f6bfc9aedf",
+      "syntax": "PASS",
+      "top_level_symbols": [
+        {
+          "name": "ObservationContractTests",
+          "line": 14
+        },
+        {
+          "name": "IntentGuardTests",
+          "line": 87
+        },
+        {
+          "name": "RenderingTests",
+          "line": 142
+        }
+      ]
+    },
+    {
+      "path": "D:\\Scene_Aware\\context_intent\\tests\\test_integration.py",
+      "relative_to_workspace": "context_intent\\tests\\test_integration.py",
+      "bytes": 2731,
+      "sha256": "477dfd144690941d809278382913d60de51210bab5aa799eb837617148f6c61f",
+      "syntax": "PASS",
+      "top_level_symbols": [
+        {
+          "name": "observation",
+          "line": 8
+        },
+        {
+          "name": "IntegrationTests",
+          "line": 13
+        }
+      ]
+    },
+    {
+      "path": "D:\\Scene_Aware\\context_intent\\tests\\test_llm_evaluation.py",
+      "relative_to_workspace": "context_intent\\tests\\test_llm_evaluation.py",
+      "bytes": 9086,
+      "sha256": "fd717ac99e1f776271b4e5e724340df0645f126dad952cd564fae81434aa5232",
+      "syntax": "PASS",
+      "top_level_symbols": [
+        {
+          "name": "LLMOfflineTests",
+          "line": 15
+        },
+        {
+          "name": "EvaluationTests",
+          "line": 100
+        }
+      ]
+    },
+    {
+      "path": "D:\\Scene_Aware\\context_intent\\tests\\test_model.py",
+      "relative_to_workspace": "context_intent\\tests\\test_model.py",
+      "bytes": 5811,
+      "sha256": "102ea04af4923bb5afc567fe49455a13eb70469a09b63dd63d0388eff195d3a9",
+      "syntax": "PASS",
+      "top_level_symbols": [
+        {
+          "name": "ModelInvarianceTests",
+          "line": 19
+        }
+      ]
+    },
+    {
+      "path": "D:\\Scene_Aware\\Scene-aware-BCI-VLA_仓库检查报告.md",
+      "relative_to_workspace": "Scene-aware-BCI-VLA_仓库检查报告.md",
+      "bytes": 9606,
+      "sha256": "5fb0cc0c5e9b17e7a32845a2e7dd52caaeda2fcf50f19836f9792a8b8870abb4"
+    },
+    {
+      "path": "D:\\Scene_Aware\\Scene_Aware_SSVEP_BCI_Controlled_Robotic_Manipulation_Framework_Integrated_with_Vision_Language_Action_Models (1)\\main4.tex",
+      "relative_to_workspace": "Scene_Aware_SSVEP_BCI_Controlled_Robotic_Manipulation_Framework_Integrated_with_Vision_Language_Action_Models (1)\\main4.tex",
+      "bytes": 58536,
+      "sha256": "fac2275e6a9746660b6229f92e6fbf4dbbf971fb0a4d0b22317ff4bae1c204c0"
+    },
+    {
+      "path": "D:\\Scene_Aware\\Scene_Aware_SSVEP_BCI_Controlled_Robotic_Manipulation_Framework_Integrated_with_Vision_Language_Action_Models (1)\\refs.bib",
+      "relative_to_workspace": "Scene_Aware_SSVEP_BCI_Controlled_Robotic_Manipulation_Framework_Integrated_with_Vision_Language_Action_Models (1)\\refs.bib",
+      "bytes": 13130,
+      "sha256": "a339c0c861bc51d2099a43da3e4ff96787ce980aadadc2906a1dc9310af0f808"
+    },
+    {
+      "path": "D:\\Scene_Aware\\Scene_Aware_SSVEP_BCI_Controlled_Robotic_Manipulation_Framework_Integrated_with_Vision_Language_Action_Models (1)\\refs_backup.bib",
+      "relative_to_workspace": "Scene_Aware_SSVEP_BCI_Controlled_Robotic_Manipulation_Framework_Integrated_with_Vision_Language_Action_Models (1)\\refs_backup.bib",
+      "bytes": 15119,
+      "sha256": "5559cfe8280aa08d0efb190fbb1a790bad68df65b28f5ab8304d7b155010c186"
+    },
+    {
+      "path": "D:\\Scene_Aware\\Scene_Aware_SSVEP_BCI_Controlled_Robotic_Manipulation_Framework_Integrated_with_Vision_Language_Action_Models (1)\\Z_backup.tex",
+      "relative_to_workspace": "Scene_Aware_SSVEP_BCI_Controlled_Robotic_Manipulation_Framework_Integrated_with_Vision_Language_Action_Models (1)\\Z_backup.tex",
+      "bytes": 55727,
+      "sha256": "e7eea5b1762cd0f055b2ad7758c78d4e512bc2751560d69dc05cbed9354af751"
+    },
+    {
+      "path": "D:\\Scene_Aware\\Scene_Aware_SSVEP_BCI_Controlled_Robotic_Manipulation_Framework_Integrated_with_Vision_Language_Action_Models (1)\\z_backup2.tex",
+      "relative_to_workspace": "Scene_Aware_SSVEP_BCI_Controlled_Robotic_Manipulation_Framework_Integrated_with_Vision_Language_Action_Models (1)\\z_backup2.tex",
+      "bytes": 56639,
+      "sha256": "5fc3c0bcdaee993c5db6cf97f459d0452b92c4d85633ccc8229e6436dd5f6036"
+    }
+  ],
+  "prototype_weight_files": []
+}

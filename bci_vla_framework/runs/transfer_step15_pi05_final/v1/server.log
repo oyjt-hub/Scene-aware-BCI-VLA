@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "<string>", line 6, in <module>
+  File "/home/oyjt/openpi/src/openpi/policies/policy_config.py", line 54, in create_trained_policy
+    model = train_config.model.load_pytorch(train_config, weight_path)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/oyjt/openpi/src/openpi/models/model.py", line 245, in load_pytorch
+    model = pi0_pytorch.PI0Pytorch(config=train_config.model)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/oyjt/openpi/src/openpi/models_pytorch/pi0_pytorch.py", line 124, in __init__
+    raise ValueError(msg) from None
+ValueError: transformers_replace is not installed correctly. Please install it with `uv pip install transformers==4.53.2` and `cp -r ./src/openpi/models_pytorch/transformers_replace/* .venv/lib/python3.11/site-packages/transformers/`.

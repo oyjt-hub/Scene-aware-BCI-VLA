@@ -1,0 +1,340 @@
+{
+  "schema_version": "outcome-table/1.0",
+  "model_id": "simulation-canonical-outcomes-v1",
+  "executor_id": "simulation-pi05-interface",
+  "checkpoint_ref": null,
+  "predicate_version": "endpoint-v1",
+  "status": "simulation_only",
+  "provenance": "illustrative_not_fitted",
+  "deployment_allowed": false,
+  "goal_ids": [
+    "task-9cad706e60e745cf3c01a413",
+    "task-d5fc9bc832047df78f51c84f"
+  ],
+  "channel_mode_ids": [
+    "normal",
+    "flip"
+  ],
+  "rows": [
+    {
+      "decision": "ACCEPT_NEW",
+      "stage": "terminal",
+      "goal_id": "task-9cad706e60e745cf3c01a413",
+      "channel_mode_id": "normal",
+      "components": {
+        "wrong_start": 1.0,
+        "task_failure": 1.0,
+        "recovery_s": 20.0,
+        "user_time_s": 2.0
+      },
+      "source_ref": "illustrative-table-not-fitted",
+      "included_time_phases": [
+        "confirmation"
+      ]
+    },
+    {
+      "decision": "ACCEPT_NEW",
+      "stage": "terminal",
+      "goal_id": "task-9cad706e60e745cf3c01a413",
+      "channel_mode_id": "flip",
+      "components": {
+        "wrong_start": 1.0,
+        "task_failure": 1.0,
+        "recovery_s": 20.0,
+        "user_time_s": 2.0
+      },
+      "source_ref": "illustrative-table-not-fitted",
+      "included_time_phases": [
+        "confirmation"
+      ]
+    },
+    {
+      "decision": "ACCEPT_NEW",
+      "stage": "terminal",
+      "goal_id": "task-d5fc9bc832047df78f51c84f",
+      "channel_mode_id": "normal",
+      "components": {
+        "wrong_start": 0.0,
+        "task_failure": 0.2,
+        "recovery_s": 0.0,
+        "user_time_s": 2.0
+      },
+      "source_ref": "illustrative-table-not-fitted",
+      "included_time_phases": [
+        "confirmation"
+      ]
+    },
+    {
+      "decision": "ACCEPT_NEW",
+      "stage": "terminal",
+      "goal_id": "task-d5fc9bc832047df78f51c84f",
+      "channel_mode_id": "flip",
+      "components": {
+        "wrong_start": 0.0,
+        "task_failure": 0.2,
+        "recovery_s": 0.0,
+        "user_time_s": 2.0
+      },
+      "source_ref": "illustrative-table-not-fitted",
+      "included_time_phases": [
+        "confirmation"
+      ]
+    },
+    {
+      "decision": "KEEP_OLD",
+      "stage": "terminal",
+      "goal_id": "task-9cad706e60e745cf3c01a413",
+      "channel_mode_id": "normal",
+      "components": {
+        "wrong_start": 0.0,
+        "task_failure": 0.2,
+        "recovery_s": 0.0,
+        "user_time_s": 2.0
+      },
+      "source_ref": "illustrative-table-not-fitted",
+      "included_time_phases": [
+        "confirmation"
+      ]
+    },
+    {
+      "decision": "KEEP_OLD",
+      "stage": "terminal",
+      "goal_id": "task-9cad706e60e745cf3c01a413",
+      "channel_mode_id": "flip",
+      "components": {
+        "wrong_start": 0.0,
+        "task_failure": 0.2,
+        "recovery_s": 0.0,
+        "user_time_s": 2.0
+      },
+      "source_ref": "illustrative-table-not-fitted",
+      "included_time_phases": [
+        "confirmation"
+      ]
+    },
+    {
+      "decision": "KEEP_OLD",
+      "stage": "terminal",
+      "goal_id": "task-d5fc9bc832047df78f51c84f",
+      "channel_mode_id": "normal",
+      "components": {
+        "wrong_start": 1.0,
+        "task_failure": 1.0,
+        "recovery_s": 20.0,
+        "user_time_s": 2.0
+      },
+      "source_ref": "illustrative-table-not-fitted",
+      "included_time_phases": [
+        "confirmation"
+      ]
+    },
+    {
+      "decision": "KEEP_OLD",
+      "stage": "terminal",
+      "goal_id": "task-d5fc9bc832047df78f51c84f",
+      "channel_mode_id": "flip",
+      "components": {
+        "wrong_start": 1.0,
+        "task_failure": 1.0,
+        "recovery_s": 20.0,
+        "user_time_s": 2.0
+      },
+      "source_ref": "illustrative-table-not-fitted",
+      "included_time_phases": [
+        "confirmation"
+      ]
+    },
+    {
+      "decision": "CHECK_CHANNEL",
+      "stage": "continuation",
+      "goal_id": "task-9cad706e60e745cf3c01a413",
+      "channel_mode_id": "normal",
+      "components": {
+        "wrong_start": 0.0,
+        "task_failure": null,
+        "recovery_s": null,
+        "user_time_s": 4.0
+      },
+      "source_ref": "illustrative-table-not-fitted",
+      "included_time_phases": [
+        "diagnostic_or_wait_interaction"
+      ]
+    },
+    {
+      "decision": "CHECK_CHANNEL",
+      "stage": "continuation",
+      "goal_id": "task-9cad706e60e745cf3c01a413",
+      "channel_mode_id": "flip",
+      "components": {
+        "wrong_start": 0.0,
+        "task_failure": null,
+        "recovery_s": null,
+        "user_time_s": 4.0
+      },
+      "source_ref": "illustrative-table-not-fitted",
+      "included_time_phases": [
+        "diagnostic_or_wait_interaction"
+      ]
+    },
+    {
+      "decision": "CHECK_CHANNEL",
+      "stage": "continuation",
+      "goal_id": "task-d5fc9bc832047df78f51c84f",
+      "channel_mode_id": "normal",
+      "components": {
+        "wrong_start": 0.0,
+        "task_failure": null,
+        "recovery_s": null,
+        "user_time_s": 4.0
+      },
+      "source_ref": "illustrative-table-not-fitted",
+      "included_time_phases": [
+        "diagnostic_or_wait_interaction"
+      ]
+    },
+    {
+      "decision": "CHECK_CHANNEL",
+      "stage": "continuation",
+      "goal_id": "task-d5fc9bc832047df78f51c84f",
+      "channel_mode_id": "flip",
+      "components": {
+        "wrong_start": 0.0,
+        "task_failure": null,
+        "recovery_s": null,
+        "user_time_s": 4.0
+      },
+      "source_ref": "illustrative-table-not-fitted",
+      "included_time_phases": [
+        "diagnostic_or_wait_interaction"
+      ]
+    },
+    {
+      "decision": "REQUEST_RECALIBRATION",
+      "stage": "continuation",
+      "goal_id": "task-9cad706e60e745cf3c01a413",
+      "channel_mode_id": "normal",
+      "components": {
+        "wrong_start": 0.0,
+        "task_failure": null,
+        "recovery_s": null,
+        "user_time_s": 8.0
+      },
+      "source_ref": "illustrative-table-not-fitted",
+      "included_time_phases": [
+        "diagnostic_or_wait_interaction"
+      ]
+    },
+    {
+      "decision": "REQUEST_RECALIBRATION",
+      "stage": "continuation",
+      "goal_id": "task-9cad706e60e745cf3c01a413",
+      "channel_mode_id": "flip",
+      "components": {
+        "wrong_start": 0.0,
+        "task_failure": null,
+        "recovery_s": null,
+        "user_time_s": 8.0
+      },
+      "source_ref": "illustrative-table-not-fitted",
+      "included_time_phases": [
+        "diagnostic_or_wait_interaction"
+      ]
+    },
+    {
+      "decision": "REQUEST_RECALIBRATION",
+      "stage": "continuation",
+      "goal_id": "task-d5fc9bc832047df78f51c84f",
+      "channel_mode_id": "normal",
+      "components": {
+        "wrong_start": 0.0,
+        "task_failure": null,
+        "recovery_s": null,
+        "user_time_s": 8.0
+      },
+      "source_ref": "illustrative-table-not-fitted",
+      "included_time_phases": [
+        "diagnostic_or_wait_interaction"
+      ]
+    },
+    {
+      "decision": "REQUEST_RECALIBRATION",
+      "stage": "continuation",
+      "goal_id": "task-d5fc9bc832047df78f51c84f",
+      "channel_mode_id": "flip",
+      "components": {
+        "wrong_start": 0.0,
+        "task_failure": null,
+        "recovery_s": null,
+        "user_time_s": 8.0
+      },
+      "source_ref": "illustrative-table-not-fitted",
+      "included_time_phases": [
+        "diagnostic_or_wait_interaction"
+      ]
+    },
+    {
+      "decision": "WAIT",
+      "stage": "continuation",
+      "goal_id": "task-9cad706e60e745cf3c01a413",
+      "channel_mode_id": "normal",
+      "components": {
+        "wrong_start": 0.0,
+        "task_failure": null,
+        "recovery_s": null,
+        "user_time_s": 1.0
+      },
+      "source_ref": "illustrative-table-not-fitted",
+      "included_time_phases": [
+        "diagnostic_or_wait_interaction"
+      ]
+    },
+    {
+      "decision": "WAIT",
+      "stage": "continuation",
+      "goal_id": "task-9cad706e60e745cf3c01a413",
+      "channel_mode_id": "flip",
+      "components": {
+        "wrong_start": 0.0,
+        "task_failure": null,
+        "recovery_s": null,
+        "user_time_s": 1.0
+      },
+      "source_ref": "illustrative-table-not-fitted",
+      "included_time_phases": [
+        "diagnostic_or_wait_interaction"
+      ]
+    },
+    {
+      "decision": "WAIT",
+      "stage": "continuation",
+      "goal_id": "task-d5fc9bc832047df78f51c84f",
+      "channel_mode_id": "normal",
+      "components": {
+        "wrong_start": 0.0,
+        "task_failure": null,
+        "recovery_s": null,
+        "user_time_s": 1.0
+      },
+      "source_ref": "illustrative-table-not-fitted",
+      "included_time_phases": [
+        "diagnostic_or_wait_interaction"
+      ]
+    },
+    {
+      "decision": "WAIT",
+      "stage": "continuation",
+      "goal_id": "task-d5fc9bc832047df78f51c84f",
+      "channel_mode_id": "flip",
+      "components": {
+        "wrong_start": 0.0,
+        "task_failure": null,
+        "recovery_s": null,
+        "user_time_s": 1.0
+      },
+      "source_ref": "illustrative-table-not-fitted",
+      "included_time_phases": [
+        "diagnostic_or_wait_interaction"
+      ]
+    }
+  ]
+}

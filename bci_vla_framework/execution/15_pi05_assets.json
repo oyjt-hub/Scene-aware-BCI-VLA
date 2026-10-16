@@ -1,0 +1,32 @@
+{
+  "scope": "pi05_existing_simulation_baseline_not_original_paper_checkpoint",
+  "files": [
+    {
+      "path": "/home/oyjt/workspace/RLinf-RECAP/models/baseline_sft/RLinf-Pi05-LIBERO-SFT/model.safetensors",
+      "bytes": 7473091464,
+      "sha256": "4616e4c1966a5fb063b442ea5d69857f45e873222d839b794634d87d252ab9e7"
+    },
+    {
+      "path": "/home/oyjt/workspace/RLinf-RECAP/models/baseline_sft/RLinf-Pi05-LIBERO-SFT/assets/physical-intelligence/libero/norm_stats.json",
+      "bytes": 4507,
+      "sha256": "dae37d79a22108af83df9189c6710a3ec8e077d65b28e34bdf1da724e5ae30f1"
+    },
+    {
+      "path": "/home/oyjt/openpi/src/openpi/training/config.py",
+      "bytes": 71594,
+      "sha256": "58d3d091b2e8f3abd85dfbb2d7ed955f932cfebd7b0cd31355d8f547bc0b8bf6"
+    },
+    {
+      "path": "/home/oyjt/openpi/src/openpi/policies/libero_policy.py",
+      "bytes": 4320,
+      "sha256": "ad01e5be74516d9ec9aeb1f76294d5c9f7f7179a60f1f7fbbb35e7646534f81a"
+    },
+    {
+      "path": "/home/oyjt/workspace/miniconda3/envs/libero/lib/python3.10/site-packages/robosuite/controllers/base_controller.py",
+      "bytes": 10496,
+      "sha256": "61f99a2daeb4eb6e39bfb996d94c5a5689ef3bc771d030d070193ea56d6a8332"
+    }
+  ],
+  "controller_conversion_source": "def scale_action(self, action):\n        \"\"\"\n        Clips @action to be within self.input_min and self.input_max, and then re-scale the values to be within\n        the range self.output_min and self.output_max\n\n        Args:\n            action (Iterable): Actions to scale\n\n        Returns:\n            np.array: Re-scaled action\n        \"\"\"\n\n        if self.action_scale is None:\n            self.action_scale = abs(self.output_max - self.output_min) / abs(self.input_max - self.input_min)\n            self.action_output_transform = (self.output_max + self.output_min) / 2.0\n            self.action_input_transform = (self.input_max + self.input_min) / 2.0\n        action = np.clip(action, self.input_min, self.input_max)\n        transformed_action = (action - self.action_input_transform) * self.action_scale + self.action_output_transform\n\n        return transformed_action",
+  "downloads_or_training_performed": false
+}

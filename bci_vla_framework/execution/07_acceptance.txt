@@ -1,0 +1,16 @@
+﻿步骤07验收：离线场景/语义软件及模拟后果分支
+日期2026-10-15；计划V2；真实能力及后果校准待外部条件。
+07.1 完成：GroundedScene/from_detections明确稳定ID/token、图像单位、关系和可见性；IDLedger跨快照拒绝复用，不能按列表索引猜同名实例。
+07.2 完成：按原字节快照复用context_intent候选、槽位和模板；上下文中和，不复用历史硬锁。保留unknown/none，选对象不授权pick，place目的地须明确。
+07.3 完成：TaskHistory分提议/外部确认/执行进度；契约来源及版本校验，相关对象/场景变化要求重问或重确认，不覆盖原意图。
+07.4 完成：后端能力/终态声明分开；pick/place为离线首版，fold待扩展。真实checkpoint/支持能力保持unverified，未写成已支持。
+07.5 完成接口：独立轨迹终态对多个候选目标评价；按实际命令/后端/权重/谓词版本条件化估计。缺少实际已标注轨迹，真实代价校准待外部条件。
+07.6 完成接口：wrong_start/task_failure/recovery_s/user_time_s按来源分量保留，显式权重/三档敏感性；全为编程例，缺失值不补0，未宣称真实权重。
+07.7 完成：ACCEPT_NEW/KEEP_OLD与CHECK_CHANNEL/REQUEST_RECALIBRATION/WAIT分终端/继续决策；继续项不填零未来失败。能力未知/不足保留候选，不改为容易目标。
+07.8 完成约束：不同后端/checkpoint/指令不混校准，test数据和VLA自信拒绝作为校准依据；部署始终禁用。
+07.9 完成离线分支：模拟后果表可查，真实后果独立子任务排在14正式比较前，清单07_outcome_calibration_checklist。当前不采数据、不等待16测试反填。
+实际检查python -B execution/run_step07_tests.py：66项全部通过，0失败/错误/跳过，含19项新增和47项既有回归。
+复用证据07_reuse_manifest：3份原文件和快照哈希一致，旧原型未修改。
+交付一致性与前置回归输出见07_integrity_result及06_integrity_recheck_after_step07；这些不是现场有效性验收。
+结论：本步软件和明确模拟分支完成；真实跟踪/技能/终态/恢复/用户时间/代价权重仍未实证，real_calibration待外部条件。
+步骤08未开始；G1仅条件性通过不变，G2—G4未开始。未连接服务器、推理VLA或操作机器人。

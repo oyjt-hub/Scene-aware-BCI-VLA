@@ -1,0 +1,2976 @@
+{
+  "scope": "complete_nonreal_BCI_LIBERO_functional_pipeline",
+  "episodes": [
+    {
+      "id": "nominal_cream",
+      "modes": [
+        {
+          "mode": "TASK_QUERY",
+          "request_id": "request-nominal_cream-1",
+          "observed_symbol": "0",
+          "state_after": "COLLECTING"
+        },
+        {
+          "mode": "CONFIRM",
+          "request_id": "request-nominal_cream-2",
+          "observed_symbol": "0",
+          "state_after": "AWAITING_AUTHORIZATION"
+        }
+      ],
+      "checks": {
+        "execution_outcome_does_not_relabel_channel": true
+      },
+      "final_state": "SUCCEEDED",
+      "reason": null,
+      "dispatched_goal": "task-358c3fa64d8e8fcd1b7eb4fa",
+      "goal_after_change": 0,
+      "task_success": true,
+      "actual_sim_steps": 51,
+      "planner_decisions": [
+        {
+          "method": "M",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "confirm:task-358c3fa64d8e8fcd1b7eb4fa",
+            "kind": "CONFIRM",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.01,
+            "prompt": null,
+            "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+            "return_s": 0.01,
+            "legal": true,
+            "reason": "authorization_aware_expected_loss",
+            "expected_loss": 0.7065372835481346,
+            "branches": [
+              {
+                "observation": "0",
+                "probability": 0.7637282596454863,
+                "posterior": [
+                  0.9635520169616743,
+                  0.006462814220076322,
+                  0.004497107079886924,
+                  0.025488061738362464
+                ],
+                "authorization_gate": {
+                  "authorized": true,
+                  "predicted_goal_probability": 0.9698738478809484,
+                  "prediction_gap_s": 0.01,
+                  "outcome": "execution_after_authorization"
+                },
+                "continuation_loss": 0.5631133034061776,
+                "next_action": "EXECUTION_REQUIRES_ACTUAL_BOUND_EVIDENCE",
+                "after_time_s": 1792022404.01,
+                "remaining_s": 40.99
+              },
+              {
+                "observation": "1",
+                "probability": 0.18627174035451385,
+                "posterior": [
+                  0.7407443121721143,
+                  0.14132281786647322,
+                  0.09833856012797186,
+                  0.01959430983344063
+                ],
+                "continuation_loss": 1.0,
+                "next_action": "PAUSE_CONFIRMATION_NOT_ACCEPTED",
+                "after_time_s": 1792022404.01,
+                "remaining_s": 40.99
+              },
+              {
+                "observation": "NO_RESPONSE",
+                "probability": 0.05000000000000001,
+                "posterior": [
+                  0.9198648812400468,
+                  0.03290555904473993,
+                  0.0228971184237429,
+                  0.024332441291470334
+                ],
+                "continuation_loss": 1.0,
+                "next_action": "PAUSE_CONFIRMATION_NOT_ACCEPTED",
+                "after_time_s": 1792022404.01,
+                "remaining_s": 40.99
+              }
+            ],
+            "immediate_time_cost": 0.0402
+          },
+          "reason": "authorization_aware_expected_loss",
+          "compute_ns": 12628392,
+          "execution_allowed": false,
+          "planning_value": 0.7065372835481346,
+          "actual_call_compute_ns": 12658094,
+          "public_input": {
+            "belief": {
+              "goal_ids": [
+                "task-358c3fa64d8e8fcd1b7eb4fa",
+                "task-b6d7e2654802d55b6746752a"
+              ],
+              "mode_ids": [
+                "normal",
+                "flip"
+              ],
+              "mass": [
+                {
+                  "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+                  "mode_id": "normal",
+                  "probability": 0.9518435983966715
+                },
+                {
+                  "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+                  "mode_id": "flip",
+                  "probability": 0.014715754634917056
+                },
+                {
+                  "goal_id": "task-b6d7e2654802d55b6746752a",
+                  "mode_id": "normal",
+                  "probability": 0.013619294423521494
+                },
+                {
+                  "goal_id": "task-b6d7e2654802d55b6746752a",
+                  "mode_id": "flip",
+                  "probability": 0.019821352544889925
+                }
+              ],
+              "as_of_event_id": "finite-hypothetical-observation-not-live-evidence"
+            },
+            "now_s": 2.0,
+            "remaining_s": 43.0,
+            "memory": {
+              "last_confirmed_goal": "task-358c3fa64d8e8fcd1b7eb4fa",
+              "diagnostic_count": 0
+            },
+            "horizon_remaining": 2
+          },
+          "planner_ref": {
+            "version": "authorization-aware-finite/2.0",
+            "gate": {
+              "version": "authorization-aware-finite/2.0",
+              "minimum_goal_probability": 0.8,
+              "max_confirmation_age_s": 2.0,
+              "return_s": 0.01
+            },
+            "role": "external_advisory_proposer_not_execution_authority"
+          },
+          "post_compute_authorization_prediction": {
+            "goal_probability": 0.9697826250463716,
+            "allowed": true
+          }
+        }
+      ],
+      "final_filter": {
+        "status": "ready",
+        "reason": null,
+        "model_validity": "conditional_on_finite_simulation_models",
+        "unmodeled_support_mass": 0.0,
+        "point_inference_ready": true,
+        "execution_allowed": false,
+        "as_of_reference_time": "2026-10-15T00:00:04.012658+00:00",
+        "belief": {
+          "goal_ids": [
+            "task-358c3fa64d8e8fcd1b7eb4fa",
+            "task-b6d7e2654802d55b6746752a",
+            "unknown",
+            "none"
+          ],
+          "mode_ids": [
+            "normal",
+            "flip",
+            "unknown_channel"
+          ],
+          "mass": [
+            {
+              "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+              "mode_id": "normal",
+              "probability": 0.9634151530958944
+            },
+            {
+              "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+              "mode_id": "flip",
+              "probability": 0.00650842788032355
+            },
+            {
+              "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "task-b6d7e2654802d55b6746752a",
+              "mode_id": "normal",
+              "probability": 0.004520892794798525
+            },
+            {
+              "goal_id": "task-b6d7e2654802d55b6746752a",
+              "mode_id": "flip",
+              "probability": 0.025555526228983525
+            },
+            {
+              "goal_id": "task-b6d7e2654802d55b6746752a",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            }
+          ],
+          "as_of_event_id": "sample-2"
+        },
+        "goal_marginals": {
+          "task-358c3fa64d8e8fcd1b7eb4fa": 0.969923580976218,
+          "task-b6d7e2654802d55b6746752a": 0.03007641902378205,
+          "unknown": 0.0,
+          "none": 0.0
+        },
+        "channel_marginals": {
+          "normal": 0.9679360458906929,
+          "flip": 0.032063954109307076,
+          "unknown_channel": 0.0
+        }
+      },
+      "sessions": 1,
+      "journals_replayed": true,
+      "physical_execution_allowed": false,
+      "real_BCI_trials": 0,
+      "dispatches": [
+        {
+          "goal": "task-358c3fa64d8e8fcd1b7eb4fa",
+          "intended_goal_on_dispatch": "task-358c3fa64d8e8fcd1b7eb4fa"
+        }
+      ],
+      "mapping_repair_evidence": [],
+      "wrong_target_start": false,
+      "faithful_task_success": true
+    },
+    {
+      "id": "nominal_wine",
+      "modes": [
+        {
+          "mode": "TASK_QUERY",
+          "request_id": "request-nominal_wine-1",
+          "observed_symbol": "1",
+          "state_after": "COLLECTING"
+        },
+        {
+          "mode": "CONFIRM",
+          "request_id": "request-nominal_wine-2",
+          "observed_symbol": "0",
+          "state_after": "AWAITING_AUTHORIZATION"
+        }
+      ],
+      "checks": {
+        "execution_outcome_does_not_relabel_channel": true
+      },
+      "final_state": "SUCCEEDED",
+      "reason": null,
+      "dispatched_goal": "task-b6d7e2654802d55b6746752a",
+      "goal_after_change": 1,
+      "task_success": true,
+      "actual_sim_steps": 86,
+      "planner_decisions": [
+        {
+          "method": "M",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "confirm:task-b6d7e2654802d55b6746752a",
+            "kind": "CONFIRM",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.01,
+            "prompt": null,
+            "goal_id": "task-b6d7e2654802d55b6746752a",
+            "return_s": 0.01,
+            "legal": true,
+            "reason": "authorization_aware_expected_loss",
+            "expected_loss": 0.5215355112035843,
+            "branches": [
+              {
+                "observation": "0",
+                "probability": 0.7637282596454863,
+                "posterior": [
+                  0.004497107079886924,
+                  0.025488061738362464,
+                  0.9635520169616743,
+                  0.006462814220076322
+                ],
+                "authorization_gate": {
+                  "authorized": true,
+                  "predicted_goal_probability": 0.9698738478809484,
+                  "prediction_gap_s": 0.01,
+                  "outcome": "execution_after_authorization"
+                },
+                "continuation_loss": 0.32087822828871904,
+                "next_action": "EXECUTION_REQUIRES_ACTUAL_BOUND_EVIDENCE",
+                "after_time_s": 1792022404.01,
+                "remaining_s": 40.99
+              },
+              {
+                "observation": "1",
+                "probability": 0.18627174035451385,
+                "posterior": [
+                  0.09833856012797186,
+                  0.01959430983344063,
+                  0.7407443121721143,
+                  0.14132281786647322
+                ],
+                "continuation_loss": 1.0,
+                "next_action": "PAUSE_CONFIRMATION_NOT_ACCEPTED",
+                "after_time_s": 1792022404.01,
+                "remaining_s": 40.99
+              },
+              {
+                "observation": "NO_RESPONSE",
+                "probability": 0.05000000000000001,
+                "posterior": [
+                  0.0228971184237429,
+                  0.024332441291470334,
+                  0.9198648812400468,
+                  0.03290555904473993
+                ],
+                "continuation_loss": 1.0,
+                "next_action": "PAUSE_CONFIRMATION_NOT_ACCEPTED",
+                "after_time_s": 1792022404.01,
+                "remaining_s": 40.99
+              }
+            ],
+            "immediate_time_cost": 0.0402
+          },
+          "reason": "authorization_aware_expected_loss",
+          "compute_ns": 12369950,
+          "execution_allowed": false,
+          "planning_value": 0.5215355112035843,
+          "actual_call_compute_ns": 12393050,
+          "public_input": {
+            "belief": {
+              "goal_ids": [
+                "task-358c3fa64d8e8fcd1b7eb4fa",
+                "task-b6d7e2654802d55b6746752a"
+              ],
+              "mode_ids": [
+                "normal",
+                "flip"
+              ],
+              "mass": [
+                {
+                  "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+                  "mode_id": "normal",
+                  "probability": 0.013619294423521494
+                },
+                {
+                  "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+                  "mode_id": "flip",
+                  "probability": 0.019821352544889925
+                },
+                {
+                  "goal_id": "task-b6d7e2654802d55b6746752a",
+                  "mode_id": "normal",
+                  "probability": 0.9518435983966715
+                },
+                {
+                  "goal_id": "task-b6d7e2654802d55b6746752a",
+                  "mode_id": "flip",
+                  "probability": 0.014715754634917056
+                }
+              ],
+              "as_of_event_id": "finite-hypothetical-observation-not-live-evidence"
+            },
+            "now_s": 2.0,
+            "remaining_s": 43.0,
+            "memory": {
+              "last_confirmed_goal": "task-358c3fa64d8e8fcd1b7eb4fa",
+              "diagnostic_count": 0
+            },
+            "horizon_remaining": 2
+          },
+          "planner_ref": {
+            "version": "authorization-aware-finite/2.0",
+            "gate": {
+              "version": "authorization-aware-finite/2.0",
+              "minimum_goal_probability": 0.8,
+              "max_confirmation_age_s": 2.0,
+              "return_s": 0.01
+            },
+            "role": "external_advisory_proposer_not_execution_authority"
+          },
+          "post_compute_authorization_prediction": {
+            "goal_probability": 0.969784535228064,
+            "allowed": true
+          }
+        }
+      ],
+      "final_filter": {
+        "status": "ready",
+        "reason": null,
+        "model_validity": "conditional_on_finite_simulation_models",
+        "unmodeled_support_mass": 0.0,
+        "point_inference_ready": true,
+        "execution_allowed": false,
+        "as_of_reference_time": "2026-10-15T00:00:04.012393+00:00",
+        "belief": {
+          "goal_ids": [
+            "task-358c3fa64d8e8fcd1b7eb4fa",
+            "task-b6d7e2654802d55b6746752a",
+            "unknown",
+            "none"
+          ],
+          "mode_ids": [
+            "normal",
+            "flip",
+            "unknown_channel"
+          ],
+          "mass": [
+            {
+              "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+              "mode_id": "normal",
+              "probability": 0.004520394847075583
+            },
+            {
+              "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+              "mode_id": "flip",
+              "probability": 0.025554113421873637
+            },
+            {
+              "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "task-b6d7e2654802d55b6746752a",
+              "mode_id": "normal",
+              "probability": 0.9634180186732046
+            },
+            {
+              "goal_id": "task-b6d7e2654802d55b6746752a",
+              "mode_id": "flip",
+              "probability": 0.0065074730578460905
+            },
+            {
+              "goal_id": "task-b6d7e2654802d55b6746752a",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            }
+          ],
+          "as_of_event_id": "sample-2"
+        },
+        "goal_marginals": {
+          "task-358c3fa64d8e8fcd1b7eb4fa": 0.03007450826894922,
+          "task-b6d7e2654802d55b6746752a": 0.9699254917310507,
+          "unknown": 0.0,
+          "none": 0.0
+        },
+        "channel_marginals": {
+          "normal": 0.9679384135202802,
+          "flip": 0.032061586479719725,
+          "unknown_channel": 0.0
+        }
+      },
+      "sessions": 1,
+      "journals_replayed": true,
+      "physical_execution_allowed": false,
+      "real_BCI_trials": 0,
+      "dispatches": [
+        {
+          "goal": "task-b6d7e2654802d55b6746752a",
+          "intended_goal_on_dispatch": "task-b6d7e2654802d55b6746752a"
+        }
+      ],
+      "mapping_repair_evidence": [],
+      "wrong_target_start": false,
+      "faithful_task_success": true
+    },
+    {
+      "id": "changed_goal",
+      "modes": [
+        {
+          "mode": "TASK_QUERY",
+          "request_id": "request-changed_goal-1",
+          "observed_symbol": "1",
+          "state_after": "COLLECTING"
+        },
+        {
+          "mode": "CONFIRM",
+          "request_id": "request-changed_goal-2",
+          "observed_symbol": "1",
+          "state_after": "PAUSED"
+        },
+        {
+          "mode": "TASK_QUERY",
+          "request_id": "request-changed_goal-repaired-1",
+          "observed_symbol": "1",
+          "state_after": "COLLECTING"
+        },
+        {
+          "mode": "CONFIRM",
+          "request_id": "request-changed_goal-repaired-2",
+          "observed_symbol": "0",
+          "state_after": "AWAITING_AUTHORIZATION"
+        }
+      ],
+      "checks": {
+        "mapping_repair_fresh_confirmation": true,
+        "execution_outcome_does_not_relabel_channel": true
+      },
+      "final_state": "SUCCEEDED",
+      "reason": null,
+      "dispatched_goal": "task-b6d7e2654802d55b6746752a",
+      "goal_after_change": 1,
+      "task_success": true,
+      "actual_sim_steps": 90,
+      "planner_decisions": [
+        {
+          "method": "M",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "confirm:task-b6d7e2654802d55b6746752a",
+            "kind": "CONFIRM",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.01,
+            "prompt": null,
+            "goal_id": "task-b6d7e2654802d55b6746752a",
+            "return_s": 0.01,
+            "legal": true,
+            "reason": "authorization_aware_expected_loss",
+            "expected_loss": 0.5163309060425253,
+            "branches": [
+              {
+                "observation": "0",
+                "probability": 0.7617911681987557,
+                "posterior": [
+                  0.007360019635957493,
+                  0.016917476056224488,
+                  0.9715079309431598,
+                  0.004214573364658107
+                ],
+                "authorization_gate": {
+                  "authorized": true,
+                  "predicted_goal_probability": 0.9755798089618976,
+                  "prediction_gap_s": 0.01,
+                  "outcome": "execution_after_authorization"
+                },
+                "continuation_loss": 0.31231928666729514,
+                "next_action": "EXECUTION_REQUIRES_ACTUAL_BOUND_EVIDENCE",
+                "after_time_s": 1792022416.322287,
+                "remaining_s": 28.677713000000004
+              },
+              {
+                "observation": "1",
+                "probability": 0.18820883180124445,
+                "posterior": [
+                  0.15888161117717942,
+                  0.01283904665017477,
+                  0.7372988503095703,
+                  0.09098049186307543
+                ],
+                "continuation_loss": 1.0,
+                "next_action": "PAUSE_CONFIRMATION_NOT_ACCEPTED",
+                "after_time_s": 1792022416.322287,
+                "remaining_s": 28.677713000000004
+              },
+              {
+                "observation": "NO_RESPONSE",
+                "probability": 0.05,
+                "posterior": [
+                  0.037378653042945596,
+                  0.016109479809807162,
+                  0.9251077020344323,
+                  0.021404165112815066
+                ],
+                "continuation_loss": 1.0,
+                "next_action": "PAUSE_CONFIRMATION_NOT_ACCEPTED",
+                "after_time_s": 1792022416.322287,
+                "remaining_s": 28.677713000000004
+              }
+            ],
+            "immediate_time_cost": 0.0402
+          },
+          "reason": "authorization_aware_expected_loss",
+          "compute_ns": 12234463,
+          "execution_allowed": false,
+          "planning_value": 0.5163309060425253,
+          "actual_call_compute_ns": 12256526,
+          "public_input": {
+            "belief": {
+              "goal_ids": [
+                "task-358c3fa64d8e8fcd1b7eb4fa",
+                "task-b6d7e2654802d55b6746752a"
+              ],
+              "mode_ids": [
+                "normal",
+                "flip"
+              ],
+              "mass": [
+                {
+                  "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+                  "mode_id": "normal",
+                  "probability": 0.028793915474625873
+                },
+                {
+                  "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+                  "mode_id": "flip",
+                  "probability": 0.011095906559442833
+                },
+                {
+                  "goal_id": "task-b6d7e2654802d55b6746752a",
+                  "mode_id": "normal",
+                  "probability": 0.9574046220865202
+                },
+                {
+                  "goal_id": "task-b6d7e2654802d55b6746752a",
+                  "mode_id": "flip",
+                  "probability": 0.0027055558794110805
+                }
+              ],
+              "as_of_event_id": "finite-hypothetical-observation-not-live-evidence"
+            },
+            "now_s": 14.312287,
+            "remaining_s": 30.687713000000002,
+            "memory": {
+              "last_confirmed_goal": "task-358c3fa64d8e8fcd1b7eb4fa",
+              "diagnostic_count": 0
+            },
+            "horizon_remaining": 2
+          },
+          "planner_ref": {
+            "version": "authorization-aware-finite/2.0",
+            "gate": {
+              "version": "authorization-aware-finite/2.0",
+              "minimum_goal_probability": 0.8,
+              "max_confirmation_age_s": 2.0,
+              "return_s": 0.01
+            },
+            "role": "external_advisory_proposer_not_execution_authority"
+          },
+          "post_compute_authorization_prediction": {
+            "goal_probability": 0.9754882324105867,
+            "allowed": true
+          }
+        }
+      ],
+      "final_filter": {
+        "status": "ready",
+        "reason": null,
+        "model_validity": "conditional_on_finite_simulation_models",
+        "unmodeled_support_mass": 0.0,
+        "point_inference_ready": true,
+        "execution_allowed": false,
+        "as_of_reference_time": "2026-10-15T00:00:16.324544+00:00",
+        "belief": {
+          "goal_ids": [
+            "task-358c3fa64d8e8fcd1b7eb4fa",
+            "task-b6d7e2654802d55b6746752a",
+            "unknown",
+            "none"
+          ],
+          "mode_ids": [
+            "normal",
+            "flip",
+            "unknown_channel"
+          ],
+          "mass": [
+            {
+              "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+              "mode_id": "normal",
+              "probability": 0.007382262137986408
+            },
+            {
+              "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+              "mode_id": "flip",
+              "probability": 0.016986837582593235
+            },
+            {
+              "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "task-b6d7e2654802d55b6746752a",
+              "mode_id": "normal",
+              "probability": 0.9713714794216991
+            },
+            {
+              "goal_id": "task-b6d7e2654802d55b6746752a",
+              "mode_id": "flip",
+              "probability": 0.004259420857721213
+            },
+            {
+              "goal_id": "task-b6d7e2654802d55b6746752a",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            }
+          ],
+          "as_of_event_id": "sample-2"
+        },
+        "goal_marginals": {
+          "task-358c3fa64d8e8fcd1b7eb4fa": 0.024369099720579643,
+          "task-b6d7e2654802d55b6746752a": 0.9756309002794203,
+          "unknown": 0.0,
+          "none": 0.0
+        },
+        "channel_marginals": {
+          "normal": 0.9787537415596855,
+          "flip": 0.02124625844031445,
+          "unknown_channel": 0.0
+        }
+      },
+      "sessions": 3,
+      "journals_replayed": true,
+      "physical_execution_allowed": false,
+      "real_BCI_trials": 0,
+      "dispatches": [
+        {
+          "goal": "task-b6d7e2654802d55b6746752a",
+          "intended_goal_on_dispatch": "task-b6d7e2654802d55b6746752a"
+        }
+      ],
+      "mapping_repair_evidence": [
+        {
+          "scope": "known_target_synthetic_replay_mapping_repair_not_real_EEG_calibration",
+          "observations": [
+            {
+              "prompt": "0",
+              "raw_symbol": "0",
+              "request_id": "request-changed_goal-mapping-check-1"
+            },
+            {
+              "prompt": "1",
+              "raw_symbol": "1",
+              "request_id": "request-changed_goal-mapping-check-2"
+            },
+            {
+              "prompt": "0",
+              "raw_symbol": "0",
+              "request_id": "request-changed_goal-mapping-check-3"
+            },
+            {
+              "prompt": "1",
+              "raw_symbol": "1",
+              "request_id": "request-changed_goal-mapping-check-4"
+            }
+          ],
+          "inversion": false,
+          "new_context": {
+            "session_id": "changed_goal-repaired",
+            "task_id": "libero-pick-task",
+            "task_revision": 3,
+            "scene_id": "libero-goal6-init-scene",
+            "scene_revision": 3,
+            "mapping_id": "binary-repaired-3",
+            "stimulus_version": "stimulus-v1",
+            "channel_profile_id": "simulation-binary-repaired-3"
+          },
+          "prior_from_joint_posterior_not_private_goal": true,
+          "goal_marginals_before": {
+            "task-358c3fa64d8e8fcd1b7eb4fa": 0.1980278587100637,
+            "task-b6d7e2654802d55b6746752a": 0.8019721412899363,
+            "unknown": 0.0,
+            "none": 0.0
+          },
+          "initial_repaired_goal_marginals": {
+            "task-358c3fa64d8e8fcd1b7eb4fa": 0.1980278587100637,
+            "task-b6d7e2654802d55b6746752a": 0.8019721412899363,
+            "unknown": 0.0,
+            "none": 0.0
+          },
+          "goal_marginals_after_queries": {
+            "task-358c3fa64d8e8fcd1b7eb4fa": 0.024369099720579643,
+            "task-b6d7e2654802d55b6746752a": 0.9756309002794203,
+            "unknown": 0.0,
+            "none": 0.0
+          }
+        }
+      ],
+      "wrong_target_start": false,
+      "faithful_task_success": true
+    },
+    {
+      "id": "changed_channel",
+      "modes": [
+        {
+          "mode": "TASK_QUERY",
+          "request_id": "request-changed_channel-1",
+          "observed_symbol": "1",
+          "state_after": "COLLECTING"
+        },
+        {
+          "mode": "CONFIRM",
+          "request_id": "request-changed_channel-2",
+          "observed_symbol": "1",
+          "state_after": "PAUSED"
+        },
+        {
+          "mode": "TASK_QUERY",
+          "request_id": "request-changed_channel-repaired-1",
+          "observed_symbol": "1",
+          "state_after": "COLLECTING"
+        },
+        {
+          "mode": "CONFIRM",
+          "request_id": "request-changed_channel-repaired-2",
+          "observed_symbol": "1",
+          "state_after": "AWAITING_AUTHORIZATION"
+        }
+      ],
+      "checks": {
+        "mapping_repair_fresh_confirmation": true,
+        "execution_outcome_does_not_relabel_channel": true
+      },
+      "final_state": "SUCCEEDED",
+      "reason": null,
+      "dispatched_goal": "task-358c3fa64d8e8fcd1b7eb4fa",
+      "goal_after_change": 0,
+      "task_success": true,
+      "actual_sim_steps": 54,
+      "planner_decisions": [
+        {
+          "method": "M",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "confirm:task-358c3fa64d8e8fcd1b7eb4fa",
+            "kind": "CONFIRM",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.01,
+            "prompt": null,
+            "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+            "return_s": 0.01,
+            "legal": true,
+            "reason": "authorization_aware_expected_loss",
+            "expected_loss": 0.6890719840048039,
+            "branches": [
+              {
+                "observation": "0",
+                "probability": 0.7736946253587371,
+                "posterior": [
+                  0.9793737073251135,
+                  0.004202092691736895,
+                  0.003643988788079536,
+                  0.01278021119507013
+                ],
+                "authorization_gate": {
+                  "authorized": true,
+                  "predicted_goal_probability": 0.9834307490355804,
+                  "prediction_gap_s": 0.01,
+                  "outcome": "execution_after_authorization"
+                },
+                "continuation_loss": 0.5461671769628881,
+                "next_action": "EXECUTION_REQUIRES_ACTUAL_BOUND_EVIDENCE",
+                "after_time_s": 1792022416.322035,
+                "remaining_s": 28.677965
+              },
+              {
+                "observation": "1",
+                "probability": 0.17630537464126306,
+                "posterior": [
+                  0.8058491287314372,
+                  0.09834864573195026,
+                  0.08528640100556645,
+                  0.01051582453104613
+                ],
+                "continuation_loss": 1.0,
+                "next_action": "PAUSE_CONFIRMATION_NOT_ACCEPTED",
+                "after_time_s": 1792022416.322035,
+                "remaining_s": 28.677965
+              },
+              {
+                "observation": "NO_RESPONSE",
+                "probability": 0.05000000000000001,
+                "posterior": [
+                  0.9471702169688763,
+                  0.02167424353904043,
+                  0.01879556360136423,
+                  0.012359975890719152
+                ],
+                "continuation_loss": 1.0,
+                "next_action": "PAUSE_CONFIRMATION_NOT_ACCEPTED",
+                "after_time_s": 1792022416.322035,
+                "remaining_s": 28.677965
+              }
+            ],
+            "immediate_time_cost": 0.0402
+          },
+          "reason": "authorization_aware_expected_loss",
+          "compute_ns": 12363632,
+          "execution_allowed": false,
+          "planning_value": 0.6890719840048039,
+          "actual_call_compute_ns": 12385898,
+          "public_input": {
+            "belief": {
+              "goal_ids": [
+                "task-358c3fa64d8e8fcd1b7eb4fa",
+                "task-b6d7e2654802d55b6746752a"
+              ],
+              "mode_ids": [
+                "normal",
+                "flip"
+              ],
+              "mass": [
+                {
+                  "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+                  "mode_id": "normal",
+                  "probability": 0.9804626050412578
+                },
+                {
+                  "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+                  "mode_id": "flip",
+                  "probability": 0.00266029500811549
+                },
+                {
+                  "goal_id": "task-b6d7e2654802d55b6746752a",
+                  "mode_id": "normal",
+                  "probability": 0.009393751972528721
+                },
+                {
+                  "goal_id": "task-b6d7e2654802d55b6746752a",
+                  "mode_id": "flip",
+                  "probability": 0.007483347978098022
+                }
+              ],
+              "as_of_event_id": "finite-hypothetical-observation-not-live-evidence"
+            },
+            "now_s": 14.312035,
+            "remaining_s": 30.687965,
+            "memory": {
+              "last_confirmed_goal": "task-358c3fa64d8e8fcd1b7eb4fa",
+              "diagnostic_count": 0
+            },
+            "horizon_remaining": 2
+          },
+          "planner_ref": {
+            "version": "authorization-aware-finite/2.0",
+            "gate": {
+              "version": "authorization-aware-finite/2.0",
+              "minimum_goal_probability": 0.8,
+              "max_confirmation_age_s": 2.0,
+              "return_s": 0.01
+            },
+            "role": "external_advisory_proposer_not_execution_authority"
+          },
+          "post_compute_authorization_prediction": {
+            "goal_probability": 0.9833413225404398,
+            "allowed": true
+          }
+        }
+      ],
+      "final_filter": {
+        "status": "ready",
+        "reason": null,
+        "model_validity": "conditional_on_finite_simulation_models",
+        "unmodeled_support_mass": 0.0,
+        "point_inference_ready": true,
+        "execution_allowed": false,
+        "as_of_reference_time": "2026-10-15T00:00:16.324421+00:00",
+        "belief": {
+          "goal_ids": [
+            "task-358c3fa64d8e8fcd1b7eb4fa",
+            "task-b6d7e2654802d55b6746752a",
+            "unknown",
+            "none"
+          ],
+          "mode_ids": [
+            "normal",
+            "flip",
+            "unknown_channel"
+          ],
+          "mass": [
+            {
+              "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+              "mode_id": "normal",
+              "probability": 0.9792388633540244
+            },
+            {
+              "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+              "mode_id": "flip",
+              "probability": 0.004247483335712292
+            },
+            {
+              "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "task-b6d7e2654802d55b6746752a",
+              "mode_id": "normal",
+              "probability": 0.0036670525919715656
+            },
+            {
+              "goal_id": "task-b6d7e2654802d55b6746752a",
+              "mode_id": "flip",
+              "probability": 0.012846600718291681
+            },
+            {
+              "goal_id": "task-b6d7e2654802d55b6746752a",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            }
+          ],
+          "as_of_event_id": "sample-2"
+        },
+        "goal_marginals": {
+          "task-358c3fa64d8e8fcd1b7eb4fa": 0.9834863466897368,
+          "task-b6d7e2654802d55b6746752a": 0.016513653310263245,
+          "unknown": 0.0,
+          "none": 0.0
+        },
+        "channel_marginals": {
+          "normal": 0.982905915945996,
+          "flip": 0.017094084054003974,
+          "unknown_channel": 0.0
+        }
+      },
+      "sessions": 3,
+      "journals_replayed": true,
+      "physical_execution_allowed": false,
+      "real_BCI_trials": 0,
+      "dispatches": [
+        {
+          "goal": "task-358c3fa64d8e8fcd1b7eb4fa",
+          "intended_goal_on_dispatch": "task-358c3fa64d8e8fcd1b7eb4fa"
+        }
+      ],
+      "mapping_repair_evidence": [
+        {
+          "scope": "known_target_synthetic_replay_mapping_repair_not_real_EEG_calibration",
+          "observations": [
+            {
+              "prompt": "0",
+              "raw_symbol": "1",
+              "request_id": "request-changed_channel-mapping-check-1"
+            },
+            {
+              "prompt": "1",
+              "raw_symbol": "0",
+              "request_id": "request-changed_channel-mapping-check-2"
+            },
+            {
+              "prompt": "0",
+              "raw_symbol": "1",
+              "request_id": "request-changed_channel-mapping-check-3"
+            },
+            {
+              "prompt": "1",
+              "raw_symbol": "0",
+              "request_id": "request-changed_channel-mapping-check-4"
+            }
+          ],
+          "inversion": true,
+          "new_context": {
+            "session_id": "changed_channel-repaired",
+            "task_id": "libero-pick-task",
+            "task_revision": 3,
+            "scene_id": "libero-goal6-init-scene",
+            "scene_revision": 3,
+            "mapping_id": "binary-repaired-3",
+            "stimulus_version": "stimulus-v1",
+            "channel_profile_id": "simulation-binary-repaired-3"
+          },
+          "prior_from_joint_posterior_not_private_goal": true,
+          "goal_marginals_before": {
+            "task-358c3fa64d8e8fcd1b7eb4fa": 0.9326984704134244,
+            "task-b6d7e2654802d55b6746752a": 0.06730152958657572,
+            "unknown": 0.0,
+            "none": 0.0
+          },
+          "initial_repaired_goal_marginals": {
+            "task-358c3fa64d8e8fcd1b7eb4fa": 0.9326984704134244,
+            "task-b6d7e2654802d55b6746752a": 0.06730152958657572,
+            "unknown": 0.0,
+            "none": 0.0
+          },
+          "goal_marginals_after_queries": {
+            "task-358c3fa64d8e8fcd1b7eb4fa": 0.9834863466897368,
+            "task-b6d7e2654802d55b6746752a": 0.016513653310263245,
+            "unknown": 0.0,
+            "none": 0.0
+          }
+        }
+      ],
+      "wrong_target_start": false,
+      "faithful_task_success": true
+    },
+    {
+      "id": "joint_alias_conflict",
+      "modes": [
+        {
+          "mode": "TASK_QUERY",
+          "request_id": "request-joint_alias_conflict-1",
+          "observed_symbol": "0",
+          "state_after": "COLLECTING"
+        },
+        {
+          "mode": "CHANNEL_PROBE",
+          "request_id": "request-joint_alias_conflict-2",
+          "observed_symbol": "1",
+          "state_after": "COLLECTING"
+        },
+        {
+          "mode": "TASK_QUERY",
+          "request_id": "request-joint_alias_conflict-repaired-1",
+          "observed_symbol": "0",
+          "state_after": "COLLECTING"
+        },
+        {
+          "mode": "CONFIRM",
+          "request_id": "request-joint_alias_conflict-repaired-2",
+          "observed_symbol": "1",
+          "state_after": "AWAITING_AUTHORIZATION"
+        }
+      ],
+      "checks": {
+        "mapping_repair_fresh_confirmation": true,
+        "execution_outcome_does_not_relabel_channel": true
+      },
+      "final_state": "SUCCEEDED",
+      "reason": null,
+      "dispatched_goal": "task-b6d7e2654802d55b6746752a",
+      "goal_after_change": 1,
+      "task_success": true,
+      "actual_sim_steps": 91,
+      "planner_decisions": [
+        {
+          "method": "M",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "confirm:task-b6d7e2654802d55b6746752a",
+            "kind": "CONFIRM",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.01,
+            "prompt": null,
+            "goal_id": "task-b6d7e2654802d55b6746752a",
+            "return_s": 0.01,
+            "legal": true,
+            "reason": "authorization_aware_expected_loss",
+            "expected_loss": 0.4994341115300175,
+            "branches": [
+              {
+                "observation": "0",
+                "probability": 0.773314737365162,
+                "posterior": [
+                  0.003761218662399626,
+                  0.01277906483089529,
+                  0.9792576348030746,
+                  0.004202081703630535
+                ],
+                "authorization_gate": {
+                  "authorized": true,
+                  "predicted_goal_probability": 0.9833147003452649,
+                  "prediction_gap_s": 0.01,
+                  "outcome": "execution_after_authorization"
+                },
+                "continuation_loss": 0.30071694959224454,
+                "next_action": "EXECUTION_REQUIRES_ACTUAL_BOUND_EVIDENCE",
+                "after_time_s": 1792022416.335849,
+                "remaining_s": 28.664151000000004
+              },
+              {
+                "observation": "1",
+                "probability": 0.17668526263483825,
+                "posterior": [
+                  0.0877977266079162,
+                  0.010487121650781238,
+                  0.8036264061207263,
+                  0.09808874562057612
+                ],
+                "continuation_loss": 1.0,
+                "next_action": "PAUSE_CONFIRMATION_NOT_ACCEPTED",
+                "after_time_s": 1792022416.335849,
+                "remaining_s": 28.664151000000004
+              },
+              {
+                "observation": "NO_RESPONSE",
+                "probability": 0.05000000000000001,
+                "posterior": [
+                  0.019390705480576746,
+                  0.012352798954345209,
+                  0.9465929508382115,
+                  0.02166354472686666
+                ],
+                "continuation_loss": 1.0,
+                "next_action": "PAUSE_CONFIRMATION_NOT_ACCEPTED",
+                "after_time_s": 1792022416.335849,
+                "remaining_s": 28.664151000000004
+              }
+            ],
+            "immediate_time_cost": 0.0402
+          },
+          "reason": "authorization_aware_expected_loss",
+          "compute_ns": 12451558,
+          "execution_allowed": false,
+          "planning_value": 0.4994341115300175,
+          "actual_call_compute_ns": 12485027,
+          "public_input": {
+            "belief": {
+              "goal_ids": [
+                "task-358c3fa64d8e8fcd1b7eb4fa",
+                "task-b6d7e2654802d55b6746752a"
+              ],
+              "mode_ids": [
+                "normal",
+                "flip"
+              ],
+              "mass": [
+                {
+                  "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+                  "mode_id": "normal",
+                  "probability": 0.010016375175971131
+                },
+                {
+                  "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+                  "mode_id": "flip",
+                  "probability": 0.00746659591580934
+                },
+                {
+                  "goal_id": "task-b6d7e2654802d55b6746752a",
+                  "mode_id": "normal",
+                  "probability": 0.9798587740955897
+                },
+                {
+                  "goal_id": "task-b6d7e2654802d55b6746752a",
+                  "mode_id": "flip",
+                  "probability": 0.0026582548126298814
+                }
+              ],
+              "as_of_event_id": "finite-hypothetical-observation-not-live-evidence"
+            },
+            "now_s": 14.325849,
+            "remaining_s": 30.674151000000002,
+            "memory": {
+              "last_confirmed_goal": "task-358c3fa64d8e8fcd1b7eb4fa",
+              "diagnostic_count": 0
+            },
+            "horizon_remaining": 2
+          },
+          "planner_ref": {
+            "version": "authorization-aware-finite/2.0",
+            "gate": {
+              "version": "authorization-aware-finite/2.0",
+              "minimum_goal_probability": 0.8,
+              "max_confirmation_age_s": 2.0,
+              "return_s": 0.01
+            },
+            "role": "external_advisory_proposer_not_execution_authority"
+          },
+          "post_compute_authorization_prediction": {
+            "goal_probability": 0.9832244337910067,
+            "allowed": true
+          }
+        }
+      ],
+      "final_filter": {
+        "status": "ready",
+        "reason": null,
+        "model_validity": "conditional_on_finite_simulation_models",
+        "unmodeled_support_mass": 0.0,
+        "point_inference_ready": true,
+        "execution_allowed": false,
+        "as_of_reference_time": "2026-10-15T00:00:16.338334+00:00",
+        "belief": {
+          "goal_ids": [
+            "task-358c3fa64d8e8fcd1b7eb4fa",
+            "task-b6d7e2654802d55b6746752a",
+            "unknown",
+            "none"
+          ],
+          "mode_ids": [
+            "normal",
+            "flip",
+            "unknown_channel"
+          ],
+          "mass": [
+            {
+              "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+              "mode_id": "normal",
+              "probability": 0.0037844458566176015
+            },
+            {
+              "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+              "mode_id": "flip",
+              "probability": 0.01284613127496413
+            },
+            {
+              "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "task-b6d7e2654802d55b6746752a",
+              "mode_id": "normal",
+              "probability": 0.9791215868583791
+            },
+            {
+              "goal_id": "task-b6d7e2654802d55b6746752a",
+              "mode_id": "flip",
+              "probability": 0.004247836010039189
+            },
+            {
+              "goal_id": "task-b6d7e2654802d55b6746752a",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            }
+          ],
+          "as_of_event_id": "sample-2"
+        },
+        "goal_marginals": {
+          "task-358c3fa64d8e8fcd1b7eb4fa": 0.016630577131581732,
+          "task-b6d7e2654802d55b6746752a": 0.9833694228684183,
+          "unknown": 0.0,
+          "none": 0.0
+        },
+        "channel_marginals": {
+          "normal": 0.9829060327149968,
+          "flip": 0.017093967285003318,
+          "unknown_channel": 0.0
+        }
+      },
+      "sessions": 3,
+      "journals_replayed": true,
+      "physical_execution_allowed": false,
+      "real_BCI_trials": 0,
+      "dispatches": [
+        {
+          "goal": "task-b6d7e2654802d55b6746752a",
+          "intended_goal_on_dispatch": "task-b6d7e2654802d55b6746752a"
+        }
+      ],
+      "mapping_repair_evidence": [
+        {
+          "scope": "known_target_synthetic_replay_mapping_repair_not_real_EEG_calibration",
+          "observations": [
+            {
+              "prompt": "0",
+              "raw_symbol": "1",
+              "request_id": "request-joint_alias_conflict-mapping-check-1"
+            },
+            {
+              "prompt": "1",
+              "raw_symbol": "0",
+              "request_id": "request-joint_alias_conflict-mapping-check-2"
+            },
+            {
+              "prompt": "0",
+              "raw_symbol": "1",
+              "request_id": "request-joint_alias_conflict-mapping-check-3"
+            },
+            {
+              "prompt": "1",
+              "raw_symbol": "0",
+              "request_id": "request-joint_alias_conflict-mapping-check-4"
+            }
+          ],
+          "inversion": true,
+          "new_context": {
+            "session_id": "joint_alias_conflict-repaired",
+            "task_id": "libero-pick-task",
+            "task_revision": 3,
+            "scene_id": "libero-goal6-init-scene",
+            "scene_revision": 3,
+            "mapping_id": "binary-repaired-3",
+            "stimulus_version": "stimulus-v1",
+            "channel_profile_id": "simulation-binary-repaired-3"
+          },
+          "prior_from_joint_posterior_not_private_goal": true,
+          "goal_marginals_before": {
+            "task-358c3fa64d8e8fcd1b7eb4fa": 0.07191505847028078,
+            "task-b6d7e2654802d55b6746752a": 0.9280849415297192,
+            "unknown": 0.0,
+            "none": 0.0
+          },
+          "initial_repaired_goal_marginals": {
+            "task-358c3fa64d8e8fcd1b7eb4fa": 0.07191505847028078,
+            "task-b6d7e2654802d55b6746752a": 0.9280849415297192,
+            "unknown": 0.0,
+            "none": 0.0
+          },
+          "goal_marginals_after_queries": {
+            "task-358c3fa64d8e8fcd1b7eb4fa": 0.016630577131581732,
+            "task-b6d7e2654802d55b6746752a": 0.9833694228684183,
+            "unknown": 0.0,
+            "none": 0.0
+          }
+        }
+      ],
+      "wrong_target_start": false,
+      "faithful_task_success": true
+    },
+    {
+      "id": "late_confirmation",
+      "modes": [
+        {
+          "mode": "TASK_QUERY",
+          "request_id": "request-late_confirmation-1",
+          "observed_symbol": "0",
+          "state_after": "COLLECTING"
+        },
+        {
+          "mode": "CONFIRM",
+          "request_id": "request-late_confirmation-2",
+          "observed_symbol": "0",
+          "state_after": "AWAITING_AUTHORIZATION"
+        }
+      ],
+      "checks": {
+        "late_confirmation_blocked": true
+      },
+      "final_state": "AWAITING_AUTHORIZATION",
+      "reason": null,
+      "dispatched_goal": null,
+      "goal_after_change": 0,
+      "task_success": false,
+      "actual_sim_steps": 0,
+      "planner_decisions": [
+        {
+          "method": "M",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "confirm:task-358c3fa64d8e8fcd1b7eb4fa",
+            "kind": "CONFIRM",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.01,
+            "prompt": null,
+            "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+            "return_s": 0.01,
+            "legal": true,
+            "reason": "authorization_aware_expected_loss",
+            "expected_loss": 0.6909409268092424,
+            "branches": [
+              {
+                "observation": "0",
+                "probability": 0.7711102741190913,
+                "posterior": [
+                  0.9787034452020585,
+                  0.004149980063327305,
+                  0.004495812947649535,
+                  0.012650761786964565
+                ],
+                "authorization_gate": {
+                  "authorized": true,
+                  "predicted_goal_probability": 0.9827085909640376,
+                  "prediction_gap_s": 0.01,
+                  "outcome": "execution_after_authorization"
+                },
+                "continuation_loss": 0.5470698745523163,
+                "next_action": "EXECUTION_REQUIRES_ACTUAL_BOUND_EVIDENCE",
+                "after_time_s": 1792022404.01,
+                "remaining_s": 40.99
+              },
+              {
+                "observation": "1",
+                "probability": 0.17888972588090887,
+                "posterior": [
+                  0.7910127435296426,
+                  0.09540603105331187,
+                  0.10335656151307733,
+                  0.010224663903968197
+                ],
+                "continuation_loss": 1.0,
+                "next_action": "PAUSE_CONFIRMATION_NOT_ACCEPTED",
+                "after_time_s": 1792022404.01,
+                "remaining_s": 40.99
+              },
+              {
+                "observation": "NO_RESPONSE",
+                "probability": 0.05000000000000001,
+                "posterior": [
+                  0.9433603523888229,
+                  0.021333948428140546,
+                  0.02311178369633462,
+                  0.012193915486701961
+                ],
+                "continuation_loss": 1.0,
+                "next_action": "PAUSE_CONFIRMATION_NOT_ACCEPTED",
+                "after_time_s": 1792022404.01,
+                "remaining_s": 40.99
+              }
+            ],
+            "immediate_time_cost": 0.0402
+          },
+          "reason": "authorization_aware_expected_loss",
+          "compute_ns": 12347066,
+          "execution_allowed": false,
+          "planning_value": 0.6909409268092424,
+          "actual_call_compute_ns": 12376100,
+          "public_input": {
+            "belief": {
+              "goal_ids": [
+                "task-358c3fa64d8e8fcd1b7eb4fa",
+                "task-b6d7e2654802d55b6746752a"
+              ],
+              "mode_ids": [
+                "normal",
+                "flip"
+              ],
+              "mass": [
+                {
+                  "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+                  "mode_id": "normal",
+                  "probability": 0.9764795968376279
+                },
+                {
+                  "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+                  "mode_id": "flip",
+                  "probability": 0.002366752341571531
+                },
+                {
+                  "goal_id": "task-b6d7e2654802d55b6746752a",
+                  "mode_id": "normal",
+                  "probability": 0.013909077093481522
+                },
+                {
+                  "goal_id": "task-b6d7e2654802d55b6746752a",
+                  "mode_id": "flip",
+                  "probability": 0.007244573727319071
+                }
+              ],
+              "as_of_event_id": "finite-hypothetical-observation-not-live-evidence"
+            },
+            "now_s": 2.0,
+            "remaining_s": 43.0,
+            "memory": {
+              "last_confirmed_goal": "task-358c3fa64d8e8fcd1b7eb4fa",
+              "diagnostic_count": 0
+            },
+            "horizon_remaining": 2
+          },
+          "planner_ref": {
+            "version": "authorization-aware-finite/2.0",
+            "gate": {
+              "version": "authorization-aware-finite/2.0",
+              "minimum_goal_probability": 0.8,
+              "max_confirmation_age_s": 2.0,
+              "return_s": 0.01
+            },
+            "role": "external_advisory_proposer_not_execution_authority"
+          },
+          "post_compute_authorization_prediction": {
+            "goal_probability": 0.9826183454171171,
+            "allowed": true
+          }
+        }
+      ],
+      "final_filter": {
+        "status": "ready",
+        "reason": null,
+        "model_validity": "conditional_on_finite_simulation_models",
+        "unmodeled_support_mass": 0.0,
+        "point_inference_ready": true,
+        "execution_allowed": false,
+        "as_of_reference_time": "2026-10-15T00:00:04.012376+00:00",
+        "belief": {
+          "goal_ids": [
+            "task-358c3fa64d8e8fcd1b7eb4fa",
+            "task-b6d7e2654802d55b6746752a",
+            "unknown",
+            "none"
+          ],
+          "mode_ids": [
+            "normal",
+            "flip",
+            "unknown_channel"
+          ],
+          "mass": [
+            {
+              "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+              "mode_id": "normal",
+              "probability": 0.978567798728752
+            },
+            {
+              "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+              "mode_id": "flip",
+              "probability": 0.004195353911987723
+            },
+            {
+              "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "task-b6d7e2654802d55b6746752a",
+              "mode_id": "normal",
+              "probability": 0.004518701649685358
+            },
+            {
+              "goal_id": "task-b6d7e2654802d55b6746752a",
+              "mode_id": "flip",
+              "probability": 0.01271814570957482
+            },
+            {
+              "goal_id": "task-b6d7e2654802d55b6746752a",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            }
+          ],
+          "as_of_event_id": "sample-2"
+        },
+        "goal_marginals": {
+          "task-358c3fa64d8e8fcd1b7eb4fa": 0.9827631526407398,
+          "task-b6d7e2654802d55b6746752a": 0.017236847359260177,
+          "unknown": 0.0,
+          "none": 0.0
+        },
+        "channel_marginals": {
+          "normal": 0.9830865003784374,
+          "flip": 0.016913499621562543,
+          "unknown_channel": 0.0
+        }
+      },
+      "sessions": 1,
+      "journals_replayed": true,
+      "physical_execution_allowed": false,
+      "real_BCI_trials": 0,
+      "dispatches": [],
+      "mapping_repair_evidence": [],
+      "wrong_target_start": false,
+      "faithful_task_success": false
+    },
+    {
+      "id": "STOP_during_execution",
+      "modes": [
+        {
+          "mode": "TASK_QUERY",
+          "request_id": "request-STOP_during_execution-1",
+          "observed_symbol": "0",
+          "state_after": "COLLECTING"
+        },
+        {
+          "mode": "CONFIRM",
+          "request_id": "request-STOP_during_execution-2",
+          "observed_symbol": "0",
+          "state_after": "AWAITING_AUTHORIZATION"
+        }
+      ],
+      "checks": {
+        "STOP_queue_empty": true,
+        "STOP_no_further_steps": true
+      },
+      "final_state": "CANCELLED",
+      "reason": null,
+      "dispatched_goal": "task-358c3fa64d8e8fcd1b7eb4fa",
+      "goal_after_change": 0,
+      "task_success": false,
+      "actual_sim_steps": 8,
+      "planner_decisions": [
+        {
+          "method": "M",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "confirm:task-358c3fa64d8e8fcd1b7eb4fa",
+            "kind": "CONFIRM",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.01,
+            "prompt": null,
+            "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+            "return_s": 0.01,
+            "legal": true,
+            "reason": "authorization_aware_expected_loss",
+            "expected_loss": 0.6909409268092424,
+            "branches": [
+              {
+                "observation": "0",
+                "probability": 0.7711102741190913,
+                "posterior": [
+                  0.9787034452020585,
+                  0.004149980063327305,
+                  0.004495812947649535,
+                  0.012650761786964565
+                ],
+                "authorization_gate": {
+                  "authorized": true,
+                  "predicted_goal_probability": 0.9827085909640376,
+                  "prediction_gap_s": 0.01,
+                  "outcome": "execution_after_authorization"
+                },
+                "continuation_loss": 0.5470698745523163,
+                "next_action": "EXECUTION_REQUIRES_ACTUAL_BOUND_EVIDENCE",
+                "after_time_s": 1792022404.01,
+                "remaining_s": 40.99
+              },
+              {
+                "observation": "1",
+                "probability": 0.17888972588090887,
+                "posterior": [
+                  0.7910127435296426,
+                  0.09540603105331187,
+                  0.10335656151307733,
+                  0.010224663903968197
+                ],
+                "continuation_loss": 1.0,
+                "next_action": "PAUSE_CONFIRMATION_NOT_ACCEPTED",
+                "after_time_s": 1792022404.01,
+                "remaining_s": 40.99
+              },
+              {
+                "observation": "NO_RESPONSE",
+                "probability": 0.05000000000000001,
+                "posterior": [
+                  0.9433603523888229,
+                  0.021333948428140546,
+                  0.02311178369633462,
+                  0.012193915486701961
+                ],
+                "continuation_loss": 1.0,
+                "next_action": "PAUSE_CONFIRMATION_NOT_ACCEPTED",
+                "after_time_s": 1792022404.01,
+                "remaining_s": 40.99
+              }
+            ],
+            "immediate_time_cost": 0.0402
+          },
+          "reason": "authorization_aware_expected_loss",
+          "compute_ns": 19027906,
+          "execution_allowed": false,
+          "planning_value": 0.6909409268092424,
+          "actual_call_compute_ns": 19062698,
+          "public_input": {
+            "belief": {
+              "goal_ids": [
+                "task-358c3fa64d8e8fcd1b7eb4fa",
+                "task-b6d7e2654802d55b6746752a"
+              ],
+              "mode_ids": [
+                "normal",
+                "flip"
+              ],
+              "mass": [
+                {
+                  "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+                  "mode_id": "normal",
+                  "probability": 0.9764795968376279
+                },
+                {
+                  "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+                  "mode_id": "flip",
+                  "probability": 0.002366752341571531
+                },
+                {
+                  "goal_id": "task-b6d7e2654802d55b6746752a",
+                  "mode_id": "normal",
+                  "probability": 0.013909077093481522
+                },
+                {
+                  "goal_id": "task-b6d7e2654802d55b6746752a",
+                  "mode_id": "flip",
+                  "probability": 0.007244573727319071
+                }
+              ],
+              "as_of_event_id": "finite-hypothetical-observation-not-live-evidence"
+            },
+            "now_s": 2.0,
+            "remaining_s": 43.0,
+            "memory": {
+              "last_confirmed_goal": "task-358c3fa64d8e8fcd1b7eb4fa",
+              "diagnostic_count": 0
+            },
+            "horizon_remaining": 2
+          },
+          "planner_ref": {
+            "version": "authorization-aware-finite/2.0",
+            "gate": {
+              "version": "authorization-aware-finite/2.0",
+              "minimum_goal_probability": 0.8,
+              "max_confirmation_age_s": 2.0,
+              "return_s": 0.01
+            },
+            "role": "external_advisory_proposer_not_execution_authority"
+          },
+          "post_compute_authorization_prediction": {
+            "goal_probability": 0.9825695677481551,
+            "allowed": true
+          }
+        }
+      ],
+      "final_filter": {
+        "status": "ready",
+        "reason": null,
+        "model_validity": "conditional_on_finite_simulation_models",
+        "unmodeled_support_mass": 0.0,
+        "point_inference_ready": true,
+        "execution_allowed": false,
+        "as_of_reference_time": "2026-10-15T00:00:04.019063+00:00",
+        "belief": {
+          "goal_ids": [
+            "task-358c3fa64d8e8fcd1b7eb4fa",
+            "task-b6d7e2654802d55b6746752a",
+            "unknown",
+            "none"
+          ],
+          "mode_ids": [
+            "normal",
+            "flip",
+            "unknown_channel"
+          ],
+          "mass": [
+            {
+              "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+              "mode_id": "normal",
+              "probability": 0.9784944944311278
+            },
+            {
+              "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+              "mode_id": "flip",
+              "probability": 0.004219865905154054
+            },
+            {
+              "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "task-b6d7e2654802d55b6746752a",
+              "mode_id": "normal",
+              "probability": 0.004531068376717547
+            },
+            {
+              "goal_id": "task-b6d7e2654802d55b6746752a",
+              "mode_id": "flip",
+              "probability": 0.012754571287000556
+            },
+            {
+              "goal_id": "task-b6d7e2654802d55b6746752a",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            }
+          ],
+          "as_of_event_id": "sample-2"
+        },
+        "goal_marginals": {
+          "task-358c3fa64d8e8fcd1b7eb4fa": 0.9827143603362819,
+          "task-b6d7e2654802d55b6746752a": 0.017285639663718103,
+          "unknown": 0.0,
+          "none": 0.0
+        },
+        "channel_marginals": {
+          "normal": 0.9830255628078454,
+          "flip": 0.01697443719215461,
+          "unknown_channel": 0.0
+        }
+      },
+      "sessions": 1,
+      "journals_replayed": true,
+      "physical_execution_allowed": false,
+      "real_BCI_trials": 0,
+      "dispatches": [
+        {
+          "goal": "task-358c3fa64d8e8fcd1b7eb4fa",
+          "intended_goal_on_dispatch": "task-358c3fa64d8e8fcd1b7eb4fa"
+        }
+      ],
+      "mapping_repair_evidence": [],
+      "wrong_target_start": false,
+      "faithful_task_success": false
+    },
+    {
+      "id": "goal_change_recovery",
+      "modes": [
+        {
+          "mode": "TASK_QUERY",
+          "request_id": "request-goal_change_recovery-1",
+          "observed_symbol": "0",
+          "state_after": "COLLECTING"
+        },
+        {
+          "mode": "CONFIRM",
+          "request_id": "request-goal_change_recovery-2",
+          "observed_symbol": "0",
+          "state_after": "AWAITING_AUTHORIZATION"
+        },
+        {
+          "mode": "TASK_QUERY",
+          "request_id": "request-goal_change_recovery-recovery-1",
+          "observed_symbol": "1",
+          "state_after": "COLLECTING"
+        },
+        {
+          "mode": "CONFIRM",
+          "request_id": "request-goal_change_recovery-recovery-2",
+          "observed_symbol": "1",
+          "state_after": "PAUSED"
+        },
+        {
+          "mode": "TASK_QUERY",
+          "request_id": "request-goal_change_recovery-active-repaired-1",
+          "observed_symbol": "1",
+          "state_after": "COLLECTING"
+        },
+        {
+          "mode": "CONFIRM",
+          "request_id": "request-goal_change_recovery-active-repaired-2",
+          "observed_symbol": "0",
+          "state_after": "AWAITING_AUTHORIZATION"
+        }
+      ],
+      "checks": {
+        "change_stops_and_drains_old": true,
+        "old_authorization_rejected": true,
+        "recovery_new_confirmation": true,
+        "execution_outcome_does_not_relabel_channel": true
+      },
+      "final_state": "FAILED",
+      "reason": null,
+      "dispatched_goal": "task-b6d7e2654802d55b6746752a",
+      "goal_after_change": 1,
+      "task_success": false,
+      "actual_sim_steps": 168,
+      "planner_decisions": [
+        {
+          "method": "M",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "confirm:task-b6d7e2654802d55b6746752a",
+            "kind": "CONFIRM",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.01,
+            "prompt": null,
+            "goal_id": "task-b6d7e2654802d55b6746752a",
+            "return_s": 0.01,
+            "legal": true,
+            "reason": "authorization_aware_expected_loss",
+            "expected_loss": 0.607658425383482,
+            "branches": [
+              {
+                "observation": "0",
+                "probability": 0.6988819622237904,
+                "posterior": [
+                  0.029097852647618383,
+                  0.04104384356717133,
+                  0.9255672108657405,
+                  0.004291092919469817
+                ],
+                "authorization_gate": {
+                  "authorized": true,
+                  "predicted_goal_probability": 0.929729365635764,
+                  "prediction_gap_s": 0.01,
+                  "outcome": "execution_after_authorization"
+                },
+                "continuation_loss": 0.3810949516564956,
+                "next_action": "EXECUTION_REQUIRES_ACTUAL_BOUND_EVIDENCE",
+                "after_time_s": 1792022420.545395,
+                "remaining_s": 24.454605
+              },
+              {
+                "observation": "1",
+                "probability": 0.2511180377762097,
+                "posterior": [
+                  0.43190237356004757,
+                  0.021417817729849457,
+                  0.48298668195157485,
+                  0.06369312675852803
+                ],
+                "continuation_loss": 1.0,
+                "next_action": "PAUSE_CONFIRMATION_NOT_ACCEPTED",
+                "after_time_s": 1792022420.545395,
+                "remaining_s": 24.454605
+              },
+              {
+                "observation": "NO_RESPONSE",
+                "probability": 0.05,
+                "posterior": [
+                  0.13557309569910833,
+                  0.03585600241178874,
+                  0.8085777856248118,
+                  0.019993116264291195
+                ],
+                "continuation_loss": 1.0,
+                "next_action": "PAUSE_CONFIRMATION_NOT_ACCEPTED",
+                "after_time_s": 1792022420.545395,
+                "remaining_s": 24.454605
+              }
+            ],
+            "immediate_time_cost": 0.0402
+          },
+          "reason": "authorization_aware_expected_loss",
+          "compute_ns": 11831137,
+          "execution_allowed": false,
+          "planning_value": 0.607658425383482,
+          "actual_call_compute_ns": 11850124,
+          "public_input": {
+            "belief": {
+              "goal_ids": [
+                "task-358c3fa64d8e8fcd1b7eb4fa",
+                "task-b6d7e2654802d55b6746752a"
+              ],
+              "mode_ids": [
+                "normal",
+                "flip"
+              ],
+              "mass": [
+                {
+                  "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+                  "mode_id": "normal",
+                  "probability": 0.1313066121933161
+                },
+                {
+                  "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+                  "mode_id": "flip",
+                  "probability": 0.030116012229861593
+                },
+                {
+                  "goal_id": "task-b6d7e2654802d55b6746752a",
+                  "mode_id": "normal",
+                  "probability": 0.8356163717724586
+                },
+                {
+                  "goal_id": "task-b6d7e2654802d55b6746752a",
+                  "mode_id": "flip",
+                  "probability": 0.0029610038043636146
+                }
+              ],
+              "as_of_event_id": "finite-hypothetical-observation-not-live-evidence"
+            },
+            "now_s": 18.535395,
+            "remaining_s": 26.464605,
+            "memory": {
+              "last_confirmed_goal": "task-358c3fa64d8e8fcd1b7eb4fa",
+              "diagnostic_count": 0
+            },
+            "horizon_remaining": 2
+          },
+          "planner_ref": {
+            "version": "authorization-aware-finite/2.0",
+            "gate": {
+              "version": "authorization-aware-finite/2.0",
+              "minimum_goal_probability": 0.8,
+              "max_confirmation_age_s": 2.0,
+              "return_s": 0.01
+            },
+            "role": "external_advisory_proposer_not_execution_authority"
+          },
+          "post_compute_authorization_prediction": {
+            "goal_probability": 0.9296255296312356,
+            "allowed": true
+          }
+        }
+      ],
+      "final_filter": {
+        "status": "ready",
+        "reason": null,
+        "model_validity": "conditional_on_finite_simulation_models",
+        "unmodeled_support_mass": 0.0,
+        "point_inference_ready": true,
+        "execution_allowed": false,
+        "as_of_reference_time": "2026-10-15T00:00:20.547245+00:00",
+        "belief": {
+          "goal_ids": [
+            "task-358c3fa64d8e8fcd1b7eb4fa",
+            "task-b6d7e2654802d55b6746752a",
+            "unknown",
+            "none"
+          ],
+          "mode_ids": [
+            "normal",
+            "flip",
+            "unknown_channel"
+          ],
+          "mass": [
+            {
+              "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+              "mode_id": "normal",
+              "probability": 0.029115053190013025
+            },
+            {
+              "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+              "mode_id": "flip",
+              "probability": 0.041130510184779576
+            },
+            {
+              "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "task-b6d7e2654802d55b6746752a",
+              "mode_id": "normal",
+              "probability": 0.9254203862409061
+            },
+            {
+              "goal_id": "task-b6d7e2654802d55b6746752a",
+              "mode_id": "flip",
+              "probability": 0.004334050384301449
+            },
+            {
+              "goal_id": "task-b6d7e2654802d55b6746752a",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            }
+          ],
+          "as_of_event_id": "sample-2"
+        },
+        "goal_marginals": {
+          "task-358c3fa64d8e8fcd1b7eb4fa": 0.0702455633747926,
+          "task-b6d7e2654802d55b6746752a": 0.9297544366252075,
+          "unknown": 0.0,
+          "none": 0.0
+        },
+        "channel_marginals": {
+          "normal": 0.9545354394309191,
+          "flip": 0.045464560569081026,
+          "unknown_channel": 0.0
+        }
+      },
+      "sessions": 4,
+      "journals_replayed": true,
+      "physical_execution_allowed": false,
+      "real_BCI_trials": 0,
+      "dispatches": [
+        {
+          "goal": "task-358c3fa64d8e8fcd1b7eb4fa",
+          "intended_goal_on_dispatch": "task-358c3fa64d8e8fcd1b7eb4fa"
+        },
+        {
+          "goal": "task-b6d7e2654802d55b6746752a",
+          "intended_goal_on_dispatch": "task-b6d7e2654802d55b6746752a"
+        }
+      ],
+      "mapping_repair_evidence": [
+        {
+          "scope": "known_target_synthetic_replay_mapping_repair_not_real_EEG_calibration",
+          "observations": [
+            {
+              "prompt": "0",
+              "raw_symbol": "0",
+              "request_id": "request-goal_change_recovery-active-mapping-check-1"
+            },
+            {
+              "prompt": "1",
+              "raw_symbol": "1",
+              "request_id": "request-goal_change_recovery-active-mapping-check-2"
+            },
+            {
+              "prompt": "0",
+              "raw_symbol": "0",
+              "request_id": "request-goal_change_recovery-active-mapping-check-3"
+            },
+            {
+              "prompt": "1",
+              "raw_symbol": "1",
+              "request_id": "request-goal_change_recovery-active-mapping-check-4"
+            }
+          ],
+          "inversion": false,
+          "new_context": {
+            "session_id": "goal_change_recovery-active-repaired",
+            "task_id": "libero-pick-task",
+            "task_revision": 4,
+            "scene_id": "libero-goal6-init-scene",
+            "scene_revision": 4,
+            "mapping_id": "binary-repaired-4",
+            "stimulus_version": "stimulus-v1",
+            "channel_profile_id": "simulation-binary-repaired-4"
+          },
+          "prior_from_joint_posterior_not_private_goal": true,
+          "goal_marginals_before": {
+            "task-358c3fa64d8e8fcd1b7eb4fa": 0.5732758167964922,
+            "task-b6d7e2654802d55b6746752a": 0.42672418320350775,
+            "unknown": 0.0,
+            "none": 0.0
+          },
+          "initial_repaired_goal_marginals": {
+            "task-358c3fa64d8e8fcd1b7eb4fa": 0.5732758167964922,
+            "task-b6d7e2654802d55b6746752a": 0.42672418320350775,
+            "unknown": 0.0,
+            "none": 0.0
+          },
+          "goal_marginals_after_queries": {
+            "task-358c3fa64d8e8fcd1b7eb4fa": 0.0702455633747926,
+            "task-b6d7e2654802d55b6746752a": 0.9297544366252075,
+            "unknown": 0.0,
+            "none": 0.0
+          }
+        }
+      ],
+      "wrong_target_start": false,
+      "faithful_task_success": false
+    },
+    {
+      "id": "execution_failure_not_channel",
+      "modes": [
+        {
+          "mode": "TASK_QUERY",
+          "request_id": "request-execution_failure_not_channel-1",
+          "observed_symbol": "0",
+          "state_after": "COLLECTING"
+        },
+        {
+          "mode": "CONFIRM",
+          "request_id": "request-execution_failure_not_channel-2",
+          "observed_symbol": "0",
+          "state_after": "AWAITING_AUTHORIZATION"
+        }
+      ],
+      "checks": {
+        "execution_outcome_does_not_relabel_channel": true
+      },
+      "final_state": "FAILED",
+      "reason": null,
+      "dispatched_goal": "task-358c3fa64d8e8fcd1b7eb4fa",
+      "goal_after_change": 0,
+      "task_success": false,
+      "actual_sim_steps": 1,
+      "planner_decisions": [
+        {
+          "method": "M",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "confirm:task-358c3fa64d8e8fcd1b7eb4fa",
+            "kind": "CONFIRM",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.01,
+            "prompt": null,
+            "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+            "return_s": 0.01,
+            "legal": true,
+            "reason": "authorization_aware_expected_loss",
+            "expected_loss": 0.6909409268092424,
+            "branches": [
+              {
+                "observation": "0",
+                "probability": 0.7711102741190913,
+                "posterior": [
+                  0.9787034452020585,
+                  0.004149980063327305,
+                  0.004495812947649535,
+                  0.012650761786964565
+                ],
+                "authorization_gate": {
+                  "authorized": true,
+                  "predicted_goal_probability": 0.9827085909640376,
+                  "prediction_gap_s": 0.01,
+                  "outcome": "execution_after_authorization"
+                },
+                "continuation_loss": 0.5470698745523163,
+                "next_action": "EXECUTION_REQUIRES_ACTUAL_BOUND_EVIDENCE",
+                "after_time_s": 1792022404.01,
+                "remaining_s": 40.99
+              },
+              {
+                "observation": "1",
+                "probability": 0.17888972588090887,
+                "posterior": [
+                  0.7910127435296426,
+                  0.09540603105331187,
+                  0.10335656151307733,
+                  0.010224663903968197
+                ],
+                "continuation_loss": 1.0,
+                "next_action": "PAUSE_CONFIRMATION_NOT_ACCEPTED",
+                "after_time_s": 1792022404.01,
+                "remaining_s": 40.99
+              },
+              {
+                "observation": "NO_RESPONSE",
+                "probability": 0.05000000000000001,
+                "posterior": [
+                  0.9433603523888229,
+                  0.021333948428140546,
+                  0.02311178369633462,
+                  0.012193915486701961
+                ],
+                "continuation_loss": 1.0,
+                "next_action": "PAUSE_CONFIRMATION_NOT_ACCEPTED",
+                "after_time_s": 1792022404.01,
+                "remaining_s": 40.99
+              }
+            ],
+            "immediate_time_cost": 0.0402
+          },
+          "reason": "authorization_aware_expected_loss",
+          "compute_ns": 12645434,
+          "execution_allowed": false,
+          "planning_value": 0.6909409268092424,
+          "actual_call_compute_ns": 12678442,
+          "public_input": {
+            "belief": {
+              "goal_ids": [
+                "task-358c3fa64d8e8fcd1b7eb4fa",
+                "task-b6d7e2654802d55b6746752a"
+              ],
+              "mode_ids": [
+                "normal",
+                "flip"
+              ],
+              "mass": [
+                {
+                  "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+                  "mode_id": "normal",
+                  "probability": 0.9764795968376279
+                },
+                {
+                  "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+                  "mode_id": "flip",
+                  "probability": 0.002366752341571531
+                },
+                {
+                  "goal_id": "task-b6d7e2654802d55b6746752a",
+                  "mode_id": "normal",
+                  "probability": 0.013909077093481522
+                },
+                {
+                  "goal_id": "task-b6d7e2654802d55b6746752a",
+                  "mode_id": "flip",
+                  "probability": 0.007244573727319071
+                }
+              ],
+              "as_of_event_id": "finite-hypothetical-observation-not-live-evidence"
+            },
+            "now_s": 2.0,
+            "remaining_s": 43.0,
+            "memory": {
+              "last_confirmed_goal": "task-358c3fa64d8e8fcd1b7eb4fa",
+              "diagnostic_count": 0
+            },
+            "horizon_remaining": 2
+          },
+          "planner_ref": {
+            "version": "authorization-aware-finite/2.0",
+            "gate": {
+              "version": "authorization-aware-finite/2.0",
+              "minimum_goal_probability": 0.8,
+              "max_confirmation_age_s": 2.0,
+              "return_s": 0.01
+            },
+            "role": "external_advisory_proposer_not_execution_authority"
+          },
+          "post_compute_authorization_prediction": {
+            "goal_probability": 0.9826161427525176,
+            "allowed": true
+          }
+        }
+      ],
+      "final_filter": {
+        "status": "ready",
+        "reason": null,
+        "model_validity": "conditional_on_finite_simulation_models",
+        "unmodeled_support_mass": 0.0,
+        "point_inference_ready": true,
+        "execution_allowed": false,
+        "as_of_reference_time": "2026-10-15T00:00:04.012678+00:00",
+        "belief": {
+          "goal_ids": [
+            "task-358c3fa64d8e8fcd1b7eb4fa",
+            "task-b6d7e2654802d55b6746752a",
+            "unknown",
+            "none"
+          ],
+          "mode_ids": [
+            "normal",
+            "flip",
+            "unknown_channel"
+          ],
+          "mass": [
+            {
+              "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+              "mode_id": "normal",
+              "probability": 0.9785644883197306
+            },
+            {
+              "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+              "mode_id": "flip",
+              "probability": 0.004196460995511119
+            },
+            {
+              "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "task-b6d7e2654802d55b6746752a",
+              "mode_id": "normal",
+              "probability": 0.004519260166478404
+            },
+            {
+              "goal_id": "task-b6d7e2654802d55b6746752a",
+              "mode_id": "flip",
+              "probability": 0.012719790518279773
+            },
+            {
+              "goal_id": "task-b6d7e2654802d55b6746752a",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            }
+          ],
+          "as_of_event_id": "sample-2"
+        },
+        "goal_marginals": {
+          "task-358c3fa64d8e8fcd1b7eb4fa": 0.9827609493152417,
+          "task-b6d7e2654802d55b6746752a": 0.017239050684758176,
+          "unknown": 0.0,
+          "none": 0.0
+        },
+        "channel_marginals": {
+          "normal": 0.983083748486209,
+          "flip": 0.016916251513790892,
+          "unknown_channel": 0.0
+        }
+      },
+      "sessions": 1,
+      "journals_replayed": true,
+      "physical_execution_allowed": false,
+      "real_BCI_trials": 0,
+      "dispatches": [
+        {
+          "goal": "task-358c3fa64d8e8fcd1b7eb4fa",
+          "intended_goal_on_dispatch": "task-358c3fa64d8e8fcd1b7eb4fa"
+        }
+      ],
+      "mapping_repair_evidence": [],
+      "wrong_target_start": false,
+      "faithful_task_success": false
+    },
+    {
+      "id": "inference_failure_not_channel",
+      "modes": [
+        {
+          "mode": "TASK_QUERY",
+          "request_id": "request-inference_failure_not_channel-1",
+          "observed_symbol": "0",
+          "state_after": "COLLECTING"
+        },
+        {
+          "mode": "CONFIRM",
+          "request_id": "request-inference_failure_not_channel-2",
+          "observed_symbol": "0",
+          "state_after": "AWAITING_AUTHORIZATION"
+        }
+      ],
+      "checks": {
+        "inference_failure_not_BCI_relabel": true
+      },
+      "final_state": "CANCELLED",
+      "reason": null,
+      "dispatched_goal": "task-358c3fa64d8e8fcd1b7eb4fa",
+      "goal_after_change": 0,
+      "task_success": false,
+      "actual_sim_steps": 0,
+      "planner_decisions": [
+        {
+          "method": "M",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "confirm:task-358c3fa64d8e8fcd1b7eb4fa",
+            "kind": "CONFIRM",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.01,
+            "prompt": null,
+            "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+            "return_s": 0.01,
+            "legal": true,
+            "reason": "authorization_aware_expected_loss",
+            "expected_loss": 0.6909409268092424,
+            "branches": [
+              {
+                "observation": "0",
+                "probability": 0.7711102741190913,
+                "posterior": [
+                  0.9787034452020585,
+                  0.004149980063327305,
+                  0.004495812947649535,
+                  0.012650761786964565
+                ],
+                "authorization_gate": {
+                  "authorized": true,
+                  "predicted_goal_probability": 0.9827085909640376,
+                  "prediction_gap_s": 0.01,
+                  "outcome": "execution_after_authorization"
+                },
+                "continuation_loss": 0.5470698745523163,
+                "next_action": "EXECUTION_REQUIRES_ACTUAL_BOUND_EVIDENCE",
+                "after_time_s": 1792022404.01,
+                "remaining_s": 40.99
+              },
+              {
+                "observation": "1",
+                "probability": 0.17888972588090887,
+                "posterior": [
+                  0.7910127435296426,
+                  0.09540603105331187,
+                  0.10335656151307733,
+                  0.010224663903968197
+                ],
+                "continuation_loss": 1.0,
+                "next_action": "PAUSE_CONFIRMATION_NOT_ACCEPTED",
+                "after_time_s": 1792022404.01,
+                "remaining_s": 40.99
+              },
+              {
+                "observation": "NO_RESPONSE",
+                "probability": 0.05000000000000001,
+                "posterior": [
+                  0.9433603523888229,
+                  0.021333948428140546,
+                  0.02311178369633462,
+                  0.012193915486701961
+                ],
+                "continuation_loss": 1.0,
+                "next_action": "PAUSE_CONFIRMATION_NOT_ACCEPTED",
+                "after_time_s": 1792022404.01,
+                "remaining_s": 40.99
+              }
+            ],
+            "immediate_time_cost": 0.0402
+          },
+          "reason": "authorization_aware_expected_loss",
+          "compute_ns": 13121598,
+          "execution_allowed": false,
+          "planning_value": 0.6909409268092424,
+          "actual_call_compute_ns": 13154106,
+          "public_input": {
+            "belief": {
+              "goal_ids": [
+                "task-358c3fa64d8e8fcd1b7eb4fa",
+                "task-b6d7e2654802d55b6746752a"
+              ],
+              "mode_ids": [
+                "normal",
+                "flip"
+              ],
+              "mass": [
+                {
+                  "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+                  "mode_id": "normal",
+                  "probability": 0.9764795968376279
+                },
+                {
+                  "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+                  "mode_id": "flip",
+                  "probability": 0.002366752341571531
+                },
+                {
+                  "goal_id": "task-b6d7e2654802d55b6746752a",
+                  "mode_id": "normal",
+                  "probability": 0.013909077093481522
+                },
+                {
+                  "goal_id": "task-b6d7e2654802d55b6746752a",
+                  "mode_id": "flip",
+                  "probability": 0.007244573727319071
+                }
+              ],
+              "as_of_event_id": "finite-hypothetical-observation-not-live-evidence"
+            },
+            "now_s": 2.0,
+            "remaining_s": 43.0,
+            "memory": {
+              "last_confirmed_goal": "task-358c3fa64d8e8fcd1b7eb4fa",
+              "diagnostic_count": 0
+            },
+            "horizon_remaining": 2
+          },
+          "planner_ref": {
+            "version": "authorization-aware-finite/2.0",
+            "gate": {
+              "version": "authorization-aware-finite/2.0",
+              "minimum_goal_probability": 0.8,
+              "max_confirmation_age_s": 2.0,
+              "return_s": 0.01
+            },
+            "role": "external_advisory_proposer_not_execution_authority"
+          },
+          "post_compute_authorization_prediction": {
+            "goal_probability": 0.9826126709559695,
+            "allowed": true
+          }
+        }
+      ],
+      "final_filter": {
+        "status": "ready",
+        "reason": null,
+        "model_validity": "conditional_on_finite_simulation_models",
+        "unmodeled_support_mass": 0.0,
+        "point_inference_ready": true,
+        "execution_allowed": false,
+        "as_of_reference_time": "2026-10-15T00:00:04.013154+00:00",
+        "belief": {
+          "goal_ids": [
+            "task-358c3fa64d8e8fcd1b7eb4fa",
+            "task-b6d7e2654802d55b6746752a",
+            "unknown",
+            "none"
+          ],
+          "mode_ids": [
+            "normal",
+            "flip",
+            "unknown_channel"
+          ],
+          "mass": [
+            {
+              "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+              "mode_id": "normal",
+              "probability": 0.9785592705546896
+            },
+            {
+              "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+              "mode_id": "flip",
+              "probability": 0.0041982059223090555
+            },
+            {
+              "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "task-b6d7e2654802d55b6746752a",
+              "mode_id": "normal",
+              "probability": 0.0045201404762734605
+            },
+            {
+              "goal_id": "task-b6d7e2654802d55b6746752a",
+              "mode_id": "flip",
+              "probability": 0.012722383046727912
+            },
+            {
+              "goal_id": "task-b6d7e2654802d55b6746752a",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            }
+          ],
+          "as_of_event_id": "sample-2"
+        },
+        "goal_marginals": {
+          "task-358c3fa64d8e8fcd1b7eb4fa": 0.9827574764769986,
+          "task-b6d7e2654802d55b6746752a": 0.017242523523001374,
+          "unknown": 0.0,
+          "none": 0.0
+        },
+        "channel_marginals": {
+          "normal": 0.9830794110309631,
+          "flip": 0.01692058896903697,
+          "unknown_channel": 0.0
+        }
+      },
+      "sessions": 1,
+      "journals_replayed": true,
+      "physical_execution_allowed": false,
+      "real_BCI_trials": 0,
+      "dispatches": [
+        {
+          "goal": "task-358c3fa64d8e8fcd1b7eb4fa",
+          "intended_goal_on_dispatch": "task-358c3fa64d8e8fcd1b7eb4fa"
+        }
+      ],
+      "mapping_repair_evidence": [],
+      "wrong_target_start": false,
+      "faithful_task_success": false
+    }
+  ],
+  "independent_calibration_records": 4,
+  "independent_holdout_records": 2,
+  "calibration_holdout_test_init_indices": [
+    [
+      0,
+      1
+    ],
+    [
+      2
+    ],
+    [
+      3
+    ]
+  ],
+  "all_checks_passed": true,
+  "model_checkpoint": "26b36799a702ca920467c987096a8ccb5f476c6965af6c7f2fd419ecb6893bf2",
+  "elapsed_wall_s": 49.51386342803016,
+  "real_BCI_trials": 0,
+  "physical_robot_commands": 0,
+  "real_user_time_measured": false,
+  "statistical_strategy_superiority_claim": false
+}

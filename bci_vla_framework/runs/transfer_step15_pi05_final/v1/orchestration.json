@@ -1,0 +1,10 @@
+{
+  "scope": "owned_pi05_simulation_processes",
+  "started_at_unix": 1792140526.026348,
+  "port": 16815,
+  "server_python": "openpi/.venv",
+  "server_pid": 2047434,
+  "error": "RuntimeError:owned_model_server_exited:1",
+  "owned_server_stopped": true,
+  "finished_at_unix": 1792140604.1175365
+}

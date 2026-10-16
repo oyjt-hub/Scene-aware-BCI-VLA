@@ -1,0 +1,54 @@
+{
+  "date": "2026-10-16",
+  "scope": "read_only_local_device_source_and_receive_only_stream_inspection",
+  "operator_report": {
+    "eeg_connected": true,
+    "port": 8712,
+    "source_root": "D:\\脑机\\yjj（2）"
+  },
+  "observed_listener": {
+    "port": 8712,
+    "state": "Listen",
+    "process_name": "Neuracle.EEGRecorder.Viewer.WPF",
+    "pid_at_inspection": 74428
+  },
+  "source_declared_channels": 12,
+  "source_declared_rate_hz": 1000,
+  "decoder_declared_rate_hz": 250,
+  "channel_names_verified_on_device": false,
+  "physical_device_model_verified": false,
+  "source_defect": {
+    "resample_file": "creat_raw_data.py",
+    "resample_line": 38,
+    "interface_1000_based_slice_lines": [
+      255,
+      256
+    ],
+    "second_stride_line": 257
+  },
+  "original_interface_contains_external_result_post": true,
+  "original_ui_or_robot_program_launched": false,
+  "stream_report": "runs/pilot_virtual_13_streamcheck_01/stream_report.json",
+  "sampling_report": "runs/pilot_virtual_13_samplingcheck_01/sampling_report.json",
+  "source_files": [
+    {
+      "path": "D:\\脑机\\yjj（2）\\yjj\\interface.py",
+      "sha256": "74c7011c304b0b89f9a6e39801a4aeda7bceea3c30229b02b964725ce7de093a"
+    },
+    {
+      "path": "D:\\脑机\\yjj（2）\\yjj\\creat_raw_data.py",
+      "sha256": "ca6cb11482bf4b9c19d747e05dc610d429946452edfa749bbeb380e312a07026"
+    },
+    {
+      "path": "D:\\脑机\\yjj（2）\\yjj\\dataServer.py",
+      "sha256": "0f1bd5d17b3188eb2709f60997d6f8b6e7d82b62605028cf06aaae1dfa863259"
+    },
+    {
+      "path": "D:\\脑机\\yjj（2）\\yjj\\fbcca.py",
+      "sha256": "35eed8c502962de36ed9795f7d1a863485a40fc3c0778cb94af9c7fae55cd2d9"
+    }
+  ],
+  "I01_fully_resolved": false,
+  "real_pilot_trials": 0,
+  "G3_passed": false
+}

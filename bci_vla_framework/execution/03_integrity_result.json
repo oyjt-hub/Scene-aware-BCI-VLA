@@ -1,0 +1,26 @@
+{
+  "scope": "documentation_and_record_consistency",
+  "result": "PASS",
+  "count": 13,
+  "checks": [
+    "only 01-03 completed",
+    "step 04 not started",
+    "G1 design scope explicit",
+    "G2-G4 not started",
+    "all 9 substeps mapped",
+    "math checks recorded",
+    "independent review provenance retained",
+    "conditional boundaries in proof",
+    "protocol source and noisy confirmation",
+    "timeline branches and private truth",
+    "examples are private analytical fixtures",
+    "design and input hashes unchanged since freeze",
+    "TXT encoding preserved"
+  ],
+  "not_evaluated": [
+    "physiological cause",
+    "empirical probe validity",
+    "novelty sufficiency",
+    "G2-G4"
+  ]
+}

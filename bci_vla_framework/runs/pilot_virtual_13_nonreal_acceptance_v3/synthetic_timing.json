@@ -1,0 +1,110 @@
+{
+  "scope": "synthetic_accounting_fixture_not_user_measurement",
+  "segments": [
+    {
+      "phase": "acquisition",
+      "clock_id": "synthetic-clock",
+      "start_s": 0,
+      "end_s": 1,
+      "user_busy": true
+    },
+    {
+      "phase": "computation",
+      "clock_id": "synthetic-clock",
+      "start_s": 1,
+      "end_s": 2,
+      "user_busy": false
+    },
+    {
+      "phase": "confirmation",
+      "clock_id": "synthetic-clock",
+      "start_s": 2,
+      "end_s": 3,
+      "user_busy": true
+    },
+    {
+      "phase": "decoding",
+      "clock_id": "synthetic-clock",
+      "start_s": 3,
+      "end_s": 4,
+      "user_busy": false
+    },
+    {
+      "phase": "network",
+      "clock_id": "synthetic-clock",
+      "start_s": 4,
+      "end_s": 5,
+      "user_busy": false
+    },
+    {
+      "phase": "reading",
+      "clock_id": "synthetic-clock",
+      "start_s": 5,
+      "end_s": 6,
+      "user_busy": true
+    },
+    {
+      "phase": "retry",
+      "clock_id": "synthetic-clock",
+      "start_s": 6,
+      "end_s": 7,
+      "user_busy": true
+    },
+    {
+      "phase": "return_to_task",
+      "clock_id": "synthetic-clock",
+      "start_s": 7,
+      "end_s": 8,
+      "user_busy": true
+    },
+    {
+      "phase": "switching",
+      "clock_id": "synthetic-clock",
+      "start_s": 8,
+      "end_s": 9,
+      "user_busy": true
+    }
+  ],
+  "complete": {
+    "clock_id": "synthetic-clock",
+    "total_elapsed_s": 9,
+    "observed_user_busy_s": 6.0,
+    "phase_seconds": {
+      "acquisition": 1.0,
+      "computation": 1.0,
+      "confirmation": 1.0,
+      "decoding": 1.0,
+      "network": 1.0,
+      "reading": 1.0,
+      "retry": 1.0,
+      "return_to_task": 1.0,
+      "switching": 1.0
+    },
+    "missing_phases": [],
+    "decomposition_complete": true,
+    "user_busy_s": 6.0,
+    "warning": "phase times can overlap; never sum them to charge total time twice"
+  },
+  "missing_phase_case": {
+    "clock_id": "synthetic-clock",
+    "total_elapsed_s": 9,
+    "observed_user_busy_s": 5.0,
+    "phase_seconds": {
+      "acquisition": 1.0,
+      "computation": 1.0,
+      "confirmation": 1.0,
+      "decoding": 1.0,
+      "network": 1.0,
+      "reading": 1.0,
+      "retry": 1.0,
+      "return_to_task": 1.0
+    },
+    "missing_phases": [
+      "switching"
+    ],
+    "decomposition_complete": false,
+    "user_busy_s": null,
+    "warning": "phase times can overlap; never sum them to charge total time twice"
+  },
+  "real_time_measurements": 0
+}

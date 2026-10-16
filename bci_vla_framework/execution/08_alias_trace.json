@@ -1,0 +1,822 @@
+{
+  "scope": "analytic_fixed_evidence_replay",
+  "provenance": "not_an_experiment_not_EEG_performance",
+  "initial": {
+    "status": "ready",
+    "reason": null,
+    "model_validity": "conditional_on_finite_simulation_models",
+    "unmodeled_support_mass": 0.0,
+    "point_inference_ready": true,
+    "execution_allowed": false,
+    "as_of_reference_time": "2026-10-15T00:00:00+00:00",
+    "belief": {
+      "goal_ids": [
+        "task-9cad706e60e745cf3c01a413",
+        "task-d5fc9bc832047df78f51c84f",
+        "unknown",
+        "none"
+      ],
+      "mode_ids": [
+        "normal",
+        "flip",
+        "unknown_channel"
+      ],
+      "mass": [
+        {
+          "goal_id": "task-9cad706e60e745cf3c01a413",
+          "mode_id": "normal",
+          "probability": 0.0
+        },
+        {
+          "goal_id": "task-9cad706e60e745cf3c01a413",
+          "mode_id": "flip",
+          "probability": 0.5
+        },
+        {
+          "goal_id": "task-9cad706e60e745cf3c01a413",
+          "mode_id": "unknown_channel",
+          "probability": 0.0
+        },
+        {
+          "goal_id": "task-d5fc9bc832047df78f51c84f",
+          "mode_id": "normal",
+          "probability": 0.5
+        },
+        {
+          "goal_id": "task-d5fc9bc832047df78f51c84f",
+          "mode_id": "flip",
+          "probability": 0.0
+        },
+        {
+          "goal_id": "task-d5fc9bc832047df78f51c84f",
+          "mode_id": "unknown_channel",
+          "probability": 0.0
+        },
+        {
+          "goal_id": "unknown",
+          "mode_id": "normal",
+          "probability": 0.0
+        },
+        {
+          "goal_id": "unknown",
+          "mode_id": "flip",
+          "probability": 0.0
+        },
+        {
+          "goal_id": "unknown",
+          "mode_id": "unknown_channel",
+          "probability": 0.0
+        },
+        {
+          "goal_id": "none",
+          "mode_id": "normal",
+          "probability": 0.0
+        },
+        {
+          "goal_id": "none",
+          "mode_id": "flip",
+          "probability": 0.0
+        },
+        {
+          "goal_id": "none",
+          "mode_id": "unknown_channel",
+          "probability": 0.0
+        }
+      ],
+      "as_of_event_id": "handwritten-alias-prior"
+    },
+    "goal_marginals": {
+      "task-9cad706e60e745cf3c01a413": 0.5,
+      "task-d5fc9bc832047df78f51c84f": 0.5,
+      "unknown": 0.0,
+      "none": 0.0
+    },
+    "channel_marginals": {
+      "normal": 0.5,
+      "flip": 0.5,
+      "unknown_channel": 0.0
+    }
+  },
+  "audit": [
+    {
+      "before": {
+        "status": "ready",
+        "reason": null,
+        "model_validity": "conditional_on_finite_simulation_models",
+        "unmodeled_support_mass": 0.0,
+        "point_inference_ready": true,
+        "execution_allowed": false,
+        "as_of_reference_time": "2026-10-15T00:00:00+00:00",
+        "belief": {
+          "goal_ids": [
+            "task-9cad706e60e745cf3c01a413",
+            "task-d5fc9bc832047df78f51c84f",
+            "unknown",
+            "none"
+          ],
+          "mode_ids": [
+            "normal",
+            "flip",
+            "unknown_channel"
+          ],
+          "mass": [
+            {
+              "goal_id": "task-9cad706e60e745cf3c01a413",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "task-9cad706e60e745cf3c01a413",
+              "mode_id": "flip",
+              "probability": 0.5
+            },
+            {
+              "goal_id": "task-9cad706e60e745cf3c01a413",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "task-d5fc9bc832047df78f51c84f",
+              "mode_id": "normal",
+              "probability": 0.5
+            },
+            {
+              "goal_id": "task-d5fc9bc832047df78f51c84f",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "task-d5fc9bc832047df78f51c84f",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            }
+          ],
+          "as_of_event_id": "handwritten-alias-prior"
+        },
+        "goal_marginals": {
+          "task-9cad706e60e745cf3c01a413": 0.5,
+          "task-d5fc9bc832047df78f51c84f": 0.5,
+          "unknown": 0.0,
+          "none": 0.0
+        },
+        "channel_marginals": {
+          "normal": 0.5,
+          "flip": 0.5,
+          "unknown_channel": 0.0
+        }
+      },
+      "prediction": {
+        "goal_ids": [
+          "task-9cad706e60e745cf3c01a413",
+          "task-d5fc9bc832047df78f51c84f",
+          "unknown",
+          "none"
+        ],
+        "mode_ids": [
+          "normal",
+          "flip",
+          "unknown_channel"
+        ],
+        "mass": [
+          {
+            "goal_id": "task-9cad706e60e745cf3c01a413",
+            "mode_id": "normal",
+            "probability": 0.0
+          },
+          {
+            "goal_id": "task-9cad706e60e745cf3c01a413",
+            "mode_id": "flip",
+            "probability": 0.5
+          },
+          {
+            "goal_id": "task-9cad706e60e745cf3c01a413",
+            "mode_id": "unknown_channel",
+            "probability": 0.0
+          },
+          {
+            "goal_id": "task-d5fc9bc832047df78f51c84f",
+            "mode_id": "normal",
+            "probability": 0.5
+          },
+          {
+            "goal_id": "task-d5fc9bc832047df78f51c84f",
+            "mode_id": "flip",
+            "probability": 0.0
+          },
+          {
+            "goal_id": "task-d5fc9bc832047df78f51c84f",
+            "mode_id": "unknown_channel",
+            "probability": 0.0
+          },
+          {
+            "goal_id": "unknown",
+            "mode_id": "normal",
+            "probability": 0.0
+          },
+          {
+            "goal_id": "unknown",
+            "mode_id": "flip",
+            "probability": 0.0
+          },
+          {
+            "goal_id": "unknown",
+            "mode_id": "unknown_channel",
+            "probability": 0.0
+          },
+          {
+            "goal_id": "none",
+            "mode_id": "normal",
+            "probability": 0.0
+          },
+          {
+            "goal_id": "none",
+            "mode_id": "flip",
+            "probability": 0.0
+          },
+          {
+            "goal_id": "none",
+            "mode_id": "unknown_channel",
+            "probability": 0.0
+          }
+        ],
+        "as_of_event_id": "prediction"
+      },
+      "after": {
+        "status": "ready",
+        "reason": null,
+        "model_validity": "conditional_on_finite_simulation_models",
+        "unmodeled_support_mass": 0.0,
+        "point_inference_ready": true,
+        "execution_allowed": false,
+        "as_of_reference_time": "2026-10-15T00:00:02+00:00",
+        "belief": {
+          "goal_ids": [
+            "task-9cad706e60e745cf3c01a413",
+            "task-d5fc9bc832047df78f51c84f",
+            "unknown",
+            "none"
+          ],
+          "mode_ids": [
+            "normal",
+            "flip",
+            "unknown_channel"
+          ],
+          "mass": [
+            {
+              "goal_id": "task-9cad706e60e745cf3c01a413",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "task-9cad706e60e745cf3c01a413",
+              "mode_id": "flip",
+              "probability": 0.5
+            },
+            {
+              "goal_id": "task-9cad706e60e745cf3c01a413",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "task-d5fc9bc832047df78f51c84f",
+              "mode_id": "normal",
+              "probability": 0.5
+            },
+            {
+              "goal_id": "task-d5fc9bc832047df78f51c84f",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "task-d5fc9bc832047df78f51c84f",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            }
+          ],
+          "as_of_event_id": "response-0"
+        },
+        "goal_marginals": {
+          "task-9cad706e60e745cf3c01a413": 0.5,
+          "task-d5fc9bc832047df78f51c84f": 0.5,
+          "unknown": 0.0,
+          "none": 0.0
+        },
+        "channel_marginals": {
+          "normal": 0.5,
+          "flip": 0.5,
+          "unknown_channel": 0.0
+        }
+      },
+      "evidence_id": "response-0",
+      "request_id": "request-0",
+      "mode": "TASK_QUERY",
+      "signal_status": "OBSERVATION",
+      "context": {
+        "session_id": "fixture-session",
+        "task_id": "fixture-task",
+        "task_revision": 1,
+        "scene_id": "fixture-scene",
+        "scene_revision": 1,
+        "mapping_id": "binary-v1",
+        "stimulus_version": "stimulus-v1",
+        "channel_profile_id": "simulation-binary-v1"
+      },
+      "gap_transition_s": 1.0,
+      "stable_window_s": 1.0,
+      "probe_prompt_symbol": null,
+      "outlier_weight": 0.0,
+      "likelihoods": [
+        {
+          "goal_id": "task-9cad706e60e745cf3c01a413",
+          "mode_id": "normal",
+          "probability": 0.1
+        },
+        {
+          "goal_id": "task-9cad706e60e745cf3c01a413",
+          "mode_id": "flip",
+          "probability": 0.85
+        },
+        {
+          "goal_id": "task-d5fc9bc832047df78f51c84f",
+          "mode_id": "normal",
+          "probability": 0.85
+        },
+        {
+          "goal_id": "task-d5fc9bc832047df78f51c84f",
+          "mode_id": "flip",
+          "probability": 0.1
+        }
+      ],
+      "reason": "joint_bayes_update",
+      "updated": true
+    },
+    {
+      "before": {
+        "status": "ready",
+        "reason": null,
+        "model_validity": "conditional_on_finite_simulation_models",
+        "unmodeled_support_mass": 0.0,
+        "point_inference_ready": true,
+        "execution_allowed": false,
+        "as_of_reference_time": "2026-10-15T00:00:02+00:00",
+        "belief": {
+          "goal_ids": [
+            "task-9cad706e60e745cf3c01a413",
+            "task-d5fc9bc832047df78f51c84f",
+            "unknown",
+            "none"
+          ],
+          "mode_ids": [
+            "normal",
+            "flip",
+            "unknown_channel"
+          ],
+          "mass": [
+            {
+              "goal_id": "task-9cad706e60e745cf3c01a413",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "task-9cad706e60e745cf3c01a413",
+              "mode_id": "flip",
+              "probability": 0.5
+            },
+            {
+              "goal_id": "task-9cad706e60e745cf3c01a413",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "task-d5fc9bc832047df78f51c84f",
+              "mode_id": "normal",
+              "probability": 0.5
+            },
+            {
+              "goal_id": "task-d5fc9bc832047df78f51c84f",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "task-d5fc9bc832047df78f51c84f",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            }
+          ],
+          "as_of_event_id": "response-0"
+        },
+        "goal_marginals": {
+          "task-9cad706e60e745cf3c01a413": 0.5,
+          "task-d5fc9bc832047df78f51c84f": 0.5,
+          "unknown": 0.0,
+          "none": 0.0
+        },
+        "channel_marginals": {
+          "normal": 0.5,
+          "flip": 0.5,
+          "unknown_channel": 0.0
+        }
+      },
+      "prediction": {
+        "goal_ids": [
+          "task-9cad706e60e745cf3c01a413",
+          "task-d5fc9bc832047df78f51c84f",
+          "unknown",
+          "none"
+        ],
+        "mode_ids": [
+          "normal",
+          "flip",
+          "unknown_channel"
+        ],
+        "mass": [
+          {
+            "goal_id": "task-9cad706e60e745cf3c01a413",
+            "mode_id": "normal",
+            "probability": 0.0
+          },
+          {
+            "goal_id": "task-9cad706e60e745cf3c01a413",
+            "mode_id": "flip",
+            "probability": 0.5
+          },
+          {
+            "goal_id": "task-9cad706e60e745cf3c01a413",
+            "mode_id": "unknown_channel",
+            "probability": 0.0
+          },
+          {
+            "goal_id": "task-d5fc9bc832047df78f51c84f",
+            "mode_id": "normal",
+            "probability": 0.5
+          },
+          {
+            "goal_id": "task-d5fc9bc832047df78f51c84f",
+            "mode_id": "flip",
+            "probability": 0.0
+          },
+          {
+            "goal_id": "task-d5fc9bc832047df78f51c84f",
+            "mode_id": "unknown_channel",
+            "probability": 0.0
+          },
+          {
+            "goal_id": "unknown",
+            "mode_id": "normal",
+            "probability": 0.0
+          },
+          {
+            "goal_id": "unknown",
+            "mode_id": "flip",
+            "probability": 0.0
+          },
+          {
+            "goal_id": "unknown",
+            "mode_id": "unknown_channel",
+            "probability": 0.0
+          },
+          {
+            "goal_id": "none",
+            "mode_id": "normal",
+            "probability": 0.0
+          },
+          {
+            "goal_id": "none",
+            "mode_id": "flip",
+            "probability": 0.0
+          },
+          {
+            "goal_id": "none",
+            "mode_id": "unknown_channel",
+            "probability": 0.0
+          }
+        ],
+        "as_of_event_id": "prediction"
+      },
+      "after": {
+        "status": "ready",
+        "reason": null,
+        "model_validity": "conditional_on_finite_simulation_models",
+        "unmodeled_support_mass": 0.0,
+        "point_inference_ready": true,
+        "execution_allowed": false,
+        "as_of_reference_time": "2026-10-15T00:00:06+00:00",
+        "belief": {
+          "goal_ids": [
+            "task-9cad706e60e745cf3c01a413",
+            "task-d5fc9bc832047df78f51c84f",
+            "unknown",
+            "none"
+          ],
+          "mode_ids": [
+            "normal",
+            "flip",
+            "unknown_channel"
+          ],
+          "mass": [
+            {
+              "goal_id": "task-9cad706e60e745cf3c01a413",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "task-9cad706e60e745cf3c01a413",
+              "mode_id": "flip",
+              "probability": 0.05263157894736843
+            },
+            {
+              "goal_id": "task-9cad706e60e745cf3c01a413",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "task-d5fc9bc832047df78f51c84f",
+              "mode_id": "normal",
+              "probability": 0.9473684210526315
+            },
+            {
+              "goal_id": "task-d5fc9bc832047df78f51c84f",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "task-d5fc9bc832047df78f51c84f",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "unknown",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "normal",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "flip",
+              "probability": 0.0
+            },
+            {
+              "goal_id": "none",
+              "mode_id": "unknown_channel",
+              "probability": 0.0
+            }
+          ],
+          "as_of_event_id": "response-1"
+        },
+        "goal_marginals": {
+          "task-9cad706e60e745cf3c01a413": 0.05263157894736843,
+          "task-d5fc9bc832047df78f51c84f": 0.9473684210526315,
+          "unknown": 0.0,
+          "none": 0.0
+        },
+        "channel_marginals": {
+          "normal": 0.9473684210526315,
+          "flip": 0.05263157894736843,
+          "unknown_channel": 0.0
+        }
+      },
+      "evidence_id": "response-1",
+      "request_id": "request-1",
+      "mode": "CHANNEL_PROBE",
+      "signal_status": "OBSERVATION",
+      "context": {
+        "session_id": "fixture-session",
+        "task_id": "fixture-task",
+        "task_revision": 1,
+        "scene_id": "fixture-scene",
+        "scene_revision": 1,
+        "mapping_id": "binary-v1",
+        "stimulus_version": "stimulus-v1",
+        "channel_profile_id": "simulation-binary-v1"
+      },
+      "gap_transition_s": 3.0,
+      "stable_window_s": 1.0,
+      "probe_prompt_symbol": "0",
+      "outlier_weight": 0.0,
+      "likelihoods": [
+        {
+          "goal_id": "task-9cad706e60e745cf3c01a413",
+          "mode_id": "normal",
+          "probability": 0.9
+        },
+        {
+          "goal_id": "task-9cad706e60e745cf3c01a413",
+          "mode_id": "flip",
+          "probability": 0.05
+        },
+        {
+          "goal_id": "task-d5fc9bc832047df78f51c84f",
+          "mode_id": "normal",
+          "probability": 0.9
+        },
+        {
+          "goal_id": "task-d5fc9bc832047df78f51c84f",
+          "mode_id": "flip",
+          "probability": 0.05
+        }
+      ],
+      "reason": "joint_bayes_update",
+      "updated": true
+    }
+  ],
+  "final": {
+    "status": "ready",
+    "reason": null,
+    "model_validity": "conditional_on_finite_simulation_models",
+    "unmodeled_support_mass": 0.0,
+    "point_inference_ready": true,
+    "execution_allowed": false,
+    "as_of_reference_time": "2026-10-15T00:00:06+00:00",
+    "belief": {
+      "goal_ids": [
+        "task-9cad706e60e745cf3c01a413",
+        "task-d5fc9bc832047df78f51c84f",
+        "unknown",
+        "none"
+      ],
+      "mode_ids": [
+        "normal",
+        "flip",
+        "unknown_channel"
+      ],
+      "mass": [
+        {
+          "goal_id": "task-9cad706e60e745cf3c01a413",
+          "mode_id": "normal",
+          "probability": 0.0
+        },
+        {
+          "goal_id": "task-9cad706e60e745cf3c01a413",
+          "mode_id": "flip",
+          "probability": 0.05263157894736843
+        },
+        {
+          "goal_id": "task-9cad706e60e745cf3c01a413",
+          "mode_id": "unknown_channel",
+          "probability": 0.0
+        },
+        {
+          "goal_id": "task-d5fc9bc832047df78f51c84f",
+          "mode_id": "normal",
+          "probability": 0.9473684210526315
+        },
+        {
+          "goal_id": "task-d5fc9bc832047df78f51c84f",
+          "mode_id": "flip",
+          "probability": 0.0
+        },
+        {
+          "goal_id": "task-d5fc9bc832047df78f51c84f",
+          "mode_id": "unknown_channel",
+          "probability": 0.0
+        },
+        {
+          "goal_id": "unknown",
+          "mode_id": "normal",
+          "probability": 0.0
+        },
+        {
+          "goal_id": "unknown",
+          "mode_id": "flip",
+          "probability": 0.0
+        },
+        {
+          "goal_id": "unknown",
+          "mode_id": "unknown_channel",
+          "probability": 0.0
+        },
+        {
+          "goal_id": "none",
+          "mode_id": "normal",
+          "probability": 0.0
+        },
+        {
+          "goal_id": "none",
+          "mode_id": "flip",
+          "probability": 0.0
+        },
+        {
+          "goal_id": "none",
+          "mode_id": "unknown_channel",
+          "probability": 0.0
+        }
+      ],
+      "as_of_event_id": "response-1"
+    },
+    "goal_marginals": {
+      "task-9cad706e60e745cf3c01a413": 0.05263157894736843,
+      "task-d5fc9bc832047df78f51c84f": 0.9473684210526315,
+      "unknown": 0.0,
+      "none": 0.0
+    },
+    "channel_marginals": {
+      "normal": 0.9473684210526315,
+      "flip": 0.05263157894736843,
+      "unknown_channel": 0.0
+    }
+  }
+}

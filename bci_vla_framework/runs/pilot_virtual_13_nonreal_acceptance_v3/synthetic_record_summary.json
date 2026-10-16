@@ -1,0 +1,149 @@
+{
+  "scope": "synthetic_software_check",
+  "records": 5,
+  "real_records": 0,
+  "status_counts": {
+    "OBSERVATION": 3,
+    "NO_RESPONSE": 1,
+    "TIMEOUT": 1
+  },
+  "unknown_intent_labels": 1,
+  "records_without_sampling_window": 1,
+  "conditional_intended_counts": [
+    {
+      "scope": [
+        "fixture-user",
+        "fixture-session",
+        "calibration",
+        "CONFIRM",
+        [
+          [
+            "decoder_version",
+            "fixture"
+          ],
+          [
+            "layout_id",
+            "fixture"
+          ],
+          [
+            "mapping_id",
+            "fixture"
+          ],
+          [
+            "stimulus_version",
+            "fixture"
+          ]
+        ],
+        "independent-fixture-condition",
+        250,
+        [
+          "O1",
+          "Oz",
+          "O2"
+        ],
+        4.0
+      ],
+      "intended_or_prompt": "0",
+      "counts": {
+        "0": 1,
+        "1": 0,
+        "NO_RESPONSE": 0
+      },
+      "n": 1
+    },
+    {
+      "scope": [
+        "fixture-user",
+        "fixture-session",
+        "calibration",
+        "TASK_QUERY",
+        [
+          [
+            "decoder_version",
+            "fixture"
+          ],
+          [
+            "layout_id",
+            "fixture"
+          ],
+          [
+            "mapping_id",
+            "fixture"
+          ],
+          [
+            "stimulus_version",
+            "fixture"
+          ]
+        ],
+        "independent-fixture-condition",
+        250,
+        [
+          "O1",
+          "Oz",
+          "O2"
+        ],
+        4.0
+      ],
+      "intended_or_prompt": "0",
+      "counts": {
+        "0": 1,
+        "1": 0,
+        "NO_RESPONSE": 1
+      },
+      "n": 2
+    }
+  ],
+  "effective_probe_counts": [
+    {
+      "scope": [
+        "fixture-user",
+        "fixture-session",
+        "calibration",
+        "CHANNEL_PROBE",
+        [
+          [
+            "decoder_version",
+            "fixture"
+          ],
+          [
+            "layout_id",
+            "fixture"
+          ],
+          [
+            "mapping_id",
+            "fixture"
+          ],
+          [
+            "stimulus_version",
+            "fixture"
+          ]
+        ],
+        "independent-fixture-condition",
+        250,
+        [
+          "O1",
+          "Oz",
+          "O2"
+        ],
+        4.0
+      ],
+      "intended_or_prompt": "0",
+      "counts": {
+        "0": 1,
+        "1": 0,
+        "NO_RESPONSE": 0
+      },
+      "n": 1
+    }
+  ],
+  "real_channel_model_fitted": false,
+  "decomposition_C_probe_and_compliance_identified": false,
+  "transfer_validated": false,
+  "G3_passed": false,
+  "note": "effective probe counts do not identify decoder confusion and compliance separately; no automatic deployment approval",
+  "source_sha256": "9238ca6b03679533f929f4a0f14cb3157c5ffc397b7b02c3cc5bd7c43aaedebf",
+  "source_path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_virtual_13_nonreal_acceptance_v3\\synthetic_records.jsonl",
+  "hardware_calls": 0,
+  "cloud_calls": 0,
+  "physical_execution_allowed": false
+}

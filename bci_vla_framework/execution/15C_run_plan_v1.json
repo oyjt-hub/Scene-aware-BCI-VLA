@@ -1,0 +1,366 @@
+{
+  "scope": "full_framework_pi05_two_synthetic_transports_no_real_BCI",
+  "checkpoint_sha256": "4616e4c1966a5fb063b442ea5d69857f45e873222d839b794634d87d252ab9e7",
+  "normalization_sha256": "dae37d79a22108af83df9189c6710a3ec8e077d65b28e34bdf1da724e5ae30f1",
+  "scene": "LIBERO goal6 objects, independent pick tasks (not official task6 success)",
+  "task_predicate": "gripper grasp contact AND lift>0.03m, stable3 simulation steps",
+  "calibration_init_indices": [
+    0,
+    1
+  ],
+  "holdout_init_indices": [
+    2
+  ],
+  "test_init_indices": [
+    3
+  ],
+  "max_execution_steps": 160,
+  "Beta_prior": [
+    1,
+    1
+  ],
+  "cost_scope": {
+    "task_failure": "Beta-smoothed independent simulator endpoint",
+    "wrong_start": "command-vs-hypothesis identity",
+    "recovery_s": "measured simulator reset wall time",
+    "user_time_s": "declared2s synthetic confirmation allowance, not human measurement"
+  },
+  "real_BCI_enabled": false,
+  "physical_robot_enabled": false,
+  "cases": [
+    {
+      "id": "direct-nominal_cream",
+      "goal": 0,
+      "channel": "normal",
+      "prior": [
+        0.81,
+        0.09,
+        0.09,
+        0.01
+      ],
+      "base_case": "nominal_cream",
+      "transport": "direct"
+    },
+    {
+      "id": "direct-nominal_wine",
+      "goal": 1,
+      "channel": "normal",
+      "prior": [
+        0.09,
+        0.01,
+        0.81,
+        0.09
+      ],
+      "base_case": "nominal_wine",
+      "transport": "direct"
+    },
+    {
+      "id": "direct-changed_goal",
+      "goal": 1,
+      "channel": "normal",
+      "prior": [
+        0.81,
+        0.09,
+        0.09,
+        0.01
+      ],
+      "base_case": "changed_goal",
+      "transport": "direct"
+    },
+    {
+      "id": "direct-changed_channel",
+      "goal": 0,
+      "channel": "flip",
+      "prior": [
+        0.81,
+        0.09,
+        0.09,
+        0.01
+      ],
+      "base_case": "changed_channel",
+      "transport": "direct"
+    },
+    {
+      "id": "direct-joint_alias_conflict",
+      "goal": 1,
+      "channel": "flip",
+      "prior": [
+        0.5,
+        0,
+        0,
+        0.5
+      ],
+      "base_case": "joint_alias_conflict",
+      "transport": "direct"
+    },
+    {
+      "id": "direct-late_confirmation",
+      "goal": 0,
+      "channel": "normal",
+      "prior": [
+        0.9,
+        0,
+        0.1,
+        0
+      ],
+      "late_confirmation": true,
+      "base_case": "late_confirmation",
+      "transport": "direct"
+    },
+    {
+      "id": "direct-STOP_during_execution",
+      "goal": 0,
+      "channel": "normal",
+      "prior": [
+        0.9,
+        0,
+        0.1,
+        0
+      ],
+      "stop": true,
+      "base_case": "STOP_during_execution",
+      "transport": "direct"
+    },
+    {
+      "id": "direct-goal_change_recovery",
+      "goal": 0,
+      "channel": "normal",
+      "prior": [
+        0.9,
+        0,
+        0.1,
+        0
+      ],
+      "goal_change_during_execution": true,
+      "base_case": "goal_change_recovery",
+      "transport": "direct"
+    },
+    {
+      "id": "direct-execution_failure_not_channel",
+      "goal": 0,
+      "channel": "normal",
+      "prior": [
+        0.9,
+        0,
+        0.1,
+        0
+      ],
+      "execution_failure": true,
+      "base_case": "execution_failure_not_channel",
+      "transport": "direct"
+    },
+    {
+      "id": "direct-inference_failure_not_channel",
+      "goal": 0,
+      "channel": "normal",
+      "prior": [
+        0.9,
+        0,
+        0.1,
+        0
+      ],
+      "transport_failure": true,
+      "base_case": "inference_failure_not_channel",
+      "transport": "direct"
+    },
+    {
+      "id": "packet-nominal_cream",
+      "goal": 0,
+      "channel": "normal",
+      "prior": [
+        0.81,
+        0.09,
+        0.09,
+        0.01
+      ],
+      "base_case": "nominal_cream",
+      "transport": "packet"
+    },
+    {
+      "id": "packet-nominal_wine",
+      "goal": 1,
+      "channel": "normal",
+      "prior": [
+        0.09,
+        0.01,
+        0.81,
+        0.09
+      ],
+      "base_case": "nominal_wine",
+      "transport": "packet"
+    },
+    {
+      "id": "packet-changed_goal",
+      "goal": 1,
+      "channel": "normal",
+      "prior": [
+        0.81,
+        0.09,
+        0.09,
+        0.01
+      ],
+      "base_case": "changed_goal",
+      "transport": "packet"
+    },
+    {
+      "id": "packet-changed_channel",
+      "goal": 0,
+      "channel": "flip",
+      "prior": [
+        0.81,
+        0.09,
+        0.09,
+        0.01
+      ],
+      "base_case": "changed_channel",
+      "transport": "packet"
+    },
+    {
+      "id": "packet-joint_alias_conflict",
+      "goal": 1,
+      "channel": "flip",
+      "prior": [
+        0.5,
+        0,
+        0,
+        0.5
+      ],
+      "base_case": "joint_alias_conflict",
+      "transport": "packet"
+    },
+    {
+      "id": "packet-late_confirmation",
+      "goal": 0,
+      "channel": "normal",
+      "prior": [
+        0.9,
+        0,
+        0.1,
+        0
+      ],
+      "late_confirmation": true,
+      "base_case": "late_confirmation",
+      "transport": "packet"
+    },
+    {
+      "id": "packet-STOP_during_execution",
+      "goal": 0,
+      "channel": "normal",
+      "prior": [
+        0.9,
+        0,
+        0.1,
+        0
+      ],
+      "stop": true,
+      "base_case": "STOP_during_execution",
+      "transport": "packet"
+    },
+    {
+      "id": "packet-goal_change_recovery",
+      "goal": 0,
+      "channel": "normal",
+      "prior": [
+        0.9,
+        0,
+        0.1,
+        0
+      ],
+      "goal_change_during_execution": true,
+      "base_case": "goal_change_recovery",
+      "transport": "packet"
+    },
+    {
+      "id": "packet-execution_failure_not_channel",
+      "goal": 0,
+      "channel": "normal",
+      "prior": [
+        0.9,
+        0,
+        0.1,
+        0
+      ],
+      "execution_failure": true,
+      "base_case": "execution_failure_not_channel",
+      "transport": "packet"
+    },
+    {
+      "id": "packet-inference_failure_not_channel",
+      "goal": 0,
+      "channel": "normal",
+      "prior": [
+        0.9,
+        0,
+        0.1,
+        0
+      ],
+      "transport_failure": true,
+      "base_case": "inference_failure_not_channel",
+      "transport": "packet"
+    }
+  ],
+  "old_source_manifest": "execution/15_source_manifest.json",
+  "versioned_sources": [
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\simulation_v3\\__init__.py",
+      "sha256": "8fe287e38312613294a04d763c1c4f11fafd443230dd11bd7769a395803cc623"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\simulation_v3\\backend.py",
+      "sha256": "4c7b7b65ec2aa2e481f09eb2de51210ed21b7170cce88416c44a55193bd4c940"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\simulation_v3\\factory.py",
+      "sha256": "09c5d5ed3fb6fd8ceee66d0618925d1597bf7eef2560646158dd7c2b04f9914d"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\simulation_v3\\interaction.py",
+      "sha256": "5988fb9c4edf52a36d9d5cb0d98dca8d03600daf0db959f7ffd6b995e1341216"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\simulation_v3\\outcomes.py",
+      "sha256": "f4c5be32168f9d1d532fb3cf94d61c461ebc06b7d88b1cefc8ee6b67b8a67912"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\simulation_v3\\records.py",
+      "sha256": "c09f4966f6b4bb3821e676338c61e4f2c7499718225f50e56ff78644174c7279"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\simulation_v3\\recovery.py",
+      "sha256": "ecca72747296d6a28fb45e71476fad524f84a1661f11e4d26e8bd11eb7be7ca5"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\simulation_v3\\replay.py",
+      "sha256": "e68c2478c817eff3734dc959fc2d9fb301422b658d53b94606e4cdc3396fb69d"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\simulation_v3\\session.py",
+      "sha256": "7eb43a67855d24b6c525be9ec1569c71cf1a78e2317aef34238e6d4ccb6d7df6"
+    }
+  ],
+  "repairs": [
+    "STARTED once per execution; progress separately logged",
+    "per-session synthetic stream identity"
+  ],
+  "recovery_protocol": {
+    "version": "fixed-four-known-probe-mapping-repair-v1",
+    "prompts": [
+      "0",
+      "1",
+      "0",
+      "1"
+    ],
+    "apply_only_after_pause_or_rejected_confirmation": true,
+    "inconsistent_mapping": "pause",
+    "goal_prior": "preserve full public joint; swap channel labels only after measured inversion",
+    "private_goal_visible_to_algorithm": false,
+    "reconfirm_new_version_required": true
+  },
+  "transfer_claims": {
+    "real_second_BCI": false,
+    "formal_2x2": false,
+    "training_scope_equivalence": false,
+    "core_threshold_tuning": false,
+    "heldout_codec_backend_combination": "packet-pi05; engineering functional only; no parameter fitting on this cell"
+  }
+}

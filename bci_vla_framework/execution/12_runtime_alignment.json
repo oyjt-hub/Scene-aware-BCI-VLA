@@ -1,0 +1,17 @@
+{
+  "scope": "software_counterexample_not_real_data",
+  "initial_goal_probability": 0.4,
+  "actual_observed_confirm_symbol": "0",
+  "posterior_after_noisy_confirm": 0.7804878048780488,
+  "analytic_posterior": 0.7804878048780489,
+  "authorization_threshold": 0.8,
+  "observed_accept_is_not_authorization": true,
+  "authorization_blocked_reason": "confirmation_posterior_below_declared_policy",
+  "backend_submissions": 0,
+  "session_state": "AWAITING_AUTHORIZATION",
+  "internal_terminal_model": "09/10 model assigns accepted branch a terminal execution loss",
+  "runtime_terminal_behavior": "11 refuses authorization; uncompleted pause must replace execution branch",
+  "requires_versioned_planner_and_O1_alignment": true,
+  "gate_weakened": false,
+  "replay_matches": true
+}

@@ -1,0 +1,416 @@
+{
+  "scope": "live_unlabeled_receive_only_stream_check_not_pilot_trial",
+  "host": "127.0.0.1",
+  "port": 8712,
+  "status": "time_limit",
+  "error": null,
+  "channel_count_declared_from_local_source": 12,
+  "declared_sample_rate_hz": 1000.0,
+  "decoded_format": "little_endian_float32_interleaved_assumed_from_local_source",
+  "bytes_received": 147840,
+  "complete_frames": 3080,
+  "partial_frame_tail_bytes": 0,
+  "nonfinite_values": 0,
+  "elapsed_s": 3.030872699979227,
+  "packets": [
+    {
+      "receive_elapsed_s": 0.030252399970777333,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 0.04184969997731969,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 0.0844659999711439,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 0.11674540000967681,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 0.1470236000022851,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 0.20505930000217631,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 0.2263076999806799,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 0.2622687999974005,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 0.3080319999717176,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 0.3410005999612622,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 0.3965324999880977,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 0.43486129998927936,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 0.46634059998905286,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 0.5008726000087336,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 0.5553470999584533,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 0.5823483999702148,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 0.6403718999936245,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 0.679370999976527,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 0.7065914999693632,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 0.739907699986361,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 0.7872294999542646,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 0.8213486999738961,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 0.8700406999560073,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 0.9078387999907136,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 0.9444729999522679,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 0.986882199998945,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 1.0439969999715686,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 1.0633399999933317,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 1.1037900999654084,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 1.1525519999559037,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 1.1984152999939397,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 1.222638699982781,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 1.2671613999991678,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 1.3214469999657013,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 1.357346399978269,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 1.3852578999940306,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 1.4443248999887146,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 1.462348099972587,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 1.5147514999844134,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 1.5618963000015356,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 1.5892579999635927,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 1.6245134999626316,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 1.6704898999887519,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 1.7061433999915607,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 1.7459342000074685,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 1.7953221999923699,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 1.849778099975083,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 1.8669903999543749,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 1.910748699971009,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 1.9427729999879375,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 1.9852202999754809,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 2.028770499979146,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 2.0651811999850906,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 2.106581099971663,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 2.142419499985408,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 2.1985293999896385,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 2.2229869999573566,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 2.2627253999817185,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 2.3151718999724835,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 2.3416488000075333,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 2.41392189997714,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 2.4428376999567263,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 2.4630912999855354,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 2.50420889997622,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 2.5542622999637388,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 2.5856237999978475,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 2.6289411999750882,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 2.674868499976583,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 2.7188064999645576,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 2.7414810999762267,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 2.7916742999805138,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 2.8372419999795966,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 2.870216899958905,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 2.9373428999679163,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 2.9686418999917805,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 2.996309799957089,
+      "bytes": 1920,
+      "parsed_frames": 40
+    },
+    {
+      "receive_elapsed_s": 3.0306186999659985,
+      "bytes": 1920,
+      "parsed_frames": 40
+    }
+  ],
+  "throughput_rate_estimate_hz": 1013.2096204402916,
+  "throughput_is_not_hardware_clock_verification": true,
+  "channel_names_verified": false,
+  "units_verified": false,
+  "raw_sha256": "0ab502dbc01482062f31e68221c75deda347c673c939c5edb46a6ccb50c7850c",
+  "application_bytes_sent": 0,
+  "recorder_connections_attempted": 1,
+  "stimulus_presented": false,
+  "decoded_selection": null,
+  "pilot_trials": 0,
+  "calibration_trials": 0,
+  "robot_commands": 0,
+  "server_or_cloud_calls": 0,
+  "G3_passed": false
+}

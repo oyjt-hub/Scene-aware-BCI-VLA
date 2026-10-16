@@ -1,0 +1,17 @@
+{
+  "frozen_core_changes": 0,
+  "threshold_changes": 0,
+  "human_engineering_hours": null,
+  "real_user_calibration_minutes": null,
+  "independent_pi05_trajectories": 6,
+  "star_calibration_trajectories_reused": 6,
+  "new_source_lines": {
+    "bci_vla\\simulation_transfer_v4\\factory.py": 108,
+    "bci_vla\\simulation_transfer_v4\\interaction.py": 46,
+    "bci_vla\\simulation_transfer_v4\\recovery.py": 40,
+    "bci_vla\\simulation_transfer_v4\\__init__.py": 1,
+    "execution\\step15C_pi05_engine.py": 119
+  },
+  "dependencies": "task-local Transformers4.53.2 copy plus existing repository patches; torch.compile disabled; original environments unchanged",
+  "backend_adaptation": "pi05 eef3+axisangle3+gripper2 state; resize_with_pad; first8 actions; explicit controller clipping; no second normalization/gripper flip"
+}

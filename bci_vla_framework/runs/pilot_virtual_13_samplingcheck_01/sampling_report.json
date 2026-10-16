@@ -1,0 +1,42 @@
+{
+  "scope": "actual_unlabeled_stream_sampling_path_check_not_SSVEP_validation",
+  "source_capture": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_virtual_13_streamcheck_01",
+  "raw_sha256": "0ab502dbc01482062f31e68221c75deda347c673c939c5edb46a6ccb50c7850c",
+  "channel_identity_unverified": true,
+  "new_path": {
+    "version": "pilot-single-resample/1.0",
+    "source_rate_hz": 1000.0,
+    "decoder_rate_hz": 250,
+    "source_start_sample": 0,
+    "source_end_sample": 3080,
+    "source_samples": 3080,
+    "decoder_samples": 770,
+    "source_duration_s": 3.08,
+    "decoder_duration_s": 3.08,
+    "bandpass_hz": [
+      0.3,
+      90
+    ],
+    "notch_hz": 50,
+    "anti_alias": "scipy.signal.resample_poly default FIR",
+    "resample_operations": 1,
+    "legacy_250_to62_5_stride_removed": true,
+    "units_verified": false,
+    "online_filter_latency_validated": false,
+    "real_decoder_accuracy_validated": false
+  },
+  "legacy_counterfactual": {
+    "operation": "resampled250_then_slice125_to3925_then_stride4",
+    "result_samples": 162,
+    "interpreted_duration_at250Hz_s": 0.648,
+    "not_an_actual_four_second_stimulus_trial": true
+  },
+  "I01_source_code_defect_reproduced": true,
+  "new_path_count_consistency_passed": true,
+  "device_sample_rate_verified_independently": false,
+  "I01_fully_resolved": false,
+  "real_pilot_trials": 0,
+  "decoder_selections": 0,
+  "robot_commands": 0,
+  "G3_passed": false
+}

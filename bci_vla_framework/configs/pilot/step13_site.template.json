@@ -1,0 +1,48 @@
+{
+  "schema_version": "pilot-site-preparation/1.0",
+  "scope": "preparation_only",
+  "user_requested_step13": true,
+  "executor_mode": "virtual_only",
+  "physical_execution_allowed": false,
+  "device": {
+    "model": null,
+    "acquisition_program_path": "D:\\脑机\\yjj（2）\\yjj\\dataServer.py",
+    "source_sampling_hz": 1000,
+    "decoder_sampling_hz": 250,
+    "channel_order": null,
+    "sampling_chain_evidence_ref": "runs/pilot_virtual_13_samplingcheck_01/sampling_report.json"
+  },
+  "display": {
+    "stimulus_program_path": null,
+    "refresh_hz": null,
+    "frequencies_hz": null,
+    "layout_id": null,
+    "mapping_id": null,
+    "stimulus_version": null,
+    "frame_timing_evidence_ref": null
+  },
+  "session": {
+    "participant_alias": null,
+    "session_group": null,
+    "clock_alignment_evidence_ref": null
+  },
+  "calibration": {
+    "task_blocks_ref": null,
+    "probe_blocks_ref": null,
+    "confirm_blocks_ref": null,
+    "independent_task_holdout_ref": null,
+    "timing_records_ref": null
+  },
+  "real_profile_path": "configs/channels/real_ssvep_uncalibrated.template.json",
+  "operator_report": {
+    "eeg_connected": true,
+    "port": 8712,
+    "source_root": "D:\\脑机\\yjj（2）"
+  },
+  "engineering_checks": {
+    "stream_report": "runs/pilot_virtual_13_streamcheck_01/stream_report.json",
+    "sampling_report": "runs/pilot_virtual_13_samplingcheck_01/sampling_report.json",
+    "local_source_audit": "execution/13_local_device_audit.json",
+    "rates_are_source_declarations_not_device_clock_verification": true
+  }
+}

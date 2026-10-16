@@ -1,0 +1,88 @@
+{
+  "scope": "synthetic_stream_transport_check",
+  "source_kind": "synthetic_tcp_fixture",
+  "host": "127.0.0.1",
+  "port": 59389,
+  "status": "remote_closed",
+  "error": null,
+  "channel_count_declared_from_local_source": 12,
+  "declared_sample_rate_hz": 1000,
+  "decoded_format": "little_endian_float32_interleaved_assumed_from_local_source",
+  "bytes_received": 48000,
+  "complete_frames": 1000,
+  "partial_frame_tail_bytes": 0,
+  "nonfinite_values": 0,
+  "elapsed_s": 0.0026140999980270863,
+  "packets": [
+    {
+      "receive_elapsed_s": 0.001931500039063394,
+      "bytes": 1,
+      "parsed_frames": 0
+    },
+    {
+      "receive_elapsed_s": 0.0019505000091157854,
+      "bytes": 7,
+      "parsed_frames": 0
+    },
+    {
+      "receive_elapsed_s": 0.0019591000163927674,
+      "bytes": 2048,
+      "parsed_frames": 42
+    },
+    {
+      "receive_elapsed_s": 0.001990900025703013,
+      "bytes": 2062,
+      "parsed_frames": 43
+    },
+    {
+      "receive_elapsed_s": 0.0020203000167384744,
+      "bytes": 4103,
+      "parsed_frames": 86
+    },
+    {
+      "receive_elapsed_s": 0.0020668000215664506,
+      "bytes": 4117,
+      "parsed_frames": 86
+    },
+    {
+      "receive_elapsed_s": 0.0021183000062592328,
+      "bytes": 6165,
+      "parsed_frames": 128
+    },
+    {
+      "receive_elapsed_s": 0.0021830000332556665,
+      "bytes": 6165,
+      "parsed_frames": 128
+    },
+    {
+      "receive_elapsed_s": 0.002278300002217293,
+      "bytes": 10268,
+      "parsed_frames": 214
+    },
+    {
+      "receive_elapsed_s": 0.002391599991824478,
+      "bytes": 10282,
+      "parsed_frames": 215
+    },
+    {
+      "receive_elapsed_s": 0.0024997000000439584,
+      "bytes": 2782,
+      "parsed_frames": 58
+    }
+  ],
+  "throughput_rate_estimate_hz": 1759943.8026610594,
+  "throughput_is_not_hardware_clock_verification": true,
+  "channel_names_verified": false,
+  "units_verified": false,
+  "raw_sha256": "d0da096cf6a6c78ff621881fc83d554d0d45ae6a3b54ec631a410114651b6913",
+  "application_bytes_sent": 0,
+  "recorder_connections_attempted": 0,
+  "synthetic_loopback_connections": 1,
+  "stimulus_presented": false,
+  "decoded_selection": null,
+  "pilot_trials": 0,
+  "calibration_trials": 0,
+  "robot_commands": 0,
+  "server_or_cloud_calls": 0,
+  "G3_passed": false
+}

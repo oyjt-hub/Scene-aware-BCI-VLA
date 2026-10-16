@@ -1,0 +1,206 @@
+{
+  "scope": "owned_pi05_simulation_artifacts",
+  "files": [
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\transfer_step15_pi05\\v1\\orchestration.json",
+      "sha256": "5a3c9e9cd8cfe1bd7297b471e8dfde70ed1190cbe1d4983e60d293a64d0fa9bf",
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step15_libero_20261016_v1/orchestration.json"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\transfer_step15_pi05\\v1\\server.log",
+      "sha256": "60b276a716cf55a4c53fcd0ce15ae855fd8aecce8b2ef9932c7d628ee8de0dd3",
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step15_libero_20261016_v1/server.log"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\transfer_step15_pi05\\v1\\launcher.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step15_libero_20261016_v1/launcher.log"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\transfer_step15_pi05\\v2\\orchestration.json",
+      "sha256": "0ee7c817df7eb41e378eddd6e50775e61d95ed358c85f755703ba88f95f1e72d",
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step15_libero_20261016_v2/orchestration.json"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\transfer_step15_pi05\\v2\\server.log",
+      "sha256": "3909a898a227588d25ccde311ca4b21e220afa4360260a18c285066b67f68a46",
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step15_libero_20261016_v2/server.log"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\transfer_step15_pi05\\v2\\worker.log",
+      "sha256": "f84774d6046952e1a87e6755015eb32081a0448d276b43bd70b02b67de17ff84",
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step15_libero_20261016_v2/worker.log"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\transfer_step15_pi05\\v2\\launcher.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step15_libero_20261016_v2/launcher.log"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\transfer_step15_pi05\\v2\\results\\nominal_task0_last.png",
+      "sha256": "3abbbaf803158ae7d1b909b2a7f26a9db5b3040843622d3dbb18ea1e44334c6d",
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step15_libero_20261016_v2/results/nominal_task0_last.png"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\transfer_step15_pi05\\v2\\results\\events.jsonl",
+      "sha256": "09ded03385e3038c9eb1d32504c7612a5fc3cd827f1387fe0b42586d80c47b4d",
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step15_libero_20261016_v2/results/events.jsonl"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\transfer_step15_pi05\\v2\\results\\probe_stop_task0.mp4",
+      "sha256": "cd4fb95dacca77b21b415227c2d300efef429c16c5b760cc4d3e0fdf9a274258",
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step15_libero_20261016_v2/results/probe_stop_task0.mp4"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\transfer_step15_pi05\\v2\\results\\probe_stop_task0_last.png",
+      "sha256": "3abbbaf803158ae7d1b909b2a7f26a9db5b3040843622d3dbb18ea1e44334c6d",
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step15_libero_20261016_v2/results/probe_stop_task0_last.png"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\transfer_step15_pi05\\v2\\results\\nominal_task1_last.png",
+      "sha256": "8f0fbca38a78e3ae10f8fa1e480cc4d1f3736a03de49d73384a7764172d9116b",
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step15_libero_20261016_v2/results/nominal_task1_last.png"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\transfer_step15_pi05\\v2\\results\\nominal_task1_first.png",
+      "sha256": "8f0fbca38a78e3ae10f8fa1e480cc4d1f3736a03de49d73384a7764172d9116b",
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step15_libero_20261016_v2/results/nominal_task1_first.png"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\transfer_step15_pi05\\v2\\results\\nominal_task0_first.png",
+      "sha256": "3abbbaf803158ae7d1b909b2a7f26a9db5b3040843622d3dbb18ea1e44334c6d",
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step15_libero_20261016_v2/results/nominal_task0_first.png"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\transfer_step15_pi05\\v2\\results\\summary.json",
+      "sha256": "9b5211242dad3de0ec49a66f9e4fad002dab849d6bef34c7d146438c425fe5fd",
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step15_libero_20261016_v2/results/summary.json"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\transfer_step15_pi05\\v2\\results\\probe_stop_task0_first.png",
+      "sha256": "3abbbaf803158ae7d1b909b2a7f26a9db5b3040843622d3dbb18ea1e44334c6d",
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step15_libero_20261016_v2/results/probe_stop_task0_first.png"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\transfer_step15_pi05\\v2\\results\\nominal_task0.mp4",
+      "sha256": "cd4fb95dacca77b21b415227c2d300efef429c16c5b760cc4d3e0fdf9a274258",
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step15_libero_20261016_v2/results/nominal_task0.mp4"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\transfer_step15_pi05\\v2\\results\\episodes.json",
+      "sha256": "1190101bde3762a9b2cf5278189b1281cc915acb3e70f46c43f127eec559f3d7",
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step15_libero_20261016_v2/results/episodes.json"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\transfer_step15_pi05\\v2\\results\\nominal_task1.mp4",
+      "sha256": "d8d79c51417d25e175300f6010a4222c0071c4bbbd732d44406ba84c73f8e32a",
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step15_libero_20261016_v2/results/nominal_task1.mp4"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\transfer_step15_pi05\\v3\\orchestration.json",
+      "sha256": "2a73a89240700c98f2f28dd4e09492c05f36bf10107c9b3b975cbefce0489742",
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step15_libero_20261016_v3/orchestration.json"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\transfer_step15_pi05\\v3\\server.log",
+      "sha256": "caba971d5196d17c84cf5d040e132f589c6f24990e0d517c7d1a20fab6837cea",
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step15_libero_20261016_v3/server.log"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\transfer_step15_pi05\\v3\\worker.log",
+      "sha256": "3ec57d3a583feea7fcb2b0cc925c3f8956250088f340608fbfe20a036f62062d",
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step15_libero_20261016_v3/worker.log"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\transfer_step15_pi05\\v3\\launcher.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step15_libero_20261016_v3/launcher.log"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\transfer_step15_pi05\\v3\\results\\nominal_task0_last.png",
+      "sha256": "ae8eb5647a59fe6c248723daa8ff60447d91f3b0763d18c3c781da806a8fd69d",
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step15_libero_20261016_v3/results/nominal_task0_last.png"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\transfer_step15_pi05\\v3\\results\\events.jsonl",
+      "sha256": "00b08112eaa9f9443d2cd242c8815dbc483ad0934c079b5f36880cde57bcea6e",
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step15_libero_20261016_v3/results/events.jsonl"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\transfer_step15_pi05\\v3\\results\\probe_stop_task0.mp4",
+      "sha256": "2988bd58bc3c305f147669d1ac6b7cfc6c91df8ba68d845d0c8ff1a21a77c65b",
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step15_libero_20261016_v3/results/probe_stop_task0.mp4"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\transfer_step15_pi05\\v3\\results\\probe_stop_task0_last.png",
+      "sha256": "27618cca847a41f533e97c3d705c5fbc547ca93c781eb77893a83dd5abd5bc51",
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step15_libero_20261016_v3/results/probe_stop_task0_last.png"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\transfer_step15_pi05\\v3\\results\\nominal_task1_last.png",
+      "sha256": "6698c60d074740a1e95469c9db950eb6dba12e0a171832215b1589c4006ce40c",
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step15_libero_20261016_v3/results/nominal_task1_last.png"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\transfer_step15_pi05\\v3\\results\\nominal_task1_first.png",
+      "sha256": "8f0fbca38a78e3ae10f8fa1e480cc4d1f3736a03de49d73384a7764172d9116b",
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step15_libero_20261016_v3/results/nominal_task1_first.png"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\transfer_step15_pi05\\v3\\results\\nominal_task0_first.png",
+      "sha256": "3abbbaf803158ae7d1b909b2a7f26a9db5b3040843622d3dbb18ea1e44334c6d",
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step15_libero_20261016_v3/results/nominal_task0_first.png"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\transfer_step15_pi05\\v3\\results\\summary.json",
+      "sha256": "18b53695bd3c4f6b8a5d63fd346bc9266c18ac9bb32d8a66d7331d5ca651ec58",
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step15_libero_20261016_v3/results/summary.json"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\transfer_step15_pi05\\v3\\results\\probe_stop_task0_first.png",
+      "sha256": "3abbbaf803158ae7d1b909b2a7f26a9db5b3040843622d3dbb18ea1e44334c6d",
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step15_libero_20261016_v3/results/probe_stop_task0_first.png"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\transfer_step15_pi05\\v3\\results\\nominal_task0.mp4",
+      "sha256": "c77eb4b9980a85ef738a2c74e73149e2bf66dc6990cf210e18dc7ba335d29f88",
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step15_libero_20261016_v3/results/nominal_task0.mp4"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\transfer_step15_pi05\\v3\\results\\episodes.json",
+      "sha256": "1955f93c599def8a9a2d018bdb5edc324dfd845df756269c9e58c0fcd9e8165f",
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step15_libero_20261016_v3/results/episodes.json"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\transfer_step15_pi05\\v3\\results\\nominal_task1.mp4",
+      "sha256": "9a471dab48219bad047d9c8b798f8b34e0e8a915ee70ebc0312080cb2a5bca32",
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step15_libero_20261016_v3/results/nominal_task1.mp4"
+    }
+  ],
+  "executed_sources": [
+    {
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step15_libero_20261016_v3/step15_libero_worker.py",
+      "local_path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\step15_libero_worker.py",
+      "sha256": "caca227cf68bdf6d131ccc8d2092e109f92a89e82cb56d2f4739ac82e05b3f3b",
+      "matches_local": true
+    },
+    {
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step15_libero_20261016_v3/step15_pi05_orchestrator.py",
+      "local_path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\step15_pi05_orchestrator.py",
+      "sha256": "9180c9a7b2dd7806830bcccc9f16d6e569186d96c11ad10171962494706fe184",
+      "matches_local": true
+    },
+    {
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step15_libero_20261016_v3/bci_vla/pilot/libero_gate.py",
+      "local_path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\pilot\\libero_gate.py",
+      "sha256": "fdca6f8b87742c8eb724b2bfb02e706f5c5c20a71347d2a924682438c1f7278f",
+      "matches_local": true
+    },
+    {
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step15_libero_20261016_v3/bci_vla/adapters/vla/libero_pi05.py",
+      "local_path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\adapters\\vla\\libero_pi05.py",
+      "sha256": "4ef32592e647bc0824029b314d051e106d081f67769def02ae9a164784083222",
+      "matches_local": true
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "scope": "independent_recorded_trace_consistency_not_inference_or_full_session_replay",
+  "result": "PASS",
+  "event_counts": {
+    "episode_start": 3,
+    "model_chunk": 27,
+    "simulation_step": 209,
+    "task_change_no_old_action": 1,
+    "probe_pause": 1,
+    "stop_latched": 1
+  },
+  "simulation_steps": {
+    "nominal_task0": 117,
+    "probe_stop_task0": 12,
+    "nominal_task1": 80
+  },
+  "no_simulation_steps_after_stop_or_task_invalidation": true,
+  "full_interaction_session_replay": false
+}

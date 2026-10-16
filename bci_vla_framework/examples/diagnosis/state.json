@@ -1,0 +1,68 @@
+{
+  "belief": {
+    "goal_ids": [
+      "task-9cad706e60e745cf3c01a413",
+      "task-d5fc9bc832047df78f51c84f",
+      "unknown",
+      "none"
+    ],
+    "mode_ids": [
+      "normal",
+      "flip",
+      "unknown_channel"
+    ],
+    "mass": [
+      {
+        "goal_id": "task-d5fc9bc832047df78f51c84f",
+        "mode_id": "normal",
+        "probability": 0.5
+      },
+      {
+        "goal_id": "task-9cad706e60e745cf3c01a413",
+        "mode_id": "flip",
+        "probability": 0.5
+      }
+    ],
+    "as_of_event_id": "handwritten-alias-prior"
+  },
+  "scene_id": "fixture-scene",
+  "scene_revision": 1,
+  "task_id": "fixture-task",
+  "task_revision": 1,
+  "now_s": 1792022400.0,
+  "used_s": 0.0,
+  "remaining_s": 20.0,
+  "scene_valid_until_s": 1792022460.0,
+  "contracts": {
+    "task-9cad706e60e745cf3c01a413": {
+      "contract_id": "contract-task-9cad706e60e745cf3c01a413",
+      "task_id": "fixture-task",
+      "revision": 1,
+      "scene_id": "fixture-scene",
+      "scene_revision": 1,
+      "intent": {
+        "action": "place",
+        "source_id": "grape",
+        "destination_id": "bowl-left"
+      },
+      "status": "proposed",
+      "valid_until": "2026-10-15T00:01:00Z",
+      "confirmation_event_id": null
+    },
+    "task-d5fc9bc832047df78f51c84f": {
+      "contract_id": "contract-task-d5fc9bc832047df78f51c84f",
+      "task_id": "fixture-task",
+      "revision": 1,
+      "scene_id": "fixture-scene",
+      "scene_revision": 1,
+      "intent": {
+        "action": "place",
+        "source_id": "grape",
+        "destination_id": "bowl-right"
+      },
+      "status": "proposed",
+      "valid_until": "2026-10-15T00:01:00Z",
+      "confirmation_event_id": null
+    }
+  }
+}

@@ -1,0 +1,21 @@
+﻿步骤11验收；V2；2026-10-16；用户授权“完成步骤11”。
+范围：offline_fake_lifecycle；真实BCI/π0.5/物理控制能力仍待外部条件。
+11.1 ExecutionContract绑定完整目标、实例/场景/任务版本、预置条件、授权、独立完成谓词、中止与期限；TASK澄清不能授权。
+11.2 InteractionSession覆盖收集、澄清、探测、待确认、待授权、已授权、已提交/结果未知、执行、验证、暂停、成功、失败、取消、过期。
+11.3 PROBE有独立来源/显示回执/遵从模型；pending时冻结下发，无contract，探测标签不渲染成机器人指令。
+11.4 版本/场景/模型变更撤销授权，执行中先请求停止；同版本确认只尝试一次；确认与授权只消费一次；同提交相同payload缓存，改ID/body拒绝重发。
+11.5 已核本地02旧源码证据，逐列真实checkpoint、图像、state、normalization、动作维度/单位/坐标和RTC未核项；不改VLA主干。详11_pi05_interface_checklist.txt。
+11.6 Fake/DryRun先验图像/state/action结构与版本、NaN/越界/单位/坐标；无网络、设备SDK、硬件连接。fixture不是实际π0.5规格。
+11.7 当前只有离线监督器的版本/时效/一次消费/锁存规则实际执行；自然语言约束不提供物理硬保证；无实际控制器限位/碰撞/平滑/RTC实现。
+11.8 日志区分BCI收证、策略返回、授权、提交意图、接收ACK、模拟STARTED/COMPLETED和终态；ACCEPTED仅到SUBMITTED，COMPLETED仅到VERIFYING。
+11.9 EndpointEvidence独立判定，绑定session/submission/contract/revision/scene及完成反馈后且当前时刻前的时钟区间；谓词缺失unknown，旧轨迹/跨绑定拒绝；VLA失败不更新意图真值。
+11.10 STOP锁存，请求后仍REQUESTED，收到显式模拟STOPPED才SIMULATED_STOPPED；物理停止始终未验证；提交/连接未知不自动重发。
+11.11 EventJournal保存严格顺序/哈希链；回放重建BCI校验/联合Bayes/策略和生命周期，逐记录比快照，禁止构造/调用后端；拒绝原始输入未留日志，仅核无状态变化。
+11.12 AuthorizationRecord保存实际含噪q/r、完整版本/模型hash、有效期、确认belief与授权预测belief；下发时再次预测延迟且不修改原filter；禁止反复问到同意。错误确认可在独立评价中计wrong_start。
+实际：291项软件测试PASS，无失败/错误/跳过，含历史169项；两个手写离线生命周期日志逐步重放一致，回放后端调用0。
+演示用显式已知left/normal先验、固定转移及手写端点，仅验协议。未做真实成功率、性能/创新优越性或步骤12机制实验。
+0.8概率与2秒时效为未调优开发示例。真实校准/I01—I14/精确checkpoint等仍待条件；G1条件性不变，G2—G4未开始。
+当前内存去重/日志是审计功能，无跨进程持久exactly-once提交保障；崩溃后不可自动恢复下发。host白名单/哈希不等于发送者认证或物理证明。
+执行命令：python -B execution/run_step11_tests.py；python -B execution/replay_step11_session.py；python -B execution/verify_step11_delivery.py。
+10及更早冻结文件/测试结果不重跑覆盖；10 verifier只调整进度条件与另存历史重查。
+步骤11离线实现完成，步骤12未开始；本轮没有训练、云调用、EEG采集或机器人操作。

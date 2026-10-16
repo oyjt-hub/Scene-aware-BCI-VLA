@@ -1,0 +1,13 @@
+{
+  "scope": "alternate_synthetic_replay_codec_through_unchanged_core",
+  "result": "PASS",
+  "core_checkpoints_equal": true,
+  "journal_semantic_payloads_equal": true,
+  "journal_instance_hashes_expected_to_differ": true,
+  "each_journal_independently_replayed": true,
+  "frozen_core_unchanged": true,
+  "actual_second_BCI_tested": false,
+  "real_calibration_trials": 0,
+  "known_target_probe_unsupported_rejected": true,
+  "does_not_prove_BCI_accuracy_or_transfer": true
+}

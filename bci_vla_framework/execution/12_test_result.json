@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-16",
+  "scope": "offline_step12_mechanisms_episodes_faults_and_software_regression",
+  "tests_run": 311,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "result": "PASS",
+  "hardware_calls": 0,
+  "cloud_calls": 0,
+  "software_pass_does_not_grant_G2": true
+}

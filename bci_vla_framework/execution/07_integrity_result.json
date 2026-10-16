@@ -1,0 +1,27 @@
+{
+  "scope": "offline_scene_and_outcome_delivery",
+  "result": "PASS",
+  "count": 12,
+  "checks": [
+    "only 01-07 complete",
+    "08 not started",
+    "real outcome calibration remains pending",
+    "G1 scope unchanged and G2-G4 unstarted",
+    "66 software tests pass without skips",
+    "three original grammar files unchanged and exact snapshots",
+    "offline scene trajectory capability and outcome examples validate",
+    "real cost and checkpoint not fabricated",
+    "real consequence loader blocked",
+    "all 07.1-07.9 acceptance entries",
+    "frozen input and software hashes unchanged",
+    "TXT encoding intact"
+  ],
+  "real_consequence_calibration": "待外部条件",
+  "not_evaluated": [
+    "real object tracking",
+    "real backend capability",
+    "physical endpoint or recovery labels",
+    "real cost weights",
+    "G2-G4"
+  ]
+}

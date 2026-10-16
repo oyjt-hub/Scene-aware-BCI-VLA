@@ -1,0 +1,13 @@
+{
+  "scope": "owned_pi05_simulation_processes",
+  "started_at_unix": 1792140696.3958123,
+  "port": 16815,
+  "server_python": "openpi/.venv",
+  "transformers_overlay": "task-local4.53.2_with_repository_patches",
+  "original_environment_modified": false,
+  "torch_compile_disabled_for_smoke": true,
+  "server_pid": 2050673,
+  "worker_exit_code": 0,
+  "owned_server_stopped": true,
+  "finished_at_unix": 1792140869.6190643
+}

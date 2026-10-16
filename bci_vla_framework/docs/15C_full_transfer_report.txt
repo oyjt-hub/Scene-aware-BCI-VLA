@@ -1,0 +1,87 @@
+﻿步骤15C：完整框架的非真实迁移验收（2026-10-16）
+
+结论：两种软件输入方式×两个实际VLA的LIBERO功能矩阵完成。步骤15非真实分支工程完成；第二生理BCI和真实2×2未测试。
+本报告取代原15报告中“步骤14完整整合未完成”的当前状态描述；旧报告及失败数据保持历史冻结。
+
+一、实际链路与冻结边界
+沿用14C的原联合信念、runtime_v2、确认/版本授权、实际VLA仿真适配器和独立终点验证；新增simulation_transfer_v4配置与传输适配，未修改14C冻结namespace。
+π0.5由同一会话链路驱动，后果表与终点证据的executor_id/checkpoint均按新后端绑定；不再仅是原15的独立门控烟测。
+core、contracts、runtime_v2、阈值0.8、确认有效期2秒与原通道/转移数值配置保持冻结，不根据新后端成绩调参。
+输入A是canonical事件直接输入；输入B经PacketReplayTransport分片JSON编码/解码，每17字节一片，TASK、PROBE、CONFIRM请求和响应均走实际codec。
+相同固定时钟与模拟器反馈下，两路径的全部会话检查点与日志载荷一致；实际模型运行的计算耗时与随机采样不同，不声称原始日志或模型轨迹一致。
+
+二、完成的四个工程单元（每单元10场景）
+StarVLA-14C × direct：工程检查通过=True，完成抓取5/10条混合功能轨迹，实际动作549步；对应独立留出抓取0/2。
+  nominal_cream：SUCCEEDED，51步，任务成功=True
+  nominal_wine：SUCCEEDED，86步，任务成功=True
+  changed_goal：SUCCEEDED，90步，任务成功=True
+  changed_channel：SUCCEEDED，54步，任务成功=True
+  joint_alias_conflict：SUCCEEDED，91步，任务成功=True
+  late_confirmation：AWAITING_AUTHORIZATION，0步，任务成功=False
+  STOP_during_execution：CANCELLED，8步，任务成功=False
+  goal_change_recovery：FAILED，168步，任务成功=False
+  execution_failure_not_channel：FAILED，1步，任务成功=False
+  inference_failure_not_channel：CANCELLED，0步，任务成功=False
+pi05 × direct：工程检查通过=True，完成抓取2/10条混合功能轨迹，实际动作777步；对应独立留出抓取2/2。
+  direct-nominal_cream：SUCCEEDED，60步，任务成功=True
+  direct-nominal_wine：FAILED，160步，任务成功=False
+  direct-changed_goal：FAILED，160步，任务成功=False
+  direct-changed_channel：SUCCEEDED，60步，任务成功=True
+  direct-joint_alias_conflict：FAILED，160步，任务成功=False
+  direct-late_confirmation：AWAITING_AUTHORIZATION，0步，任务成功=False
+  direct-STOP_during_execution：CANCELLED，8步，任务成功=False
+  direct-goal_change_recovery：FAILED，168步，任务成功=False
+  direct-execution_failure_not_channel：FAILED，1步，任务成功=False
+  direct-inference_failure_not_channel：CANCELLED，0步，任务成功=False
+pi05 × packet：工程检查通过=True，完成抓取3/10条混合功能轨迹，实际动作698步；对应独立留出抓取2/2。
+  packet-nominal_cream：SUCCEEDED，62步，任务成功=True
+  packet-nominal_wine：FAILED，160步，任务成功=False
+  packet-changed_goal：FAILED，160步，任务成功=False
+  packet-changed_channel：SUCCEEDED，60步，任务成功=True
+  packet-joint_alias_conflict：SUCCEEDED，79步，任务成功=True
+  packet-late_confirmation：AWAITING_AUTHORIZATION，0步，任务成功=False
+  packet-STOP_during_execution：CANCELLED，8步，任务成功=False
+  packet-goal_change_recovery：FAILED，168步，任务成功=False
+  packet-execution_failure_not_channel：FAILED，1步，任务成功=False
+  packet-inference_failure_not_channel：CANCELLED，0步，任务成功=False
+star × packet：工程检查通过=True，完成抓取4/10条混合功能轨迹，实际动作659步；对应独立留出抓取0/2。
+  packet-nominal_cream：FAILED，160步，任务成功=False
+  packet-nominal_wine：SUCCEEDED，86步，任务成功=True
+  packet-changed_goal：SUCCEEDED，90步，任务成功=True
+  packet-changed_channel：SUCCEEDED，54步，任务成功=True
+  packet-joint_alias_conflict：SUCCEEDED，92步，任务成功=True
+  packet-late_confirmation：AWAITING_AUTHORIZATION，0步，任务成功=False
+  packet-STOP_during_execution：CANCELLED，8步，任务成功=False
+  packet-goal_change_recovery：FAILED，168步，任务成功=False
+  packet-execution_failure_not_channel：FAILED，1步，任务成功=False
+  packet-inference_failure_not_channel：CANCELLED，0步，任务成功=False
+以上10条包含确认过期、STOP、推理故障、1步强制执行失败，不能把混合功能轨迹完成数解释为抓取成功率。
+StarVLA direct复用14C冻结结果，其余3个单元本轮实际运行。StarVLA packet与π0.5 direct/packet分别使用相同init3、seed7、两种pick契约和故障流程。
+固定4次公开已知目标probe修复沿用14C，保留完整目标先验后重新确认；执行中换目标在同一环境先清队列再授权新指令。
+
+三、独立后果校准与留出
+π0.5新采init0/1×2目标共4条校准，init2×2目标共2条留出；功能矩阵只用init3。StarVLA复用14C原始6条记录，校验哈希一致，不择优重采样。
+每个后端独立生成后果表，只有calibration记录用于Beta(1,1)后验均值；留出不参与拟合。编码方式不改变后果表，也没有在packet×π0.5单元调参。
+packet×π0.5在固定适配与参数下执行，属于保留组合的工程检查；样本、设备与训练暴露不满足正式跨脑机/跨模型统计留出结论。
+recovery_s是仿真reset墙钟，user_time_s=2是声明的合成确认预算，非真人操作成本；其他代价权重和噪声仍为示例配置。
+
+四、模型输入输出及适配成本
+π0.5实际checkpoint/归一化统计重新SHA256核验，见15C_current_assets.json；服务使用既有pi05_libero配置。
+图像为双视角RGB、180度旋转、官方resize_with_pad到224；状态为末端位置3、轴角3、夹爪位置2。
+服务返回已反归一化动作，每次取前8步，显式按LIBERO action_spec裁剪并记录次数；不再套StarVLA归一化或夹爪翻转。
+适配代码行数与依赖清单见15C_adaptation_audit.json；人工工时未实测为null，不声称零成本迁移。
+两个临时服务均只绑定服务器本机，任务结束后停止；原仓库和全局环境没有修改。
+
+五、验收与限制
+401项软件测试通过。实际模型轨迹、指令、动作、接触/抬升谓词、每次诊断/确认/授权及全部会话journal留存。
+所有日志禁用执行器后独立重建。跨进程浮点求和只在审计工具容许1e-12绝对差异，标识/版本/摘要/状态严格相等，运行时不放宽。
+源代码包、部署文件、结果和旧冻结清单校验；完整性结果见execution/15C_integrity_result.json。
+仅限LIBERO goal6场景中的奶油奶酪/酒瓶pick契约；物体身份和几何来自特权模拟器状态，不是通用视觉检测评估或官方goal6任务得分。
+抓取失败和所有留出负结果保留，不用工程检查通过代替机器人能力通过。没有真实EEG、第二生理BCI、实体机器人或真人实时预算证据。
+G2效用仍未通过，G3未验证，训练暴露/任务分布/随机性未做等价证明，不作策略优越性和普适框架研究结论。
+
+六、执行与回退
+隔离目录、源码ZIP和冻结计划在runs/transfer_step15C_full；重新核验用python -B execution/verify_step15C_delivery.py。
+部署器/终结器有防覆盖约束，复现实验应新建独立版本目录；不重跑旧步骤采集器覆盖证据。
+回退时停止本任务所属临时模型服务，恢复使用14C或更早冻结入口；新增namespace与后端不影响旧入口。
+下一步按用户指令推进步骤16；若需论文迁移性能结论，另设计多任务、多种子、独立真实通道校准与公平比较。

@@ -1,0 +1,10 @@
+{
+  "scope": "owned_simulation_processes_only",
+  "started_at_unix": 1792139155.421481,
+  "server_port": 16814,
+  "GPU_physical_index": 0,
+  "server_pid": 2030335,
+  "error": "RuntimeError:owned_model_server_exited:1",
+  "owned_server_stopped": true,
+  "finished_at_unix": 1792139181.4504302
+}

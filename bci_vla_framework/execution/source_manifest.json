@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-15",
+  "plan_version": "V2",
+  "literature_provenance": "继承本地文献报告的核查；本步骤未重新访问网页",
+  "sources": [
+    {
+      "path": "D:\\Scene_Aware\\BCI_VLA通用交互框架_逐步执行手册.txt",
+      "sha256": "13b5813bec3a9d1bcdf44b13f46eb51d8ca57b8338a40bb90ce0c8608169b213"
+    },
+    {
+      "path": "D:\\Scene_Aware\\BCI_VLA框架_主动诊断核心方案_V2.txt",
+      "sha256": "e663f493594195ad2d9876614d7c486ea6d2b31a8171e294825d149ed2e34f72"
+    },
+    {
+      "path": "D:\\Scene_Aware\\BCI_VLA框架_相近论文检索与NOIR对比建议.txt",
+      "sha256": "4ea1ebcb0623f4d818808eb4532ba82447e0530982b0e68d29cbe4e70a9896ca"
+    }
+  ]
+}

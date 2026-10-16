@@ -1,0 +1,1962 @@
+{
+  "scope": "read_only_ssh_source_inventory_no_inference",
+  "robot_commands": 0,
+  "EEG_connections": 0,
+  "service_launches": 0,
+  "checkpoint_selected": null,
+  "files": [
+    {
+      "path": "/home/oyjt/Scene-aware-BCI-VLA/scripts/robot/RTC_inference.py",
+      "bytes": 25078,
+      "sha256": "bb14d4b9fe152c2e8c34ebe31b81ff454f7a822122f0528619553c2d39763d0c",
+      "truncated": false,
+      "selected_lines": [
+        {
+          "line": 39,
+          "text": "# Receding-horizon and RTC timing parameters."
+        },
+        {
+          "line": 40,
+          "text": "ACTION_HORIZON = int(os.environ.get(\"OPENPI_ACTION_HORIZON\", \"100\"))"
+        },
+        {
+          "line": 43,
+          "text": "RTC_INITIAL_DELAY_STEPS = int(os.environ.get(\"OPENPI_RTC_INITIAL_DELAY_STEPS\", \"20\"))"
+        },
+        {
+          "line": 44,
+          "text": "RTC_PREFIX_EXTRA_STEPS = int(os.environ.get(\"OPENPI_RTC_PREFIX_EXTRA_STEPS\", \"40\"))"
+        },
+        {
+          "line": 45,
+          "text": "RTC_MAX_GUIDANCE_WEIGHT = float(os.environ.get(\"OPENPI_RTC_MAX_GUIDANCE_WEIGHT\", \"5\"))"
+        },
+        {
+          "line": 48,
+          "text": "JOINT_LIMITS_RAD = np.array([[-2.61799, 2.61799],[0.0, 3.14159],[-2.96706, 0.0],[-1.74533, 1.74533],[-1.22173, 1.22173],[-2.0944, 2.0944],"
+        },
+        {
+          "line": 52,
+          "text": "latest_action_chunk = None"
+        },
+        {
+          "line": 54,
+          "text": "active_action_chunk = None"
+        },
+        {
+          "line": 59,
+          "text": "# ================= Absolute action timeline ================="
+        },
+        {
+          "line": 110,
+          "text": "    def stop(self):"
+        },
+        {
+          "line": 117,
+          "text": "    def __init__(self, client, cam_main, cam_l, cam_r, piper_left, piper_right):"
+        },
+        {
+          "line": 123,
+          "text": "        self.piper_left = piper_left"
+        },
+        {
+          "line": 124,
+          "text": "        self.piper_right = piper_right"
+        },
+        {
+          "line": 127,
+          "text": "        self.action_horizon = ACTION_HORIZON"
+        },
+        {
+          "line": 129,
+          "text": "            ACTION_HORIZON, max(LATENCY_STEPS, RTC_INITIAL_DELAY_STEPS)"
+        },
+        {
+          "line": 137,
+          "text": "    def _make_rtc_context(self, capture_step):"
+        },
+        {
+          "line": 139,
+          "text": "            previous_chunk = copy.deepcopy(active_action_chunk)"
+        },
+        {
+          "line": 148,
+          "text": "        if aligned_chunk.shape[0] < self.action_horizon:"
+        },
+        {
+          "line": 151,
+          "text": "                self.action_horizon - aligned_chunk.shape[0],"
+        },
+        {
+          "line": 156,
+          "text": "            aligned_chunk = aligned_chunk[:self.action_horizon]"
+        },
+        {
+          "line": 159,
+          "text": "            np.clip(self._latency_estimate_steps, 0, self.action_horizon)"
+        },
+        {
+          "line": 162,
+          "text": "            self.action_horizon,"
+        },
+        {
+          "line": 163,
+          "text": "            inference_delay + max(0, RTC_PREFIX_EXTRA_STEPS),"
+        },
+        {
+          "line": 168,
+          "text": "            \"prev_action_chunk\": aligned_chunk.astype(np.float32, copy=False),"
+        },
+        {
+          "line": 172,
+          "text": "            \"max_guidance_weight\": RTC_MAX_GUIDANCE_WEIGHT,"
+        },
+        {
+          "line": 176,
+          "text": "        global latest_action_chunk, new_chunk_available, latest_chunk_capture_step"
+        },
+        {
+          "line": 200,
+          "text": "                    curr_l_rad = get_current_joints_rad(self.piper_left)"
+        },
+        {
+          "line": 201,
+          "text": "                    curr_r_rad = get_current_joints_rad(self.piper_right)"
+        },
+        {
+          "line": 203,
+          "text": "                    val_l_mm = get_gripper_value(self.piper_left)"
+        },
+        {
+          "line": 204,
+          "text": "                    val_r_mm = get_gripper_value(self.piper_right)"
+        },
+        {
+          "line": 205,
+          "text": "                    # Aloha transforms represent gripper width in decimeters."
+        },
+        {
+          "line": 209,
+          "text": "                    state_vec = np.zeros(14, dtype=np.float32)"
+        },
+        {
+          "line": 210,
+          "text": "                    state_vec[0:6] = curr_l_rad"
+        },
+        {
+          "line": 211,
+          "text": "                    state_vec[6] = norm_grip_l"
+        },
+        {
+          "line": 212,
+          "text": "                    state_vec[7:13] = curr_r_rad"
+        },
+        {
+          "line": 213,
+          "text": "                    state_vec[13] = norm_grip_r"
+        },
+        {
+          "line": 216,
+          "text": "                        \"images\": {"
+        },
+        {
+          "line": 218,
+          "text": "                            \"cam_left_wrist\": process_image(w_l),"
+        },
+        {
+          "line": 219,
+          "text": "                            \"cam_right_wrist\": process_image(w_r),"
+        },
+        {
+          "line": 221,
+          "text": "                        \"state\": state_vec.tolist(),"
+        },
+        {
+          "line": 224,
+          "text": "                    rtc_context = self._make_rtc_context(capture_step)"
+        },
+        {
+          "line": 225,
+          "text": "                    if rtc_context is not None:"
+        },
+        {
+          "line": 226,
+          "text": "                        obs[\"rtc\"] = rtc_context"
+        },
+        {
+          "line": 229,
+          "text": "                    resp = self.client.infer(obs)"
+        },
+        {
+          "line": 241,
+          "text": "                            self.action_horizon,"
+        },
+        {
+          "line": 245,
+          "text": "                    if not resp or \"actions\" not in resp:"
+        },
+        {
+          "line": 246,
+          "text": "                        raise RuntimeError(\"策略服务器未返回 actions 字段。\")"
+        },
+        {
+          "line": 247,
+          "text": "                    all_actions = np.asarray(resp[\"actions\"], dtype=np.float32)"
+        },
+        {
+          "line": 248,
+          "text": "                    if all_actions.ndim == 3 and all_actions.shape[0] == 1:"
+        },
+        {
+          "line": 249,
+          "text": "                        all_actions = all_actions[0]"
+        },
+        {
+          "line": 250,
+          "text": "                    expected_shape = (self.action_horizon, 14)"
+        },
+        {
+          "line": 251,
+          "text": "                    if all_actions.shape != expected_shape:"
+        },
+        {
+          "line": 253,
+          "text": "                            f\"动作块形状应为 {expected_shape}，实际为 {all_actions.shape}。\""
+        },
+        {
+          "line": 255,
+          "text": "                    if not np.isfinite(all_actions).all():"
+        },
+        {
+          "line": 257,
+          "text": "                    all_actions[:, 0:6] = np.clip("
+        },
+        {
+          "line": 258,
+          "text": "                        all_actions[:, 0:6],"
+        },
+        {
+          "line": 259,
+          "text": "                        JOINT_LIMITS_RAD[:, 0],"
+        },
+        {
+          "line": 260,
+          "text": "                        JOINT_LIMITS_RAD[:, 1],"
+        },
+        {
+          "line": 262,
+          "text": "                    all_actions[:, 6] = np.clip(all_actions[:, 6], 0.0, 0.7)"
+        },
+        {
+          "line": 263,
+          "text": "                    all_actions[:, 7:13] = np.clip("
+        },
+        {
+          "line": 264,
+          "text": "                        all_actions[:, 7:13],"
+        },
+        {
+          "line": 265,
+          "text": "                        JOINT_LIMITS_RAD[:, 0],"
+        },
+        {
+          "line": 266,
+          "text": "                        JOINT_LIMITS_RAD[:, 1],"
+        },
+        {
+          "line": 268,
+          "text": "                    all_actions[:, 13] = np.clip(all_actions[:, 13], 0.0, 0.7)"
+        },
+        {
+          "line": 271,
+          "text": "                        latest_action_chunk = all_actions"
+        },
+        {
+          "line": 275,
+          "text": "                    used_delay = rtc_context[\"inference_delay\"] if rtc_context else 0"
+        },
+        {
+          "line": 277,
+          "text": "                        f\"✅[RTC推理] 收到 {all_actions.shape[0]} 步动作，\""
+        },
+        {
+          "line": 291,
+          "text": "    def stop(self):"
+        },
+        {
+          "line": 299,
+          "text": "    return np.clip(rad_targets, JOINT_LIMITS_RAD[:, 0], JOINT_LIMITS_RAD[:, 1])"
+        },
+        {
+          "line": 305,
+          "text": "def get_current_joints_rad(piper: Any) -> np.ndarray:"
+        },
+        {
+          "line": 308,
+          "text": "        js_ret = piper.GetArmJointMsgs()"
+        },
+        {
+          "line": 314,
+          "text": "        if hasattr(js, \"joint_state\") and js.joint_state:"
+        },
+        {
+          "line": 315,
+          "text": "            st = js.joint_state"
+        },
+        {
+          "line": 316,
+          "text": "            for names in [[\"joint_1\", \"joint_2\", \"joint_3\", \"joint_4\", \"joint_5\", \"joint_6\"],[\"angle_1\", \"angle_2\", \"angle_3\", \"angle_4\", \"angle_5\", \"angle_6\"]]:"
+        },
+        {
+          "line": 325,
+          "text": "def get_gripper_value(piper):"
+        },
+        {
+          "line": 328,
+          "text": "        gripper_msgs = piper.GetArmGripperMsgs()"
+        },
+        {
+          "line": 329,
+          "text": "        if hasattr(gripper_msgs, 'gripper_state') and gripper_msgs.gripper_state:"
+        },
+        {
+          "line": 330,
+          "text": "            raw_value = gripper_msgs.gripper_state.grippers_angle"
+        },
+        {
+          "line": 337,
+          "text": "def map_actions_to_joint_targets_dual(action_step, current_left_rad, current_right_rad):"
+        },
+        {
+          "line": 338,
+          "text": "    action = np.array(action_step, dtype=np.float64)"
+        },
+        {
+          "line": 339,
+          "text": "    left_target_raw = action[0:6]"
+        },
+        {
+          "line": 340,
+          "text": "    left_grip_raw = float(action[6])"
+        },
+        {
+          "line": 341,
+          "text": "    right_target_raw = action[7:13]"
+        },
+        {
+          "line": 342,
+          "text": "    right_grip_raw = float(action[13])"
+        },
+        {
+          "line": 344,
+          "text": "    left_target = clamp_rad(left_target_raw)"
+        },
+        {
+          "line": 345,
+          "text": "    right_target = clamp_rad(right_target_raw)"
+        },
+        {
+          "line": 347,
+          "text": "    return left_target, right_target, left_grip_raw, right_grip_raw"
+        },
+        {
+          "line": 362,
+          "text": "    resized = image_tools.resize_with_pad(img_data, 224, 224)"
+        },
+        {
+          "line": 363,
+          "text": "    uint8_img = image_tools.convert_to_uint8(resized)"
+        },
+        {
+          "line": 378,
+          "text": "    global latest_action_chunk, new_chunk_available, absolute_step_counter"
+        },
+        {
+          "line": 379,
+          "text": "    global ACTION_HORIZON, active_action_chunk, active_chunk_capture_step"
+        },
+        {
+          "line": 394,
+          "text": "        server_metadata = client.get_server_metadata()"
+        },
+        {
+          "line": 398,
+          "text": "    rtc_metadata = server_metadata.get(\"openpi_rtc\", {})"
+        },
+        {
+          "line": 399,
+          "text": "    if rtc_metadata.get(\"version\") != 1 or \"realtime\" not in rtc_metadata.get(\"modes\", []):"
+        },
+        {
+          "line": 401,
+          "text": "            \"策略服务器没有声明 OpenPI RTC v1 支持；为避免静默退回普通分块推理，机械臂未使能。\""
+        },
+        {
+          "line": 404,
+          "text": "    ACTION_HORIZON = int(server_metadata.get(\"action_horizon\", ACTION_HORIZON))"
+        },
+        {
+          "line": 405,
+          "text": "    action_dim = int(server_metadata.get(\"action_dim\", 14))"
+        },
+        {
+          "line": 406,
+          "text": "    if ACTION_HORIZON <= 0 or action_dim != 14:"
+        },
+        {
+          "line": 408,
+          "text": "            f\"服务器策略形状不匹配：action_horizon={ACTION_HORIZON}, action_dim={action_dim}；\""
+        },
+        {
+          "line": 409,
+          "text": "            \"双 Piper 控制要求 action_dim=14。\""
+        },
+        {
+          "line": 411,
+          "text": "    if PREFETCH_STEPS <= 0 or PREFETCH_STEPS >= ACTION_HORIZON:"
+        },
+        {
+          "line": 413,
+          "text": "            f\"OPENPI_PREFETCH_STEPS 必须在 1 到 {ACTION_HORIZON - 1} 之间。\""
+        },
+        {
+          "line": 418,
+          "text": "            f\"✅ 干运行通过：服务端声明 RTC v1，动作形状为 \""
+        },
+        {
+          "line": 419,
+          "text": "            f\"{ACTION_HORIZON}×{action_dim}；没有连接或使能机械臂。\""
+        },
+        {
+          "line": 424,
+          "text": "    piper_left = setup_piper(\"can_left\")"
+        },
+        {
+          "line": 425,
+          "text": "    piper_right = setup_piper(\"can_right\")"
+        },
+        {
+          "line": 429,
+          "text": "    cam_wrist_left = CameraThread(\"/dev/v4l/by-path/pci-0000:00:14.0-usb-0:5.2:1.0-video-index0\", \"left\")"
+        },
+        {
+          "line": 430,
+          "text": "    cam_wrist_right = CameraThread(\"/dev/v4l/by-path/pci-0000:00:14.0-usb-0:4.2:1.0-video-index0\", \"right\")"
+        },
+        {
+          "line": 432,
+          "text": "    if piper_left and piper_right:"
+        },
+        {
+          "line": 435,
+          "text": "            if piper_left:"
+        },
+        {
+          "line": 436,
+          "text": "                piper_left.EnableArm(motor_num=7, enable_flag=0x02)"
+        },
+        {
+          "line": 437,
+          "text": "                piper_left.GripperCtrl(0, 300, 0x01)"
+        },
+        {
+          "line": 438,
+          "text": "            if piper_right:"
+        },
+        {
+          "line": 439,
+          "text": "                piper_right.EnableArm(motor_num=7, enable_flag=0x02)"
+        },
+        {
+          "line": 440,
+          "text": "                piper_right.GripperCtrl(0, 300, 0x01)"
+        },
+        {
+          "line": 443,
+          "text": "        start_l = get_current_joints_rad(piper_left)"
+        },
+        {
+          "line": 444,
+          "text": "        start_r = get_current_joints_rad(piper_right)"
+        },
+        {
+          "line": 450,
+          "text": "            start_l = get_current_joints_rad(piper_left)"
+        },
+        {
+          "line": 451,
+          "text": "            start_r = get_current_joints_rad(piper_right)"
+        },
+        {
+          "line": 454,
+          "text": "        if piper_left:"
+        },
+        {
+          "line": 455,
+          "text": "            piper_left.ModeCtrl(ctrl_mode=0x01, move_mode=0x01, move_spd_rate_ctrl=30, is_mit_mode=0x00)"
+        },
+        {
+          "line": 456,
+          "text": "        if piper_right:"
+        },
+        {
+          "line": 457,
+          "text": "            piper_right.ModeCtrl(ctrl_mode=0x01, move_mode=0x01, move_spd_rate_ctrl=30, is_mit_mode=0x00)"
+        },
+        {
+          "line": 465,
+          "text": "            if piper_left: piper_left.JointCtrl(*deg_to_sdk_unit(curr_l))"
+        },
+        {
+          "line": 466,
+          "text": "            if piper_right: piper_right.JointCtrl(*deg_to_sdk_unit(curr_r))"
+        },
+        {
+          "line": 467,
+          "text": "            piper_left.GripperCtrl(70000, 3000, 0x01)"
+        },
+        {
+          "line": 468,
+          "text": "            piper_right.GripperCtrl(70000, 3000, 0x01)"
+        },
+        {
+          "line": 477,
+          "text": "    inference_worker = InferenceThread(client, cam_main, cam_wrist_left, cam_wrist_right, piper_left, piper_right)"
+        },
+        {
+          "line": 487,
+          "text": "            if latest_action_chunk is not None:"
+        },
+        {
+          "line": 493,
+          "text": "    smoothed_target_l = get_current_joints_rad(piper_left)"
+        },
+        {
+          "line": 494,
+          "text": "    smoothed_target_r = get_current_joints_rad(piper_right)"
+        },
+        {
+          "line": 495,
+          "text": "    smoothed_grip_l = get_gripper_value(piper_left) / 100.0"
+        },
+        {
+          "line": 496,
+          "text": "    smoothed_grip_r = get_gripper_value(piper_right) / 100.0"
+        },
+        {
+          "line": 499,
+          "text": "    step_idx = ACTION_HORIZON "
+        },
+        {
+          "line": 507,
+          "text": "                if new_chunk_available and (current_chunk is None or step_idx >= ACTION_HORIZON):"
+        },
+        {
+          "line": 511,
+          "text": "                    if had_previous_chunk and new_step_idx >= latest_action_chunk.shape[0]:"
+        },
+        {
+          "line": 513,
+          "text": "                            \"❌ RTC动作块到达时已过期；停止发送机械臂动作，请检查推理延迟。\""
+        },
+        {
+          "line": 516,
+          "text": "                    current_chunk = copy.deepcopy(latest_action_chunk)"
+        },
+        {
+          "line": 519,
+          "text": "                    active_action_chunk = copy.deepcopy(current_chunk)"
+        },
+        {
+          "line": 523,
+          "text": "                        f\"\\n⚡ RTC动作块切换：物理帧 {absolute_step_counter}，\""
+        },
+        {
+          "line": 529,
+          "text": "                if step_idx >= ACTION_HORIZON + MAX_STALE_STEPS and not new_chunk_available:"
+        },
+        {
+          "line": 535,
+          "text": "                if step_idx == ACTION_HORIZON - PREFETCH_STEPS or \\"
+        },
+        {
+          "line": 536,
+          "text": "                   (step_idx >= ACTION_HORIZON and not new_chunk_available and step_idx % 5 == 0):"
+        },
+        {
+          "line": 537,
+          "text": "                    print(f\"   [RTC同步] 触发抓图请求... (物理帧: {absolute_step_counter})\")"
+        },
+        {
+          "line": 541,
+          "text": "                action_step = current_chunk[safe_idx]"
+        },
+        {
+          "line": 543,
+          "text": "                target_l, target_r, grip_l, grip_r = map_actions_to_joint_targets_dual("
+        },
+        {
+          "line": 544,
+          "text": "                    action_step, smoothed_target_l, smoothed_target_r"
+        },
+        {
+          "line": 547,
+          "text": "                # RTC conditions the next chunk on these executed setpoints, so"
+        },
+        {
+          "line": 554,
+          "text": "                # Send the policy gripper setpoints directly so later RTC requests"
+        },
+        {
+          "line": 555,
+          "text": "                # condition on the same action plan the controller is executing."
+        },
+        {
+          "line": 558,
+          "text": "                if piper_left:"
+        },
+        {
+          "line": 559,
+          "text": "                    piper_left.GripperCtrl(val_l, 3000, 0x01)"
+        },
+        {
+          "line": 560,
+          "text": "                if piper_right:"
+        },
+        {
+          "line": 561,
+          "text": "                    piper_right.GripperCtrl(val_r, 3000, 0x01)"
+        },
+        {
+          "line": 564,
+          "text": "                prev_l_interp = get_current_joints_rad(piper_left)"
+        },
+        {
+          "line": 565,
+          "text": "                prev_r_interp = get_current_joints_rad(piper_right)"
+        },
+        {
+          "line": 574,
+          "text": "                    if piper_left and piper_right:"
+        },
+        {
+          "line": 575,
+          "text": "                        piper_left.JointCtrl(*deg_to_sdk_unit(interp_l))"
+        },
+        {
+          "line": 576,
+          "text": "                        piper_right.JointCtrl(*deg_to_sdk_unit(interp_r))"
+        },
+        {
+          "line": 584,
+          "text": "                if step_idx < ACTION_HORIZON:"
+        },
+        {
+          "line": 585,
+          "text": "                    print(f\"--- 步数 {step_idx+1}/{ACTION_HORIZON} (总步数 {absolute_step_counter}) ---\")"
+        },
+        {
+          "line": 599,
+          "text": "            inference_worker.stop()"
+        },
+        {
+          "line": 603,
+          "text": "        cam_main.stop()"
+        },
+        {
+          "line": 604,
+          "text": "        cam_wrist_left.stop()"
+        },
+        {
+          "line": 605,
+          "text": "        cam_wrist_right.stop()"
+        },
+        {
+          "line": 606,
+          "text": "        if piper_left: "
+        },
+        {
+          "line": 607,
+          "text": "            try: piper_left.DisconnectPort() "
+        },
+        {
+          "line": 609,
+          "text": "        if piper_right: "
+        },
+        {
+          "line": 610,
+          "text": "            try: piper_right.DisconnectPort()"
+        }
+      ]
+    },
+    {
+      "path": "/home/oyjt/Scene-aware-BCI-VLA/scripts/training/serve_policy.py",
+      "bytes": 3687,
+      "sha256": "eccc0448b4873fd30a1fff3355c5de7a7c227138e6db04b7dcaa5bb38a6a5809",
+      "truncated": false,
+      "selected_lines": [
+        {
+          "line": 101,
+          "text": "    policy_metadata = policy.metadata"
+        },
+        {
+          "line": 115,
+          "text": "        metadata=policy_metadata,"
+        }
+      ]
+    },
+    {
+      "path": "/home/oyjt/Scene-aware-BCI-VLA/scripts/inference.py",
+      "bytes": 35449,
+      "sha256": "324797b38d1a3b6fa2f5ed0528a62a0dfd7f812b1e96464f349d3c73211b0e0c",
+      "truncated": false,
+      "selected_lines": [
+        {
+          "line": 40,
+          "text": "# True:  With LLM (Semantic Intent Synthesis, synthesize full action instructions via LLM)"
+        },
+        {
+          "line": 64,
+          "text": "ACTION_HORIZON = 50     # 🌟 Restored to 50: Must execute into the latter half of the chunk, otherwise gripper closure will never trigger!"
+        },
+        {
+          "line": 68,
+          "text": "BLEND_STEPS = 6         # 🌟 Smooth addition: Smooth transition over 6 frames for joints only"
+        },
+        {
+          "line": 70,
+          "text": "JOINT_LIMITS_RAD = np.array([[-2.61799, 2.61799],[0.0, 3.14159],[-2.96706, 0.0],[-1.74533, 1.74533],[-1.22173, 1.22173],[-2.0944, 2.0944],"
+        },
+        {
+          "line": 73,
+          "text": "ACTION_EMA_ALPHA = 0.35  "
+        },
+        {
+          "line": 75,
+          "text": "latest_action_chunk = None"
+        },
+        {
+          "line": 134,
+          "text": "    def stop(self):"
+        },
+        {
+          "line": 142,
+          "text": "    def __init__(self, client, cam_main, cam_l, cam_r, piper_left, piper_right):"
+        },
+        {
+          "line": 148,
+          "text": "        self.piper_left = piper_left"
+        },
+        {
+          "line": 149,
+          "text": "        self.piper_right = piper_right"
+        },
+        {
+          "line": 153,
+          "text": "        global latest_action_chunk, new_chunk_available, latest_chunk_capture_step"
+        },
+        {
+          "line": 173,
+          "text": "            curr_l_rad = get_current_joints_rad(self.piper_left)"
+        },
+        {
+          "line": 174,
+          "text": "            curr_r_rad = get_current_joints_rad(self.piper_right)"
+        },
+        {
+          "line": 177,
+          "text": "            val_l_mm = get_gripper_value(self.piper_left)"
+        },
+        {
+          "line": 178,
+          "text": "            val_r_mm = get_gripper_value(self.piper_right)"
+        },
+        {
+          "line": 182,
+          "text": "            state_vec = np.zeros(14, dtype=np.float32)"
+        },
+        {
+          "line": 183,
+          "text": "            state_vec[0:6] = curr_l_rad"
+        },
+        {
+          "line": 184,
+          "text": "            state_vec[6] = norm_grip_l"
+        },
+        {
+          "line": 185,
+          "text": "            state_vec[7:13] = curr_r_rad"
+        },
+        {
+          "line": 186,
+          "text": "            state_vec[13] = norm_grip_r"
+        },
+        {
+          "line": 189,
+          "text": "                \"images\": {"
+        },
+        {
+          "line": 191,
+          "text": "                    \"cam_left_wrist\": process_image(w_l),"
+        },
+        {
+          "line": 192,
+          "text": "                    \"cam_right_wrist\": process_image(w_r),"
+        },
+        {
+          "line": 194,
+          "text": "                \"state\": state_vec.tolist(),"
+        },
+        {
+          "line": 201,
+          "text": "                resp = self.client.infer(obs)"
+        },
+        {
+          "line": 207,
+          "text": "                if resp and \"actions\" in resp:"
+        },
+        {
+          "line": 208,
+          "text": "                    all_actions = np.array(resp[\"actions\"])"
+        },
+        {
+          "line": 209,
+          "text": "                    if all_actions.ndim == 3:  "
+        },
+        {
+          "line": 210,
+          "text": "                        all_actions = all_actions[0]"
+        },
+        {
+          "line": 213,
+          "text": "                        latest_action_chunk = all_actions"
+        },
+        {
+          "line": 217,
+          "text": "                    horizon = all_actions.shape[0]"
+        },
+        {
+          "line": 220,
+          "text": "                    print(\"❌ Server did not return 'actions' field\")"
+        },
+        {
+          "line": 227,
+          "text": "    def stop(self):"
+        },
+        {
+          "line": 235,
+          "text": "    return np.clip(rad_targets, JOINT_LIMITS_RAD[:, 0], JOINT_LIMITS_RAD[:, 1])"
+        },
+        {
+          "line": 241,
+          "text": "def get_current_joints_rad(piper: Any) -> np.ndarray:"
+        },
+        {
+          "line": 244,
+          "text": "        js_ret = piper.GetArmJointMsgs()"
+        },
+        {
+          "line": 250,
+          "text": "        if hasattr(js, \"joint_state\") and js.joint_state:"
+        },
+        {
+          "line": 251,
+          "text": "            st = js.joint_state"
+        },
+        {
+          "line": 252,
+          "text": "            for names in [[\"joint_1\", \"joint_2\", \"joint_3\", \"joint_4\", \"joint_5\", \"joint_6\"],[\"angle_1\", \"angle_2\", \"angle_3\", \"angle_4\", \"angle_5\", \"angle_6\"]]:"
+        },
+        {
+          "line": 259,
+          "text": "        print(f\"Exception getting joint data: {e}\")"
+        },
+        {
+          "line": 262,
+          "text": "def get_gripper_value(piper):"
+        },
+        {
+          "line": 265,
+          "text": "        gripper_msgs = piper.GetArmGripperMsgs()"
+        },
+        {
+          "line": 266,
+          "text": "        if hasattr(gripper_msgs, 'gripper_state') and gripper_msgs.gripper_state:"
+        },
+        {
+          "line": 267,
+          "text": "            raw_value = gripper_msgs.gripper_state.grippers_angle"
+        },
+        {
+          "line": 274,
+          "text": "def map_actions_to_joint_targets_dual(action_step, current_left_rad, current_right_rad):"
+        },
+        {
+          "line": 275,
+          "text": "    action = np.array(action_step, dtype=np.float64)"
+        },
+        {
+          "line": 276,
+          "text": "    left_target_raw = action[0:6]"
+        },
+        {
+          "line": 277,
+          "text": "    left_grip_raw = float(action[6])"
+        },
+        {
+          "line": 278,
+          "text": "    right_target_raw = action[7:13]"
+        },
+        {
+          "line": 279,
+          "text": "    right_grip_raw = float(action[13])"
+        },
+        {
+          "line": 281,
+          "text": "    left_target = clamp_rad(left_target_raw)"
+        },
+        {
+          "line": 282,
+          "text": "    right_target = clamp_rad(right_target_raw)"
+        },
+        {
+          "line": 284,
+          "text": "    return left_target, right_target, left_grip_raw, right_grip_raw"
+        },
+        {
+          "line": 300,
+          "text": "    resized = image_tools.resize_with_pad(img_data, 224, 224)"
+        },
+        {
+          "line": 301,
+          "text": "    uint8_img = image_tools.convert_to_uint8(resized)"
+        },
+        {
+          "line": 373,
+          "text": "        # Task: Based on common sense, infer the most logical assistive action the user wants the robot to perform with the selected target, considering the other objects available."
+        },
+        {
+          "line": 380,
+          "text": "        # Output requirement: Return ONLY a short, direct English command string suitable for a Vision-Language-Action (VLA) robot model. Do not include any explanations, reasoning, or quotation marks."
+        },
+        {
+          "line": 388,
+          "text": "        Task: Based on common sense, infer the most logical assistive action the user wants the robot to perform with the selected target, considering the other objects available."
+        },
+        {
+          "line": 389,
+          "text": "        Return ONLY a short, direct English command string suitable for a Vision-Language-Action (VLA) robot model , choose form the following examples:        "
+        },
+        {
+          "line": 511,
+          "text": "    \"\"\"Resize image and center on black canvas\"\"\""
+        },
+        {
+          "line": 515,
+          "text": "    resized = cv2.resize(frame, (new_w, new_h))"
+        },
+        {
+          "line": 520,
+          "text": "    canvas[y_offset:y_offset+new_h, x_offset:x_offset+new_w] = resized"
+        },
+        {
+          "line": 597,
+          "text": "    global latest_action_chunk, new_chunk_available, absolute_step_counter"
+        },
+        {
+          "line": 599,
+          "text": "    piper_left = setup_piper(\"can_left\")"
+        },
+        {
+          "line": 600,
+          "text": "    piper_right = setup_piper(\"can_right\")"
+        },
+        {
+          "line": 604,
+          "text": "    cam_wrist_left = CameraThread(\"/dev/v4l/by-path/pci-0000:00:14.0-usb-0:5.2:1.0-video-index0\", \"left\")"
+        },
+        {
+          "line": 605,
+          "text": "    cam_wrist_right = CameraThread(\"/dev/v4l/by-path/pci-0000:00:14.0-usb-0:4.2:1.0-video-index0\", \"right\")"
+        },
+        {
+          "line": 612,
+          "text": "        cam_main.stop()"
+        },
+        {
+          "line": 613,
+          "text": "        cam_wrist_left.stop()"
+        },
+        {
+          "line": 614,
+          "text": "        cam_wrist_right.stop()"
+        },
+        {
+          "line": 618,
+          "text": "    if piper_left and piper_right:"
+        },
+        {
+          "line": 623,
+          "text": "            if piper_left:"
+        },
+        {
+          "line": 624,
+          "text": "                piper_left.EnableArm(motor_num=7, enable_flag=0x02)"
+        },
+        {
+          "line": 625,
+          "text": "                piper_left.GripperCtrl(0, 300, 0x01)"
+        },
+        {
+          "line": 626,
+          "text": "            if piper_right:"
+        },
+        {
+          "line": 627,
+          "text": "                piper_right.EnableArm(motor_num=7, enable_flag=0x02)"
+        },
+        {
+          "line": 628,
+          "text": "                piper_right.GripperCtrl(0, 300, 0x01)"
+        },
+        {
+          "line": 630,
+          "text": "        piper_left.ModeCtrl(ctrl_mode=0x01, move_mode=0x01, move_spd_rate_ctrl=30, is_mit_mode=0x00)"
+        },
+        {
+          "line": 631,
+          "text": "        piper_right.ModeCtrl(ctrl_mode=0x01, move_mode=0x01, move_spd_rate_ctrl=30, is_mit_mode=0x00)"
+        },
+        {
+          "line": 634,
+          "text": "        start_l = get_current_joints_rad(piper_left)"
+        },
+        {
+          "line": 635,
+          "text": "        start_r = get_current_joints_rad(piper_right)"
+        },
+        {
+          "line": 637,
+          "text": "        # 🌟 Smooth addition: Wait for valid physical feedback to avoid zero-joint crash or jerk"
+        },
+        {
+          "line": 642,
+          "text": "            start_l = get_current_joints_rad(piper_left)"
+        },
+        {
+          "line": 643,
+          "text": "            start_r = get_current_joints_rad(piper_right)"
+        },
+        {
+          "line": 650,
+          "text": "            if piper_left: piper_left.JointCtrl(*deg_to_sdk_unit(curr_l))"
+        },
+        {
+          "line": 651,
+          "text": "            if piper_right: piper_right.JointCtrl(*deg_to_sdk_unit(curr_r))"
+        },
+        {
+          "line": 652,
+          "text": "            piper_left.GripperCtrl(70000, 3000, 0x01)"
+        },
+        {
+          "line": 653,
+          "text": "            piper_right.GripperCtrl(70000, 3000, 0x01)"
+        },
+        {
+          "line": 669,
+          "text": "    inference_worker = InferenceThread(client, cam_main, cam_wrist_left, cam_wrist_right, piper_left, piper_right)"
+        },
+        {
+          "line": 679,
+          "text": "            if latest_action_chunk is not None:"
+        },
+        {
+          "line": 683,
+          "text": "    print(\"▶️ Starting continuous action execution...\")"
+        },
+        {
+          "line": 686,
+          "text": "    smoothed_target_l = get_current_joints_rad(piper_left)"
+        },
+        {
+          "line": 687,
+          "text": "    smoothed_target_r = get_current_joints_rad(piper_right)"
+        },
+        {
+          "line": 688,
+          "text": "    smoothed_grip_l = get_gripper_value(piper_left) / 70.0"
+        },
+        {
+          "line": 689,
+          "text": "    smoothed_grip_r = get_gripper_value(piper_right) / 70.0"
+        },
+        {
+          "line": 691,
+          "text": "    # State tracking for gripper deadband filtering"
+        },
+        {
+          "line": 696,
+          "text": "    step_idx = ACTION_HORIZON "
+        },
+        {
+          "line": 700,
+          "text": "    # 🌟 Smooth addition: Historical state variables for trajectory blending"
+        },
+        {
+          "line": 711,
+          "text": "                if new_chunk_available and step_idx >= ACTION_HORIZON:"
+        },
+        {
+          "line": 712,
+          "text": "                    # 🌟 Smooth addition: Record previous action chunk before replacement"
+        },
+        {
+          "line": 716,
+          "text": "                    current_chunk = copy.deepcopy(latest_action_chunk)"
+        },
+        {
+          "line": 728,
+          "text": "            # --- 2. Continuous action execution ---"
+        },
+        {
+          "line": 730,
+          "text": "                if step_idx == ACTION_HORIZON - PREFETCH_STEPS or \\"
+        },
+        {
+          "line": 731,
+          "text": "                   (step_idx >= ACTION_HORIZON and not new_chunk_available and step_idx % 5 == 0):"
+        },
+        {
+          "line": 736,
+          "text": "                action_step = current_chunk[safe_idx]"
+        },
+        {
+          "line": 738,
+          "text": "                target_l, target_r, grip_l, grip_r = map_actions_to_joint_targets_dual("
+        },
+        {
+          "line": 739,
+          "text": "                    action_step, smoothed_target_l, smoothed_target_r"
+        },
+        {
+          "line": 742,
+          "text": "                # ================= 🌟 Smooth addition: Trajectory blending (joints only, not grippers) ================="
+        },
+        {
+          "line": 745,
+          "text": "                    old_action_step = old_chunk[safe_old_idx]"
+        },
+        {
+          "line": 747,
+          "text": "                    # Extract joint targets from old action, ignore old gripper values"
+        },
+        {
+          "line": 748,
+          "text": "                    old_t_l, old_t_r, _, _ = map_actions_to_joint_targets_dual("
+        },
+        {
+          "line": 749,
+          "text": "                        old_action_step, smoothed_target_l, smoothed_target_r"
+        },
+        {
+          "line": 754,
+          "text": "                    # Smooth joint displacement only"
+        },
+        {
+          "line": 763,
+          "text": "                # ================= a. Joint and Gripper EMA Smoothing ================="
+        },
+        {
+          "line": 764,
+          "text": "                smoothed_target_l = ACTION_EMA_ALPHA * target_l + (1 - ACTION_EMA_ALPHA) * smoothed_target_l"
+        },
+        {
+          "line": 765,
+          "text": "                smoothed_target_r = ACTION_EMA_ALPHA * target_r + (1 - ACTION_EMA_ALPHA) * smoothed_target_r"
+        },
+        {
+          "line": 767,
+          "text": "                # 🌟 Smooth addition: Reduce gripper smoothing for faster response (set to 0.7 to avoid loose grasp)"
+        },
+        {
+          "line": 768,
+          "text": "                GRIPPER_EMA_ALPHA = 0.7"
+        },
+        {
+          "line": 769,
+          "text": "                smoothed_grip_l = GRIPPER_EMA_ALPHA * grip_l + (1 - GRIPPER_EMA_ALPHA) * smoothed_grip_l"
+        },
+        {
+          "line": 770,
+          "text": "                smoothed_grip_r = GRIPPER_EMA_ALPHA * grip_r + (1 - GRIPPER_EMA_ALPHA) * smoothed_grip_r"
+        },
+        {
+          "line": 772,
+          "text": "                # ================= b. Gripper Deadband Filtering ================="
+        },
+        {
+          "line": 773,
+          "text": "                GRIPPER_DEADBAND = 0.015  "
+        },
+        {
+          "line": 775,
+          "text": "                if abs(smoothed_grip_l - last_sent_grip_l) > GRIPPER_DEADBAND:"
+        },
+        {
+          "line": 777,
+          "text": "                    if piper_left: "
+        },
+        {
+          "line": 778,
+          "text": "                        piper_left.GripperCtrl(val_l, 3000, 0x01)"
+        },
+        {
+          "line": 781,
+          "text": "                if abs(smoothed_grip_r - last_sent_grip_r) > GRIPPER_DEADBAND:"
+        },
+        {
+          "line": 783,
+          "text": "                    if piper_right: "
+        },
+        {
+          "line": 784,
+          "text": "                        piper_right.GripperCtrl(val_r, 3000, 0x01)"
+        },
+        {
+          "line": 788,
+          "text": "                prev_l_interp = get_current_joints_rad(piper_left)"
+        },
+        {
+          "line": 789,
+          "text": "                prev_r_interp = get_current_joints_rad(piper_right)"
+        },
+        {
+          "line": 798,
+          "text": "                    if piper_left and piper_right:"
+        },
+        {
+          "line": 799,
+          "text": "                        piper_left.JointCtrl(*deg_to_sdk_unit(interp_l))"
+        },
+        {
+          "line": 800,
+          "text": "                        piper_right.JointCtrl(*deg_to_sdk_unit(interp_r))"
+        },
+        {
+          "line": 806,
+          "text": "                real_l = get_current_joints_rad(piper_left)"
+        },
+        {
+          "line": 807,
+          "text": "                real_r = get_current_joints_rad(piper_right)"
+        },
+        {
+          "line": 809,
+          "text": "                real_gl = get_gripper_value(piper_left) / 70.0"
+        },
+        {
+          "line": 810,
+          "text": "                real_gr = get_gripper_value(piper_right) / 70.0"
+        },
+        {
+          "line": 851,
+          "text": "                if step_idx < ACTION_HORIZON:"
+        },
+        {
+          "line": 852,
+          "text": "                    print(f\"--- Step {step_idx+1}/{ACTION_HORIZON} (Total steps {absolute_step_counter}) ---\")"
+        },
+        {
+          "line": 863,
+          "text": "        print(\"\\n🛑 Stopped by user\")"
+        },
+        {
+          "line": 867,
+          "text": "            inference_worker.stop()"
+        },
+        {
+          "line": 871,
+          "text": "        cam_main.stop()"
+        },
+        {
+          "line": 872,
+          "text": "        cam_wrist_left.stop()"
+        },
+        {
+          "line": 873,
+          "text": "        cam_wrist_right.stop()"
+        },
+        {
+          "line": 874,
+          "text": "        if piper_left: "
+        },
+        {
+          "line": 875,
+          "text": "            try: piper_left.DisconnectPort() "
+        },
+        {
+          "line": 877,
+          "text": "        if piper_right: "
+        },
+        {
+          "line": 878,
+          "text": "            try: piper_right.DisconnectPort()"
+        }
+      ]
+    },
+    {
+      "path": "/home/oyjt/openpi/src/openpi/policies/aloha_policy.py",
+      "bytes": 7585,
+      "sha256": "23419d39a783c29284ef7d38336d339301ea15c34a5de1a07bce88e0e1e6ea50",
+      "truncated": false,
+      "selected_lines": [
+        {
+          "line": 13,
+          "text": "        \"state\": np.ones((14,)),"
+        },
+        {
+          "line": 14,
+          "text": "        \"images\": {"
+        },
+        {
+          "line": 17,
+          "text": "            \"cam_left_wrist\": np.random.randint(256, size=(3, 224, 224), dtype=np.uint8),"
+        },
+        {
+          "line": 18,
+          "text": "            \"cam_right_wrist\": np.random.randint(256, size=(3, 224, 224), dtype=np.uint8),"
+        },
+        {
+          "line": 29,
+          "text": "    - images: dict[name, img] where img is [channel, height, width]. name must be in EXPECTED_CAMERAS."
+        },
+        {
+          "line": 30,
+          "text": "    - state: [14]"
+        },
+        {
+          "line": 31,
+          "text": "    - actions: [action_horizon, 14]"
+        },
+        {
+          "line": 34,
+          "text": "    # If true, this will convert the joint and gripper values from the standard Aloha space to"
+        },
+        {
+          "line": 39,
+          "text": "    # replaced with black images and the corresponding `image_mask` will be set to False."
+        },
+        {
+          "line": 40,
+          "text": "    EXPECTED_CAMERAS: ClassVar[tuple[str, ...]] = (\"cam_high\", \"cam_low\", \"cam_left_wrist\", \"cam_right_wrist\")"
+        },
+        {
+          "line": 45,
+          "text": "        in_images = data[\"images\"]"
+        },
+        {
+          "line": 46,
+          "text": "        if set(in_images) - set(self.EXPECTED_CAMERAS):"
+        },
+        {
+          "line": 47,
+          "text": "            raise ValueError(f\"Expected images to contain {self.EXPECTED_CAMERAS}, got {tuple(in_images)}\")"
+        },
+        {
+          "line": 50,
+          "text": "        base_image = in_images[\"cam_high\"]"
+        },
+        {
+          "line": 52,
+          "text": "        images = {"
+        },
+        {
+          "line": 59,
+          "text": "        # Add the extra images."
+        },
+        {
+          "line": 61,
+          "text": "            \"left_wrist_0_rgb\": \"cam_left_wrist\","
+        },
+        {
+          "line": 62,
+          "text": "            \"right_wrist_0_rgb\": \"cam_right_wrist\","
+        },
+        {
+          "line": 65,
+          "text": "            if source in in_images:"
+        },
+        {
+          "line": 66,
+          "text": "                images[dest] = in_images[source]"
+        },
+        {
+          "line": 69,
+          "text": "                images[dest] = np.zeros_like(base_image)"
+        },
+        {
+          "line": 73,
+          "text": "            \"image\": images,"
+        },
+        {
+          "line": 75,
+          "text": "            \"state\": data[\"state\"],"
+        },
+        {
+          "line": 78,
+          "text": "        # Actions are only available during training."
+        },
+        {
+          "line": 79,
+          "text": "        if \"actions\" in data:"
+        },
+        {
+          "line": 80,
+          "text": "            actions = np.asarray(data[\"actions\"])"
+        },
+        {
+          "line": 81,
+          "text": "            actions = _encode_actions_inv(actions, adapt_to_pi=self.adapt_to_pi)"
+        },
+        {
+          "line": 82,
+          "text": "            inputs[\"actions\"] = actions"
+        },
+        {
+          "line": 94,
+          "text": "    # If true, this will convert the joint and gripper values from the standard Aloha space to"
+        },
+        {
+          "line": 100,
+          "text": "        actions = np.asarray(data[\"actions\"][:, :14])"
+        },
+        {
+          "line": 101,
+          "text": "        return {\"actions\": _encode_actions(actions, adapt_to_pi=self.adapt_to_pi)}"
+        },
+        {
+          "line": 104,
+          "text": "def _joint_flip_mask() -> np.ndarray:"
+        },
+        {
+          "line": 105,
+          "text": "    \"\"\"Used to convert between aloha and pi joint angles.\"\"\""
+        },
+        {
+          "line": 109,
+          "text": "def _normalize(x, min_val, max_val):"
+        },
+        {
+          "line": 113,
+          "text": "def _unnormalize(x, min_val, max_val):"
+        },
+        {
+          "line": 116,
+          "text": "def _gripper_to_angular(width):"
+        },
+        {
+          "line": 125,
+          "text": "    normalized_angle = _normalize(angle_rad, min_val=0.6716, max_val=2.4002)"
+        },
+        {
+          "line": 126,
+          "text": "    return normalized_angle"
+        },
+        {
+          "line": 128,
+          "text": "def _gripper_from_angular(model_action):"
+        },
+        {
+          "line": 130,
+          "text": "    theta = _unnormalize(model_action, 0.6716, 2.4002)"
+        },
+        {
+          "line": 140,
+          "text": "def _gripper_from_angular_inv(opening_width_dm):"
+        },
+        {
+          "line": 143,
+          "text": "    实际上就是调用 _gripper_to_angular。"
+        },
+        {
+          "line": 145,
+          "text": "    return _gripper_to_angular(opening_width_dm)"
+        },
+        {
+          "line": 151,
+          "text": "# def _gripper_to_angular(width):"
+        },
+        {
+          "line": 162,
+          "text": "# def _gripper_from_angular(model_action):"
+        },
+        {
+          "line": 168,
+          "text": "#     inverted_action = 1.0 - model_action"
+        },
+        {
+          "line": 170,
+          "text": "#     return inverted_action * (MAX_WIDTH - MIN_WIDTH) + MIN_WIDTH"
+        },
+        {
+          "line": 173,
+          "text": "# def _gripper_from_angular_inv(opening_width_dm):"
+        },
+        {
+          "line": 176,
+          "text": "#     实际上就是调用 _gripper_to_angular。"
+        },
+        {
+          "line": 178,
+          "text": "#     return _gripper_to_angular(opening_width_dm)"
+        },
+        {
+          "line": 182,
+          "text": "    state = np.asarray(data[\"state\"])"
+        },
+        {
+          "line": 183,
+          "text": "    state = _decode_state(state, adapt_to_pi=adapt_to_pi)"
+        },
+        {
+          "line": 187,
+          "text": "        # Convert to uint8 if using float images."
+        },
+        {
+          "line": 193,
+          "text": "    images = data[\"images\"]"
+        },
+        {
+          "line": 194,
+          "text": "    images_dict = {name: convert_image(img) for name, img in images.items()}"
+        },
+        {
+          "line": 196,
+          "text": "    data[\"images\"] = images_dict"
+        },
+        {
+          "line": 197,
+          "text": "    data[\"state\"] = state"
+        },
+        {
+          "line": 201,
+          "text": "def _decode_state(state: np.ndarray, *, adapt_to_pi: bool = False) -> np.ndarray:"
+        },
+        {
+          "line": 203,
+          "text": "        # Flip the joints."
+        },
+        {
+          "line": 204,
+          "text": "        state = _joint_flip_mask() * state"
+        },
+        {
+          "line": 205,
+          "text": "        # Reverse the gripper transformation that is being applied by the Aloha runtime."
+        },
+        {
+          "line": 206,
+          "text": "        state[[6, 13]] = _gripper_to_angular(state[[6, 13]])"
+        },
+        {
+          "line": 207,
+          "text": "    return state"
+        },
+        {
+          "line": 210,
+          "text": "def _encode_actions(actions: np.ndarray, *, adapt_to_pi: bool = False) -> np.ndarray:"
+        },
+        {
+          "line": 212,
+          "text": "        # Flip the joints."
+        },
+        {
+          "line": 213,
+          "text": "        actions = _joint_flip_mask() * actions"
+        },
+        {
+          "line": 214,
+          "text": "        actions[:, [6, 13]] = _gripper_from_angular(actions[:, [6, 13]])"
+        },
+        {
+          "line": 215,
+          "text": "    return actions"
+        },
+        {
+          "line": 218,
+          "text": "def _encode_actions_inv(actions: np.ndarray, *, adapt_to_pi: bool = False) -> np.ndarray:"
+        },
+        {
+          "line": 220,
+          "text": "        actions = _joint_flip_mask() * actions"
+        },
+        {
+          "line": 221,
+          "text": "        actions[:, [6, 13]] = _gripper_from_angular_inv(actions[:, [6, 13]])"
+        },
+        {
+          "line": 222,
+          "text": "    return actions"
+        }
+      ]
+    },
+    {
+      "path": "/home/oyjt/openpi/src/openpi/policies/policy.py",
+      "bytes": 9370,
+      "sha256": "3b77d897aeb04a91ca37e54e854d67d8dec23bffa255249faecfbe44f87d7053",
+      "truncated": false,
+      "selected_lines": [
+        {
+          "line": 33,
+          "text": "        metadata: dict[str, Any] | None = None,"
+        },
+        {
+          "line": 40,
+          "text": "            model: The model to use for action sampling."
+        },
+        {
+          "line": 44,
+          "text": "            sample_kwargs: Additional keyword arguments to pass to model.sample_actions."
+        },
+        {
+          "line": 45,
+          "text": "            metadata: Additional metadata to store with the policy."
+        },
+        {
+          "line": 54,
+          "text": "        self._metadata = metadata or {}"
+        },
+        {
+          "line": 57,
+          "text": "        self._rtc_supported = bool(not is_pytorch and getattr(model, \"rtc_supported\", False))"
+        },
+        {
+          "line": 62,
+          "text": "            self._sample_actions = model.sample_actions"
+        },
+        {
+          "line": 65,
+          "text": "            self._sample_actions = nnx_utils.module_jit(model.sample_actions)"
+        },
+        {
+          "line": 69,
+          "text": "    def infer(self, obs: dict, *, noise: np.ndarray | None = None) -> dict:  # type: ignore[misc]"
+        },
+        {
+          "line": 70,
+          "text": "        # Keep RTC metadata out of the observation transforms and model Observation."
+        },
+        {
+          "line": 72,
+          "text": "        rtc_request = obs.pop(\"rtc\", None)"
+        },
+        {
+          "line": 85,
+          "text": "        # Prepare kwargs for sample_actions"
+        },
+        {
+          "line": 87,
+          "text": "        if rtc_request is not None:"
+        },
+        {
+          "line": 88,
+          "text": "            if not self._rtc_supported:"
+        },
+        {
+          "line": 89,
+          "text": "                raise ValueError(\"This policy does not support RTC. Use a JAX Pi0/Pi0.5 checkpoint.\")"
+        },
+        {
+          "line": 90,
+          "text": "            if rtc_request.get(\"version\") != 1 or rtc_request.get(\"mode\") != \"realtime\":"
+        },
+        {
+          "line": 91,
+          "text": "                raise ValueError(\"Unsupported RTC request version or mode.\")"
+        },
+        {
+          "line": 92,
+          "text": "            schedule = rtc_request.get(\"prefix_attention_schedule\", \"exp\")"
+        },
+        {
+          "line": 94,
+          "text": "                raise ValueError(f\"Unsupported RTC prefix schedule: {schedule!r}; this server supports 'exp'.\")"
+        },
+        {
+          "line": 95,
+          "text": "            action_horizon = int(self._model.action_horizon)"
+        },
+        {
+          "line": 96,
+          "text": "            model_action_dim = int(self._model.action_dim)"
+        },
+        {
+          "line": 97,
+          "text": "            prev_actions = np.asarray(rtc_request[\"prev_action_chunk\"], dtype=np.float32)"
+        },
+        {
+          "line": 99,
+          "text": "                prev_actions.ndim != 2"
+        },
+        {
+          "line": 100,
+          "text": "                or prev_actions.shape[0] != action_horizon"
+        },
+        {
+          "line": 101,
+          "text": "                or not 0 < prev_actions.shape[1] <= model_action_dim"
+        },
+        {
+          "line": 104,
+          "text": "                    \"RTC prev_action_chunk must contain one external action chunk with \""
+        },
+        {
+          "line": 105,
+          "text": "                    f\"{action_horizon} steps and at most {model_action_dim} dimensions; \""
+        },
+        {
+          "line": 106,
+          "text": "                    f\"got {prev_actions.shape}.\""
+        },
+        {
+          "line": 108,
+          "text": "            if not np.isfinite(prev_actions).all():"
+        },
+        {
+          "line": 109,
+          "text": "                raise ValueError(\"RTC prev_action_chunk contains non-finite values.\")"
+        },
+        {
+          "line": 110,
+          "text": "            # The client sends actions in the same external coordinates it receives."
+        },
+        {
+          "line": 112,
+          "text": "            # model's normalized action space. AlohaOutputs, for example, returns"
+        },
+        {
+          "line": 113,
+          "text": "            # 14 dimensions while the model pads its internal action space to 32."
+        },
+        {
+          "line": 114,
+          "text": "            rtc_obs = dict(obs)"
+        },
+        {
+          "line": 115,
+          "text": "            rtc_obs[\"actions\"] = prev_actions.copy()"
+        },
+        {
+          "line": 116,
+          "text": "            rtc_inputs = self._input_transform(rtc_obs)"
+        },
+        {
+          "line": 117,
+          "text": "            normalized_prev_actions = np.asarray(rtc_inputs[\"actions\"], dtype=np.float32)"
+        },
+        {
+          "line": 118,
+          "text": "            expected_model_shape = (action_horizon, model_action_dim)"
+        },
+        {
+          "line": 119,
+          "text": "            if normalized_prev_actions.shape != expected_model_shape:"
+        },
+        {
+          "line": 121,
+          "text": "                    f\"Transformed RTC prefix must have shape {expected_model_shape}, \""
+        },
+        {
+          "line": 122,
+          "text": "                    f\"got {normalized_prev_actions.shape}.\""
+        },
+        {
+          "line": 124,
+          "text": "            if not np.isfinite(normalized_prev_actions).all():"
+        },
+        {
+          "line": 125,
+          "text": "                raise ValueError(\"Transformed RTC prefix contains non-finite values.\")"
+        },
+        {
+          "line": 126,
+          "text": "            max_guidance_weight = float(rtc_request.get(\"max_guidance_weight\", 10.0))"
+        },
+        {
+          "line": 128,
+          "text": "                raise ValueError(\"RTC max_guidance_weight must be finite and positive.\")"
+        },
+        {
+          "line": 130,
+          "text": "                rtc_prev_action_chunk=jnp.asarray(normalized_prev_actions[None, ...]),"
+        },
+        {
+          "line": 131,
+          "text": "                rtc_inference_delay=jnp.asarray("
+        },
+        {
+          "line": 132,
+          "text": "                    np.clip(int(rtc_request[\"inference_delay\"]), 0, action_horizon), dtype=jnp.int32"
+        },
+        {
+          "line": 134,
+          "text": "                rtc_prefix_attention_horizon=jnp.asarray("
+        },
+        {
+          "line": 135,
+          "text": "                    np.clip(int(rtc_request[\"prefix_attention_horizon\"]), 0, action_horizon), dtype=jnp.int32"
+        },
+        {
+          "line": 137,
+          "text": "                rtc_max_guidance_weight=jnp.asarray(max_guidance_weight, dtype=jnp.float32),"
+        },
+        {
+          "line": 142,
+          "text": "            if noise.ndim == 2:  # If noise is (action_horizon, action_dim), add batch dimension"
+        },
+        {
+          "line": 143,
+          "text": "                noise = noise[None, ...]  # Make it (1, action_horizon, action_dim)"
+        },
+        {
+          "line": 149,
+          "text": "            \"state\": inputs[\"state\"],"
+        },
+        {
+          "line": 150,
+          "text": "            \"actions\": self._sample_actions(sample_rng_or_pytorch_device, observation, **sample_kwargs),"
+        },
+        {
+          "line": 165,
+          "text": "    def metadata(self) -> dict[str, Any]:"
+        },
+        {
+          "line": 166,
+          "text": "        metadata = dict(self._metadata)"
+        },
+        {
+          "line": 167,
+          "text": "        if hasattr(self._model, \"action_horizon\"):"
+        },
+        {
+          "line": 168,
+          "text": "            metadata.setdefault(\"action_horizon\", int(self._model.action_horizon))"
+        },
+        {
+          "line": 169,
+          "text": "        if hasattr(self._model, \"action_dim\"):"
+        },
+        {
+          "line": 170,
+          "text": "            metadata.setdefault(\"action_dim\", int(self._model.action_dim))"
+        },
+        {
+          "line": 171,
+          "text": "        if self._rtc_supported:"
+        },
+        {
+          "line": 172,
+          "text": "            metadata[\"openpi_rtc\"] = {"
+        },
+        {
+          "line": 177,
+          "text": "        return metadata"
+        },
+        {
+          "line": 192,
+          "text": "    def infer(self, obs: dict) -> dict:  # type: ignore[misc]"
+        },
+        {
+          "line": 193,
+          "text": "        results = self._policy.infer(obs)"
+        }
+      ]
+    },
+    {
+      "path": "/home/oyjt/openpi/packages/openpi-client/src/openpi_client/websocket_client_policy.py",
+      "bytes": 2131,
+      "sha256": "36557cb0b91ccf31cd4fb4b508306850d76ed0feb4028dac5182d0f5a5d88005",
+      "truncated": false,
+      "selected_lines": [
+        {
+          "line": 27,
+          "text": "        self._ws, self._server_metadata = self._wait_for_server()"
+        },
+        {
+          "line": 29,
+          "text": "    def get_server_metadata(self) -> Dict:"
+        },
+        {
+          "line": 30,
+          "text": "        return self._server_metadata"
+        },
+        {
+          "line": 40,
+          "text": "                metadata = msgpack_numpy.unpackb(conn.recv())"
+        },
+        {
+          "line": 41,
+          "text": "                return conn, metadata"
+        },
+        {
+          "line": 47,
+          "text": "    def infer(self, obs: Dict) -> Dict:  # noqa: UP006"
+        }
+      ]
+    },
+    {
+      "path": "/home/oyjt/openpi/src/openpi/serving/websocket_policy_server.py",
+      "bytes": 3274,
+      "sha256": "6575446a7173effb41d4980bf7acf53d8a5abaf9a9bcb6768077b1c18e48571e",
+      "truncated": false,
+      "selected_lines": [
+        {
+          "line": 26,
+          "text": "        metadata: dict | None = None,"
+        },
+        {
+          "line": 31,
+          "text": "        self._metadata = metadata or {}"
+        },
+        {
+          "line": 52,
+          "text": "        await websocket.send(packer.pack(self._metadata))"
+        },
+        {
+          "line": 64,
+          "text": "                action = self._policy.infer(obs)"
+        },
+        {
+          "line": 67,
+          "text": "                action[\"server_timing\"] = {"
+        },
+        {
+          "line": 72,
+          "text": "                    action[\"server_timing\"][\"prev_total_ms\"] = prev_total_time * 1000"
+        },
+        {
+          "line": 74,
+          "text": "                await websocket.send(packer.pack(action))"
+        }
+      ]
+    }
+  ],
+  "repository_head": {
+    "stdout": "d2245527a767707c19d7305caacb02fa5de89dc3\n",
+    "exit_code": 0
+  },
+  "repository_status": {
+    "stdout": "",
+    "exit_code": 0
+  },
+  "listening_tcp_ports": {
+    "stdout": "LISTEN 0      5                                   127.0.0.1:61209 0.0.0.0:*\nLISTEN 0      1024                                127.0.0.1:34021 0.0.0.0:*\nLISTEN 0      1024                                127.0.0.1:34521 0.0.0.0:*\nLISTEN 0      70                                  127.0.0.1:33060 0.0.0.0:*\nLISTEN 0      511                                 127.0.0.1:33219 0.0.0.0:*\nLISTEN 0      128                                 127.0.0.1:33331 0.0.0.0:*\nLISTEN 0      10                                  127.0.0.1:35600 0.0.0.0:*\nLISTEN 0      10                                  127.0.0.1:37600 0.0.0.0:*\nLISTEN 0      128                                 127.0.0.1:40089 0.0.0.0:*\nLISTEN 0      128                                 127.0.0.1:40519 0.0.0.0:*\nLISTEN 0      4096                100.119.139.82%tailscale0:54943 0.0.0.0:*\nLISTEN 0      4096                                127.0.0.1:40751 0.0.0.0:*\nLISTEN 0      128                                 127.0.0.1:42281 0.0.0.0:*\nLISTEN 0      511                                 127.0.0.1:41517 0.0.0.0:*\nLISTEN 0      128                                 127.0.0.1:44727 0.0.0.0:*\nLISTEN 0      4096                                127.0.0.1:45389 0.0.0.0:*\nLISTEN 0      128                                 127.0.0.1:17890 0.0.0.0:*\nLISTEN 0      4096                             172.19.5.252:46829 0.0.0.0:*\nLISTEN 0      4096                                  0.0.0.0:6098  0.0.0.0:*\nLISTEN 0      4096                             172.19.5.252:47003 0.0.0.0:*\nLISTEN 0      128                                   0.0.0.0:6006  0.0.0.0:*\nLISTEN 0      4096                                  0.0.0.0:8080  0.0.0.0:*\nLISTEN 0      50                                    0.0.0.0:139   0.0.0.0:*\nLISTEN 0      128                                   0.0.0.0:22    0.0.0.0:*\nLISTEN 0      50                                    0.0.0.0:445   0.0.0.0:*\nLISTEN 0      151                                   0.0.0.0:3306  0.0.0.0:*\nLISTEN 0      4096                                127.0.0.1:28028 0.0.0.0:*\nLISTEN 0      4096                                127.0.0.1:28028 0.0.0.0:*\nLISTEN 0      4096                                127.0.0.1:28028 0.0.0.0:*\nLISTEN 0      4096                                127.0.0.1:28028 0.0.0.0:*\nLISTEN 0      4096                             172.19.5.252:40545 0.0.0.0:*\nLISTEN 0      4096                            127.0.0.53%lo:53    0.0.0.0:*\nLISTEN 0      4096                             172.19.5.252:39809 0.0.0.0:*\nLISTEN 0      4096                             172.19.5.252:32941 0.0.0.0:*\nLISTEN 0      100                                   0.0.0.0:9000  0.0.0.0:*\nLISTEN 0      128                                 127.0.0.1:631   0.0.0.0:*\nLISTEN 0      128                                 127.0.0.1:6010  0.0.0.0:*\nLISTEN 0      511                                 127.0.0.1:4886  0.0.0.0:*\nLISTEN 0      4096                             172.19.5.252:60847 0.0.0.0:*\nLISTEN 0      4096                             172.19.5.252:60839 0.0.0.0:*\nLISTEN 0      511                                 127.0.0.1:6379  0.0.0.0:*\nLISTEN 0      511                                 127.0.0.1:9210  0.0.0.0:*\nLISTEN 0      4096                                127.0.0.1:9097  0.0.0.0:*\nLISTEN 0      4096                             172.19.5.252:55753 0.0.0.0:*\nLISTEN 0      4096                             172.19.5.252:50187 0.0.0.0:*\nLISTEN 0      4096                             172.19.5.252:51141 0.0.0.0:*\nLISTEN 0      4096                             172.19.5.252:49267 0.0.0.0:*\nLISTEN 0      4096                             172.19.5.252:50165 0.0.0.0:*\nLISTEN 0      4096                             172.19.5.252:52417 0.0.0.0:*\nLISTEN 0      4096                             172.19.5.252:52629 0.0.0.0:*\nLISTEN 0      128                                 127.0.0.1:16067 0.0.0.0:*\nLISTEN 0      4096                             172.19.5.252:51697 0.0.0.0:*\nLISTEN 0      4096                             172.19.5.252:52109 0.0.0.0:*\nLISTEN 0      128                                     [::1]:17890    [::]:*\nLISTEN 0      4096                                        *:33569       *:*\nLISTEN 0      4096                                        *:42871       *:*\nLISTEN 0      128                                     [::1]:6010     [::]:*\nLISTEN 0      511                                     [::1]:6379     [::]:*\nLISTEN 0      128                                     [::1]:631      [::]:*\nLISTEN 0      2                                       [::1]:3350     [::]:*\nLISTEN 0      4096                                     [::]:6098     [::]:*\nLISTEN 0      4096                                        *:7899        *:*\nLISTEN 0      4096                                        *:7898        *:*\nLISTEN 0      4096                                        *:7897        *:*\nLISTEN 0      4096                                        *:7895        *:*\nLISTEN 0      4096                                     [::]:8080     [::]:*\nLISTEN 0      4096                                        *:1053        *:*\nLISTEN 0      50                                       [::]:139      [::]:*\nLISTEN 0      128                                      [::]:22       [::]:*\nLISTEN 0      50                                       [::]:445      [::]:*\nLISTEN 0      2                                           *:3389        *:*\nLISTEN 0      4096                                        *:9090        *:*\nLISTEN 0      4096   [fd7a:115c:a1e0::aa3a:8b53]%tailscale0:63642    [::]:*\nLISTEN 0      128                                         *:21118       *:*\n",
+    "exit_code": 0
+  },
+  "gpu_inventory": {
+    "stdout": "NVIDIA GeForce RTX 4090, 112 MiB, 49140 MiB\nNVIDIA GeForce RTX 4090, 36549 MiB, 49140 MiB\nNVIDIA GeForce RTX 4090, 36404 MiB, 49140 MiB\nNVIDIA GeForce RTX 4090, 36322 MiB, 49140 MiB\nNVIDIA GeForce RTX 4090, 36328 MiB, 49140 MiB\nNVIDIA GeForce RTX 4090, 2155 MiB, 49140 MiB\nNVIDIA GeForce RTX 4090, 16 MiB, 49140 MiB\nNVIDIA GeForce RTX 4090, 10691 MiB, 49140 MiB\n",
+    "exit_code": 0
+  },
+  "status": "read_only_success"
+}

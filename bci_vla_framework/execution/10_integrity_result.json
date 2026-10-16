@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-16",
+  "scope": "offline_comparison_delivery",
+  "result": "PASS",
+  "count": 17,
+  "checks": [
+    "only 01-10 completed",
+    "11 not started",
+    "G1 conditional and G2-G4 unstarted",
+    "169 software checks pass",
+    "complete method registry",
+    "eight virtual-only ablations",
+    "4 small fixtures and 12 equal-horizon checks",
+    "exact values and measured computation recorded",
+    "O2 explicit non-deployable noisy confirmation",
+    "legacy unavailable not imputed",
+    "no execution permissions",
+    "real validation remains unfilled",
+    "no research win or G2 claim",
+    "10.1-10.8 mapped",
+    "10 hashes intact",
+    "09 hashes intact",
+    "TXT BOM CRLF intact"
+  ],
+  "not_evaluated": [
+    "real validation tuning",
+    "complete NOIR/RBC reproductions",
+    "formal performance comparison",
+    "robot execution",
+    "G2-G4"
+  ]
+}

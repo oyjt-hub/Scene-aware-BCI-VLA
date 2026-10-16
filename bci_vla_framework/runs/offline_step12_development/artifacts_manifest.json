@@ -1,0 +1,41 @@
+{
+  "scope": "L1_software_synthetic_replay_development_only",
+  "files": [
+    {
+      "path": "runs\\offline_step12_development\\evaluation_joined.jsonl",
+      "sha256": "0733f7171b71d14fd7456ca1e92253e8f4bdac4dbc0b8af6ecccae6654265fa7"
+    },
+    {
+      "path": "runs\\offline_step12_development\\evaluation_private\\run_plan.json",
+      "sha256": "c9071763390b4149a9e8f3dbb7f0117594d18152f713813d1c6bf774ba03ca98"
+    },
+    {
+      "path": "runs\\offline_step12_development\\evaluation_private\\worlds.jsonl",
+      "sha256": "965b505025a75ad5c2f35f5391698fc433cae1eadb1f5c21038c963e0db05b3f"
+    },
+    {
+      "path": "runs\\offline_step12_development\\fault_acceptance.json",
+      "sha256": "d6a1f6764cd0fd38ff451cba3a6879836b7ce53730c43f47e7e75795b79bd33f"
+    },
+    {
+      "path": "runs\\offline_step12_development\\mechanism_checks.json",
+      "sha256": "5107106e4c00bf16177216fcaf3f7213887c298598c2bed925277e606a066ee4"
+    },
+    {
+      "path": "runs\\offline_step12_development\\online\\episodes.jsonl",
+      "sha256": "39c70f05759eb539d2dda00f23b4d4c949e0daeaea704aeec8cbb916dd31e017"
+    },
+    {
+      "path": "runs\\offline_step12_development\\online\\journals.jsonl.gz",
+      "sha256": "5e8dd08b6bec3cebfe1d3478bfdc7023063d5e10ca135f0ca7851b9751438e54"
+    },
+    {
+      "path": "runs\\offline_step12_development\\oracle_audit.json",
+      "sha256": "16e01f4937b0e6714258ef39d0aebf4f0d80ebe18ae0d52b23aacf3cc048047d"
+    },
+    {
+      "path": "runs\\offline_step12_development\\summary.json",
+      "sha256": "e6755791ec18bfe2f846148fbfb1ef2865930526dc840f564445d43920c88fbf"
+    }
+  ]
+}

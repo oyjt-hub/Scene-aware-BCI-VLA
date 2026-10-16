@@ -1,0 +1,249 @@
+{
+  "schema_version": "channel-model/1.0",
+  "profile_id": "simulation-binary-v1",
+  "status": "simulation_only",
+  "provenance": "illustrative_not_fitted",
+  "deployment_allowed": false,
+  "scope": {
+    "mapping_id": "binary-v1",
+    "stimulus_version": "stimulus-v1",
+    "layout_id": "fixture-two-markers",
+    "sample_rate_hz": 250,
+    "duration_s": [
+      1.0,
+      2.0
+    ],
+    "symbols": [
+      "0",
+      "1"
+    ],
+    "max_stable_window_s": 2.0,
+    "observation_assumption": "state_constant_within_window"
+  },
+  "mode_ids": [
+    "normal",
+    "flip"
+  ],
+  "matrices": {
+    "TASK_QUERY": {
+      "normal": {
+        "1.0": {
+          "0": {
+            "0": 0.85,
+            "1": 0.1,
+            "NO_RESPONSE": 0.05
+          },
+          "1": {
+            "1": 0.85,
+            "0": 0.1,
+            "NO_RESPONSE": 0.05
+          }
+        },
+        "2.0": {
+          "0": {
+            "0": 0.85,
+            "1": 0.1,
+            "NO_RESPONSE": 0.05
+          },
+          "1": {
+            "1": 0.85,
+            "0": 0.1,
+            "NO_RESPONSE": 0.05
+          }
+        }
+      },
+      "flip": {
+        "1.0": {
+          "0": {
+            "1": 0.85,
+            "0": 0.1,
+            "NO_RESPONSE": 0.05
+          },
+          "1": {
+            "0": 0.85,
+            "1": 0.1,
+            "NO_RESPONSE": 0.05
+          }
+        },
+        "2.0": {
+          "0": {
+            "1": 0.85,
+            "0": 0.1,
+            "NO_RESPONSE": 0.05
+          },
+          "1": {
+            "0": 0.85,
+            "1": 0.1,
+            "NO_RESPONSE": 0.05
+          }
+        }
+      }
+    },
+    "CHANNEL_PROBE": {
+      "normal": {
+        "1.0": {
+          "0": {
+            "0": 0.9,
+            "1": 0.05,
+            "NO_RESPONSE": 0.05
+          },
+          "1": {
+            "1": 0.9,
+            "0": 0.05,
+            "NO_RESPONSE": 0.05
+          }
+        },
+        "2.0": {
+          "0": {
+            "0": 0.9,
+            "1": 0.05,
+            "NO_RESPONSE": 0.05
+          },
+          "1": {
+            "1": 0.9,
+            "0": 0.05,
+            "NO_RESPONSE": 0.05
+          }
+        }
+      },
+      "flip": {
+        "1.0": {
+          "0": {
+            "1": 0.9,
+            "0": 0.05,
+            "NO_RESPONSE": 0.05
+          },
+          "1": {
+            "0": 0.9,
+            "1": 0.05,
+            "NO_RESPONSE": 0.05
+          }
+        },
+        "2.0": {
+          "0": {
+            "1": 0.9,
+            "0": 0.05,
+            "NO_RESPONSE": 0.05
+          },
+          "1": {
+            "0": 0.9,
+            "1": 0.05,
+            "NO_RESPONSE": 0.05
+          }
+        }
+      }
+    },
+    "CONFIRM": {
+      "normal": {
+        "1.0": {
+          "0": {
+            "0": 0.8,
+            "1": 0.15,
+            "NO_RESPONSE": 0.05
+          },
+          "1": {
+            "1": 0.8,
+            "0": 0.15,
+            "NO_RESPONSE": 0.05
+          }
+        },
+        "2.0": {
+          "0": {
+            "0": 0.8,
+            "1": 0.15,
+            "NO_RESPONSE": 0.05
+          },
+          "1": {
+            "1": 0.8,
+            "0": 0.15,
+            "NO_RESPONSE": 0.05
+          }
+        }
+      },
+      "flip": {
+        "1.0": {
+          "0": {
+            "1": 0.8,
+            "0": 0.15,
+            "NO_RESPONSE": 0.05
+          },
+          "1": {
+            "0": 0.8,
+            "1": 0.15,
+            "NO_RESPONSE": 0.05
+          }
+        },
+        "2.0": {
+          "0": {
+            "1": 0.8,
+            "0": 0.15,
+            "NO_RESPONSE": 0.05
+          },
+          "1": {
+            "0": 0.8,
+            "1": 0.15,
+            "NO_RESPONSE": 0.05
+          }
+        }
+      }
+    }
+  },
+  "compliance": {
+    "compliant": {
+      "0": {
+        "0": 1,
+        "1": 0,
+        "NO_RESPONSE": 0,
+        "UNKNOWN": 0
+      },
+      "1": {
+        "1": 1,
+        "0": 0,
+        "NO_RESPONSE": 0,
+        "UNKNOWN": 0
+      }
+    },
+    "imperfect": {
+      "0": {
+        "0": 0.85,
+        "1": 0.05,
+        "NO_RESPONSE": 0.1,
+        "UNKNOWN": 0
+      },
+      "1": {
+        "1": 0.85,
+        "0": 0.05,
+        "NO_RESPONSE": 0.1,
+        "UNKNOWN": 0
+      }
+    },
+    "unknown": {
+      "0": {
+        "0": 0,
+        "1": 0,
+        "NO_RESPONSE": 0,
+        "UNKNOWN": 1
+      },
+      "1": {
+        "1": 0,
+        "0": 0,
+        "NO_RESPONSE": 0,
+        "UNKNOWN": 1
+      }
+    },
+    "uninformative": {
+      "0": {
+        "0": 0.45,
+        "1": 0.45,
+        "NO_RESPONSE": 0.1,
+        "UNKNOWN": 0
+      },
+      "1": {
+        "1": 0.45,
+        "0": 0.45,
+        "NO_RESPONSE": 0.1,
+        "UNKNOWN": 0
+      }
+    }
+  }
+}

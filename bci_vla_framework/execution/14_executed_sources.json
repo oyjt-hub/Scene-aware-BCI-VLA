@@ -1,0 +1,40 @@
+{
+  "deployed_sources": [
+    {
+      "remote": "/home/oyjt/Scene-aware-BCI-VLA-runs/step14_libero_20261016_v3/step14_libero_worker.py",
+      "local": "D:\\Scene_Aware\\bci_vla_framework\\execution\\step14_libero_worker.py",
+      "sha256": "3c61e513f4e09cf2af898f8a0bb04dc6b9a20fd2a96fcbd454bdd7026a815738",
+      "matches_local": true
+    },
+    {
+      "remote": "/home/oyjt/Scene-aware-BCI-VLA-runs/step14_libero_20261016_v3/step14_libero_orchestrator.py",
+      "local": "D:\\Scene_Aware\\bci_vla_framework\\execution\\step14_libero_orchestrator.py",
+      "sha256": "f1a8c35edbde13aa705b14a6a6de3fc8794a98f17f5415466627ea6bbf478929",
+      "matches_local": true
+    },
+    {
+      "remote": "/home/oyjt/Scene-aware-BCI-VLA-runs/step14_libero_20261016_v3/bci_vla/pilot/libero_gate.py",
+      "local": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\pilot\\libero_gate.py",
+      "sha256": "fdca6f8b87742c8eb724b2bfb02e706f5c5c20a71347d2a924682438c1f7278f",
+      "matches_local": true
+    },
+    {
+      "remote": "/home/oyjt/Scene-aware-BCI-VLA-runs/step14_libero_20261016_v3/bci_vla/pilot/libero_actions.py",
+      "local": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\pilot\\libero_actions.py",
+      "sha256": "83af0ce8b41900a88ee9a878e05f7fa339ad39a8288a6ed2b4f3c9bc5304ea87",
+      "matches_local": true
+    },
+    {
+      "remote": "/home/oyjt/Scene-aware-BCI-VLA-runs/step14_libero_20261016_v3/bci_vla/protocols.py",
+      "local": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\protocols.py",
+      "sha256": "3de0e8a42c1462f37af4f2a1769aea907a5996c9733e15b0ea522a23ac44c424",
+      "matches_local": true
+    }
+  ],
+  "gripper_reference": {
+    "path": "/home/oyjt/starVLA/examples/LIBERO/eval_files/eval_libero.py",
+    "source_sha256": "51eb99906b46fa96d87d7bee3b838ed1f940c92e32ebbecde8e0dc512ac89d0b",
+    "function": "def _binarize_gripper_open(open_val: np.ndarray | float) -> np.ndarray:\n    v = float(np.asarray(open_val).reshape(-1)[0])\n    bin_val = 1.0 - 2.0 * (v > 0.5)\n    return np.asarray([bin_val], dtype=np.float32)"
+  },
+  "audit_scope": "postrun_source_copy_consistency"
+}

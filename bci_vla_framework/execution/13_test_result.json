@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-16",
+  "scope": "pilot13_nonreal_software_and_all_frozen_regressions",
+  "tests_run": 365,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "result": "PASS",
+  "hardware_calls": 0,
+  "cloud_calls": 0,
+  "software_pass_does_not_grant_G2": true,
+  "software_pass_does_not_grant_G3": true
+}

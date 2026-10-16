@@ -1,0 +1,164 @@
+[
+  {
+    "record_id": "calibration-init0-target0",
+    "split": "calibration",
+    "init_state_index": 0,
+    "target_index": 0,
+    "held": {
+      "cream_cheese_1": true,
+      "wine_bottle_1": false
+    },
+    "predicate_details": {
+      "cream_cheese_1": {
+        "grasp_contact": true,
+        "lift_m": 0.0587604130002074,
+        "held": true
+      },
+      "wine_bottle_1": {
+        "grasp_contact": false,
+        "lift_m": 3.731459585765151e-13,
+        "held": false
+      }
+    },
+    "actual_policy_steps": 89,
+    "simulator_reset_wall_s": 1.2294882079586387,
+    "checkpoint_sha256": "26b36799a702ca920467c987096a8ccb5f476c6965af6c7f2fd419ecb6893bf2",
+    "source_kind": "actual_model_and_simulator",
+    "human_time_s": null
+  },
+  {
+    "record_id": "calibration-init0-target1",
+    "split": "calibration",
+    "init_state_index": 0,
+    "target_index": 1,
+    "held": {
+      "cream_cheese_1": false,
+      "wine_bottle_1": true
+    },
+    "predicate_details": {
+      "cream_cheese_1": {
+        "grasp_contact": false,
+        "lift_m": 1.6209256159527285e-14,
+        "held": false
+      },
+      "wine_bottle_1": {
+        "grasp_contact": true,
+        "lift_m": 0.055305578467520156,
+        "held": true
+      }
+    },
+    "actual_policy_steps": 102,
+    "simulator_reset_wall_s": 1.229778636014089,
+    "checkpoint_sha256": "26b36799a702ca920467c987096a8ccb5f476c6965af6c7f2fd419ecb6893bf2",
+    "source_kind": "actual_model_and_simulator",
+    "human_time_s": null
+  },
+  {
+    "record_id": "calibration-init1-target0",
+    "split": "calibration",
+    "init_state_index": 1,
+    "target_index": 0,
+    "held": {
+      "cream_cheese_1": false,
+      "wine_bottle_1": false
+    },
+    "predicate_details": {
+      "cream_cheese_1": {
+        "grasp_contact": false,
+        "lift_m": 1.6209256159527285e-14,
+        "held": false
+      },
+      "wine_bottle_1": {
+        "grasp_contact": false,
+        "lift_m": 3.731459585765151e-13,
+        "held": false
+      }
+    },
+    "actual_policy_steps": 160,
+    "simulator_reset_wall_s": 1.3160731177777052,
+    "checkpoint_sha256": "26b36799a702ca920467c987096a8ccb5f476c6965af6c7f2fd419ecb6893bf2",
+    "source_kind": "actual_model_and_simulator",
+    "human_time_s": null
+  },
+  {
+    "record_id": "calibration-init1-target1",
+    "split": "calibration",
+    "init_state_index": 1,
+    "target_index": 1,
+    "held": {
+      "cream_cheese_1": false,
+      "wine_bottle_1": true
+    },
+    "predicate_details": {
+      "cream_cheese_1": {
+        "grasp_contact": false,
+        "lift_m": 1.6209256159527285e-14,
+        "held": false
+      },
+      "wine_bottle_1": {
+        "grasp_contact": true,
+        "lift_m": 0.053346379711480485,
+        "held": true
+      }
+    },
+    "actual_policy_steps": 93,
+    "simulator_reset_wall_s": 1.3391213750001043,
+    "checkpoint_sha256": "26b36799a702ca920467c987096a8ccb5f476c6965af6c7f2fd419ecb6893bf2",
+    "source_kind": "actual_model_and_simulator",
+    "human_time_s": null
+  },
+  {
+    "record_id": "calibration_holdout-init2-target0",
+    "split": "calibration_holdout",
+    "init_state_index": 2,
+    "target_index": 0,
+    "held": {
+      "cream_cheese_1": false,
+      "wine_bottle_1": false
+    },
+    "predicate_details": {
+      "cream_cheese_1": {
+        "grasp_contact": false,
+        "lift_m": 1.6209256159527285e-14,
+        "held": false
+      },
+      "wine_bottle_1": {
+        "grasp_contact": false,
+        "lift_m": 3.731459585765151e-13,
+        "held": false
+      }
+    },
+    "actual_policy_steps": 160,
+    "simulator_reset_wall_s": 1.1967593720182776,
+    "checkpoint_sha256": "26b36799a702ca920467c987096a8ccb5f476c6965af6c7f2fd419ecb6893bf2",
+    "source_kind": "actual_model_and_simulator",
+    "human_time_s": null
+  },
+  {
+    "record_id": "calibration_holdout-init2-target1",
+    "split": "calibration_holdout",
+    "init_state_index": 2,
+    "target_index": 1,
+    "held": {
+      "cream_cheese_1": false,
+      "wine_bottle_1": false
+    },
+    "predicate_details": {
+      "cream_cheese_1": {
+        "grasp_contact": false,
+        "lift_m": 1.6209256159527285e-14,
+        "held": false
+      },
+      "wine_bottle_1": {
+        "grasp_contact": false,
+        "lift_m": 3.7325698087897763e-13,
+        "held": false
+      }
+    },
+    "actual_policy_steps": 160,
+    "simulator_reset_wall_s": 1.2066670709755272,
+    "checkpoint_sha256": "26b36799a702ca920467c987096a8ccb5f476c6965af6c7f2fd419ecb6893bf2",
+    "source_kind": "actual_model_and_simulator",
+    "human_time_s": null
+  }
+]

@@ -1,0 +1,37 @@
+{
+  "schema_version": "bci-vla/1.0",
+  "event_id": "execution",
+  "host_id": "ui",
+  "sequence": 0,
+  "kind": "EXECUTION",
+  "mode": "EXECUTION_EVENT",
+  "interaction_id": "i-TASK_QUERY",
+  "response_to": null,
+  "query_id": null,
+  "probe_id": null,
+  "session_id": "fixture-session",
+  "task_id": "fixture-task",
+  "task_revision": 1,
+  "scene_id": "fixture-scene",
+  "scene_revision": 1,
+  "mapping_id": "binary-v1",
+  "stimulus_version": "stimulus-v1",
+  "channel_profile_id": "uncalibrated-v1",
+  "sent_at": "2026-10-15T00:00:00Z",
+  "expires_at": "2026-10-15T00:00:10Z",
+  "clock_offset_ms": 0,
+  "clock_uncertainty_ms": 0,
+  "payload": {
+    "execution_id": "fixture-execution",
+    "contract_id": "fixture-contract",
+    "contract_revision": 1,
+    "stage": "command_dispatched",
+    "at": {
+      "host_id": "executor",
+      "at": "2026-10-15T00:00:00Z",
+      "offset_ms": 0,
+      "uncertainty_ms": 0
+    },
+    "evidence_ref": null
+  }
+}

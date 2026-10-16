@@ -1,0 +1,393 @@
+﻿BCI—VLA通用交互框架：相近论文检索与NOIR对比建议
+检索日期：2026-10-15
+对应计划：D:\Scene_Aware\BCI_VLA通用交互框架_逐步执行手册.txt
+性质：定向文献核查与研究设计分析，不是穷尽性系统综述。
+本次没有启动开发、实验、训练、云模型调用或机器人。
+
+======================================================================
+一、主要判断
+======================================================================
+
+1. 有多篇相近工作，且部分与拟议核心方法高度重合。
+2. “BCI接入机器人/VLA”“结构化任务”“意图信念”“不确定时询问”“执行反馈”“可替换适配器”都分别已有先例。
+3. 尤其重要：2013年的概率BCI已经使用belief、wait/act及等待/错误成本；POMDP-BCI已在SSVEP、cVEP、MI上采用统一决策框架。不能把这些基本机制本身写为新贡献。
+4. BAL与ActivAsk已把语义任务澄清放入概率意图估计和主动问题选择；KnowNo已研究校准不确定性与请求帮助。
+5. NOIR适合做系统层相关工作及对照来源，但仅优于NOIR不能证明新的协商算法成立。
+6. 尚可研究的方向是：语义任务歧义、真实BCI误码/时间、执行后果共同作用下，联合选择问题、呈现/采集方式及执行时机，并验证同一核心跨BCI和VLA迁移。
+7. 第6点是候选研究差异，不是本次已经证明的独创性。必须通过数学机制、强基线和真实结果建立。
+
+术语区分：
+  命令识别决策：是否继续采EEG、何时输出一个选择。
+  语义任务协商：已经选中某对象后，还缺什么目标信息、应该问哪个问题。
+  执行辅助：根据用户输入与目标信念生成/修正动作。
+  工程监督：确认、取消、版本、超时、能力与结果验证。
+这些层面相关，但不能混用评价结论。
+
+======================================================================
+二、直接脑机—机器人/VLA相关工作
+======================================================================
+
+[01] NOIR: Neural Signal Operated Intelligent Robots for Everyday Activities
+年份/状态：CoRL 2023正式论文，PMLR 229:1737–1760。
+原文：https://proceedings.mlr.press/v229/zhang23f.html
+作者项目：https://noir-corl.github.io/
+预印本：https://arxiv.org/abs/2311.01454
+核查：出版页、原始项目及论文机制。
+已有内容：SSVEP选择对象，MI指定技能/参数，咬牙肌电确认或拒绝；参数化技能执行；从历史学习预测对象、技能和参数，减少脑机输入。
+关系判断：分层共享自主、预测意图及确认已有；执行端是技能库，不能等同于可替换VLA框架。
+比较提醒：项目包含IronCloth等任务；不能笼统说NOIR完全不涉及布料，也不能把它当成完全没有上下文预测的菜单系统。
+
+[02] NOIR 2.0: Neural Signal Operated Intelligent Robots for Everyday Activities
+年份/状态：CoRL 2024 CoRoboLearn Workshop Spotlight；2025-11-25上传arXiv。不要写成CoRL主会论文。
+原文：https://arxiv.org/abs/2511.20848
+作者PDF：https://hvcho.github.io/data/corl_paper.pdf
+Workshop接收列表：https://sites.google.com/view/corobolearn/accepted-papers
+核查：作者全文、arXiv、Workshop列表。
+已有内容：GPT-4o利用单示例状态序列预测下一对象/技能，DINOv2预测参数；仍有SSVEP、MI、EMG与拒绝/打断；使用BDDL目标条件。
+关系判断：上下文预测、提议后纠正及结构化目标表达已有。所核全文未见按BCI误码和时间成本优化澄清问题的策略或跨VLA迁移验证。
+比较提醒：应讨论增强的预测能力，不能只比较最繁琐的固定选择流程。
+
+[03] An Augmented Reality Brain-Robot Interface for Generalist Robot Arm Manipulation
+年份/状态：2026，arXiv标注RO-MAN 2026已接收。
+原文：https://arxiv.org/abs/2606.16413
+全文：https://arxiv.org/html/2606.16413v1
+作者项目：https://ar-bri-manip.github.io/
+核查：全文及作者项目。
+已有内容：眼动选物、MI选择Place/Use、微调π0.5执行多步骤日常任务；18名健康参与者；有概率门控、误选取消和恢复。
+关系判断：与“场景相关菜单＋脑机高层意图＋VLA”非常接近，适合补充为较新的系统级相关工作。
+差异边界：所核内容未见通道成本条件化的主动澄清或跨BCI×VLA迁移。
+
+[04] VLA Model-Expert Collaboration for Bi-directional Manipulation Learning
+年份/状态：2025-03-06 arXiv；本次未核到正式发表场所。
+原文：https://arxiv.org/abs/2503.04163
+全文：https://arxiv.org/html/2503.04163v1
+作者项目：https://aoqunjin.github.io/Expert-VLA/
+核查：全文。
+已有内容：VLA与专家按固定周期交替动作，收集协作数据继续学习；涉及多种策略后端，并有SSVEP可行性实验。
+关系判断：多VLA和低带宽BCI共享控制已有。其主要机制是动作交替与双向学习，和高层多轮任务澄清有区别。
+
+[05] Brain-Conditioned Action Policies for Neural Motor Decoding（BrainVLA）
+年份/状态：2026-09-28 arXiv预印本。
+原文：https://arxiv.org/abs/2609.34561
+全文：https://arxiv.org/html/2609.34561v1
+核查：全文。
+已有内容：神经spike编码与语言表示对齐，通过神经soft prompt条件化OpenVLA-OFT；已有神经记录配合渲染视觉进行因果rollout评价。
+关系判断：神经—语言语义桥—VLA已有直接方法；重点是解码与数据效率，不是多轮语义协商。
+重要边界：不能写成SSVEP头皮EEG系统，也不能把其离线记录/rollout称为新开展的实时真人真机闭环。
+
+[06] Brain–computer interface control with artificial intelligence copilots
+年份/状态：Nature Machine Intelligence，2025。
+出版页：https://www.nature.com/articles/s42256-025-01090-y
+全文：https://pmc.ncbi.nlm.nih.gov/articles/PMC12599856/
+核查：出版信息及作者全文。
+已有内容：结合脑机轨迹、任务结构、历史和视觉推断目标，进行光标/机械臂共享自主；含健康人与脊髓损伤参与者。
+关系判断：含噪低维脑机输入与视觉/任务意图结合已有实证。并非VLA，也不以多轮语义澄清为核心。
+
+======================================================================
+三、直接限制“概率脑机决策”新颖性的先例
+======================================================================
+
+[07] POMDP-BCI: A Benchmark of (Re)Active BCI Using POMDP to Issue Commands
+年份/状态：IEEE TBME 2024，71(3):792–802；DOI年份为2023。引用时区分预印本/在线与卷期年份。
+DOI：https://doi.org/10.1109/TBME.2023.3318578
+原始摘要记录：https://pubmed.ncbi.nlm.nih.gov/37747857/
+作者代码：https://github.com/neuroergoISAE/POMDP-BCI
+作者学位论文：https://depozit.isae.fr/theses/2024/2024_Torre_Tresols_Juan_Jesus.pdf
+核查：原始摘要、作者代码及作者论文对应方法。
+已有内容：同一POMDP用于SSVEP、cVEP与MI，基于观察模型和belief作序贯决策，可选择不输出命令；评价误触发、不操作和决策时间。
+关系判断：统一多BCI决策、belief与等待/输出机制已有。主要解决命令识别和采集停止，未见机器人语义澄清和跨VLA闭环。
+
+[08] Probabilistic co-adaptive brain–computer interfacing
+年份/状态：Journal of Neural Engineering，2013，10:066008。
+DOI：https://doi.org/10.1088/1741-2560/10/6/066008
+作者全文：https://homes.cs.washington.edu/~rao/pomdp-bci-JNE-2013.pdf
+原始摘要记录：https://pubmed.ncbi.nlm.nih.gov/24140680/
+核查：作者全文与原始摘要。
+已有内容：脑状态belief，left/right/wait等动作，正确/错误/等待成本，随信号质量改变速度—准确率权衡，并研究共同适应。
+关系判断：给BCI加概率分布、wait/act和错误成本本身不能作为新方法。其任务较简单，不是语义任务与VLA交互。
+
+[09] An online user-centric brain–computer interface based on code-modulated visually evoked potentials and partially observable Markov decision process
+年份/状态：Engineering Applications of Artificial Intelligence，2026，175:114575。
+DOI：https://doi.org/10.1016/j.engappai.2026.114575
+出版页：https://www.sciencedirect.com/science/article/pii/S0952197626008560
+大学记录：https://researchdiscovery.drexel.edu/esploro/outputs/journalArticle/An-online-user-centric-braincomputer-interface-based/991022180001504721
+核查：出版信息、原始摘要与可检索方法内容；出版页访问有时受限。
+已有内容：POMDP脑机决策的真实在线cVEP应用，以用户相关观察模型处理决策速度与错误。
+关系判断：不能把概率BCI在线运行与速度—准确率折中作为本框架首次实现的机制。其主要层级仍为脑机命令判定。
+
+[10] Task Level Hierarchical System for BCI-enabled Shared Autonomy
+年份/状态：IEEE Humanoids 2017。
+作者全文：https://www.cs.columbia.edu/~allen/PAPERS/Humanoids_2017.pdf
+另一作者地址：https://www.cs.columbia.edu/~bchen/assets/files/humanoids2017.pdf
+DOI：https://doi.org/10.1109/HUMANOIDS.2017.8246878
+核查：全文。
+已有内容：预定义任务层级中，不确定节点通过场景内SSVEP选项问用户；机器人自主导航/抓放；无需歧义时可略过询问。
+关系判断：通用BCI机器人架构、场景刺激与按需补选已有。未见belief驱动的成本最优语义提问；跨BCI在该文中主要是设计设想，不能写成已完成多范式实验。
+
+======================================================================
+四、最接近“主动任务协商”的方法
+======================================================================
+
+[11] Bayesian Active Learning for Intent Disambiguation in Interactive Robot Planning（BAL）
+年份/状态：2026-09-28 arXiv；原文标注CoRL 2026接收，项目标注Spotlight。
+原文：https://arxiv.org/abs/2609.34270
+全文：https://arxiv.org/html/2609.34270v1
+作者项目：https://www.huao-li.com/bal/
+核查：全文、作者项目及发表状态说明。
+已有内容：以STL表达候选意图，利用贝叶斯模型维护不确定性并主动选择澄清问题；LLM辅助候选生成/语言表达，后端规划器生成轨迹。
+关系判断：结构化任务＋意图不确定性＋主动提问与本计划高度重合，不能仅用GAT替换LLM便声称超越该机制。
+重要边界：原文把LLM解析得到的效用作为含噪观测，因此不能说其完全没有噪声模型；应区分该噪声与实际BCI回答混淆、刺激时间和通道校准。
+
+[12] ActivAsk: Free-Energy-Guided Clarification for Robotic Grasping Under Ambiguous Instructions
+年份/状态：Robotics，2026，15(8):154。
+出版方全文：https://www.mdpi.com/2218-6581/15/8/154
+核查：全文，重点3.4.3与3.4.4；访问可能受出版方限流影响。
+已有内容：VLM提出结构化问题/候选分区，维护目标belief，用期望自由能选择澄清问题。
+关系判断：与语义belief＋主动澄清＋机器人操作高度接近。所核实现使用合作的确定性二值回答与候选消除，实际脑机误码和问题时长是需另行检验的区别。
+
+[13] Knowing When to Ask: Resolving Uncertainty in Human-Robot Joint Planning via Explicit Dialogue and Implicit Intent Cues
+年份/状态：2026 arXiv；v2日期2026-08-07。
+原文：https://arxiv.org/abs/2603.07822
+全文：https://arxiv.org/html/2603.07822v2
+核查：v2全文。
+已有内容：显式澄清处理语义/通行不确定性；用动态规划优化查询和验证成本；另用隐式运动线索更新意图信念。
+关系判断：问什么与是否值得问的成本机制已有。其查询模型和机器人任务不同；两个模式的严格联合决策不能仅由题名推定。
+版本提醒：检索结果可能显示v1旧题名“Uncertainty Mitigation and Intent Inference: A Dual-Mode Human-Machine Joint Planning System”，引用时用实际所读版本。
+
+[14] Robots That Ask For Help: Uncertainty Alignment for Large Language Model Planners（KnowNo）
+年份/状态：CoRL 2023。
+原文：https://arxiv.org/abs/2307.01928
+作者项目：https://robot-help.github.io/
+核查：原始论文信息和作者项目的方法说明。
+已有内容：共形预测校准候选集，非单例时请求人类帮助，平衡帮助量与任务完成要求。
+关系判断：有校准的不确定性和知道何时求助已有。其任务保证的转换涉及人类正确提供帮助等条件，不能直接搬到可能误解码的BCI回答上。
+
+[15] Adaptive querying for reward learning from human feedback
+年份/状态：Frontiers in Robotics and AI，2026-02-12；DOI含2025。
+原文：https://doi.org/10.3389/frobt.2025.1734564
+全文：https://pmc.ncbi.nlm.nih.gov/articles/PMC12935605/
+核查：全文方法与摘要。
+已有内容：联合选择查询状态与反馈格式，考虑信息增益、反馈成本及获得反馈的概率，用于学习不良行为惩罚。
+关系判断：交互形式和反馈成本联合优化也有先例；对象是奖励学习，和BCI任务意图协商不同。
+
+======================================================================
+五、执行反馈、低带宽控制及其他方法基础
+======================================================================
+
+[16] Hi Robot: Open-Ended Instruction Following with Hierarchical Vision-Language-Action Models
+年份/状态：2025。
+原文：https://arxiv.org/abs/2502.19417
+作者研究页：https://www.pi.website/research/hirobot
+核查：论文信息及作者方法说明。
+已有内容：高层VLM解释复杂指令和实时纠正，生成低层语言指令交给VLA执行。
+影响：在VLA前放高层推理模块、依据用户反馈改指令，已有明确先例。
+
+[17] Inner Monologue: Embodied Reasoning through Planning with Language Models
+年份/状态：CoRL 2022。
+原文：https://arxiv.org/abs/2207.05608
+作者项目：https://innermonologue.github.io/
+核查：原文和作者项目。
+已有内容：将成功检测、场景描述和人类反馈持续加入高层规划上下文，支持重规划和任务修改。
+影响：执行反馈与用户纠正进入高层任务闭环不能单独作为新颖性。
+
+[18] Grounded Vision-Language Interpreter for Long-Horizon Bimanual Task and Motion Planning（ViLaIn-TAMP）
+年份/状态：arXiv初版2025；当前v3为2026-08-03，标注IROS 2026。
+原文：https://arxiv.org/abs/2506.03270
+核查：当前版本原文。
+已有内容：VLM生成结构化PDDL问题，TAMP检查符号/几何可行性，结构化失败反馈用于修正规格。
+影响：结构化任务、执行可行性与失败修正已有；本框架的契约工程仍可实施，但不能仅凭这些组件宣称新方法。
+
+[19] Flow Control: Steering Vision-Language-Action Models with Simple Real-Time Inputs
+年份/状态：2026-06-08 arXiv预印本。
+原文：https://arxiv.org/abs/2606.10180
+作者项目：https://jcykao.github.io/flowcontrol/
+核查：原始论文信息及方法。
+已有内容：用简单实时输入引导flow-matching VLA，无须重新训练/微调策略。
+影响：低带宽用户输入纠正冻结VLA已有方法；本工作不是脑机实验，也不直接解决语义目标澄清。
+
+[20] Shared Autonomy via Hindsight Optimization
+年份/状态：RSS 2015，后续有扩展版本。
+原文：https://arxiv.org/abs/1503.07619
+RSS页：https://www.roboticsproceedings.org/rss11/p32.html
+核查：原文。
+已有内容：维护目标分布并依据期望执行代价辅助用户。
+影响：意图belief与风险辅助是方法基础；其QMDP近似不等于主动提问策略，不能把两者混为一个基线。
+
+[21] Active Intent Disambiguation for Shared Control Robots
+年份/状态：IEEE TNSRE 2020；此前有RSS 2017相关工作。
+原文：https://arxiv.org/abs/2005.03652
+作者全文：https://bpb-us-e1.wpmucdn.com/sites.northwestern.edu/dist/5/1812/files/2020/07/20tsnre_gopinath.pdf
+核查：原始论文。
+已有内容：主动选择控制模式，使后续用户输入更容易区分目标。
+影响：交互模式本身可用于主动消歧已有先例；与语义问题、脑机误码和VLA执行仍需区分。
+
+[22] Optimal Query Selection Using Multi-Armed Bandits
+年份/状态：IEEE Signal Processing Letters 2018，25(12):1870–1874。
+DOI：https://doi.org/10.1109/LSP.2018.2878066
+全文：https://pmc.ncbi.nlm.nih.gov/articles/PMC6777547/
+核查：作者全文。
+已有内容：BCI打字中显式建模证据、状态与query关系；利用语言先验和EEG序贯选择查询子集，并探查可能误导的先验。
+影响：含噪BCI主动查询、避免语言先验压过用户证据也有历史。任务是字符识别，不能直接等同于机器人任务协商。
+
+补充方法线索：
+  MarkovType，AAAI 2025：POMDP建模RSVP递归打字与速度/准确率。
+  https://ojs.aaai.org/index.php/AAAI/article/view/35064
+  An Active RBSE Framework to Generate Optimal Stimulus Sequences in a BCI for Spelling，2016预印本，相关正式DOI为2017。
+  https://arxiv.org/abs/1607.03578
+  https://doi.org/10.1109/TSP.2017.2728500
+这些是刺激/命令层的主动采样先例，应与任务层问询区分。
+
+======================================================================
+六、额外强相关线索及证据边界
+======================================================================
+
+A. AI agents at the brain-computer interface: separating inference from control
+  2026年9月medRxiv预印本，未同行评审。
+  https://www.medrxiv.org/content/10.64898/2026.09.13.26362955v1.full
+  本次主站全文直接访问受限，核查到原站检索内容及摘要，不作已逐页精读声明。
+  已见内容比较模型直接行动与确定性控制门，强调在相同coverage下看意图忠实性。
+  启示：更少动作可能掩盖错误，显式弃权、解析失败与真正正确执行需要分开统计。
+  下一步：取得全文后细查其数据构造、置信来源和控制门，不能仅凭题名作机器人闭环结论。
+
+B. A human-machine-environment interaction system based on VLA model and brain-computer interface
+  IEEE SMC 2025，pp.3962–3967；DOI10.1109/SMC58881.2025.11343230。
+  https://ieeexplore.ieee.org/document/11343230
+  官方会议手册：https://www.ieeesmc2025.org/files/content/SMC25-Handbook.pdf
+  题名/发表信息由官方资料确认；本次未获得可阅读全文。
+  “神经解码→文本→VLA”的机制线索来自收录摘要，暂不据此断言其缺少协商或反馈，应优先取原文。
+
+C. Synapse2Action（工程相关工作，不是论文）
+  https://github.com/ZacharyZcR/Synapse2Action
+  原README声明研究软件，包含结构化计划、确认/取消、策略适配和独立结果验证。
+  仓库也明确硬件无关核心与真实模型/机器人集成的证据边界。
+  可作为工程设计参考，不能列成已发表论文，也不能用合成/回放结果证明真实BCI效果。
+
+======================================================================
+七、与NOIR对比合不合适：结论与具体做法
+======================================================================
+
+结论：合适，但需要区分比较层级；NOIR不宜成为唯一的算法级对照。
+
+7.1 作为系统级相关工作：合适
+  双方都通过脑机表达高层目标，让机器人自主完成低层操作。
+  可以比较意图表达流程、用户纠正、执行接口、任务覆盖、学习/校准需求与系统边界。
+  论文中应同时讨论NOIR 2.0和直接BCI—π0.5的AR BRI等较新工作。
+
+7.2 直接复现原NOIR系统：可以，但不能隔离交互算法贡献
+  原系统有不同BCI范式、参数技能、学习预测和不同机器人。
+  若完整复现，明确设备、技能、实现差异及未复现项，结果解释为整套系统比较。
+  无法实际复现时，以定性对照为主；不要拿其论文公开数字与本平台数字直接作显著性检验。
+
+7.3 在同一执行后端比较交互策略：最适合本框架的机制验证
+  固定相同受试者条件、BCI输入通道、视觉结果、对象、任务、VLA权重、控制器及完成判据。
+  所有方法使用相同的确认权限、停止机制与执行监督。
+  基线A：按对象→动作/技能→目的地或必要参数的固定流程选择。
+  基线B：允许依据历史预测缺失项，再由用户确认或纠正的增强流程。
+  方法C：本框架的意图信念＋通道感知主动协商。
+  A/B可称NOIR-inspired或“受NOIR启发的适配交互基线”。更换输入范式/执行后端后，不能声称它们是原版NOIR完整复现。
+  不应仅实现最繁琐的选择流程，再省略NOIR已有的学习预测能力来夸大收益。
+
+7.4 算法级必须补充的对照
+  命令判定/采集时机：POMDP-BCI式决策或与其思想一致的明确适配。
+  有噪BCI查询选择：含噪响应模型下的简单启发式/主动query方法。
+  语义主动澄清：BAL、ActivAsk或其可明确迁移到共同任务环境的决策机制。
+  校准求助：KnowNo式候选集/请求帮助机制。
+  每个适配注明改动，不把原算法不同任务上的公开结果当本环境直接实验。
+
+7.5 指标与公平任务
+  主要看正确任务完成、错误目标启动、真实输入时间、澄清/纠正次数、总耗时及失败恢复。
+  固定任务要求与用户权限，观察时间—错误权衡；不能靠跳过必要确认或频繁弃权获得表面优势。
+  真实工作负荷需要相应测量，不用少触发直接替代疲劳结论。
+  主要定量比较选择双方都支持的共同任务，例如放置和多目的地消歧。
+  某方法未实现的折布任务记为不支持/未评估，不自动记0%后证明交互算法更优。
+  新任务覆盖可另作能力展示，注明收益来源可能包含执行策略差异。
+
+7.6 NOIR相关表述应怎样修改
+  不宜：NOIR没有上下文推理。
+  应写：NOIR及其增强版本已有目标/技能预测；我们研究不同的通道与任务协商决策机制。
+  不宜：NOIR完全不能处理非刚体。
+  应写：其执行基于参数技能，和本平台VLA的具体任务能力不同；逐项比较实际任务。
+  不宜：只要比NOIR少一次选择，就证明框架先进。
+  应写：在相同任务信息、用户权限和执行能力下，验证更好的交互成本与任务错误权衡。
+
+======================================================================
+八、对原17步执行手册的建议（本次不覆盖原文件）
+======================================================================
+
+步骤01：新增文献—贡献对应表，把基本belief、wait/act、成本和可插拔接口列为采用的基础。
+步骤07：引入真实通道校准及先验错误场景，对照POMDP-BCI与早期含噪query方法。
+步骤08：补齐NOIR-inspired预测增强基线及语义主动询问基线。
+步骤09：明确联合决策相较既有方法新增了什么；仅“成本＋信息增益”不足以自动构成新方法。
+步骤15：真正检查核心在新通道/后端下是否保持不变；多接两个适配器只证明兼容性。
+步骤16：在同等coverage/授权要求下比较错误与时间；方法原始输出和监督后结果分开。
+步骤17：根据实际证据定位为交互方法或系统框架，不预设“首次通用脑机—VLA框架”。
+
+原假说H1“改变通道参数时策略应改变”应定位为机制检查，不能独自证明新颖性；2013及后续概率BCI已具有相关适应行为。
+更强的待验证主张需要说明：机器人任务后果、语义澄清和通道操作的联合建模带来什么可重复收益。
+
+建议优先精读顺序：
+  1. NOIR与NOIR 2.0：核准系统对照和预测增强基线。
+  2. POMDP-BCI及2013概率BCI：核准通道决策层已有内容。
+  3. BAL与ActivAsk：核准语义主动澄清层已有内容。
+  4. AR BRI：核准直接BCI—VLA系统层的近邻。
+  5. Expert-VLA、Hi Robot及Flow Control：核准共享控制与用户反馈已有内容。
+
+本报告中的“未见”只表示本次核查范围内未找到对应机制或证据，不表示已证明文献中不存在。
+本报告完成；原执行手册保持原内容，后续是否修订按用户任务继续。
+
+======================================================================
+九、2026-10-15补充：V2修订所依据的更近先例
+======================================================================
+
+本节在前述初步报告之后追加。用户随后要求基于文献修改计划，主执行手册现已更新为V2；上节“原手册保持原内容”是前次报告时的历史状态。
+
+[23] Recursive Bayesian Coding for BCIs，TNSRE 2017
+  https://pmc.ncbi.nlm.nih.gov/articles/PMC5536189/
+  https://doi.org/10.1109/TNSRE.2016.2590959
+  原文已有任务符号到脑符号编码、上下文先验、混淆矩阵、递归证据和停时，含真实SSVEP验证。
+  影响：动态语义编码与误码感知接口降为基础及强基线，不能单独列原创。
+
+[24] A Bayesian reinforcement learning framework for optimizing the BCI-utility of P300 brain-computer interfaces，AoAS 2026
+  https://doi.org/10.1214/25-AOAS2080
+  官方作者会议摘要：https://ww2.amstat.org/meetings/jsm/2026/onlineprogram/abstract.cfm?sid=5689&tid=5693
+  已核出版/作者摘要，DOI全文访问受限；联合刺激选择、early stopping及含纠错的BCI utility已有。
+  影响：不将“编码/刺激＋时长联合优化”直接当新贡献。
+
+[25] Value of Information: A Framework for Human-Agent Communication，2026
+  https://arxiv.org/abs/2601.06407
+  https://arxiv.org/html/2601.06407v1
+  已核原文；以终端任务效用减沟通成本选择澄清，并决定何时commit。
+  影响：任务后果代替纯熵、查询后风险下降均有直接基础。
+
+[26] Near-Optimal Bayesian Active Learning with Noisy Observations，NeurIPS 2010
+  https://proceedings.neurips.cc/paper/2010/hash/1e6e0a04d20f50967c64dac2d639a577-Abstract.html
+  含噪、非均匀成本测试下的等价类识别与EC²。
+  影响：执行等价类或含噪混淆图不能未经说明直接称为新理论。
+
+[27] Self-recalibrating classifiers for intracortical brain-computer interfaces，JNE 2014
+  https://pubmed.ncbi.nlm.nih.gov/24503597/
+  https://pmc.ncbi.nlm.nih.gov/articles/PMC4393645/
+  已联合估计用户意图和神经调谐变化；注意2014出版年与后续PMC收录时间不同。
+  影响：joint b(g,theta)本身也不能作新增贡献。
+
+[28] Measuring instability in chronic human intracortical neural recordings towards stable, long-term brain-computer interfaces，Communications Biology 2024
+  https://www.nature.com/articles/s42003-024-06784-4
+  MINDFUL监测神经分布变化，不要求在线真实目标标签；讨论用户补偿策略也可能改变分布。
+  影响：无标签漂移监测已有，但告警不等于区分用户语义目标变化与有效输入通道变化。
+
+[29] Symbolic feedback for transparent fault anticipation in neuroergonomic brain-machine interfaces，2025
+  https://doi.org/10.3389/frobt.2025.1656642
+  原文明确为模拟研究，涉及漂移/冲突的符号反馈，不作为真实主动诊断效果证据。
+  影响：异常解释与透明反馈也需准确引用，不能只增加“诊断”名称作为差异。
+
+补充：长期任务结构辅助无监督重校准的后续出版版本：
+  https://www.nature.com/articles/s41551-025-01536-z
+  不能将利用推断意图进行decoder适配泛称为本框架首创；具体年份/版本以所引出版记录为准。
+
+V2收敛主线：
+  冲突输入下，用有明确输入来源的诊断交互，辨识用户目标变化与有效通道变化的混淆，再以实际任务后果决定下一步。
+  核心包括：可辨识/不可辨识条件、TASK_QUERY与CHANNEL_PROBE分离、保留联合后验相关性、避免错误伪标签更新、同probe能力的强基线及独立真值因子研究。
+  这是一条更明确的待验证贡献链，不是已经证明首次或足以保证录用。
+
+修订后的入口：D:\Scene_Aware\BCI_VLA通用交互框架_逐步执行手册.txt
+核心设计：D:\Scene_Aware\BCI_VLA框架_主动诊断核心方案_V2.txt

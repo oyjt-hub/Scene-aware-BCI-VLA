@@ -1,0 +1,7 @@
+{
+  "scope": "isolated_LIBERO_simulation_job",
+  "remote_job": "/home/oyjt/Scene-aware-BCI-VLA-runs/step14_libero_20261016_v2",
+  "launch_exit": 0,
+  "physical_robot_commands": 0,
+  "real_BCI_trials": 0
+}

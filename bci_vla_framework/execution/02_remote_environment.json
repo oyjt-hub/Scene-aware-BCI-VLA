@@ -1,0 +1,695 @@
+{
+  "status": "read_only_success",
+  "evidence": {
+    "environment": {
+      "executable": "/home/oyjt/openpi/.venv/bin/python",
+      "version": "3.11.14 (main, Dec  5 2025, 20:21:18) [Clang 21.1.4 ]",
+      "packages": {
+        "torch": "2.7.1",
+        "jax": "0.5.3",
+        "jaxlib": "0.5.3",
+        "flax": "0.10.2",
+        "numpy": "1.26.4",
+        "fastapi": null,
+        "openpi": "0.1.0"
+      }
+    },
+    "asset_roots": [
+      {
+        "path": "/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/checkpoints",
+        "exists": true,
+        "children": [
+          "._____temp",
+          ".cache",
+          ".msc",
+          ".mv",
+          "LICENSE",
+          "Qwen2.5-VL-3B-Instruct",
+          "Qwen2.5-VL-3B-Instruct-Action",
+          "Qwen3-VL-4B-Instruct-Action",
+          "Qwen3VL-OFT-Bridge-RT-1",
+          "README.md",
+          "capsule",
+          "cherry_0123",
+          "cloth",
+          "config.json",
+          "configuration.json",
+          "dataset",
+          "generation_config.json",
+          "merges.txt",
+          "model-00001-of-00004.safetensors",
+          "model-00002-of-00004.safetensors",
+          "model-00003-of-00004.safetensors",
+          "model-00004-of-00004.safetensors",
+          "model.safetensors.index.json",
+          "models--Qwen--Qwen3-VL-4B-Instruct",
+          "pi05_base",
+          "pi05_droid",
+          "pi05_fold_clothes",
+          "pi0_aloha_towel",
+          "pi0_cherry",
+          "pick",
+          "pour_water_0312",
+          "table",
+          "test",
+          "test_0319",
+          "tokenizer.json",
+          "tokenizer_config.json",
+          "uniform",
+          "uniform_rtc_v2",
+          "uniform_table_rtc_v2",
+          "uniform_table_rtc_v2_pruned16",
+          "vocab.json"
+        ]
+      },
+      {
+        "path": "/home/oyjt/.cache/huggingface/lerobot/oy/uniform24_v21",
+        "exists": true,
+        "children": [
+          "data",
+          "meta",
+          "videos"
+        ]
+      },
+      {
+        "path": "/home/oyjt/.cache/huggingface/hub/datasets--oy--uniform24_v21",
+        "exists": false,
+        "children": []
+      }
+    ],
+    "norm_stats": {
+      "path": "/home/oyjt/openpi/assets/uniform/uniform24/norm_stats.json",
+      "exists": true,
+      "sha256": "ed11952f446bb4541534197fd5999b5b1599ee7b78eeb728ed6d9c176f6bd21c",
+      "bytes": 3436
+    },
+    "selected_lines": {
+      "Scene-aware-BCI-VLA/interface.py": [
+        {
+          "line": 36,
+          "text": "            os.makedirs(SAVE_PATH)"
+        },
+        {
+          "line": 37,
+          "text": "        self.save_mat = os.path.join(SAVE_PATH, f'subject_{subject_name}_{int(time.time())}.mat')"
+        },
+        {
+          "line": 38,
+          "text": "        self.save_csv = os.path.join(SAVE_PATH, f'bci_log_{int(time.time())}.csv')"
+        },
+        {
+          "line": 39,
+          "text": ""
+        },
+        {
+          "line": 40,
+          "text": "        self.thread_data_server = None"
+        },
+        {
+          "line": 41,
+          "text": "        self.fps = 60"
+        },
+        {
+          "line": 42,
+          "text": "        self.stimulate_time = 4.0"
+        },
+        {
+          "line": 43,
+          "text": ""
+        },
+        {
+          "line": 44,
+          "text": "        pygame.init()"
+        },
+        {
+          "line": 45,
+          "text": "        infoObject = pygame.display.Info()"
+        },
+        {
+          "line": 46,
+          "text": "        self.screen_w, self.screen_h = infoObject.current_w, infoObject.current_h"
+        },
+        {
+          "line": 47,
+          "text": "        self.surface = pygame.display.set_mode((self.screen_w, self.screen_h), pygame.FULLSCREEN)"
+        },
+        {
+          "line": 48,
+          "text": "        pygame.display.set_caption(\"BCI Dynamic Client\")"
+        },
+        {
+          "line": 49,
+          "text": "        self.font = pygame.font.Font(None, 50)"
+        },
+        {
+          "line": 50,
+          "text": ""
+        },
+        {
+          "line": 51,
+          "text": "    def connect_eeg(self):"
+        },
+        {
+          "line": 52,
+          "text": "        print(\"🧠 正在连接 Neuracle...\")"
+        },
+        {
+          "line": 53,
+          "text": "        neuracle = dict(device_name='Neuracle', hostname='127.0.0.1', port=8712, srate=1000, n_chan=12)"
+        },
+        {
+          "line": 54,
+          "text": "        self.thread_data_server = DataServerThread("
+        },
+        {
+          "line": 55,
+          "text": "            device=neuracle['device_name'], n_chan=neuracle['n_chan'],"
+        },
+        {
+          "line": 56,
+          "text": "            srate=neuracle['srate'], t_buffer=6"
+        },
+        {
+          "line": 57,
+          "text": "        )"
+        },
+        {
+          "line": 58,
+          "text": "        notconnect = self.thread_data_server.connect(hostname=neuracle['hostname'], port=neuracle['port'])"
+        },
+        {
+          "line": 59,
+          "text": "        if notconnect:"
+        },
+        {
+          "line": 60,
+          "text": "            raise ConnectionError(\"❌ 无法连接脑电仪，请确认博睿康软件已开启网络广播！\")"
+        },
+        {
+          "line": 61,
+          "text": "        self.thread_data_server.start()"
+        },
+        {
+          "line": 62,
+          "text": "        self.thread_data_server.Daemon = True"
+        },
+        {
+          "line": 63,
+          "text": "        print(\"✅ 脑电连接成功！\")"
+        },
+        {
+          "line": 190,
+          "text": ""
+        },
+        {
+          "line": 191,
+          "text": ""
+        },
+        {
+          "line": 192,
+          "text": "                cv_canvas = cv_canvas.transpose([1, 0, 2])"
+        },
+        {
+          "line": 193,
+          "text": "                flash_surf = pygame.surfarray.make_surface(cv_canvas[:, :, :3])"
+        },
+        {
+          "line": 194,
+          "text": "                flash_surf.set_colorkey((0, 0, 0))"
+        },
+        {
+          "line": 195,
+          "text": "                flash_surf.set_alpha(255)"
+        },
+        {
+          "line": 196,
+          "text": "                flash_surfaces.append(flash_surf)"
+        },
+        {
+          "line": 197,
+          "text": ""
+        },
+        {
+          "line": 198,
+          "text": ""
+        },
+        {
+          "line": 199,
+          "text": "            num_objects = len(labels)"
+        },
+        {
+          "line": 200,
+          "text": "            freqs = [2.0 + i * (8.0 / max(1, num_objects - 1)) for i in range(num_objects)]"
+        },
+        {
+          "line": 201,
+          "text": "            self.decoder.get_reference_signals(freqs, round(self.stimulate_time, 2))"
+        },
+        {
+          "line": 202,
+          "text": ""
+        },
+        {
+          "line": 203,
+          "text": ""
+        },
+        {
+          "line": 204,
+          "text": "            self.surface.blit(canvas, (0, 0))"
+        },
+        {
+          "line": 205,
+          "text": "            pygame.display.update()"
+        },
+        {
+          "line": 279,
+          "text": ""
+        },
+        {
+          "line": 280,
+          "text": ""
+        },
+        {
+          "line": 281,
+          "text": "            status_surf = self.font.render(\"Object Selected!\", True, (0, 255, 0))  # 绿色高亮"
+        },
+        {
+          "line": 282,
+          "text": "            status_rect = status_surf.get_rect(center=(self.screen_w // 2, self.screen_h // 2 - 40))"
+        },
+        {
+          "line": 283,
+          "text": ""
+        },
+        {
+          "line": 284,
+          "text": ""
+        },
+        {
+          "line": 285,
+          "text": "            result_surf = self.font.render(f\"Result: {selected_label}\", True, (255, 255, 255))  # 白色文字"
+        },
+        {
+          "line": 286,
+          "text": "            result_rect = result_surf.get_rect(center=(self.screen_w // 2, self.screen_h // 2 + 40))"
+        },
+        {
+          "line": 287,
+          "text": ""
+        },
+        {
+          "line": 288,
+          "text": "            self.surface.blit(status_surf, status_rect)"
+        },
+        {
+          "line": 289,
+          "text": "            self.surface.blit(result_surf, result_rect)"
+        },
+        {
+          "line": 290,
+          "text": "            pygame.display.update()"
+        },
+        {
+          "line": 291,
+          "text": "            # =========================================================="
+        },
+        {
+          "line": 292,
+          "text": ""
+        },
+        {
+          "line": 293,
+          "text": "            self.send_result_to_server(selected_label)"
+        },
+        {
+          "line": 294,
+          "text": "            time.sleep(3)"
+        }
+      ],
+      "scripts/inference.py": [
+        {
+          "line": 27,
+          "text": "    C_PiperInterface_V2 = None"
+        },
+        {
+          "line": 28,
+          "text": "    print(\"⚠️ Warning: piper_sdk not found\")"
+        },
+        {
+          "line": 29,
+          "text": ""
+        },
+        {
+          "line": 30,
+          "text": "# ================= Configuration ================="
+        },
+        {
+          "line": 31,
+          "text": "SERVER_HOST = \"172.19.5.252\"  # Your 4090 server IP"
+        },
+        {
+          "line": 32,
+          "text": "SERVER_PORT = 9000"
+        },
+        {
+          "line": 33,
+          "text": ""
+        },
+        {
+          "line": 34,
+          "text": "# SAM2 server URL (Port 8000)"
+        },
+        {
+          "line": 35,
+          "text": "SAM2_SERVER_URL = f\"http://{SERVER_HOST}:8000/update_scene\""
+        },
+        {
+          "line": 36,
+          "text": "# Candidate objects for BCI interface to identify and apply flashing masks"
+        },
+        {
+          "line": 37,
+          "text": "CANDIDATE_OBJECTS = \" cherry, bowl, grapes, starfruit\" "
+        },
+        {
+          "line": 38,
+          "text": ""
+        },
+        {
+          "line": 39,
+          "text": "# ================= 🌟 New: Ablation experiment switch ================="
+        },
+        {
+          "line": 40,
+          "text": "# True:  With LLM (Semantic Intent Synthesis, synthesize full action instructions via LLM)"
+        },
+        {
+          "line": 41,
+          "text": "# False: Without LLM (Direct Target Grounding, directly pass target object noun to VLA model)"
+        },
+        {
+          "line": 42,
+          "text": "USE_LLM = True"
+        },
+        {
+          "line": 43,
+          "text": "# ======================================================================"
+        },
+        {
+          "line": 44,
+          "text": ""
+        },
+        {
+          "line": 625,
+          "text": "                piper_left.GripperCtrl(0, 300, 0x01)"
+        },
+        {
+          "line": 626,
+          "text": "            if piper_right:"
+        },
+        {
+          "line": 627,
+          "text": "                piper_right.EnableArm(motor_num=7, enable_flag=0x02)"
+        },
+        {
+          "line": 628,
+          "text": "                piper_right.GripperCtrl(0, 300, 0x01)"
+        },
+        {
+          "line": 629,
+          "text": "            time.sleep(0.2)"
+        },
+        {
+          "line": 630,
+          "text": "        piper_left.ModeCtrl(ctrl_mode=0x01, move_mode=0x01, move_spd_rate_ctrl=30, is_mit_mode=0x00)"
+        },
+        {
+          "line": 631,
+          "text": "        piper_right.ModeCtrl(ctrl_mode=0x01, move_mode=0x01, move_spd_rate_ctrl=30, is_mit_mode=0x00)"
+        },
+        {
+          "line": 632,
+          "text": "        print(\">>> Moving to initial home pose <<<\")"
+        },
+        {
+          "line": 633,
+          "text": "        home_pose = np.array([0, 0.0043, 0.0345, -0.0535, 0.0, -0.0020]) "
+        },
+        {
+          "line": 634,
+          "text": "        start_l = get_current_joints_rad(piper_left)"
+        },
+        {
+          "line": 635,
+          "text": "        start_r = get_current_joints_rad(piper_right)"
+        },
+        {
+          "line": 636,
+          "text": "        "
+        },
+        {
+          "line": 637,
+          "text": "        # 🌟 Smooth addition: Wait for valid physical feedback to avoid zero-joint crash or jerk"
+        },
+        {
+          "line": 638,
+          "text": "        retry_count = 0"
+        },
+        {
+          "line": 639,
+          "text": "        while (np.all(start_l == 0) or np.all(start_r == 0)) and retry_count < 20:"
+        },
+        {
+          "line": 640,
+          "text": "            print(\"⚠️ No valid feedback from arms yet, retrying...\")"
+        },
+        {
+          "line": 641,
+          "text": "            time.sleep(0.2)"
+        },
+        {
+          "line": 642,
+          "text": "            start_l = get_current_joints_rad(piper_left)"
+        },
+        {
+          "line": 643,
+          "text": "            start_r = get_current_joints_rad(piper_right)"
+        },
+        {
+          "line": 644,
+          "text": "            retry_count += 1"
+        },
+        {
+          "line": 645,
+          "text": "        "
+        },
+        {
+          "line": 646,
+          "text": "        for i in range(60):"
+        },
+        {
+          "line": 647,
+          "text": "            alpha = (i + 1) / 60"
+        },
+        {
+          "line": 648,
+          "text": "            curr_l = start_l * (1 - alpha) + home_pose * alpha"
+        },
+        {
+          "line": 649,
+          "text": "            curr_r = start_r * (1 - alpha) + home_pose * alpha"
+        },
+        {
+          "line": 650,
+          "text": "            if piper_left: piper_left.JointCtrl(*deg_to_sdk_unit(curr_l))"
+        },
+        {
+          "line": 651,
+          "text": "            if piper_right: piper_right.JointCtrl(*deg_to_sdk_unit(curr_r))"
+        },
+        {
+          "line": 652,
+          "text": "            piper_left.GripperCtrl(70000, 3000, 0x01)"
+        },
+        {
+          "line": 653,
+          "text": "            piper_right.GripperCtrl(70000, 3000, 0x01)"
+        },
+        {
+          "line": 654,
+          "text": "            time.sleep(0.05)"
+        },
+        {
+          "line": 655,
+          "text": "        print(\"✅ Home pose reached\")"
+        },
+        {
+          "line": 656,
+          "text": "        time.sleep(1.0)"
+        },
+        {
+          "line": 657,
+          "text": "    else:"
+        },
+        {
+          "line": 658,
+          "text": "        print(\"❌ Failed to connect to robotic arms\")"
+        },
+        {
+          "line": 659,
+          "text": "        return"
+        },
+        {
+          "line": 660,
+          "text": ""
+        },
+        {
+          "line": 661,
+          "text": "    print(f\"Connecting to policy server: {SERVER_HOST}:{SERVER_PORT}\")"
+        },
+        {
+          "line": 662,
+          "text": "    try:"
+        },
+        {
+          "line": 663,
+          "text": "        client = websocket_client_policy.WebsocketClientPolicy(host=SERVER_HOST, port=SERVER_PORT)"
+        },
+        {
+          "line": 664,
+          "text": "    except Exception as e:"
+        },
+        {
+          "line": 665,
+          "text": "        print(f\"❌ Failed to connect to server: {e}\")"
+        },
+        {
+          "line": 666,
+          "text": "        return"
+        },
+        {
+          "line": 667,
+          "text": ""
+        },
+        {
+          "line": 668,
+          "text": "    print(\"Starting async inference thread...\")"
+        },
+        {
+          "line": 669,
+          "text": "    inference_worker = InferenceThread(client, cam_main, cam_wrist_left, cam_wrist_right, piper_left, piper_right)"
+        },
+        {
+          "line": 670,
+          "text": "    inference_worker.start()"
+        },
+        {
+          "line": 671,
+          "text": ""
+        }
+      ],
+      "scripts/robot/RTC_inference.py": [
+        {
+          "line": 24,
+          "text": "# ================= 配置区域 ================="
+        },
+        {
+          "line": 25,
+          "text": ""
+        },
+        {
+          "line": 26,
+          "text": "SERVER_HOST = \"172.19.5.252\""
+        },
+        {
+          "line": 27,
+          "text": "SERVER_PORT = 9000"
+        },
+        {
+          "line": 28,
+          "text": "TASK_INSTRUCTION = \"fold the cloth.\""
+        },
+        {
+          "line": 29,
+          "text": "# TASK_INSTRUCTION = \"pick up the cherry and put it into the bowl.\""
+        },
+        {
+          "line": 30,
+          "text": "# TASK_INSTRUCTION = \"pick up the brunch of grapes and put it into the bowl.\""
+        },
+        {
+          "line": 31,
+          "text": ""
+        },
+        {
+          "line": 32,
+          "text": ""
+        },
+        {
+          "line": 33,
+          "text": "CONTROL_RATE_HZ = 30"
+        },
+        {
+          "line": 34,
+          "text": "DT = 1.0 / CONTROL_RATE_HZ"
+        },
+        {
+          "line": 35,
+          "text": ""
+        },
+        {
+          "line": 36,
+          "text": "INTERPOLATION_STEPS = 3"
+        },
+        {
+          "line": 37,
+          "text": "SUB_DT = DT / INTERPOLATION_STEPS  "
+        },
+        {
+          "line": 376,
+          "text": ""
+        },
+        {
+          "line": 377,
+          "text": "def main():"
+        },
+        {
+          "line": 378,
+          "text": "    global latest_action_chunk, new_chunk_available, absolute_step_counter"
+        },
+        {
+          "line": 379,
+          "text": "    global ACTION_HORIZON, active_action_chunk, active_chunk_capture_step"
+        },
+        {
+          "line": 380,
+          "text": ""
+        },
+        {
+          "line": 381,
+          "text": "    enable_robot = os.environ.get(\"OPENPI_ENABLE_ROBOT\") == \"1\""
+        },
+        {
+          "line": 382,
+          "text": "    dry_run = os.environ.get(\"OPENPI_DRY_RUN\") == \"1\""
+        },
+        {
+          "line": 383,
+          "text": "    if not enable_robot and not dry_run:"
+        },
+        {
+          "line": 384,
+          "text": "        raise SystemExit("
+        },
+        {
+          "line": 385,
+          "text": "            \"硬件输出默认锁定。先用 OPENPI_DRY_RUN=1 检查服务端；确认急停与工作区安全后，\""
+        },
+        {
+          "line": 386,
+          "text": "            \"再设置 OPENPI_ENABLE_ROBOT=1 启动。\""
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "scope": "offline_execution_coverage_not_research_pass",
+  "substeps": {
+    "12.1": {
+      "status": "executed",
+      "evidence": [
+        "runs/offline_step12_acceptance/online/journals.jsonl.gz"
+      ]
+    },
+    "12.2": {
+      "status": "executed",
+      "evidence": [
+        "runs/offline_step12_acceptance/evaluation_private/run_plan.json"
+      ]
+    },
+    "12.3": {
+      "status": "executed",
+      "evidence": [
+        "runs/offline_step12_acceptance/mechanism_checks.json"
+      ]
+    },
+    "12.4": {
+      "status": "executed",
+      "evidence": [
+        "tests/test_offline_benchmark.py"
+      ]
+    },
+    "12.5": {
+      "status": "executed",
+      "evidence": [
+        "runs/offline_step12_acceptance/summary.json",
+        "runs/offline_step12_acceptance/evaluation_joined.jsonl"
+      ]
+    },
+    "12.6": {
+      "status": "executed",
+      "evidence": [
+        "runs/offline_step12_acceptance/oracle_audit.json",
+        "execution/12_runtime_alignment.json"
+      ]
+    },
+    "12.7": {
+      "status": "executed",
+      "evidence": [
+        "runs/offline_step12_acceptance/fault_acceptance.json",
+        "execution/12_test_result.json"
+      ]
+    },
+    "12.8": {
+      "status": "executed",
+      "evidence": [
+        "docs/12_G2_report.txt",
+        "runs/offline_step12_acceptance/artifacts_manifest.json"
+      ]
+    }
+  },
+  "G2_passed": false,
+  "verdict": "NOT_PASSED_PENDING_MODEL_ALIGNMENT_AND_CLAIM_NARROWING"
+}

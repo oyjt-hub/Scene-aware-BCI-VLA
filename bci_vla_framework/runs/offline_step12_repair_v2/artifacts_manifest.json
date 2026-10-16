@@ -1,0 +1,41 @@
+{
+  "scope": "L1_software_synthetic_replay_development_only",
+  "files": [
+    {
+      "path": "runs\\offline_step12_repair_v2\\evaluation_joined.jsonl",
+      "sha256": "1484a76ab3ff35db012226380ee2fcaeacd824741ea8e42482d40f8c29cb0dc6"
+    },
+    {
+      "path": "runs\\offline_step12_repair_v2\\evaluation_private\\run_plan.json",
+      "sha256": "0cf0ca054093ea4d356ff8f06d452ee674658c613099ee48d3103bea85ccd3e0"
+    },
+    {
+      "path": "runs\\offline_step12_repair_v2\\evaluation_private\\worlds.jsonl",
+      "sha256": "9b76be41e66fcae820d1e9f717f480b3f8840a44685fb33cf7b6493235e5cc5d"
+    },
+    {
+      "path": "runs\\offline_step12_repair_v2\\fault_acceptance.json",
+      "sha256": "d6a1f6764cd0fd38ff451cba3a6879836b7ce53730c43f47e7e75795b79bd33f"
+    },
+    {
+      "path": "runs\\offline_step12_repair_v2\\mechanism_checks.json",
+      "sha256": "5107106e4c00bf16177216fcaf3f7213887c298598c2bed925277e606a066ee4"
+    },
+    {
+      "path": "runs\\offline_step12_repair_v2\\online\\episodes.jsonl",
+      "sha256": "c8251a31783b08090fb5f5731895626aec9bc6ba24d7b4163d7ac0d097f05651"
+    },
+    {
+      "path": "runs\\offline_step12_repair_v2\\online\\journals.jsonl.gz",
+      "sha256": "1ac5ce0a5dd8e9e8830fe436a94e6648f951a528768b34ebef98ea9111555f3a"
+    },
+    {
+      "path": "runs\\offline_step12_repair_v2\\oracle_audit.json",
+      "sha256": "0b57543320d91594ce574d5efe4e35d579ddb9314cf576e7236cc556226c1ba7"
+    },
+    {
+      "path": "runs\\offline_step12_repair_v2\\summary.json",
+      "sha256": "24629b6870abc5554fec41a1e6dd476201606843d98e373616c95aead33a7e7c"
+    }
+  ]
+}

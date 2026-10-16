@@ -1,0 +1,5 @@
+﻿步骤14用户指定LIBERO首轮平台测试通过。
+真实StarVLA模型＋真实MuJoCo仿真：2个名义任务均完成，1个PROBE/STOP故障试次按设计中止。
+修复夹爪符号后v3为有效结果；v1/v2保留但不混入结论。376软件回归通过。
+这是仿真后端与动作门控验收，不是完整联合诊断框架、真实BCI闭环或步骤14整体验收。
+后续任务与部署/回退详见docs/14_closed_loop.txt和14_deployment_and_rollback.txt。

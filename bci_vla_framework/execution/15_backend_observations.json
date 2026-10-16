@@ -1,0 +1,83 @@
+{
+  "scope": "two_backend_development_smoke_not_performance_comparison",
+  "rows": [
+    {
+      "backend": "StarVLA",
+      "episode": "nominal_task0",
+      "suite": "libero_goal",
+      "task_id": 0,
+      "seed": 7,
+      "init_state_index": 0,
+      "task_success": true,
+      "termination": "task_success",
+      "applied_actions": 117,
+      "inference_calls": 15
+    },
+    {
+      "backend": "StarVLA",
+      "episode": "probe_stop_task0",
+      "suite": "libero_goal",
+      "task_id": 0,
+      "seed": 7,
+      "init_state_index": 0,
+      "task_success": false,
+      "termination": "injected_stop",
+      "applied_actions": 12,
+      "inference_calls": 2
+    },
+    {
+      "backend": "StarVLA",
+      "episode": "nominal_task1",
+      "suite": "libero_goal",
+      "task_id": 1,
+      "seed": 7,
+      "init_state_index": 0,
+      "task_success": true,
+      "termination": "task_success",
+      "applied_actions": 80,
+      "inference_calls": 10
+    },
+    {
+      "backend": "pi05",
+      "episode": "nominal_task0",
+      "suite": "libero_goal",
+      "task_id": 0,
+      "seed": 7,
+      "init_state_index": 0,
+      "task_success": true,
+      "termination": "task_success",
+      "applied_actions": 139,
+      "inference_calls": 18
+    },
+    {
+      "backend": "pi05",
+      "episode": "probe_stop_task0",
+      "suite": "libero_goal",
+      "task_id": 0,
+      "seed": 7,
+      "init_state_index": 0,
+      "task_success": false,
+      "termination": "injected_stop",
+      "applied_actions": 12,
+      "inference_calls": 2
+    },
+    {
+      "backend": "pi05",
+      "episode": "nominal_task1",
+      "suite": "libero_goal",
+      "task_id": 1,
+      "seed": 7,
+      "init_state_index": 0,
+      "task_success": true,
+      "termination": "task_success",
+      "applied_actions": 102,
+      "inference_calls": 13
+    }
+  ],
+  "same_tasks_initial_states_seed_horizon": true,
+  "matched_training_exposure_or_policy_randomness_verified": false,
+  "pi05_controller_clipped_values": 207,
+  "pi05_model_chunk_calls": 33,
+  "terminal_queues_drained": 3,
+  "paired_statistical_or_backend_superiority_claim": false
+}

@@ -1,0 +1,40 @@
+{
+  "checked_on": "2026-10-16",
+  "purpose": "adaptation provenance, not claims of full reproductions",
+  "sources": [
+    {
+      "id": "NOIR",
+      "url": "https://proceedings.mlr.press/v229/zhang23f.html",
+      "verified": "publisher abstract: objects/actions and user-adapted intent prediction"
+    },
+    {
+      "id": "NOIR2",
+      "url": "https://arxiv.org/abs/2511.20848",
+      "verified": "author preprint metadata; adaptation not full reproduction"
+    },
+    {
+      "id": "RBC",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27416602/",
+      "verified": "author abstract: recursive Bayes and MMI with confusion matrices"
+    },
+    {
+      "id": "dynamic_stopping",
+      "url": "https://www.imstat.org/publications/aoas/aoas_20_1/aoas_20_1.pdf",
+      "verified": "publisher abstract via search: early stopping and dynamic stimulus selection; actor-critic/GP not reproduced"
+    },
+    {
+      "id": "dynamic_stopping_code",
+      "url": "https://github.com/BangyaoZhao/P300RL",
+      "verified": "author repository reproducibility description; not executed"
+    },
+    {
+      "id": "semantic_VoI",
+      "url": "https://arxiv.org/abs/2601.06407",
+      "verified": "author abstract: task utility and clarification effort"
+    }
+  ],
+  "access_notes": [
+    "initial PMC request hit challenge; RBC verified via PubMed",
+    "dynamic stopping DOI direct access failed; publisher search excerpt and author repository found"
+  ]
+}

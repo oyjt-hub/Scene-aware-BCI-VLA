@@ -1,0 +1,188 @@
+{
+  "scope": "development_regression_and_new_development_seeds",
+  "groups": [
+    {
+      "method": "B4",
+      "group": "original_0_11",
+      "episodes": 120,
+      "faithful_virtual_completion": 24,
+      "wrong_start": 32,
+      "unstarted": 64,
+      "unresolved": 96,
+      "mean_elapsed_s": 4.415635533333333
+    },
+    {
+      "method": "B4",
+      "group": "repaired_0_11",
+      "episodes": 120,
+      "faithful_virtual_completion": 24,
+      "wrong_start": 32,
+      "unstarted": 64,
+      "unresolved": 96,
+      "mean_elapsed_s": 4.415696725
+    },
+    {
+      "method": "B4",
+      "group": "new_development_12_23",
+      "episodes": 120,
+      "faithful_virtual_completion": 26,
+      "wrong_start": 34,
+      "unstarted": 60,
+      "unresolved": 94,
+      "mean_elapsed_s": 4.606111625
+    },
+    {
+      "method": "B5",
+      "group": "original_0_11",
+      "episodes": 120,
+      "faithful_virtual_completion": 23,
+      "wrong_start": 33,
+      "unstarted": 64,
+      "unresolved": 97,
+      "mean_elapsed_s": 6.471669333333334
+    },
+    {
+      "method": "B5",
+      "group": "repaired_0_11",
+      "episodes": 120,
+      "faithful_virtual_completion": 23,
+      "wrong_start": 33,
+      "unstarted": 64,
+      "unresolved": 97,
+      "mean_elapsed_s": 6.188624383333333
+    },
+    {
+      "method": "B5",
+      "group": "new_development_12_23",
+      "episodes": 120,
+      "faithful_virtual_completion": 26,
+      "wrong_start": 34,
+      "unstarted": 60,
+      "unresolved": 94,
+      "mean_elapsed_s": 6.729655675
+    },
+    {
+      "method": "B7",
+      "group": "original_0_11",
+      "episodes": 120,
+      "faithful_virtual_completion": 24,
+      "wrong_start": 32,
+      "unstarted": 64,
+      "unresolved": 96,
+      "mean_elapsed_s": 4.418261225
+    },
+    {
+      "method": "B7",
+      "group": "repaired_0_11",
+      "episodes": 120,
+      "faithful_virtual_completion": 24,
+      "wrong_start": 32,
+      "unstarted": 64,
+      "unresolved": 96,
+      "mean_elapsed_s": 4.4184997
+    },
+    {
+      "method": "B7",
+      "group": "new_development_12_23",
+      "episodes": 120,
+      "faithful_virtual_completion": 26,
+      "wrong_start": 34,
+      "unstarted": 60,
+      "unresolved": 94,
+      "mean_elapsed_s": 4.609118291666666
+    },
+    {
+      "method": "B9",
+      "group": "original_0_11",
+      "episodes": 120,
+      "faithful_virtual_completion": 24,
+      "wrong_start": 32,
+      "unstarted": 64,
+      "unresolved": 96,
+      "mean_elapsed_s": 4.418256858333334
+    },
+    {
+      "method": "B9",
+      "group": "repaired_0_11",
+      "episodes": 120,
+      "faithful_virtual_completion": 24,
+      "wrong_start": 32,
+      "unstarted": 64,
+      "unresolved": 96,
+      "mean_elapsed_s": 4.418497433333333
+    },
+    {
+      "method": "B9",
+      "group": "new_development_12_23",
+      "episodes": 120,
+      "faithful_virtual_completion": 26,
+      "wrong_start": 34,
+      "unstarted": 60,
+      "unresolved": 94,
+      "mean_elapsed_s": 4.6090932916666665
+    },
+    {
+      "method": "M",
+      "group": "original_0_11",
+      "episodes": 120,
+      "faithful_virtual_completion": 24,
+      "wrong_start": 32,
+      "unstarted": 64,
+      "unresolved": 96,
+      "mean_elapsed_s": 4.418630833333333
+    },
+    {
+      "method": "M",
+      "group": "repaired_0_11",
+      "episodes": 120,
+      "faithful_virtual_completion": 24,
+      "wrong_start": 32,
+      "unstarted": 64,
+      "unresolved": 96,
+      "mean_elapsed_s": 4.418962333333333
+    },
+    {
+      "method": "M",
+      "group": "new_development_12_23",
+      "episodes": 120,
+      "faithful_virtual_completion": 26,
+      "wrong_start": 34,
+      "unstarted": 60,
+      "unresolved": 94,
+      "mean_elapsed_s": 4.609648616666667
+    },
+    {
+      "method": "M2",
+      "group": "original_0_11",
+      "episodes": 120,
+      "faithful_virtual_completion": 26,
+      "wrong_start": 36,
+      "unstarted": 58,
+      "unresolved": 94,
+      "mean_elapsed_s": 5.639742
+    },
+    {
+      "method": "M2",
+      "group": "repaired_0_11",
+      "episodes": 120,
+      "faithful_virtual_completion": 26,
+      "wrong_start": 36,
+      "unstarted": 58,
+      "unresolved": 94,
+      "mean_elapsed_s": 5.458202741666667
+    },
+    {
+      "method": "M2",
+      "group": "new_development_12_23",
+      "episodes": 120,
+      "faithful_virtual_completion": 29,
+      "wrong_start": 37,
+      "unstarted": 54,
+      "unresolved": 91,
+      "mean_elapsed_s": 5.701246325
+    }
+  ],
+  "old_wrapper_blocked": 1,
+  "repaired_wrapper_blocked": 0,
+  "models_or_thresholds_retuned": false
+}

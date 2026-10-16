@@ -1,0 +1,13 @@
+﻿步骤01文档验收记录
+日期：2026-10-15；计划：V2；验收范围：documentation。
+01.1 完成：创建docs及execution，progress含17步、版本及研究门槛状态。原目录不存在，本次未清空既有内容。
+01.2 完成：01_claim_map第三节R01—R10，逐行包含已有机制、候选差异、反例和新增证据。
+01.3 完成：覆盖RBC、POMDP-BCI、动态停时、任务VoI、联合自校准、BAL/ActivAsk、NOIR/2及直接BCI—VLA。
+01.4 完成：01_claim_map第七节明确三项首次不主张，区分检索空白与首次证明。
+01.5 完成：01_scope第二节冻结SSVEP、离散目标、一个固定VLA、少量有效通道模式；参数和设备能力待核。
+01.6 完成：01_claim_map第五节逐项映射C1/C2/C3的方法、证据和推翻条件，接口日志列基础设施。
+01.7 完成：01_scope第六节定义G1—G4失败处理和主张收窄规则，均未开始。
+关键验收：01_claim_map第四节明确相对被动联合估计、固定probe、标准主动校准的差异及反例；第六节冻结同信息强基线。
+文档完整性实际命令：python D:\Scene_Aware\bci_vla_framework\execution\verify_step01.py
+实际输出另存01_integrity_result.json；只有输出PASS时本记录的完整性验收成立。
+本记录不构成可辨识性正式证明、算法正确性测试、人体/机器人效果或创新成立证明。

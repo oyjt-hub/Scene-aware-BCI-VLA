@@ -1,0 +1,12 @@
+﻿步骤15复跑、回退与证据规则
+1. 阅读15_transfer_matrix.txt与configs/transfer/step15_binding.json。确认只有回放编码等价及真实模型仿真接入，不是已完成真实2×2。
+2. 优先只读运行python -B execution/verify_step15_delivery.py。不要运行旧finalize或runner覆盖冻结来源/结果。
+3. 新模型运行需新job目录与本地manifest名；deploy_step15_libero.py当前v4路径不可直接复用。
+4. 临时目录/home/oyjt/Scene-aware-BCI-VLA-runs/step15_libero_20261016_v4；模型服务只绑定127.0.0.1:16815，GPU0。
+5. 原环境不修补；Transformers4.53.2和OpenPI替换文件复制到task-local deps。运行关闭torch.compile，仅用于有限冒烟试次。
+6. 服务启动240秒、worker660秒、外层1000秒；finally仅结束所属模型服务。旧服务/旧仓库不替换，继续原入口即回退。
+7. π0.5输出已经反归一化，禁止重复处理；环境action_spec必须匹配[-1,1]七维，否则拒绝，不能猜物理单位。
+8. 非有限数、shape错误直接拒绝；有限数按已核LIBERO控制器规则裁剪并记录数量；成功/失败终点均清队列与确认。
+9. 回放PacketReplayTransport仅允许synthetic_codec_fixture和offline_replay，禁止把真实数据改标签伪装成回放。
+10. 第二真实BCI仍未知；实现真实适配/校准后再检查probe能力和规划器动作集合，不能仅接传输就宣称可部署。
+11. 旧13/14与G2/G3状态保留；新测试结果为开发/pilot，不进入正式独立测试或留出组合。

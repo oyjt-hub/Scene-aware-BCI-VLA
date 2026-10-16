@@ -1,0 +1,270 @@
+{
+  "scope": "nonreal_step13_delivery",
+  "G3_passed": false,
+  "files": [
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\pilot\\__init__.py",
+      "sha256": "5b6f39dc201ed33a530def1a9db5b0b7d108fde0fcb9ec95200add280fadf448"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\pilot\\neuracle_stream.py",
+      "sha256": "c292de24728593d0ff3e847d35ab8b151b0915f52ba205766cdd99026d0fecb8"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\pilot\\signal.py",
+      "sha256": "ba176ce8321c576963a4b365d0319ae18d52a49d82395ff16f596394d8efe6ef"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\pilot\\software_flow.py",
+      "sha256": "47ba6ae450efffab545be38caaf99aae29cf3ddc626b17570c585ef2e1a05b94"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\pilot\\software_ui.py",
+      "sha256": "73f7ad65bd351ece6c92048c409679dafb6abcd3a23aebcb922274a3150cefbb"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\pilot\\validation.py",
+      "sha256": "fd0c658879eaf559f13a3d699f0fa175262d29e1a7ce39f14d88bfb2246c817a"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\configs\\pilot\\step13_site.template.json",
+      "sha256": "8fbb51d8b02f975e7809960ca0675438166366a17e0a27f78ce00967a7693b96"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\docs\\13_data_collection_checklist.txt",
+      "sha256": "25e29cf98266a6b5e222143f2b1451a8a07a3c90b674d237929f2870842a5c23"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\docs\\13_G3_report.txt",
+      "sha256": "b48cfcfa311ce496b5fbe276eb5746e9d06ea40b36788d575650a5eeb6d5ca6f"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\docs\\13_pilot_protocol.txt",
+      "sha256": "bb71ec093a6e8bfd97891d74fb2fe34d3768ca9d52638e28ae8170e07f7bc3c6"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\examples\\pilot13\\independent_blocks.template.json",
+      "sha256": "b9bbfd62c5f4b599994ef691bb486e18ed6899ed1a2eded97a032fc7bed90432"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\examples\\pilot13\\record_fields.template.json",
+      "sha256": "85a844c567f44596abbd96c8456564a88399cdca0f06fa46e0affd64383fe130"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\examples\\pilot13\\sampling_chain.template.json",
+      "sha256": "4505ed193369073a6918a215a1afcdb7a69449f1379fb3475d2175ab1d1745ff"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\examples\\pilot13\\timing.template.json",
+      "sha256": "f21f5abaa7bce507741e9202f85589e27bc3bd4c9cb73a9699ca1877e7a25c94"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\12R_source_manifest.json",
+      "sha256": "3247dfc93860cada3f44101d9fb37ac3a384cd5883c32687955c497b563e48bf"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\13_acceptance.txt",
+      "sha256": "484bddf53dc009dcf080e449cd07e87e1c63df1058faf66edbc5e20efb8309ae"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\13_coverage.json",
+      "sha256": "36a0c69121ef784168519ff4b0511f74de324a334c79cd91b8b82e8e028b8028"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\13_local_device_audit.json",
+      "sha256": "ca3cb28072aa7c4432a0dbab8be7e7c4c610cd3cd2e6869a07dd5af8c0dd877b"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\13_readiness_audit.json",
+      "sha256": "0228725526491faf39fb2c496b2a1b8cac1359fb865bc27c62ecec1654b1b2c8"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\13_test_output.txt",
+      "sha256": "be5c705ddeb63bd94378f26ed42d1a521f74191b3cdfd41fb1f77cc0816e9c56"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\13_test_result.json",
+      "sha256": "551707b209894caff374e87b4ab8043d51b74d9edd44aefb356cec896d1f31f4"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\build_step13_fixture_evidence.py",
+      "sha256": "bb33b4a36bb4dbc1086a02bddd5653245437c924382886bd9b5c4a41e2667a6b"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\capture_step13_stream.py",
+      "sha256": "17751a790e900a8ec61a3487f08b0af9c95a1a4af6df21444f8a1f9af75845f1"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\check_step13_sampling.py",
+      "sha256": "00dd8c59fb8caee01cfa01093101a94b3967533183d788a91a53685999d230b0"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\finalize_step13.py",
+      "sha256": "3c1296534b67815ea1b92f4f2103515d2e3898f30a9d33892ff57892571dc6be"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\inspect_step13_records.py",
+      "sha256": "e7b53b166479d8dadf25bda97a677a8bac0e1cfb024ffd91173193469e52932c"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\prepare_step13.py",
+      "sha256": "b8ac7354ac5917ee97ade6a6b4a8313619987471da1ed6e7f719feec7bf8ee96"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\render_step13_preview.py",
+      "sha256": "9931fa1f571e1131b0fb117cc9a7a541a2085e3ebab6b0341df6f8dc30498d67"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\run_step13_nonreal.py",
+      "sha256": "01212c8ccc10b0ad2cdfb9f23cd9ee0690256625c95cd1e230de8a08744abe22"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\run_step13_tests.py",
+      "sha256": "9d2168a36bd6982cb335bba1edd88433a47a34980622d9ff29e84b247feff63c"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_virtual_13_nonreal_acceptance\\session_journal.jsonl",
+      "sha256": "2736a49f76ec0ccdd8b05bdaaf0ff058079a18250a8c5ad2cbd9b66604580a9f"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_virtual_13_nonreal_acceptance\\tcp_fragmented\\raw_stream.bin",
+      "sha256": "d0da096cf6a6c78ff621881fc83d554d0d45ae6a3b54ec631a410114651b6913"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_virtual_13_nonreal_acceptance\\tcp_fragmented\\stream_report.json",
+      "sha256": "64e7c97ecb0747a2e2227d4a3a45f74320cec4b577ee9b524392628fbce15552"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_virtual_13_nonreal_acceptance\\tcp_timeout\\raw_stream.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_virtual_13_nonreal_acceptance\\tcp_timeout\\stream_report.json",
+      "sha256": "ca7de60e0853fe955b502f044c336103f388eee701baacdfc356406cb5701300"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_virtual_13_nonreal_acceptance\\virtual_flow.json",
+      "sha256": "5fe8368f86611f3e3494ef571e7ca1ea755e698cde80467428eb77b1f326309e"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_virtual_13_nonreal_acceptance_v2\\session_journal.jsonl",
+      "sha256": "53abe342248fffe7bb0978065a3043d967c214f84c457670c69561a0e8fd8e62"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_virtual_13_nonreal_acceptance_v2\\summary.json",
+      "sha256": "985ba6e25a266a75f18722638cc53dfa7c09da29ff9c6092d1bf613c2e28ffc8"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_virtual_13_nonreal_acceptance_v2\\tcp_fragmented\\raw_stream.bin",
+      "sha256": "d0da096cf6a6c78ff621881fc83d554d0d45ae6a3b54ec631a410114651b6913"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_virtual_13_nonreal_acceptance_v2\\tcp_fragmented\\stream_report.json",
+      "sha256": "bba3196bad18f9fa702fe780890b7dad015f380023e2b9c203152ee3b55bff68"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_virtual_13_nonreal_acceptance_v2\\tcp_refused\\raw_stream.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_virtual_13_nonreal_acceptance_v2\\tcp_refused\\stream_report.json",
+      "sha256": "d4588e4434266b94c3d2d62a040afccd1fdec243412e3ba3d1e91439b89100c8"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_virtual_13_nonreal_acceptance_v2\\tcp_timeout\\raw_stream.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_virtual_13_nonreal_acceptance_v2\\tcp_timeout\\stream_report.json",
+      "sha256": "ee60f47acf75a9a25c62f451a22c59d823a4203baa76baed84d15bb5b9857fcc"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_virtual_13_nonreal_acceptance_v2\\ui_preview.png",
+      "sha256": "e4c28131db68814081ba999c41ebae71887d59edad1e71975aa23ee1bc1902bf"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_virtual_13_nonreal_acceptance_v2\\virtual_flow.json",
+      "sha256": "5fe8368f86611f3e3494ef571e7ca1ea755e698cde80467428eb77b1f326309e"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_virtual_13_nonreal_acceptance_v3\\session_journal.jsonl",
+      "sha256": "decc398d22bc45b3df925f30b0c908736f7193bfee5138c71fb7a277ef7cc725"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_virtual_13_nonreal_acceptance_v3\\summary.json",
+      "sha256": "c282fc267fe2b65bbf9ed80593713c7c5a1857c341bf651a1e1126e109fdc91e"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_virtual_13_nonreal_acceptance_v3\\synthetic_record_summary.json",
+      "sha256": "6d3d3e034b300a651efb7978910c8b275ac033c1844685736639938875272aa3"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_virtual_13_nonreal_acceptance_v3\\synthetic_records.jsonl",
+      "sha256": "9238ca6b03679533f929f4a0f14cb3157c5ffc397b7b02c3cc5bd7c43aaedebf"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_virtual_13_nonreal_acceptance_v3\\synthetic_timing.json",
+      "sha256": "81619b4f96c542ca1cc77061c7f8a9c1a45731639255f9d97c4f8b989d83541a"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_virtual_13_nonreal_acceptance_v3\\tcp_fragmented\\raw_stream.bin",
+      "sha256": "d0da096cf6a6c78ff621881fc83d554d0d45ae6a3b54ec631a410114651b6913"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_virtual_13_nonreal_acceptance_v3\\tcp_fragmented\\stream_report.json",
+      "sha256": "bd80fa419382e4ac0b451ea1884b2f3e0582e32afdf59f79e0f811f58a674ab5"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_virtual_13_nonreal_acceptance_v3\\tcp_refused\\raw_stream.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_virtual_13_nonreal_acceptance_v3\\tcp_refused\\stream_report.json",
+      "sha256": "e391dc4ee9d377648d5ffd337707d896df63604b6b6cdfadab12d4812a8e5a69"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_virtual_13_nonreal_acceptance_v3\\tcp_timeout\\raw_stream.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_virtual_13_nonreal_acceptance_v3\\tcp_timeout\\stream_report.json",
+      "sha256": "83f0e33f637c3165635730806e6424f9eadf74ca51a12743f983e1998fe29e27"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_virtual_13_nonreal_acceptance_v3\\ui_preview.png",
+      "sha256": "88068f34ee49c6feacc40d290faf3e5b64e60422c53146c3b8201f3f8749ec76"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_virtual_13_nonreal_acceptance_v3\\virtual_flow.json",
+      "sha256": "5fe8368f86611f3e3494ef571e7ca1ea755e698cde80467428eb77b1f326309e"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_virtual_13_preparation\\manifest.json",
+      "sha256": "4c770df873a8e28db329b28bbe916a0ab3d5872644ca5ad75b6de00da4f993df"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_virtual_13_samplingcheck_01\\processed_signal.npy",
+      "sha256": "724d1c5eb6ce6b0d392a559504a37c810946b61825e3533d0778f83306d31c02"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_virtual_13_samplingcheck_01\\sampling_report.json",
+      "sha256": "77dec5828dd8ad5550065b81696cbacf15bf59442c97f02148c9b8e3777c700b"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_virtual_13_streamcheck_01\\raw_stream.bin",
+      "sha256": "0ab502dbc01482062f31e68221c75deda347c673c939c5edb46a6ccb50c7850c"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_virtual_13_streamcheck_01\\stream_report.json",
+      "sha256": "fb633f1b0385e3b4d540123bdf0255dc4eca915b20b1884ee9e46b0d681f1c28"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\tests\\test_pilot_preparation.py",
+      "sha256": "cfc9be659a2a11f85246450a1f2e03b1b1aaab2cce791b91884d23ec427946c3"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\tests\\test_pilot_software_ui.py",
+      "sha256": "4933ee39bf0054fb1df69ded6d999e88f1bd05bde25e24f618a6bb91dba27c1c"
+    }
+  ]
+}

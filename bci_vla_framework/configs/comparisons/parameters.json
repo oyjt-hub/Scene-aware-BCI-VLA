@@ -1,0 +1,11 @@
+{
+  "status": "development_only",
+  "deployment_allowed": false,
+  "period": 2,
+  "confidence": 0.9,
+  "conflict_threshold": 0.35,
+  "quality_threshold": 0.5,
+  "channel_entropy_stop": 0.05,
+  "fixed_duration_s": 1.0,
+  "provenance": "illustrative_defaults_not_tuned"
+}

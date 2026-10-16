@@ -1,0 +1,22 @@
+{
+  "scope": "software_delivery_integrity",
+  "result": "PASS",
+  "count": 9,
+  "checks": [
+    "01-05 remain complete",
+    "later progress and gates unchanged",
+    "software regressions pass without skips",
+    "nine legal fixtures parse",
+    "eight illegal fixtures rejected",
+    "seven domain records declared",
+    "05.1-05.8 acceptance mapped",
+    "source snapshots unchanged",
+    "TXT encoding maintained"
+  ],
+  "limitations": [
+    "No live transport or physical stopping validated",
+    "No empirical calibration/EEG/VLA results",
+    "No systemwide covert-label leakage guarantee",
+    "G2-G4 not evaluated"
+  ]
+}

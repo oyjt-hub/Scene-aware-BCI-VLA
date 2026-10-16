@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-16",
+  "scope": "offline_joint_filter_and_software_regression",
+  "command": "python -B execution/run_step08_tests.py",
+  "tests_run": 92,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "result": "PASS",
+  "hardware_calls": 0,
+  "cloud_calls": 0,
+  "not_evaluated": [
+    "real EEG/calibration",
+    "real probe/task transfer",
+    "open-world model correctness",
+    "policy performance",
+    "G2-G4"
+  ]
+}

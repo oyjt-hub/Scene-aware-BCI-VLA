@@ -1,0 +1,30 @@
+{
+  "scope": "protocol_design_lint",
+  "result": "PASS",
+  "count": 16,
+  "checks": [
+    "four unique 2x2 design cells",
+    "no fabricated sample sizes or schedules",
+    "collection blocked",
+    "12 stress conditions",
+    "public allowlist carries no private plan fields",
+    "no private keys anywhere in public template",
+    "no outcome observations invented",
+    "all evidence layers separated",
+    "truth boundaries explicit",
+    "denominators and missing bounds defined",
+    "split and budget fairness documented",
+    "9 substeps mapped",
+    "only 01-04 complete",
+    "05 not started and gates preserved",
+    "input and design hashes match freeze",
+    "all TXT UTF8 BOM CRLF"
+  ],
+  "limitations": [
+    "Template allowlist checks do not prove runtime leakage prevention",
+    "No actual observations, participants or outcomes",
+    "No empirical truth, sampling, statistical power or device validation",
+    "Formal protocol implementation deferred to step 05",
+    "G2-G4 not evaluated"
+  ]
+}

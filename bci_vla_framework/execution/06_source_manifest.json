@@ -1,0 +1,118 @@
+{
+  "plan_version": "V2",
+  "step_id": "06",
+  "date": "2026-10-15",
+  "scope": "offline_simulation_branch",
+  "files": [
+    {
+      "path": "D:\\Scene_Aware\\BCI_VLA通用交互框架_逐步执行手册.txt",
+      "kind": "input",
+      "sha256": "13b5813bec3a9d1bcdf44b13f46eb51d8ca57b8338a40bb90ce0c8608169b213"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\docs\\03_identifiability.txt",
+      "kind": "input",
+      "sha256": "fde854bc3d60c1a3fa26bb481d7f97e71c31559a184a1b717b7f50120551c66a"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\docs\\04_benchmark_protocol.txt",
+      "kind": "input",
+      "sha256": "1148f653f07f161c7876a0ab33bdeaf36fe950bd84a5d52c4511ea256885a7e0"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\docs\\05_protocols.txt",
+      "kind": "input",
+      "sha256": "a31273c80201a3c7c715335ff2eee3d51a546134564dc55aacad98aa66089f1d"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\protocols.py",
+      "kind": "input",
+      "sha256": "3de0e8a42c1462f37af4f2a1769aea907a5996c9733e15b0ea522a23ac44c424"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\adapters\\bci\\replay.py",
+      "kind": "input",
+      "sha256": "7ca4dd2d5f4003ed373c9edb997b23507433bb81d56160dcf0e44703393adbc2"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\tests\\test_protocols.py",
+      "kind": "input",
+      "sha256": "a8fcedff983116e958607c6b2dbba9409c8268bf3d28229a79122a1202a20bec"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\05_source_manifest.json",
+      "kind": "input",
+      "sha256": "14f81d5998e42708c15854360fd4811bd51e97331e34811d7bc89f61e38bfd39"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\models\\channel.py",
+      "kind": "software_or_simulation_design",
+      "sha256": "ed34ef25a4c9b9faf3165ea2daf210885ebb95f239504f10d176af553fe45190"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\models\\evidence.py",
+      "kind": "software_or_simulation_design",
+      "sha256": "750d459095db4036ddf31a4cb00c23c4cff91d6b216301eb5ebcc97b38e6fa1c"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\models\\probe_transfer.py",
+      "kind": "software_or_simulation_design",
+      "sha256": "23ccded6f30914f70fa4bdedfc8d8ae7db4d71047a41a71a0e38c172a51efaeb"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\models\\__init__.py",
+      "kind": "software_or_simulation_design",
+      "sha256": "c276abdfaf7c0018a0772053dc15423024cf18c7e79ca421926ddd9ea8d2d5b6"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\configs\\channels\\real_ssvep_uncalibrated.template.json",
+      "kind": "software_or_simulation_design",
+      "sha256": "969eea0fcae81f02fb5717045fca5d830be1fdfa74d366825a15f9fce7730b66"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\configs\\channels\\simulation_binary_v1.json",
+      "kind": "software_or_simulation_design",
+      "sha256": "3b567fa9cda392b0a202b0b12f8936e8adaba34fa76cd3548dbd1210eae916c4"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\configs\\channels\\simulation_transition_v1.json",
+      "kind": "software_or_simulation_design",
+      "sha256": "c8ee807c5a7bfeb6fa9f661a5744039aa39cd6746303d39322390d164c967c02"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\tests\\test_channel_models.py",
+      "kind": "software_or_simulation_design",
+      "sha256": "d97b42bbc1f61c55432aa48521213a25782b64543292f0398e1a76be48dbbb72"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\docs\\06_calibration.txt",
+      "kind": "software_or_simulation_design",
+      "sha256": "fee8552d2de1d4b27e302264bb75d2bbb024728049c5b67d364a2f312677d496"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\06_asset_audit.json",
+      "kind": "software_or_simulation_design",
+      "sha256": "a45b8c3a4d4746f74b20e5881609bfc001052ef209aa99fd586be348fe74f4cf"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\06_acceptance.txt",
+      "kind": "software_or_simulation_design",
+      "sha256": "79443ec9079acc41481d0a5916b3d6d26a042082cdd2b82e32f9f103294d19d5"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\06_test_output.txt",
+      "kind": "software_or_simulation_design",
+      "sha256": "a31412b3b066bba16f2a099218fd4ebd68e4f99b01acfc7a5415faed9af20f69"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\06_test_result.json",
+      "kind": "software_or_simulation_design",
+      "sha256": "aeef8e85ad044c95d16834cfed7f91d8f7d8050ac6fae4cbff0646ddbbf3e748"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\run_step06_tests.py",
+      "kind": "software_or_simulation_design",
+      "sha256": "cf620ccf25543407ad7832c2f482ece8308be9bed0eac73767d7e41261cee72c"
+    }
+  ]
+}

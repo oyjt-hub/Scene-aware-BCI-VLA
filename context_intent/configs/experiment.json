@@ -1,0 +1,82 @@
+{
+  "protocol_version": "1.0",
+  "status": "planned_not_executed",
+  "purpose": "upstream_context_intent_comparison_with_fixed_vla",
+  "supported_actions": ["pick", "place", "fold"],
+  "data": {
+    "primary_evidence": "real_independently_annotated_scenes",
+    "synthetic_use": "pipeline_smoke_or_explicitly_labeled_training_augmentation_only",
+    "target_real_physical_scenes": 60,
+    "target_context_variants_per_scene": 6,
+    "split_unit": "physical_scene_or_larger_near_duplicate_recording_group",
+    "target_split_scenes": {"train": 32, "validation": 8, "test": 20},
+    "two_independent_annotators": true,
+    "split_seed": 20261015,
+    "test_is_frozen_before_model_selection": true,
+    "allow_test_training_or_threshold_tuning": false,
+    "public_input_key": "observation",
+    "hidden_keys_forbidden_in_predictor_input": ["annotation", "case_id", "scene_id", "group_id", "hidden_request", "ground_truth", "outcome"]
+  },
+  "methods": {
+    "main": ["rule", "gemini", "full"],
+    "neural_ablations": ["no_relations", "no_bci", "no_history", "mlp"],
+    "training_seeds": [0, 1, 2],
+    "all_methods_use_shared_candidate_schema_renderer_guard": true,
+    "report_raw_and_guarded_separately": true,
+    "no_bci_definition": "remove_neural_initial_selection_posterior_uncertainty_and_query_keep_shared_final_guard",
+    "no_history_definition": "remove_history_encoder_keep_current_explicit_goal_and_confirmations",
+    "no_relations_definition": "remove_explicit_relation_messages_and_relative_geometry_keep_object_xy_and_self_attention",
+    "mlp_parameter_and_tuning_budget_match": "as_close_as_practical_report_residual_difference"
+  },
+  "llm": {
+    "provider": "gemini",
+    "model": "gemini-2.5-flash",
+    "verify_and_freeze_model_version_at_execution": true,
+    "temperature": 0,
+    "max_retries_primary_analysis": 0,
+    "cloud_calls_require_explicit_cli_authorization": true,
+    "prompt_contains_annotation": false,
+    "same_public_observation_as_other_methods": true,
+    "invalid_output_or_api_failure": "reject_and_record_error",
+    "api_key_source": "environment_only",
+    "retain_credentials": false,
+    "record_prompt_hash_and_latency": true,
+    "repeat_if_nondeterministic": 3
+  },
+  "offline_evaluation": {
+    "independence_unit": "scene",
+    "paired_cluster_bootstrap_samples": 2000,
+    "bootstrap_seed": 20261015,
+    "confidence_level": 0.95,
+    "primary_comparisons": ["full_minus_rule", "full_minus_gemini"],
+    "metrics": ["ready_intent_accuracy", "unsafe_release_rate", "coverage", "selective_risk", "status_confusion", "status_macro_f1", "clarification_slot_accuracy", "unnecessary_clarification_rate", "format_and_instance_errors", "guard_interception", "latency_p50_ms", "latency_p95_ms"],
+    "threshold_selection_split": "validation_only",
+    "no_ready_selective_risk_value": null,
+    "bypass_clarification_guard": "offline_diagnostic_only_never_robot"
+  },
+  "latency": {
+    "local_warmup_calls": 20,
+    "measure_feature_construction_and_total_inference": true,
+    "report_cloud_network_and_retries_separately": true,
+    "report_parameter_count_memory_and_device": true
+  },
+  "end_to_end": {
+    "target_participants": [8, 10],
+    "pilot_participants": 2,
+    "pilot_excluded_from_primary_if_exposed_to_test_tasks": true,
+    "methods": ["rule", "gemini", "full"],
+    "tasks": 2,
+    "repeats_per_method_task": 3,
+    "total_primary_attempts_range": [144, 180],
+    "fixed_vla_weights_and_execution_parameters": true,
+    "instruction_requires_explicit_confirmation": true,
+    "module_package_executes_robot": false,
+    "balanced_method_order": true,
+    "success_source": "predefined_physical_end_state_independent_video_judgment",
+    "infer_success_from_instruction_correctness": false,
+    "include_failures_retries_clarification_and_recovery_in_time": true,
+    "metrics": ["physical_success", "total_completion_time", "bci_selection_count", "clarification_turns", "proposal_rejections", "human_intervention", "failure_stage", "nasa_tlx"],
+    "statistical_independence_unit": "participant",
+    "trial_budget_is_not_power_analysis": true
+  }
+}

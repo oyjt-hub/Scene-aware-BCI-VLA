@@ -1,0 +1,21 @@
+{
+  "scope": "read_only_current_backend_weight_and_normalization_hashes",
+  "files": [
+    {
+      "sha256": "4616e4c1966a5fb063b442ea5d69857f45e873222d839b794634d87d252ab9e7",
+      "path": "/home/oyjt/workspace/RLinf-RECAP/models/baseline_sft/RLinf-Pi05-LIBERO-SFT/model.safetensors"
+    },
+    {
+      "sha256": "dae37d79a22108af83df9189c6710a3ec8e077d65b28e34bdf1da724e5ae30f1",
+      "path": "/home/oyjt/workspace/RLinf-RECAP/models/baseline_sft/RLinf-Pi05-LIBERO-SFT/assets/physical-intelligence/libero/norm_stats.json"
+    },
+    {
+      "sha256": "26b36799a702ca920467c987096a8ccb5f476c6965af6c7f2fd419ecb6893bf2",
+      "path": "/home/oyjt/workspace/Qwen2.5-VL-GR00T-LIBERO-4in1/checkpoints/steps_30000_pytorch_model.pt"
+    },
+    {
+      "sha256": "9b99e12e0853e37612fbfb4ac164da7e2515e8d064fda3fa196537da4cdd21e5",
+      "path": "/home/oyjt/workspace/Qwen2.5-VL-GR00T-LIBERO-4in1/dataset_statistics.json"
+    }
+  ]
+}

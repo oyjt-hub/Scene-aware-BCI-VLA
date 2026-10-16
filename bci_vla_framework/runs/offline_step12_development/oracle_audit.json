@@ -1,0 +1,2137 @@
+{
+  "scope": "internal_finite_planning_model_only_not_runtime_oracle",
+  "rows": [
+    {
+      "prior_index": 0,
+      "prior": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "menu_durations_s": [
+        1.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 4,
+      "horizon": 0,
+      "method": "M",
+      "selected_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_value": 0.42719973148636353,
+      "exact_value_of_chosen_action": 0.42719973148636353,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 318900,
+      "method_compute_ns": 788600,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 0,
+      "prior": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "menu_durations_s": [
+        1.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 4,
+      "horizon": 0,
+      "method": "B9",
+      "selected_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_value": 0.42719973148636353,
+      "exact_value_of_chosen_action": 0.42719973148636353,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 318900,
+      "method_compute_ns": 349100,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 0,
+      "prior": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "menu_durations_s": [
+        1.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 7,
+      "horizon": 1,
+      "method": "M",
+      "selected_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_value": 0.42719973148636353,
+      "exact_value_of_chosen_action": 0.42719973148636353,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 2510100,
+      "method_compute_ns": 2443000,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 0,
+      "prior": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "menu_durations_s": [
+        1.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 7,
+      "horizon": 1,
+      "method": "B9",
+      "selected_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_value": 0.42719973148636353,
+      "exact_value_of_chosen_action": 0.42719973148636353,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 2510100,
+      "method_compute_ns": 2301300,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 0,
+      "prior": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "menu_durations_s": [
+        1.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 7,
+      "horizon": 2,
+      "method": "M2",
+      "selected_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_value": 0.42719973148636353,
+      "exact_value_of_chosen_action": 0.42719973148636353,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 14228200,
+      "method_compute_ns": 13078500,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 1,
+      "prior": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "menu_durations_s": [
+        1.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 4,
+      "horizon": 0,
+      "method": "M",
+      "selected_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_value": 0.9236846859554456,
+      "exact_value_of_chosen_action": 0.9236846859554456,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 299400,
+      "method_compute_ns": 748500,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 1,
+      "prior": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "menu_durations_s": [
+        1.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 4,
+      "horizon": 0,
+      "method": "B9",
+      "selected_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_value": 0.9236846859554456,
+      "exact_value_of_chosen_action": 0.9236846859554456,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 299400,
+      "method_compute_ns": 352800,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 1,
+      "prior": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "menu_durations_s": [
+        1.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 7,
+      "horizon": 1,
+      "method": "M",
+      "selected_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_value": 0.9236846859554456,
+      "exact_value_of_chosen_action": 0.9236846859554456,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 2379600,
+      "method_compute_ns": 2532000,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 1,
+      "prior": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "menu_durations_s": [
+        1.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 7,
+      "horizon": 1,
+      "method": "B9",
+      "selected_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_value": 0.9236846859554456,
+      "exact_value_of_chosen_action": 0.9236846859554456,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 2379600,
+      "method_compute_ns": 2781700,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 1,
+      "prior": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "menu_durations_s": [
+        1.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 7,
+      "horizon": 2,
+      "method": "M2",
+      "selected_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_value": 0.9236846859554456,
+      "exact_value_of_chosen_action": 0.9236846859554456,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 14743900,
+      "method_compute_ns": 13313700,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 2,
+      "prior": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "menu_durations_s": [
+        1.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 4,
+      "horizon": 0,
+      "method": "M",
+      "selected_action": "confirm:task-d5fc9bc832047df78f51c84f",
+      "oracle_action": "confirm:task-d5fc9bc832047df78f51c84f",
+      "oracle_value": 0.42719973148636353,
+      "exact_value_of_chosen_action": 0.42719973148636353,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 289100,
+      "method_compute_ns": 749600,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 2,
+      "prior": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "menu_durations_s": [
+        1.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 4,
+      "horizon": 0,
+      "method": "B9",
+      "selected_action": "confirm:task-d5fc9bc832047df78f51c84f",
+      "oracle_action": "confirm:task-d5fc9bc832047df78f51c84f",
+      "oracle_value": 0.42719973148636353,
+      "exact_value_of_chosen_action": 0.42719973148636353,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 289100,
+      "method_compute_ns": 347400,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 2,
+      "prior": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "menu_durations_s": [
+        1.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 7,
+      "horizon": 1,
+      "method": "M",
+      "selected_action": "confirm:task-d5fc9bc832047df78f51c84f",
+      "oracle_action": "confirm:task-d5fc9bc832047df78f51c84f",
+      "oracle_value": 0.42719973148636353,
+      "exact_value_of_chosen_action": 0.42719973148636353,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 2238100,
+      "method_compute_ns": 2577300,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 2,
+      "prior": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "menu_durations_s": [
+        1.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 7,
+      "horizon": 1,
+      "method": "B9",
+      "selected_action": "confirm:task-d5fc9bc832047df78f51c84f",
+      "oracle_action": "confirm:task-d5fc9bc832047df78f51c84f",
+      "oracle_value": 0.42719973148636353,
+      "exact_value_of_chosen_action": 0.42719973148636353,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 2238100,
+      "method_compute_ns": 2410500,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 2,
+      "prior": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "menu_durations_s": [
+        1.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 7,
+      "horizon": 2,
+      "method": "M2",
+      "selected_action": "confirm:task-d5fc9bc832047df78f51c84f",
+      "oracle_action": "confirm:task-d5fc9bc832047df78f51c84f",
+      "oracle_value": 0.42719973148636353,
+      "exact_value_of_chosen_action": 0.42719973148636353,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 14152700,
+      "method_compute_ns": 12219500,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 3,
+      "prior": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "menu_durations_s": [
+        1.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 4,
+      "horizon": 0,
+      "method": "M",
+      "selected_action": "confirm:task-d5fc9bc832047df78f51c84f",
+      "oracle_action": "confirm:task-d5fc9bc832047df78f51c84f",
+      "oracle_value": 0.9236846859554456,
+      "exact_value_of_chosen_action": 0.9236846859554456,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 289600,
+      "method_compute_ns": 736200,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 3,
+      "prior": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "menu_durations_s": [
+        1.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 4,
+      "horizon": 0,
+      "method": "B9",
+      "selected_action": "confirm:task-d5fc9bc832047df78f51c84f",
+      "oracle_action": "confirm:task-d5fc9bc832047df78f51c84f",
+      "oracle_value": 0.9236846859554456,
+      "exact_value_of_chosen_action": 0.9236846859554456,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 289600,
+      "method_compute_ns": 341000,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 3,
+      "prior": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "menu_durations_s": [
+        1.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 7,
+      "horizon": 1,
+      "method": "M",
+      "selected_action": "confirm:task-d5fc9bc832047df78f51c84f",
+      "oracle_action": "confirm:task-d5fc9bc832047df78f51c84f",
+      "oracle_value": 0.9236846859554456,
+      "exact_value_of_chosen_action": 0.9236846859554456,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 2318100,
+      "method_compute_ns": 2486200,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 3,
+      "prior": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "menu_durations_s": [
+        1.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 7,
+      "horizon": 1,
+      "method": "B9",
+      "selected_action": "confirm:task-d5fc9bc832047df78f51c84f",
+      "oracle_action": "confirm:task-d5fc9bc832047df78f51c84f",
+      "oracle_value": 0.9236846859554456,
+      "exact_value_of_chosen_action": 0.9236846859554456,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 2318100,
+      "method_compute_ns": 2301000,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 3,
+      "prior": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "menu_durations_s": [
+        1.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 7,
+      "horizon": 2,
+      "method": "M2",
+      "selected_action": "confirm:task-d5fc9bc832047df78f51c84f",
+      "oracle_action": "confirm:task-d5fc9bc832047df78f51c84f",
+      "oracle_value": 0.9236846859554456,
+      "exact_value_of_chosen_action": 0.9236846859554456,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 14138500,
+      "method_compute_ns": 12821200,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 4,
+      "prior": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "menu_durations_s": [
+        1.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 4,
+      "horizon": 0,
+      "method": "M",
+      "selected_action": "pause",
+      "oracle_action": "pause",
+      "oracle_value": 1.0,
+      "exact_value_of_chosen_action": 1.0,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 284700,
+      "method_compute_ns": 1374800,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 4,
+      "prior": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "menu_durations_s": [
+        1.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 4,
+      "horizon": 0,
+      "method": "B9",
+      "selected_action": "pause",
+      "oracle_action": "pause",
+      "oracle_value": 1.0,
+      "exact_value_of_chosen_action": 1.0,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 284700,
+      "method_compute_ns": 336100,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 4,
+      "prior": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "menu_durations_s": [
+        1.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 7,
+      "horizon": 1,
+      "method": "M",
+      "selected_action": "pause",
+      "oracle_action": "pause",
+      "oracle_value": 1.0,
+      "exact_value_of_chosen_action": 1.0,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 2273900,
+      "method_compute_ns": 3054400,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 4,
+      "prior": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "menu_durations_s": [
+        1.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 7,
+      "horizon": 1,
+      "method": "B9",
+      "selected_action": "pause",
+      "oracle_action": "pause",
+      "oracle_value": 1.0,
+      "exact_value_of_chosen_action": 1.0,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 2273900,
+      "method_compute_ns": 2286000,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 4,
+      "prior": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "menu_durations_s": [
+        1.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 7,
+      "horizon": 2,
+      "method": "M2",
+      "selected_action": "probe:0:1.0",
+      "oracle_action": "probe:0:1.0",
+      "oracle_value": 0.9331807017682474,
+      "exact_value_of_chosen_action": 0.9331807017682474,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 14690200,
+      "method_compute_ns": 13803500,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 5,
+      "prior": [
+        0,
+        0.5,
+        0.5,
+        0
+      ],
+      "menu_durations_s": [
+        1.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 4,
+      "horizon": 0,
+      "method": "M",
+      "selected_action": "pause",
+      "oracle_action": "pause",
+      "oracle_value": 1.0,
+      "exact_value_of_chosen_action": 1.0,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 372400,
+      "method_compute_ns": 976500,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 5,
+      "prior": [
+        0,
+        0.5,
+        0.5,
+        0
+      ],
+      "menu_durations_s": [
+        1.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 4,
+      "horizon": 0,
+      "method": "B9",
+      "selected_action": "pause",
+      "oracle_action": "pause",
+      "oracle_value": 1.0,
+      "exact_value_of_chosen_action": 1.0,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 372400,
+      "method_compute_ns": 341800,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 5,
+      "prior": [
+        0,
+        0.5,
+        0.5,
+        0
+      ],
+      "menu_durations_s": [
+        1.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 7,
+      "horizon": 1,
+      "method": "M",
+      "selected_action": "probe:0:1.0",
+      "oracle_action": "probe:0:1.0",
+      "oracle_value": 0.8713177498731328,
+      "exact_value_of_chosen_action": 0.8713177498731328,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 2187500,
+      "method_compute_ns": 2651700,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 5,
+      "prior": [
+        0,
+        0.5,
+        0.5,
+        0
+      ],
+      "menu_durations_s": [
+        1.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 7,
+      "horizon": 1,
+      "method": "B9",
+      "selected_action": "probe:0:1.0",
+      "oracle_action": "probe:0:1.0",
+      "oracle_value": 0.8713177498731328,
+      "exact_value_of_chosen_action": 0.8713177498731328,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 2187500,
+      "method_compute_ns": 2331900,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 5,
+      "prior": [
+        0,
+        0.5,
+        0.5,
+        0
+      ],
+      "menu_durations_s": [
+        1.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 7,
+      "horizon": 2,
+      "method": "M2",
+      "selected_action": "probe:0:1.0",
+      "oracle_action": "probe:0:1.0",
+      "oracle_value": 0.8713177498731328,
+      "exact_value_of_chosen_action": 0.8713177498731328,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 13978400,
+      "method_compute_ns": 12514900,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 6,
+      "prior": [
+        0.81,
+        0.09,
+        0.09,
+        0.01
+      ],
+      "menu_durations_s": [
+        1.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 4,
+      "horizon": 0,
+      "method": "M",
+      "selected_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_value": 0.5635682584651767,
+      "exact_value_of_chosen_action": 0.5635682584651767,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 289200,
+      "method_compute_ns": 1667600,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 6,
+      "prior": [
+        0.81,
+        0.09,
+        0.09,
+        0.01
+      ],
+      "menu_durations_s": [
+        1.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 4,
+      "horizon": 0,
+      "method": "B9",
+      "selected_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_value": 0.5635682584651767,
+      "exact_value_of_chosen_action": 0.5635682584651767,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 289200,
+      "method_compute_ns": 367000,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 6,
+      "prior": [
+        0.81,
+        0.09,
+        0.09,
+        0.01
+      ],
+      "menu_durations_s": [
+        1.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 7,
+      "horizon": 1,
+      "method": "M",
+      "selected_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_value": 0.5635682584651767,
+      "exact_value_of_chosen_action": 0.5635682584651767,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 2238900,
+      "method_compute_ns": 3130100,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 6,
+      "prior": [
+        0.81,
+        0.09,
+        0.09,
+        0.01
+      ],
+      "menu_durations_s": [
+        1.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 7,
+      "horizon": 1,
+      "method": "B9",
+      "selected_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_value": 0.5635682584651767,
+      "exact_value_of_chosen_action": 0.5635682584651767,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 2238900,
+      "method_compute_ns": 2282200,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 6,
+      "prior": [
+        0.81,
+        0.09,
+        0.09,
+        0.01
+      ],
+      "menu_durations_s": [
+        1.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 7,
+      "horizon": 2,
+      "method": "M2",
+      "selected_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_value": 0.5635682584651767,
+      "exact_value_of_chosen_action": 0.5635682584651767,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 13877700,
+      "method_compute_ns": 13202800,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 7,
+      "prior": [
+        0.1,
+        0.2,
+        0.3,
+        0.4
+      ],
+      "menu_durations_s": [
+        1.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 4,
+      "horizon": 0,
+      "method": "M",
+      "selected_action": "pause",
+      "oracle_action": "pause",
+      "oracle_value": 1.0,
+      "exact_value_of_chosen_action": 1.0,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 284900,
+      "method_compute_ns": 1370600,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 7,
+      "prior": [
+        0.1,
+        0.2,
+        0.3,
+        0.4
+      ],
+      "menu_durations_s": [
+        1.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 4,
+      "horizon": 0,
+      "method": "B9",
+      "selected_action": "pause",
+      "oracle_action": "pause",
+      "oracle_value": 1.0,
+      "exact_value_of_chosen_action": 1.0,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 284900,
+      "method_compute_ns": 339500,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 7,
+      "prior": [
+        0.1,
+        0.2,
+        0.3,
+        0.4
+      ],
+      "menu_durations_s": [
+        1.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 7,
+      "horizon": 1,
+      "method": "M",
+      "selected_action": "probe:0:1.0",
+      "oracle_action": "probe:0:1.0",
+      "oracle_value": 0.946223963875204,
+      "exact_value_of_chosen_action": 0.946223963875204,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": -1.1102230246251565e-16,
+      "oracle_compute_ns": 2210100,
+      "method_compute_ns": 3120300,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 7,
+      "prior": [
+        0.1,
+        0.2,
+        0.3,
+        0.4
+      ],
+      "menu_durations_s": [
+        1.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 7,
+      "horizon": 1,
+      "method": "B9",
+      "selected_action": "probe:0:1.0",
+      "oracle_action": "probe:0:1.0",
+      "oracle_value": 0.946223963875204,
+      "exact_value_of_chosen_action": 0.946223963875204,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 2210100,
+      "method_compute_ns": 2525900,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 7,
+      "prior": [
+        0.1,
+        0.2,
+        0.3,
+        0.4
+      ],
+      "menu_durations_s": [
+        1.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 7,
+      "horizon": 2,
+      "method": "M2",
+      "selected_action": "probe:0:1.0",
+      "oracle_action": "probe:0:1.0",
+      "oracle_value": 0.946223963875204,
+      "exact_value_of_chosen_action": 0.946223963875204,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": -1.1102230246251565e-16,
+      "oracle_compute_ns": 13829300,
+      "method_compute_ns": 14684400,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 0,
+      "prior": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "menu_durations_s": [
+        1.0,
+        2.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 4,
+      "horizon": 0,
+      "method": "M",
+      "selected_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_value": 0.42719973148636353,
+      "exact_value_of_chosen_action": 0.42719973148636353,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 298000,
+      "method_compute_ns": 751000,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 0,
+      "prior": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "menu_durations_s": [
+        1.0,
+        2.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 4,
+      "horizon": 0,
+      "method": "B9",
+      "selected_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_value": 0.42719973148636353,
+      "exact_value_of_chosen_action": 0.42719973148636353,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 298000,
+      "method_compute_ns": 344900,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 0,
+      "prior": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "menu_durations_s": [
+        1.0,
+        2.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 9,
+      "horizon": 1,
+      "method": "M",
+      "selected_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_value": 0.42719973148636353,
+      "exact_value_of_chosen_action": 0.42719973148636353,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 3648900,
+      "method_compute_ns": 3924900,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 0,
+      "prior": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "menu_durations_s": [
+        1.0,
+        2.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 9,
+      "horizon": 1,
+      "method": "B9",
+      "selected_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_value": 0.42719973148636353,
+      "exact_value_of_chosen_action": 0.42719973148636353,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 3648900,
+      "method_compute_ns": 4116200,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 0,
+      "prior": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "menu_durations_s": [
+        1.0,
+        2.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 9,
+      "horizon": 2,
+      "method": "M2",
+      "selected_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_value": 0.42719973148636353,
+      "exact_value_of_chosen_action": 0.42719973148636353,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 37479300,
+      "method_compute_ns": 33044300,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 1,
+      "prior": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "menu_durations_s": [
+        1.0,
+        2.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 4,
+      "horizon": 0,
+      "method": "M",
+      "selected_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_value": 0.9236846859554456,
+      "exact_value_of_chosen_action": 0.9236846859554456,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 301100,
+      "method_compute_ns": 777600,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 1,
+      "prior": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "menu_durations_s": [
+        1.0,
+        2.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 4,
+      "horizon": 0,
+      "method": "B9",
+      "selected_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_value": 0.9236846859554456,
+      "exact_value_of_chosen_action": 0.9236846859554456,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 301100,
+      "method_compute_ns": 353200,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 1,
+      "prior": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "menu_durations_s": [
+        1.0,
+        2.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 9,
+      "horizon": 1,
+      "method": "M",
+      "selected_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_value": 0.9236846859554456,
+      "exact_value_of_chosen_action": 0.9236846859554456,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 3583300,
+      "method_compute_ns": 4079600,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 1,
+      "prior": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "menu_durations_s": [
+        1.0,
+        2.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 9,
+      "horizon": 1,
+      "method": "B9",
+      "selected_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_value": 0.9236846859554456,
+      "exact_value_of_chosen_action": 0.9236846859554456,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 3583300,
+      "method_compute_ns": 3664400,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 1,
+      "prior": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "menu_durations_s": [
+        1.0,
+        2.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 9,
+      "horizon": 2,
+      "method": "M2",
+      "selected_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_value": 0.9236846859554456,
+      "exact_value_of_chosen_action": 0.9236846859554456,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 37459900,
+      "method_compute_ns": 33731000,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 2,
+      "prior": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "menu_durations_s": [
+        1.0,
+        2.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 4,
+      "horizon": 0,
+      "method": "M",
+      "selected_action": "confirm:task-d5fc9bc832047df78f51c84f",
+      "oracle_action": "confirm:task-d5fc9bc832047df78f51c84f",
+      "oracle_value": 0.42719973148636353,
+      "exact_value_of_chosen_action": 0.42719973148636353,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 294900,
+      "method_compute_ns": 766800,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 2,
+      "prior": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "menu_durations_s": [
+        1.0,
+        2.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 4,
+      "horizon": 0,
+      "method": "B9",
+      "selected_action": "confirm:task-d5fc9bc832047df78f51c84f",
+      "oracle_action": "confirm:task-d5fc9bc832047df78f51c84f",
+      "oracle_value": 0.42719973148636353,
+      "exact_value_of_chosen_action": 0.42719973148636353,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 294900,
+      "method_compute_ns": 351600,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 2,
+      "prior": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "menu_durations_s": [
+        1.0,
+        2.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 9,
+      "horizon": 1,
+      "method": "M",
+      "selected_action": "confirm:task-d5fc9bc832047df78f51c84f",
+      "oracle_action": "confirm:task-d5fc9bc832047df78f51c84f",
+      "oracle_value": 0.42719973148636353,
+      "exact_value_of_chosen_action": 0.42719973148636353,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 3631300,
+      "method_compute_ns": 3626900,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 2,
+      "prior": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "menu_durations_s": [
+        1.0,
+        2.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 9,
+      "horizon": 1,
+      "method": "B9",
+      "selected_action": "confirm:task-d5fc9bc832047df78f51c84f",
+      "oracle_action": "confirm:task-d5fc9bc832047df78f51c84f",
+      "oracle_value": 0.42719973148636353,
+      "exact_value_of_chosen_action": 0.42719973148636353,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 3631300,
+      "method_compute_ns": 3650400,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 2,
+      "prior": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "menu_durations_s": [
+        1.0,
+        2.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 9,
+      "horizon": 2,
+      "method": "M2",
+      "selected_action": "confirm:task-d5fc9bc832047df78f51c84f",
+      "oracle_action": "confirm:task-d5fc9bc832047df78f51c84f",
+      "oracle_value": 0.42719973148636353,
+      "exact_value_of_chosen_action": 0.42719973148636353,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 39446400,
+      "method_compute_ns": 34386800,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 3,
+      "prior": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "menu_durations_s": [
+        1.0,
+        2.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 4,
+      "horizon": 0,
+      "method": "M",
+      "selected_action": "confirm:task-d5fc9bc832047df78f51c84f",
+      "oracle_action": "confirm:task-d5fc9bc832047df78f51c84f",
+      "oracle_value": 0.9236846859554456,
+      "exact_value_of_chosen_action": 0.9236846859554456,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 299700,
+      "method_compute_ns": 806200,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 3,
+      "prior": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "menu_durations_s": [
+        1.0,
+        2.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 4,
+      "horizon": 0,
+      "method": "B9",
+      "selected_action": "confirm:task-d5fc9bc832047df78f51c84f",
+      "oracle_action": "confirm:task-d5fc9bc832047df78f51c84f",
+      "oracle_value": 0.9236846859554456,
+      "exact_value_of_chosen_action": 0.9236846859554456,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 299700,
+      "method_compute_ns": 346500,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 3,
+      "prior": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "menu_durations_s": [
+        1.0,
+        2.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 9,
+      "horizon": 1,
+      "method": "M",
+      "selected_action": "confirm:task-d5fc9bc832047df78f51c84f",
+      "oracle_action": "confirm:task-d5fc9bc832047df78f51c84f",
+      "oracle_value": 0.9236846859554456,
+      "exact_value_of_chosen_action": 0.9236846859554456,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 3670800,
+      "method_compute_ns": 3837600,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 3,
+      "prior": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "menu_durations_s": [
+        1.0,
+        2.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 9,
+      "horizon": 1,
+      "method": "B9",
+      "selected_action": "confirm:task-d5fc9bc832047df78f51c84f",
+      "oracle_action": "confirm:task-d5fc9bc832047df78f51c84f",
+      "oracle_value": 0.9236846859554456,
+      "exact_value_of_chosen_action": 0.9236846859554456,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 3670800,
+      "method_compute_ns": 3677500,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 3,
+      "prior": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "menu_durations_s": [
+        1.0,
+        2.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 9,
+      "horizon": 2,
+      "method": "M2",
+      "selected_action": "confirm:task-d5fc9bc832047df78f51c84f",
+      "oracle_action": "confirm:task-d5fc9bc832047df78f51c84f",
+      "oracle_value": 0.9236846859554456,
+      "exact_value_of_chosen_action": 0.9236846859554456,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 37499200,
+      "method_compute_ns": 33869000,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 4,
+      "prior": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "menu_durations_s": [
+        1.0,
+        2.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 4,
+      "horizon": 0,
+      "method": "M",
+      "selected_action": "pause",
+      "oracle_action": "pause",
+      "oracle_value": 1.0,
+      "exact_value_of_chosen_action": 1.0,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 366000,
+      "method_compute_ns": 1430300,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 4,
+      "prior": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "menu_durations_s": [
+        1.0,
+        2.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 4,
+      "horizon": 0,
+      "method": "B9",
+      "selected_action": "pause",
+      "oracle_action": "pause",
+      "oracle_value": 1.0,
+      "exact_value_of_chosen_action": 1.0,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 366000,
+      "method_compute_ns": 353200,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 4,
+      "prior": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "menu_durations_s": [
+        1.0,
+        2.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 9,
+      "horizon": 1,
+      "method": "M",
+      "selected_action": "pause",
+      "oracle_action": "pause",
+      "oracle_value": 1.0,
+      "exact_value_of_chosen_action": 1.0,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 3707500,
+      "method_compute_ns": 4451200,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 4,
+      "prior": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "menu_durations_s": [
+        1.0,
+        2.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 9,
+      "horizon": 1,
+      "method": "B9",
+      "selected_action": "pause",
+      "oracle_action": "pause",
+      "oracle_value": 1.0,
+      "exact_value_of_chosen_action": 1.0,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 3707500,
+      "method_compute_ns": 3718100,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 4,
+      "prior": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "menu_durations_s": [
+        1.0,
+        2.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 9,
+      "horizon": 2,
+      "method": "M2",
+      "selected_action": "probe:0:1.0",
+      "oracle_action": "probe:0:1.0",
+      "oracle_value": 0.9331807017682474,
+      "exact_value_of_chosen_action": 0.9331807017682474,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 37818400,
+      "method_compute_ns": 34369100,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 5,
+      "prior": [
+        0,
+        0.5,
+        0.5,
+        0
+      ],
+      "menu_durations_s": [
+        1.0,
+        2.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 4,
+      "horizon": 0,
+      "method": "M",
+      "selected_action": "pause",
+      "oracle_action": "pause",
+      "oracle_value": 1.0,
+      "exact_value_of_chosen_action": 1.0,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 304300,
+      "method_compute_ns": 1115200,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 5,
+      "prior": [
+        0,
+        0.5,
+        0.5,
+        0
+      ],
+      "menu_durations_s": [
+        1.0,
+        2.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 4,
+      "horizon": 0,
+      "method": "B9",
+      "selected_action": "pause",
+      "oracle_action": "pause",
+      "oracle_value": 1.0,
+      "exact_value_of_chosen_action": 1.0,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 304300,
+      "method_compute_ns": 443100,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 5,
+      "prior": [
+        0,
+        0.5,
+        0.5,
+        0
+      ],
+      "menu_durations_s": [
+        1.0,
+        2.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 9,
+      "horizon": 1,
+      "method": "M",
+      "selected_action": "probe:0:1.0",
+      "oracle_action": "probe:0:1.0",
+      "oracle_value": 0.8713177498731328,
+      "exact_value_of_chosen_action": 0.8713177498731328,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 3574400,
+      "method_compute_ns": 4080000,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 5,
+      "prior": [
+        0,
+        0.5,
+        0.5,
+        0
+      ],
+      "menu_durations_s": [
+        1.0,
+        2.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 9,
+      "horizon": 1,
+      "method": "B9",
+      "selected_action": "probe:0:1.0",
+      "oracle_action": "probe:0:1.0",
+      "oracle_value": 0.8713177498731328,
+      "exact_value_of_chosen_action": 0.8713177498731328,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 3574400,
+      "method_compute_ns": 3693500,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 5,
+      "prior": [
+        0,
+        0.5,
+        0.5,
+        0
+      ],
+      "menu_durations_s": [
+        1.0,
+        2.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 9,
+      "horizon": 2,
+      "method": "M2",
+      "selected_action": "probe:0:1.0",
+      "oracle_action": "probe:0:1.0",
+      "oracle_value": 0.8713177498731328,
+      "exact_value_of_chosen_action": 0.8713177498731328,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 38756600,
+      "method_compute_ns": 33636900,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 6,
+      "prior": [
+        0.81,
+        0.09,
+        0.09,
+        0.01
+      ],
+      "menu_durations_s": [
+        1.0,
+        2.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 4,
+      "horizon": 0,
+      "method": "M",
+      "selected_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_value": 0.5635682584651767,
+      "exact_value_of_chosen_action": 0.5635682584651767,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 291300,
+      "method_compute_ns": 1389600,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 6,
+      "prior": [
+        0.81,
+        0.09,
+        0.09,
+        0.01
+      ],
+      "menu_durations_s": [
+        1.0,
+        2.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 4,
+      "horizon": 0,
+      "method": "B9",
+      "selected_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_value": 0.5635682584651767,
+      "exact_value_of_chosen_action": 0.5635682584651767,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 291300,
+      "method_compute_ns": 371000,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 6,
+      "prior": [
+        0.81,
+        0.09,
+        0.09,
+        0.01
+      ],
+      "menu_durations_s": [
+        1.0,
+        2.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 9,
+      "horizon": 1,
+      "method": "M",
+      "selected_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_value": 0.5635682584651767,
+      "exact_value_of_chosen_action": 0.5635682584651767,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 3539800,
+      "method_compute_ns": 4472700,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 6,
+      "prior": [
+        0.81,
+        0.09,
+        0.09,
+        0.01
+      ],
+      "menu_durations_s": [
+        1.0,
+        2.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 9,
+      "horizon": 1,
+      "method": "B9",
+      "selected_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_value": 0.5635682584651767,
+      "exact_value_of_chosen_action": 0.5635682584651767,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 3539800,
+      "method_compute_ns": 3881400,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 6,
+      "prior": [
+        0.81,
+        0.09,
+        0.09,
+        0.01
+      ],
+      "menu_durations_s": [
+        1.0,
+        2.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 9,
+      "horizon": 2,
+      "method": "M2",
+      "selected_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_action": "confirm:task-9cad706e60e745cf3c01a413",
+      "oracle_value": 0.5635682584651767,
+      "exact_value_of_chosen_action": 0.5635682584651767,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 37820400,
+      "method_compute_ns": 33408600,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 7,
+      "prior": [
+        0.1,
+        0.2,
+        0.3,
+        0.4
+      ],
+      "menu_durations_s": [
+        1.0,
+        2.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 4,
+      "horizon": 0,
+      "method": "M",
+      "selected_action": "pause",
+      "oracle_action": "pause",
+      "oracle_value": 1.0,
+      "exact_value_of_chosen_action": 1.0,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 294100,
+      "method_compute_ns": 1396500,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 7,
+      "prior": [
+        0.1,
+        0.2,
+        0.3,
+        0.4
+      ],
+      "menu_durations_s": [
+        1.0,
+        2.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 4,
+      "horizon": 0,
+      "method": "B9",
+      "selected_action": "pause",
+      "oracle_action": "pause",
+      "oracle_value": 1.0,
+      "exact_value_of_chosen_action": 1.0,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 294100,
+      "method_compute_ns": 346300,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 7,
+      "prior": [
+        0.1,
+        0.2,
+        0.3,
+        0.4
+      ],
+      "menu_durations_s": [
+        1.0,
+        2.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 9,
+      "horizon": 1,
+      "method": "M",
+      "selected_action": "probe:0:1.0",
+      "oracle_action": "probe:0:1.0",
+      "oracle_value": 0.946223963875204,
+      "exact_value_of_chosen_action": 0.946223963875204,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": -1.1102230246251565e-16,
+      "oracle_compute_ns": 3525500,
+      "method_compute_ns": 4392000,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 7,
+      "prior": [
+        0.1,
+        0.2,
+        0.3,
+        0.4
+      ],
+      "menu_durations_s": [
+        1.0,
+        2.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 9,
+      "horizon": 1,
+      "method": "B9",
+      "selected_action": "probe:0:1.0",
+      "oracle_action": "probe:0:1.0",
+      "oracle_value": 0.946223963875204,
+      "exact_value_of_chosen_action": 0.946223963875204,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": 0.0,
+      "oracle_compute_ns": 3525500,
+      "method_compute_ns": 3715900,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    },
+    {
+      "prior_index": 7,
+      "prior": [
+        0.1,
+        0.2,
+        0.3,
+        0.4
+      ],
+      "menu_durations_s": [
+        1.0,
+        2.0
+      ],
+      "hidden_states": 4,
+      "candidate_count": 9,
+      "horizon": 2,
+      "method": "M2",
+      "selected_action": "probe:0:1.0",
+      "oracle_action": "probe:0:1.0",
+      "oracle_value": 0.946223963875204,
+      "exact_value_of_chosen_action": 0.946223963875204,
+      "same_horizon_regret": 0.0,
+      "planning_value_gap": -1.1102230246251565e-16,
+      "oracle_compute_ns": 36603300,
+      "method_compute_ns": 34068300,
+      "compute_budget_ns": 5000000000,
+      "within_compute_budget": true
+    }
+  ],
+  "max_same_horizon_regret": 0.0,
+  "max_planning_value_gap": 1.1102230246251565e-16,
+  "max_oracle_compute_ns": 39446400,
+  "all_within_compute_budget": true,
+  "scale_axes": [
+    "diagnostic_horizon_0_1_2",
+    "one_or_two_durations",
+    "eight_joint_priors"
+  ],
+  "state_space_scaling": "unsupported beyond fixed 2 goals x 2 modes; not tested",
+  "runtime_gap": "O1 and frozen09 terminal loss do not include step11 posterior>=0.8 authorization rejection; full episodes record those blocked branches separately",
+  "optimal_pomdp_claim": false
+}

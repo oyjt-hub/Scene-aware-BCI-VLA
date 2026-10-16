@@ -1,0 +1,52 @@
+﻿步骤14：LIBERO平台接入与仿真首轮测试（2026-10-16）
+当前范围：用户明确改为“先libero仿真平台测试”；不连接真实脑机，不启动真实机械臂。
+结论：已完成实际LIBERO/MuJoCo＋实际StarVLA权重＋新仿真动作门控的接入与冒烟测试。
+步骤14整体仍进行中：完整联合信念/诊断策略/契约授权尚未适配LIBERO任务本体；真实BCI—机器人闭环未完成。
+不能把本次脚本确认称为真实脑机输入，也不能把独立仿真门控称为已接通原InteractionSession授权。
+
+最终有效结果（v3，seed=7，init_state_index=0，libero_goal）：
+1. task0：open the middle drawer of the cabinet；独立env.check_success()为true；117个策略动作，15次模型推理。
+2. task1：put the bowl on the stove；独立env.check_success()为true；80个策略动作，10次模型推理。
+3. task0的PROBE/STOP注入：5步时切入PROBE并清空旧chunk，脚本重新确认后恢复；12步时STOP锁存并清空，之后没有仿真动作。
+第三项是故障测试，终止为injected_stop，task_success=false，不能删掉或算任务成功。
+以上是两个固定初态的接入样例，不是正式成功率、泛化或策略优越性研究。
+
+实际执行栈：
+StarVLA提交9513f28012eab45956967e1958282f22a64d7a9b，LIBERO提交8f1084e3132a39270c3a13ebe37270a43ece2a01。
+现有Qwen2.5-VL-GR00T-LIBERO-4in1，30000步权重；SHA256及配置/统计见execution/14_libero_assets.json。
+该权重是本轮选用的现有仿真基线，不是已确认对应原论文π0.5的checkpoint；没有训练或下载权重。
+模型环境starVLA，仿真环境libero，独立目录/服务端口16814，GPU0；原服务器仓库与旧服务未改动。
+为缺失diffusers建立任务目录内的纯Python包链接，复用openpi环境已安装的0.33.1，不修改原环境。
+观测agentview与wrist RGB uint8 256×256，两轴翻转180度，resize224×224，发送examples[0].image和lang。
+输出1×8×7；按franka min/max及mask反归一化，clip与夹爪二值转换和原仓库核对。
+夹爪open=1转换为LIBERO -1；该7维仿真控制量不是双Piper14维关节命令。
+模型不接收当前路径未发送的state；不能把图像/动作规格沿用到实体机器人。
+实际运行与推理计时是机器时间，真实用户阅读、理解和probe遵从耗时未测。
+
+修复历史与证据边界：
+v1：模型启动失败，diffusers缺失；保留原日志和清理记录。
+v2：服务与仿真可运行，但我新增适配层的夹爪符号与仓库已有转换相反；task0完成、task1超时。
+该v2结果为接口缺陷定位材料，不用于策略能力或成功率结论。
+修复后增加夹爪阈值0/0.49/0.5/1、mask、shape、非有限值、min/max与clip测试，v3全部3试次重新运行。
+模型日志提示当前Transformers默认fast图像处理器与旧slow实现可能不同；本轮未对其做等价性验收，不声称复现论文性能。
+启动时datasets目录警告不影响本次BDDL、init_state和资源渲染；没有使用演示数据集进行拟合或正式评估。
+
+按14.1—14.8对应：
+14.1：新隔离入口、配置、代码/权重/统计指纹、旧版本和回退说明完成。
+14.2：实际模型与MuJoCo接通，图像/7维动作/夹爪映射核对；未运行实体机器人。
+14.3：只有开发接入轨迹，没有独立后果表校准，也没有同场景多目的地/用户改目标对照；这些仍待实施。
+14.4：记录所有3episode、失败/中止、动作/推理步数与终点。脚本任务与模型提示绑定；不能估计真实错误目标启动或忠实完成率。
+14.5：未确认不可入队、PROBE清队列、任务/场景版本变化丢弃旧动作、STOP锁存通过；跨任务测试显式重置环境，没有模拟物理回滚。
+14.6：停止、错误上下文、维度/NaN/越界注入留在软件或仿真，不操作实体设备。
+14.7：task_limit/策略输出异常/服务异常/注入停止与真实意图或通道原因分开；没有EEG证据就不推断通道变化。
+14.8：修复后完整软件回归376项通过；所有新轨迹标开发接入/pilot仿真，未纳入正式实验。
+
+验证与未完成项：
+完整回归376项，0失败/0错误/0跳过。独立事件一致性检查见execution/14_trace_audit.json。
+该事件审计核动作计数、顺序及失效后无动作，不等于重新执行模型推理或原完整会话replay。
+G2研究门槛仍未通过，G3真实BCI未验证，真实步骤14未完成。BCI、实体机器人命令均0。
+后续确定工作：将LIBERO候选任务/场景词表与契约绑定接入联合信念、runtime_v2及原会话授权，加入真实模型端点回传。
+随后做模拟输入下的改目标/改通道/冲突/再确认/恢复对照；不可用本轮固定脚本门控冒充完整框架验证。
+
+证据：runs/pilot_robot_14_libero_simulation_v3/v3/results/summary.json、episodes.json、events.jsonl、三个mp4及首末帧。
+配置：configs/execution/libero_simulation_v1.json；冻结及验收：execution/14_source_manifest.json、14_integrity_result.json。

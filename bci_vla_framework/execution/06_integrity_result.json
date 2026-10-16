@@ -1,0 +1,27 @@
+{
+  "scope": "offline_model_delivery_integrity",
+  "result": "PASS",
+  "count": 12,
+  "checks": [
+    "only 01-06 complete",
+    "07 not started",
+    "step06 limited to offline branch",
+    "G1 scope unchanged and G2-G4 not started",
+    "47 deterministic software checks pass",
+    "real profile parameters absent and blocked",
+    "loader refuses uncalibrated real profile",
+    "simulation provenance explicit",
+    "model configurations validate",
+    "06.1-06.9 mapped",
+    "input/software fingerprints match",
+    "TXT encoding intact"
+  ],
+  "real_calibration_status": "待外部条件",
+  "not_evaluated": [
+    "real EEG likelihoods",
+    "real probe compliance or transfer",
+    "sampling pipeline replay",
+    "real user timing",
+    "G2-G4"
+  ]
+}

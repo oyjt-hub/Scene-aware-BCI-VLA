@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+*.egg-info/
+.venv/
+.env
+smoke_data/
+data/
+runs/
+*.pt
+*.pth
+*.safetensors
+llm_cache/

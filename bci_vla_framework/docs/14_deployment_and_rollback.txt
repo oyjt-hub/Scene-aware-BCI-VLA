@@ -1,0 +1,11 @@
+﻿步骤14 LIBERO隔离部署与回退
+1. 本地新增代码：bci_vla/pilot/libero_gate.py、libero_actions.py；原01—13代码及证据不改写。
+2. 新测试由step14_libero_orchestrator.py启动任务专属模型子进程，再启动有限3episode仿真worker；只连接127.0.0.1:16814。
+3. 上限：服务启动240秒、worker660秒、外层1000秒。正常/异常退出均在finally终止所属模型子进程；不杀其他任务进程。
+4. 最新目录/home/oyjt/Scene-aware-BCI-VLA-runs/step14_libero_20261016_v3；v1/v2保留失败与旧映射材料。
+5. 未替换旧仓库、旧服务或Python环境；回退是继续使用原入口。本次任务服务已退出，不需要修改原部署。
+6. 重跑时必须给deploy_step14_libero.py换新job目录及本地manifest名，避免覆盖结果；不要直接复用v3。
+7. 先核空闲GPU与新端口，再核checkpoint/config/stats SHA；所有配置仍simulation_only，不能切成物理执行。
+8. 保留脚本模拟输入标记、同任务BDDL/初态和环境版本；正式任务或统计研究须另建锁定协议。
+9. 不启动旧eval_libero.py网页入口：它包含额外视觉/云模型依赖。本次worker只用本地权重和仿真，不加载那些入口。
+10. 下次先完成LIBERO任务本体—联合信念—原授权层整合；不将脚本confirm或独立门控视为已通过G3。

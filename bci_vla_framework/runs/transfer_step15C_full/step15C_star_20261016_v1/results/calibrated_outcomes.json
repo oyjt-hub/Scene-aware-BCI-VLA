@@ -1,0 +1,148 @@
+{
+  "schema_version": "outcome-table/1.0",
+  "model_id": "libero-pick-calibration-v3",
+  "executor_id": "StarVLA-LIBERO-v4",
+  "checkpoint_ref": "26b36799a702ca920467c987096a8ccb5f476c6965af6c7f2fd419ecb6893bf2",
+  "predicate_version": "sim-held-lift-v1",
+  "status": "simulation_only",
+  "provenance": "empirical_simulator_calibration",
+  "deployment_allowed": false,
+  "goal_ids": [
+    "task-358c3fa64d8e8fcd1b7eb4fa",
+    "task-b6d7e2654802d55b6746752a"
+  ],
+  "channel_mode_ids": [
+    "normal",
+    "flip"
+  ],
+  "rows": [
+    {
+      "decision": "KEEP_OLD",
+      "stage": "terminal",
+      "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+      "channel_mode_id": "normal",
+      "components": {
+        "wrong_start": 0.0,
+        "task_failure": 0.5,
+        "recovery_s": 1.272780662868172,
+        "user_time_s": 2.0
+      },
+      "source_ref": "independent-calibration:calibration-init0-target0,calibration-init1-target0",
+      "included_time_phases": [
+        "confirmation"
+      ]
+    },
+    {
+      "decision": "KEEP_OLD",
+      "stage": "terminal",
+      "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+      "channel_mode_id": "flip",
+      "components": {
+        "wrong_start": 0.0,
+        "task_failure": 0.5,
+        "recovery_s": 1.272780662868172,
+        "user_time_s": 2.0
+      },
+      "source_ref": "independent-calibration:calibration-init0-target0,calibration-init1-target0",
+      "included_time_phases": [
+        "confirmation"
+      ]
+    },
+    {
+      "decision": "KEEP_OLD",
+      "stage": "terminal",
+      "goal_id": "task-b6d7e2654802d55b6746752a",
+      "channel_mode_id": "normal",
+      "components": {
+        "wrong_start": 1.0,
+        "task_failure": 0.75,
+        "recovery_s": 1.272780662868172,
+        "user_time_s": 2.0
+      },
+      "source_ref": "independent-calibration:calibration-init0-target0,calibration-init1-target0",
+      "included_time_phases": [
+        "confirmation"
+      ]
+    },
+    {
+      "decision": "KEEP_OLD",
+      "stage": "terminal",
+      "goal_id": "task-b6d7e2654802d55b6746752a",
+      "channel_mode_id": "flip",
+      "components": {
+        "wrong_start": 1.0,
+        "task_failure": 0.75,
+        "recovery_s": 1.272780662868172,
+        "user_time_s": 2.0
+      },
+      "source_ref": "independent-calibration:calibration-init0-target0,calibration-init1-target0",
+      "included_time_phases": [
+        "confirmation"
+      ]
+    },
+    {
+      "decision": "ACCEPT_NEW",
+      "stage": "terminal",
+      "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+      "channel_mode_id": "normal",
+      "components": {
+        "wrong_start": 1.0,
+        "task_failure": 0.75,
+        "recovery_s": 1.2844500055070966,
+        "user_time_s": 2.0
+      },
+      "source_ref": "independent-calibration:calibration-init0-target1,calibration-init1-target1",
+      "included_time_phases": [
+        "confirmation"
+      ]
+    },
+    {
+      "decision": "ACCEPT_NEW",
+      "stage": "terminal",
+      "goal_id": "task-358c3fa64d8e8fcd1b7eb4fa",
+      "channel_mode_id": "flip",
+      "components": {
+        "wrong_start": 1.0,
+        "task_failure": 0.75,
+        "recovery_s": 1.2844500055070966,
+        "user_time_s": 2.0
+      },
+      "source_ref": "independent-calibration:calibration-init0-target1,calibration-init1-target1",
+      "included_time_phases": [
+        "confirmation"
+      ]
+    },
+    {
+      "decision": "ACCEPT_NEW",
+      "stage": "terminal",
+      "goal_id": "task-b6d7e2654802d55b6746752a",
+      "channel_mode_id": "normal",
+      "components": {
+        "wrong_start": 0.0,
+        "task_failure": 0.25,
+        "recovery_s": 1.2844500055070966,
+        "user_time_s": 2.0
+      },
+      "source_ref": "independent-calibration:calibration-init0-target1,calibration-init1-target1",
+      "included_time_phases": [
+        "confirmation"
+      ]
+    },
+    {
+      "decision": "ACCEPT_NEW",
+      "stage": "terminal",
+      "goal_id": "task-b6d7e2654802d55b6746752a",
+      "channel_mode_id": "flip",
+      "components": {
+        "wrong_start": 0.0,
+        "task_failure": 0.25,
+        "recovery_s": 1.2844500055070966,
+        "user_time_s": 2.0
+      },
+      "source_ref": "independent-calibration:calibration-init0-target1,calibration-init1-target1",
+      "included_time_phases": [
+        "confirmation"
+      ]
+    }
+  ]
+}

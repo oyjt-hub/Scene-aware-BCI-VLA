@@ -1,0 +1,132 @@
+{
+  "date": "2026-10-16",
+  "step_id": "12",
+  "scope": "L1_synthetic_development_acceptance",
+  "G2_passed": false,
+  "files": [
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\benchmark\\__init__.py",
+      "sha256": "0eb1af4eee9c6767377108380a8f49c58df5f83b54323a3010db2130d3df368f"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\benchmark\\audits.py",
+      "sha256": "b5ecbb96399a6e316b753f5ccef08ec70b4391cdab5e686eab8d98fc582e2182"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\benchmark\\offline.py",
+      "sha256": "2d25593e6bf293a331ad9ddac113cea3fff3defbd993f1d4a124dfa53a02b271"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\benchmark\\runner.py",
+      "sha256": "3e60e61bfe160bf99d6fa9fe754fd5c345a14826da28c5a44479590d4f6a59a7"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\benchmark\\runtime_gate.py",
+      "sha256": "0e0f89af44ccee503a885dd9a424c5a67e278e59f4177fbb5fa8972afee86800"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\benchmark\\synthetic_world.py",
+      "sha256": "3fbc835b94cb8ced1db01f2963e436142cd34beeb41e4ad4fe945c04ff97135e"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\docs\\12_G2_report.txt",
+      "sha256": "73f80192b583d9ebdfe3713211965de9edcd63df1531a6dce73db8d55db056e5"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\docs\\12_repair_plan.txt",
+      "sha256": "8de42006c6f5a94707f7bbf19c8e2c4ae77c03d52e7b31e26a9034db0593a6d8"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\11_source_manifest.json",
+      "sha256": "7502da33b68bb06347b7e762b5f3e190eb934c1a7f299e2e893a6b4715d4fae5"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\12_acceptance.txt",
+      "sha256": "c7bf7f05c29295067706cc8aeb45e250f2dd67ccabe1f9e93a6187b667c0f95f"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\12_coverage.json",
+      "sha256": "704150c49eaae7242321ac0cfe5b51d6b3b97dd4d8c13923aaededdca1064993"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\12_episode_summary.csv",
+      "sha256": "4ca99093553002a6b5f4310315a77803ecfc5c400252ac356c1c46a793b1944a"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\12_runtime_alignment.json",
+      "sha256": "784beef72ecaea38b012a215d275194817f1924fdcab00ff76e7793fe590ef28"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\12_test_output.txt",
+      "sha256": "268228eaa455308f3de58102ed4f020ffd3a00d17d54a07a0d6dfdf40a2f4895"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\12_test_result.json",
+      "sha256": "99fa68a8de24a72f598b285e979bbfdc1726009ed804327a6b62cf7e18a9ebca"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\finalize_step12.py",
+      "sha256": "b6d7e77e5e8c3d13aaa1a5809a4e7b387027c67cd9f7160246a574ab8c0f350b"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\run_step12_offline.py",
+      "sha256": "04111175edac09fbe538530532d982d11640d91183d55d8b081c08e40440a5bf"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\run_step12_tests.py",
+      "sha256": "15466cabd22e3c3be23dc7a64bd1df3fe0ca8ad25fb1a37ab2180286e2a986e5"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\verify_step11_delivery.py",
+      "sha256": "1af70422acc0bda0d288b7d1e8dc061279b409cdd6b2c5b9d5929741ba41e878"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\offline_step12_acceptance\\artifacts_manifest.json",
+      "sha256": "5ebc222cc40e06bd9f88d8aff185caf66313674d3f0292d68c7109fb81f35208"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\offline_step12_acceptance\\evaluation_joined.jsonl",
+      "sha256": "549468cca2ddac2fb961c7a8208683740cdc78188648be0376580d255aa3358e"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\offline_step12_acceptance\\evaluation_private\\run_plan.json",
+      "sha256": "150887d57486fb1cba1a295df7f19f85e5af412972ba637101864facb0d9ac6b"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\offline_step12_acceptance\\evaluation_private\\worlds.jsonl",
+      "sha256": "5e003001ab6d39b712ad744c531623f34056f95966c31eb62235ecfbf91a92b4"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\offline_step12_acceptance\\fault_acceptance.json",
+      "sha256": "d6a1f6764cd0fd38ff451cba3a6879836b7ce53730c43f47e7e75795b79bd33f"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\offline_step12_acceptance\\mechanism_checks.json",
+      "sha256": "5107106e4c00bf16177216fcaf3f7213887c298598c2bed925277e606a066ee4"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\offline_step12_acceptance\\online\\episodes.jsonl",
+      "sha256": "0122305e5cdb40ed6c56d5d1d7a118315a46b066a37b94a2f74b61cd4e7864a6"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\offline_step12_acceptance\\online\\journals.jsonl.gz",
+      "sha256": "7657981d9e9d71eb2b0fb032b6b7a67cb17054bdbf66f35f44b73ec9d29696e9"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\offline_step12_acceptance\\oracle_audit.json",
+      "sha256": "5ce72de77081320af6ccfd25d9732d640105d3beec40753a1538f810ad8b5dfb"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\offline_step12_acceptance\\summary.json",
+      "sha256": "e8d12afb32918d218fb73086d31cc2b36541745121e684f99a0b5ad9ac9abd8b"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\tests\\test_offline_benchmark.py",
+      "sha256": "cff186c96d11c3906ba2b3abc3c37afd3d23725af89d0ecfc9a604205174de52"
+    },
+    {
+      "path": "D:\\Scene_Aware\\BCI_VLA通用交互框架_逐步执行手册.txt",
+      "sha256": "13b5813bec3a9d1bcdf44b13f46eb51d8ca57b8338a40bb90ce0c8608169b213"
+    }
+  ]
+}

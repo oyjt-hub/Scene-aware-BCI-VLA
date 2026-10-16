@@ -1,0 +1,65 @@
+﻿Use case: scientific-educational / infographic-diagram.
+Create ONE refined, beautiful, publication-style system architecture figure suitable for a double-column CoRL / RSS / NeurIPS paper. This is a conceptual preview of the actual current software architecture, not a claim of live hardware deployment. Very high resolution landscape, approximately 2:1 aspect ratio. Pure white background, precise thin vector-like strokes, restrained navy/teal/amber colors, black professional sans-serif typography, generous white space, impeccable alignment. The diagram must communicate the logic with clear directional arrows, not a collection of decorative cards. Small tasteful line illustrations of an EEG headset user and a robot arm are welcome. No photorealism, gradients, 3D effects, shadows, logos, watermarks or invented performance numbers. All labels in ENGLISH, crisp, large, correctly spelled. Use exact short labels below.
+
+TITLE at top: "Unified BCI–VLA Interaction Framework"
+Small subtitle: "Joint task–channel inference and budgeted diagnostic interaction"
+
+LAYOUT: four aligned areas from left to right. The central diagnosis area is the visual focus and should be largest. Solid borders mean current OFFLINE implementation; dashed borders mean PLANNED execution integration. Leave ample routing space so arrows do not cross text.
+
+LEFT, about 17% width, heading "Human–BCI interface":
+A minimal human head wearing EEG cap above a box "BCI adapter", subtitle "Validated events / offline replay".
+Below, a box "Interaction display", subtitle "Task questions & known-target prompts".
+A distinct small red "STOP" button below the display.
+An outgoing observed-response arrow from BCI adapter leads into the next area's evidence router.
+A return arrow from the central diagnostic policy leads back to Interaction display, explicitly labeled "Next question / probe". The display prompts the human and the human produces the BCI response. Make the main diagnosis interaction loop obvious.
+
+SECOND area, about 21% width, heading "Evidence separation":
+Two clearly separated source boxes:
+"Task response" with "unknown goal g", muted teal.
+"Channel probe" with "known prompt a", muted amber.
+Both feed a small solid box "Source-specific likelihoods".
+In that likelihood box render exactly these formulas on separate lines: "P(y | g, z)" and "P(y | a, z)".
+A small line below: "Noisy confirmation is evidence, not ground truth".
+A single forward arrow from likelihoods leads to Joint belief in the central area.
+Crucial semantics: probe prompt a is a diagnostic marker and must NEVER be routed directly as a robot task.
+
+CENTRAL area, about 35% width, a thin navy grouped outline headed "Task–channel diagnostic core":
+At top of group, solid box "Joint belief", large math "b_t(g, z)", small subtitle "Goal g × channel mode z".
+Include a tiny 2×2 correlated-state probability-grid icon with teal diagonal cells and pale off-diagonal cells; no numerical values, no independent marginal factorization.
+Below it, an arrow to a larger solid teal-accented box "Task-aware diagnostic policy".
+Inside policy short lines: "One-step task VoI / bounded lookahead" and "Expected task loss + interaction time".
+At the bottom of the policy display compact action labels arranged in two or three balanced rows:
+"Ask task"  "Probe channel"
+"Retry / extend"  "Request confirmation"
+"Pause / exit"
+A narrow solid amber box below the policy reads "Unknown / expired / budget exhausted → Pause".
+On the right edge of the core place a small solid box "Proposed task contract", with small "Goal • scene version • deadline"; policy sends a proposal into it, and it sends the only task path into the planned authorization gate.
+The next-question/probe arrow returns from policy to the LEFT interaction display. Final confirmation responses return through the evidence route; never draw a direct unconfirmed policy-to-robot arrow.
+
+ABOVE SECOND and CENTRAL areas, a compact context strip with three solid small boxes:
+"Scene state & task history"
+"Channel / probe models"
+"Task outcomes & time budget"
+Under the models boxes add a discreet shared note "Current models: simulation only".
+Use clear small arrows from scene/history into joint belief and contract, channel/probe models into likelihoods, and outcomes/time budget into diagnostic policy. These are contextual inputs, not another neural model.
+Do not add any LLM, DiT, training network or end-to-end learned policy, because none is integrated in the current build.
+
+RIGHT area, about 23% width, light grey fill with DASHED outline, heading "Planned execution integration".
+Inside a vertical planned chain with ALL boxes outlined dashed:
+"Evidence-bound authorization", small "Noisy confirmation + version checks"
+then arrow to "VLA adapter", small "(e.g., π0.5)"
+then arrow to a small stylized robot arm and label "Robot execution"
+then arrow to "Execution monitor".
+A grey dashed feedback arrow from execution monitor around the outside returns to the scene state strip, labeled "Outcome / scene feedback".
+Show the independent red STOP request path traveling below the main chain, bypassing inference and policy, reaching the planned execution monitor / controller. This path may be solid only near the input and must be dashed inside the planned execution region. Label "STOP request · independent of diagnostic scoring". Do not imply confirmed physical stopping exists.
+
+BOTTOM full-width separated narrow rail, visually detached from the online arrows:
+Heading "Offline comparison & audit"
+Four concise groups: "Baseline registry: B0–B10 / M" with tiny note "B0: external trace pending"; "8 mechanism ablations"; "O1: same-information oracle"; "O2: omniscient reference".
+No arrows from O1/O2 or hidden truth into the inference/control pipeline.
+
+BOTTOM LEGEND:
+A solid-outline sample labeled "Implemented offline".
+A dashed-outline sample labeled "Planned integration".
+A small concise footnote: "Current build: finite simulation models. Live calibration, authorization and robot closed loop are pending."
+Use enough spacing for all labels to remain legible. Prioritize a beautiful coherent academic architecture figure with a dominant left-to-right evidence-to-decision-to-execution flow and a clean diagnostic feedback loop.

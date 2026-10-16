@@ -1,0 +1,87 @@
+﻿步骤08：保留目标—通道相关性的联合信念
+日期2026-10-16；计划V2；实现范围：离线有限状态模拟模型。
+入口bci_vla/core/joint_belief.py；未实现步骤09策略或步骤11执行，不授权机器人动作。
+
+一、状态词表与边界
+GoalVocabulary为scene_id/revision明确绑定两个首版task目标，ID必须等于步骤07的结构intent哈希。
+unknown、none始终保留为不同目标，模式轴保留unknown_channel；不能把old/new或goal-0/1按位置静默解释成这些ID。
+configs/belief/simulation_canonical_transition.json按显式规范ID复用06的二元转移形式；原06配置不改。
+首版只支持两个已建模task目标、两个已建模通道及上述保留项，不声称任意开放世界目标都已建模。
+保留项有正概率时缺少观测似然，点更新暂停，概率不删除、不重归一到已知任务。
+保留项为零也不证明现实不存在模型外状态；结果始终conditional_on_finite_simulation_models，不能把高后验当模型正确证明。
+snapshot列unmodeled_support_mass和point_inference_ready，并始终execution_allowed=false。
+unknown/none未来需要独立观测/转移模型才可继续推断；当前不拿NO_CONTROL或NO_RESPONSE随便填它们的概率。
+
+二、联合预测与更新
+存完整b(g,z)，不以边缘乘积替代。稀疏初始分布未出现组合为零，所有轴仍完整保留。
+窗口间预测：b^-(g,z)=sum_(g0,z0) T_gap(g,z|g0,z0)*b(g0,z0)。
+T_gap来自06按秒CTMC，允许目标/通道分别或同时改变；模式/目标ID和顺序必须逐项匹配。
+保留项不被自动映射进已知状态；无模型支持的质量原样保留并触发暂停。
+点观测更新：b^+(g,z)=b^-(g,z)*L(y|mode,g,z)/sum b^-*L。
+使用log/最大值缩放计算，保留精确零支持；全零证据、非有限数或正支持数值下溢时暂停，不argmax归因、不均匀重置、不静默删除解释。
+状态转移确实允许时，旧零组合可以因T获得质量；“不凭因子化造组合”不等于永远禁止合法状态变化。
+
+三、TASK、PROBE与CONFIRM
+TASK必须传TaskQuestionBinding，校验问题文字、选项option_id/symbol/semantic_ref、mapping与stimulus版本。
+选项semantic_ref显式goal:<规范ID>，每个首版目标对应一个符号；不同词表的问题拒绝，不能只按解码符号猜含义。
+L_task从06独立TASK_QUERY矩阵按每个候选目标对应的intended_symbol计算；不读取评价私有真目标。
+PROBE只使用已注册请求中display_controller的提示a，核显示ack及时间；不允许借用任务binding覆盖提示。
+L_probe对理解/遵从/遗漏混合。unknown遵从产生非退化区间时，当前点滤波暂停；不偷偷换成完美遵从。
+相同z下probe不直接依赖g，但联合分布相关时可改变g边缘。这不是把a赋值给g，也不能错误冻结g边缘。
+CONFIRM从当前proposed契约的结构intent确定各候选目标会接受还是拒绝，严格要求confirmation:accept/reject两项语义。
+契约任务/场景revision及有效期绑定，使用独立有噪CONFIRM矩阵；得到同意仍不是免费真值或授权，不改契约status，不下发动作。
+
+四、误码、无响应和模型外处理
+稳定随机误码由06矩阵的非零错误概率解释；本模块只更新后验，不永久改通道标签、不训练解码网络。
+可显式声明outlier_weight：L_mix=(1-rho)L_model+rho/输出字母表大小，默认0。
+这是模拟假设，不是已标定的离群检测器；它不能绕过布局/版本/时长等适用性失败，也不能保证识别模型外状态。
+OBSERVATION须有offline_replay采样窗；live_bci在本模块明确拒绝，当前模型没有真实校准加载路径。
+NO_RESPONSE可作为已建模遗漏事件，但必须另给同一参考时间域的start/end；不得由timeout、传输失败或无控制默认转换。
+NO_CONTROL、INVALID_SIGNAL、TRANSPORT_FAILURE、TIMEOUT进入暂停，不生成目标/通道真标签。
+未确认冲突、推断目标和执行失败都不作decoder真值。当前模块根本不接收执行结果作为校准监督。
+模型外可能与模型内同分布，本系统不能保证发现。未解决状态与条件性模型声明必须随结果保留。
+
+五、时间模型的明确限制
+初始initial_at是可信参考时刻。每次观测从采样窗得到start/end，只对上一已更新窗end到新窗start的gap使用T_gap。
+窗口内采用显式state_constant_within_window假设，时长必须落在06声明的1/2秒示例集合内。
+更新后信念时刻为窗口end；解码/网络/阅读等待在下一次gap中体现，不把所有交互当成一个无单位步长。
+窗口内不变是条件性近似，未在真人验证。当前不对完整gap+window套转移后又用静态似然，否则会错误解释窗内状态变化。
+若窗内变化不可忽略，必须扩展联合事件核；不把“长窗口假设固定”写成已解决任意持续时间变化。
+本版本要求OBSERVATION转换到精确声明的参考窗（response clock_uncertainty_ms=0）；非零误差暂停，未实现对时钟不确定性的积分。
+零误差是软件fixture声明，不是实测同步保证。现场不允许为通过校验而伪填0。
+NO_RESPONSE窗口也核请求/响应/过期范围；CONFIRM额外核契约在窗口结束前仍有效。
+
+六、证据一次性与事务
+只接收步骤05产生的可信IngestResult及不可变request/response。再核session、task/scene版本、mapping、stimulus、profile、mode和response_to。
+request/event/interaction身份去重，来源sequence不能回退；最终采样前缀才可使用。
+最终后验数值有效后才调用06的FinalPrefixLedger，重复/重叠窗口拒绝。全检查通过才一起提交posterior、时间、来源序号和去重记录。
+失败时旧b和旧时刻不变，候选prediction只在日志中保存；不因已计算一半而偷偷消费概率更新。
+失败后状态paused，不自动复用新输入恢复；需后续会话管理显式处理适用域/重建校验状态，本步不提供无条件reset。
+STOP/CANCEL从可信适配器转为停止/暂停通知，不改目标；STOP也可覆盖paused状态。物理停止仍走独立硬件/执行链，本模块不控制它。
+task/scene revision改变不能直接把旧候选概率搬到新ID；当前保守暂停。后续11需明确会话重建和合法后验迁移。
+
+七、可追踪记录
+每次成功保存before、prediction、after、evidence/request ID、mode、signal_status、上下文版本、gap秒、窗口秒、提示a、离群权重、各联合状态似然及更新原因。
+失败保存before、未提交prediction（若有）、after、evidence ID、mode/版本及稳定原因码。
+audit_log为不可变记录；snapshot返回拷贝。序列化日志可用protocols.thaw(filter.audit_log)。
+本步为内存审计，没有跨进程持久去重或磁盘事务；不把审计记录当成真实EEG性能或独立意图标签。
+snapshot不返回唯一“诊断真因”，不自动选择任务或修改模型参数。
+
+八、可复现的观测等价例
+examples/joint_belief/alias_events.json是两个手写请求/响应对；不是随机实验或真人数据。
+初始只支持A=(右碗目标,normal)和B=(左碗目标,flip)，各0.5；fixed_state_transition的三个率均0，表示该证明窗口固定。
+TASK收到符号1，两世界似然均0.85，后验仍各0.5；不造出左/normal或右/flip质量。
+PROBE提示0，收到0，compliant模型下A似然0.9、B似然0.05，A后验18/19≈0.94737。
+与03的无遗漏0.9/0.1例不同，06示例另有0.05遗漏，所以似然比18而非9；不能混用数值。
+probe标签0没有赋给目标，右碗目标反而因相关性获得更大边缘概率。两个独立相符probe后为324/325，相反证据可抵消。
+无信息遵从probe不改变竞争解释；UNKNOWN遵从暂停；全零似然/超范围等也暂停，而不是硬判。
+正常非零转移的另一个用例验证目标和通道分别及同时变化，不能把固定世界例当成通用动态性能。
+
+九、运行命令与状态
+项目目录D:\Scene_Aware\bci_vla_framework：
+python -B execution/run_step08_tests.py
+python -B execution/replay_step08_alias.py
+前者保存完整软件检查与摘要到execution/08_test_output.txt、08_test_result.json；后者写08_alias_trace.json，包含两次解析更新。
+手写概率/输入/时钟和固定轨迹只用于软件正确性，不是方法效果实验、校准、学习能力或风险改善结果。
+真实通道/probe迁移/后果代价仍待外部条件；G1条件性状态不变，G2—G4未开始。
+步骤08只完成离线首版联合推断；09的动作/预算/策略、11的执行授权和实际部署尚未开始。

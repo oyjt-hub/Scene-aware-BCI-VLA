@@ -1,0 +1,100 @@
+{
+  "scope": "owned_LIBERO_simulation_artifacts",
+  "files": [
+    {
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step14_libero_20261016_v1/orchestration.json",
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_robot_14_libero_simulation\\v1\\orchestration.json",
+      "sha256": "9ad9d020ce82f26ebe5d42932fa6fa281227427470b8bdad8571824768994c3a"
+    },
+    {
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step14_libero_20261016_v1/server.log",
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_robot_14_libero_simulation\\v1\\server.log",
+      "sha256": "070ba7b9fd39a9fcc48a7898c444e56437f59085a027ee88d31ca0ec5d3fe8f9"
+    },
+    {
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step14_libero_20261016_v1/launcher.log",
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_robot_14_libero_simulation\\v1\\launcher.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step14_libero_20261016_v2/orchestration.json",
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_robot_14_libero_simulation\\v2\\orchestration.json",
+      "sha256": "5784b8c76cfb27cc6600688a1287fe296192693f231763b865ebe8941c020ebc"
+    },
+    {
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step14_libero_20261016_v2/server.log",
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_robot_14_libero_simulation\\v2\\server.log",
+      "sha256": "9bbe53e1f036a17d91f3b0c97fde02674f176727cd8903585b8161e31d53f945"
+    },
+    {
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step14_libero_20261016_v2/worker.log",
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_robot_14_libero_simulation\\v2\\worker.log",
+      "sha256": "5adcde7671e18f136a501510975e4fd67fab9553fcc0662a6d3a7a1ec7653e46"
+    },
+    {
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step14_libero_20261016_v2/launcher.log",
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_robot_14_libero_simulation\\v2\\launcher.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step14_libero_20261016_v2/results/nominal_task0_last.png",
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_robot_14_libero_simulation\\v2\\results\\nominal_task0_last.png",
+      "sha256": "8151133ee15642af2828372bd311befe29416cbcd34556740a1935f8ff5397c6"
+    },
+    {
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step14_libero_20261016_v2/results/events.jsonl",
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_robot_14_libero_simulation\\v2\\results\\events.jsonl",
+      "sha256": "a96b69c76a3c6954f9e9b9055cace2ec6b2a28536fb58e9accc211960142c80b"
+    },
+    {
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step14_libero_20261016_v2/results/probe_stop_task0.mp4",
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_robot_14_libero_simulation\\v2\\results\\probe_stop_task0.mp4",
+      "sha256": "88a6a8109d81063480538091321fd7ec4745be50f93df3047d7ebf361322840e"
+    },
+    {
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step14_libero_20261016_v2/results/probe_stop_task0_last.png",
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_robot_14_libero_simulation\\v2\\results\\probe_stop_task0_last.png",
+      "sha256": "be6f8742c043bd073674efabfb629e81c3b842e5e7db2969e1c2a0ea86a4b2c0"
+    },
+    {
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step14_libero_20261016_v2/results/nominal_task1_last.png",
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_robot_14_libero_simulation\\v2\\results\\nominal_task1_last.png",
+      "sha256": "88ca6fcb011142f6839f5f0bd69c716cd5a015aee0dcee03549c817d157c823c"
+    },
+    {
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step14_libero_20261016_v2/results/nominal_task1_first.png",
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_robot_14_libero_simulation\\v2\\results\\nominal_task1_first.png",
+      "sha256": "8f0fbca38a78e3ae10f8fa1e480cc4d1f3736a03de49d73384a7764172d9116b"
+    },
+    {
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step14_libero_20261016_v2/results/nominal_task0_first.png",
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_robot_14_libero_simulation\\v2\\results\\nominal_task0_first.png",
+      "sha256": "3abbbaf803158ae7d1b909b2a7f26a9db5b3040843622d3dbb18ea1e44334c6d"
+    },
+    {
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step14_libero_20261016_v2/results/summary.json",
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_robot_14_libero_simulation\\v2\\results\\summary.json",
+      "sha256": "f29ebcf29943e1f95043a13fb5e09e5cdd11587c72a8b95cdc5effed7e50345c"
+    },
+    {
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step14_libero_20261016_v2/results/probe_stop_task0_first.png",
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_robot_14_libero_simulation\\v2\\results\\probe_stop_task0_first.png",
+      "sha256": "3abbbaf803158ae7d1b909b2a7f26a9db5b3040843622d3dbb18ea1e44334c6d"
+    },
+    {
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step14_libero_20261016_v2/results/nominal_task0.mp4",
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_robot_14_libero_simulation\\v2\\results\\nominal_task0.mp4",
+      "sha256": "bc8ce1271e790805533d4d62fce719fbfdced892f72ddb1b9137282ccc03da82"
+    },
+    {
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step14_libero_20261016_v2/results/episodes.json",
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_robot_14_libero_simulation\\v2\\results\\episodes.json",
+      "sha256": "4783df915ad5aad1333fb6038207742112e726a7486f829818295f5f3de7837b"
+    },
+    {
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step14_libero_20261016_v2/results/nominal_task1.mp4",
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\pilot_robot_14_libero_simulation\\v2\\results\\nominal_task1.mp4",
+      "sha256": "cb418f89e465f87e7da37d7d3197fed6df60620ce512a2d0fb07fb3aedcf6c02"
+    }
+  ]
+}

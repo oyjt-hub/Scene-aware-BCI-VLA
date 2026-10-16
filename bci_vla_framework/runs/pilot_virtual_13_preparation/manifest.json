@@ -1,0 +1,12 @@
+{
+  "scope": "preparation_only_not_pilot_data",
+  "real_eeg_trials_collected": 0,
+  "real_timing_measurements": 0,
+  "participant_count": null,
+  "decoder_accuracy": null,
+  "probe_compliance": null,
+  "probe_to_task_transfer": null,
+  "user_time_s": null,
+  "missing_reason": "not_collected_site_and_runtime_prerequisites_unmet",
+  "G3_passed": false
+}

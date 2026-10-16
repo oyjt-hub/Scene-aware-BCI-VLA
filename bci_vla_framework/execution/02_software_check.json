@@ -1,0 +1,15 @@
+{
+  "scope": "software",
+  "operation": "python -B -m unittest discover -v",
+  "cwd": "D:\\Scene_Aware\\context_intent",
+  "date": "2026-10-15",
+  "exit_code": 0,
+  "tests_run": 53,
+  "passed": 44,
+  "skipped": 9,
+  "skip_reason": "PyTorch not installed locally",
+  "evidence_type": "summary transcribed from actual command output, not full raw transcript",
+  "cloud_calls": 0,
+  "robot_calls": 0,
+  "new_experiments": false
+}

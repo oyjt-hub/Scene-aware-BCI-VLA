@@ -1,0 +1,231 @@
+﻿步骤11：版本化契约、会话、VLA接口与执行监督
+版本V2；日期2026-10-16；用户授权“完成步骤11”。
+交付范围：离线fake/dry-run生命周期与事件回放首版。正式故障episode验收仍属于步骤12。
+
+一、当前实现是什么，以及实现入口
+本步把05的事件校验、07的场景/终态条件、08的联合信念及09的诊断策略接入一个显式会话。
+典型合法路径为：提出任务→取得含噪确认→单独授予fake授权→记录提交意图→取得模拟执行反馈→独立终态核验。
+任务澄清、信念概率、策略返回和传输接收均有独立语义，不能跳过中间检查直接下发。
+所有snapshot继续返回execution_allowed=false、physical_stop_verified=false。
+这表示本步没有开放物理执行接口，不表示fake授权状态不存在。
+
+主要文件：
+  bci_vla/contracts/records.py：ExecutionContract、AuthorizationRecord、EndpointEvidence。
+  bci_vla/contracts/session.py：InteractionSession、状态转移、超时、冻结及监督接口。
+  bci_vla/contracts/replay.py：根据公开事件重建状态的独立reducer。
+  bci_vla/adapters/vla/fake.py：VLAInterfaceSpec、FakeVLAAdapter、DryRunVLAAdapter。
+  bci_vla/monitoring/journal.py：不可变追加记录、JSONL、哈希链及完整导入检查。
+  configs/execution/session.json：当前开发用会话与确认规则。
+  configs/execution/fake_vla_interface.json：明确标记offline_fixture的格式样例。
+旧protocols.py的TaskContract/ExecutionEvent及07的ObservedTrajectory没有为本步扩字段；新信息使用伴随记录。
+
+二、11.1：契约准确表达任务、条件与期限
+ExecutionContract.from_scene接收已验证TaskContract及GroundedScene，不从probe标签猜任务。
+当前有限语法仍是pick/place/fold；会话还检查目标处于当前词表、场景语法及模拟后端支持动作集合。
+本步示例会话只声明pick/place，未因旧论文写有fold便宣称当前后端已经支持所有任务。
+实例ID须在当前场景可见，任务/场景ID与revision须一致；目标消失时拒绝，不换成其他容易操作的目标。
+
+ExecutionContract保存：
+  proposal：原始proposed契约，含contract_id、task_id/revision、scene_id/revision、intent及valid_until。
+  goal_id：由完整intent生成的规范目标ID。
+  instruction：受限语义模板从同一intent渲染的语言指令。
+  backend_id、backend_spec_sha256：后端身份与接口指纹。
+  scene_fingerprint：任务相关场景内容的指纹。
+  preconditions：可见实例列表，以及场景版本必须一致。
+  completion：predicate_version及holding/inside/folded的具体对象参数。
+  abort_policy：场景/任务变更使旧契约失效并请求停止；未知提交暂停且不自动重发；STOP锁存等待反馈。
+这些记录递归不可变，to_dict返回可独立保存的副本；SHA256用于对应内容，不证明发送者身份。
+instruction与completion来自同一目标；语言提示本身不证明机器人能够完成目标或遵守约束。
+TaskContract保持proposed形式，最终授权单独保存在AuthorizationRecord，避免用一个confirmed字符串代替证据。
+
+三、11.2：会话状态及调用顺序
+构造InteractionSession时须显式提供current_context、scene、belief_filter、policy、backend、config、started_at。
+初始上下文、场景身份、filter与policy的channel/transition模型必须匹配。
+只接受精确类型FakeVLAAdapter或DryRunVLAAdapter；本步没有可切换到真实SDK的开关。
+调用者须提供带时区参考时间；本地单调时钟另用于BCI待响应期限，不能互相代替。
+
+状态及含义：
+  COLLECTING：收集证据；尚无执行权限。
+  CLARIFYING：提出任务或询问目标；澄清不是最终确认。
+  PROBING：已知提示的通道诊断；冻结任务下发。
+  AWAITING_CONFIRMATION：等待绑定具体契约的确认响应。
+  AWAITING_AUTHORIZATION：观测到含噪accept，仍须单独调用authorize。
+  AUTHORIZED：存在未使用的离线fake授权，仍须通过dispatch时检查。
+  SUBMITTED：传输层返回ACCEPTED，尚无开始或完成证据。
+  SUBMISSION_UNKNOWN：提交结果或查询结果未知，禁止自动重发。
+  EXECUTING：收到了独立的模拟STARTED反馈。
+  VERIFYING：收到了模拟COMPLETED反馈，等待本次提交的独立终态证据。
+  PAUSED：信息不足、确认拒绝/遗漏、模型失配、停止锁存等；不沿旧目标继续。
+  SUCCEEDED：本次绑定终态满足目标。
+  FAILED：明确执行失败，或独立终态不满足目标。
+  CANCELLED：未下发时取消，或取得明确的模拟STOPPED反馈。
+  EXPIRED：非活动任务的契约期限已到。
+SUBMITTED/SUBMISSION_UNKNOWN/EXECUTING/VERIFYING均属于尚需监督的活动状态，不允许另提任务或开始新交互。
+
+调用者可按下列顺序接入fake流程：
+  1. 从已验证配置构造模型、场景、策略、fake后端和会话，保留SESSION_STARTED。
+  2. propose(proposal, now=...)，明确提交完整目标；此时仍无授权。
+  3. 如需TASK_QUERY或CHANNEL_PROBE，调用begin_interaction，再把绑定响应交给ingest。
+  4. 诊断足够后调用begin_interaction('CONFIRM', ...)，取得真实的离线响应事件。
+  5. ingest后只有明确accept才可进入AWAITING_AUTHORIZATION；随后调用authorize。
+  6. 准备符合接口且仍新鲜的observation，使用唯一submission_id调用dispatch。
+  7. fake反馈由测试输入显式提供，再调用refresh_submission读取，不能从ACCEPTED自动补STARTED/COMPLETED。
+  8. COMPLETED后准备EndpointEvidence，调用verify_endpoint；未知、false、true分别得到暂停、失败、成功。
+  9. 保存journal并调用replay_session_state独立核对，不能通过重放再次调用执行器。
+本步没有后台采集循环或自动执行调度；调用方须显式推进时间、输入、反馈及expire。
+策略可以通过request_policy生成建议，但它不自动代替propose、确认、授权或dispatch。
+
+四、11.3与11.4：PROBE冻结、修订失效与重复消息
+begin_interaction为TASK_QUERY、CHANNEL_PROBE、CONFIRM构建不同协议模式与语义映射。
+CHANNEL_PROBE的options使用probe:<symbol>，payload.contract必须为null；仅声明诊断用途。
+probe prompt含已显示标记、显示时刻及presentation_ack；未实际确认呈现的观测不进入probe似然。
+PROBE结果只作为通道证据，不能渲染为机器人任务、覆盖契约intent或当成用户执行确认。
+开始任何新交互均撤销旧confirmation/authorization；待采集请求存在时dispatch拒绝。
+
+ReplayBCIAdapter保留上下文版本、请求/响应绑定、事件顺序、窗口去重与重叠检查；08滤波再次核对证据。
+重复确认响应不产生第二次授权；同一confirmation事件只允许授予一次授权。
+authorization_consumed在实际调用fake submit之前设置，且先记录SUBMISSION_INTENT，再调用后端。
+相同submission_id和相同observation的重复dispatch返回缓存，不再submit；改变ID或内容不能重发已有提交。
+当前对象保留既有submission，不提供清空后自动重试或终态后复用旧确认的路径。
+
+revise_context核对新场景ID/revision、实例身份和版本不倒退；同版本不同场景内容被拒绝。
+修订会清除待请求、撤销确认/授权并设置generation_valid=false；活动任务还请求停止。
+invalidate_models同样撤销授权并要求显式重建；活动任务请求停止。
+后续不能在原对象中静默把generation_valid改回true、清空确认次数或继续沿旧信念执行。
+需要新模型/上下文时，应显式建立匹配的新filter、policy、会话与版本身份，保留旧日志和停止锁存事实。
+新任务可以改变目标；若显式保留通道信息，应按09的跨任务接口给出新任务先验，不能复制旧目标后验当新目标。
+该重建入口不构成跨进程历史同步或全局去重实现；本步没有自动恢复与重连执行。
+
+五、11.5与11.6：π0.5检查证据、fake接口及dry-run
+02冻结资产表记录了现有π0.5相关源码、候选checkpoint、归一化文件及RTC静态检查线索。
+旧运行源码可见cam_high/cam_left_wrist/cam_right_wrist图像键，以及左6关节、左grip、右6关节、右grip的14维状态构造。
+数据集元信息另记录front/left/right特征键；两者之间的运行映射仍未核验，不能混作一套已验证接口。
+旧RTC源码要求RTC v1元信息及action_dim=14，候选uniform配置有horizon=100；这些均是冻结源码事实。
+本步没有加载checkpoint、启动策略服务、执行实时握手、读取相机或连接机械臂，也没有修改主干权重。
+
+fake_vla_interface.json刻意使用front/left/right的2×2×3 uint8小图、14维fixture_unit状态及2×14动作样例。
+normalization='fixture_identity_v1'、coordinate_frame='fixture_joint_frame'均为开发fixture声明，不是机器人归一化或坐标标定。
+VLAInterfaceSpec检查图像键、形状、通道、像素整数范围、状态与动作维度、动作时域、有限数、单位、坐标、归一化及上下界。
+这些格式约束实际由本地validator执行；不会隐式转换单位、补齐缺维或插值动作时域。
+validate_actions可独立核对动作样例；FakeVLAAdapter不加载π0.5、不运行神经推理，也不会凭空生成真实动作chunk。
+DryRunVLAAdapter只检查提交输入，返回reason='dry_run_validation_only'，不建立后端submission。
+因此dry-run不能用于声称策略推理、真实控制循环或任务成功已验证。
+
+真实接入尚须按证据确定：精确checkpoint与训练配置、相机键/shape、状态顺序、对应norm_stats、动作horizon、单位与坐标、
+RTC握手/平滑、控制限位及真实停止反馈。configs内unverified_live_fields保留这些未完成项。
+14维fixture检查通过不证明真实Piper动作单位、坐标、夹爪尺度或控制频率正确。
+
+六、11.7：哪些约束真正执行
+本地已执行的检查包括协议/版本、场景实例、契约内容、期限、概率门槛、观测新鲜度、fixture格式/上下界及一次消费。
+这些是fake提交边界上的软件检查，不能外推为真实机械臂避障、力限制、碰撞检测、急停或物理安全保证。
+自然语言中的“不要碰撞”“保持夹爪”等措辞没有被本步实现为控制器约束；本步不标记它们已执行。
+backend_spec指纹与契约绑定，防止接口配置变更后继续使用旧授权；指纹不是完整checkpoint验证。
+
+七、11.8：接收、策略返回、提交、执行与结果分层记录
+INPUT_RECEIVED只表示已接收并处理公开BCI响应；它可能得到任务/通道证据，不能写成任务成功。
+POLICY_RETURNED保存09建议、规划输入、已用时间与只读预测间隔；建议本身没有执行副作用。
+SUBMISSION_INTENT在后端调用前保存唯一提交ID、观测及摘要、派发时预测间隔/概率、授权已消费状态。
+SUBMISSION_RETURNED保存ACCEPTED/REJECTED/UNKNOWN；ACCEPTED只表示fake传输接收。
+SIMULATED_EXECUTION_FEEDBACK保存显式STARTED、COMPLETED、FAILED、STOPPED等反馈及feedback_id。
+ENDPOINT_JUDGED保存本次EndpointEvidence和独立判定结果。
+submission_at与completion_feedback_at分别保存本次提交意图时刻及COMPLETED接收时刻，不推测真实电机开始时间。
+所有fake返回保持actual_execution=false；本步没有HTTP客户端，也不能将未来HTTP 200映射为SUCCEEDED。
+
+八、11.9：独立终态必须精确绑定本次执行
+verify_endpoint仅在VERIFYING且未STOP锁存时接受EndpointEvidence，不再接受裸ObservedTrajectory。
+EndpointEvidence包含evidence_id、session_id、submission_id、contract_id/revision、scene_id/revision、
+observed_at参考时钟记录、source='simulation_fixture_annotation'以及原始trajectory。
+trajectory必须为simulation_fixture，split只能是test或calibration_holdout；不能拿校准样例验证它自身。
+会话核对session/submission/contract/scene版本全部精确相等，并核对endpoint_hosts白名单。
+observed_at先按offset和uncertainty转换成参考区间；区间下界须不早于本次COMPLETED接收时刻，上界须不晚于now。
+若只有大概时间，必须让整个不确定区间满足条件；跨越完成或未来边界的证据被拒绝。
+此外核对executor_id、checkpoint_ref=null、predicate_version、command_dispatched及完整commanded_intent。
+旧会话、其他提交、旧契约/场景或过早/未来观察即使目标名称相同，也不能关闭本次任务。
+同一轨迹不得被重复消费；成功后不能再次用相同证据驱动状态。
+
+evaluate_trajectory按契约的具体完成谓词判定：true→SUCCEEDED，false→FAILED，缺失/None→PAUSED并记录endpoint_unknown。
+独立指的是接口上由外部注释提供目标条件事实，不是VLA自报“成功”或LLM自评；当前事实仍是手写模拟fixture。
+VLA失败和终态结果不会更新decoder、给用户意图贴真值标签或把用户目标改成机器人实际完成的动作。
+误确认引起的错误启动应在独立评价端相对真实目标计入wrong_start，不能用本次已授权契约反定义真实用户目标。
+独立评价真值不得传回控制会话或用来保证确认正确；本步尚未生成真实错误启动率。
+
+九、11.10：STOP反馈与未知提交
+request_stop或可信CONTROL STOP优先锁存stop_latched，撤销授权，阻断新确认/下发，再向已有fake提交请求停止。
+BCI STOP沿用05规则，可绕过旧任务/场景版本及过期期限；仍要求会话匹配及允许的control host。
+CANCEL通知仍受当前交互绑定约束；显式session.cancel可用于本地取消路径。
+STOP_REQUESTED和stop_feedback='REQUESTED'只表示停止请求；发送异常记录stop_request_delivery_unknown。
+只有显式fake STOPPED反馈才得到stop_feedback='SIMULATED_STOPPED'和CANCELLED；physical_stop_verified始终false。
+未提交时取消可直接结束软件任务，不宣称发生过物理停止。
+STOP锁存后即使迟到accept或STARTED/COMPLETED到达，也不能取得新授权或自动恢复执行。
+
+提交调用抛异常、无明确响应、查询失败或UNKNOWN时进入SUBMISSION_UNKNOWN，STOP锁存时保持暂停。
+已消费授权不回滚；不因“没有收到回复”便换submission_id或再次提交。
+查询可以读取已存在的提交，但不会创建动作；未知必须由独立反馈澄清，不能默认失败、成功或未执行。
+expire显式处理待响应单调时钟超时及契约期限；无响应不自动选择accept。
+活动执行过期会请求停止；未活动的过期契约进入EXPIRED或暂停，不能沿旧目标下发。
+
+十、11.11：追加日志与真正事件驱动回放
+EventJournal保存session、sequence、event_id、参考UTC时间、kind、公开payload、previous_hash及record_hash。
+append克隆并递归冻结公开JSON；拒绝重复ID、时序倒退、非法JSON和定义的私有真值键。
+JSONL导入先验证整条链，失败不跳行；确认所有记录通过后才调用reducer。
+SESSION_STARTED记录重建用的公开模型、场景、初始belief、接口及会话配置。
+交互日志保存请求/响应与必要单调时间；提交日志保存观测、授权消费与外部返回；停止、修订、超时各自有事件。
+
+contracts/replay.py按事件顺序运行独立本地reducer：重建BCI validator与联合滤波，重新计算任务/probe/确认更新，
+核对授权、派发只读预测、版本和一次消费，重新计算策略建议与独立终态，然后逐条比对保存的state及state_sha256。
+它不把日志中的state直接当下一状态；缺失确认、伪造filter更新或不可能的检查点即使重新计算哈希也应被拒绝。
+回放不构造、submit、query或stop任何VLA适配器；模拟反馈只作为日志中声明的外部观察，不再执行一次动作。
+被拒输入的原始内容刻意隔离，不进入公开日志；回放只检查其无公开推断/任务状态影响，不能重现隐藏原文的拒绝过程。
+回放核对的是本地公开状态一致性，不证明反馈真实或具有物理因果性，也不认证输入来源。
+
+哈希链能发现保留记录中的不连续及内容变动，无法阻止拥有文件权限者改写整条链。
+一条合法较短前缀仍可能导入；若要证明完整运行，必须另保留预期终态/末尾锚点，不能单凭前缀判定完整。
+journal和fake去重账本目前在内存中；导出JSONL用于审计，没有持久事务/outbox、跨进程去重服务或硬件幂等协议。
+因此“同一对象中不重复submit”不能写成崩溃恢复后全局exactly-once。
+进程丢失、提交结果未知或连接中断后不得从审计日志自动重连并恢复下发，须保持暂停并另行取得执行状态证据。
+
+十一、11.12：含噪确认、冻结、一次消费与延迟
+begin_interaction('CONFIRM')使用当前proposed契约，并建立accept/reject的显式semantic_ref。
+当前开发配置accept_symbol='0'，不能在其他码本中无条件把0解释为同意。
+CONFIRM OBSERVATION经05绑定/时间/去重及08独立CONFIRM似然后，observed accept只进入AWAITING_AUTHORIZATION。
+拒绝、遗漏、无效信号、超时、未校准分数本身或只有raw_scores而无明确选择都不构成授权。
+若有明确symbol，当前filter只使用已声明的类别似然，不把raw_scores直接当校准概率。
+IngestResult.accepted、likelihood_kind='CONFIRM'、filter.updated或较高任务概率各自都不能代替含噪确认记录。
+
+每一完整context版本最多发起一次CONFIRM；即使另换contract_id或重新propose，也不能在同版本下重复问到accept。
+拒绝后保持暂停。合法目标变化须走显式版本/模型重建流程，不得仅清空次数或借评价端无误确认绕过。
+AuthorizationRecord保存实际request/response、契约摘要与版本、channel/transition/confirmation/policy/backend指纹、
+issued_at/valid_until、belief_at_confirmation、belief_at_authorization、authorization_prediction_gap_s、goal_probability，
+并声明confirmation_is_noisy、frozen_until_dispatch、consume_once及physical_execution_allowed=false。
+独立记录构造还校验请求/响应完整绑定、契约/场景顶层字段、accept语义、实际离线样本窗、期限、后验轴与对应概率。
+
+authorize要求filter与确认时快照仍一致且point_inference_ready，无待请求，契约/场景/后端/模型版本未变，确认未消费且未过期。
+它从确认窗结束时的联合belief建立只读副本，按T(now-window_end)传播已声明CTMC，再检查当前目标边缘概率。
+belief_at_authorization记录这个预测副本；原始证据filter不被写回，避免下一次窗口更新重复计算同一段转移。
+dispatch再次从同一确认快照预测到实际下发时刻，重新核对门槛、确认年龄、期限、模型及观测新鲜度，随后才消费授权。
+即使刚授权成功，延迟后目标概率降至门槛以下仍会拒绝dispatch，且不会产生fake提交。
+request_policy也使用只读预测副本处理接收/计算延迟；已用时间来自会话起点，预算和场景有效期由调用方显式传入。
+这继承06/08/09的有限状态、窗内固定模型条件，不是证明真实用户在冻结期间不会改目标。
+
+minimum_goal_probability=0.8、max_confirmation_age_s=2秒、max_observation_age_s=2秒均是未调优的开发示例。
+它们不是统计覆盖率、安全概率保证或真实BCI校准阈值；改变前须按独立验证规则留档，不能用正式测试集调参。
+确认模型仍为simulation_only/illustrative_not_fitted；observed accept仍可能误码，因此授权存在不等于真实目标确定。
+
+十二、可信边界、验证与下一步
+所有host白名单、presentation_ack、fake feedback及endpoint来源均假设由可信本地调用方正确填写。
+当前API不提供网络发送者认证、签名、加密、设备证明或抗恶意调用者的授权隔离。
+不可变记录和内容指纹解决本地内容对应及回放一致性，不替代真实身份认证与服务端权限。
+
+本步验证代码覆盖协议回归、fake格式、含噪确认/一次消费、旧版本/重复输入、PROBE冻结、未知提交、STOP反馈、
+独立终态绑定、延迟CTMC预测及事件驱动回放。最终测试总数、失败/跳过情况以execution/11_test_result.json为准。
+完整输出、演示轨迹、交付清单与来源指纹以本步execution/11_*证据文件为准；不要用旧runner覆盖05—10冻结输出。
+运行统一回归时应使用本步最终runner；单项可在项目根目录运行：
+  python -B -m unittest discover -s tests -p test_execution_session.py -v
+  python -B -m unittest discover -s tests -p test_execution_binding_regressions.py -v
+  python -B -m unittest discover -s tests -p test_session_replay_events.py -v
+软件测试与解析fixture不是新增论文实验、真实成功率、耗时测量或策略优越性证据。
+
+真实通道/后果/用户时间校准、原始EEG链、具体checkpoint、设备接口与I01—I14仍需按后续计划解决。
+G1保持条件性通过；本步不把G2、G3或G4标为通过。
+本步没有运行步骤12的完整离线机制/factorial episode故障验收，也未开展真实BCI或机器人实验。
+下一步12应在上述边界内接联合回放、策略、契约及fake执行器，检查完整episode与机制/故障条件；须另获用户任务指令再推进。

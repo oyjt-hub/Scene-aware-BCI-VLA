@@ -1,0 +1,952 @@
+{
+  "rtc": [
+    {
+      "line": 20,
+      "text": "except ImportError:"
+    },
+    {
+      "line": 21,
+      "text": "    C_PiperInterface_V2 = None"
+    },
+    {
+      "line": 22,
+      "text": "    print(\"⚠️ 警告: 未找到 piper_sdk。\")"
+    },
+    {
+      "line": 23,
+      "text": ""
+    },
+    {
+      "line": 24,
+      "text": "# ================= 配置区域 ================="
+    },
+    {
+      "line": 25,
+      "text": ""
+    },
+    {
+      "line": 26,
+      "text": "SERVER_HOST = \"172.19.5.252\""
+    },
+    {
+      "line": 27,
+      "text": "SERVER_PORT = 9000"
+    },
+    {
+      "line": 28,
+      "text": "TASK_INSTRUCTION = \"fold the cloth.\""
+    },
+    {
+      "line": 29,
+      "text": "# TASK_INSTRUCTION = \"pick up the cherry and put it into the bowl.\""
+    },
+    {
+      "line": 30,
+      "text": "# TASK_INSTRUCTION = \"pick up the brunch of grapes and put it into the bowl.\""
+    },
+    {
+      "line": 31,
+      "text": ""
+    },
+    {
+      "line": 32,
+      "text": ""
+    },
+    {
+      "line": 33,
+      "text": "CONTROL_RATE_HZ = 30"
+    },
+    {
+      "line": 34,
+      "text": "DT = 1.0 / CONTROL_RATE_HZ"
+    },
+    {
+      "line": 35,
+      "text": ""
+    },
+    {
+      "line": 36,
+      "text": "INTERPOLATION_STEPS = 3"
+    },
+    {
+      "line": 37,
+      "text": "SUB_DT = DT / INTERPOLATION_STEPS  "
+    },
+    {
+      "line": 38,
+      "text": ""
+    },
+    {
+      "line": 39,
+      "text": "# Receding-horizon and RTC timing parameters."
+    },
+    {
+      "line": 40,
+      "text": "ACTION_HORIZON = int(os.environ.get(\"OPENPI_ACTION_HORIZON\", \"100\"))"
+    },
+    {
+      "line": 41,
+      "text": "PREFETCH_STEPS = int(os.environ.get(\"OPENPI_PREFETCH_STEPS\", \"15\"))"
+    },
+    {
+      "line": 42,
+      "text": "LATENCY_STEPS = int(os.environ.get(\"OPENPI_LATENCY_STEPS\", \"7\"))"
+    },
+    {
+      "line": 43,
+      "text": "RTC_INITIAL_DELAY_STEPS = int(os.environ.get(\"OPENPI_RTC_INITIAL_DELAY_STEPS\", \"20\"))"
+    },
+    {
+      "line": 44,
+      "text": "RTC_PREFIX_EXTRA_STEPS = int(os.environ.get(\"OPENPI_RTC_PREFIX_EXTRA_STEPS\", \"40\"))"
+    },
+    {
+      "line": 45,
+      "text": "RTC_MAX_GUIDANCE_WEIGHT = float(os.environ.get(\"OPENPI_RTC_MAX_GUIDANCE_WEIGHT\", \"5\"))"
+    },
+    {
+      "line": 46,
+      "text": "MAX_STALE_STEPS = int(os.environ.get(\"OPENPI_MAX_STALE_STEPS\", \"30\"))"
+    },
+    {
+      "line": 47,
+      "text": ""
+    },
+    {
+      "line": 48,
+      "text": "JOINT_LIMITS_RAD = np.array([[-2.61799, 2.61799],[0.0, 3.14159],[-2.96706, 0.0],[-1.74533, 1.74533],[-1.22173, 1.22173],[-2.0944, 2.0944],"
+    },
+    {
+      "line": 49,
+      "text": "])"
+    },
+    {
+      "line": 50,
+      "text": ""
+    },
+    {
+      "line": 51,
+      "text": "latest_chunk_lock = threading.Lock()"
+    },
+    {
+      "line": 52,
+      "text": "latest_action_chunk = None"
+    },
+    {
+      "line": 53,
+      "text": "new_chunk_available = False"
+    },
+    {
+      "line": 54,
+      "text": "active_action_chunk = None"
+    },
+    {
+      "line": 55,
+      "text": "active_chunk_capture_step = 0"
+    },
+    {
+      "line": 56,
+      "text": ""
+    },
+    {
+      "line": 57,
+      "text": "infer_trigger_event = threading.Event()"
+    },
+    {
+      "line": 58,
+      "text": ""
+    },
+    {
+      "line": 59,
+      "text": "# ================= Absolute action timeline ================="
+    },
+    {
+      "line": 60,
+      "text": "absolute_step_counter = 0"
+    },
+    {
+      "line": 61,
+      "text": "latest_chunk_capture_step = 0"
+    },
+    {
+      "line": 62,
+      "text": ""
+    },
+    {
+      "line": 63,
+      "text": "# ================= 辅助类: 多线程摄像头 ================="
+    },
+    {
+      "line": 64,
+      "text": "class CameraThread:"
+    },
+    {
+      "line": 65,
+      "text": "    def __init__(self, path, name):"
+    },
+    {
+      "line": 66,
+      "text": "        self.path = path"
+    },
+    {
+      "line": 67,
+      "text": "        self.name = name"
+    },
+    {
+      "line": 68,
+      "text": "        self.frame = None"
+    },
+    {
+      "line": 196,
+      "text": "                    img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)"
+    },
+    {
+      "line": 197,
+      "text": "                    w_l = cv2.cvtColor(w_l, cv2.COLOR_BGR2RGB)"
+    },
+    {
+      "line": 198,
+      "text": "                    w_r = cv2.cvtColor(w_r, cv2.COLOR_BGR2RGB)"
+    },
+    {
+      "line": 199,
+      "text": ""
+    },
+    {
+      "line": 200,
+      "text": "                    curr_l_rad = get_current_joints_rad(self.piper_left)"
+    },
+    {
+      "line": 201,
+      "text": "                    curr_r_rad = get_current_joints_rad(self.piper_right)"
+    },
+    {
+      "line": 202,
+      "text": ""
+    },
+    {
+      "line": 203,
+      "text": "                    val_l_mm = get_gripper_value(self.piper_left)"
+    },
+    {
+      "line": 204,
+      "text": "                    val_r_mm = get_gripper_value(self.piper_right)"
+    },
+    {
+      "line": 205,
+      "text": "                    # Aloha transforms represent gripper width in decimeters."
+    },
+    {
+      "line": 206,
+      "text": "                    norm_grip_l = np.clip(val_l_mm / 100.0, 0.0, 0.7)"
+    },
+    {
+      "line": 207,
+      "text": "                    norm_grip_r = np.clip(val_r_mm / 100.0, 0.0, 0.7)"
+    },
+    {
+      "line": 208,
+      "text": ""
+    },
+    {
+      "line": 209,
+      "text": "                    state_vec = np.zeros(14, dtype=np.float32)"
+    },
+    {
+      "line": 210,
+      "text": "                    state_vec[0:6] = curr_l_rad"
+    },
+    {
+      "line": 211,
+      "text": "                    state_vec[6] = norm_grip_l"
+    },
+    {
+      "line": 212,
+      "text": "                    state_vec[7:13] = curr_r_rad"
+    },
+    {
+      "line": 213,
+      "text": "                    state_vec[13] = norm_grip_r"
+    },
+    {
+      "line": 214,
+      "text": ""
+    },
+    {
+      "line": 215,
+      "text": "                    obs = {"
+    },
+    {
+      "line": 216,
+      "text": "                        \"images\": {"
+    },
+    {
+      "line": 217,
+      "text": "                            \"cam_high\": process_image(img),"
+    },
+    {
+      "line": 218,
+      "text": "                            \"cam_left_wrist\": process_image(w_l),"
+    },
+    {
+      "line": 219,
+      "text": "                            \"cam_right_wrist\": process_image(w_r),"
+    },
+    {
+      "line": 220,
+      "text": "                        },"
+    },
+    {
+      "line": 221,
+      "text": "                        \"state\": state_vec.tolist(),"
+    },
+    {
+      "line": 222,
+      "text": "                        \"prompt\": TASK_INSTRUCTION,"
+    },
+    {
+      "line": 223,
+      "text": "                    }"
+    },
+    {
+      "line": 224,
+      "text": "                    rtc_context = self._make_rtc_context(capture_step)"
+    },
+    {
+      "line": 225,
+      "text": "                    if rtc_context is not None:"
+    },
+    {
+      "line": 226,
+      "text": "                        obs[\"rtc\"] = rtc_context"
+    },
+    {
+      "line": 227,
+      "text": ""
+    },
+    {
+      "line": 300,
+      "text": ""
+    },
+    {
+      "line": 301,
+      "text": "def deg_to_sdk_unit(rad: np.ndarray) -> np.ndarray:"
+    },
+    {
+      "line": 302,
+      "text": "    deg = np.rad2deg(rad)"
+    },
+    {
+      "line": 303,
+      "text": "    return (deg * 1000.0).astype(np.int32)"
+    },
+    {
+      "line": 304,
+      "text": ""
+    },
+    {
+      "line": 305,
+      "text": "def get_current_joints_rad(piper: Any) -> np.ndarray:"
+    },
+    {
+      "line": 306,
+      "text": "    if piper is None: return np.zeros(6)"
+    },
+    {
+      "line": 307,
+      "text": "    try:"
+    },
+    {
+      "line": 308,
+      "text": "        js_ret = piper.GetArmJointMsgs()"
+    },
+    {
+      "line": 309,
+      "text": "        if isinstance(js_ret, tuple) and len(js_ret) >= 3:"
+    },
+    {
+      "line": 310,
+      "text": "            js = js_ret[2]"
+    },
+    {
+      "line": 311,
+      "text": "        else:"
+    },
+    {
+      "line": 312,
+      "text": "            js = js_ret"
+    },
+    {
+      "line": 313,
+      "text": "            "
+    },
+    {
+      "line": 314,
+      "text": "        if hasattr(js, \"joint_state\") and js.joint_state:"
+    },
+    {
+      "line": 315,
+      "text": "            st = js.joint_state"
+    },
+    {
+      "line": 316,
+      "text": "            for names in [[\"joint_1\", \"joint_2\", \"joint_3\", \"joint_4\", \"joint_5\", \"joint_6\"],[\"angle_1\", \"angle_2\", \"angle_3\", \"angle_4\", \"angle_5\", \"angle_6\"]]:"
+    },
+    {
+      "line": 317,
+      "text": "                try:"
+    },
+    {
+      "line": 318,
+      "text": "                    vals =[getattr(st, n) for n in names]"
+    },
+    {
+      "line": 319,
+      "text": "                    return np.deg2rad(np.array(vals, dtype=np.float64) / 1000.0)"
+    },
+    {
+      "line": 320,
+      "text": "                except AttributeError: continue"
+    },
+    {
+      "line": 321,
+      "text": "        return np.zeros(6)"
+    },
+    {
+      "line": 322,
+      "text": "    except Exception as e:"
+    },
+    {
+      "line": 323,
+      "text": "        return np.zeros(6)"
+    },
+    {
+      "line": 324,
+      "text": ""
+    },
+    {
+      "line": 325,
+      "text": "def get_gripper_value(piper):"
+    },
+    {
+      "line": 326,
+      "text": "    if piper is None: return 0.0"
+    },
+    {
+      "line": 327,
+      "text": "    try:"
+    },
+    {
+      "line": 328,
+      "text": "        gripper_msgs = piper.GetArmGripperMsgs()"
+    },
+    {
+      "line": 329,
+      "text": "        if hasattr(gripper_msgs, 'gripper_state') and gripper_msgs.gripper_state:"
+    },
+    {
+      "line": 330,
+      "text": "            raw_value = gripper_msgs.gripper_state.grippers_angle"
+    },
+    {
+      "line": 331,
+      "text": "            width_mm = raw_value / 1000.0"
+    },
+    {
+      "line": 332,
+      "text": "            return width_mm"
+    },
+    {
+      "line": 333,
+      "text": "    except Exception:"
+    },
+    {
+      "line": 334,
+      "text": "        pass"
+    },
+    {
+      "line": 335,
+      "text": "    return 0.0"
+    },
+    {
+      "line": 336,
+      "text": ""
+    },
+    {
+      "line": 337,
+      "text": "def map_actions_to_joint_targets_dual(action_step, current_left_rad, current_right_rad):"
+    },
+    {
+      "line": 338,
+      "text": "    action = np.array(action_step, dtype=np.float64)"
+    },
+    {
+      "line": 339,
+      "text": "    left_target_raw = action[0:6]"
+    },
+    {
+      "line": 340,
+      "text": "    left_grip_raw = float(action[6])"
+    },
+    {
+      "line": 341,
+      "text": "    right_target_raw = action[7:13]"
+    },
+    {
+      "line": 342,
+      "text": "    right_grip_raw = float(action[13])"
+    },
+    {
+      "line": 343,
+      "text": ""
+    },
+    {
+      "line": 344,
+      "text": "    left_target = clamp_rad(left_target_raw)"
+    },
+    {
+      "line": 345,
+      "text": "    right_target = clamp_rad(right_target_raw)"
+    },
+    {
+      "line": 346,
+      "text": "    "
+    },
+    {
+      "line": 347,
+      "text": "    return left_target, right_target, left_grip_raw, right_grip_raw"
+    },
+    {
+      "line": 348,
+      "text": ""
+    }
+  ],
+  "client": [
+    {
+      "line": 1,
+      "text": "import logging"
+    },
+    {
+      "line": 2,
+      "text": "import time"
+    },
+    {
+      "line": 3,
+      "text": "from typing import Dict, Optional, Tuple"
+    },
+    {
+      "line": 4,
+      "text": ""
+    },
+    {
+      "line": 5,
+      "text": "from typing_extensions import override"
+    },
+    {
+      "line": 6,
+      "text": "import websockets.sync.client"
+    },
+    {
+      "line": 7,
+      "text": ""
+    },
+    {
+      "line": 8,
+      "text": "from openpi_client import base_policy as _base_policy"
+    },
+    {
+      "line": 9,
+      "text": "from openpi_client import msgpack_numpy"
+    },
+    {
+      "line": 10,
+      "text": ""
+    },
+    {
+      "line": 11,
+      "text": ""
+    },
+    {
+      "line": 12,
+      "text": "class WebsocketClientPolicy(_base_policy.BasePolicy):"
+    },
+    {
+      "line": 13,
+      "text": "    \"\"\"Implements the Policy interface by communicating with a server over websocket."
+    },
+    {
+      "line": 14,
+      "text": ""
+    },
+    {
+      "line": 15,
+      "text": "    See WebsocketPolicyServer for a corresponding server implementation."
+    },
+    {
+      "line": 16,
+      "text": "    \"\"\""
+    },
+    {
+      "line": 17,
+      "text": ""
+    },
+    {
+      "line": 19,
+      "text": "        if host.startswith(\"ws\"):"
+    },
+    {
+      "line": 20,
+      "text": "            self._uri = host"
+    },
+    {
+      "line": 21,
+      "text": "        else:"
+    },
+    {
+      "line": 22,
+      "text": "            self._uri = f\"ws://{host}\""
+    },
+    {
+      "line": 23,
+      "text": "        if port is not None:"
+    },
+    {
+      "line": 24,
+      "text": "            self._uri += f\":{port}\""
+    },
+    {
+      "line": 25,
+      "text": "        self._packer = msgpack_numpy.Packer()"
+    },
+    {
+      "line": 27,
+      "text": "        self._ws, self._server_metadata = self._wait_for_server()"
+    },
+    {
+      "line": 28,
+      "text": ""
+    },
+    {
+      "line": 29,
+      "text": "    def get_server_metadata(self) -> Dict:"
+    },
+    {
+      "line": 30,
+      "text": "        return self._server_metadata"
+    },
+    {
+      "line": 31,
+      "text": ""
+    },
+    {
+      "line": 32,
+      "text": "    def _wait_for_server(self) -> Tuple[websockets.sync.client.ClientConnection, Dict]:"
+    },
+    {
+      "line": 33,
+      "text": "        logging.info(f\"Waiting for server at {self._uri}...\")"
+    },
+    {
+      "line": 34,
+      "text": "        while True:"
+    },
+    {
+      "line": 35,
+      "text": "            try:"
+    },
+    {
+      "line": 37,
+      "text": "                conn = websockets.sync.client.connect("
+    },
+    {
+      "line": 38,
+      "text": "                    self._uri, compression=None, max_size=None, additional_headers=headers"
+    },
+    {
+      "line": 39,
+      "text": "                )"
+    },
+    {
+      "line": 40,
+      "text": "                metadata = msgpack_numpy.unpackb(conn.recv())"
+    },
+    {
+      "line": 41,
+      "text": "                return conn, metadata"
+    },
+    {
+      "line": 42,
+      "text": "            except ConnectionRefusedError:"
+    },
+    {
+      "line": 43,
+      "text": "                logging.info(\"Still waiting for server...\")"
+    },
+    {
+      "line": 44,
+      "text": "                time.sleep(5)"
+    },
+    {
+      "line": 45,
+      "text": ""
+    },
+    {
+      "line": 46,
+      "text": "    @override"
+    },
+    {
+      "line": 47,
+      "text": "    def infer(self, obs: Dict) -> Dict:  # noqa: UP006"
+    },
+    {
+      "line": 48,
+      "text": "        data = self._packer.pack(obs)"
+    },
+    {
+      "line": 49,
+      "text": "        self._ws.send(data)"
+    },
+    {
+      "line": 50,
+      "text": "        response = self._ws.recv()"
+    },
+    {
+      "line": 51,
+      "text": "        if isinstance(response, str):"
+    },
+    {
+      "line": 52,
+      "text": "            # we're expecting bytes; if the server sends a string, it's an error."
+    },
+    {
+      "line": 53,
+      "text": "            raise RuntimeError(f\"Error in inference server:\\n{response}\")"
+    },
+    {
+      "line": 54,
+      "text": "        return msgpack_numpy.unpackb(response)"
+    },
+    {
+      "line": 55,
+      "text": ""
+    },
+    {
+      "line": 56,
+      "text": "    @override"
+    },
+    {
+      "line": 57,
+      "text": "    def reset(self) -> None:"
+    },
+    {
+      "line": 58,
+      "text": "        pass"
+    }
+  ],
+  "server": [
+    {
+      "line": 32,
+      "text": "        logging.getLogger(\"websockets.server\").setLevel(logging.INFO)"
+    },
+    {
+      "line": 33,
+      "text": ""
+    },
+    {
+      "line": 34,
+      "text": "    def serve_forever(self) -> None:"
+    },
+    {
+      "line": 35,
+      "text": "        asyncio.run(self.run())"
+    },
+    {
+      "line": 36,
+      "text": ""
+    },
+    {
+      "line": 37,
+      "text": "    async def run(self):"
+    },
+    {
+      "line": 38,
+      "text": "        async with _server.serve("
+    },
+    {
+      "line": 39,
+      "text": "            self._handler,"
+    },
+    {
+      "line": 40,
+      "text": "            self._host,"
+    },
+    {
+      "line": 41,
+      "text": "            self._port,"
+    },
+    {
+      "line": 42,
+      "text": "            compression=None,"
+    },
+    {
+      "line": 43,
+      "text": "            max_size=None,"
+    },
+    {
+      "line": 44,
+      "text": "            process_request=_health_check,"
+    },
+    {
+      "line": 45,
+      "text": "        ) as server:"
+    },
+    {
+      "line": 46,
+      "text": "            await server.serve_forever()"
+    },
+    {
+      "line": 47,
+      "text": ""
+    },
+    {
+      "line": 48,
+      "text": "    async def _handler(self, websocket: _server.ServerConnection):"
+    },
+    {
+      "line": 49,
+      "text": "        logger.info(f\"Connection from {websocket.remote_address} opened\")"
+    },
+    {
+      "line": 50,
+      "text": "        packer = msgpack_numpy.Packer()"
+    },
+    {
+      "line": 51,
+      "text": ""
+    },
+    {
+      "line": 52,
+      "text": "        await websocket.send(packer.pack(self._metadata))"
+    },
+    {
+      "line": 53,
+      "text": ""
+    },
+    {
+      "line": 54,
+      "text": "        prev_total_time = None"
+    },
+    {
+      "line": 55,
+      "text": "        while True:"
+    },
+    {
+      "line": 56,
+      "text": "            try:"
+    },
+    {
+      "line": 57,
+      "text": "                start_time = time.monotonic()"
+    },
+    {
+      "line": 58,
+      "text": "                obs = msgpack_numpy.unpackb(await websocket.recv())"
+    },
+    {
+      "line": 59,
+      "text": "                print(\"\\n========== NEW INFERENCE ==========\")"
+    },
+    {
+      "line": 60,
+      "text": "                print(\"Prompt received by server:\")"
+    },
+    {
+      "line": 61,
+      "text": "                print(repr(obs.get(\"prompt\")))"
+    },
+    {
+      "line": 62,
+      "text": "                print(\"====================================\")"
+    },
+    {
+      "line": 63,
+      "text": "                infer_time = time.monotonic()"
+    },
+    {
+      "line": 64,
+      "text": "                action = self._policy.infer(obs)"
+    },
+    {
+      "line": 65,
+      "text": "                infer_time = time.monotonic() - infer_time"
+    },
+    {
+      "line": 66,
+      "text": ""
+    },
+    {
+      "line": 67,
+      "text": "                action[\"server_timing\"] = {"
+    },
+    {
+      "line": 68,
+      "text": "                    \"infer_ms\": infer_time * 1000,"
+    },
+    {
+      "line": 69,
+      "text": "                }"
+    },
+    {
+      "line": 70,
+      "text": "                if prev_total_time is not None:"
+    },
+    {
+      "line": 71,
+      "text": "                    # We can only record the last total time since we also want to include the send time."
+    },
+    {
+      "line": 72,
+      "text": "                    action[\"server_timing\"][\"prev_total_ms\"] = prev_total_time * 1000"
+    },
+    {
+      "line": 73,
+      "text": ""
+    },
+    {
+      "line": 74,
+      "text": "                await websocket.send(packer.pack(action))"
+    },
+    {
+      "line": 75,
+      "text": "                prev_total_time = time.monotonic() - start_time"
+    },
+    {
+      "line": 76,
+      "text": ""
+    },
+    {
+      "line": 77,
+      "text": "            except websockets.ConnectionClosed:"
+    },
+    {
+      "line": 78,
+      "text": "                logger.info(f\"Connection from {websocket.remote_address} closed\")"
+    },
+    {
+      "line": 79,
+      "text": "                break"
+    },
+    {
+      "line": 80,
+      "text": "            except Exception:"
+    },
+    {
+      "line": 81,
+      "text": "                await websocket.send(traceback.format_exc())"
+    },
+    {
+      "line": 82,
+      "text": "                await websocket.close("
+    }
+  ]
+}

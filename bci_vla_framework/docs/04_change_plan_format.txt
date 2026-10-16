@@ -1,0 +1,44 @@
+﻿步骤04：受控变化计划格式及填写步骤
+版本V2；日期2026-10-15；机器模板examples/benchmark_v2/private_change_plan.template.json。
+该文件是评价私有草案，不可发送给在线控制器；不是已经执行的任务安排。
+
+一、文件分工
+private_change_plan.template.json：设计级四格、私有任务卡/通道干预字段、尚未锁定的参数；ready_for_collection=false。
+public_event.template.json：仅公开事件允许字段示意，不含cell、真实目标/通道、未来变化、seed。正式协议由步骤05实现。
+outcome_record.template.json：独立标注及计时结果字段，当前全为空；不能作为已采集数据加载。
+模板非正式JSON Schema，不自动验证真实实验完整性；verify_step04_docs.py只核设计一致性和边界，不验证真实信号/研究可行性。
+
+二、私有计划顶层字段
+schema_version、plan_version、document_kind=design_template、status=draft_not_executable。
+ready_for_collection固定false，待后续研究条件、授权、校准、运行和正式锁定全部满足才另建正式版本，不能在此模板随手改true。
+freeze_state含版本/哈希/锁定时间；当前为null。
+parameters：参与者数、episode数、时长、预算、反应保护窗、变化率/时刻、错误分布、分组种子、检测阈值、主要比较、样本量依据均为null或明确待锁定。
+methods：实际方法集合/版本/权重、共享信息及预算待确认；本步不虚构基线已实现。
+planned_cells：C00/C10/C01/C11只标设计覆盖，不是四条真实episode；不填写实现结果。
+stress_conditions：S01—S12说明边界；强度及与四格的配置后续锁定。
+required_private_episode_fields：将来正式每episode必须另填的任务卡、通道来源、变化和时钟信息；本模板不生成虚构episode。
+collection_blockers：包括实际资产/采样链、probe校准、任务真值可得性、独立终态、当前授权与研究安排。
+
+三、正式受控episode未来应如何填写
+1. 建不可从ID反推出condition的episode_alias；关联participant/session/scene/recording分组仅在私有manifest。
+2. 指定evidence_level和truth_scope，任务卡初始/新目标必须来自独立任务设计，使用可追踪实例，不根据算法输出补目标。
+3. 指定目标是否计划改变、私有提示时刻、呈现核验、独立理解标注来源和生效/歧义区间；未知不能写“准确切换时刻”。
+4. 指定通道是否计划改变及独立操控来源；L2记录数字变换位置、前后模式、适用TASK/PROBE/CONFIRM和私有随机流，L3不填虚构变点。
+5. 指定双变化顺序、真实暴露机会和诊断/执行episode类型；早终止导致未暴露保留not_exposed，不重分类为稳定。
+6. 指定每方法公平可见内容和校准范围，保留运行必要mapping/质量元数据；不能把实验干预当成已知真实生理标签。
+7. 指定任务锁定窗、执行期间变更/取消/恢复规则、预算、共同超时与终态谓词。当前未定均不得开始采集。
+8. 保存随机分配和顺序到私有计划；正式前冻结哈希。不要把随机种子和未来schedule复制到controller配置。
+9. 运行后保留实际呈现/干预事件，与assigned_schedule分开；不得回填计划使其看起来符合实际。
+10. 独立标注完成后才在评价端连接目标/通道/结果；保留unknown和分歧，所有已开始episode均进总分母。
+
+四、分组划分格式
+split_unit依据主张设participant/session/scene/recording多字段约束，不能只写random_row。
+私有split_manifest保存group membership及development/calibration/validation/test/pilot用途。
+同一原始录制的重叠前缀与场景近重复组必须绑定；若组合约束导致无法划分，停止并调整采集或收窄泛化主张，不悄悄打散。
+锁定数据hash和组清单后，测试标签/计划不向训练、阈值选择或probe策略开放。
+
+五、目前允许与不允许的下一动作
+允许：复核这三个文档与模板是否覆盖04.1—04.9，更新步骤04为协议编制完成。
+后续步骤05负责实现输入协议，不必为了填满模板先采真实数据；步骤06及pilot提供真实参数。
+本轮不生成受试者名单、不预设人数/提升幅度、不启动调度器、不生成实验结果、不读取真实参与者EEG。
+如独立真值只能由动作结果倒推，先修改任务/标注设计；不得把模板null替换为算法预测冒充真值。

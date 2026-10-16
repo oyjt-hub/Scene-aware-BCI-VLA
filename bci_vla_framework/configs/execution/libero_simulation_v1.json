@@ -1,0 +1,66 @@
+{
+  "schema_version": "libero-simulation-binding/1.0",
+  "execution_scope": "simulation_only",
+  "physical_execution_allowed": false,
+  "real_BCI_enabled": false,
+  "input_source": "scripted_simulation_fixture",
+  "full_framework_integration": false,
+  "backend": "StarVLA Qwen2.5-VL-GR00T",
+  "checkpoint": "/home/oyjt/workspace/Qwen2.5-VL-GR00T-LIBERO-4in1/checkpoints/steps_30000_pytorch_model.pt",
+  "checkpoint_sha256": "26b36799a702ca920467c987096a8ccb5f476c6965af6c7f2fd419ecb6893bf2",
+  "normalization_statistics": {
+    "path": "/home/oyjt/workspace/Qwen2.5-VL-GR00T-LIBERO-4in1/dataset_statistics.json",
+    "bytes": 3037,
+    "sha256": "9b99e12e0853e37612fbfb4ac164da7e2515e8d064fda3fa196537da4cdd21e5"
+  },
+  "normalization_key": "franka",
+  "normalization": "masked min/max inverse after clipping [-1,1]",
+  "image_observations": {
+    "source_keys": [
+      "agentview_image",
+      "robot0_eye_in_hand_image"
+    ],
+    "source_shape_hwc": [
+      256,
+      256,
+      3
+    ],
+    "rotation": "180 degrees both spatial axes",
+    "dtype": "uint8",
+    "policy_resize_hwc": [
+      224,
+      224,
+      3
+    ],
+    "policy_key": "examples[0].image"
+  },
+  "language_key": "examples[0].lang",
+  "state_input": "not_sent_by_checked_StarVLA_LIBERO_evaluation_path",
+  "normalized_policy_shape": [
+    1,
+    8,
+    7
+  ],
+  "simulation_action_dimension": 7,
+  "gripper_conversion": "1 - 2 * (open > 0.5), after repository binary threshold",
+  "action_semantics": "LIBERO controller-normalized xyz/rotation_delta/gripper; not physical joint targets",
+  "suite": "libero_goal",
+  "task_ids": [
+    0,
+    1
+  ],
+  "seed": 7,
+  "init_state_index": 0,
+  "max_policy_steps": 300,
+  "settling_steps": 10,
+  "inference_device": "GPU0",
+  "service_scope": "owned process, loopback16814, terminated after run",
+  "does_not_verify": [
+    "real_Piper_interface",
+    "real_EEG",
+    "full_joint_belief_planner_integration",
+    "formal_success_rate",
+    "G2",
+    "G3"
+  ]
+}

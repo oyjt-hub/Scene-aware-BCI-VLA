@@ -1,0 +1,9 @@
+{
+  "scope": "unverified_sampling_metadata",
+  "raw_segment": null,
+  "processed_segment": null,
+  "transform": null,
+  "raw_file_sha256": null,
+  "preprocessing_code_sha256": null,
+  "I01_resolved": false
+}

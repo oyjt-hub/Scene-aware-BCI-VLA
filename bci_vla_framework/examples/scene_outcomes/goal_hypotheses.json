@@ -1,0 +1,30 @@
+[
+  {
+    "goal_id": "old",
+    "kind": "task",
+    "intent": {
+      "action": "place",
+      "source_id": "grape",
+      "destination_id": "bowl-left"
+    }
+  },
+  {
+    "goal_id": "new",
+    "kind": "task",
+    "intent": {
+      "action": "place",
+      "source_id": "grape",
+      "destination_id": "bowl-right"
+    }
+  },
+  {
+    "goal_id": "unknown",
+    "kind": "unknown",
+    "intent": null
+  },
+  {
+    "goal_id": "none",
+    "kind": "none",
+    "intent": null
+  }
+]

@@ -1,0 +1,38 @@
+{
+  "trajectory_id": "fixture-trajectory",
+  "executor_id": "simulation-pi05-interface",
+  "checkpoint_ref": null,
+  "predicate_version": "endpoint-v1",
+  "provenance": "simulation_fixture",
+  "split": "calibration",
+  "source_ref": "handwritten-fixture-no-robot-run",
+  "command_dispatched": true,
+  "commanded_intent": {
+    "action": "place",
+    "source_id": "grape",
+    "destination_id": "bowl-left"
+  },
+  "final_predicates": [
+    {
+      "name": "inside",
+      "subject_id": "grape",
+      "object_id": "bowl-left",
+      "value": true,
+      "evidence_ref": "fixture-annotation"
+    },
+    {
+      "name": "inside",
+      "subject_id": "grape",
+      "object_id": "bowl-right",
+      "value": false,
+      "evidence_ref": "fixture-annotation"
+    }
+  ],
+  "user_time_s": 2.0,
+  "recovery_by_goal": {
+    "old": {
+      "seconds": 0,
+      "evidence_ref": "fixture-assumption"
+    }
+  }
+}

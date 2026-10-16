@@ -1,0 +1,37 @@
+{
+  "scope": "analytic_identity_check",
+  "result": "PASS",
+  "count": 21,
+  "checks": [
+    "example provenance excludes empirical interpretation",
+    "single-step alias for all observations/encodings",
+    "all fixed-encoding transcripts up to length 4 agree",
+    "history-dependent encoding and duration-dependent noise example",
+    "known recoding cancels for every bit",
+    "double change can hide without conflict",
+    "noiseless anchor separates the two modes",
+    "noisy probe likelihood ratio",
+    "one-match posterior",
+    "two independent matches posterior",
+    "opposite evidence cancels",
+    "nonuniform prior unchanged by task alias",
+    "random probe is uninformative",
+    "compliance composite error formula",
+    "unknown persistent compliance flip aliases channel flip",
+    "four-state task posterior",
+    "four-state probe posterior",
+    "probe indirectly updates goal marginal",
+    "factorization invents impossible support",
+    "positive likelihood cannot revive zero prior",
+    "zero normalizer is an error"
+  ],
+  "general_proof": "docs/03_identifiability.txt sections 2-5, conditional on stated assumptions",
+  "not_evaluated": [
+    "EEG",
+    "probe usability",
+    "task/probe transfer",
+    "novelty",
+    "policy performance",
+    "G2-G4"
+  ]
+}

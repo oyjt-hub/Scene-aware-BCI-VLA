@@ -1,0 +1,1873 @@
+{
+  "date": "2026-10-16",
+  "scope": "analytic_method_decision_traces",
+  "fixtures": "handwritten_shared_models_not_validation_data",
+  "cases": [
+    {
+      "fixture_id": "alias",
+      "public_memory": {
+        "predicted_goal": "task-9cad706e60e745cf3c01a413",
+        "last_confirmed_goal": "task-9cad706e60e745cf3c01a413"
+      },
+      "decisions": [
+        {
+          "method": "B0",
+          "status": "unavailable_external_legacy_trace",
+          "selected_action": null,
+          "required": [
+            "source-bound proposal trace",
+            "measured complete query/LLM timing",
+            "common confirmation wrapper"
+          ],
+          "compute_ns": 72200,
+          "execution_allowed": false
+        },
+        {
+          "method": "B1",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "TASK_QUERY:1.0",
+            "kind": "TASK_QUERY",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": null,
+            "goal_id": null,
+            "value": 1.04,
+            "observation_branches": 3
+          },
+          "reason": "task_risk_with_shared_confirmation",
+          "compute_ns": 1379700,
+          "execution_allowed": false,
+          "planning_value": 1.04
+        },
+        {
+          "method": "B2",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "TASK_QUERY:1.0",
+            "kind": "TASK_QUERY",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": null,
+            "goal_id": null
+          },
+          "reason": "task_risk_with_shared_confirmation",
+          "compute_ns": 4071000,
+          "execution_allowed": false,
+          "planning_value": 0.5644204861814132
+        },
+        {
+          "method": "B3",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "pause",
+            "kind": "PAUSE",
+            "duration_s": 0,
+            "setup_s": 0.0,
+            "elapsed_s": 0.0,
+            "prompt": null,
+            "goal_id": null
+          },
+          "reason": "task_risk_with_shared_confirmation",
+          "compute_ns": 1176700,
+          "execution_allowed": false,
+          "planning_value": 1.0
+        },
+        {
+          "method": "B4",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "pause",
+            "kind": "PAUSE",
+            "duration_s": 0,
+            "setup_s": 0.0,
+            "elapsed_s": 0.0,
+            "prompt": null,
+            "goal_id": null
+          },
+          "reason": "task_risk_with_shared_confirmation",
+          "compute_ns": 1107400,
+          "execution_allowed": false,
+          "planning_value": 1.0
+        },
+        {
+          "method": "B5",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "probe:0:1.0",
+            "kind": "CHANNEL_PROBE",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": "0",
+            "goal_id": null,
+            "value": 0.8713177498731328,
+            "observation_branches": 3
+          },
+          "reason": "fixed_period_probe_due",
+          "compute_ns": 3792400,
+          "execution_allowed": false,
+          "planning_value": 0.8713177498731328
+        },
+        {
+          "method": "B6",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "TASK_QUERY:1.0",
+            "kind": "TASK_QUERY",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": null,
+            "goal_id": null,
+            "value": 1.04,
+            "observation_branches": 3
+          },
+          "reason": "conflict_repeat_trigger",
+          "compute_ns": 983000,
+          "execution_allowed": false,
+          "planning_value": 1.04
+        },
+        {
+          "method": "B7",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "probe:0:1.0",
+            "kind": "CHANNEL_PROBE",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": "0",
+            "goal_id": null,
+            "value": 0.8713177498731328,
+            "observation_branches": 3
+          },
+          "reason": "conflict_or_measured_quality_probe_trigger",
+          "compute_ns": 3757600,
+          "execution_allowed": false,
+          "planning_value": 0.8713177498731328
+        },
+        {
+          "method": "B8",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "probe:1:1.0",
+            "kind": "CHANNEL_PROBE",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": "1",
+            "goal_id": null,
+            "value": 0.8713177498731328,
+            "observation_branches": 3
+          },
+          "reason": "channel_information_gain_per_second_then_semantics",
+          "compute_ns": 4538200,
+          "execution_allowed": false,
+          "planning_value": 0.8713177498731328
+        },
+        {
+          "method": "B9",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "probe:0:1.0",
+            "kind": "CHANNEL_PROBE",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": "0",
+            "goal_id": null
+          },
+          "reason": "task_risk_with_shared_confirmation",
+          "compute_ns": 3781200,
+          "execution_allowed": false,
+          "planning_value": 0.8713177498731328
+        },
+        {
+          "method": "B10",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "probe:0:1.0",
+            "kind": "CHANNEL_PROBE",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": "0",
+            "goal_id": null
+          },
+          "reason": "restricted_recursive_bayes_MI_and_final_window_stopping_plus_semantic_VoI",
+          "compute_ns": 3846900,
+          "execution_allowed": false,
+          "planning_value": 0.8713177498731328
+        },
+        {
+          "method": "B1P",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "TASK_QUERY:1.0",
+            "kind": "TASK_QUERY",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": null,
+            "goal_id": null,
+            "value": 1.04,
+            "observation_branches": 3
+          },
+          "reason": "prediction_verification_or_correction_query",
+          "compute_ns": 1242600,
+          "execution_allowed": false,
+          "planning_value": 1.04
+        },
+        {
+          "method": "M",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "probe:0:1.0",
+            "kind": "CHANNEL_PROBE",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": "0",
+            "goal_id": null,
+            "legal": true,
+            "reason": "standard_expected_loss_with_noisy_confirmation",
+            "expected_loss": 0.8713177498731328,
+            "branches": [
+              {
+                "observation": "0",
+                "probability": 0.42750000000000005,
+                "posterior": [
+                  0.026137848230461475,
+                  0.09935929630913554,
+                  0.8715229704829888,
+                  0.0029798849774141747
+                ],
+                "continuation_loss": 0.6187248908571266,
+                "next_action": "confirm:task-d5fc9bc832047df78f51c84f",
+                "after_time_s": 1792022402.0,
+                "remaining_s": 18.0
+              },
+              {
+                "observation": "1",
+                "probability": 0.42750000000000005,
+                "posterior": [
+                  0.0029798849774141747,
+                  0.8715229704829888,
+                  0.09935929630913554,
+                  0.026137848230461475
+                ],
+                "continuation_loss": 0.9866967462730085,
+                "next_action": "confirm:task-9cad706e60e745cf3c01a413",
+                "after_time_s": 1792022402.0,
+                "remaining_s": 18.0
+              },
+              {
+                "observation": "NO_RESPONSE",
+                "probability": 0.14500000000000002,
+                "posterior": [
+                  0.014558866603937825,
+                  0.4854411333960622,
+                  0.4854411333960622,
+                  0.014558866603937825
+                ],
+                "continuation_loss": 1.0,
+                "next_action": "PAUSE_NONRESPONSE",
+                "after_time_s": 1792022402.0,
+                "remaining_s": 18.0
+              }
+            ],
+            "immediate_time_cost": 0.04,
+            "channel_total_variation": 0.6799999999999999
+          },
+          "reason": "standard_expected_loss_with_noisy_confirmation",
+          "compute_ns": 3995300,
+          "execution_allowed": false,
+          "planning_value": 0.8713177498731328
+        },
+        {
+          "method": "M2",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "probe:0:1.0",
+            "kind": "CHANNEL_PROBE",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": "0",
+            "goal_id": null,
+            "legal": true,
+            "reason": "standard_expected_loss_with_noisy_confirmation",
+            "expected_loss": 0.8713177498731328,
+            "branches": [
+              {
+                "observation": "0",
+                "probability": 0.42750000000000005,
+                "posterior": [
+                  0.026137848230461475,
+                  0.09935929630913554,
+                  0.8715229704829888,
+                  0.0029798849774141747
+                ],
+                "continuation_loss": 0.6187248908571266,
+                "next_action": "confirm:task-d5fc9bc832047df78f51c84f",
+                "after_time_s": 1792022402.0,
+                "remaining_s": 18.0
+              },
+              {
+                "observation": "1",
+                "probability": 0.42750000000000005,
+                "posterior": [
+                  0.0029798849774141747,
+                  0.8715229704829888,
+                  0.09935929630913554,
+                  0.026137848230461475
+                ],
+                "continuation_loss": 0.9866967462730085,
+                "next_action": "confirm:task-9cad706e60e745cf3c01a413",
+                "after_time_s": 1792022402.0,
+                "remaining_s": 18.0
+              },
+              {
+                "observation": "NO_RESPONSE",
+                "probability": 0.14500000000000002,
+                "posterior": [
+                  0.014558866603937825,
+                  0.4854411333960622,
+                  0.4854411333960622,
+                  0.014558866603937825
+                ],
+                "continuation_loss": 1.0,
+                "next_action": "PAUSE_NONRESPONSE",
+                "after_time_s": 1792022402.0,
+                "remaining_s": 18.0
+              }
+            ],
+            "immediate_time_cost": 0.04,
+            "channel_total_variation": 0.6799999999999999
+          },
+          "reason": "standard_expected_loss_with_noisy_confirmation",
+          "compute_ns": 33656800,
+          "execution_allowed": false,
+          "planning_value": 0.8713177498731328
+        },
+        {
+          "method": "A_no_probe",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "pause",
+            "kind": "PAUSE",
+            "duration_s": 0,
+            "setup_s": 0.0,
+            "elapsed_s": 0.0,
+            "prompt": null,
+            "goal_id": null
+          },
+          "reason": "task_risk_with_shared_confirmation",
+          "compute_ns": 1035500,
+          "execution_allowed": false,
+          "planning_value": 1.0
+        },
+        {
+          "method": "A_factorized",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "pause",
+            "kind": "PAUSE",
+            "duration_s": 0,
+            "setup_s": 0.0,
+            "elapsed_s": 0.0,
+            "prompt": null,
+            "goal_id": null
+          },
+          "reason": "task_risk_with_shared_confirmation",
+          "compute_ns": 4393500,
+          "execution_allowed": false,
+          "planning_value": 1.0
+        },
+        {
+          "method": "A_periodic",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "probe:0:1.0",
+            "kind": "CHANNEL_PROBE",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": "0",
+            "goal_id": null,
+            "value": 0.8713177498731328,
+            "observation_branches": 3
+          },
+          "reason": "fixed_period_probe_due",
+          "compute_ns": 3920400,
+          "execution_allowed": false,
+          "planning_value": 0.8713177498731328
+        },
+        {
+          "method": "A_no_task_consequence",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "confirm:task-d5fc9bc832047df78f51c84f",
+            "kind": "CONFIRM",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": null,
+            "goal_id": "task-d5fc9bc832047df78f51c84f"
+          },
+          "reason": "task_risk_with_shared_confirmation",
+          "compute_ns": 3366500,
+          "execution_allowed": false,
+          "planning_value": 0.6494632632925597
+        },
+        {
+          "method": "A_mix_sources",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "pause",
+            "kind": "PAUSE",
+            "duration_s": 0,
+            "setup_s": 0.0,
+            "elapsed_s": 0.0,
+            "prompt": null,
+            "goal_id": null
+          },
+          "reason": "task_risk_with_shared_confirmation",
+          "compute_ns": 3686300,
+          "execution_allowed": false,
+          "planning_value": 1.0
+        },
+        {
+          "method": "A_pseudo_labels",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "probe:0:1.0",
+            "kind": "CHANNEL_PROBE",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": "0",
+            "goal_id": null
+          },
+          "reason": "task_risk_with_shared_confirmation",
+          "compute_ns": 5430000,
+          "execution_allowed": false,
+          "planning_value": 0.8713177498731328
+        },
+        {
+          "method": "A_ignore_probe_cost",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "probe:0:1.0",
+            "kind": "CHANNEL_PROBE",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": "0",
+            "goal_id": null
+          },
+          "reason": "task_risk_with_shared_confirmation",
+          "compute_ns": 4063600,
+          "execution_allowed": false,
+          "planning_value": 0.8313177498731328
+        },
+        {
+          "method": "A_fixed_duration",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "probe:0:1.0",
+            "kind": "CHANNEL_PROBE",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": "0",
+            "goal_id": null,
+            "value": 0.8713177498731328,
+            "observation_branches": 3
+          },
+          "reason": "task_risk_with_shared_confirmation",
+          "compute_ns": 3774200,
+          "execution_allowed": false,
+          "planning_value": 0.8713177498731328
+        }
+      ]
+    },
+    {
+      "fixture_id": "known_normal",
+      "public_memory": {
+        "predicted_goal": "task-9cad706e60e745cf3c01a413",
+        "last_confirmed_goal": "task-9cad706e60e745cf3c01a413"
+      },
+      "decisions": [
+        {
+          "method": "B0",
+          "status": "unavailable_external_legacy_trace",
+          "selected_action": null,
+          "required": [
+            "source-bound proposal trace",
+            "measured complete query/LLM timing",
+            "common confirmation wrapper"
+          ],
+          "compute_ns": 68400,
+          "execution_allowed": false
+        },
+        {
+          "method": "B1",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "confirm:task-9cad706e60e745cf3c01a413",
+            "kind": "CONFIRM",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": null,
+            "goal_id": "task-9cad706e60e745cf3c01a413"
+          },
+          "reason": "task_risk_with_shared_confirmation",
+          "compute_ns": 337700,
+          "execution_allowed": false,
+          "planning_value": 0.42719973148636353
+        },
+        {
+          "method": "B2",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "confirm:task-9cad706e60e745cf3c01a413",
+            "kind": "CONFIRM",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": null,
+            "goal_id": "task-9cad706e60e745cf3c01a413"
+          },
+          "reason": "task_risk_with_shared_confirmation",
+          "compute_ns": 4215000,
+          "execution_allowed": false,
+          "planning_value": 0.41256064824188404
+        },
+        {
+          "method": "B3",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "confirm:task-9cad706e60e745cf3c01a413",
+            "kind": "CONFIRM",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": null,
+            "goal_id": "task-9cad706e60e745cf3c01a413"
+          },
+          "reason": "task_risk_with_shared_confirmation",
+          "compute_ns": 1345800,
+          "execution_allowed": false,
+          "planning_value": 0.4126803496298144
+        },
+        {
+          "method": "B4",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "confirm:task-9cad706e60e745cf3c01a413",
+            "kind": "CONFIRM",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": null,
+            "goal_id": "task-9cad706e60e745cf3c01a413"
+          },
+          "reason": "task_risk_with_shared_confirmation",
+          "compute_ns": 1052400,
+          "execution_allowed": false,
+          "planning_value": 0.42719973148636353
+        },
+        {
+          "method": "B5",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "probe:0:1.0",
+            "kind": "CHANNEL_PROBE",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": "0",
+            "goal_id": null,
+            "value": 0.5726770042933242,
+            "observation_branches": 3
+          },
+          "reason": "fixed_period_probe_due",
+          "compute_ns": 3788900,
+          "execution_allowed": false,
+          "planning_value": 0.5726770042933242
+        },
+        {
+          "method": "B6",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "confirm:task-9cad706e60e745cf3c01a413",
+            "kind": "CONFIRM",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": null,
+            "goal_id": "task-9cad706e60e745cf3c01a413",
+            "value": 0.42719973148636353,
+            "observation_branches": 3
+          },
+          "reason": "conflict_repeat_trigger",
+          "compute_ns": 1092200,
+          "execution_allowed": false,
+          "planning_value": 0.42719973148636353
+        },
+        {
+          "method": "B7",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "confirm:task-9cad706e60e745cf3c01a413",
+            "kind": "CONFIRM",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": null,
+            "goal_id": "task-9cad706e60e745cf3c01a413",
+            "value": 0.42719973148636353,
+            "observation_branches": 3
+          },
+          "reason": "conflict_or_measured_quality_probe_trigger",
+          "compute_ns": 3652400,
+          "execution_allowed": false,
+          "planning_value": 0.42719973148636353
+        },
+        {
+          "method": "B8",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "confirm:task-9cad706e60e745cf3c01a413",
+            "kind": "CONFIRM",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": null,
+            "goal_id": "task-9cad706e60e745cf3c01a413",
+            "value": 0.42719973148636353,
+            "observation_branches": 3
+          },
+          "reason": "task_risk_with_shared_confirmation",
+          "compute_ns": 4356700,
+          "execution_allowed": false,
+          "planning_value": 0.42719973148636353
+        },
+        {
+          "method": "B9",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "confirm:task-9cad706e60e745cf3c01a413",
+            "kind": "CONFIRM",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": null,
+            "goal_id": "task-9cad706e60e745cf3c01a413"
+          },
+          "reason": "task_risk_with_shared_confirmation",
+          "compute_ns": 3804000,
+          "execution_allowed": false,
+          "planning_value": 0.42719973148636353
+        },
+        {
+          "method": "B10",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "confirm:task-9cad706e60e745cf3c01a413",
+            "kind": "CONFIRM",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": null,
+            "goal_id": "task-9cad706e60e745cf3c01a413",
+            "value": 0.42719973148636353,
+            "observation_branches": 3
+          },
+          "reason": "restricted_recursive_bayes_MI_and_final_window_stopping_plus_semantic_VoI",
+          "compute_ns": 4252900,
+          "execution_allowed": false,
+          "planning_value": 0.42719973148636353
+        },
+        {
+          "method": "B1P",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "confirm:task-9cad706e60e745cf3c01a413",
+            "kind": "CONFIRM",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": null,
+            "goal_id": "task-9cad706e60e745cf3c01a413"
+          },
+          "reason": "prediction_checked_noisy_final_confirmation",
+          "compute_ns": 406000,
+          "execution_allowed": false,
+          "planning_value": 0.42719973148636353
+        },
+        {
+          "method": "M",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "confirm:task-9cad706e60e745cf3c01a413",
+            "kind": "CONFIRM",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": null,
+            "goal_id": "task-9cad706e60e745cf3c01a413",
+            "legal": true,
+            "reason": "standard_expected_loss_with_noisy_confirmation",
+            "expected_loss": 0.42719973148636353,
+            "branches": [
+              {
+                "observation": "0",
+                "probability": 0.7810734734148809,
+                "posterior": [
+                  0.9892640380532646,
+                  0.0037185158358850248,
+                  0.001873352445194582,
+                  0.005144093665655855
+                ],
+                "continuation_loss": 0.21543838144387098,
+                "next_action": "SIMULATED_ACCEPT_REQUIRES_EXTERNAL_AUTHORIZATION",
+                "after_time_s": 1792022402.0,
+                "remaining_s": 18.0
+              },
+              {
+                "observation": "1",
+                "probability": 0.1689265265851192,
+                "posterior": [
+                  0.8576449410581655,
+                  0.09169853548669155,
+                  0.04619683853890874,
+                  0.004459684916234218
+                ],
+                "continuation_loss": 1.0,
+                "next_action": "PAUSE_CONFIRMATION_NOT_ACCEPTED",
+                "after_time_s": 1792022402.0,
+                "remaining_s": 18.0
+              },
+              {
+                "observation": "NO_RESPONSE",
+                "probability": 0.05,
+                "posterior": [
+                  0.9658598729083678,
+                  0.01936289386588637,
+                  0.009754839341989282,
+                  0.005022393883756631
+                ],
+                "continuation_loss": 1.0,
+                "next_action": "PAUSE_CONFIRMATION_NOT_ACCEPTED",
+                "after_time_s": 1792022402.0,
+                "remaining_s": 18.0
+              }
+            ],
+            "immediate_time_cost": 0.04
+          },
+          "reason": "standard_expected_loss_with_noisy_confirmation",
+          "compute_ns": 3696200,
+          "execution_allowed": false,
+          "planning_value": 0.42719973148636353
+        },
+        {
+          "method": "M2",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "confirm:task-9cad706e60e745cf3c01a413",
+            "kind": "CONFIRM",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": null,
+            "goal_id": "task-9cad706e60e745cf3c01a413",
+            "legal": true,
+            "reason": "standard_expected_loss_with_noisy_confirmation",
+            "expected_loss": 0.42719973148636353,
+            "branches": [
+              {
+                "observation": "0",
+                "probability": 0.7810734734148809,
+                "posterior": [
+                  0.9892640380532646,
+                  0.0037185158358850248,
+                  0.001873352445194582,
+                  0.005144093665655855
+                ],
+                "continuation_loss": 0.21543838144387098,
+                "next_action": "SIMULATED_ACCEPT_REQUIRES_EXTERNAL_AUTHORIZATION",
+                "after_time_s": 1792022402.0,
+                "remaining_s": 18.0
+              },
+              {
+                "observation": "1",
+                "probability": 0.1689265265851192,
+                "posterior": [
+                  0.8576449410581655,
+                  0.09169853548669155,
+                  0.04619683853890874,
+                  0.004459684916234218
+                ],
+                "continuation_loss": 1.0,
+                "next_action": "PAUSE_CONFIRMATION_NOT_ACCEPTED",
+                "after_time_s": 1792022402.0,
+                "remaining_s": 18.0
+              },
+              {
+                "observation": "NO_RESPONSE",
+                "probability": 0.05,
+                "posterior": [
+                  0.9658598729083678,
+                  0.01936289386588637,
+                  0.009754839341989282,
+                  0.005022393883756631
+                ],
+                "continuation_loss": 1.0,
+                "next_action": "PAUSE_CONFIRMATION_NOT_ACCEPTED",
+                "after_time_s": 1792022402.0,
+                "remaining_s": 18.0
+              }
+            ],
+            "immediate_time_cost": 0.04
+          },
+          "reason": "standard_expected_loss_with_noisy_confirmation",
+          "compute_ns": 33594600,
+          "execution_allowed": false,
+          "planning_value": 0.42719973148636353
+        },
+        {
+          "method": "A_no_probe",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "confirm:task-9cad706e60e745cf3c01a413",
+            "kind": "CONFIRM",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": null,
+            "goal_id": "task-9cad706e60e745cf3c01a413"
+          },
+          "reason": "task_risk_with_shared_confirmation",
+          "compute_ns": 985000,
+          "execution_allowed": false,
+          "planning_value": 0.42719973148636353
+        },
+        {
+          "method": "A_factorized",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "confirm:task-9cad706e60e745cf3c01a413",
+            "kind": "CONFIRM",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": null,
+            "goal_id": "task-9cad706e60e745cf3c01a413"
+          },
+          "reason": "task_risk_with_shared_confirmation",
+          "compute_ns": 4506100,
+          "execution_allowed": false,
+          "planning_value": 0.4253815332345964
+        },
+        {
+          "method": "A_periodic",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "probe:0:1.0",
+            "kind": "CHANNEL_PROBE",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": "0",
+            "goal_id": null,
+            "value": 0.5726770042933242,
+            "observation_branches": 3
+          },
+          "reason": "fixed_period_probe_due",
+          "compute_ns": 4079300,
+          "execution_allowed": false,
+          "planning_value": 0.5726770042933242
+        },
+        {
+          "method": "A_no_task_consequence",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "confirm:task-9cad706e60e745cf3c01a413",
+            "kind": "CONFIRM",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": null,
+            "goal_id": "task-9cad706e60e745cf3c01a413"
+          },
+          "reason": "task_risk_with_shared_confirmation",
+          "compute_ns": 4069900,
+          "execution_allowed": false,
+          "planning_value": 0.2644076675934229
+        },
+        {
+          "method": "A_mix_sources",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "confirm:task-9cad706e60e745cf3c01a413",
+            "kind": "CONFIRM",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": null,
+            "goal_id": "task-9cad706e60e745cf3c01a413"
+          },
+          "reason": "task_risk_with_shared_confirmation",
+          "compute_ns": 3534500,
+          "execution_allowed": false,
+          "planning_value": 0.42719973148636353
+        },
+        {
+          "method": "A_pseudo_labels",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "confirm:task-9cad706e60e745cf3c01a413",
+            "kind": "CONFIRM",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": null,
+            "goal_id": "task-9cad706e60e745cf3c01a413"
+          },
+          "reason": "task_risk_with_shared_confirmation",
+          "compute_ns": 4423900,
+          "execution_allowed": false,
+          "planning_value": 0.42719973148636353
+        },
+        {
+          "method": "A_ignore_probe_cost",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "confirm:task-9cad706e60e745cf3c01a413",
+            "kind": "CONFIRM",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": null,
+            "goal_id": "task-9cad706e60e745cf3c01a413"
+          },
+          "reason": "task_risk_with_shared_confirmation",
+          "compute_ns": 3756900,
+          "execution_allowed": false,
+          "planning_value": 0.42719973148636353
+        },
+        {
+          "method": "A_fixed_duration",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "confirm:task-9cad706e60e745cf3c01a413",
+            "kind": "CONFIRM",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": null,
+            "goal_id": "task-9cad706e60e745cf3c01a413",
+            "value": 0.42719973148636353,
+            "observation_branches": 3
+          },
+          "reason": "task_risk_with_shared_confirmation",
+          "compute_ns": 3903000,
+          "execution_allowed": false,
+          "planning_value": 0.42719973148636353
+        }
+      ]
+    },
+    {
+      "fixture_id": "mixed_prior",
+      "public_memory": {
+        "predicted_goal": "task-9cad706e60e745cf3c01a413",
+        "last_confirmed_goal": "task-9cad706e60e745cf3c01a413"
+      },
+      "decisions": [
+        {
+          "method": "B0",
+          "status": "unavailable_external_legacy_trace",
+          "selected_action": null,
+          "required": [
+            "source-bound proposal trace",
+            "measured complete query/LLM timing",
+            "common confirmation wrapper"
+          ],
+          "compute_ns": 71400,
+          "execution_allowed": false
+        },
+        {
+          "method": "B1",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "TASK_QUERY:1.0",
+            "kind": "TASK_QUERY",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": null,
+            "goal_id": null,
+            "value": 1.0400000000000003,
+            "observation_branches": 3
+          },
+          "reason": "task_risk_with_shared_confirmation",
+          "compute_ns": 1256500,
+          "execution_allowed": false,
+          "planning_value": 1.0400000000000003
+        },
+        {
+          "method": "B2",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "TASK_QUERY:1.0",
+            "kind": "TASK_QUERY",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": null,
+            "goal_id": null
+          },
+          "reason": "task_risk_with_shared_confirmation",
+          "compute_ns": 4210300,
+          "execution_allowed": false,
+          "planning_value": 0.5644204861814133
+        },
+        {
+          "method": "B3",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "pause",
+            "kind": "PAUSE",
+            "duration_s": 0,
+            "setup_s": 0.0,
+            "elapsed_s": 0.0,
+            "prompt": null,
+            "goal_id": null
+          },
+          "reason": "task_risk_with_shared_confirmation",
+          "compute_ns": 1152700,
+          "execution_allowed": false,
+          "planning_value": 1.0
+        },
+        {
+          "method": "B4",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "pause",
+            "kind": "PAUSE",
+            "duration_s": 0,
+            "setup_s": 0.0,
+            "elapsed_s": 0.0,
+            "prompt": null,
+            "goal_id": null
+          },
+          "reason": "task_risk_with_shared_confirmation",
+          "compute_ns": 961400,
+          "execution_allowed": false,
+          "planning_value": 1.0
+        },
+        {
+          "method": "B5",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "probe:0:1.0",
+            "kind": "CHANNEL_PROBE",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": "0",
+            "goal_id": null,
+            "value": 0.946223963875204,
+            "observation_branches": 3
+          },
+          "reason": "fixed_period_probe_due",
+          "compute_ns": 3811100,
+          "execution_allowed": false,
+          "planning_value": 0.946223963875204
+        },
+        {
+          "method": "B6",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "TASK_QUERY:1.0",
+            "kind": "TASK_QUERY",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": null,
+            "goal_id": null,
+            "value": 1.0400000000000003,
+            "observation_branches": 3
+          },
+          "reason": "conflict_repeat_trigger",
+          "compute_ns": 988400,
+          "execution_allowed": false,
+          "planning_value": 1.0400000000000003
+        },
+        {
+          "method": "B7",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "probe:0:1.0",
+            "kind": "CHANNEL_PROBE",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": "0",
+            "goal_id": null,
+            "value": 0.946223963875204,
+            "observation_branches": 3
+          },
+          "reason": "conflict_or_measured_quality_probe_trigger",
+          "compute_ns": 3806400,
+          "execution_allowed": false,
+          "planning_value": 0.946223963875204
+        },
+        {
+          "method": "B8",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "probe:1:1.0",
+            "kind": "CHANNEL_PROBE",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": "1",
+            "goal_id": null,
+            "value": 0.9462239638752041,
+            "observation_branches": 3
+          },
+          "reason": "channel_information_gain_per_second_then_semantics",
+          "compute_ns": 4482500,
+          "execution_allowed": false,
+          "planning_value": 0.9462239638752041
+        },
+        {
+          "method": "B9",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "probe:0:1.0",
+            "kind": "CHANNEL_PROBE",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": "0",
+            "goal_id": null
+          },
+          "reason": "task_risk_with_shared_confirmation",
+          "compute_ns": 3773800,
+          "execution_allowed": false,
+          "planning_value": 0.946223963875204
+        },
+        {
+          "method": "B10",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "probe:0:1.0",
+            "kind": "CHANNEL_PROBE",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": "0",
+            "goal_id": null
+          },
+          "reason": "restricted_recursive_bayes_MI_and_final_window_stopping_plus_semantic_VoI",
+          "compute_ns": 3863600,
+          "execution_allowed": false,
+          "planning_value": 0.946223963875204
+        },
+        {
+          "method": "B1P",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "TASK_QUERY:1.0",
+            "kind": "TASK_QUERY",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": null,
+            "goal_id": null,
+            "value": 1.0400000000000003,
+            "observation_branches": 3
+          },
+          "reason": "prediction_verification_or_correction_query",
+          "compute_ns": 1236400,
+          "execution_allowed": false,
+          "planning_value": 1.0400000000000003
+        },
+        {
+          "method": "M",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "probe:0:1.0",
+            "kind": "CHANNEL_PROBE",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": "0",
+            "goal_id": null,
+            "legal": true,
+            "reason": "standard_expected_loss_with_noisy_confirmation",
+            "expected_loss": 0.9462239638752039,
+            "branches": [
+              {
+                "observation": "0",
+                "probability": 0.36281639913395153,
+                "posterior": [
+                  0.2229498896081393,
+                  0.04835842689448967,
+                  0.6335250172905539,
+                  0.09516666620681706
+                ],
+                "continuation_loss": 0.7415330829900714,
+                "next_action": "confirm:task-d5fc9bc832047df78f51c84f",
+                "after_time_s": 1792022402.0,
+                "remaining_s": 18.0
+              },
+              {
+                "observation": "1",
+                "probability": 0.4921836008660486,
+                "posterior": [
+                  0.0187368551756558,
+                  0.31268155662758673,
+                  0.05324185860774067,
+                  0.6153397295890168
+                ],
+                "continuation_loss": 1.0,
+                "next_action": "pause",
+                "after_time_s": 1792022402.0,
+                "remaining_s": 18.0
+              },
+              {
+                "observation": "NO_RESPONSE",
+                "probability": 0.14500000000000005,
+                "posterior": [
+                  0.10539397542011347,
+                  0.20051691787018489,
+                  0.2994830821298151,
+                  0.39460602457988647
+                ],
+                "continuation_loss": 1.0,
+                "next_action": "PAUSE_NONRESPONSE",
+                "after_time_s": 1792022402.0,
+                "remaining_s": 18.0
+              }
+            ],
+            "immediate_time_cost": 0.04,
+            "channel_total_variation": 0.6799999999999999
+          },
+          "reason": "standard_expected_loss_with_noisy_confirmation",
+          "compute_ns": 4453300,
+          "execution_allowed": false,
+          "planning_value": 0.9462239638752039
+        },
+        {
+          "method": "M2",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "probe:0:1.0",
+            "kind": "CHANNEL_PROBE",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": "0",
+            "goal_id": null,
+            "legal": true,
+            "reason": "standard_expected_loss_with_noisy_confirmation",
+            "expected_loss": 0.9462239638752039,
+            "branches": [
+              {
+                "observation": "0",
+                "probability": 0.36281639913395153,
+                "posterior": [
+                  0.2229498896081393,
+                  0.04835842689448967,
+                  0.6335250172905539,
+                  0.09516666620681706
+                ],
+                "continuation_loss": 0.7415330829900714,
+                "next_action": "confirm:task-d5fc9bc832047df78f51c84f",
+                "after_time_s": 1792022402.0,
+                "remaining_s": 18.0
+              },
+              {
+                "observation": "1",
+                "probability": 0.4921836008660486,
+                "posterior": [
+                  0.0187368551756558,
+                  0.31268155662758673,
+                  0.05324185860774067,
+                  0.6153397295890168
+                ],
+                "continuation_loss": 1.0,
+                "next_action": "pause",
+                "after_time_s": 1792022402.0,
+                "remaining_s": 18.0
+              },
+              {
+                "observation": "NO_RESPONSE",
+                "probability": 0.14500000000000005,
+                "posterior": [
+                  0.10539397542011347,
+                  0.20051691787018489,
+                  0.2994830821298151,
+                  0.39460602457988647
+                ],
+                "continuation_loss": 1.0,
+                "next_action": "PAUSE_NONRESPONSE",
+                "after_time_s": 1792022402.0,
+                "remaining_s": 18.0
+              }
+            ],
+            "immediate_time_cost": 0.04,
+            "channel_total_variation": 0.6799999999999999
+          },
+          "reason": "standard_expected_loss_with_noisy_confirmation",
+          "compute_ns": 35302100,
+          "execution_allowed": false,
+          "planning_value": 0.9462239638752039
+        },
+        {
+          "method": "A_no_probe",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "pause",
+            "kind": "PAUSE",
+            "duration_s": 0,
+            "setup_s": 0.0,
+            "elapsed_s": 0.0,
+            "prompt": null,
+            "goal_id": null
+          },
+          "reason": "task_risk_with_shared_confirmation",
+          "compute_ns": 1010700,
+          "execution_allowed": false,
+          "planning_value": 1.0
+        },
+        {
+          "method": "A_factorized",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "probe:0:1.0",
+            "kind": "CHANNEL_PROBE",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": "0",
+            "goal_id": null
+          },
+          "reason": "task_risk_with_shared_confirmation",
+          "compute_ns": 4326300,
+          "execution_allowed": false,
+          "planning_value": 0.9558741182590662
+        },
+        {
+          "method": "A_periodic",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "probe:0:1.0",
+            "kind": "CHANNEL_PROBE",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": "0",
+            "goal_id": null,
+            "value": 0.946223963875204,
+            "observation_branches": 3
+          },
+          "reason": "fixed_period_probe_due",
+          "compute_ns": 3768900,
+          "execution_allowed": false,
+          "planning_value": 0.946223963875204
+        },
+        {
+          "method": "A_no_task_consequence",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "confirm:task-d5fc9bc832047df78f51c84f",
+            "kind": "CONFIRM",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": null,
+            "goal_id": "task-d5fc9bc832047df78f51c84f"
+          },
+          "reason": "task_risk_with_shared_confirmation",
+          "compute_ns": 3441800,
+          "execution_allowed": false,
+          "planning_value": 0.7412226306091652
+        },
+        {
+          "method": "A_mix_sources",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "pause",
+            "kind": "PAUSE",
+            "duration_s": 0,
+            "setup_s": 0.0,
+            "elapsed_s": 0.0,
+            "prompt": null,
+            "goal_id": null
+          },
+          "reason": "task_risk_with_shared_confirmation",
+          "compute_ns": 3527500,
+          "execution_allowed": false,
+          "planning_value": 1.0
+        },
+        {
+          "method": "A_pseudo_labels",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "probe:0:1.0",
+            "kind": "CHANNEL_PROBE",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": "0",
+            "goal_id": null
+          },
+          "reason": "task_risk_with_shared_confirmation",
+          "compute_ns": 3913200,
+          "execution_allowed": false,
+          "planning_value": 0.946223963875204
+        },
+        {
+          "method": "A_ignore_probe_cost",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "probe:0:1.0",
+            "kind": "CHANNEL_PROBE",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": "0",
+            "goal_id": null
+          },
+          "reason": "task_risk_with_shared_confirmation",
+          "compute_ns": 3658600,
+          "execution_allowed": false,
+          "planning_value": 0.9062239638752041
+        },
+        {
+          "method": "A_fixed_duration",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "probe:0:1.0",
+            "kind": "CHANNEL_PROBE",
+            "duration_s": 1.0,
+            "setup_s": 1.0,
+            "elapsed_s": 2.0,
+            "prompt": "0",
+            "goal_id": null,
+            "value": 0.946223963875204,
+            "observation_branches": 3
+          },
+          "reason": "task_risk_with_shared_confirmation",
+          "compute_ns": 3751200,
+          "execution_allowed": false,
+          "planning_value": 0.946223963875204
+        }
+      ]
+    },
+    {
+      "fixture_id": "no_budget",
+      "public_memory": {
+        "predicted_goal": "task-9cad706e60e745cf3c01a413",
+        "last_confirmed_goal": "task-9cad706e60e745cf3c01a413"
+      },
+      "decisions": [
+        {
+          "method": "B0",
+          "status": "unavailable_external_legacy_trace",
+          "selected_action": null,
+          "required": [
+            "source-bound proposal trace",
+            "measured complete query/LLM timing",
+            "common confirmation wrapper"
+          ],
+          "compute_ns": 66800,
+          "execution_allowed": false
+        },
+        {
+          "method": "B1",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "pause",
+            "kind": "PAUSE",
+            "duration_s": 0,
+            "setup_s": 0.0,
+            "elapsed_s": 0.0,
+            "prompt": null,
+            "goal_id": null
+          },
+          "reason": "task_risk_with_shared_confirmation",
+          "compute_ns": 99200,
+          "execution_allowed": false,
+          "planning_value": 1.0
+        },
+        {
+          "method": "B2",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "pause",
+            "kind": "PAUSE",
+            "duration_s": 0,
+            "setup_s": 0.0,
+            "elapsed_s": 0.0,
+            "prompt": null,
+            "goal_id": null
+          },
+          "reason": "task_risk_with_shared_confirmation",
+          "compute_ns": 101400,
+          "execution_allowed": false,
+          "planning_value": 1.0
+        },
+        {
+          "method": "B3",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "pause",
+            "kind": "PAUSE",
+            "duration_s": 0,
+            "setup_s": 0.0,
+            "elapsed_s": 0.0,
+            "prompt": null,
+            "goal_id": null
+          },
+          "reason": "task_risk_with_shared_confirmation",
+          "compute_ns": 81100,
+          "execution_allowed": false,
+          "planning_value": 1.0
+        },
+        {
+          "method": "B4",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "pause",
+            "kind": "PAUSE",
+            "duration_s": 0,
+            "setup_s": 0.0,
+            "elapsed_s": 0.0,
+            "prompt": null,
+            "goal_id": null
+          },
+          "reason": "task_risk_with_shared_confirmation",
+          "compute_ns": 74600,
+          "execution_allowed": false,
+          "planning_value": 1.0
+        },
+        {
+          "method": "B5",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "pause",
+            "kind": "PAUSE",
+            "duration_s": 0,
+            "setup_s": 0.0,
+            "elapsed_s": 0.0,
+            "prompt": null,
+            "goal_id": null
+          },
+          "reason": "fixed_period_probe_due",
+          "compute_ns": 73800,
+          "execution_allowed": false,
+          "planning_value": 1.0
+        },
+        {
+          "method": "B6",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "pause",
+            "kind": "PAUSE",
+            "duration_s": 0,
+            "setup_s": 0.0,
+            "elapsed_s": 0.0,
+            "prompt": null,
+            "goal_id": null
+          },
+          "reason": "conflict_repeat_trigger",
+          "compute_ns": 74400,
+          "execution_allowed": false,
+          "planning_value": 1.0
+        },
+        {
+          "method": "B7",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "pause",
+            "kind": "PAUSE",
+            "duration_s": 0,
+            "setup_s": 0.0,
+            "elapsed_s": 0.0,
+            "prompt": null,
+            "goal_id": null
+          },
+          "reason": "conflict_or_measured_quality_probe_trigger",
+          "compute_ns": 73400,
+          "execution_allowed": false,
+          "planning_value": 1.0
+        },
+        {
+          "method": "B8",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "pause",
+            "kind": "PAUSE",
+            "duration_s": 0,
+            "setup_s": 0.0,
+            "elapsed_s": 0.0,
+            "prompt": null,
+            "goal_id": null,
+            "value": 1.0,
+            "observation_branches": 0
+          },
+          "reason": "task_risk_with_shared_confirmation",
+          "compute_ns": 75900,
+          "execution_allowed": false,
+          "planning_value": 1.0
+        },
+        {
+          "method": "B9",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "pause",
+            "kind": "PAUSE",
+            "duration_s": 0,
+            "setup_s": 0.0,
+            "elapsed_s": 0.0,
+            "prompt": null,
+            "goal_id": null
+          },
+          "reason": "task_risk_with_shared_confirmation",
+          "compute_ns": 73700,
+          "execution_allowed": false,
+          "planning_value": 1.0
+        },
+        {
+          "method": "B10",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "pause",
+            "kind": "PAUSE",
+            "duration_s": 0,
+            "setup_s": 0.0,
+            "elapsed_s": 0.0,
+            "prompt": null,
+            "goal_id": null
+          },
+          "reason": "restricted_recursive_bayes_MI_and_final_window_stopping_plus_semantic_VoI",
+          "compute_ns": 74400,
+          "execution_allowed": false,
+          "planning_value": 1.0
+        },
+        {
+          "method": "B1P",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "pause",
+            "kind": "PAUSE",
+            "duration_s": 0,
+            "setup_s": 0.0,
+            "elapsed_s": 0.0,
+            "prompt": null,
+            "goal_id": null
+          },
+          "reason": "prediction_verification_or_correction_query",
+          "compute_ns": 92600,
+          "execution_allowed": false,
+          "planning_value": 1.0
+        },
+        {
+          "method": "M",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "pause",
+            "kind": "PAUSE",
+            "duration_s": 0,
+            "setup_s": 0.0,
+            "elapsed_s": 0.0,
+            "prompt": null,
+            "goal_id": null,
+            "legal": true,
+            "reason": null,
+            "expected_loss": 1.0,
+            "branches": [],
+            "immediate_time_cost": 0.0
+          },
+          "reason": "all_supported_explanations_require_pause",
+          "compute_ns": 203200,
+          "execution_allowed": false,
+          "planning_value": 1.0
+        },
+        {
+          "method": "M2",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "pause",
+            "kind": "PAUSE",
+            "duration_s": 0,
+            "setup_s": 0.0,
+            "elapsed_s": 0.0,
+            "prompt": null,
+            "goal_id": null,
+            "legal": true,
+            "reason": null,
+            "expected_loss": 1.0,
+            "branches": [],
+            "immediate_time_cost": 0.0
+          },
+          "reason": "all_supported_explanations_require_pause",
+          "compute_ns": 191500,
+          "execution_allowed": false,
+          "planning_value": 1.0
+        },
+        {
+          "method": "A_no_probe",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "pause",
+            "kind": "PAUSE",
+            "duration_s": 0,
+            "setup_s": 0.0,
+            "elapsed_s": 0.0,
+            "prompt": null,
+            "goal_id": null
+          },
+          "reason": "task_risk_with_shared_confirmation",
+          "compute_ns": 90000,
+          "execution_allowed": false,
+          "planning_value": 1.0
+        },
+        {
+          "method": "A_factorized",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "pause",
+            "kind": "PAUSE",
+            "duration_s": 0,
+            "setup_s": 0.0,
+            "elapsed_s": 0.0,
+            "prompt": null,
+            "goal_id": null
+          },
+          "reason": "task_risk_with_shared_confirmation",
+          "compute_ns": 88400,
+          "execution_allowed": false,
+          "planning_value": 1.0
+        },
+        {
+          "method": "A_periodic",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "pause",
+            "kind": "PAUSE",
+            "duration_s": 0,
+            "setup_s": 0.0,
+            "elapsed_s": 0.0,
+            "prompt": null,
+            "goal_id": null
+          },
+          "reason": "fixed_period_probe_due",
+          "compute_ns": 80700,
+          "execution_allowed": false,
+          "planning_value": 1.0
+        },
+        {
+          "method": "A_no_task_consequence",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "pause",
+            "kind": "PAUSE",
+            "duration_s": 0,
+            "setup_s": 0.0,
+            "elapsed_s": 0.0,
+            "prompt": null,
+            "goal_id": null
+          },
+          "reason": "task_risk_with_shared_confirmation",
+          "compute_ns": 76600,
+          "execution_allowed": false,
+          "planning_value": 1.0
+        },
+        {
+          "method": "A_mix_sources",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "pause",
+            "kind": "PAUSE",
+            "duration_s": 0,
+            "setup_s": 0.0,
+            "elapsed_s": 0.0,
+            "prompt": null,
+            "goal_id": null
+          },
+          "reason": "task_risk_with_shared_confirmation",
+          "compute_ns": 73800,
+          "execution_allowed": false,
+          "planning_value": 1.0
+        },
+        {
+          "method": "A_pseudo_labels",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "pause",
+            "kind": "PAUSE",
+            "duration_s": 0,
+            "setup_s": 0.0,
+            "elapsed_s": 0.0,
+            "prompt": null,
+            "goal_id": null
+          },
+          "reason": "task_risk_with_shared_confirmation",
+          "compute_ns": 72900,
+          "execution_allowed": false,
+          "planning_value": 1.0
+        },
+        {
+          "method": "A_ignore_probe_cost",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "pause",
+            "kind": "PAUSE",
+            "duration_s": 0,
+            "setup_s": 0.0,
+            "elapsed_s": 0.0,
+            "prompt": null,
+            "goal_id": null
+          },
+          "reason": "task_risk_with_shared_confirmation",
+          "compute_ns": 72600,
+          "execution_allowed": false,
+          "planning_value": 1.0
+        },
+        {
+          "method": "A_fixed_duration",
+          "status": "offline_ready",
+          "selected_action": {
+            "action_id": "pause",
+            "kind": "PAUSE",
+            "duration_s": 0,
+            "setup_s": 0.0,
+            "elapsed_s": 0.0,
+            "prompt": null,
+            "goal_id": null,
+            "value": 1.0,
+            "observation_branches": 0
+          },
+          "reason": "task_risk_with_shared_confirmation",
+          "compute_ns": 73900,
+          "execution_allowed": false,
+          "planning_value": 1.0
+        }
+      ]
+    }
+  ],
+  "hardware_calls": 0,
+  "cloud_calls": 0
+}

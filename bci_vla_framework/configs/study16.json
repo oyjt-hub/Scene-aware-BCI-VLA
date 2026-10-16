@@ -1,0 +1,204 @@
+{
+  "version": "step16-synthetic/1.0",
+  "scope": "prospective_local_synthetic_replication_not_formal_human_G4",
+  "cases": [
+    {
+      "id": "C00",
+      "goal_change": false,
+      "channel_change": false
+    },
+    {
+      "id": "C10",
+      "goal_change": true,
+      "channel_change": false
+    },
+    {
+      "id": "C01",
+      "goal_change": false,
+      "channel_change": true
+    },
+    {
+      "id": "C11",
+      "goal_change": true,
+      "channel_change": true
+    },
+    {
+      "id": "goal_first_observable",
+      "goal_change": true,
+      "channel_change": true,
+      "goal_at": 0.5,
+      "channel_at": 2.5
+    },
+    {
+      "id": "channel_first_observable",
+      "goal_change": true,
+      "channel_change": true,
+      "goal_at": 2.5,
+      "channel_at": 0.5
+    },
+    {
+      "id": "wrong_strong_prior",
+      "goal_change": true,
+      "channel_change": false,
+      "prior": [
+        0.97,
+        0.01,
+        0.01,
+        0.01
+      ]
+    },
+    {
+      "id": "probe_noncompliance",
+      "goal_change": false,
+      "channel_change": true,
+      "actual_compliance": "uninformative"
+    },
+    {
+      "id": "public_uninformative_probe",
+      "goal_change": false,
+      "channel_change": true,
+      "actual_compliance": "uninformative",
+      "public_compliance": "uninformative"
+    },
+    {
+      "id": "stable_sporadic_error",
+      "goal_change": false,
+      "channel_change": false,
+      "force_first_error": true
+    },
+    {
+      "id": "severity_uniform20",
+      "goal_change": false,
+      "channel_change": true,
+      "contamination": 0.2
+    },
+    {
+      "id": "within_window_change",
+      "goal_change": true,
+      "channel_change": false,
+      "goal_at": 1.5
+    },
+    {
+      "id": "frequent_reversal",
+      "goal_change": true,
+      "channel_change": true,
+      "goal_times": [
+        0.5,
+        2.5,
+        4.5
+      ],
+      "channel_times": [
+        0.5,
+        4.5
+      ]
+    },
+    {
+      "id": "executor_failure35",
+      "goal_change": false,
+      "channel_change": false,
+      "execution_failure_probability": 0.35
+    }
+  ],
+  "methods": [
+    "B4",
+    "B5",
+    "B7",
+    "B8",
+    "B9",
+    "B10",
+    "M",
+    "M2",
+    "A_no_probe",
+    "A_periodic",
+    "A_fixed_duration",
+    "A_no_task_consequence",
+    "A_ignore_probe_cost",
+    "A_factorized"
+  ],
+  "seeds": [
+    10000,
+    10001,
+    10002,
+    10003,
+    10004,
+    10005,
+    10006,
+    10007,
+    10008,
+    10009,
+    10010,
+    10011,
+    10012,
+    10013,
+    10014,
+    10015,
+    10016,
+    10017,
+    10018,
+    10019,
+    10020,
+    10021,
+    10022,
+    10023,
+    10024,
+    10025,
+    10026,
+    10027,
+    10028,
+    10029,
+    10030,
+    10031
+  ],
+  "old_development_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+  ],
+  "episodes": 6272,
+  "diagnostic_limit": 2,
+  "episode_budget_s": 20,
+  "bootstrap_resamples": 2000,
+  "bootstrap_seed": 16016,
+  "primary_comparison": [
+    "M",
+    "B9"
+  ],
+  "primary_metrics": [
+    "faithful_virtual_completion",
+    "wrong_start",
+    "elapsed_s"
+  ],
+  "primary_alpha_each": 0.016666666666666666,
+  "completion_gain_margin": 0.05,
+  "wrong_start_margin": 0.02,
+  "elapsed_margin_s": 1.0,
+  "no_test_tuning": true,
+  "registered_with_external_service": false,
+  "real_BCI_trials": 0,
+  "physical_robot_commands": 0,
+  "subjective_results": null,
+  "formal_human_sample_size": null,
+  "synthetic_seed_count_basis": "fixed feasibility budget; not powered human inference",
+  "conservative_blocks_for_005_hoeffding_halfwidth": 3830
+}

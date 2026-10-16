@@ -1,0 +1,93 @@
+"""Create a timestamped local prospective lock before new seeds are run."""
+from pathlib import Path
+from datetime import datetime,timezone
+import hashlib,json,math,sys
+R=Path(__file__).resolve().parents[1];sys.path.insert(0,str(R))
+from bci_vla.study_v1.world import CASES
+from bci_vla.study_v1.runner import METHODS
+assert not (R/'execution/16_preregistration.json').exists()
+def save(p,d):(R/p).write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+def txt(p,t):(R/p).write_bytes(b'\xef\xbb\xbf'+t.replace('\n','\r\n').encode())
+protocol='''步骤16：本地预先冻结的非真实实验协议
+范围：L1合成机制复验，不是人体正式实验，不是LIBERO模型性能测试，不是公开注册平台登记。
+G2效用未通过，G3真实门槛未验证；13—15仅非真实工程分支完成。本轮授权为执行步骤16，沿用排除真实EEG/实体机器人的限制。
+此前已观察12/12R、14C/15C结果；尤其已知M与B9常相同、M2有错误启动。因此不能声称对未知算法优越性的盲测。
+在本文件、配置、源码锁定后才运行10000—10031号新种子；旧开发种子0—23不计入本轮评价。
+
+16.1 先决条件与样本
+已有pilot不足以估计真实受试者效应或计算正式人体样本量。本轮固定32个合成随机种子块，只作可执行性与机制复验；不是32名被试。
+20秒逻辑episode预算、2次额外诊断、5秒单次策略计算上限沿用既有配置；权重、门槛0.8、确认有效期2秒不调参。
+完整时间包含所有失败/暂停、诊断、确认、返回、实际CPU计算及声明的虚拟执行1.2秒；不解释为真人或实际VLA耗时。
+不因效果不显著增加样本，不根据test调权重或选择最有利基线。
+
+16.2 因子与压力条件
+14个固定情境：稳定、仅目标变、仅通道变、二者变；目标先变/通道先变在可观测窗口之间发生；强错先验；probe不遵从；公开无信息probe；稳定孤立错误；20%均匀污染；窗内变化；反复变化；35%执行器独立失败。
+时间表仅评价器可见。窗内非平稳采集明确抑制为NO_RESPONSE，这是注入的安全检测假设，不是实际EEG检测能力。
+不同方法按seed/mode/该mode次数/duration使用相同外部随机数，执行器失败用独立键；自适应询问不同，不声称相同原始输入序列。
+
+16.3 公平比较
+B4无probe强任务基线，B5固定周期probe，B7冲突probe，B8通道信息增益，B9同probe单步标准VoI，B10有限编码递归Bayes/MI，M原候选，M2深度2。
+公共信息、动作集合、诊断次数、校准时长、确认授权、停止逻辑和代价一致；B4唯一预声明的无probe限制。
+不伪造LLM或NOIR原实现：缺少共同协议下的外部原始trace与时延，记为不可用；既有有限基线不得冠以NOIR原系统。
+
+16.4—16.5 评价
+记录独立真值下的虚拟完成、错误启动、未启动、未解决、全episode时间、用户忙时、probe时间、压制新目标/误启新目标、自信错误通道视图。
+压制/误启按派发时（或未派发的结束时）真实目标判断，反复变化不按最初计划标签误算。
+通道参数从未在线拟合，因此错误参数更新率为null而非0；另检查执行结果不更改通道信念。
+不含多次机器人动作后的重新抓取恢复主指标；14C/15C仅作为已知工程与失败证据，不能混入本轮虚拟完成。
+
+16.6 划分与泄漏
+旧开发/校准证据与本轮新seed列表单独冻结；每个seed跨全部情境和方法构成一个配对块。
+公共轨迹、私有时间表/随机数、评价join分别保存。控制器只接收会话公开证据，不接收case、seed或真值。
+现有通道和后果表是示例配置，不使用本轮数据重新校准；同一个seed的重复情境不作为独立被试。
+
+16.7 消融边界
+A_no_probe、A_periodic、A_fixed_duration、A_no_task_consequence、A_ignore_probe_cost、A_factorized。
+后两类和factorized只改变规划阶段目标/信念近似，不声称删除实际session联合滤波器；实际输入仍由同一冻结滤波与授权层处理。
+RETRY/EXTEND在全方法共用适配中分别作为相应时长的新鲜TASK窗口；不复用前缀，不宣称实现EEG连续延长窗。
+源混用、伪标签、旧确认和STOP等安全性用既有mechanisms/faults负例验收；不通过关闭授权制造虚假优越性。
+持续更新/变化检测分组未在此候选中实现，明确记为未评估；不冒充完整12项消融全部已完成。
+
+16.8 来源分层
+本轮只有合成注入和独立虚拟终点；真实脑机离线、真实自然变化、人体、真实机器人均无新增数据。
+14C/15C实际VLA-LIBERO工程结果独立引用，真实G3、G4生理/机器人结论不由本轮补齐。
+
+16.9 统计
+固定情境集内按seed块配对。报告完成率/错误启动差、全部episode时间差及2000次seed-cluster percentile bootstrap区间。
+主要比较M−B9，三个指标各alpha=0.05/3；二元差另给范围[-1,1]的Hoeffding保守区间，避免全零差bootstrap区间被误作等效证明。
+主判定：完成改善下界>0.05、错误启动差上界<=0.02、时间差区间上界<=1秒同时满足；不满足只能写未证明收益，不能写等效或非劣。
+时间区间没有分布无关保证；所有额外基线与消融区间仅描述，不做多重比较后择优显著性结论，不报虚假p值。
+32块样本对严格安全边界明显不足，预期不能据此证明真实非劣；注册文件同时记录保守精度所需块数计算。
+
+16.10 判定与停止
+固定32块全部保留。只因源码漂移、journal重建不一致或运行异常停止完整性验收，保留失败而不择优重跑新种子。
+不删除失败或只统计成功时长；不因test结果调整主目标。研究G4只有严格前置和对应真实/迁移证据足够才可通过。
+
+16.11 主观体验
+只准备后续采集字段：控制感1—7、信任1—7、疲劳0—10、负担/舒适度及透明度开放题；直接控制对照和顺序平衡另待真实研究。
+本轮没有受试者、量表回答、用时或主观结果，所有相关结果为null。
+
+16.12 贡献降级
+若M与同probe B9相同或无益，明确收缩复杂策略贡献；若M2错误启动增加，记录额外深度风险。
+协议机制、软件工程与算法优越性分别判定；不能借一般VoI或原VLA替新算法背书。
+交付：本协议、配置/源码锁、全轨迹、统计脚本、G4报告与剩余缺项。
+'''
+txt('docs/16_registered_protocol.txt',protocol)
+txt('docs/16_subjective_protocol.txt','后续真实研究采集模板（本轮无受试者）\n控制感1—7、信任1—7、疲劳0—10、舒适度、透明度。\n与直接控制对照，随机/平衡顺序，采集前明确场景、退出与操作限制；需另落实受试条件和真实时间预算。\n结果必须为null，不能由合成seed推断真人体验。\n')
+config=dict(version='step16-synthetic/1.0',scope='prospective_local_synthetic_replication_not_formal_human_G4',cases=CASES,methods=METHODS,
+ seeds=list(range(10000,10032)),old_development_seeds=list(range(24)),episodes=len(CASES)*len(METHODS)*32,
+ diagnostic_limit=2,episode_budget_s=20,bootstrap_resamples=2000,bootstrap_seed=16016,primary_comparison=['M','B9'],
+ primary_metrics=['faithful_virtual_completion','wrong_start','elapsed_s'],primary_alpha_each=.05/3,
+ completion_gain_margin=.05,wrong_start_margin=.02,elapsed_margin_s=1.,no_test_tuning=True,
+ registered_with_external_service=False,real_BCI_trials=0,physical_robot_commands=0,
+ subjective_results=None,formal_human_sample_size=None,synthetic_seed_count_basis='fixed feasibility budget; not powered human inference',
+ conservative_blocks_for_005_hoeffding_halfwidth=math.ceil(2*math.log(2/(.05/3))/.05**2))
+save('configs/study16.json',config)
+sources=[]
+for pattern in ['bci_vla/**/*.py','configs/**/*.json','examples/**/*.json','execution/run_step16.py','execution/register_step16.py','tests/test_study_v1.py','docs/16*protocol.txt']:
+ sources.extend(q for q in R.glob(pattern) if q.is_file())
+save('execution/16_preregistration.json',dict(created_utc=datetime.now(timezone.utc).isoformat(),known_prior_results=['M=B9 in12R','M2 errors increased','14C/15C grasp failures'],
+ config_sha256=hashlib.sha256((R/'configs/study16.json').read_bytes()).hexdigest(),
+ files=[dict(path=str(q.resolve()),sha256=hashlib.sha256(q.read_bytes()).hexdigest()) for q in sorted(set(sources))],
+ status='LOCKED_BEFORE_NEW_SEED_EXECUTION',externally_registered=False,G4_preconditions_satisfied=False))
+print(json.dumps(dict(locked=True,episodes=config['episodes'],new_seed_clusters=32,formal_human_study=False)))

@@ -57,7 +57,7 @@ prior=read('runs/pilot_virtual_13_streamcheck_01/stream_report.json')
 check('earlier unlabeled receive-only evidence separately preserved',prior['complete_frames']==3080 and prior['pilot_trials']==0 and prior['application_bytes_sent']==0)
 sampling=read('runs/pilot_virtual_13_samplingcheck_01/sampling_report.json')
 check('prior raw processing report retains unvalidated real decoder scope',not sampling.get('real_decoder_accuracy_validated',False))
-check('scope and progress do not mark whole step13 complete',coverage['nonreal_tests_completed'] and not coverage['step13_whole_completed'] and not coverage['real_pilot_completed'] and p['current_step'] in {'13','14','15'} and p['steps'][12]['status']=='进行中')
+check('scope and progress do not mark whole step13 complete',coverage['nonreal_tests_completed'] and not coverage['step13_whole_completed'] and not coverage['real_pilot_completed'] and p['current_step'] in {'13','14','15','16'} and p['steps'][12]['status']=='进行中')
 check('research gates not upgraded',p['research_gates']['G2']['research_acceptance_passed'] is False and p['research_gates']['G3']['status']=='未验证' and not coverage['G3_passed'])
 check('real metrics remain missing',all(coverage[k] is None for k in ['decoder_accuracy','probe_compliance','probe_to_task_transfer','user_time_s']))
 check('old repair revalidated without overwriting original result',read('execution/12R_integrity_result.json')['result']=='PASS' and read('execution/12R_integrity_recheck_after_step13.json')['result']=='PASS')
@@ -66,10 +66,12 @@ check('static preview PNG present',(run/'ui_preview.png').read_bytes().startswit
 check('all TXT preserve BOM CRLF',all(q.read_bytes().startswith(b'\xef\xbb\xbf') and b'\n' not in q.read_bytes().replace(b'\r\n',b'') for q in ROOT.rglob('*.txt')))
 value={'date':'2026-10-16','result':'PASS','scope':'step13_nonreal_delivery_only','count':len(checks),'checks':checks,
     'tests_run':tests['tests_run'],'hardware_calls':0,'cloud_calls':0,'robot_commands':0,'real_pilot_trials':0,'G3_passed':False}
-destination='execution/13_integrity_recheck_after_step'+p['current_step']+'.json' if p['current_step'] in {'14','15'} else 'execution/13_integrity_result.json'
+destination='execution/13_integrity_recheck_after_step'+p['current_step']+'.json' if p['current_step'] in {'14','15','16'} else 'execution/13_integrity_result.json'
 if p['steps'][13].get('nonreal_closed_loop_completed'):
     destination='execution/13_integrity_recheck_after_step14C.json'
 if p['steps'][14].get('nonreal_migration_completed'):
     destination='execution/13_integrity_recheck_after_step15C.json'
+if p['current_step']=='16':
+    destination='execution/13_integrity_recheck_after_step16.json'
 (ROOT/destination).write_text(json.dumps(value,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 print(json.dumps(value,ensure_ascii=True,indent=2))

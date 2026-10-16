@@ -76,7 +76,7 @@ check('new repair sources reports and results frozen',hashes('execution/12R_sour
 check('original09-12 source and results retained',all(hashes(f'execution/{step}_source_manifest.json') for step in ['09','10','11','12']))
 check('original12 delivery recheck passed separately',read('execution/12_integrity_recheck_after_repair.json')['result']=='PASS')
 check('technical defect resolved separately from research gate',progress['research_gates']['G2']['engineering_revalidation']=='PASS' and progress['research_gates']['G2']['status']=='未通过' and progress['research_gates']['G2']['research_acceptance_passed'] is False)
-step13_nonreal=progress['current_step'] in {'13','14','15'} and progress['steps'][12].get('nonreal_tests_completed') is True and progress['steps'][12].get('real_pilot_completed') is False
+step13_nonreal=progress['current_step'] in {'13','14','15','16'} and progress['steps'][12].get('nonreal_tests_completed') is True and progress['steps'][12].get('real_pilot_completed') is False
 check('research gate retained while later software preparation is separately scoped',(progress['current_step']=='12' and progress['current_step_status']=='待研究效用复验' and progress['steps'][12]['status']=='未开始') or step13_nonreal)
 check('no automatic research win or hardware claim',summary['G2_verdict']=='TECHNICAL_REPAIR_PASSED_RESEARCH_BENEFIT_UNPROVEN' and not summary['strategy_superiority_claim'] and not summary['real_success_rate_claim'] and summary['hardware_calls']==summary['cloud_calls']==0)
 check('all TXT BOM CRLF',all(q.read_bytes().startswith(b'\xef\xbb\xbf') and b'\n' not in q.read_bytes().replace(b'\r\n',b'') for q in ROOT.rglob('*.txt')))
@@ -88,5 +88,7 @@ if progress['steps'][13].get('nonreal_closed_loop_completed'):
     destination='execution/12R_integrity_recheck_after_step14C.json'
 if progress['steps'][14].get('nonreal_migration_completed'):
     destination='execution/12R_integrity_recheck_after_step15C.json'
+if progress['current_step']=='16':
+    destination='execution/12R_integrity_recheck_after_step16.json'
 (ROOT/destination).write_text(json.dumps(value,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 print(json.dumps(value,ensure_ascii=True,indent=2))

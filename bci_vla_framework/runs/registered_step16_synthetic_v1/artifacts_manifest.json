@@ -1,0 +1,92 @@
+{
+  "files": [
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\registered_step16_synthetic_v1\\evaluation_joined.jsonl",
+      "sha256": "94f92e3bba39928e01212dfc07f96af046db5c8e106413dfe7dc0155db490702"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\registered_step16_synthetic_v1\\evaluation_private\\worlds.jsonl.gz",
+      "sha256": "371fe0fc1aff8844bd937c1b4ec82607ac29b1f41929f7edf71ac2ee63e28741"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\registered_step16_synthetic_v1\\faults.json",
+      "sha256": "d6a1f6764cd0fd38ff451cba3a6879836b7ce53730c43f47e7e75795b79bd33f"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\registered_step16_synthetic_v1\\journals\\C00.jsonl.gz",
+      "sha256": "a0429cf31001a2a5250648c33de3a6c88e857bf7b65b7a286ce2441c8a30da35"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\registered_step16_synthetic_v1\\journals\\C01.jsonl.gz",
+      "sha256": "fe423dcc19b9c2b81096ac70ce206fd85870fc83d3e434ca6d840cbde2fbcfb9"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\registered_step16_synthetic_v1\\journals\\C10.jsonl.gz",
+      "sha256": "ecfd9cf8f416b1fd339143daf9d5a6c07c66f076473408512a1c66962d2d2c85"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\registered_step16_synthetic_v1\\journals\\C11.jsonl.gz",
+      "sha256": "725b205fd22a35e7a1d3007fa556321cb5a2bd73f5375d81c64d8ce5eeaf7a64"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\registered_step16_synthetic_v1\\journals\\channel_first_observable.jsonl.gz",
+      "sha256": "fd4a9e2ee5796222166816decd22ce27de0b4e9a982ccdfc6ee07d97e9c40f7d"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\registered_step16_synthetic_v1\\journals\\executor_failure35.jsonl.gz",
+      "sha256": "6e5ac1578bc60c7409cc1417ecd8efb097f533ca5d134fc0276f71c54153029f"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\registered_step16_synthetic_v1\\journals\\frequent_reversal.jsonl.gz",
+      "sha256": "3c599d99d77791069e57658d67b026666bb3accf657152ed45285d759460e8ad"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\registered_step16_synthetic_v1\\journals\\goal_first_observable.jsonl.gz",
+      "sha256": "9534151cd431c4e5109aa97b05bc748609203cf18a8fe52b8a01bc6b3dc49cb7"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\registered_step16_synthetic_v1\\journals\\probe_noncompliance.jsonl.gz",
+      "sha256": "39b14cbde722a911287a382d31650b8645880ceb3339330e0c266458788d7e79"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\registered_step16_synthetic_v1\\journals\\public_uninformative_probe.jsonl.gz",
+      "sha256": "42119882e3691855ec893da955223d03bfc5f2c122162030397dc042274ad4b5"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\registered_step16_synthetic_v1\\journals\\severity_uniform20.jsonl.gz",
+      "sha256": "42d00227821e86286da514a1ee6522a284724ff8284dfc69a991351cee4a9c43"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\registered_step16_synthetic_v1\\journals\\stable_sporadic_error.jsonl.gz",
+      "sha256": "89c9bf7d51e6d70ff0523bdb01ef9f00c9a277a0cda16a88e81f211720b619e1"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\registered_step16_synthetic_v1\\journals\\within_window_change.jsonl.gz",
+      "sha256": "6de4cc70adff16bb5f50f5fc7309b388abcb142f01f3429f4dc3926bb3057b94"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\registered_step16_synthetic_v1\\journals\\wrong_strong_prior.jsonl.gz",
+      "sha256": "12bee7d6cfbde96e7a6f57e3cdbc0ace96a4da35d7cde27630b14638d03797b9"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\registered_step16_synthetic_v1\\mechanisms.json",
+      "sha256": "5107106e4c00bf16177216fcaf3f7213887c298598c2bed925277e606a066ee4"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\registered_step16_synthetic_v1\\online\\episodes.jsonl.gz",
+      "sha256": "1c356b817cd442a579dfd415a55ec1c0ec62bac62fd71614a6843a69a572a45d"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\registered_step16_synthetic_v1\\paired_statistics.json",
+      "sha256": "aac0c9b6de19f81bfe571563b0f7e3a2b365891ef4c5489391a8fa0182d5c755"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\registered_step16_synthetic_v1\\start_receipt.json",
+      "sha256": "558e4c4270507a7aab8ae74f65b59fa19e9fa3d1ef498385b73e751b75f64270"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\registered_step16_synthetic_v1\\summary.json",
+      "sha256": "3875bc2794181a26cae90dcc34b39f0c5c5fb7b2ccdfdd3b2c4a610eb46e4cc4"
+    }
+  ]
+}

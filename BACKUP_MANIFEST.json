@@ -1,5 +1,7 @@
 {
-  "snapshot": "step15C-20261016",
+  "snapshot": "step16-nonreal-20261016",
+  "branch": "work/step16-synthetic-20261016",
+  "prior_remote_snapshot_commit": "c39ae1a373bd2a66b289e8c74096677e58eba650",
   "files": [
     {
       "path": ".gitignore",
@@ -8,8 +10,8 @@
     },
     {
       "path": "BACKUP_README.txt",
-      "sha256": "2cdea397257604a3b95d719da361c728b3ac46484331c0c173c5cbac9e23e124",
-      "bytes": 2593
+      "sha256": "8e578ddd109a3176170e598a59c275c143b304a8ad2a558f32ad81f43bd8ea14",
+      "bytes": 2952
     },
     {
       "path": "bci_vla_framework/bci_vla/__init__.py",
@@ -367,6 +369,26 @@
       "bytes": 32547
     },
     {
+      "path": "bci_vla_framework/bci_vla/study_v1/__init__.py",
+      "sha256": "f5290c8e94020f288d299338d82f893a0e1c5c21c415f47b33eea9894e7ac0cc",
+      "bytes": 68
+    },
+    {
+      "path": "bci_vla_framework/bci_vla/study_v1/runner.py",
+      "sha256": "1d47ae56e81f568cf7d52960329d3148a67703290f064e1ac537ac3d8180dc07",
+      "bytes": 4043
+    },
+    {
+      "path": "bci_vla_framework/bci_vla/study_v1/statistics.py",
+      "sha256": "068684dca8e36e829c4c9d88acba298ee10d88cf405d292e83abf66539112ee9",
+      "bytes": 2093
+    },
+    {
+      "path": "bci_vla_framework/bci_vla/study_v1/world.py",
+      "sha256": "5a40956a6ac9e810850699fe65abaf767f09e3f07bb8a4bc8f03b740b7487f39",
+      "bytes": 4243
+    },
+    {
       "path": "bci_vla_framework/configs/02_local_structured_prompt.txt",
       "sha256": "34e799c3524e68a7275c1aac8e1b27119bcd7b10d7ceab9c2102ae1b4a0a2a56",
       "bytes": 1995
@@ -480,6 +502,11 @@
       "path": "bci_vla_framework/configs/pilot/step13_site.template.json",
       "sha256": "8fbb51d8b02f975e7809960ca0675438166366a17e0a27f78ce00967a7693b96",
       "bytes": 1605
+    },
+    {
+      "path": "bci_vla_framework/configs/study16.json",
+      "sha256": "46b1cb485d27baf3aa0602764d07d6d19eabd54f02c080f2eef89be1e0085804",
+      "bytes": 3888
     },
     {
       "path": "bci_vla_framework/configs/transfer/step15_binding.json",
@@ -645,6 +672,21 @@
       "path": "bci_vla_framework/docs/15C_full_transfer_report.txt",
       "sha256": "7e60eddf3df8363449505b03701f01668c5e2cf68a8c94214cdc1f1bdc9829d5",
       "bytes": 8077
+    },
+    {
+      "path": "bci_vla_framework/docs/16_G4_report.txt",
+      "sha256": "654b4f7d4de7faad5c3cdc688272e810d3b6326e1b2cf42dddb65ef8916df3fb",
+      "bytes": 8990
+    },
+    {
+      "path": "bci_vla_framework/docs/16_registered_protocol.txt",
+      "sha256": "1e4161d5670a312edb64ac575c2a79f908a09ac669dc0f28b9c1716929eae9fb",
+      "bytes": 6097
+    },
+    {
+      "path": "bci_vla_framework/docs/16_subjective_protocol.txt",
+      "sha256": "fe7098984f480f79e67676299a3958938efd5e2923f5acb5e75e45b70e7e0c84",
+      "bytes": 339
     },
     {
       "path": "bci_vla_framework/examples/alias_cases.json",
@@ -1252,6 +1294,11 @@
       "bytes": 2087
     },
     {
+      "path": "bci_vla_framework/execution/12R_integrity_recheck_after_step16.json",
+      "sha256": "e4cd2f5bdb7efbca3cd068c2945a4e51ea529ad577f6a04f3eb3481f7407d229",
+      "bytes": 2087
+    },
+    {
       "path": "bci_vla_framework/execution/12R_integrity_result.json",
       "sha256": "0c423628f206c6feffb2e96e4169ab5638c0f9169b25145c665de626862fa171",
       "bytes": 2048
@@ -1298,6 +1345,11 @@
     },
     {
       "path": "bci_vla_framework/execution/13_integrity_recheck_after_step15C.json",
+      "sha256": "272ab579b75fdba04b1e36b55e056c3c22d077a370efd90b3100d18fa7b9c90f",
+      "bytes": 1856
+    },
+    {
+      "path": "bci_vla_framework/execution/13_integrity_recheck_after_step16.json",
       "sha256": "272ab579b75fdba04b1e36b55e056c3c22d077a370efd90b3100d18fa7b9c90f",
       "bytes": 1856
     },
@@ -1358,6 +1410,11 @@
     },
     {
       "path": "bci_vla_framework/execution/14_integrity_recheck_after_step15C.json",
+      "sha256": "689d0c37440fc9f2abe0c071fb0891dbba6b95da997ec1abfecd657fc6d9e653",
+      "bytes": 1786
+    },
+    {
+      "path": "bci_vla_framework/execution/14_integrity_recheck_after_step16.json",
       "sha256": "689d0c37440fc9f2abe0c071fb0891dbba6b95da997ec1abfecd657fc6d9e653",
       "bytes": 1786
     },
@@ -1438,6 +1495,11 @@
     },
     {
       "path": "bci_vla_framework/execution/14C_integrity_recheck_after_step15C.json",
+      "sha256": "4976a65acd8f75cac728d4e4fd1e09f7a25fcd7bcd4c26b92b736b30306eea2b",
+      "bytes": 2528
+    },
+    {
+      "path": "bci_vla_framework/execution/14C_integrity_recheck_after_step16.json",
       "sha256": "4976a65acd8f75cac728d4e4fd1e09f7a25fcd7bcd4c26b92b736b30306eea2b",
       "bytes": 2528
     },
@@ -1527,6 +1589,11 @@
       "bytes": 2056
     },
     {
+      "path": "bci_vla_framework/execution/15_integrity_recheck_after_step16.json",
+      "sha256": "4b0ae6250c74416355d723df8896e75903eaff7821329c81aab7dd8c608c9b91",
+      "bytes": 2056
+    },
+    {
       "path": "bci_vla_framework/execution/15_integrity_result.json",
       "sha256": "4b0ae6250c74416355d723df8896e75903eaff7821329c81aab7dd8c608c9b91",
       "bytes": 2056
@@ -1597,6 +1664,11 @@
       "bytes": 950
     },
     {
+      "path": "bci_vla_framework/execution/15C_integrity_recheck_after_step16.json",
+      "sha256": "477637adb3dca433d716fc3be3d4c82f961f1116b8c3230597cb545720a6259e",
+      "bytes": 2899
+    },
+    {
       "path": "bci_vla_framework/execution/15C_integrity_result.json",
       "sha256": "477637adb3dca433d716fc3be3d4c82f961f1116b8c3230597cb545720a6259e",
       "bytes": 2899
@@ -1635,6 +1707,51 @@
       "path": "bci_vla_framework/execution/15C_test_result.json",
       "sha256": "f172995c78813fbf18c2793da6c7a0733f906149fc03f8b7fc4e248aff70b478",
       "bytes": 238
+    },
+    {
+      "path": "bci_vla_framework/execution/16_acceptance.txt",
+      "sha256": "927049cd9a87c8814cfbbe8898fde9219b74368b1ce7c6a4a1c7218d8a65ccf5",
+      "bytes": 270
+    },
+    {
+      "path": "bci_vla_framework/execution/16_coverage.json",
+      "sha256": "90af3f83b05319c06188dbd38a8387df4b4fa6d3b451e2386dd9afc6aa29fe19",
+      "bytes": 1037
+    },
+    {
+      "path": "bci_vla_framework/execution/16_integrity_result.json",
+      "sha256": "9505f5e67a294f51df535248e11775fc23f7c5b87f0084721b63f7a4252667c4",
+      "bytes": 2064
+    },
+    {
+      "path": "bci_vla_framework/execution/16_preregistration.json",
+      "sha256": "8ed239971e9133269faaef319b7a86dc034f486349ec9dba18298d86b300c22b",
+      "bytes": 24916
+    },
+    {
+      "path": "bci_vla_framework/execution/16_registration_git_receipt.json",
+      "sha256": "6171cee303cfab4162787029e66ced73773aa8cc4d257bda68307407efecc355",
+      "bytes": 261
+    },
+    {
+      "path": "bci_vla_framework/execution/16_requirement_coverage.json",
+      "sha256": "9af77360955f89a50591e8e09df4192624a93d6c64ea70dece2782ffcd165e51",
+      "bytes": 1958
+    },
+    {
+      "path": "bci_vla_framework/execution/16_source_manifest.json",
+      "sha256": "94ea4062d109695e7d8d2535342f4279a07ecad3dd4b32d9a2532dfcd9e446b9",
+      "bytes": 8773
+    },
+    {
+      "path": "bci_vla_framework/execution/16_test_output.txt",
+      "sha256": "688b818b0696f57e2d2a48bfb376d51875b0e4fe932d8a58c1c571eda687dd8a",
+      "bytes": 67477
+    },
+    {
+      "path": "bci_vla_framework/execution/16_test_result.json",
+      "sha256": "7fd1bb95676e1f5e5e9c948db95819abc89039c901a270f9e5d0a5c1a11a3ba7",
+      "bytes": 246
     },
     {
       "path": "bci_vla_framework/execution/build_step13_fixture_evidence.py",
@@ -1762,9 +1879,14 @@
       "bytes": 12252
     },
     {
+      "path": "bci_vla_framework/execution/finalize_step16.py",
+      "sha256": "82fa146215f6c892a32a659a2f46d37e61204a32fbeef52585c65e025cefda70",
+      "bytes": 13318
+    },
+    {
       "path": "bci_vla_framework/execution/handoff.txt",
-      "sha256": "27ef72fd4141b20f38fb158418a970f3f8dcea94ad0ca8aca1d6c0fe1c4baf2f",
-      "bytes": 2291
+      "sha256": "3aeead4ff9ec2e9a283b917f77e0c8b1abf605580a022670db3bcdbcd8b23ea3",
+      "bytes": 2475
     },
     {
       "path": "bci_vla_framework/execution/inspect_step13_records.py",
@@ -1818,8 +1940,13 @@
     },
     {
       "path": "bci_vla_framework/execution/progress.json",
-      "sha256": "d022a4a659f581082c65f36924b06da09b942ba90ecbcbfd26ba57938df154e4",
-      "bytes": 49826
+      "sha256": "8f5b07bd889b61ff7a5f02803e86aa8b06fdeec9c69ff5edcb5bd133cc859dd6",
+      "bytes": 51245
+    },
+    {
+      "path": "bci_vla_framework/execution/register_step16.py",
+      "sha256": "1dfae4ea18225c1971ad8cd9337718a54ef1d402d527ff200c81109818f8650e",
+      "bytes": 8785
     },
     {
       "path": "bci_vla_framework/execution/render_step13_preview.py",
@@ -1935,6 +2062,16 @@
       "path": "bci_vla_framework/execution/run_step15C_tests.py",
       "sha256": "c8887bd8d77cbf3402432756970d7464982554f57ee103e59bd428a8967392c1",
       "bytes": 966
+    },
+    {
+      "path": "bci_vla_framework/execution/run_step16.py",
+      "sha256": "ed6745063a63657812900e23f1f5024e40cda026dfc1cb7198fda2373963bf1b",
+      "bytes": 4683
+    },
+    {
+      "path": "bci_vla_framework/execution/run_step16_tests.py",
+      "sha256": "4c62c99bed533e5df0904196d1e518144370eed6ba9219b6db6c08a20f8532c9",
+      "bytes": 972
     },
     {
       "path": "bci_vla_framework/execution/source_manifest.json",
@@ -2068,38 +2205,43 @@
     },
     {
       "path": "bci_vla_framework/execution/verify_step12_repair.py",
-      "sha256": "dd1ca419d379780c251d8015cd465c8428d6870cfd5df78d81dfcac68b6cb477",
-      "bytes": 10565
+      "sha256": "c3ed17d4724644b2a7b519606e2ed76bff7945df8760cca3f684f3c84e00eaf5",
+      "bytes": 10675
     },
     {
       "path": "bci_vla_framework/execution/verify_step13_delivery.py",
-      "sha256": "ef285384514ac8b9a0c8480bc9b4dd8d01d60a597302505a9ca8df8ae4f44aea",
-      "bytes": 7303
+      "sha256": "4f3a84a7684a4cdf3fe1fd72bb8f005ddb0acb756dfa0061dab70f16e3787904",
+      "bytes": 7410
     },
     {
       "path": "bci_vla_framework/execution/verify_step14_delivery.py",
-      "sha256": "997b2fa32b9e4479885b737989811e19d484f467f77e44d15b6df63307597132",
-      "bytes": 8032
+      "sha256": "ffda53927fbdfc606572092381090521305e31a14a3d02d657ed64312bb3cc6a",
+      "bytes": 8143
     },
     {
       "path": "bci_vla_framework/execution/verify_step14C_delivery.py",
-      "sha256": "cbe32ee020d68d15c948af7839425069c2c4da85634f1f3c71e2a3a35867a175",
-      "bytes": 11144
+      "sha256": "9fe5ce78cc6d58eb49dda31e6cfff3141a0df2af4289d1499ae82178b79e2cf7",
+      "bytes": 11247
     },
     {
       "path": "bci_vla_framework/execution/verify_step15_delivery.py",
-      "sha256": "2876a2eec481853e97a5bce74c5654ba958ee5b9dab847a4d929ebcdc4de8f5e",
-      "bytes": 9761
+      "sha256": "283a978d2b72cbdf25c70a09a807f052e4df026b319c2d190a4542a0672f0d2f",
+      "bytes": 9867
     },
     {
       "path": "bci_vla_framework/execution/verify_step15C_delivery.py",
-      "sha256": "773e21de30901278f40332f7b5cf72d7e4c3a1e7064c441cd03abf1ad02301f5",
-      "bytes": 9310
+      "sha256": "5b29ff91bf173b9f2f4ff90908efe93aa9d781d9aa278bde71b7a592ce5d0976",
+      "bytes": 9509
+    },
+    {
+      "path": "bci_vla_framework/execution/verify_step16_delivery.py",
+      "sha256": "15b1fb745ffe9bf483174ef3b2c15e1fd90f9b4ae9011cb09b0bcbf11d47a6fd",
+      "bytes": 10348
     },
     {
       "path": "bci_vla_framework/execution/worklog.txt",
-      "sha256": "b5b7d6e183effafeb9679001cd386da6e1240e50e9a662881399dbe69bb70861",
-      "bytes": 23380
+      "sha256": "e8af1e439ebf79e956aa08ca744e3e055488183de63655be4bc9166b0d8848c2",
+      "bytes": 23564
     },
     {
       "path": "bci_vla_framework/figures/bci_vla_framework_v1.png",
@@ -2193,8 +2335,8 @@
     },
     {
       "path": "bci_vla_framework/README.txt",
-      "sha256": "323aaeebc37f8f1081da0eccb70413533f1d5cc32198517276f7f589023ac0ae",
-      "bytes": 1575
+      "sha256": "478493a4afe0c85b7c0a3bf09bb646a511479420ec313117d4aa2655b182ba3f",
+      "bytes": 1759
     },
     {
       "path": "bci_vla_framework/runs/offline_step12_acceptance/artifacts_manifest.json",
@@ -3185,6 +3327,121 @@
       "path": "bci_vla_framework/runs/pilot_virtual_13_streamcheck_01/stream_report.json",
       "sha256": "fb633f1b0385e3b4d540123bdf0255dc4eca915b20b1884ee9e46b0d681f1c28",
       "bytes": 9645
+    },
+    {
+      "path": "bci_vla_framework/runs/registered_step16_synthetic_v1/artifacts_manifest.json",
+      "sha256": "bc6b46333799bbb5aac8bd968dba9deb841bbd2db2a6074f7bdb4273106a55d0",
+      "bytes": 4889
+    },
+    {
+      "path": "bci_vla_framework/runs/registered_step16_synthetic_v1/evaluation_joined.jsonl",
+      "sha256": "94f92e3bba39928e01212dfc07f96af046db5c8e106413dfe7dc0155db490702",
+      "bytes": 4557745
+    },
+    {
+      "path": "bci_vla_framework/runs/registered_step16_synthetic_v1/evaluation_private/worlds.jsonl.gz",
+      "sha256": "371fe0fc1aff8844bd937c1b4ec82607ac29b1f41929f7edf71ac2ee63e28741",
+      "bytes": 212749
+    },
+    {
+      "path": "bci_vla_framework/runs/registered_step16_synthetic_v1/faults.json",
+      "sha256": "d6a1f6764cd0fd38ff451cba3a6879836b7ce53730c43f47e7e75795b79bd33f",
+      "bytes": 3339
+    },
+    {
+      "path": "bci_vla_framework/runs/registered_step16_synthetic_v1/journals/C00.jsonl.gz",
+      "sha256": "a0429cf31001a2a5250648c33de3a6c88e857bf7b65b7a286ce2441c8a30da35",
+      "bytes": 3193355
+    },
+    {
+      "path": "bci_vla_framework/runs/registered_step16_synthetic_v1/journals/C01.jsonl.gz",
+      "sha256": "fe423dcc19b9c2b81096ac70ce206fd85870fc83d3e434ca6d840cbde2fbcfb9",
+      "bytes": 2253549
+    },
+    {
+      "path": "bci_vla_framework/runs/registered_step16_synthetic_v1/journals/C10.jsonl.gz",
+      "sha256": "ecfd9cf8f416b1fd339143daf9d5a6c07c66f076473408512a1c66962d2d2c85",
+      "bytes": 2585199
+    },
+    {
+      "path": "bci_vla_framework/runs/registered_step16_synthetic_v1/journals/C11.jsonl.gz",
+      "sha256": "725b205fd22a35e7a1d3007fa556321cb5a2bd73f5375d81c64d8ce5eeaf7a64",
+      "bytes": 3116916
+    },
+    {
+      "path": "bci_vla_framework/runs/registered_step16_synthetic_v1/journals/channel_first_observable.jsonl.gz",
+      "sha256": "fd4a9e2ee5796222166816decd22ce27de0b4e9a982ccdfc6ee07d97e9c40f7d",
+      "bytes": 2946715
+    },
+    {
+      "path": "bci_vla_framework/runs/registered_step16_synthetic_v1/journals/executor_failure35.jsonl.gz",
+      "sha256": "6e5ac1578bc60c7409cc1417ecd8efb097f533ca5d134fc0276f71c54153029f",
+      "bytes": 3192617
+    },
+    {
+      "path": "bci_vla_framework/runs/registered_step16_synthetic_v1/journals/frequent_reversal.jsonl.gz",
+      "sha256": "3c599d99d77791069e57658d67b026666bb3accf657152ed45285d759460e8ad",
+      "bytes": 2320729
+    },
+    {
+      "path": "bci_vla_framework/runs/registered_step16_synthetic_v1/journals/goal_first_observable.jsonl.gz",
+      "sha256": "9534151cd431c4e5109aa97b05bc748609203cf18a8fe52b8a01bc6b3dc49cb7",
+      "bytes": 2946664
+    },
+    {
+      "path": "bci_vla_framework/runs/registered_step16_synthetic_v1/journals/probe_noncompliance.jsonl.gz",
+      "sha256": "39b14cbde722a911287a382d31650b8645880ceb3339330e0c266458788d7e79",
+      "bytes": 2515581
+    },
+    {
+      "path": "bci_vla_framework/runs/registered_step16_synthetic_v1/journals/public_uninformative_probe.jsonl.gz",
+      "sha256": "42119882e3691855ec893da955223d03bfc5f2c122162030397dc042274ad4b5",
+      "bytes": 2243774
+    },
+    {
+      "path": "bci_vla_framework/runs/registered_step16_synthetic_v1/journals/severity_uniform20.jsonl.gz",
+      "sha256": "42d00227821e86286da514a1ee6522a284724ff8284dfc69a991351cee4a9c43",
+      "bytes": 2225013
+    },
+    {
+      "path": "bci_vla_framework/runs/registered_step16_synthetic_v1/journals/stable_sporadic_error.jsonl.gz",
+      "sha256": "89c9bf7d51e6d70ff0523bdb01ef9f00c9a277a0cda16a88e81f211720b619e1",
+      "bytes": 3309153
+    },
+    {
+      "path": "bci_vla_framework/runs/registered_step16_synthetic_v1/journals/within_window_change.jsonl.gz",
+      "sha256": "6de4cc70adff16bb5f50f5fc7309b388abcb142f01f3429f4dc3926bb3057b94",
+      "bytes": 322068
+    },
+    {
+      "path": "bci_vla_framework/runs/registered_step16_synthetic_v1/journals/wrong_strong_prior.jsonl.gz",
+      "sha256": "12bee7d6cfbde96e7a6f57e3cdbc0ace96a4da35d7cde27630b14638d03797b9",
+      "bytes": 2295942
+    },
+    {
+      "path": "bci_vla_framework/runs/registered_step16_synthetic_v1/mechanisms.json",
+      "sha256": "5107106e4c00bf16177216fcaf3f7213887c298598c2bed925277e606a066ee4",
+      "bytes": 2170
+    },
+    {
+      "path": "bci_vla_framework/runs/registered_step16_synthetic_v1/online/episodes.jsonl.gz",
+      "sha256": "1c356b817cd442a579dfd415a55ec1c0ec62bac62fd71614a6843a69a572a45d",
+      "bytes": 1978273
+    },
+    {
+      "path": "bci_vla_framework/runs/registered_step16_synthetic_v1/paired_statistics.json",
+      "sha256": "aac0c9b6de19f81bfe571563b0f7e3a2b365891ef4c5489391a8fa0182d5c755",
+      "bytes": 22925
+    },
+    {
+      "path": "bci_vla_framework/runs/registered_step16_synthetic_v1/start_receipt.json",
+      "sha256": "558e4c4270507a7aab8ae74f65b59fa19e9fa3d1ef498385b73e751b75f64270",
+      "bytes": 156
+    },
+    {
+      "path": "bci_vla_framework/runs/registered_step16_synthetic_v1/summary.json",
+      "sha256": "3875bc2794181a26cae90dcc34b39f0c5c5fb7b2ccdfdd3b2c4a610eb46e4cc4",
+      "bytes": 9858
     },
     {
       "path": "bci_vla_framework/runs/transfer_step15_pi05/collected_manifest.json",
@@ -4422,6 +4679,11 @@
       "bytes": 9220
     },
     {
+      "path": "bci_vla_framework/tests/test_study_v1.py",
+      "sha256": "d3e6e47fe2e48eaef6ff4147185c164ae73a69170ffa9bdf738a4088a5f5770b",
+      "bytes": 2802
+    },
+    {
       "path": "bci_vla_framework/tests/test_transfer_replay.py",
       "sha256": "e02a2e433e6e8445abf22f98091648ac3b117d26ab162d76a2ce509704170778",
       "bytes": 2498
@@ -4602,20 +4864,8 @@
       "bytes": 18181
     }
   ],
-  "file_count": 920,
-  "total_bytes": 74787056,
-  "frozen_source_manifests_verified": [
-    "09",
-    "10",
-    "11",
-    "12",
-    "12R",
-    "13",
-    "14",
-    "15",
-    "14C",
-    "15C"
-  ],
-  "secrets_pattern_scan": "no high confidence matches; private credential directory and files excluded",
-  "real_raw_EEG_excluded": true
+  "file_count": 972,
+  "total_bytes": 117240384,
+  "real_raw_EEG_excluded": true,
+  "formal_G4_passed": false
 }

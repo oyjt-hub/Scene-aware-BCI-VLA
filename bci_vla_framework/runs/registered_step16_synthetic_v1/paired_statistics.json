@@ -1,0 +1,743 @@
+{
+  "primary": [
+    {
+      "left": "M",
+      "right": "B9",
+      "metric": "faithful_virtual_completion",
+      "paired_seed_clusters": 32,
+      "cases_per_cluster": 14,
+      "mean_difference": 0.0,
+      "cluster_percentile_interval": [
+        0.0,
+        0.0
+      ],
+      "alpha": 0.016666666666666666,
+      "bootstrap_resamples": 2000,
+      "all_seed_differences_equal": true,
+      "scope": "conditional synthetic generator; scenarios fixed; not subject inference",
+      "bounded_difference_Hoeffding_interval": [
+        -0.5470084404503077,
+        0.5470084404503077
+      ]
+    },
+    {
+      "left": "M",
+      "right": "B9",
+      "metric": "wrong_start",
+      "paired_seed_clusters": 32,
+      "cases_per_cluster": 14,
+      "mean_difference": 0.0,
+      "cluster_percentile_interval": [
+        0.0,
+        0.0
+      ],
+      "alpha": 0.016666666666666666,
+      "bootstrap_resamples": 2000,
+      "all_seed_differences_equal": true,
+      "scope": "conditional synthetic generator; scenarios fixed; not subject inference",
+      "bounded_difference_Hoeffding_interval": [
+        -0.5470084404503077,
+        0.5470084404503077
+      ]
+    },
+    {
+      "left": "M",
+      "right": "B9",
+      "metric": "elapsed_s",
+      "paired_seed_clusters": 32,
+      "cases_per_cluster": 14,
+      "mean_difference": 0.0005429575892857062,
+      "cluster_percentile_interval": [
+        0.0004820624999999991,
+        0.0005970245535714204
+      ],
+      "alpha": 0.016666666666666666,
+      "bootstrap_resamples": 2000,
+      "all_seed_differences_equal": false,
+      "scope": "conditional synthetic generator; scenarios fixed; not subject inference"
+    }
+  ],
+  "secondary_descriptive": [
+    {
+      "left": "M",
+      "right": "B4",
+      "metric": "faithful_virtual_completion",
+      "paired_seed_clusters": 32,
+      "cases_per_cluster": 14,
+      "mean_difference": 0.0,
+      "cluster_percentile_interval": [
+        0.0,
+        0.0
+      ],
+      "alpha": 0.05,
+      "bootstrap_resamples": 2000,
+      "all_seed_differences_equal": true,
+      "scope": "conditional synthetic generator; scenarios fixed; not subject inference",
+      "bounded_difference_Hoeffding_interval": [
+        -0.48016139565996035,
+        0.48016139565996035
+      ]
+    },
+    {
+      "left": "M",
+      "right": "B4",
+      "metric": "wrong_start",
+      "paired_seed_clusters": 32,
+      "cases_per_cluster": 14,
+      "mean_difference": 0.0,
+      "cluster_percentile_interval": [
+        0.0,
+        0.0
+      ],
+      "alpha": 0.05,
+      "bootstrap_resamples": 2000,
+      "all_seed_differences_equal": true,
+      "scope": "conditional synthetic generator; scenarios fixed; not subject inference",
+      "bounded_difference_Hoeffding_interval": [
+        -0.48016139565996035,
+        0.48016139565996035
+      ]
+    },
+    {
+      "left": "M",
+      "right": "B4",
+      "metric": "elapsed_s",
+      "paired_seed_clusters": 32,
+      "cases_per_cluster": 14,
+      "mean_difference": 0.0032464285714286006,
+      "cluster_percentile_interval": [
+        0.0030283839285714493,
+        0.003371591517857169
+      ],
+      "alpha": 0.05,
+      "bootstrap_resamples": 2000,
+      "all_seed_differences_equal": false,
+      "scope": "conditional synthetic generator; scenarios fixed; not subject inference"
+    },
+    {
+      "left": "M",
+      "right": "B5",
+      "metric": "faithful_virtual_completion",
+      "paired_seed_clusters": 32,
+      "cases_per_cluster": 14,
+      "mean_difference": 0.02901785714285714,
+      "cluster_percentile_interval": [
+        -0.011160714285714284,
+        0.07142857142857142
+      ],
+      "alpha": 0.05,
+      "bootstrap_resamples": 2000,
+      "all_seed_differences_equal": false,
+      "scope": "conditional synthetic generator; scenarios fixed; not subject inference",
+      "bounded_difference_Hoeffding_interval": [
+        -0.4511435385171032,
+        0.5091792528028175
+      ]
+    },
+    {
+      "left": "M",
+      "right": "B5",
+      "metric": "wrong_start",
+      "paired_seed_clusters": 32,
+      "cases_per_cluster": 14,
+      "mean_difference": 0.078125,
+      "cluster_percentile_interval": [
+        0.03571428571428571,
+        0.11607142857142856
+      ],
+      "alpha": 0.05,
+      "bootstrap_resamples": 2000,
+      "all_seed_differences_equal": false,
+      "scope": "conditional synthetic generator; scenarios fixed; not subject inference",
+      "bounded_difference_Hoeffding_interval": [
+        -0.40203639565996035,
+        0.5582863956599604
+      ]
+    },
+    {
+      "left": "M",
+      "right": "B5",
+      "metric": "elapsed_s",
+      "paired_seed_clusters": 32,
+      "cases_per_cluster": 14,
+      "mean_difference": -1.3659886941964285,
+      "cluster_percentile_interval": [
+        -1.705395109375,
+        -1.0066093191964287
+      ],
+      "alpha": 0.05,
+      "bootstrap_resamples": 2000,
+      "all_seed_differences_equal": false,
+      "scope": "conditional synthetic generator; scenarios fixed; not subject inference"
+    },
+    {
+      "left": "M",
+      "right": "B7",
+      "metric": "faithful_virtual_completion",
+      "paired_seed_clusters": 32,
+      "cases_per_cluster": 14,
+      "mean_difference": 0.0,
+      "cluster_percentile_interval": [
+        0.0,
+        0.0
+      ],
+      "alpha": 0.05,
+      "bootstrap_resamples": 2000,
+      "all_seed_differences_equal": true,
+      "scope": "conditional synthetic generator; scenarios fixed; not subject inference",
+      "bounded_difference_Hoeffding_interval": [
+        -0.48016139565996035,
+        0.48016139565996035
+      ]
+    },
+    {
+      "left": "M",
+      "right": "B7",
+      "metric": "wrong_start",
+      "paired_seed_clusters": 32,
+      "cases_per_cluster": 14,
+      "mean_difference": 0.0,
+      "cluster_percentile_interval": [
+        0.0,
+        0.0
+      ],
+      "alpha": 0.05,
+      "bootstrap_resamples": 2000,
+      "all_seed_differences_equal": true,
+      "scope": "conditional synthetic generator; scenarios fixed; not subject inference",
+      "bounded_difference_Hoeffding_interval": [
+        -0.48016139565996035,
+        0.48016139565996035
+      ]
+    },
+    {
+      "left": "M",
+      "right": "B7",
+      "metric": "elapsed_s",
+      "paired_seed_clusters": 32,
+      "cases_per_cluster": 14,
+      "mean_difference": 0.000546196428571437,
+      "cluster_percentile_interval": [
+        0.0005022165178571558,
+        0.0005855892857143009
+      ],
+      "alpha": 0.05,
+      "bootstrap_resamples": 2000,
+      "all_seed_differences_equal": false,
+      "scope": "conditional synthetic generator; scenarios fixed; not subject inference"
+    },
+    {
+      "left": "M",
+      "right": "B8",
+      "metric": "faithful_virtual_completion",
+      "paired_seed_clusters": 32,
+      "cases_per_cluster": 14,
+      "mean_difference": 0.10267857142857142,
+      "cluster_percentile_interval": [
+        0.06473214285714285,
+        0.1450892857142857
+      ],
+      "alpha": 0.05,
+      "bootstrap_resamples": 2000,
+      "all_seed_differences_equal": false,
+      "scope": "conditional synthetic generator; scenarios fixed; not subject inference",
+      "bounded_difference_Hoeffding_interval": [
+        -0.3774828242313889,
+        0.5828399670885318
+      ]
+    },
+    {
+      "left": "M",
+      "right": "B8",
+      "metric": "wrong_start",
+      "paired_seed_clusters": 32,
+      "cases_per_cluster": 14,
+      "mean_difference": 0.18080357142857142,
+      "cluster_percentile_interval": [
+        0.15401785714285712,
+        0.20535714285714285
+      ],
+      "alpha": 0.05,
+      "bootstrap_resamples": 2000,
+      "all_seed_differences_equal": false,
+      "scope": "conditional synthetic generator; scenarios fixed; not subject inference",
+      "bounded_difference_Hoeffding_interval": [
+        -0.2993578242313889,
+        0.6609649670885318
+      ]
+    },
+    {
+      "left": "M",
+      "right": "B8",
+      "metric": "elapsed_s",
+      "paired_seed_clusters": 32,
+      "cases_per_cluster": 14,
+      "mean_difference": -1.7306350781250002,
+      "cluster_percentile_interval": [
+        -2.106589049107143,
+        -1.328762470982143
+      ],
+      "alpha": 0.05,
+      "bootstrap_resamples": 2000,
+      "all_seed_differences_equal": false,
+      "scope": "conditional synthetic generator; scenarios fixed; not subject inference"
+    },
+    {
+      "left": "M",
+      "right": "B10",
+      "metric": "faithful_virtual_completion",
+      "paired_seed_clusters": 32,
+      "cases_per_cluster": 14,
+      "mean_difference": 0.002232142857142857,
+      "cluster_percentile_interval": [
+        -0.02901785714285714,
+        0.03571428571428571
+      ],
+      "alpha": 0.05,
+      "bootstrap_resamples": 2000,
+      "all_seed_differences_equal": false,
+      "scope": "conditional synthetic generator; scenarios fixed; not subject inference",
+      "bounded_difference_Hoeffding_interval": [
+        -0.4779292528028175,
+        0.4823935385171032
+      ]
+    },
+    {
+      "left": "M",
+      "right": "B10",
+      "metric": "wrong_start",
+      "paired_seed_clusters": 32,
+      "cases_per_cluster": 14,
+      "mean_difference": -0.020089285714285712,
+      "cluster_percentile_interval": [
+        -0.046875,
+        0.006696428571428571
+      ],
+      "alpha": 0.05,
+      "bootstrap_resamples": 2000,
+      "all_seed_differences_equal": false,
+      "scope": "conditional synthetic generator; scenarios fixed; not subject inference",
+      "bounded_difference_Hoeffding_interval": [
+        -0.5002506813742461,
+        0.46007210994567466
+      ]
+    },
+    {
+      "left": "M",
+      "right": "B10",
+      "metric": "elapsed_s",
+      "paired_seed_clusters": 32,
+      "cases_per_cluster": 14,
+      "mean_difference": -1.8588060446428571,
+      "cluster_percentile_interval": [
+        -2.132555546875,
+        -1.5763143616071429
+      ],
+      "alpha": 0.05,
+      "bootstrap_resamples": 2000,
+      "all_seed_differences_equal": false,
+      "scope": "conditional synthetic generator; scenarios fixed; not subject inference"
+    },
+    {
+      "left": "M",
+      "right": "M2",
+      "metric": "faithful_virtual_completion",
+      "paired_seed_clusters": 32,
+      "cases_per_cluster": 14,
+      "mean_difference": -0.011160714285714284,
+      "cluster_percentile_interval": [
+        -0.03571428571428571,
+        0.015625
+      ],
+      "alpha": 0.05,
+      "bootstrap_resamples": 2000,
+      "all_seed_differences_equal": false,
+      "scope": "conditional synthetic generator; scenarios fixed; not subject inference",
+      "bounded_difference_Hoeffding_interval": [
+        -0.49132210994567466,
+        0.46900068137424605
+      ]
+    },
+    {
+      "left": "M",
+      "right": "M2",
+      "metric": "wrong_start",
+      "paired_seed_clusters": 32,
+      "cases_per_cluster": 14,
+      "mean_difference": -0.03794642857142857,
+      "cluster_percentile_interval": [
+        -0.0625,
+        -0.013392857142857142
+      ],
+      "alpha": 0.05,
+      "bootstrap_resamples": 2000,
+      "all_seed_differences_equal": false,
+      "scope": "conditional synthetic generator; scenarios fixed; not subject inference",
+      "bounded_difference_Hoeffding_interval": [
+        -0.5181078242313889,
+        0.4422149670885318
+      ]
+    },
+    {
+      "left": "M",
+      "right": "M2",
+      "metric": "elapsed_s",
+      "paired_seed_clusters": 32,
+      "cases_per_cluster": 14,
+      "mean_difference": -1.222785388392857,
+      "cluster_percentile_interval": [
+        -1.4119621830357143,
+        -1.0286992901785714
+      ],
+      "alpha": 0.05,
+      "bootstrap_resamples": 2000,
+      "all_seed_differences_equal": false,
+      "scope": "conditional synthetic generator; scenarios fixed; not subject inference"
+    },
+    {
+      "left": "M",
+      "right": "A_no_probe",
+      "metric": "faithful_virtual_completion",
+      "paired_seed_clusters": 32,
+      "cases_per_cluster": 14,
+      "mean_difference": 0.0,
+      "cluster_percentile_interval": [
+        0.0,
+        0.0
+      ],
+      "alpha": 0.05,
+      "bootstrap_resamples": 2000,
+      "all_seed_differences_equal": true,
+      "scope": "conditional synthetic generator; scenarios fixed; not subject inference",
+      "bounded_difference_Hoeffding_interval": [
+        -0.48016139565996035,
+        0.48016139565996035
+      ]
+    },
+    {
+      "left": "M",
+      "right": "A_no_probe",
+      "metric": "wrong_start",
+      "paired_seed_clusters": 32,
+      "cases_per_cluster": 14,
+      "mean_difference": 0.0,
+      "cluster_percentile_interval": [
+        0.0,
+        0.0
+      ],
+      "alpha": 0.05,
+      "bootstrap_resamples": 2000,
+      "all_seed_differences_equal": true,
+      "scope": "conditional synthetic generator; scenarios fixed; not subject inference",
+      "bounded_difference_Hoeffding_interval": [
+        -0.48016139565996035,
+        0.48016139565996035
+      ]
+    },
+    {
+      "left": "M",
+      "right": "A_no_probe",
+      "metric": "elapsed_s",
+      "paired_seed_clusters": 32,
+      "cases_per_cluster": 14,
+      "mean_difference": 0.0032487410714286064,
+      "cluster_percentile_interval": [
+        0.003031247767857193,
+        0.0033727299107142983
+      ],
+      "alpha": 0.05,
+      "bootstrap_resamples": 2000,
+      "all_seed_differences_equal": false,
+      "scope": "conditional synthetic generator; scenarios fixed; not subject inference"
+    },
+    {
+      "left": "M",
+      "right": "A_periodic",
+      "metric": "faithful_virtual_completion",
+      "paired_seed_clusters": 32,
+      "cases_per_cluster": 14,
+      "mean_difference": 0.02901785714285714,
+      "cluster_percentile_interval": [
+        -0.011160714285714284,
+        0.07142857142857142
+      ],
+      "alpha": 0.05,
+      "bootstrap_resamples": 2000,
+      "all_seed_differences_equal": false,
+      "scope": "conditional synthetic generator; scenarios fixed; not subject inference",
+      "bounded_difference_Hoeffding_interval": [
+        -0.4511435385171032,
+        0.5091792528028175
+      ]
+    },
+    {
+      "left": "M",
+      "right": "A_periodic",
+      "metric": "wrong_start",
+      "paired_seed_clusters": 32,
+      "cases_per_cluster": 14,
+      "mean_difference": 0.078125,
+      "cluster_percentile_interval": [
+        0.03571428571428571,
+        0.11607142857142856
+      ],
+      "alpha": 0.05,
+      "bootstrap_resamples": 2000,
+      "all_seed_differences_equal": false,
+      "scope": "conditional synthetic generator; scenarios fixed; not subject inference",
+      "bounded_difference_Hoeffding_interval": [
+        -0.40203639565996035,
+        0.5582863956599604
+      ]
+    },
+    {
+      "left": "M",
+      "right": "A_periodic",
+      "metric": "elapsed_s",
+      "paired_seed_clusters": 32,
+      "cases_per_cluster": 14,
+      "mean_difference": -1.3659848437500002,
+      "cluster_percentile_interval": [
+        -1.7053869285714287,
+        -1.0066071785714286
+      ],
+      "alpha": 0.05,
+      "bootstrap_resamples": 2000,
+      "all_seed_differences_equal": false,
+      "scope": "conditional synthetic generator; scenarios fixed; not subject inference"
+    },
+    {
+      "left": "M",
+      "right": "A_fixed_duration",
+      "metric": "faithful_virtual_completion",
+      "paired_seed_clusters": 32,
+      "cases_per_cluster": 14,
+      "mean_difference": 0.0,
+      "cluster_percentile_interval": [
+        0.0,
+        0.0
+      ],
+      "alpha": 0.05,
+      "bootstrap_resamples": 2000,
+      "all_seed_differences_equal": true,
+      "scope": "conditional synthetic generator; scenarios fixed; not subject inference",
+      "bounded_difference_Hoeffding_interval": [
+        -0.48016139565996035,
+        0.48016139565996035
+      ]
+    },
+    {
+      "left": "M",
+      "right": "A_fixed_duration",
+      "metric": "wrong_start",
+      "paired_seed_clusters": 32,
+      "cases_per_cluster": 14,
+      "mean_difference": 0.0,
+      "cluster_percentile_interval": [
+        0.0,
+        0.0
+      ],
+      "alpha": 0.05,
+      "bootstrap_resamples": 2000,
+      "all_seed_differences_equal": true,
+      "scope": "conditional synthetic generator; scenarios fixed; not subject inference",
+      "bounded_difference_Hoeffding_interval": [
+        -0.48016139565996035,
+        0.48016139565996035
+      ]
+    },
+    {
+      "left": "M",
+      "right": "A_fixed_duration",
+      "metric": "elapsed_s",
+      "paired_seed_clusters": 32,
+      "cases_per_cluster": 14,
+      "mean_difference": 0.0005486026785714522,
+      "cluster_percentile_interval": [
+        0.0005002633928571702,
+        0.0005914352678572119
+      ],
+      "alpha": 0.05,
+      "bootstrap_resamples": 2000,
+      "all_seed_differences_equal": false,
+      "scope": "conditional synthetic generator; scenarios fixed; not subject inference"
+    },
+    {
+      "left": "M",
+      "right": "A_no_task_consequence",
+      "metric": "faithful_virtual_completion",
+      "paired_seed_clusters": 32,
+      "cases_per_cluster": 14,
+      "mean_difference": 0.0,
+      "cluster_percentile_interval": [
+        0.0,
+        0.0
+      ],
+      "alpha": 0.05,
+      "bootstrap_resamples": 2000,
+      "all_seed_differences_equal": true,
+      "scope": "conditional synthetic generator; scenarios fixed; not subject inference",
+      "bounded_difference_Hoeffding_interval": [
+        -0.48016139565996035,
+        0.48016139565996035
+      ]
+    },
+    {
+      "left": "M",
+      "right": "A_no_task_consequence",
+      "metric": "wrong_start",
+      "paired_seed_clusters": 32,
+      "cases_per_cluster": 14,
+      "mean_difference": 0.0,
+      "cluster_percentile_interval": [
+        0.0,
+        0.0
+      ],
+      "alpha": 0.05,
+      "bootstrap_resamples": 2000,
+      "all_seed_differences_equal": true,
+      "scope": "conditional synthetic generator; scenarios fixed; not subject inference",
+      "bounded_difference_Hoeffding_interval": [
+        -0.48016139565996035,
+        0.48016139565996035
+      ]
+    },
+    {
+      "left": "M",
+      "right": "A_no_task_consequence",
+      "metric": "elapsed_s",
+      "paired_seed_clusters": 32,
+      "cases_per_cluster": 14,
+      "mean_difference": 0.0007211473214286113,
+      "cluster_percentile_interval": [
+        0.0006684330357142966,
+        0.0007665558035714634
+      ],
+      "alpha": 0.05,
+      "bootstrap_resamples": 2000,
+      "all_seed_differences_equal": false,
+      "scope": "conditional synthetic generator; scenarios fixed; not subject inference"
+    },
+    {
+      "left": "M",
+      "right": "A_ignore_probe_cost",
+      "metric": "faithful_virtual_completion",
+      "paired_seed_clusters": 32,
+      "cases_per_cluster": 14,
+      "mean_difference": 0.0,
+      "cluster_percentile_interval": [
+        0.0,
+        0.0
+      ],
+      "alpha": 0.05,
+      "bootstrap_resamples": 2000,
+      "all_seed_differences_equal": true,
+      "scope": "conditional synthetic generator; scenarios fixed; not subject inference",
+      "bounded_difference_Hoeffding_interval": [
+        -0.48016139565996035,
+        0.48016139565996035
+      ]
+    },
+    {
+      "left": "M",
+      "right": "A_ignore_probe_cost",
+      "metric": "wrong_start",
+      "paired_seed_clusters": 32,
+      "cases_per_cluster": 14,
+      "mean_difference": 0.0,
+      "cluster_percentile_interval": [
+        0.0,
+        0.0
+      ],
+      "alpha": 0.05,
+      "bootstrap_resamples": 2000,
+      "all_seed_differences_equal": true,
+      "scope": "conditional synthetic generator; scenarios fixed; not subject inference",
+      "bounded_difference_Hoeffding_interval": [
+        -0.48016139565996035,
+        0.48016139565996035
+      ]
+    },
+    {
+      "left": "M",
+      "right": "A_ignore_probe_cost",
+      "metric": "elapsed_s",
+      "paired_seed_clusters": 32,
+      "cases_per_cluster": 14,
+      "mean_difference": 0.0004988504464285975,
+      "cluster_percentile_interval": [
+        0.00045048883928574493,
+        0.0005482031250000431
+      ],
+      "alpha": 0.05,
+      "bootstrap_resamples": 2000,
+      "all_seed_differences_equal": false,
+      "scope": "conditional synthetic generator; scenarios fixed; not subject inference"
+    },
+    {
+      "left": "M",
+      "right": "A_factorized",
+      "metric": "faithful_virtual_completion",
+      "paired_seed_clusters": 32,
+      "cases_per_cluster": 14,
+      "mean_difference": 0.011160714285714284,
+      "cluster_percentile_interval": [
+        -0.02232142857142857,
+        0.046875
+      ],
+      "alpha": 0.05,
+      "bootstrap_resamples": 2000,
+      "all_seed_differences_equal": false,
+      "scope": "conditional synthetic generator; scenarios fixed; not subject inference",
+      "bounded_difference_Hoeffding_interval": [
+        -0.46900068137424605,
+        0.49132210994567466
+      ]
+    },
+    {
+      "left": "M",
+      "right": "A_factorized",
+      "metric": "wrong_start",
+      "paired_seed_clusters": 32,
+      "cases_per_cluster": 14,
+      "mean_difference": 0.078125,
+      "cluster_percentile_interval": [
+        0.040178571428571425,
+        0.11160714285714285
+      ],
+      "alpha": 0.05,
+      "bootstrap_resamples": 2000,
+      "all_seed_differences_equal": false,
+      "scope": "conditional synthetic generator; scenarios fixed; not subject inference",
+      "bounded_difference_Hoeffding_interval": [
+        -0.40203639565996035,
+        0.5582863956599604
+      ]
+    },
+    {
+      "left": "M",
+      "right": "A_factorized",
+      "metric": "elapsed_s",
+      "paired_seed_clusters": 32,
+      "cases_per_cluster": 14,
+      "mean_difference": -1.162183609375,
+      "cluster_percentile_interval": [
+        -1.4362439040178572,
+        -0.8804105267857144
+      ],
+      "alpha": 0.05,
+      "bootstrap_resamples": 2000,
+      "all_seed_differences_equal": false,
+      "scope": "conditional synthetic generator; scenarios fixed; not subject inference"
+    }
+  ],
+  "decision": {
+    "synthetic_primary_acceptance_passed": false,
+    "completion_gain_supported": false,
+    "wrong_start_noninferiority_supported": false,
+    "full_episode_time_condition_supported": true,
+    "formal_human_or_robot_G4_passed": false,
+    "verdict": "BENEFIT_NOT_ESTABLISHED",
+    "zero_bootstrap_width_is_not_equivalence_proof": true
+  }
+}

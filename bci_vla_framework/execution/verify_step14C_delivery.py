@@ -80,7 +80,7 @@ check('temporary model service stopped',read(base/'v3/orchestration.json')['work
 check('failed prototypes retained',read(base/'v1/orchestration.json')['worker_exit_code']!=0 and not read(base/'v2/results/summary.json')['all_checks_passed'])
 check('videos and final frames retained',all((run/(k+'.mp4')).stat().st_size>1000 and (run/(k+'_last.png')).read_bytes().startswith(b'\x89PNG') for k in ['nominal_cream','nominal_wine','changed_goal','changed_channel','joint_alias_conflict','STOP_during_execution','goal_change_recovery']))
 p=read('execution/progress.json');c=read('execution/14C_coverage.json')
-check('nonreal completed while real branch and research remain open',p['current_step'] in {'14','15'} and p['steps'][13]['nonreal_closed_loop_completed'] and c['full_framework_simulation_completed'] and not c['real_step14_completed'] and not p['research_gates']['G2']['research_acceptance_passed'] and p['research_gates']['G3']['status']=='未验证')
+check('nonreal completed while real branch and research remain open',p['current_step'] in {'14','15','16'} and p['steps'][13]['nonreal_closed_loop_completed'] and c['full_framework_simulation_completed'] and not c['real_step14_completed'] and not p['research_gates']['G2']['research_acceptance_passed'] and p['research_gates']['G3']['status']=='未验证')
 check('no formal superiority or measured human cost claim',not s['statistical_strategy_superiority_claim'] and not s['real_user_time_measured'] and not c['formal_success_rate_claim'])
 check('old delivery verifiers separately passed',all(read(f'execution/{v}_integrity_recheck_after_step14C.json')['result']=='PASS' for v in ['12R','13','14','15']))
 check('all TXT BOM CRLF',all(q.read_bytes().startswith(b'\xef\xbb\xbf') and b'\n' not in q.read_bytes().replace(b'\r\n',b'') for q in ROOT.rglob('*.txt')))
@@ -89,4 +89,6 @@ value=dict(date='2026-10-16',result='PASS',scope='step14_nonreal_full_framework_
  cross_process_float_audit_tolerance=1e-12,cross_process_max_float_difference=max(roundoff,default=0),
  active_goal_change_grasp_success=False,heldout_grasp_successes=0,real_BCI_trials=0,physical_robot_commands=0,G2_passed=False,G3_passed=False)
 destination='execution/14C_integrity_recheck_after_step15C.json' if p['steps'][14].get('nonreal_migration_completed') else 'execution/14C_integrity_result.json'
+if p['current_step']=='16':
+    destination='execution/14C_integrity_recheck_after_step16.json'
 (ROOT/destination).write_text(json.dumps(value,ensure_ascii=False,indent=2)+'\n',encoding='utf-8');print(json.dumps(value,ensure_ascii=True,indent=2))

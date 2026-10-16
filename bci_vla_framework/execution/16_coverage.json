@@ -1,0 +1,30 @@
+{
+  "scope": "prospective_local_synthetic_replication_not_formal_human_G4",
+  "nonreal_study_completed": true,
+  "local_protocol_locked_before_run": true,
+  "externally_registered": false,
+  "planned_episodes": 6272,
+  "executed_episodes": 6272,
+  "seed_clusters": 32,
+  "cases": 14,
+  "methods": 14,
+  "runtime_errors": 0,
+  "software_tests": 409,
+  "whole_step16_completed": false,
+  "G4_passed": false,
+  "complete_time_overruns": 0,
+  "missing_evaluation_rows": 0,
+  "synthetic_primary_acceptance_passed": false,
+  "real_BCI_trials": 0,
+  "physical_robot_commands": 0,
+  "new_LIBERO_rollouts": 0,
+  "subjective_results": null,
+  "limitations": [
+    "no human power or calibration",
+    "same illustrative generator family previously inspected",
+    "32 seeds are clusters not subjects",
+    "six planning ablations do not remove actual joint-filter implementation",
+    "fixed execution order; CPU timing not causal speed evidence",
+    "no actual robot recovery or complete real migration test"
+  ]
+}

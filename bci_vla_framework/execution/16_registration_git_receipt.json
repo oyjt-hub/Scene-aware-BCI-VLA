@@ -1,0 +1,6 @@
+{
+  "protocol_commit": "917dba0fd89c43286737ed53e36ae26875aa781d",
+  "base_backup_commit": "c39ae1a373bd2a66b289e8c74096677e58eba650",
+  "registration": "local timestamp and Git object only; not external registration",
+  "backup_branch_unchanged": true
+}

@@ -1,7 +1,8 @@
 ﻿BCI–VLA代码与实验记录备份
-日期：2026-10-16；截止步骤15C。
+日期：2026-10-16；截止步骤16非真实复验。
 远程：git@github.com:oyjt-hub/Scene-aware-BCI-VLA.git
-分支：backup/framework-step15c-20261016
+本地工作分支：work/step16-synthetic-20261016
+既有远程备份：backup/framework-step15c-20261016（c39ae1a，保持原快照）
 这是当前本地研究工作区的独立快照分支，未合并或改动远程main。
 
 目录导航
@@ -17,6 +18,8 @@ BACKUP_MANIFEST.json：此次纳入版本控制的文件相对路径、SHA256与
 步骤14C：398项软件测试、35项完整性检查通过。
 步骤15C：401项软件测试、51项完整性检查通过；两种软件输入×两个实际VLA的LIBERO工程矩阵完成。
 实际抓取仍有失败，所有仿真失败保留；真实脑机、真实2×2迁移、实体机器人未开展。G2效用未通过、G3未验证。
+步骤16：409项软件测试通过，6272个锁定新seed合成episode完成；M与同probe B9动作及结局相同，G4策略收益未建立。
+bci_vla_framework/docs/16_G4_report.txt为最新研究判定；这不是新增LIBERO/人体实验。
 
 排除内容与恢复限制
 账密文件、.server-inspect连接辅助目录、编辑器调试目录、论文原稿目录、缓存、虚拟环境、环境密钥及模型权重不上传。

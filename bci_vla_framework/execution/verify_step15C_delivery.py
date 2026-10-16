@@ -73,9 +73,10 @@ for label,folder in coverage['successful_jobs'].items():
   check(label+' executed migration namespace equals local',all(z.read(str(q.relative_to(R)).replace('\\','/'))==q.read_bytes() for q in (R/'bci_vla/simulation_transfer_v4').glob('*.py')))
 check('three new cells plus14C direct StarVLA form software matrix',set(cells)=={('pi05','direct'),('pi05','packet'),('star','packet')} and read('execution/14C_integrity_result.json')['result']=='PASS')
 p=read('execution/progress.json')
-check('nonreal completion scoped separately from real migration',p['current_step']=='15' and p['steps'][14]['nonreal_migration_completed'] and not coverage['real_2x2_completed'] and not coverage['second_real_BCI_tested'] and not coverage['formal_heldout_transfer_claim'])
+check('nonreal completion scoped separately from real migration',p['current_step'] in {'15','16'} and p['steps'][14]['nonreal_migration_completed'] and not coverage['real_2x2_completed'] and not coverage['second_real_BCI_tested'] and not coverage['formal_heldout_transfer_claim'])
 check('research gates unchanged',not p['research_gates']['G2']['research_acceptance_passed'] and p['research_gates']['G3']['status']=='未验证')
 check('all historical checks revalidated separately',all(read(f'execution/{v}_integrity_recheck_after_step15C.json')['result']=='PASS' for v in ['12R','13','14','15','14C']))
 check('TXT BOM CRLF retained',all(q.read_bytes().startswith(b'\xef\xbb\xbf') and b'\n' not in q.read_bytes().replace(b'\r\n',b'') for q in R.rglob('*.txt')))
 v=dict(result='PASS',count=len(checks),checks=checks,software_tests=401,independent_journals=journals,journal_records=records_count,max_float_roundoff=max(differences,default=0),nonreal_matrix_completed=True,real_2x2_completed=False,G2_passed=False,G3_passed=False)
-(R/'execution/15C_integrity_result.json').write_text(json.dumps(v,indent=2)+'\n');print(json.dumps(v,indent=2))
+destination='execution/15C_integrity_recheck_after_step16.json' if p['current_step']=='16' else 'execution/15C_integrity_result.json'
+(R/destination).write_text(json.dumps(v,indent=2)+'\n');print(json.dumps(v,indent=2))

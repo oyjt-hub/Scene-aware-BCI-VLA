@@ -72,7 +72,7 @@ check('videos and endpoint frames retained',all((base/'v4/results'/e['video']).s
 check('adaptation costs recorded without invented human hours',read('execution/15_adaptation_audit.json')['core_and_threshold_changes']==0 and read('execution/15_adaptation_audit.json')['human_engineering_hours'] is None)
 check('missing calibration and holdout not upgraded',not coverage['real_2x2_completed'] and not coverage['full_framework_migration_completed'] and not coverage['independent_consequence_calibration_completed'] and not coverage['formal_held_out_transfer_tested'])
 check('development observations not performance claims',not s['formal_success_rate_claim'] and not read('execution/15_backend_observations.json')['paired_statistical_or_backend_superiority_claim'])
-check('step15 incomplete and research gates unchanged',(p['current_step']=='15' or (p['current_step']=='14' and p['steps'][13].get('nonreal_closed_loop_completed'))) and p['steps'][14]['status']=='进行中' and p['steps'][13]['status']=='进行中' and p['research_gates']['G2']['research_acceptance_passed'] is False and p['research_gates']['G3']['status']=='未验证')
+check('step15 incomplete and research gates unchanged',(p['current_step'] in {'15','16'} or (p['current_step']=='14' and p['steps'][13].get('nonreal_closed_loop_completed'))) and p['steps'][14]['status']=='进行中' and p['steps'][13]['status']=='进行中' and p['research_gates']['G2']['research_acceptance_passed'] is False and p['research_gates']['G3']['status']=='未验证')
 check('old12R13 and14 separately rechecked',all(read(f'execution/{v}_integrity_recheck_after_step15.json')['result']=='PASS' for v in ['12R','13','14']))
 check('all TXT preserve BOM and CRLF',all(q.read_bytes().startswith(b'\xef\xbb\xbf') and b'\n' not in q.read_bytes().replace(b'\r\n',b'') for q in ROOT.rglob('*.txt')))
 value={'date':'2026-10-16','result':'PASS','scope':'step15_replay_and_second_VLA_backend_not_full_migration','count':len(checks),'checks':checks,
@@ -81,4 +81,6 @@ value={'date':'2026-10-16','result':'PASS','scope':'step15_replay_and_second_VLA
 destination='execution/15_integrity_recheck_after_step14C.json' if p['steps'][13].get('nonreal_closed_loop_completed') else 'execution/15_integrity_result.json'
 if p['steps'][14].get('nonreal_migration_completed'):
     destination='execution/15_integrity_recheck_after_step15C.json'
+if p['current_step']=='16':
+    destination='execution/15_integrity_recheck_after_step16.json'
 (ROOT/destination).write_text(json.dumps(value,indent=2)+'\n',encoding='utf-8');print(json.dumps(value,indent=2))

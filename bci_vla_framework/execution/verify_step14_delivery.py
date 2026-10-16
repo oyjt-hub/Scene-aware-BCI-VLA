@@ -56,16 +56,18 @@ check('downloaded artifacts hash match',hashes('runs/pilot_robot_14_libero_simul
 check('all three videos and rendered endpoints retained',all((run/e['video']).stat().st_size>1000 and (run/(e['episode']+'_last.png')).read_bytes().startswith(b'\x89PNG') for e in episodes))
 check('development failures retained separately',read('runs/pilot_robot_14_libero_simulation/v1/orchestration.json')['error'].startswith('RuntimeError') and read('runs/pilot_robot_14_libero_simulation/v2/results/summary.json')['nominal_task_successes']==1)
 check('no paper performance or formal success rate claim',not s['formal_success_rate_claim'] and not coverage['formal_success_rate_claim'] and not s['original_framework_ontology_integrated'])
-check('full framework and real step14 remain unfinished',coverage['full_framework_simulation_completed'] is False and coverage['real_step14_completed'] is False and p['current_step'] in {'14','15'} and p['steps'][13]['status']=='进行中')
+check('full framework and real step14 remain unfinished',coverage['full_framework_simulation_completed'] is False and coverage['real_step14_completed'] is False and p['current_step'] in {'14','15','16'} and p['steps'][13]['status']=='进行中')
 check('research gates not upgraded',p['research_gates']['G2']['research_acceptance_passed'] is False and p['research_gates']['G3']['status']=='未验证')
 check('old reports preserved and separately rechecked',read('execution/13_integrity_result.json')['result']==read('execution/13_integrity_recheck_after_step14.json')['result']==read('execution/12R_integrity_result.json')['result']==read('execution/12R_integrity_recheck_after_step14.json')['result']=='PASS')
 check('all TXT retain BOM CRLF',all(q.read_bytes().startswith(b'\xef\xbb\xbf') and b'\n' not in q.read_bytes().replace(b'\r\n',b'') for q in ROOT.rglob('*.txt')))
 v={'date':'2026-10-16','result':'PASS','scope':'LIBERO_backend_and_guard_delivery_not_full_framework','count':len(checks),'checks':checks,
     'software_tests':376,'simulation_episodes':3,'nominal_task_successes':2,'fault_stop_episodes':1,
     'real_BCI_trials':0,'physical_robot_commands':0,'full_framework_simulation_completed':False,'real_step14_completed':False}
-destination='execution/14_integrity_recheck_after_step15.json' if p['current_step']=='15' else 'execution/14_integrity_result.json'
+destination='execution/14_integrity_recheck_after_step15.json' if p['current_step'] in {'15','16'} else 'execution/14_integrity_result.json'
 if p['steps'][13].get('nonreal_closed_loop_completed'):
     destination='execution/14_integrity_recheck_after_step14C.json'
 if p['steps'][14].get('nonreal_migration_completed'):
     destination='execution/14_integrity_recheck_after_step15C.json'
+if p['current_step']=='16':
+    destination='execution/14_integrity_recheck_after_step16.json'
 (ROOT/destination).write_text(json.dumps(v,indent=2)+'\n',encoding='utf-8');print(json.dumps(v,indent=2))

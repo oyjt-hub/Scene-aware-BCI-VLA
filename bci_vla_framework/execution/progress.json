@@ -1,9 +1,9 @@
 {
   "plan_version": "V2",
   "updated_at": "2026-10-16",
-  "authorization": "做步骤15；沿用无真实BCI、LIBERO仿真范围",
-  "current_step": "15",
-  "current_step_status": "步骤15非真实完整框架迁移工程验收完成；真实迁移未开展",
+  "authorization": "做步骤16；沿用排除真实BCI/机器人范围",
+  "current_step": "16",
+  "current_step_status": "步骤16非真实复验完成；正式G4证据不足",
   "last_completed_step": "12",
   "research_gates": {
     "G1": {
@@ -81,8 +81,20 @@
       "verdict": "非真实软件分支完成，真实G3未验证"
     },
     "G4": {
-      "status": "未开始",
-      "evidence_paths": []
+      "status": "未通过",
+      "evidence_paths": [
+        "docs/16_registered_protocol.txt",
+        "docs/16_G4_report.txt",
+        "execution/16_preregistration.json",
+        "execution/16_coverage.json",
+        "execution/16_integrity_result.json",
+        "runs/registered_step16_synthetic_v1/summary.json"
+      ],
+      "scope": "synthetic_replication_complete_formal_G4_evidence_insufficient",
+      "research_acceptance_passed": false,
+      "formal_real_study_evaluated": false,
+      "nonreal_study_completed": true,
+      "synthetic_verdict": "BENEFIT_NOT_ESTABLISHED"
     }
   },
   "steps": [
@@ -1161,17 +1173,40 @@
       "step_id": "16",
       "title": "正式实验与预注册判定，G4",
       "plan_version": "V2",
-      "status": "未开始",
+      "status": "进行中",
       "depends_on": [
         "13",
         "14",
         "15"
       ],
-      "changed_files": [],
-      "checks": [],
-      "evidence_paths": [],
-      "unresolved": [],
-      "next_action": "按主手册及前置依赖执行"
+      "changed_files": [
+        "bci_vla/study_v1/*.py",
+        "configs/study16.json",
+        "execution/*step16*.py",
+        "tests/test_study_v1.py",
+        "docs/16_*.txt"
+      ],
+      "checks": [
+        "409项软件测试PASS",
+        "本地协议在6272个新seed episode前锁定",
+        "全结果、错误与配对区间保留"
+      ],
+      "evidence_paths": [
+        "docs/16_registered_protocol.txt",
+        "docs/16_G4_report.txt",
+        "execution/16_preregistration.json",
+        "execution/16_coverage.json",
+        "execution/16_integrity_result.json",
+        "runs/registered_step16_synthetic_v1/summary.json"
+      ],
+      "unresolved": [
+        "正式人体pilot/样本量/主观量表未完成",
+        "真实BCI迁移与真实G4前置未满足",
+        "策略收益未建立"
+      ],
+      "next_action": "用户要求步骤17时按负结果与真实证据缺项重构论文贡献，不自动推进人体实验",
+      "nonreal_study_completed": true,
+      "formal_G4_passed": false
     },
     {
       "step_id": "17",

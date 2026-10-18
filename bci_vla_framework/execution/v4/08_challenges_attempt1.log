@@ -1,0 +1,13 @@
+CHALLENGE_STAGE={"method": "Full", "seed": 0, "paired": 0, "paired_n": 8, "alias": 0, "alias_n": 8}
+CHALLENGE_STAGE={"method": "B3_aux", "seed": 0, "paired": 0, "paired_n": 8, "alias": 0, "alias_n": 8}
+CHALLENGE_STAGE={"method": "B4_aux", "seed": 0, "paired": 0, "paired_n": 8, "alias": 0, "alias_n": 8}
+CHALLENGE_STAGE={"method": "B2", "seed": 0, "paired": 0, "paired_n": 8, "alias": 0, "alias_n": 8}
+CHALLENGE_STAGE={"method": "Full", "seed": 1, "paired": 0, "paired_n": 8, "alias": 0, "alias_n": 8}
+CHALLENGE_STAGE={"method": "B3_aux", "seed": 1, "paired": 0, "paired_n": 8, "alias": 0, "alias_n": 8}
+CHALLENGE_STAGE={"method": "B4_aux", "seed": 1, "paired": 0, "paired_n": 8, "alias": 0, "alias_n": 8}
+CHALLENGE_STAGE={"method": "B2", "seed": 1, "paired": 0, "paired_n": 8, "alias": 0, "alias_n": 8}
+CHALLENGE_STAGE={"method": "Full", "seed": 2, "paired": 0, "paired_n": 8, "alias": 0, "alias_n": 8}
+CHALLENGE_STAGE={"method": "B3_aux", "seed": 2, "paired": 0, "paired_n": 8, "alias": 0, "alias_n": 8}
+CHALLENGE_STAGE={"method": "B4_aux", "seed": 2, "paired": 0, "paired_n": 8, "alias": 0, "alias_n": 8}
+CHALLENGE_STAGE={"method": "B2", "seed": 2, "paired": 0, "paired_n": 8, "alias": 0, "alias_n": 8}
+CHALLENGE_RESULT={"status": "DEVELOPMENT_CHALLENGES_COMPLETE", "error": null, "elapsed_s": 162.20459371595643}

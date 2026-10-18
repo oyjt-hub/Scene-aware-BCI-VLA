@@ -1,0 +1,111 @@
+{
+  "source_zip_sha256": "752471c90b4958d536abe3066270fb993fb9f8ef8da7b90485c3350ebd4e28ce",
+  "cases": [
+    {
+      "source": "results/online_audit/5d1f6264a4adb79b3e423b36_both_change.json",
+      "summary": {
+        "split": "calibration_audit",
+        "policy_id": "fixed_i4_c4_recheck",
+        "group_id": "f52e2e1abd05724127c1",
+        "episode_id": "5d1f6264a4adb79b3e423b36",
+        "scenario": "both_change",
+        "resolved_correctly": false,
+        "wrong_submission": true,
+        "wrong_submission_count": 1,
+        "submission_count": 1,
+        "questions": 11,
+        "probes": 5,
+        "intent_queries": 1,
+        "task_queries": 4,
+        "confirmations": 1,
+        "waits": 1,
+        "no_responses": 2,
+        "rejects": 0,
+        "interaction_cost": 24.0,
+        "cost_units": "simulated seconds; each question or wait slot charged 2s",
+        "VLA_called": false,
+        "real_dynamics_advanced": false
+      },
+      "timeline": [
+        {
+          "at_s": 0.0,
+          "action": "PROBE",
+          "reason": "CHANNEL_CHECK_REQUIRED",
+          "observed_role": "PROBE",
+          "selected": "o1"
+        },
+        {
+          "at_s": 2.0,
+          "action": "PROBE",
+          "reason": "CHANNEL_CHECK_REQUIRED",
+          "observed_role": "PROBE",
+          "selected": "o1"
+        },
+        {
+          "at_s": 4.0,
+          "action": "PROBE",
+          "reason": "CHANNEL_CHECK_REQUIRED",
+          "observed_role": "PROBE",
+          "selected": "o0"
+        },
+        {
+          "at_s": 6.0,
+          "action": "TASK",
+          "reason": "FRESH_TASK_EVIDENCE_REQUIRED",
+          "observed_role": "TASK",
+          "selected": "o0"
+        },
+        {
+          "at_s": 8.0,
+          "action": "INTENT_QUERY",
+          "reason": "FRESH_SELECTION_CONSISTENCY_REQUIRED",
+          "observed_role": "INTENT_QUERY",
+          "selected": "o0"
+        },
+        {
+          "at_s": 10.0,
+          "action": "PROBE",
+          "reason": "POST_SELECTION_CHANNEL_CERTIFICATE_REQUIRED",
+          "observed_role": "PROBE",
+          "selected": "o0"
+        },
+        {
+          "at_s": 12.0,
+          "action": "PROBE",
+          "reason": "POST_SELECTION_CHANNEL_CERTIFICATE_REQUIRED",
+          "observed_role": "PROBE",
+          "selected": "o1"
+        },
+        {
+          "at_s": 14.0,
+          "action": "CONFIRM",
+          "reason": "CONFIRM_EXACT_TASK_SUGGESTION",
+          "observed_role": "CONFIRM",
+          "selected": "accept"
+        },
+        {
+          "at_s": 16.0,
+          "action": "TASK",
+          "reason": "FRESH_TASK_EVIDENCE_REQUIRED",
+          "observed_role": "NO_RESPONSE",
+          "selected": null
+        },
+        {
+          "at_s": 18.0,
+          "action": "TASK",
+          "reason": "FRESH_TASK_EVIDENCE_REQUIRED",
+          "observed_role": "NO_RESPONSE",
+          "selected": null
+        },
+        {
+          "at_s": 20.0,
+          "action": "TASK",
+          "reason": "FRESH_TASK_EVIDENCE_REQUIRED",
+          "observed_role": "TASK",
+          "selected": "o0"
+        }
+      ]
+    }
+  ],
+  "finding": "Two post-selection known-target checks can both succeed before a wrong noisy confirmation; strengthened protocol requires three checks with time windows sufficient for that protocol. All checks use public receipts only."
+}

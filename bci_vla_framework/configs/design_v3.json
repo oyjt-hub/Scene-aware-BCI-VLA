@@ -1,0 +1,53 @@
+{
+  "version": "V3-design-1",
+  "status": "design_only_not_implemented",
+  "name": "scene_and_interaction_evidence_query_network",
+  "architecture": {
+    "hidden_dim": 256,
+    "heads": 4,
+    "fusion_blocks": 2,
+    "ffn_dim": 1024,
+    "queries": 8,
+    "history_events": 8,
+    "max_objects": 16,
+    "object_encoder": "frozen ROI/semantic features + box + typed selection evidence -> projection",
+    "history_encoder": "one temporal Transformer layer with role/time/version masks",
+    "fusion": "query self-attention -> object cross-attention -> history cross-attention -> FFN",
+    "outputs": [
+      "K soft evidence prefix tokens",
+      "candidate-instance/unknown pointer",
+      "clarification proposal"
+    ],
+    "injection": "pi05 high-level VLM inputs_embeds only in first prototype",
+    "action_expert_modified": false
+  },
+  "defaults_are_unvalidated": true,
+  "new_weights_available": false,
+  "new_network_implemented": false,
+  "evidence_sources": [
+    "privileged LIBERO or annotated scene for early prototype",
+    "Florence/SAM front-end after separate verification",
+    "synthetic BCI until real calibration exists"
+  ],
+  "hierarchy": [
+    "object selection evidence",
+    "propose main-task candidates",
+    "explicit user confirmation",
+    "semantic subtask",
+    "action expert",
+    "independent endpoint"
+  ],
+  "backbone_text_generation_capability_verified": false,
+  "V2_research_gates_upgraded": false,
+  "baseline_requirements": [
+    "same-information text",
+    "pooled MLP prefix",
+    "standard query connector",
+    "Full matched training and supervision controls"
+  ],
+  "literature": [
+    "https://arxiv.org/abs/2504.16054",
+    "https://arxiv.org/abs/2301.12597",
+    "https://arxiv.org/abs/2103.03206"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "version": "V4-03R-language-1",
+  "capability_audit": "execution/v4/03R_text_capability.json",
+  "base_checkpoint_sha256": "4616e4c1966a5fb063b442ea5d69857f45e873222d839b794634d87d252ab9e7",
+  "adapter_sha256": "c1dbc8bd23e8e2590ac2670839a068d82423aa0c4620e734d2d99618afaec380",
+  "local_adapter": "D:\\Scene_Aware\\bci_vla_framework\\artifacts\\v4\\high_level_lora\\step240.safetensors",
+  "remote_adapter": "/home/oyjt/Scene-aware-BCI-VLA-runs/v4_step03R_language_20261017_v1/high_level_lora_step240.safetensors",
+  "rank": 16,
+  "alpha": 32,
+  "targets": [
+    "q_proj",
+    "v_proj",
+    "o_proj"
+  ],
+  "default_enabled": false,
+  "runtime": "keep original BF16 low-level configuration; FP32 used only for isolated math audit",
+  "high_level_call": "load exact base then install_high_level_lora; copy matching A/B tensors from safetensors; freeze; use high_level_scope only around the high-level call",
+  "low_level_call": "adapters must be disabled; serial ownership/locking and real action regression remain required before deployment",
+  "LoRA_scope_note": "shared PaliGemma language layers are adapted conditionally, not a change to action-expert architecture",
+  "all_baselines_same_high_level_initialization": true,
+  "all_baselines_common_language_train_steps": 240,
+  "comparison_training_budget_unfrozen": true,
+  "no_interaction_connector_training_in_this_pilot": true
+}

@@ -1,0 +1,650 @@
+{
+  "step": "V4-02",
+  "scope": "synthetic contract/software checks only; no model inference, training or real devices",
+  "status": "PASS",
+  "checks": 128,
+  "passed": 128,
+  "failed": 0,
+  "results": [
+    {
+      "name": "valid:public_input.json",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "neural_view:public_input.json",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "valid:empty_scene_and_history.json",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "neural_view:empty_scene_and_history.json",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "valid:missing_roi_feature.json",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "neural_view:missing_roi_feature.json",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "valid:no_response_retains_probe_role.json",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "neural_view:no_response_retains_probe_role.json",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "valid:mapping_change_invalidates_old_evidence.json",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "neural_view:mapping_change_invalidates_old_evidence.json",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "valid:stop_clears_task.json",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "neural_view:stop_clears_task.json",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "valid:cancel_clears_task.json",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "neural_view:cancel_clears_task.json",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "valid:confirmed_task_survives_nine_probes.json",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "neural_view:confirmed_task_survives_nine_probes.json",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "valid:object_reorder_with_alias_binding.json",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "neural_view:object_reorder_with_alias_binding.json",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "valid:expired_task_evidence.json",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "neural_view:expired_task_evidence.json",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "valid:reject_clears_task.json",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "neural_view:reject_clears_task.json",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "valid:private_labels.json",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "valid:private_labels_alias_variant.json",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "valid:module_output",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "valid:target_outside_candidates_output.json",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "valid:missing_action_slot_output.json",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "valid:abstain_without_missing_slot_output.json",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "reject:hidden_label_in_public",
+      "passed": true,
+      "detail": "shape:unexpected_field:$"
+    },
+    {
+      "name": "reject:hidden_label_in_object",
+      "passed": true,
+      "detail": "shape:unexpected_field:$.scene.objects[0]"
+    },
+    {
+      "name": "reject:probability_without_calibration",
+      "passed": true,
+      "detail": "evidence:invalid_probability_mass"
+    },
+    {
+      "name": "valid:scoped_probability_fixture",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "reject:calibration_roles",
+      "passed": true,
+      "detail": "evidence:calibration_scope_mismatch"
+    },
+    {
+      "name": "reject:calibration_mapping_revision",
+      "passed": true,
+      "detail": "evidence:calibration_scope_mismatch"
+    },
+    {
+      "name": "reject:calibration_layout_id",
+      "passed": true,
+      "detail": "evidence:calibration_scope_mismatch"
+    },
+    {
+      "name": "reject:calibration_valid_until_s",
+      "passed": true,
+      "detail": "evidence:calibration_scope_mismatch"
+    },
+    {
+      "name": "reject:probability_mass",
+      "passed": true,
+      "detail": "evidence:invalid_probability_mass"
+    },
+    {
+      "name": "valid:hard_label_not_probability",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "reject:hard_label_fraction",
+      "passed": true,
+      "detail": "evidence:hard_label_encoding"
+    },
+    {
+      "name": "reject:duplicate_alias",
+      "passed": true,
+      "detail": "scene:duplicate_alias"
+    },
+    {
+      "name": "reject:duplicate_instance",
+      "passed": true,
+      "detail": "scene:duplicate_instance"
+    },
+    {
+      "name": "reject:box_order",
+      "passed": true,
+      "detail": "scene:box_order"
+    },
+    {
+      "name": "reject:missing_feature_mask",
+      "passed": true,
+      "detail": "scene:feature_mask_mismatch"
+    },
+    {
+      "name": "reject:feature_dimension",
+      "passed": true,
+      "detail": "scene:feature_dimension_mismatch"
+    },
+    {
+      "name": "reject:feature_nan",
+      "passed": true,
+      "detail": "shape:anyOf:$.scene.objects[0].roi_feature"
+    },
+    {
+      "name": "reject:too_many_objects",
+      "passed": true,
+      "detail": "shape:array_length:$.scene.objects"
+    },
+    {
+      "name": "reject:invented_truncation",
+      "passed": true,
+      "detail": "scene:truncation_policy"
+    },
+    {
+      "name": "reject:duplicate_event",
+      "passed": true,
+      "detail": "history:duplicate_event"
+    },
+    {
+      "name": "reject:history_overflow",
+      "passed": true,
+      "detail": "shape:array_length:$.history"
+    },
+    {
+      "name": "reject:current_event_not_last",
+      "passed": true,
+      "detail": "history:current_event_not_last_once"
+    },
+    {
+      "name": "reject:future_event",
+      "passed": true,
+      "detail": "history:order"
+    },
+    {
+      "name": "reject:expired_response_claimed_valid",
+      "passed": true,
+      "detail": "event:invalid_validity_claim"
+    },
+    {
+      "name": "reject:unacknowledged_presentation",
+      "passed": true,
+      "detail": "event:invalid_validity_claim"
+    },
+    {
+      "name": "reject:stale_mapping",
+      "passed": true,
+      "detail": "diagnostics:stale_context"
+    },
+    {
+      "name": "reject:probe_as_task_selection",
+      "passed": true,
+      "detail": "selection:diagnostic_or_invalid_not_intent"
+    },
+    {
+      "name": "reject:invented_diagnostic_counts",
+      "passed": true,
+      "detail": "diagnostics:invented_statistics"
+    },
+    {
+      "name": "reject:one_probe_sufficient",
+      "passed": true,
+      "detail": "diagnostics:insufficient_evidence_claim"
+    },
+    {
+      "name": "reject:missing_original_role",
+      "passed": true,
+      "detail": "event:no_response_lost_original_role"
+    },
+    {
+      "name": "reject:no_response_selected",
+      "passed": true,
+      "detail": "evidence:no_response_cannot_select"
+    },
+    {
+      "name": "valid:timeout_recorded_after_deadline",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "reject:confirmation_task_version_mismatch",
+      "passed": true,
+      "detail": "state:confirmation_proof_mismatch"
+    },
+    {
+      "name": "reject:future_confirmation_receipt",
+      "passed": true,
+      "detail": "event:future_or_reversed_time"
+    },
+    {
+      "name": "transition:reject_clears_task",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "reject:reject_kept_confirmed_task",
+      "passed": true,
+      "detail": "state:control_did_not_clear"
+    },
+    {
+      "name": "reject:expired_diagnostics_claim_sufficient",
+      "passed": true,
+      "detail": "diagnostics:insufficient_evidence_claim"
+    },
+    {
+      "name": "valid:expired_summary_no_probability",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "valid:pending_question",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "reject:expired_pending_question",
+      "passed": true,
+      "detail": "question:invalid_time_window"
+    },
+    {
+      "name": "reject:answered_pending_question",
+      "passed": true,
+      "detail": "state:pending_question_expired_or_future"
+    },
+    {
+      "name": "valid:direct_stop",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "reject:control_original_role_stop",
+      "passed": true,
+      "detail": "control:not_validated_control_event"
+    },
+    {
+      "name": "reject:control_kept_task_stop",
+      "passed": true,
+      "detail": "state:stop_did_not_clear"
+    },
+    {
+      "name": "valid:direct_cancel",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "reject:control_original_role_cancel",
+      "passed": true,
+      "detail": "control:not_validated_control_event"
+    },
+    {
+      "name": "reject:control_kept_task_cancel",
+      "passed": true,
+      "detail": "state:control_did_not_clear"
+    },
+    {
+      "name": "reject:stop_not_latched",
+      "passed": true,
+      "detail": "state:stop_not_latched"
+    },
+    {
+      "name": "reject:private_binding",
+      "passed": true,
+      "detail": "labels:public_binding"
+    },
+    {
+      "name": "reject:ambiguous_point_label",
+      "passed": true,
+      "detail": "labels:unidentifiable_point_target"
+    },
+    {
+      "name": "reject:unobservable_intent_supervision",
+      "passed": true,
+      "detail": "labels:unobservable_intent_must_be_masked"
+    },
+    {
+      "name": "reject:unsupported_channel_target",
+      "passed": true,
+      "detail": "labels:channel_target_not_supported"
+    },
+    {
+      "name": "valid:supported_future_channel_label_private_only",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "reject:channel_label_outside_horizon",
+      "passed": true,
+      "detail": "labels:channel_target_outside_horizon"
+    },
+    {
+      "name": "reject:teacher_binding",
+      "passed": true,
+      "detail": "labels:teacher_input_binding"
+    },
+    {
+      "name": "reject:output_binding",
+      "passed": true,
+      "detail": "output:stale_input_binding"
+    },
+    {
+      "name": "reject:prefix_shape",
+      "passed": true,
+      "detail": "output:prefix_shape_mismatch"
+    },
+    {
+      "name": "reject:raw_channel_queries",
+      "passed": true,
+      "detail": "shape:const:$.soft_prefix.raw_channel_queries_included"
+    },
+    {
+      "name": "reject:intent_probability_mass",
+      "passed": true,
+      "detail": "output:intent_mass"
+    },
+    {
+      "name": "reject:candidate_axis",
+      "passed": true,
+      "detail": "output:candidate_axis_mismatch"
+    },
+    {
+      "name": "reject:unsupported_reliability",
+      "passed": true,
+      "detail": "output:unsupported_reliability_probability"
+    },
+    {
+      "name": "reject:wrong_clarification_role",
+      "passed": true,
+      "detail": "output:wrong_clarification_role"
+    },
+    {
+      "name": "reject:module_execution_authority",
+      "passed": true,
+      "detail": "shape:const:$.control.execution_authorized"
+    },
+    {
+      "name": "reject:raw_robot_command",
+      "passed": true,
+      "detail": "shape:type:$.control.raw_robot_command"
+    },
+    {
+      "name": "reject:second_question_before_answer",
+      "passed": true,
+      "detail": "output:pending_question_requires_wait"
+    },
+    {
+      "name": "transition:identity",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "transition:mapping_invalidation",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "reject:probe_cleared_confirmed_task",
+      "passed": true,
+      "detail": "transition:nonconfirmation_changed_task"
+    },
+    {
+      "name": "reject:stop_unlatched",
+      "passed": true,
+      "detail": "transition:stop_cannot_unlatch"
+    },
+    {
+      "name": "reject:new_task_without_confirmation",
+      "passed": true,
+      "detail": "transition:nonconfirmation_changed_task"
+    },
+    {
+      "name": "invariance:score_row_reordering",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "invariance:object_row_reordering",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "invariance:probe_object_identity_removed",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "invariance:hidden_goal_changes_not_training_target",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "equivariance:alias_renaming_tracks_selection",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "allowlist:no_sample_id",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\BCI_VLA框架_意图更新与澄清_执行计划_V4.txt",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\configs\\design_v4.json",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\progress.json",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v3_plan_progress.json",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\protocols.py",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\contracts\\records.py",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\contracts\\session.py",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_acceptance.json",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_source_manifest.json",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_git_before.json",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_remote_inventory.json",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_remote_supplement.json",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_remote_paths.json",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_workspace_weights.json",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_candidate_weights.json",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_local_environment.json",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_local_sources.json",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_literature.json",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_command_log.json",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_inventory.json",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\docs\\v4\\01_scope_and_overlap.txt",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\handoff.txt",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\inspect_assets_step01.py",
+      "passed": true,
+      "detail": "accepted"
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\finalize_step01.py",
+      "passed": true,
+      "detail": "accepted"
+    }
+  ]
+}

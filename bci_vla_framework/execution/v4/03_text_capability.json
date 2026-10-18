@@ -1,0 +1,369 @@
+{
+  "step_id": "V4-03",
+  "audit_status": "COMPLETE_WITH_CAPABILITY_GAPS",
+  "selected_probe": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_text_probe_precision_raw.json",
+  "checkpoint": "/home/oyjt/workspace/RLinf-RECAP/models/baseline_sft/RLinf-Pi05-LIBERO-SFT/model.safetensors",
+  "checkpoint_bytes": 7473091464,
+  "full_checkpoint_hash_verified": false,
+  "vlm_hidden_size": 2048,
+  "planned_prefix_shape": [
+    "B",
+    8,
+    2048
+  ],
+  "source_only_interface_available": true,
+  "runtime_completed": true,
+  "text_loss_and_decode_engineering_pass": true,
+  "cache_check": {
+    "name": "cache_position_and_causal_mask",
+    "max_abs_logit_difference": 0.25,
+    "tolerance": 0.25,
+    "within_tolerance": true,
+    "future_answer_first_logit_difference": 0.125,
+    "label_shift": "logits at prefix last position predict first target token; each answer position predicts next; EOS included"
+  },
+  "case_outputs": [
+    {
+      "name": "main_task",
+      "generated_text": " 1000",
+      "target_fixture": "Pick up OBJ_0.",
+      "exact_fixture_match": false,
+      "loss": 4.646833896636963,
+      "stopped_at_eos": true,
+      "tokens_per_second": 57.88927590908859
+    },
+    {
+      "name": "next_subtask",
+      "generated_text": " 00000000000000000000000000000000000000000000000",
+      "target_fixture": "Pick up OBJ_0.",
+      "exact_fixture_match": false,
+      "loss": 4.956912517547607,
+      "stopped_at_eos": false,
+      "tokens_per_second": 59.58700233873828
+    },
+    {
+      "name": "next_after_grasp",
+      "generated_text": " 00000000000000000000000000000000000000000000000",
+      "target_fixture": "Place OBJ_0 into OBJ_2.",
+      "exact_fixture_match": false,
+      "loss": 5.20111083984375,
+      "stopped_at_eos": false,
+      "tokens_per_second": 59.349587560350564
+    },
+    {
+      "name": "same_class_instance",
+      "generated_text": " 1",
+      "target_fixture": "OBJ_1.",
+      "exact_fixture_match": false,
+      "loss": 2.813509702682495,
+      "stopped_at_eos": true,
+      "tokens_per_second": 58.91557528561823
+    }
+  ],
+  "high_level_main_task_gate": "NOT_PASSED_ON_DEVELOPMENT_PROBES",
+  "high_level_subtask_gate": "NOT_PASSED_ON_DEVELOPMENT_PROBES",
+  "same_class_low_level_grounding_gate": "NOT_VERIFIED",
+  "image_probe_source": "synthetic constant zero/one normalized images only",
+  "external_llm_used": false,
+  "training_run": false,
+  "action_sampling_run": false,
+  "real_eeg": false,
+  "physical_robot": false,
+  "gaps": [
+    "At least one greedy development answer differs from its expected fixture; review raw outputs, do not promote planning capability.",
+    "No verified main-task/subtask language-supervision ledger for this checkpoint.",
+    "Synthetic images and explicit text fixtures cannot establish scene-grounded planning.",
+    "OBJ_i text correctness cannot establish same-class low-level instance grounding.",
+    "Text backward/LoRA training, long-context cache, interaction prefix gradients and action regressions have not been tested."
+  ],
+  "integration_branch": {
+    "preferred": "Same PaliGemma VLM: add separate causal text entry and observable high-level supervision; evaluate high-level LoRA before interaction prefix integration.",
+    "alternative_not_selected": "A verified text-capable checkpoint or separate VLM, explicitly report changed model boundary and compute.",
+    "training_budget": "unmeasured; requires development data and pilot, not inferred from inference speed",
+    "steps_allowed_without_gate": [
+      "V4-04 dataset protocol/development fixtures",
+      "V4-06 CPU module"
+    ],
+    "steps_gated": [
+      "V4-07 integration success claim",
+      "end-to-end text training/closed-loop high-level success"
+    ]
+  },
+  "runtime_stages": [
+    {
+      "name": "runtime_source",
+      "gemma_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step15C_full_20261016_v1/deps/transformers/models/gemma/modeling_gemma.py",
+      "gemma_sha256": "17eeb54e277939e58cd6f8a92719a275e36baf0c9f463b2754227d42f87aedde"
+    },
+    {
+      "name": "skeleton_constructed",
+      "seconds": 3.0822579911909997,
+      "random_init_skipped": true
+    },
+    {
+      "name": "checkpoint_declared_weight_tie",
+      "alias": "paligemma_with_expert.paligemma.model.language_model.embed_tokens.weight",
+      "source": "paligemma_with_expert.paligemma.lm_head.weight",
+      "metadata_verified": true
+    },
+    {
+      "name": "strict_checkpoint_load",
+      "seconds": 5.35180699522607,
+      "torch_version": "2.7.1+cu126",
+      "device_name": "NVIDIA GeForce RTX 4090",
+      "vlm_dim": 2048
+    },
+    {
+      "name": "synthetic_image_path",
+      "shape": [
+        1,
+        256,
+        2048
+      ],
+      "finite": true,
+      "black_white_max_difference": 24.5,
+      "semantic_image_evidence": false
+    },
+    {
+      "name": "causal_precision_controls",
+      "identical_input_repeat_max_diff": 0.125,
+      "masked_future_change_max_diff": 0.125,
+      "unmasked_future_negative_control_max_diff": 2.75
+    },
+    {
+      "name": "main_task",
+      "prompt": "Objects: OBJ_0 blue cup; OBJ_1 red cup; OBJ_2 tray. User selected OBJ_0. Propose a main task using the selected object.\nAnswer:",
+      "target_fixture": "Pick up OBJ_0.",
+      "target_includes_eos": true,
+      "target_tokens": [
+        21585,
+        908,
+        135648,
+        235298,
+        235276,
+        235265,
+        1
+      ],
+      "teacher_forcing_loss": 4.646833896636963,
+      "loss_finite": true,
+      "generated_ids": [
+        235248,
+        235274,
+        235276,
+        235276,
+        235276,
+        1
+      ],
+      "generated_text": " 1000",
+      "stopped_at_eos": true,
+      "max_new_tokens": 48,
+      "seconds": 0.10364614007994533,
+      "tokens_per_second": 57.88927590908859
+    },
+    {
+      "name": "cache_position_and_causal_mask",
+      "max_abs_logit_difference": 0.25,
+      "tolerance": 0.25,
+      "within_tolerance": true,
+      "future_answer_first_logit_difference": 0.125,
+      "label_shift": "logits at prefix last position predict first target token; each answer position predicts next; EOS included"
+    },
+    {
+      "name": "cache_argmax_control",
+      "cached_argmax": 235274,
+      "full_argmax": 235274,
+      "argmax_agrees": true
+    },
+    {
+      "name": "next_subtask",
+      "prompt": "Confirmed task: put OBJ_0 into OBJ_2. Current state: OBJ_0 is on the table and the gripper is empty. What is the next subtask?\nAnswer:",
+      "target_fixture": "Pick up OBJ_0.",
+      "target_includes_eos": true,
+      "target_tokens": [
+        21585,
+        908,
+        135648,
+        235298,
+        235276,
+        235265,
+        1
+      ],
+      "teacher_forcing_loss": 4.956912517547607,
+      "loss_finite": true,
+      "generated_ids": [
+        235248,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276
+      ],
+      "generated_text": " 00000000000000000000000000000000000000000000000",
+      "stopped_at_eos": false,
+      "max_new_tokens": 48,
+      "seconds": 0.8055448019877076,
+      "tokens_per_second": 59.58700233873828
+    },
+    {
+      "name": "next_after_grasp",
+      "prompt": "Confirmed task: put OBJ_0 into OBJ_2. Current state: the gripper holds OBJ_0. What is the next subtask?\nAnswer:",
+      "target_fixture": "Place OBJ_0 into OBJ_2.",
+      "target_includes_eos": true,
+      "target_tokens": [
+        14476,
+        135648,
+        235298,
+        235276,
+        1280,
+        135648,
+        235298,
+        235284,
+        235265,
+        1
+      ],
+      "teacher_forcing_loss": 5.20111083984375,
+      "loss_finite": true,
+      "generated_ids": [
+        235248,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276,
+        235276
+      ],
+      "generated_text": " 00000000000000000000000000000000000000000000000",
+      "stopped_at_eos": false,
+      "max_new_tokens": 48,
+      "seconds": 0.8087672041729093,
+      "tokens_per_second": 59.349587560350564
+    },
+    {
+      "name": "same_class_instance",
+      "prompt": "Objects: OBJ_0 blue cup on the left; OBJ_1 red cup on the right. User selected OBJ_1. Which object should be picked up?\nAnswer:",
+      "target_fixture": "OBJ_1.",
+      "target_includes_eos": true,
+      "target_tokens": [
+        45171,
+        235298,
+        235274,
+        235265,
+        1
+      ],
+      "teacher_forcing_loss": 2.813509702682495,
+      "loss_finite": true,
+      "generated_ids": [
+        235248,
+        235274,
+        1
+      ],
+      "generated_text": " 1",
+      "stopped_at_eos": true,
+      "max_new_tokens": 48,
+      "seconds": 0.050920320907607675,
+      "tokens_per_second": 58.91557528561823
+    },
+    {
+      "name": "memory",
+      "peak_allocated_bytes": 7570171392,
+      "allocated_bytes": 7524775936
+    }
+  ],
+  "precision_controls": {
+    "name": "causal_precision_controls",
+    "identical_input_repeat_max_diff": 0.125,
+    "masked_future_change_max_diff": 0.125,
+    "unmasked_future_negative_control_max_diff": 2.75
+  },
+  "cache_argmax_control": {
+    "name": "cache_argmax_control",
+    "cached_argmax": 235274,
+    "full_argmax": 235274,
+    "argmax_agrees": true
+  },
+  "strict_numeric_equivalence_confirmed": false,
+  "numeric_scope": "Short-sequence BF16 coarse logit tolerance only. Single-position head readout vs batched teacher-forcing head can change GEMM rounding; no strict equivalence claim."
+}

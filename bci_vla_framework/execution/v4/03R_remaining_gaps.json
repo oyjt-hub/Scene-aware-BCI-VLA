@@ -1,0 +1,22 @@
+{
+  "closed_in_restricted_protocol": [
+    "native high-level text/alias generation after explicit LoRA",
+    "teacher-forcing/EOS/position/cache causal control",
+    "conditional next-subtask semantics with public state",
+    "reload/off-path regression and immutable base checkpoint"
+  ],
+  "not_closed": [
+    "This is a restricted protocol language gate, not general scene-grounded planning or learned BCI intent inference.",
+    "Main task is demonstrated for an explicitly available pick action with a selected object; unspecified action asks for clarification. Arbitrary main-task/place proposals are not established.",
+    "Next-subtask checks condition on explicit confirmed pick/put task and known public gripper state; the model is not shown to infer grasp state from RGB alone.",
+    "High-level alias correctness does not verify same-class low-level target reaching; that original gate remains NOT_VERIFIED.",
+    "Only two legacy calibration endpoint images support the actual held-state check; eight prompt/alias variants are not eight independent rollouts.",
+    "120 validation prompts use eight frozen LIBERO episodes from two scene groups; template variants are correlated development cases, not independent task-success trials.",
+    "BF16 maximum teacher/cache logit difference is .9375 despite matching greedy argmax; strict BF16 equivalence is NOT claimed. FP32 isolated math control is not a low-level deployment precision change.",
+    "The Step06 interaction connector remains untrained; it was absent from this language pilot. No internal interaction prefix has been accepted on the real model yet.",
+    "No new LIBERO dynamics, placing rollout, EEG, physical action or formal test was run. V4-04 interaction training-data gaps remain.",
+    "All future B2/B3/B4/Full comparisons must use the same high-level language initialization/budget; do not attribute this common LoRA language gain to the interaction connector.",
+    "High-level-only LoRA is disabled by default and scope-restored, but shared-model concurrency/real action regression must still be verified in Step07/11 before mixed use."
+  ],
+  "must_not_claim": "general planner, visual-only grasp recognition, BCI denoising success, same-class low-level execution, complete VLA closed loop or independent formal-test gains"
+}

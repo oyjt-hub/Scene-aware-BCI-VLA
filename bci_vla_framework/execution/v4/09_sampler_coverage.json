@@ -1,0 +1,92 @@
+{
+  "150": {
+    "steps": 150,
+    "distinct_rows": 150,
+    "family_steps": {
+      "noisy_ambiguous": 16,
+      "conflicting_declarations": 17,
+      "declared_pick": 18,
+      "missing_source": 19,
+      "next_pick_symbolic": 19,
+      "missing_action": 22,
+      "missing_destination": 21,
+      "no_response": 18
+    },
+    "complete_choice_groups_seen": 0,
+    "choice_groups": 72,
+    "complete_alias_pairs_seen": 0,
+    "alias_pairs": 96
+  },
+  "300": {
+    "steps": 300,
+    "distinct_rows": 215,
+    "family_steps": {
+      "noisy_ambiguous": 40,
+      "conflicting_declarations": 37,
+      "declared_pick": 36,
+      "missing_source": 40,
+      "next_pick_symbolic": 35,
+      "missing_action": 40,
+      "missing_destination": 37,
+      "no_response": 35
+    },
+    "complete_choice_groups_seen": 2,
+    "choice_groups": 72,
+    "complete_alias_pairs_seen": 4,
+    "alias_pairs": 96
+  },
+  "600": {
+    "steps": 600,
+    "distinct_rows": 286,
+    "family_steps": {
+      "noisy_ambiguous": 74,
+      "conflicting_declarations": 75,
+      "declared_pick": 72,
+      "missing_source": 78,
+      "next_pick_symbolic": 75,
+      "missing_action": 75,
+      "missing_destination": 75,
+      "no_response": 76
+    },
+    "complete_choice_groups_seen": 13,
+    "choice_groups": 72,
+    "complete_alias_pairs_seen": 13,
+    "alias_pairs": 96
+  },
+  "1200": {
+    "steps": 1200,
+    "distinct_rows": 381,
+    "family_steps": {
+      "noisy_ambiguous": 153,
+      "conflicting_declarations": 151,
+      "declared_pick": 147,
+      "missing_source": 149,
+      "next_pick_symbolic": 151,
+      "missing_action": 148,
+      "missing_destination": 150,
+      "no_response": 151
+    },
+    "complete_choice_groups_seen": 44,
+    "choice_groups": 72,
+    "complete_alias_pairs_seen": 47,
+    "alias_pairs": 96
+  },
+  "2400": {
+    "steps": 2400,
+    "distinct_rows": 432,
+    "family_steps": {
+      "noisy_ambiguous": 303,
+      "conflicting_declarations": 299,
+      "declared_pick": 303,
+      "missing_source": 298,
+      "next_pick_symbolic": 300,
+      "missing_action": 299,
+      "missing_destination": 302,
+      "no_response": 296
+    },
+    "complete_choice_groups_seen": 72,
+    "choice_groups": 72,
+    "complete_alias_pairs_seen": 96,
+    "alias_pairs": 96
+  }
+}

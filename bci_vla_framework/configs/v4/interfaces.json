@@ -1,0 +1,1555 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:bci-vla:interaction:4.0",
+  "title": "V4-02 synthetic public/private/output interface contract",
+  "$defs": {
+    "context": {
+      "type": "object",
+      "properties": {
+        "session_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "scene_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "scene_revision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "mapping_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "mapping_revision": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "session_id",
+        "scene_id",
+        "scene_revision",
+        "mapping_id",
+        "mapping_revision"
+      ],
+      "additionalProperties": false
+    },
+    "task": {
+      "type": "object",
+      "properties": {
+        "task_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "task_revision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "suggestion_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "context": {
+          "$ref": "#/$defs/context"
+        },
+        "action": {
+          "enum": [
+            "pick",
+            "place"
+          ]
+        },
+        "source_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "destination_id": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128
+            }
+          ]
+        },
+        "valid_until_s": {
+          "type": "number",
+          "minimum": 0
+        },
+        "capability_verified": {
+          "const": false
+        }
+      },
+      "required": [
+        "task_id",
+        "task_revision",
+        "suggestion_id",
+        "context",
+        "action",
+        "source_id",
+        "destination_id",
+        "valid_until_s",
+        "capability_verified"
+      ],
+      "additionalProperties": false
+    },
+    "option": {
+      "type": "object",
+      "properties": {
+        "option_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "symbol": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "kind": {
+          "enum": [
+            "OBJECT",
+            "TASK",
+            "DIAGNOSTIC",
+            "DECISION"
+          ]
+        },
+        "reference": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        }
+      },
+      "required": [
+        "option_id",
+        "symbol",
+        "kind",
+        "reference"
+      ],
+      "additionalProperties": false
+    },
+    "question": {
+      "type": "object",
+      "properties": {
+        "question_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "role": {
+          "enum": [
+            "TASK",
+            "INTENT_QUERY",
+            "PROBE",
+            "CONFIRM"
+          ]
+        },
+        "context": {
+          "$ref": "#/$defs/context"
+        },
+        "layout_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "issued_at_s": {
+          "type": "number",
+          "minimum": 0
+        },
+        "expires_at_s": {
+          "type": "number",
+          "minimum": 0
+        },
+        "presentation_ack": {
+          "type": "boolean"
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/option"
+          },
+          "minItems": 1,
+          "maxItems": 16
+        },
+        "diagnostic_option_id": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128
+            }
+          ]
+        },
+        "proposal": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/$defs/task"
+            }
+          ]
+        }
+      },
+      "required": [
+        "question_id",
+        "role",
+        "context",
+        "layout_id",
+        "issued_at_s",
+        "expires_at_s",
+        "presentation_ack",
+        "options",
+        "diagnostic_option_id",
+        "proposal"
+      ],
+      "additionalProperties": false
+    },
+    "calibration": {
+      "type": "object",
+      "properties": {
+        "artifact_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "provenance": {
+          "enum": [
+            "synthetic_fixture"
+          ]
+        },
+        "fit_split": {
+          "const": "calibration-fit"
+        },
+        "mapping_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "mapping_revision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "layout_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "roles": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "TASK",
+              "INTENT_QUERY",
+              "PROBE",
+              "CONFIRM"
+            ]
+          },
+          "minItems": 1,
+          "maxItems": 4
+        },
+        "valid_until_s": {
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "artifact_id",
+        "provenance",
+        "fit_split",
+        "mapping_id",
+        "mapping_revision",
+        "layout_id",
+        "roles",
+        "valid_until_s"
+      ],
+      "additionalProperties": false
+    },
+    "evidence": {
+      "type": "object",
+      "properties": {
+        "score_kind": {
+          "enum": [
+            "RAW_SCORE",
+            "CALIBRATED_PROBABILITY",
+            "HARD_LABEL",
+            "NONE"
+          ]
+        },
+        "values": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "option_id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 128
+              },
+              "value": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "option_id",
+              "value"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0,
+          "maxItems": 16
+        },
+        "selected_option_id": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128
+            }
+          ]
+        },
+        "calibration": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/$defs/calibration"
+            }
+          ]
+        }
+      },
+      "required": [
+        "score_kind",
+        "values",
+        "selected_option_id",
+        "calibration"
+      ],
+      "additionalProperties": false
+    },
+    "event": {
+      "type": "object",
+      "properties": {
+        "event_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "sequence": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "role": {
+          "enum": [
+            "TASK",
+            "INTENT_QUERY",
+            "PROBE",
+            "CONFIRM",
+            "REJECT",
+            "NO_RESPONSE",
+            "CANCEL",
+            "STOP"
+          ]
+        },
+        "original_role": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "enum": [
+                "TASK",
+                "INTENT_QUERY",
+                "PROBE",
+                "CONFIRM"
+              ]
+            }
+          ]
+        },
+        "question": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/$defs/question"
+            }
+          ]
+        },
+        "started_at_s": {
+          "type": "number",
+          "minimum": 0
+        },
+        "ended_at_s": {
+          "type": "number",
+          "minimum": 0
+        },
+        "valid": {
+          "type": "boolean"
+        },
+        "invalid_reason": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "enum": [
+                "EXPIRED",
+                "STALE_CONTEXT",
+                "PRESENTATION_UNACKNOWLEDGED"
+              ]
+            }
+          ]
+        },
+        "evidence": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/$defs/evidence"
+            }
+          ]
+        }
+      },
+      "required": [
+        "event_id",
+        "sequence",
+        "role",
+        "original_role",
+        "question",
+        "started_at_s",
+        "ended_at_s",
+        "valid",
+        "invalid_reason",
+        "evidence"
+      ],
+      "additionalProperties": false
+    },
+    "object": {
+      "type": "object",
+      "properties": {
+        "instance_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "alias": {
+          "type": "string",
+          "pattern": "^OBJ_([0-9]|1[0-5])$"
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "bbox_xyxy": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              },
+              "minItems": 4,
+              "maxItems": 4
+            }
+          ]
+        },
+        "object_valid": {
+          "type": "boolean"
+        },
+        "roi_feature": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 1,
+              "maxItems": 8192
+            }
+          ]
+        },
+        "roi_valid": {
+          "type": "boolean"
+        },
+        "semantic_feature": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 1,
+              "maxItems": 8192
+            }
+          ]
+        },
+        "semantic_valid": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "instance_id",
+        "alias",
+        "label",
+        "bbox_xyxy",
+        "object_valid",
+        "roi_feature",
+        "roi_valid",
+        "semantic_feature",
+        "semantic_valid"
+      ],
+      "additionalProperties": false
+    },
+    "diagnostics": {
+      "type": "object",
+      "properties": {
+        "context": {
+          "$ref": "#/$defs/context"
+        },
+        "layout_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "window_s": {
+          "const": 30
+        },
+        "ttl_s": {
+          "const": 15
+        },
+        "min_attempts": {
+          "const": 3
+        },
+        "min_covered_symbols": {
+          "const": 2
+        },
+        "receipts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/event"
+          },
+          "minItems": 0,
+          "maxItems": 64
+        },
+        "attempt_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "correct_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "no_response_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "covered_symbols": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128
+          },
+          "minItems": 0,
+          "maxItems": 16
+        },
+        "latest_ended_at_s": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "number",
+              "minimum": 0
+            }
+          ]
+        },
+        "status": {
+          "enum": [
+            "SUFFICIENT",
+            "INSUFFICIENT",
+            "EXPIRED"
+          ]
+        },
+        "truncated": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "context",
+        "layout_id",
+        "window_s",
+        "ttl_s",
+        "min_attempts",
+        "min_covered_symbols",
+        "receipts",
+        "attempt_count",
+        "correct_count",
+        "no_response_count",
+        "covered_symbols",
+        "latest_ended_at_s",
+        "status",
+        "truncated"
+      ],
+      "additionalProperties": false
+    },
+    "state": {
+      "type": "object",
+      "properties": {
+        "confirmed_task": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "task": {
+                  "$ref": "#/$defs/task"
+                },
+                "confirmation_receipt": {
+                  "$ref": "#/$defs/event"
+                }
+              },
+              "required": [
+                "task",
+                "confirmation_receipt"
+              ],
+              "additionalProperties": false
+            }
+          ]
+        },
+        "pending_suggestion": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/$defs/task"
+            }
+          ]
+        },
+        "pending_question": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/$defs/question"
+            }
+          ]
+        },
+        "diagnostics": {
+          "$ref": "#/$defs/diagnostics"
+        },
+        "stop_latched": {
+          "type": "boolean"
+        },
+        "execution_authorized": {
+          "const": false
+        }
+      },
+      "required": [
+        "confirmed_task",
+        "pending_suggestion",
+        "pending_question",
+        "diagnostics",
+        "stop_latched",
+        "execution_authorized"
+      ],
+      "additionalProperties": false
+    },
+    "public_input": {
+      "type": "object",
+      "properties": {
+        "record_type": {
+          "const": "PUBLIC_INPUT"
+        },
+        "schema_version": {
+          "const": "bci-vla-interaction/4.0"
+        },
+        "sample_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "context": {
+          "$ref": "#/$defs/context"
+        },
+        "as_of_s": {
+          "type": "number",
+          "minimum": 0
+        },
+        "provenance": {
+          "type": "object",
+          "properties": {
+            "bci": {
+              "enum": [
+                "synthetic_fixture"
+              ]
+            },
+            "vision": {
+              "enum": [
+                "annotated_fixture",
+                "privileged_simulator",
+                "detector_recording"
+              ]
+            },
+            "feature_profile_id": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128
+            },
+            "real_eeg": {
+              "const": false
+            },
+            "physical_robot": {
+              "const": false
+            }
+          },
+          "required": [
+            "bci",
+            "vision",
+            "feature_profile_id",
+            "real_eeg",
+            "physical_robot"
+          ],
+          "additionalProperties": false
+        },
+        "scene": {
+          "type": "object",
+          "properties": {
+            "observed_at_s": {
+              "type": "number",
+              "minimum": 0
+            },
+            "image_ref": {
+              "anyOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 512
+                }
+              ]
+            },
+            "image_valid": {
+              "type": "boolean"
+            },
+            "roi_dim": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "semantic_dim": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "objects": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/object"
+              },
+              "minItems": 0,
+              "maxItems": 16
+            },
+            "truncation": {
+              "type": "object",
+              "properties": {
+                "original_count": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "retained_count": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 16
+                },
+                "policy": {
+                  "enum": [
+                    "none",
+                    "public_detector_order"
+                  ]
+                },
+                "target_recall_known": {
+                  "const": false
+                }
+              },
+              "required": [
+                "original_count",
+                "retained_count",
+                "policy",
+                "target_recall_known"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "observed_at_s",
+            "image_ref",
+            "image_valid",
+            "roi_dim",
+            "semantic_dim",
+            "objects",
+            "truncation"
+          ],
+          "additionalProperties": false
+        },
+        "history": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/event"
+          },
+          "minItems": 0,
+          "maxItems": 8
+        },
+        "current_event_id": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128
+            }
+          ]
+        },
+        "selection_event_id": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128
+            }
+          ]
+        },
+        "task_options": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/task"
+          },
+          "minItems": 0,
+          "maxItems": 32
+        },
+        "public_state": {
+          "$ref": "#/$defs/state"
+        }
+      },
+      "required": [
+        "record_type",
+        "schema_version",
+        "sample_id",
+        "context",
+        "as_of_s",
+        "provenance",
+        "scene",
+        "history",
+        "current_event_id",
+        "selection_event_id",
+        "task_options",
+        "public_state"
+      ],
+      "additionalProperties": false
+    },
+    "private_labels": {
+      "type": "object",
+      "properties": {
+        "record_type": {
+          "const": "PRIVATE_LABELS"
+        },
+        "schema_version": {
+          "const": "bci-vla-interaction/4.0"
+        },
+        "sample_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "variant_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "public_input_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "split": {
+          "const": "development_fixture"
+        },
+        "hidden_truth": {
+          "type": "object",
+          "properties": {
+            "goal": {
+              "anyOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "$ref": "#/$defs/task"
+                }
+              ]
+            },
+            "channel_injected_mode": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128
+            },
+            "changed_at_s": {
+              "anyOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "number",
+                  "minimum": 0
+                }
+              ]
+            }
+          },
+          "required": [
+            "goal",
+            "channel_injected_mode",
+            "changed_at_s"
+          ],
+          "additionalProperties": false
+        },
+        "identifiability": {
+          "type": "object",
+          "properties": {
+            "intent": {
+              "enum": [
+                "IDENTIFIED",
+                "AMBIGUOUS",
+                "UNOBSERVABLE"
+              ]
+            },
+            "channel": {
+              "enum": [
+                "SUPPORTED",
+                "INSUFFICIENT"
+              ]
+            }
+          },
+          "required": [
+            "intent",
+            "channel"
+          ],
+          "additionalProperties": false
+        },
+        "labels": {
+          "type": "object",
+          "properties": {
+            "intent": {
+              "type": "object",
+              "properties": {
+                "mode": {
+                  "enum": [
+                    "POINT",
+                    "SET",
+                    "NONE"
+                  ]
+                },
+                "candidate_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 128
+                  },
+                  "minItems": 0,
+                  "maxItems": 16
+                },
+                "outside": {
+                  "type": "boolean"
+                },
+                "mask": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "mode",
+                "candidate_ids",
+                "outside",
+                "mask"
+              ],
+              "additionalProperties": false
+            },
+            "main_task": {
+              "type": "object",
+              "properties": {
+                "mode": {
+                  "enum": [
+                    "TASK",
+                    "CLARIFICATION",
+                    "NONE"
+                  ]
+                },
+                "task": {
+                  "anyOf": [
+                    {
+                      "type": "null"
+                    },
+                    {
+                      "$ref": "#/$defs/task"
+                    }
+                  ]
+                },
+                "text": {
+                  "anyOf": [
+                    {
+                      "type": "null"
+                    },
+                    {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 512
+                    }
+                  ]
+                },
+                "mask": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "mode",
+                "task",
+                "text",
+                "mask"
+              ],
+              "additionalProperties": false
+            },
+            "channel": {
+              "type": "object",
+              "properties": {
+                "mask": {
+                  "type": "boolean"
+                },
+                "next_probe_success": {
+                  "anyOf": [
+                    {
+                      "type": "null"
+                    },
+                    {
+                      "type": "boolean"
+                    }
+                  ]
+                },
+                "target_time_s": {
+                  "anyOf": [
+                    {
+                      "type": "null"
+                    },
+                    {
+                      "type": "number",
+                      "minimum": 0
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "mask",
+                "next_probe_success",
+                "target_time_s"
+              ],
+              "additionalProperties": false
+            },
+            "interaction": {
+              "type": "object",
+              "properties": {
+                "mask": {
+                  "type": "boolean"
+                },
+                "action": {
+                  "enum": [
+                    "PROPOSE_TASK",
+                    "ASK_INTENT",
+                    "CHECK_CHANNEL",
+                    "WAIT"
+                  ]
+                },
+                "teacher": {
+                  "enum": [
+                    "public_rule_v1",
+                    "annotator_visible_history"
+                  ]
+                },
+                "teacher_input_sha256": {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{64}$"
+                }
+              },
+              "required": [
+                "mask",
+                "action",
+                "teacher",
+                "teacher_input_sha256"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "intent",
+            "main_task",
+            "channel",
+            "interaction"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "record_type",
+        "schema_version",
+        "sample_id",
+        "variant_id",
+        "public_input_sha256",
+        "split",
+        "hidden_truth",
+        "identifiability",
+        "labels"
+      ],
+      "additionalProperties": false
+    },
+    "module_output": {
+      "type": "object",
+      "properties": {
+        "record_type": {
+          "const": "MODULE_OUTPUT"
+        },
+        "schema_version": {
+          "const": "bci-vla-interaction/4.0"
+        },
+        "context": {
+          "$ref": "#/$defs/context"
+        },
+        "source_input_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "as_of_s": {
+          "type": "number",
+          "minimum": 0
+        },
+        "provenance": {
+          "const": "synthetic_fixture_not_model_prediction"
+        },
+        "soft_prefix": {
+          "type": "object",
+          "properties": {
+            "dtype": {
+              "const": "float32"
+            },
+            "shape": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "minItems": 2,
+              "maxItems": 2
+            },
+            "tokens": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                },
+                "minItems": 1,
+                "maxItems": 8192
+              },
+              "minItems": 8,
+              "maxItems": 8
+            },
+            "intent_slots": {
+              "const": 4
+            },
+            "diagnostic_summary_slots": {
+              "const": 4
+            },
+            "raw_channel_queries_included": {
+              "const": false
+            }
+          },
+          "required": [
+            "dtype",
+            "shape",
+            "tokens",
+            "intent_slots",
+            "diagnostic_summary_slots",
+            "raw_channel_queries_included"
+          ],
+          "additionalProperties": false
+        },
+        "intent": {
+          "type": "object",
+          "properties": {
+            "candidate_distribution": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "instance_id": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 128
+                  },
+                  "probability": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1
+                  }
+                },
+                "required": [
+                  "instance_id",
+                  "probability"
+                ],
+                "additionalProperties": false
+              },
+              "minItems": 0,
+              "maxItems": 16
+            },
+            "outside_probability": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "allowed_candidate_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 128
+              },
+              "minItems": 0,
+              "maxItems": 16
+            },
+            "abstain": {
+              "type": "boolean"
+            },
+            "missing_slots": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "ACTION",
+                  "SOURCE",
+                  "DESTINATION"
+                ]
+              },
+              "minItems": 0,
+              "maxItems": 3
+            }
+          },
+          "required": [
+            "candidate_distribution",
+            "outside_probability",
+            "allowed_candidate_ids",
+            "abstain",
+            "missing_slots"
+          ],
+          "additionalProperties": false
+        },
+        "channel": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "SUFFICIENT",
+                "INSUFFICIENT",
+                "EXPIRED"
+              ]
+            },
+            "probability": {
+              "anyOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                }
+              ]
+            },
+            "probability_calibrated": {
+              "const": false
+            },
+            "target_layout_id": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128
+            }
+          },
+          "required": [
+            "status",
+            "probability",
+            "probability_calibrated",
+            "target_layout_id"
+          ],
+          "additionalProperties": false
+        },
+        "task_proposal": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/$defs/task"
+            }
+          ]
+        },
+        "interaction": {
+          "type": "object",
+          "properties": {
+            "action": {
+              "enum": [
+                "PROPOSE_TASK",
+                "ASK_INTENT",
+                "CHECK_CHANNEL",
+                "WAIT"
+              ]
+            },
+            "question": {
+              "anyOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "$ref": "#/$defs/question"
+                }
+              ]
+            },
+            "reason_code": {
+              "enum": [
+                "ambiguous_target",
+                "missing_task_slot",
+                "diagnostic_evidence_insufficient",
+                "target_outside_candidates",
+                "awaiting_reply",
+                "stop_latched",
+                "proposal_ready"
+              ]
+            }
+          },
+          "required": [
+            "action",
+            "question",
+            "reason_code"
+          ],
+          "additionalProperties": false
+        },
+        "control": {
+          "type": "object",
+          "properties": {
+            "execution_authorized": {
+              "const": false
+            },
+            "requires_confirmation": {
+              "const": true
+            },
+            "stop_route": {
+              "const": "existing_control_path"
+            },
+            "raw_robot_command": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "execution_authorized",
+            "requires_confirmation",
+            "stop_route",
+            "raw_robot_command"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "record_type",
+        "schema_version",
+        "context",
+        "source_input_sha256",
+        "as_of_s",
+        "provenance",
+        "soft_prefix",
+        "intent",
+        "channel",
+        "task_proposal",
+        "interaction",
+        "control"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "oneOf": [
+    {
+      "$ref": "#/$defs/public_input"
+    },
+    {
+      "$ref": "#/$defs/private_labels"
+    },
+    {
+      "$ref": "#/$defs/module_output"
+    }
+  ],
+  "x-protocol": {
+    "version": "V4-02-contract-1",
+    "scope": "synthetic schema fixtures only; real EEG, physical actions and trained outputs require a later version",
+    "prototype_defaults_not_empirically_optimal": true,
+    "limits": {
+      "objects": 16,
+      "recent_events_total": 8,
+      "diagnostic_receipts": 64,
+      "prefix_tokens": 8
+    },
+    "tensor_contract": {
+      "roi": [
+        "B",
+        16,
+        "D_roi"
+      ],
+      "semantic": [
+        "B",
+        16,
+        "D_sem"
+      ],
+      "boxes": [
+        "B",
+        16,
+        4
+      ],
+      "candidate_mask": [
+        "B",
+        16
+      ],
+      "roi_mask": [
+        "B",
+        16
+      ],
+      "semantic_mask": [
+        "B",
+        16
+      ],
+      "task_history": [
+        "B",
+        8,
+        "D_task"
+      ],
+      "diagnostic_history": [
+        "B",
+        8,
+        "D_diag"
+      ],
+      "combined_real_history_count_max": 8,
+      "history_valid_masks": [
+        "B",
+        8
+      ],
+      "prefix": [
+        "B",
+        8,
+        "D_vlm"
+      ],
+      "D_vlm_verified": false,
+      "padding_rule": "explicit PAD or EMPTY_INPUT plus mask, never an outside/ambiguous label",
+      "fixture_dimensions": {
+        "D_roi": 4,
+        "D_sem": 3,
+        "D_vlm": 6
+      }
+    },
+    "model_feature_allowlist": [
+      "scene features/boxes/aliases and masks",
+      "valid role-separated past events",
+      "valid public session state",
+      "deidentified diagnostic summary"
+    ],
+    "model_input_excludes": [
+      "sample_id",
+      "split",
+      "private_labels",
+      "hidden_truth",
+      "future answers",
+      "injected schedules",
+      "raw PROBE object semantics in channel branch",
+      "raw channel query tokens at VLM"
+    ],
+    "score_kinds": {
+      "RAW_SCORE": "finite raw values, never renamed probabilities",
+      "CALIBRATED_PROBABILITY": "normalized probabilities plus role/layout/mapping-scoped fixture calibration",
+      "HARD_LABEL": "single declared selection, not probability calibration",
+      "NONE": "no decoded observation"
+    },
+    "event_effects": {
+      "TASK": "candidate evidence only",
+      "INTENT_QUERY": "clarify task candidates, cannot authorize",
+      "PROBE": "diagnostic summary only, never replace confirmed task",
+      "CONFIRM": "noisy observed accept of exact task; separate existing authorization still required",
+      "REJECT": "reject bound pending suggestion, pause, no automatic old-task resume",
+      "NO_RESPONSE": "retain original question role; no task update; eligible timed-out PROBE is diagnostic nonresponse",
+      "CANCEL": "clear pending/confirmed task and request queue/cache invalidation",
+      "STOP": "existing direct stop path and latch, independent of neural/VLM"
+    },
+    "diagnostic_estimand": "Next known-target attempt succeeds under the same mapping/layout/covered conditions and time window; eligible timed-out no-response counts unsuccessful, not a task choice",
+    "diagnostic_policy": {
+      "window_s": 30,
+      "ttl_s": 15,
+      "min_attempts": 3,
+      "min_covered_symbols": 2,
+      "overflow": "mark truncated and insufficient; never selectively retain by hidden target"
+    },
+    "state_invalidation": {
+      "mapping_change": "drop pending question/suggestion/confirmation and diagnostic applicability; pause/reconfirm, keep old records as invalid audit only",
+      "scene_instance_or_binding_change": "invalidate affected task/aliases/authorization, clear queue/cache before new confirmation",
+      "probe": "no confirmed-task mutation",
+      "cancel_or_stop": "clear task and pending state; STOP stays latched",
+      "completed_task": "clear current task, retain public audit"
+    },
+    "task_grammar_status": "pick/place are syntactic development fixtures; backend capability remains false pending V4-03",
+    "legacy_boundary": {
+      "schema_compatible_with_v2_event": false,
+      "role_mapping": {
+        "TASK": "TASK_QUERY",
+        "INTENT_QUERY": "TASK_QUERY with distinct question provenance",
+        "PROBE": "CHANNEL_PROBE",
+        "CONFIRM": "CONFIRM"
+      },
+      "adapter_implementation_step": "V4-11",
+      "authority": "existing V2 authorization/STOP must remain independent"
+    },
+    "validator_scope": "stdlib reference checks the generated schema subset plus cross-field invariants; not a general-purpose JSON Schema implementation; does not prove feature independence or real calibration"
+  }
+}

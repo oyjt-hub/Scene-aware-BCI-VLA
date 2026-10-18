@@ -1,0 +1,95 @@
+{
+  "scope": "V4-07 actual high-level token integration engineering only",
+  "training": false,
+  "optimizer_steps": 0,
+  "action_sampling": false,
+  "new_dynamics": false,
+  "formal_test_accessed": false,
+  "checks": [
+    {
+      "name": "available_GPU_budget",
+      "passed": true
+    },
+    {
+      "name": "code_hashes",
+      "passed": true,
+      "files": 20
+    },
+    {
+      "name": "V4_03R_restricted_dependency",
+      "passed": true,
+      "scope": "canonical public-state language protocol, not general planning"
+    },
+    {
+      "name": "base_and_language_adapter_hash",
+      "passed": true
+    },
+    {
+      "name": "native_hidden_dimension",
+      "passed": true,
+      "dimension": 2048
+    },
+    {
+      "name": "existing_LIBERO_public_input",
+      "passed": true,
+      "source": "/home/oyjt/Scene-aware-BCI-VLA-runs/v4_step06_cpu_20261017_v2/execution/v4/06_fixtures/public.json",
+      "public_only": true,
+      "raw_ROI_dimension": 6,
+      "semantic_valid": false
+    },
+    {
+      "name": "off_exact_native_regression",
+      "passed": true,
+      "max_abs_logits": 0.0,
+      "native_length": 392,
+      "off_length": 392
+    },
+    {
+      "name": "fixed_boundary_and_unscaled_tokens",
+      "passed": true,
+      "prefix_shape": [
+        1,
+        8,
+        2048
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "name": "zero_tokens_are_not_off",
+      "passed": true,
+      "max_abs_logits": 32.5
+    },
+    {
+      "name": "teacher_KV_argmax_False",
+      "passed": true,
+      "max_abs_logits": 1.75,
+      "strict_BF16_numeric_equivalence": false
+    },
+    {
+      "name": "teacher_KV_argmax_True",
+      "passed": true,
+      "max_abs_logits": 1.0,
+      "strict_BF16_numeric_equivalence": false
+    },
+    {
+      "name": "native_language_generation_False",
+      "passed": true,
+      "generated": "Pick up OBJ_0.",
+      "expected": "Pick up OBJ_0.",
+      "scope": "explicit selected-object engineering fixture; not prefix utility evidence"
+    },
+    {
+      "name": "native_language_generation_True",
+      "passed": false,
+      "generated": "task task.",
+      "expected": "Pick up OBJ_0.",
+      "scope": "explicit selected-object engineering fixture; not prefix utility evidence"
+    }
+  ],
+  "status": "FAIL",
+  "error": "native_language_generation_True",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/oyjt/Scene-aware-BCI-VLA-runs/v4_step07_prefix_20261017_v1/execution/v4/step07_real_integration.py\", line 83, in <module>\n    check('native_language_generation_'+str(mode),text==row['answer'] and generated['stopped_at_eos'],generated=text,expected=row['answer'],scope='explicit selected-object engineering fixture; not prefix utility evidence')\n  File \"/home/oyjt/Scene-aware-BCI-VLA-runs/v4_step07_prefix_20261017_v1/execution/v4/step07_real_integration.py\", line 13, in check\n    if not condition:raise AssertionError(name)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: native_language_generation_True\n",
+  "remote_job": "/home/oyjt/Scene-aware-BCI-VLA-runs/v4_step07_prefix_20261017_v1",
+  "remote_exit_code": 0,
+  "stderr": ""
+}

@@ -1,0 +1,16 @@
+{
+  "scope": "development capability smoke, synthetic images and explicit text fixtures; not held-out performance",
+  "checkpoint": "/home/oyjt/workspace/RLinf-RECAP/models/baseline_sft/RLinf-Pi05-LIBERO-SFT/model.safetensors",
+  "training": false,
+  "action_sampling": false,
+  "real_eeg": false,
+  "physical_robot": false,
+  "stages": [],
+  "execution_status": "failed",
+  "error_type": "ValueError",
+  "error": "transformers_replace is not installed correctly. Please install it with `uv pip install transformers==4.53.2` and `cp -r ./src/openpi/models_pytorch/transformers_replace/* .venv/lib/python3.11/site-packages/transformers/`.",
+  "traceback": "Traceback (most recent call last):\n  File \"<stdin>\", line 24, in <module>\n  File \"/home/oyjt/openpi/src/openpi/models_pytorch/pi0_pytorch.py\", line 124, in __init__\n    raise ValueError(msg) from None\nValueError: transformers_replace is not installed correctly. Please install it with `uv pip install transformers==4.53.2` and `cp -r ./src/openpi/models_pytorch/transformers_replace/* .venv/lib/python3.11/site-packages/transformers/`.\n",
+  "remote_exit_code": 0,
+  "stdout_before_marker": "",
+  "stderr": ""
+}

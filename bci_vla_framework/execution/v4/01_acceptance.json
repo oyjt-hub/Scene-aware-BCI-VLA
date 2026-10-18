@@ -1,0 +1,29 @@
+{
+  "step_id": "V4-01",
+  "status": "PASS",
+  "scope": "inventory/documentation acceptance only",
+  "completed_at_utc": "2026-10-16T16:13:45.619453+00:00",
+  "checks": {
+    "authorized_step_only": true,
+    "required_scope_report_exists": true,
+    "primary_sources_registered": true,
+    "remote_inspection_success_evidence": true,
+    "pi05_file_present_at_workspace_path": true,
+    "base_and_droid_params_present": true,
+    "visual_weights_located_not_declared_missing": true,
+    "current_vs_historical_hash_separated": true,
+    "tokenizer_current_hash_recorded": true,
+    "no_v4_network_claim": true,
+    "no_model_or_device_operations": true,
+    "high_level_gate_not_upgraded": true,
+    "historical_source_files_unchanged": true,
+    "gaps_have_owner_steps": true,
+    "read_only_inventory_utility_parses": true,
+    "utf8_bom_crlf_reports": true
+  },
+  "historical_files_compared": 28,
+  "historical_files_changed": [],
+  "full_weight_hash_verified": false,
+  "next_step": "V4-02",
+  "research_gates_upgraded": false
+}

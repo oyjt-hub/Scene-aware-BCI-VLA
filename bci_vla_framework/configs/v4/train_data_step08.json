@@ -1,0 +1,14 @@
+{
+  "version": "step08-public-protocol-pilot/0.1",
+  "budgets": {"train": 128, "validation": 32},
+  "selection": "deterministic episode-balanced family rotation; retain frozen split groups",
+  "protocol": "explicit_public_declaration_v1",
+  "source_partitions": ["train", "validation"],
+  "frozen_source_overwrite": false,
+  "calibration_or_test_access": false,
+  "private_variants_weighted_once": true,
+  "main_task_scope": "pick-only public menu and public declarations, missing-slot clarification",
+  "next_subtask_scope": "confirmed pick plus declared symbolic empty gripper, text-only",
+  "general_hidden_intent_supervision_ready": false,
+  "place_phase_supervision_ready": false
+}

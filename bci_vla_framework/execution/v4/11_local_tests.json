@@ -1,0 +1,12 @@
+{
+  "tests": 28,
+  "successful": true,
+  "failures": 0,
+  "errors": 0,
+  "log_sha256": "b55fb0ee16b3c36301f693c4aa81784b418e55299dfcb6811dc43d35dabe1803",
+  "scope": "local authorization and exact upstream method mechanics using explicit scripted tiny-model stubs",
+  "actual_VLM_inference": false,
+  "upstream_trained_checkpoint": false,
+  "formal_test_accessed": false,
+  "action_sampling": false
+}

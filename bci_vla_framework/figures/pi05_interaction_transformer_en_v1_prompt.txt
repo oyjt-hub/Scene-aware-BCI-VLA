@@ -1,0 +1,39 @@
+﻿Method: built-in imagegen image edit
+Reference: C:\Users\Administrator\AppData\Local\Temp\codex-clipboard-331f7fac-590f-4543-b8e1-d41f7491a896.png
+
+Prompt:
+Edit this exact attached pi0.5 model architecture figure. The user wants ONE NEW MODULE added, understandable to a professor without internal Transformer details. Preserve the original figure's plain scientific visual style: white background, thin blue/green outlines, pastel translucent token blocks, BLACK MONOSPACED text, gray secondary parameter labels, thin black arrows. Match original typography, stroke weights and spacing. No big title, no new legend, no decorative colors, no Chinese, no glossy style. Preserve all three original robot-camera photos and their ViT blocks, the original “fold shirt” text prompt, the pre-trained VLM and action expert, q_t, noise and action-chunk output.
+
+Add only a BLACK-BOX "Interaction Transformer", its clearly labelled inputs, and its token output into the pre-trained VLM. Do NOT show attention, branches, queries, layers, losses or Transformer internals.
+
+Make extra canvas space ABOVE the original figure for the new black-box module and its input labels. Also expand canvas WIDTH slightly to insert ONE ADDITIONAL token column immediately after the existing language-token column and BEFORE the green action-expert inputs; shift the action-expert group right as one intact group. The pre-trained VLM's horizontal white label bar extends across the original blue image/text token columns AND the additional interaction-token column.
+
+NEW INPUTS, placed in a neat small group ABOVE the original architecture, left of the new module, four monospaced lines:
+"Object features + positions"
+"BCI selection evidence"
+"Interaction history"
+"Confirmed task"
+A thin arrow from this group leads into a single pastel lavender rounded rectangle labelled:
+"Interaction Transformer"
+
+NEW OUTPUT:
+A thin arrow from the Interaction Transformer points DOWN into the additional pastel lavender token column within the pre-trained VLM input sequence.
+Clearly label this arrow, in the same black monospace font:
+"8 interaction tokens"
+Smaller second line:
+"(intent + diagnostic summary)"
+The additional token column should follow the same rounded-rectangle token representation as the existing blue columns; it has the same vertical extent, is crossed by the same extended "pre-trained VLM" white bar, and is distinguishable in subtle lavender. It represents learned continuous vectors, NOT an extra natural-language sentence.
+
+Topology: new input group -> Interaction Transformer -> additional interaction-token column -> SAME pre-trained VLM. The module does not replace the “fold shirt” prompt, does not replace the ViTs, and does not connect directly to the action expert. Keep action expert architecture untouched.
+
+Preserve exact original labels:
+"pre-trained VLM"
+"SigLIP (400M) + Gemma (2.6B)"
+"action expert"
+"(300M)"
+"ViT"
+“fold shirt”
+q_t, noise, and a_t, a_{t+1}, ..., a_{t+H}.
+Use consistent original-style mathematical subscripts.
+
+Make this look like a minimal careful extension of the provided academic figure, with clean legible text and clear arrows. The new module's inputs and token outputs should be immediately understandable.

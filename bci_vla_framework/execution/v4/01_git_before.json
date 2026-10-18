@@ -1,0 +1,22 @@
+{
+  "head": {
+    "returncode": 0,
+    "stdout": "5482cb324e20790134d4439f3443e7c8d24df837",
+    "stderr": ""
+  },
+  "branch": {
+    "returncode": 0,
+    "stdout": "work/step16-synthetic-20261016",
+    "stderr": ""
+  },
+  "recent_commits": {
+    "returncode": 0,
+    "stdout": "5482cb3 Complete locked step16 synthetic replication and report unproven strategy benefit\n917dba0 Lock step16 prospective synthetic protocol before evaluation seeds\nc39ae1a Backup BCI-VLA framework through full simulation migration step15C",
+    "stderr": ""
+  },
+  "status_at_inventory_start": {
+    "returncode": 0,
+    "stdout": "M bci_vla_framework/README.txt\n M bci_vla_framework/execution/handoff.txt\n M bci_vla_framework/execution/worklog.txt\n?? BCI_VLA当前计划入口.txt\n?? BCI_VLA当前计划入口_V4.txt\n?? BCI_VLA框架_意图更新与澄清_执行计划_V4.txt\n?? BCI_VLA框架_意图更新与澄清_计划审查_V4.txt\n?? BCI_VLA框架_神经交互模块方案_V3.txt\n?? BCI_VLA通用交互框架_逐步执行手册_V3.txt\n?? bci_vla_framework/configs/design_v3.json\n?? bci_vla_framework/configs/design_v4.json\n?? bci_vla_framework/execution/v3_design_manifest.json\n?? bci_vla_framework/execution/v3_design_validation.json\n?? bci_vla_framework/execution/v3_plan_progress.json\n?? bci_vla_framework/execution/v4/\n?? bci_vla_framework/execution/v4_plan_preservation_before.json\n?? bci_vla_framework/execution/v4_plan_progress.json\n?? bci_vla_framework/execution/v4_plan_review_20261016/\n?? bci_vla_framework/execution/v4_plan_validation.json\n?? bci_vla_framework/execution/write_plan_v3.py",
+    "stderr": ""
+  }
+}

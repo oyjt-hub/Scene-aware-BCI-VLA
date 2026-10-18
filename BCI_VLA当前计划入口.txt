@@ -1,0 +1,4 @@
+﻿当前新研究计划：V3设计草案（尚未实现/训练）。
+先读BCI_VLA框架_神经交互模块方案_V3.txt，再读BCI_VLA通用交互框架_逐步执行手册_V3.txt。
+执行编号使用V3-01等前缀。V3进度：bci_vla_framework/execution/v3_plan_progress.json。
+旧的无版本手册及V2手册为冻结历史，不能覆盖；历史V2步骤16及G2/G3/G4状态不变。

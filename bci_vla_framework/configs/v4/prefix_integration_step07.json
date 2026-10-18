@@ -1,0 +1,19 @@
+{
+  "version": "V4-07-prefix-1",
+  "implementation": "bci_vla.prefix_integration_v4.adapter.Pi05HighLevelPrefix",
+  "capability_report": "execution/v4/03R_text_capability.json",
+  "language_branch_config": "configs/v4/high_level_branch_step03R.json",
+  "K": 8,
+  "D_vlm": 2048,
+  "insertion": "after_native_image_prompt_before_causal_answer",
+  "prefix_extra_embedding_scale": 1,
+  "off": "remove_tokens_and_invalidate_cache",
+  "default_execution_authorized": false,
+  "generation_maximum": 128,
+  "single_session_generation_only": true,
+  "requires_bound_language_adapter": true,
+  "requires_serial_shared_model_ownership": true,
+  "trained_interaction_prefix_available": false,
+  "on_semantics_validated": false,
+  "notes": "engineering gate only; invalid generated text must never be dispatched as a task; confirmation/authorization remain separate Step11 work"
+}

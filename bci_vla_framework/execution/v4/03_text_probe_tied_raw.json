@@ -1,0 +1,60 @@
+{
+  "scope": "development capability smoke, synthetic images and explicit text fixtures; not held-out performance",
+  "checkpoint": "/home/oyjt/workspace/RLinf-RECAP/models/baseline_sft/RLinf-Pi05-LIBERO-SFT/model.safetensors",
+  "training": false,
+  "action_sampling": false,
+  "real_eeg": false,
+  "physical_robot": false,
+  "stages": [
+    {
+      "name": "runtime_source",
+      "gemma_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step15C_full_20261016_v1/deps/transformers/models/gemma/modeling_gemma.py",
+      "gemma_sha256": "17eeb54e277939e58cd6f8a92719a275e36baf0c9f463b2754227d42f87aedde"
+    },
+    {
+      "name": "skeleton_constructed",
+      "seconds": 2.9235843250062317,
+      "random_init_skipped": true
+    },
+    {
+      "name": "checkpoint_declared_weight_tie",
+      "alias": "paligemma_with_expert.paligemma.model.language_model.embed_tokens.weight",
+      "source": "paligemma_with_expert.paligemma.lm_head.weight",
+      "metadata_verified": true
+    },
+    {
+      "name": "strict_checkpoint_load",
+      "seconds": 5.084307599812746,
+      "torch_version": "2.7.1+cu126",
+      "device_name": "NVIDIA GeForce RTX 4090",
+      "vlm_dim": 2048
+    },
+    {
+      "name": "synthetic_image_path",
+      "shape": [
+        1,
+        256,
+        2048
+      ],
+      "finite": true,
+      "black_white_max_difference": 24.5,
+      "semantic_image_evidence": false
+    }
+  ],
+  "tokenizer": {
+    "path": "/home/oyjt/.cache/openpi/big_vision/paligemma_tokenizer.model",
+    "sha256": "8986bb4f423f07f8c7f70d0dbe3526fb2316056c17bae71b1ea975e77a168fc6",
+    "bos": 2,
+    "eos": 1,
+    "pad": 0,
+    "vocab_size": 257152
+  },
+  "execution_status": "failed",
+  "error_type": "RuntimeError",
+  "error": "invalid dtype for bias - should match query's dtype",
+  "traceback": "Traceback (most recent call last):\n  File \"<stdin>\", line 88, in <module>\n  File \"<stdin>\", line 64, in forward\n  File \"/home/oyjt/openpi/src/openpi/models_pytorch/gemma_pytorch.py\", line 103, in forward\n    prefix_output = self.paligemma.language_model.forward(\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/oyjt/Scene-aware-BCI-VLA-runs/step15C_full_20261016_v1/deps/transformers/utils/generic.py\", line 943, in wrapper\n    output = func(self, *args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/oyjt/Scene-aware-BCI-VLA-runs/step15C_full_20261016_v1/deps/transformers/models/gemma/modeling_gemma.py\", line 526, in forward\n    layer_outputs = decoder_layer(\n                    ^^^^^^^^^^^^^^\n  File \"/home/oyjt/Scene-aware-BCI-VLA-runs/step15C_full_20261016_v1/deps/transformers/modeling_layers.py\", line 83, in __call__\n    return super().__call__(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/oyjt/openpi/.venv/lib/python3.11/site-packages/torch/nn/modules/module.py\", line 1751, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/oyjt/openpi/.venv/lib/python3.11/site-packages/torch/nn/modules/module.py\", line 1762, in _call_impl\n    return forward_call(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/oyjt/Scene-aware-BCI-VLA-runs/step15C_full_20261016_v1/deps/transformers/models/gemma/modeling_gemma.py\", line 361, in forward\n    hidden_states, self_attn_weights = self.self_attn(\n                                       ^^^^^^^^^^^^^^^\n  File \"/home/oyjt/openpi/.venv/lib/python3.11/site-packages/torch/nn/modules/module.py\", line 1751, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/oyjt/openpi/.venv/lib/python3.11/site-packages/torch/nn/modules/module.py\", line 1762, in _call_impl\n    return forward_call(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/oyjt/Scene-aware-BCI-VLA-runs/step15C_full_20261016_v1/deps/transformers/models/gemma/modeling_gemma.py\", line 316, in forward\n    attn_output, attn_weights = attention_interface(\n                                ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/oyjt/Scene-aware-BCI-VLA-runs/step15C_full_20261016_v1/deps/transformers/integrations/sdpa_attention.py\", line 66, in sdpa_attention_forward\n    attn_output = torch.nn.functional.scaled_dot_product_attention(\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: invalid dtype for bias - should match query's dtype\n",
+  "remote_exit_code": 0,
+  "existing_overlay_used": true,
+  "stdout_before_marker": "V4_STAGE_JSON={\"name\": \"runtime_source\", \"gemma_path\": \"/home/oyjt/Scene-aware-BCI-VLA-runs/step15C_full_20261016_v1/deps/transformers/models/gemma/modeling_gemma.py\", \"gemma_sha256\": \"17eeb54e277939e58cd6f8a92719a275e36baf0c9f463b2754227d42f87aedde\"}\nV4_STAGE_JSON={\"name\": \"skeleton_constructed\", \"seconds\": 2.9235843250062317, \"random_init_skipped\": true}\nV4_STAGE_JSON={\"name\": \"checkpoint_declared_weight_tie\", \"alias\": \"paligemma_with_expert.paligemma.model.language_model.embed_tokens.weight\", \"source\": \"paligemma_with_expert.paligemma.lm_head.weight\", \"metadata_verified\": true}\nV4_STAGE_JSON={\"name\": \"strict_checkpoint_load\", \"seconds\": 5.084307599812746, \"torch_version\": \"2.7.1+cu126\", \"device_name\": \"NVIDIA GeForce RTX 4090\", \"vlm_dim\": 2048}\nV4_STAGE_JSON={\"name\": \"synthetic_image_path\", \"shape\": [1, 256, 2048], \"finite\": true, \"black_white_max_difference\": 24.5, \"semantic_image_evidence\": false}\n",
+  "stderr": ""
+}

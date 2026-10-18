@@ -1,0 +1,28 @@
+{
+  "scope": "bounded read-only IO diagnostic, not model inference",
+  "reads": [
+    {
+      "offset": 1048576,
+      "bytes": 16777216,
+      "seconds": 0.010896159103140235
+    },
+    {
+      "offset": 3736545732,
+      "bytes": 16777216,
+      "seconds": 0.01033675204962492
+    },
+    {
+      "offset": 7456314248,
+      "bytes": 16777216,
+      "seconds": 0.011000317055732012
+    }
+  ],
+  "memory": {
+    "MemTotal": "263685532 kB",
+    "MemAvailable": "221250816 kB",
+    "SwapTotal": "136314868 kB",
+    "SwapFree": "94866928 kB"
+  },
+  "exit_code": 0,
+  "stderr": ""
+}

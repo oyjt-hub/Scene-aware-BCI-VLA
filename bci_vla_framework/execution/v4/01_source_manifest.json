@@ -1,0 +1,80 @@
+{
+  "scope": "V4-01 captured evidence and delivery snapshot; mutable global progress is excluded",
+  "files": [
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_git_before.json",
+      "sha256": "2ff5e492bd95c1e11410a0fd59ab7f7929b1ecbd49a497423b39ba924cb6149f",
+      "bytes": 1651
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_remote_inventory.json",
+      "sha256": "51470a6e4927169f16ea5f8398280c802ba582468f108becfdb8e189710b375a",
+      "bytes": 27256
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_remote_supplement.json",
+      "sha256": "5ec026468c570455f9223ad5e9824ea629cfdec84d230a8d6b3ce1b27b0a0bbd",
+      "bytes": 35390
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_remote_paths.json",
+      "sha256": "c674533c508dda738947292dbfe5434a9bc9403b78d914b85ba9eab6c2c4cc8d",
+      "bytes": 4582
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_workspace_weights.json",
+      "sha256": "261eaedd3e5d8806435dd075c6a169ef5080d79e7791aa2b3e9ce4a3afc94182",
+      "bytes": 31864
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_candidate_weights.json",
+      "sha256": "6e26ce304b035fdb399b52bc45a00bff6b34b3c68afb8cc4da905b60df712d38",
+      "bytes": 8005
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_local_environment.json",
+      "sha256": "72e3f4624968f9b7ec55093df96951d07ddcd0009e2266d86fd99f8fadb3ec5e",
+      "bytes": 842
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_local_sources.json",
+      "sha256": "6fa1397ed474caae3e173281b0d46d0a661dbbe9375e97386a527f1241c8f5e4",
+      "bytes": 13346
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_literature.json",
+      "sha256": "c8ffb37083d600b2dc28b33360f93c68202e5023d59145389007a6cc33caa55a",
+      "bytes": 4154
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_command_log.json",
+      "sha256": "a367faa8ebc3579991445bf0619a46c017b0e80bf066350c12bb2d3e8603dd14",
+      "bytes": 1817
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_inventory.json",
+      "sha256": "29f4d4f6d70ce75301618e2be9b23f957973b1d008e5504d7953d8b7f7676966",
+      "bytes": 33986
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\docs\\v4\\01_scope_and_overlap.txt",
+      "sha256": "4c0498b3d2c854b1cf075c7ac1b9713e2b1c61e3aec0459b55530326d37cbdae",
+      "bytes": 13837
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\handoff.txt",
+      "sha256": "8189f9fd6a0ded7d8200a524e9967c18b36be807d3d74b3006e5bccf6873cb21",
+      "bytes": 719
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\inspect_assets_step01.py",
+      "sha256": "a4da8c483b94ba4edfb6f1a5e722ff8fada891374035236a2fe3a35827ce65ce",
+      "bytes": 19403
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\finalize_step01.py",
+      "sha256": "1c042e5d6c5d173aa99386999f1290d5a20a2fd4a206b190d089dfc853ff6421",
+      "bytes": 18758
+    }
+  ]
+}

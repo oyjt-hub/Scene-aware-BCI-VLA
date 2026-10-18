@@ -1,0 +1,1114 @@
+{
+  "scope": "read_only_visual_tokenizer_and_checkpoint_integrity",
+  "checked_at_utc": "2026-10-16T15:54:45.713304+00:00",
+  "source_folders": [
+    {
+      "path": "/home/oyjt/Scene-aware-BCI-VLA/src",
+      "exists": true,
+      "is_directory": true,
+      "bytes": 4096,
+      "mtime_ns": 1790739109904923815,
+      "resolved_path": "/home/oyjt/Scene-aware-BCI-VLA/src",
+      "children": []
+    },
+    {
+      "path": "/home/oyjt/Scene-aware-BCI-VLA/Grounded-SAM-2",
+      "exists": true,
+      "is_directory": true,
+      "bytes": 4096,
+      "mtime_ns": 1790706711022658715,
+      "resolved_path": "/home/oyjt/Scene-aware-BCI-VLA/Grounded-SAM-2",
+      "children": [
+        ".clang-format",
+        ".gitignore",
+        ".venv",
+        ".watchmanconfig",
+        "CODE_OF_CONDUCT.md",
+        "CONTRIBUTING.md",
+        "Dockerfile",
+        "INSTALL.md",
+        "LICENSE",
+        "LICENSE_cctorch",
+        "LICENSE_groundingdino",
+        "LICENSE_sam2",
+        "MANIFEST.in",
+        "Makefile",
+        "README.md",
+        "SAM2_README.md",
+        "assets",
+        "backend.Dockerfile",
+        "checkpoints",
+        "demo",
+        "demo_images",
+        "docker-compose.yaml",
+        "experiment.py",
+        "gdino_checkpoints",
+        "grounded_sam2_dinox_demo.py",
+        "grounded_sam2_florence2_autolabel_pipeline.py",
+        "grounded_sam2_florence2_image_demo.py",
+        "grounded_sam2_gd1.5_demo.py",
+        "grounded_sam2_hf_model_demo.py",
+        "grounded_sam2_local_demo.py",
+        "grounded_sam2_tracking_camera_with_continuous_id.py",
+        "grounded_sam2_tracking_demo.py",
+        "grounded_sam2_tracking_demo_custom_video_input_dinox.py",
+        "grounded_sam2_tracking_demo_custom_video_input_gd1.0_hf_model.py",
+        "grounded_sam2_tracking_demo_custom_video_input_gd1.0_local_model.py",
+        "grounded_sam2_tracking_demo_custom_video_input_gd1.5.py",
+        "grounded_sam2_tracking_demo_with_continuous_id.py",
+        "grounded_sam2_tracking_demo_with_continuous_id_gd1.5.py",
+        "grounded_sam2_tracking_demo_with_continuous_id_plus.py",
+        "grounded_sam2_tracking_demo_with_gd1.5.py",
+        "grounding_dino",
+        "lunwentu.py",
+        "make_pipeline_diagram.py",
+        "make_pri.py",
+        "notebooks",
+        "pic",
+        "pinlv.py",
+        "process_local_image.py",
+        "pyproject.toml",
+        "sam2",
+        "server_api.py",
+        "tools",
+        "training",
+        "utils",
+        "uv.lock"
+      ]
+    },
+    {
+      "path": "/home/oyjt/Scene-aware-BCI-VLA/Scene-aware-BCI-VLA",
+      "exists": true,
+      "is_directory": true,
+      "bytes": 4096,
+      "mtime_ns": 1790743301563670133,
+      "resolved_path": "/home/oyjt/Scene-aware-BCI-VLA/Scene-aware-BCI-VLA",
+      "children": [
+        "README.md",
+        "creat_raw_data.py",
+        "fbcca.py",
+        "interface.py",
+        "triggerBox.py"
+      ]
+    }
+  ],
+  "frontend_source_files": [
+    {
+      "path": "/home/oyjt/Scene-aware-BCI-VLA/Grounded-SAM-2/grounded_sam2_dinox_demo.py",
+      "exists": true,
+      "is_directory": false,
+      "bytes": 8108,
+      "mtime_ns": 1790706710588647744,
+      "resolved_path": "/home/oyjt/Scene-aware-BCI-VLA/Grounded-SAM-2/grounded_sam2_dinox_demo.py",
+      "sha256": "509ba0e79a41cd45d8240a7c4ea406b23a9f3c47a1cc80b9ff0761f6fa1d7286",
+      "classes": [],
+      "relevant_methods": [
+        {
+          "name": "single_mask_to_rle",
+          "line": 222
+        }
+      ],
+      "model_reference_calls": [
+        {
+          "line": 162,
+          "function": "build_sam2",
+          "literal_args": [],
+          "public_kwargs": {}
+        }
+      ],
+      "public_model_constants": [
+        {
+          "line": 25,
+          "name": "SAM2_CHECKPOINT",
+          "value": "./checkpoints/sam2.1_hiera_large.pt"
+        },
+        {
+          "line": 26,
+          "name": "SAM2_MODEL_CONFIG",
+          "value": "configs/sam2.1/sam2.1_hiera_l.yaml"
+        }
+      ]
+    },
+    {
+      "path": "/home/oyjt/Scene-aware-BCI-VLA/Grounded-SAM-2/grounded_sam2_florence2_autolabel_pipeline.py",
+      "exists": true,
+      "is_directory": false,
+      "bytes": 7247,
+      "mtime_ns": 1790706710588647744,
+      "resolved_path": "/home/oyjt/Scene-aware-BCI-VLA/Grounded-SAM-2/grounded_sam2_florence2_autolabel_pipeline.py",
+      "sha256": "d76d82e3161df0577eac0be63ac51103f6fbc4e93d930decd077aec6e105cb6c",
+      "classes": [],
+      "relevant_methods": [
+        {
+          "name": "caption_phrase_grounding_and_segmentation",
+          "line": 103
+        }
+      ],
+      "model_reference_calls": [
+        {
+          "line": 60,
+          "function": "AutoModelForCausalLM.from_pretrained(FLORENCE2_MODEL_ID, trust_remote_code=True, torch_dtype='auto').eval().to",
+          "literal_args": [],
+          "public_kwargs": {}
+        },
+        {
+          "line": 61,
+          "function": "AutoProcessor.from_pretrained",
+          "literal_args": [],
+          "public_kwargs": {}
+        },
+        {
+          "line": 64,
+          "function": "build_sam2",
+          "literal_args": [],
+          "public_kwargs": {}
+        },
+        {
+          "line": 60,
+          "function": "AutoModelForCausalLM.from_pretrained(FLORENCE2_MODEL_ID, trust_remote_code=True, torch_dtype='auto').eval",
+          "literal_args": [],
+          "public_kwargs": {}
+        },
+        {
+          "line": 60,
+          "function": "AutoModelForCausalLM.from_pretrained",
+          "literal_args": [],
+          "public_kwargs": {}
+        }
+      ],
+      "public_model_constants": [
+        {
+          "line": 43,
+          "name": "FLORENCE2_MODEL_ID",
+          "value": "microsoft/Florence-2-large"
+        },
+        {
+          "line": 44,
+          "name": "SAM2_CHECKPOINT",
+          "value": "./checkpoints/sam2_hiera_large.pt"
+        },
+        {
+          "line": 45,
+          "name": "SAM2_CONFIG",
+          "value": "sam2_hiera_l.yaml"
+        }
+      ]
+    },
+    {
+      "path": "/home/oyjt/Scene-aware-BCI-VLA/Grounded-SAM-2/grounded_sam2_florence2_image_demo.py",
+      "exists": true,
+      "is_directory": false,
+      "bytes": 37642,
+      "mtime_ns": 1790706710589647770,
+      "resolved_path": "/home/oyjt/Scene-aware-BCI-VLA/Grounded-SAM-2/grounded_sam2_florence2_image_demo.py",
+      "sha256": "be0f1c01cde4d57c80b15775067eb61b03b181a75fe8857f6a6da499046c0b78",
+      "classes": [],
+      "relevant_methods": [
+        {
+          "name": "single_mask_to_rle",
+          "line": 69
+        },
+        {
+          "name": "object_detection_and_segmentation",
+          "line": 110
+        },
+        {
+          "name": "dense_region_caption_and_segmentation",
+          "line": 186
+        },
+        {
+          "name": "region_proposal_and_segmentation",
+          "line": 263
+        },
+        {
+          "name": "phrase_grounding_and_segmentation",
+          "line": 512
+        },
+        {
+          "name": "referring_expression_segmentation",
+          "line": 707
+        },
+        {
+          "name": "open_vocabulary_detection_and_segmentation",
+          "line": 816
+        }
+      ],
+      "model_reference_calls": [
+        {
+          "line": 63,
+          "function": "AutoModelForCausalLM.from_pretrained(FLORENCE2_MODEL_ID, trust_remote_code=True, torch_dtype='auto').eval().to",
+          "literal_args": [],
+          "public_kwargs": {}
+        },
+        {
+          "line": 64,
+          "function": "AutoProcessor.from_pretrained",
+          "literal_args": [],
+          "public_kwargs": {}
+        },
+        {
+          "line": 67,
+          "function": "build_sam2",
+          "literal_args": [],
+          "public_kwargs": {}
+        },
+        {
+          "line": 63,
+          "function": "AutoModelForCausalLM.from_pretrained(FLORENCE2_MODEL_ID, trust_remote_code=True, torch_dtype='auto').eval",
+          "literal_args": [],
+          "public_kwargs": {}
+        },
+        {
+          "line": 63,
+          "function": "AutoModelForCausalLM.from_pretrained",
+          "literal_args": [],
+          "public_kwargs": {}
+        }
+      ],
+      "public_model_constants": [
+        {
+          "line": 46,
+          "name": "FLORENCE2_MODEL_ID",
+          "value": "./Florence-2-large"
+        },
+        {
+          "line": 47,
+          "name": "SAM2_CHECKPOINT",
+          "value": "./checkpoints/sam2.1_hiera_large.pt"
+        },
+        {
+          "line": 48,
+          "name": "SAM2_CONFIG",
+          "value": "configs/sam2.1/sam2.1_hiera_l.yaml"
+        }
+      ]
+    },
+    {
+      "path": "/home/oyjt/Scene-aware-BCI-VLA/Grounded-SAM-2/grounded_sam2_gd1.5_demo.py",
+      "exists": true,
+      "is_directory": false,
+      "bytes": 8189,
+      "mtime_ns": 1790706710589647770,
+      "resolved_path": "/home/oyjt/Scene-aware-BCI-VLA/Grounded-SAM-2/grounded_sam2_gd1.5_demo.py",
+      "sha256": "8b3c92eaa136235b65b6c4f92127208b1bd4f326aaf7181a7edc41f19b50bb6a",
+      "classes": [],
+      "relevant_methods": [
+        {
+          "name": "single_mask_to_rle",
+          "line": 226
+        }
+      ],
+      "model_reference_calls": [
+        {
+          "line": 166,
+          "function": "build_sam2",
+          "literal_args": [],
+          "public_kwargs": {}
+        }
+      ],
+      "public_model_constants": [
+        {
+          "line": 25,
+          "name": "SAM2_CHECKPOINT",
+          "value": "./checkpoints/sam2.1_hiera_large.pt"
+        },
+        {
+          "line": 26,
+          "name": "SAM2_MODEL_CONFIG",
+          "value": "configs/sam2.1/sam2.1_hiera_l.yaml"
+        }
+      ]
+    },
+    {
+      "path": "/home/oyjt/Scene-aware-BCI-VLA/Grounded-SAM-2/grounded_sam2_hf_model_demo.py",
+      "exists": true,
+      "is_directory": false,
+      "bytes": 6243,
+      "mtime_ns": 1790706710589647770,
+      "resolved_path": "/home/oyjt/Scene-aware-BCI-VLA/Grounded-SAM-2/grounded_sam2_hf_model_demo.py",
+      "sha256": "80cbbb95ec0dd7e9b6873dc74380258f1139695d2d8ad0aafc5fb1181c62c26c",
+      "classes": [],
+      "relevant_methods": [
+        {
+          "name": "single_mask_to_rle",
+          "line": 158
+        }
+      ],
+      "model_reference_calls": [
+        {
+          "line": 55,
+          "function": "build_sam2",
+          "literal_args": [],
+          "public_kwargs": {}
+        },
+        {
+          "line": 60,
+          "function": "AutoProcessor.from_pretrained",
+          "literal_args": [],
+          "public_kwargs": {}
+        },
+        {
+          "line": 61,
+          "function": "AutoModelForZeroShotObjectDetection.from_pretrained(model_id).to",
+          "literal_args": [],
+          "public_kwargs": {}
+        },
+        {
+          "line": 61,
+          "function": "AutoModelForZeroShotObjectDetection.from_pretrained",
+          "literal_args": [],
+          "public_kwargs": {}
+        }
+      ],
+      "public_model_constants": []
+    },
+    {
+      "path": "/home/oyjt/Scene-aware-BCI-VLA/Grounded-SAM-2/grounded_sam2_local_demo.py",
+      "exists": true,
+      "is_directory": false,
+      "bytes": 5267,
+      "mtime_ns": 1790706710589647770,
+      "resolved_path": "/home/oyjt/Scene-aware-BCI-VLA/Grounded-SAM-2/grounded_sam2_local_demo.py",
+      "sha256": "8035887cef2316aad34fb3a7fc374ec81751f82a6548eb0e8a5a8732fb65cfa5",
+      "classes": [],
+      "relevant_methods": [
+        {
+          "name": "single_mask_to_rle",
+          "line": 144
+        }
+      ],
+      "model_reference_calls": [
+        {
+          "line": 43,
+          "function": "build_sam2",
+          "literal_args": [],
+          "public_kwargs": {}
+        }
+      ],
+      "public_model_constants": [
+        {
+          "line": 21,
+          "name": "SAM2_CHECKPOINT",
+          "value": "./checkpoints/sam2.1_hiera_large.pt"
+        },
+        {
+          "line": 22,
+          "name": "SAM2_MODEL_CONFIG",
+          "value": "configs/sam2.1/sam2.1_hiera_l.yaml"
+        },
+        {
+          "line": 24,
+          "name": "GROUNDING_DINO_CHECKPOINT",
+          "value": "gdino_checkpoints/groundingdino_swint_ogc.pth"
+        }
+      ]
+    },
+    {
+      "path": "/home/oyjt/Scene-aware-BCI-VLA/Grounded-SAM-2/grounded_sam2_tracking_camera_with_continuous_id.py",
+      "exists": true,
+      "is_directory": false,
+      "bytes": 19798,
+      "mtime_ns": 1790706710589647770,
+      "resolved_path": "/home/oyjt/Scene-aware-BCI-VLA/Grounded-SAM-2/grounded_sam2_tracking_camera_with_continuous_id.py",
+      "sha256": "2004cf2f02e2ca7ff05ca678a1a26754fd3504586b1c5c7f585e713708730b35",
+      "classes": [
+        {
+          "name": "GroundingDinoPredictor",
+          "line": 24
+        },
+        {
+          "name": "SAM2ImageSegmentor",
+          "line": 78
+        },
+        {
+          "name": "IncrementalObjectTracker",
+          "line": 135
+        }
+      ],
+      "relevant_methods": [
+        {
+          "name": "predict_masks_from_boxes",
+          "line": 106
+        },
+        {
+          "name": "visualize_frame_with_mask_and_metadata",
+          "line": 386
+        }
+      ],
+      "model_reference_calls": [
+        {
+          "line": 39,
+          "function": "AutoProcessor.from_pretrained",
+          "literal_args": [],
+          "public_kwargs": {}
+        },
+        {
+          "line": 40,
+          "function": "AutoModelForZeroShotObjectDetection.from_pretrained(model_id).to",
+          "literal_args": [],
+          "public_kwargs": {}
+        },
+        {
+          "line": 95,
+          "function": "build_sam2",
+          "literal_args": [],
+          "public_kwargs": {}
+        },
+        {
+          "line": 168,
+          "function": "build_sam2_video_predictor",
+          "literal_args": [],
+          "public_kwargs": {}
+        },
+        {
+          "line": 40,
+          "function": "AutoModelForZeroShotObjectDetection.from_pretrained",
+          "literal_args": [],
+          "public_kwargs": {}
+        }
+      ],
+      "public_model_constants": []
+    },
+    {
+      "path": "/home/oyjt/Scene-aware-BCI-VLA/Grounded-SAM-2/grounded_sam2_tracking_demo.py",
+      "exists": true,
+      "is_directory": false,
+      "bytes": 7114,
+      "mtime_ns": 1790706710589647770,
+      "resolved_path": "/home/oyjt/Scene-aware-BCI-VLA/Grounded-SAM-2/grounded_sam2_tracking_demo.py",
+      "sha256": "78ad63898d8ba577e8cc160f4256153e324daf24d5ceea6dad1594c689869dba",
+      "classes": [],
+      "relevant_methods": [],
+      "model_reference_calls": [
+        {
+          "line": 29,
+          "function": "build_sam2_video_predictor",
+          "literal_args": [],
+          "public_kwargs": {}
+        },
+        {
+          "line": 30,
+          "function": "build_sam2",
+          "literal_args": [],
+          "public_kwargs": {}
+        },
+        {
+          "line": 37,
+          "function": "AutoProcessor.from_pretrained",
+          "literal_args": [],
+          "public_kwargs": {}
+        },
+        {
+          "line": 38,
+          "function": "AutoModelForZeroShotObjectDetection.from_pretrained(model_id).to",
+          "literal_args": [],
+          "public_kwargs": {}
+        },
+        {
+          "line": 38,
+          "function": "AutoModelForZeroShotObjectDetection.from_pretrained",
+          "literal_args": [],
+          "public_kwargs": {}
+        }
+      ],
+      "public_model_constants": [
+        {
+          "line": 26,
+          "name": "sam2_checkpoint",
+          "value": "./checkpoints/sam2.1_hiera_large.pt"
+        }
+      ]
+    },
+    {
+      "path": "/home/oyjt/Scene-aware-BCI-VLA/Grounded-SAM-2/grounded_sam2_tracking_demo_custom_video_input_dinox.py",
+      "exists": true,
+      "is_directory": false,
+      "bytes": 8209,
+      "mtime_ns": 1790706710589647770,
+      "resolved_path": "/home/oyjt/Scene-aware-BCI-VLA/Grounded-SAM-2/grounded_sam2_tracking_demo_custom_video_input_dinox.py",
+      "sha256": "47b9ee8f09d6e01c6ccac02ca405991459656fb0bd700c1d9c34b0e80f300ee4",
+      "classes": [],
+      "relevant_methods": [],
+      "model_reference_calls": [
+        {
+          "line": 48,
+          "function": "build_sam2_video_predictor",
+          "literal_args": [],
+          "public_kwargs": {}
+        },
+        {
+          "line": 49,
+          "function": "build_sam2",
+          "literal_args": [],
+          "public_kwargs": {}
+        }
+      ],
+      "public_model_constants": [
+        {
+          "line": 45,
+          "name": "sam2_checkpoint",
+          "value": "./checkpoints/sam2.1_hiera_large.pt"
+        }
+      ]
+    },
+    {
+      "path": "/home/oyjt/Scene-aware-BCI-VLA/Grounded-SAM-2/grounded_sam2_tracking_demo_custom_video_input_gd1.0_hf_model.py",
+      "exists": true,
+      "is_directory": false,
+      "bytes": 7683,
+      "mtime_ns": 1790706710589647770,
+      "resolved_path": "/home/oyjt/Scene-aware-BCI-VLA/Grounded-SAM-2/grounded_sam2_tracking_demo_custom_video_input_gd1.0_hf_model.py",
+      "sha256": "0b45f9309f83e6647ffd2dc2cef0b3650e10ac6cb563a7345551e2de064c1a13",
+      "classes": [],
+      "relevant_methods": [],
+      "model_reference_calls": [
+        {
+          "line": 42,
+          "function": "build_sam2_video_predictor",
+          "literal_args": [],
+          "public_kwargs": {}
+        },
+        {
+          "line": 43,
+          "function": "build_sam2",
+          "literal_args": [],
+          "public_kwargs": {}
+        },
+        {
+          "line": 49,
+          "function": "AutoProcessor.from_pretrained",
+          "literal_args": [],
+          "public_kwargs": {}
+        },
+        {
+          "line": 50,
+          "function": "AutoModelForZeroShotObjectDetection.from_pretrained(model_id).to",
+          "literal_args": [],
+          "public_kwargs": {}
+        },
+        {
+          "line": 50,
+          "function": "AutoModelForZeroShotObjectDetection.from_pretrained",
+          "literal_args": [],
+          "public_kwargs": {}
+        }
+      ],
+      "public_model_constants": [
+        {
+          "line": 39,
+          "name": "sam2_checkpoint",
+          "value": "./checkpoints/sam2.1_hiera_large.pt"
+        }
+      ]
+    },
+    {
+      "path": "/home/oyjt/Scene-aware-BCI-VLA/Grounded-SAM-2/grounded_sam2_tracking_demo_custom_video_input_gd1.0_local_model.py",
+      "exists": true,
+      "is_directory": false,
+      "bytes": 7886,
+      "mtime_ns": 1790706710589647770,
+      "resolved_path": "/home/oyjt/Scene-aware-BCI-VLA/Grounded-SAM-2/grounded_sam2_tracking_demo_custom_video_input_gd1.0_local_model.py",
+      "sha256": "53f20fcbe90897fc33453c9b38886b5f917ce539b0cd1749017a46980176f36a",
+      "classes": [],
+      "relevant_methods": [],
+      "model_reference_calls": [
+        {
+          "line": 46,
+          "function": "build_sam2_video_predictor",
+          "literal_args": [],
+          "public_kwargs": {}
+        },
+        {
+          "line": 47,
+          "function": "build_sam2",
+          "literal_args": [],
+          "public_kwargs": {}
+        }
+      ],
+      "public_model_constants": [
+        {
+          "line": 20,
+          "name": "GROUNDING_DINO_CHECKPOINT",
+          "value": "gdino_checkpoints/groundingdino_swint_ogc.pth"
+        },
+        {
+          "line": 43,
+          "name": "sam2_checkpoint",
+          "value": "./checkpoints/sam2.1_hiera_large.pt"
+        }
+      ]
+    },
+    {
+      "path": "/home/oyjt/Scene-aware-BCI-VLA/Grounded-SAM-2/grounded_sam2_tracking_demo_custom_video_input_gd1.5.py",
+      "exists": true,
+      "is_directory": false,
+      "bytes": 8252,
+      "mtime_ns": 1790706710589647770,
+      "resolved_path": "/home/oyjt/Scene-aware-BCI-VLA/Grounded-SAM-2/grounded_sam2_tracking_demo_custom_video_input_gd1.5.py",
+      "sha256": "051350955f985b3e9d51b85df754eb6826a1ec15642105e0415f9cc7d05d7820",
+      "classes": [],
+      "relevant_methods": [],
+      "model_reference_calls": [
+        {
+          "line": 48,
+          "function": "build_sam2_video_predictor",
+          "literal_args": [],
+          "public_kwargs": {}
+        },
+        {
+          "line": 49,
+          "function": "build_sam2",
+          "literal_args": [],
+          "public_kwargs": {}
+        }
+      ],
+      "public_model_constants": [
+        {
+          "line": 45,
+          "name": "sam2_checkpoint",
+          "value": "./checkpoints/sam2.1_hiera_large.pt"
+        }
+      ]
+    },
+    {
+      "path": "/home/oyjt/Scene-aware-BCI-VLA/Grounded-SAM-2/grounded_sam2_tracking_demo_with_continuous_id.py",
+      "exists": true,
+      "is_directory": false,
+      "bytes": 8538,
+      "mtime_ns": 1790706710589647770,
+      "resolved_path": "/home/oyjt/Scene-aware-BCI-VLA/Grounded-SAM-2/grounded_sam2_tracking_demo_with_continuous_id.py",
+      "sha256": "56bd91def27a8a80fe8d3b55f508124f9ad3d8b5cb3c77a66d2f3413c23f7597",
+      "classes": [],
+      "relevant_methods": [],
+      "model_reference_calls": [
+        {
+          "line": 34,
+          "function": "build_sam2_video_predictor",
+          "literal_args": [],
+          "public_kwargs": {}
+        },
+        {
+          "line": 35,
+          "function": "build_sam2",
+          "literal_args": [],
+          "public_kwargs": {}
+        },
+        {
+          "line": 41,
+          "function": "AutoProcessor.from_pretrained",
+          "literal_args": [],
+          "public_kwargs": {}
+        },
+        {
+          "line": 42,
+          "function": "AutoModelForZeroShotObjectDetection.from_pretrained(model_id).to",
+          "literal_args": [],
+          "public_kwargs": {}
+        },
+        {
+          "line": 42,
+          "function": "AutoModelForZeroShotObjectDetection.from_pretrained",
+          "literal_args": [],
+          "public_kwargs": {}
+        }
+      ],
+      "public_model_constants": [
+        {
+          "line": 29,
+          "name": "sam2_checkpoint",
+          "value": "./checkpoints/sam2.1_hiera_large.pt"
+        }
+      ]
+    },
+    {
+      "path": "/home/oyjt/Scene-aware-BCI-VLA/Grounded-SAM-2/grounded_sam2_tracking_demo_with_continuous_id_gd1.5.py",
+      "exists": true,
+      "is_directory": false,
+      "bytes": 9210,
+      "mtime_ns": 1790706710590647795,
+      "resolved_path": "/home/oyjt/Scene-aware-BCI-VLA/Grounded-SAM-2/grounded_sam2_tracking_demo_with_continuous_id_gd1.5.py",
+      "sha256": "61b72d8e9878883ce6fcf75a3af3ef4ed560a29c85d6c9f9af3ef0f7b2f0b609",
+      "classes": [],
+      "relevant_methods": [],
+      "model_reference_calls": [
+        {
+          "line": 36,
+          "function": "build_sam2_video_predictor",
+          "literal_args": [],
+          "public_kwargs": {}
+        },
+        {
+          "line": 37,
+          "function": "build_sam2",
+          "literal_args": [],
+          "public_kwargs": {}
+        },
+        {
+          "line": 43,
+          "function": "AutoProcessor.from_pretrained",
+          "literal_args": [],
+          "public_kwargs": {}
+        },
+        {
+          "line": 44,
+          "function": "AutoModelForZeroShotObjectDetection.from_pretrained(model_id).to",
+          "literal_args": [],
+          "public_kwargs": {}
+        },
+        {
+          "line": 44,
+          "function": "AutoModelForZeroShotObjectDetection.from_pretrained",
+          "literal_args": [],
+          "public_kwargs": {}
+        }
+      ],
+      "public_model_constants": [
+        {
+          "line": 31,
+          "name": "sam2_checkpoint",
+          "value": "./checkpoints/sam2.1_hiera_large.pt"
+        }
+      ]
+    },
+    {
+      "path": "/home/oyjt/Scene-aware-BCI-VLA/Grounded-SAM-2/grounded_sam2_tracking_demo_with_continuous_id_plus.py",
+      "exists": true,
+      "is_directory": false,
+      "bytes": 10977,
+      "mtime_ns": 1790706710590647795,
+      "resolved_path": "/home/oyjt/Scene-aware-BCI-VLA/Grounded-SAM-2/grounded_sam2_tracking_demo_with_continuous_id_plus.py",
+      "sha256": "972b594ddc587b820e071605f6b2b8fa2788acaaf86712c15633987fe7b4e6de",
+      "classes": [],
+      "relevant_methods": [],
+      "model_reference_calls": [
+        {
+          "line": 35,
+          "function": "build_sam2_video_predictor",
+          "literal_args": [],
+          "public_kwargs": {}
+        },
+        {
+          "line": 36,
+          "function": "build_sam2",
+          "literal_args": [],
+          "public_kwargs": {}
+        },
+        {
+          "line": 42,
+          "function": "AutoProcessor.from_pretrained",
+          "literal_args": [],
+          "public_kwargs": {}
+        },
+        {
+          "line": 43,
+          "function": "AutoModelForZeroShotObjectDetection.from_pretrained(model_id).to",
+          "literal_args": [],
+          "public_kwargs": {}
+        },
+        {
+          "line": 43,
+          "function": "AutoModelForZeroShotObjectDetection.from_pretrained",
+          "literal_args": [],
+          "public_kwargs": {}
+        }
+      ],
+      "public_model_constants": [
+        {
+          "line": 30,
+          "name": "sam2_checkpoint",
+          "value": "./checkpoints/sam2.1_hiera_large.pt"
+        }
+      ]
+    },
+    {
+      "path": "/home/oyjt/Scene-aware-BCI-VLA/Grounded-SAM-2/grounded_sam2_tracking_demo_with_gd1.5.py",
+      "exists": true,
+      "is_directory": false,
+      "bytes": 7514,
+      "mtime_ns": 1790706710590647795,
+      "resolved_path": "/home/oyjt/Scene-aware-BCI-VLA/Grounded-SAM-2/grounded_sam2_tracking_demo_with_gd1.5.py",
+      "sha256": "96c8fa0b42a79e6bf8857b8893c876bae03b104d21046330820946ff4dba308b",
+      "classes": [],
+      "relevant_methods": [],
+      "model_reference_calls": [
+        {
+          "line": 33,
+          "function": "build_sam2_video_predictor",
+          "literal_args": [],
+          "public_kwargs": {}
+        },
+        {
+          "line": 34,
+          "function": "build_sam2",
+          "literal_args": [],
+          "public_kwargs": {}
+        }
+      ],
+      "public_model_constants": [
+        {
+          "line": 30,
+          "name": "sam2_checkpoint",
+          "value": "./checkpoints/sam2.1_hiera_large.pt"
+        }
+      ]
+    },
+    {
+      "path": "/home/oyjt/Scene-aware-BCI-VLA/Scene-aware-BCI-VLA/interface.py",
+      "exists": true,
+      "is_directory": false,
+      "bytes": 13249,
+      "mtime_ns": 1790705854854456787,
+      "resolved_path": "/home/oyjt/Scene-aware-BCI-VLA/Scene-aware-BCI-VLA/interface.py",
+      "sha256": "74c7011c304b0b89f9a6e39801a4aeda7bceea3c30229b02b964725ce7de093a",
+      "classes": [
+        {
+          "name": "BCIClient",
+          "line": 28
+        }
+      ],
+      "relevant_methods": [],
+      "model_reference_calls": [],
+      "public_model_constants": []
+    }
+  ],
+  "entry_imports": [
+    {
+      "path": "/home/oyjt/Scene-aware-BCI-VLA/scripts/inference.py",
+      "imports": [
+        "import time",
+        "import csv",
+        "import numpy as np",
+        "import cv2",
+        "import matplotlib.pyplot as plt",
+        "from typing import Any",
+        "import threading",
+        "import copy",
+        "import requests",
+        "import base64",
+        "import json",
+        "import os",
+        "import google.generativeai as genai"
+      ]
+    },
+    {
+      "path": "/home/oyjt/Scene-aware-BCI-VLA/scripts/server_api.py",
+      "imports": [
+        "import os",
+        "import json",
+        "import base64",
+        "import shutil",
+        "import traceback",
+        "import numpy as np",
+        "import cv2",
+        "from PIL import Image",
+        "from fastapi import FastAPI, UploadFile, File, Form",
+        "from fastapi.responses import JSONResponse",
+        "import uvicorn",
+        "from typing import Optional",
+        "from pydantic import BaseModel",
+        "import time",
+        "import uuid",
+        "from datetime import datetime",
+        "import threading",
+        "import grounded_sam2_florence2_image_demo as demo"
+      ]
+    }
+  ],
+  "paths": [
+    {
+      "path": "/home/oyjt/Scene-aware-BCI-VLA/Grounded-SAM-2/checkpoints/sam2.1_hiera_large.pt",
+      "exists": false
+    },
+    {
+      "path": "/home/oyjt/Scene-aware-BCI-VLA/Grounded-SAM-2/checkpoints/sam2_hiera_large.pt",
+      "exists": false
+    },
+    {
+      "path": "/home/oyjt/.cache/openpi/big_vision/paligemma_tokenizer.model",
+      "exists": true,
+      "is_directory": false,
+      "bytes": 4264023,
+      "mtime_ns": 1765281977702913259,
+      "resolved_path": "/home/oyjt/.cache/openpi/big_vision/paligemma_tokenizer.model"
+    },
+    {
+      "path": "/home/oyjt/.cache/openpi/gs/big_vision/paligemma_tokenizer.model",
+      "exists": false
+    },
+    {
+      "path": "/home/oyjt/LIBERO",
+      "exists": true,
+      "is_directory": true,
+      "bytes": 4096,
+      "mtime_ns": 1767859650272165158,
+      "resolved_path": "/home/oyjt/LIBERO",
+      "children": [
+        ".git",
+        ".gitignore",
+        "LICENSE",
+        "README.md",
+        "benchmark_scripts",
+        "images",
+        "libero",
+        "libero.egg-info",
+        "notebooks",
+        "requirements.txt",
+        "scripts",
+        "setup.py",
+        "templates"
+      ]
+    },
+    {
+      "path": "/home/oyjt/openpi/.venv/pyvenv.cfg",
+      "exists": true,
+      "is_directory": false,
+      "bytes": 191,
+      "mtime_ns": 1767846956557090515,
+      "resolved_path": "/home/oyjt/openpi/.venv/pyvenv.cfg"
+    },
+    {
+      "path": "/home/oyjt/workspace/miniconda3/envs/libero/bin/python",
+      "exists": true,
+      "is_directory": false,
+      "bytes": 17266184,
+      "mtime_ns": 1769793254590513785,
+      "resolved_path": "/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/miniconda3/envs/libero/bin/python3.10"
+    }
+  ],
+  "florence_snapshots": [
+    {
+      "snapshot": "/home/oyjt/.cache/huggingface/hub/models--microsoft--Florence-2-large/snapshots/21a599d414c4d928c9032694c424fb94458e3594",
+      "files": [
+        {
+          "path": "/home/oyjt/.cache/huggingface/hub/models--microsoft--Florence-2-large/snapshots/21a599d414c4d928c9032694c424fb94458e3594/config.json",
+          "exists": true,
+          "is_directory": false,
+          "bytes": 2445,
+          "mtime_ns": 1776866046211376519,
+          "resolved_path": "/home/oyjt/.cache/huggingface/hub/models--microsoft--Florence-2-large/blobs/b6ddc8da42783bb08019a4d330a9622f1696efdd"
+        },
+        {
+          "path": "/home/oyjt/.cache/huggingface/hub/models--microsoft--Florence-2-large/snapshots/21a599d414c4d928c9032694c424fb94458e3594/configuration_florence2.py",
+          "exists": true,
+          "is_directory": false,
+          "bytes": 15119,
+          "mtime_ns": 1776866048009376444,
+          "resolved_path": "/home/oyjt/.cache/huggingface/hub/models--microsoft--Florence-2-large/blobs/b8869617ef8dfd0f04d421cf59b83ca662c363ad"
+        },
+        {
+          "path": "/home/oyjt/.cache/huggingface/hub/models--microsoft--Florence-2-large/snapshots/21a599d414c4d928c9032694c424fb94458e3594/modeling_florence2.py",
+          "exists": true,
+          "is_directory": false,
+          "bytes": 127455,
+          "mtime_ns": 1776866050171376353,
+          "resolved_path": "/home/oyjt/.cache/huggingface/hub/models--microsoft--Florence-2-large/blobs/90208540137fcf518aa92186e58ac964213c6420"
+        }
+      ]
+    }
+  ],
+  "tokenizer_source_references": [
+    {
+      "line": 18,
+      "text": "path = download.maybe_download(\"gs://big_vision/paligemma_tokenizer.model\", gs={\"token\": \"anon\"})"
+    },
+    {
+      "line": 56,
+      "text": "path = download.maybe_download(\"gs://big_vision/paligemma_tokenizer.model\", gs={\"token\": \"anon\"})"
+    },
+    {
+      "line": 58,
+      "text": "self._paligemma_tokenizer = sentencepiece.SentencePieceProcessor(model_proto=f.read())"
+    },
+    {
+      "line": 75,
+      "text": "prefix_tokens = self._paligemma_tokenizer.encode(prefix, add_bos=True)"
+    },
+    {
+      "line": 84,
+      "text": "self._paligemma_tokenizer.encode(\"Action: \")"
+    },
+    {
+      "line": 86,
+      "text": "+ self._paligemma_tokenizer.encode(\"|\", add_eos=True)"
+    },
+    {
+      "line": 121,
+      "text": "decoded_tokens = self._paligemma_tokenizer.decode(tokens.tolist())"
+    },
+    {
+      "line": 129,
+      "text": "self._paligemma_tokenizer.encode(decoded_tokens.split(\"Action: \")[1].split(\"|\")[0].strip())"
+    },
+    {
+      "line": 139,
+      "text": "return self._paligemma_tokenizer.vocab_size() - 1 - self._fast_skip_tokens - tokens"
+    },
+    {
+      "line": 158,
+      "text": "path = download.maybe_download(\"gs://big_vision/paligemma_tokenizer.model\", gs={\"token\": \"anon\"})"
+    },
+    {
+      "line": 160,
+      "text": "self._paligemma_tokenizer = sentencepiece.SentencePieceProcessor(model_proto=f.read())"
+    },
+    {
+      "line": 188,
+      "text": "prefix_tokens = self._paligemma_tokenizer.encode(prefix, add_bos=True)"
+    },
+    {
+      "line": 224,
+      "text": "decoded_tokens = self._paligemma_tokenizer.decode(tokens.tolist())"
+    },
+    {
+      "line": 232,
+      "text": "self._paligemma_tokenizer.encode(decoded_tokens.split(\"Action: \")[1].split(\"|\")[0].strip())"
+    },
+    {
+      "line": 243,
+      "text": "return self._paligemma_tokenizer.vocab_size() - 1 - self._fast_skip_tokens - tokens"
+    },
+    {
+      "line": 294,
+      "text": "path = download.maybe_download(\"gs://big_vision/paligemma_tokenizer.model\", gs={\"token\": \"anon\"})"
+    },
+    {
+      "line": 296,
+      "text": "self._paligemma_tokenizer = sentencepiece.SentencePieceProcessor(model_proto=f.read())"
+    },
+    {
+      "line": 311,
+      "text": "prefix_tokens = self._paligemma_tokenizer.encode(prefix, add_bos=True)"
+    },
+    {
+      "line": 347,
+      "text": "decoded_tokens = self._paligemma_tokenizer.decode(tokens.tolist())"
+    },
+    {
+      "line": 355,
+      "text": "self._paligemma_tokenizer.encode(decoded_tokens.split(\"Action: \")[1].split(\"|\")[0].strip())"
+    },
+    {
+      "line": 371,
+      "text": "return self._paligemma_tokenizer.vocab_size() - 1 - self._fast_skip_tokens - tokens"
+    }
+  ],
+  "pi05_weight_hash": {
+    "path": "/home/oyjt/workspace/RLinf-RECAP/models/baseline_sft/RLinf-Pi05-LIBERO-SFT/model.safetensors",
+    "bytes": 7473091464,
+    "bytes_read": 5544869888,
+    "duration_s": 32.112548483069986,
+    "complete": false,
+    "metadata_stable": true,
+    "sha256": null
+  },
+  "not_performed": [
+    "model_load",
+    "model_inference",
+    "training",
+    "service_launch",
+    "EEG_connection",
+    "robot_connection",
+    "remote_file_write",
+    "dependency_install"
+  ]
+}

@@ -1,0 +1,586 @@
+{
+  "checked_at_utc": "2026-10-16T15:54:52.863634+00:00",
+  "scope": "local static source inventory only",
+  "files": [
+    {
+      "path": "D:\\Scene_Aware\\context_intent\\README.md",
+      "exists": true,
+      "bytes": 1964,
+      "sha256": "2d97c5cde45b958b14f418e05d69414a6a9fad566bf8a1a85a80f590c0e98dc8"
+    },
+    {
+      "path": "D:\\Scene_Aware\\context_intent\\pyproject.toml",
+      "exists": true,
+      "bytes": 468,
+      "sha256": "2ef56acb6da4178220b310ae1cd02f0fee1ac8aeb416934fdc6c1f27fb672e51",
+      "project_requirements": {
+        "name": "scene-context-intent",
+        "version": "0.1.0",
+        "description": "Bounded-task scene/BCI intent inference and fair offline comparisons",
+        "requires-python": ">=3.10",
+        "dependencies": [],
+        "optional-dependencies": {
+          "neural": [
+            "torch>=2.2",
+            "numpy>=1.24"
+          ]
+        },
+        "scripts": {
+          "scene-context": "scene_context.cli:main"
+        }
+      }
+    },
+    {
+      "path": "D:\\Scene_Aware\\context_intent\\scene_context\\model.py",
+      "exists": true,
+      "bytes": 19589,
+      "sha256": "149bd3fda497d7255e82c7921d4bbdfa2101ad4f4da73e24efd9407297f7bafb",
+      "classes": [
+        {
+          "name": "ModelConfig",
+          "line": 44
+        },
+        {
+          "name": "RelationAttention",
+          "line": 69
+        },
+        {
+          "name": "IntentModel",
+          "line": 111
+        },
+        {
+          "name": "NeuralPredictor",
+          "line": 311
+        }
+      ],
+      "functions": [
+        {
+          "name": "_bucket",
+          "line": 33
+        },
+        {
+          "name": "_one_hot",
+          "line": 39
+        },
+        {
+          "name": "proposal_from_output",
+          "line": 288
+        },
+        {
+          "name": "__post_init__",
+          "line": 54
+        },
+        {
+          "name": "__init__",
+          "line": 72
+        },
+        {
+          "name": "forward",
+          "line": 87
+        },
+        {
+          "name": "__init__",
+          "line": 120
+        },
+        {
+          "name": "device",
+          "line": 154
+        },
+        {
+          "name": "_encode",
+          "line": 157
+        },
+        {
+          "name": "forward",
+          "line": 249
+        },
+        {
+          "name": "__init__",
+          "line": 314
+        },
+        {
+          "name": "predict",
+          "line": 336
+        },
+        {
+          "name": "describe",
+          "line": 346
+        },
+        {
+          "name": "reproducibility_settings",
+          "line": 354
+        }
+      ]
+    },
+    {
+      "path": "D:\\Scene_Aware\\context_intent\\scene_context\\schema.py",
+      "exists": true,
+      "bytes": 9771,
+      "sha256": "3ab59a38c73f29608f418fe209d2f441e463db849c2a61048433edc6be2ae110",
+      "classes": [],
+      "functions": [
+        {
+          "name": "_text",
+          "line": 17
+        },
+        {
+          "name": "_prob",
+          "line": 25
+        },
+        {
+          "name": "validate_observation",
+          "line": 31
+        },
+        {
+          "name": "validate_case",
+          "line": 119
+        },
+        {
+          "name": "public_observation",
+          "line": 154
+        },
+        {
+          "name": "load_cases",
+          "line": 158
+        },
+        {
+          "name": "assert_disjoint_scenes",
+          "line": 173
+        }
+      ]
+    },
+    {
+      "path": "D:\\Scene_Aware\\context_intent\\scene_context\\training.py",
+      "exists": true,
+      "bytes": 12770,
+      "sha256": "0d997a644cdbf58a1deaa1e24503d25969ff9176e1f5d83319576a0af6382f72",
+      "classes": [],
+      "functions": [
+        {
+          "name": "set_seed",
+          "line": 18
+        },
+        {
+          "name": "_digest",
+          "line": 26
+        },
+        {
+          "name": "_key",
+          "line": 30
+        },
+        {
+          "name": "_loss",
+          "line": 36
+        },
+        {
+          "name": "_check_cases",
+          "line": 61
+        },
+        {
+          "name": "_snapshot",
+          "line": 75
+        },
+        {
+          "name": "_temperature",
+          "line": 88
+        },
+        {
+          "name": "_calibrate",
+          "line": 110
+        },
+        {
+          "name": "train_model",
+          "line": 140
+        }
+      ]
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\pyproject.toml",
+      "exists": true,
+      "bytes": 304,
+      "sha256": "e814739464caf9af19ce7141dc83f371261fb377c690327d83a4d8ec27ef33a0",
+      "project_requirements": {
+        "name": "bci-vla-framework",
+        "version": "0.1.0",
+        "description": "Source-bound offline BCI interaction protocol",
+        "requires-python": ">=3.10",
+        "dependencies": []
+      }
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\core\\joint_belief.py",
+      "exists": true,
+      "bytes": 16649,
+      "sha256": "54665ff8c8a4dd0e1d47efce4c2684a91ca9676d5a1ac1dc0e81724abe8896a3",
+      "classes": [
+        {
+          "name": "GoalVocabulary",
+          "line": 16
+        },
+        {
+          "name": "TaskQuestionBinding",
+          "line": 49
+        },
+        {
+          "name": "JointBeliefFilter",
+          "line": 76
+        }
+      ],
+      "functions": [
+        {
+          "name": "__init__",
+          "line": 18
+        },
+        {
+          "name": "confirmation_symbols",
+          "line": 40
+        },
+        {
+          "name": "__init__",
+          "line": 50
+        },
+        {
+          "name": "validate_request",
+          "line": 67
+        },
+        {
+          "name": "__init__",
+          "line": 83
+        },
+        {
+          "name": "audit_log",
+          "line": 106
+        },
+        {
+          "name": "_view",
+          "line": 108
+        },
+        {
+          "name": "snapshot",
+          "line": 111
+        },
+        {
+          "name": "_predict",
+          "line": 115
+        },
+        {
+          "name": "update",
+          "line": 123
+        }
+      ]
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\core\\diagnostic_policy.py",
+      "exists": true,
+      "bytes": 16859,
+      "sha256": "5214c9b94e8eb512c32fd658cb4ac34c88fd03dd2525a6b2259d7fa385e16e83",
+      "classes": [
+        {
+          "name": "PlanningState",
+          "line": 15
+        },
+        {
+          "name": "DiagnosticPolicy",
+          "line": 75
+        }
+      ],
+      "functions": [
+        {
+          "name": "__post_init__",
+          "line": 32
+        },
+        {
+          "name": "from_filter_snapshot",
+          "line": 53
+        },
+        {
+          "name": "advance",
+          "line": 61
+        },
+        {
+          "name": "__init__",
+          "line": 76
+        },
+        {
+          "name": "_vector",
+          "line": 111
+        },
+        {
+          "name": "_predict",
+          "line": 116
+        },
+        {
+          "name": "_terminal_loss",
+          "line": 120
+        },
+        {
+          "name": "_branches",
+          "line": 124
+        },
+        {
+          "name": "_tv",
+          "line": 150
+        },
+        {
+          "name": "_evaluate",
+          "line": 161
+        },
+        {
+          "name": "plan",
+          "line": 219
+        },
+        {
+          "name": "carry_channel_to_new_task",
+          "line": 266
+        }
+      ]
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\contracts\\session.py",
+      "exists": true,
+      "bytes": 32057,
+      "sha256": "7d46d82290e675e6fb7ecf580bbeaa6a0a152755b714acaff8a0b5e9607fc325",
+      "classes": [
+        {
+          "name": "InteractionSession",
+          "line": 28
+        }
+      ],
+      "functions": [
+        {
+          "name": "at",
+          "line": 21
+        },
+        {
+          "name": "replay_session_state",
+          "line": 400
+        },
+        {
+          "name": "__init__",
+          "line": 29
+        },
+        {
+          "name": "_active_model_refs",
+          "line": 63
+        },
+        {
+          "name": "_now",
+          "line": 70
+        },
+        {
+          "name": "snapshot",
+          "line": 75
+        },
+        {
+          "name": "_record",
+          "line": 86
+        },
+        {
+          "name": "_revoke",
+          "line": 90
+        },
+        {
+          "name": "_current_contract",
+          "line": 93
+        },
+        {
+          "name": "_prediction_copy",
+          "line": 105
+        },
+        {
+          "name": "propose",
+          "line": 118
+        },
+        {
+          "name": "begin_interaction",
+          "line": 136
+        },
+        {
+          "name": "ingest",
+          "line": 175
+        },
+        {
+          "name": "authorize",
+          "line": 212
+        },
+        {
+          "name": "dispatch",
+          "line": 237
+        },
+        {
+          "name": "_validate_reply",
+          "line": 276
+        },
+        {
+          "name": "refresh_submission",
+          "line": 286
+        },
+        {
+          "name": "verify_endpoint",
+          "line": 316
+        },
+        {
+          "name": "_stop",
+          "line": 338
+        },
+        {
+          "name": "request_stop",
+          "line": 346
+        },
+        {
+          "name": "cancel",
+          "line": 349
+        },
+        {
+          "name": "expire",
+          "line": 352
+        },
+        {
+          "name": "revise_context",
+          "line": 362
+        },
+        {
+          "name": "invalidate_models",
+          "line": 378
+        },
+        {
+          "name": "request_policy",
+          "line": 384
+        }
+      ]
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\adapters\\vla\\libero_pi05.py",
+      "exists": true,
+      "bytes": 1108,
+      "sha256": "4ef32592e647bc0824029b314d051e106d081f67769def02ae9a164784083222",
+      "classes": [],
+      "functions": [
+        {
+          "name": "controller_actions",
+          "line": 4
+        }
+      ]
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\adapters\\bci\\ssvep.py",
+      "exists": true,
+      "bytes": 253,
+      "sha256": "e304c9921854dfebdb8261909f2d9339b099183a127a709440d9ad7bb30165ad",
+      "classes": [
+        {
+          "name": "SSVEPAdapterShell",
+          "line": 5
+        }
+      ],
+      "functions": []
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\adapters\\bci\\packet_replay.py",
+      "exists": true,
+      "bytes": 1831,
+      "sha256": "c3a6549d39c92a16aa8d9973c3fdcd89df97dbbf1371fd6a809e93b45b0707b4",
+      "classes": [
+        {
+          "name": "PacketReplayTransport",
+          "line": 5
+        }
+      ],
+      "functions": [
+        {
+          "name": "__init__",
+          "line": 6
+        },
+        {
+          "name": "encode",
+          "line": 10
+        },
+        {
+          "name": "_check",
+          "line": 14
+        },
+        {
+          "name": "feed",
+          "line": 20
+        }
+      ]
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\step15_pi05_orchestrator.py",
+      "exists": true,
+      "bytes": 3200,
+      "sha256": "9180c9a7b2dd7806830bcccc9f16d6e569186d96c11ad10171962494706fe184",
+      "classes": [],
+      "functions": []
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\step15C_pi05_engine.py",
+      "exists": true,
+      "bytes": 8318,
+      "sha256": "18f54241bacc24dd66284a10cfcdfa0659d23678a91dfe9662893cacf1d86f86",
+      "classes": [
+        {
+          "name": "LiberoEngine",
+          "line": 17
+        }
+      ],
+      "functions": [
+        {
+          "name": "__init__",
+          "line": 18
+        },
+        {
+          "name": "log",
+          "line": 29
+        },
+        {
+          "name": "clear_queue",
+          "line": 33
+        },
+        {
+          "name": "reset",
+          "line": 37
+        },
+        {
+          "name": "position",
+          "line": 46
+        },
+        {
+          "name": "predicate_details",
+          "line": 48
+        },
+        {
+          "name": "held",
+          "line": 57
+        },
+        {
+          "name": "observation_digests",
+          "line": 59
+        },
+        {
+          "name": "observation",
+          "line": 64
+        },
+        {
+          "name": "scene",
+          "line": 69
+        },
+        {
+          "name": "advance",
+          "line": 88
+        },
+        {
+          "name": "save_video",
+          "line": 114
+        },
+        {
+          "name": "close",
+          "line": 119
+        }
+      ]
+    }
+  ],
+  "v4_neural_module_directory_exists": false,
+  "legacy_context_intent_weight_files": [],
+  "private_profile_content_copied": false
+}

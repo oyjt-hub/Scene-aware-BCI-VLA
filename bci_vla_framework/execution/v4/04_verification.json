@@ -1,0 +1,899 @@
+{
+  "scope": "actual LIBERO capture/dataset/lineage integrity only; not manipulation success",
+  "status": "PASS",
+  "checks": 222,
+  "passed": 222,
+  "public_rows_validated": 4224,
+  "private_rows_validated": 4608,
+  "future_labels_checked": 1872,
+  "results": [
+    {
+      "name": "actual_LIBERO_48_base_episodes",
+      "passed": true
+    },
+    {
+      "name": "no_successful_task_claim",
+      "passed": true
+    },
+    {
+      "name": "scene_disjoint:calibration_audit:calibration_fit",
+      "passed": true
+    },
+    {
+      "name": "scene_disjoint:calibration_audit:test_sealed",
+      "passed": true
+    },
+    {
+      "name": "scene_disjoint:calibration_audit:train",
+      "passed": true
+    },
+    {
+      "name": "scene_disjoint:calibration_audit:validation",
+      "passed": true
+    },
+    {
+      "name": "scene_disjoint:calibration_fit:test_sealed",
+      "passed": true
+    },
+    {
+      "name": "scene_disjoint:calibration_fit:train",
+      "passed": true
+    },
+    {
+      "name": "scene_disjoint:calibration_fit:validation",
+      "passed": true
+    },
+    {
+      "name": "scene_disjoint:test_sealed:train",
+      "passed": true
+    },
+    {
+      "name": "scene_disjoint:test_sealed:validation",
+      "passed": true
+    },
+    {
+      "name": "scene_disjoint:train:validation",
+      "passed": true
+    },
+    {
+      "name": "image_sha:91d9a10410845c55cbc2cefc_0.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:91d9a10410845c55cbc2cefc_1.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:6c8727dd8d0fbad1eabe4812_0.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:6c8727dd8d0fbad1eabe4812_1.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:b3822826721b2af0c156cace_0.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:b3822826721b2af0c156cace_1.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:223d74563971711fb916a384_0.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:223d74563971711fb916a384_1.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:ca3b07c2533c3c18c1047dea_0.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:ca3b07c2533c3c18c1047dea_1.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:f286c7db45beae1e42c827f0_0.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:f286c7db45beae1e42c827f0_1.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:e59a2ecd6fcdc4f613abd127_0.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:e59a2ecd6fcdc4f613abd127_1.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:2a97a8cf372c38008bb97a22_0.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:2a97a8cf372c38008bb97a22_1.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:0984040b886020f7c7d38775_0.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:0984040b886020f7c7d38775_1.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:04154e43d8656849881935c8_0.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:04154e43d8656849881935c8_1.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:46090868d3ca5183d06c31d4_0.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:46090868d3ca5183d06c31d4_1.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:bcaaaade5149b94f01a42ed9_0.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:bcaaaade5149b94f01a42ed9_1.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:1f78b94654ffba049895ff20_0.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:1f78b94654ffba049895ff20_1.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:65f82be576efd9a4d3381acc_0.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:65f82be576efd9a4d3381acc_1.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:6914de021eca3ca8b3623068_0.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:6914de021eca3ca8b3623068_1.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:7c1b421e001fe3762a4d33fe_0.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:7c1b421e001fe3762a4d33fe_1.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:6601432a410389a03c224d0b_0.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:6601432a410389a03c224d0b_1.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:2db4ddf92e39816c249d5b8c_0.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:2db4ddf92e39816c249d5b8c_1.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:70ccc7920d34f4976ad77fdb_0.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:70ccc7920d34f4976ad77fdb_1.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:4e9f98b02d0aa8f685be49dd_0.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:4e9f98b02d0aa8f685be49dd_1.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:09b8103eb9900503cd143c36_0.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:09b8103eb9900503cd143c36_1.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:64fcf448cd902179694b3865_0.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:64fcf448cd902179694b3865_1.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:7174f73d7055530f63773963_0.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:7174f73d7055530f63773963_1.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:67c5dafe72c0b3ace0f3fd3e_0.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:67c5dafe72c0b3ace0f3fd3e_1.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:3e7f4a934272c0ac1dcfa709_0.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:3e7f4a934272c0ac1dcfa709_1.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:a733559f6120147aa83fb6dd_0.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:a733559f6120147aa83fb6dd_1.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:3ca46f06f2e98c7585e4453d_0.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:3ca46f06f2e98c7585e4453d_1.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:8a73e47aa9c92d370ca37806_0.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:8a73e47aa9c92d370ca37806_1.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:dfaa20a11afa4e9a7221ad55_0.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:dfaa20a11afa4e9a7221ad55_1.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:7d02da34438c898381a919fe_0.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:7d02da34438c898381a919fe_1.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:66c54cbd120fded5bec9b5b7_0.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:66c54cbd120fded5bec9b5b7_1.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:8ce9cefdbfafe24aab2e9805_0.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:8ce9cefdbfafe24aab2e9805_1.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:3c99faa62d8837c0a03dc323_0.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:3c99faa62d8837c0a03dc323_1.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:7853000cdec12ff4721d82c0_0.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:7853000cdec12ff4721d82c0_1.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:e4ec97847818bc2afe594b34_0.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:e4ec97847818bc2afe594b34_1.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:14d082de49bc8047a0112724_0.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:14d082de49bc8047a0112724_1.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:c777e572b2cd48a617e18044_0.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:c777e572b2cd48a617e18044_1.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:78bcd6a1fbf96117e96c58a0_0.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:78bcd6a1fbf96117e96c58a0_1.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:389bd0cd546eb2dd1c59be96_0.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:389bd0cd546eb2dd1c59be96_1.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:66ef3be961d17a889d947544_0.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:66ef3be961d17a889d947544_1.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:5d1f6264a4adb79b3e423b36_0.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:5d1f6264a4adb79b3e423b36_1.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:e356a9fe34621accf867531b_0.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:e356a9fe34621accf867531b_1.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:6d0170acdb81587a5592a8e1_0.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:6d0170acdb81587a5592a8e1_1.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:89662819c6a1025773fec0d4_0.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:89662819c6a1025773fec0d4_1.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:29e708d5a05f0918b4eb0a98_0.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:29e708d5a05f0918b4eb0a98_1.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:d5a72e8178af177f104dc7f6_0.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:d5a72e8178af177f104dc7f6_1.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:b1340504dff3a8b97fdd4ff9_0.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:b1340504dff3a8b97fdd4ff9_1.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:17243b91180af53121bbb044_0.png",
+      "passed": true
+    },
+    {
+      "name": "image_sha:17243b91180af53121bbb044_1.png",
+      "passed": true
+    },
+    {
+      "name": "initial_state_no_cross_partition",
+      "passed": true
+    },
+    {
+      "name": "identical_image_no_cross_partition",
+      "passed": true
+    },
+    {
+      "name": "augmentations_grouped_by_base",
+      "passed": true
+    },
+    {
+      "name": "test_not_rendered",
+      "passed": true
+    },
+    {
+      "name": "test_reserved_8",
+      "passed": true
+    },
+    {
+      "name": "schema_and_semantics:train",
+      "passed": true
+    },
+    {
+      "name": "schema_and_semantics:validation",
+      "passed": true
+    },
+    {
+      "name": "schema_and_semantics:calibration_fit",
+      "passed": true
+    },
+    {
+      "name": "schema_and_semantics:calibration_audit",
+      "passed": true
+    },
+    {
+      "name": "row_counts",
+      "passed": true
+    },
+    {
+      "name": "no_partition_in_public",
+      "passed": true
+    },
+    {
+      "name": "counterfactuals:train",
+      "passed": true
+    },
+    {
+      "name": "counterfactuals:validation",
+      "passed": true
+    },
+    {
+      "name": "counterfactuals:calibration_fit",
+      "passed": true
+    },
+    {
+      "name": "counterfactuals:calibration_audit",
+      "passed": true
+    },
+    {
+      "name": "noise_method_and_session_independent",
+      "passed": true
+    },
+    {
+      "name": "noise_call_order_independent",
+      "passed": true
+    },
+    {
+      "name": "noise_JSON_option_order_independent",
+      "passed": true
+    },
+    {
+      "name": "world_switch_is_time_not_questions",
+      "passed": true
+    },
+    {
+      "name": "world_has_explicit_schedule:initial_goal",
+      "passed": true
+    },
+    {
+      "name": "world_has_explicit_schedule:initial_success",
+      "passed": true
+    },
+    {
+      "name": "raw_scores_not_probabilities",
+      "passed": true
+    },
+    {
+      "name": "reject_private_field_in_public",
+      "passed": true
+    },
+    {
+      "name": "reader_rejects_test",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\configs\\design_v4.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\progress.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v3_plan_progress.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_git_before.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_remote_inventory.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_remote_supplement.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_remote_paths.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_workspace_weights.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_candidate_weights.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_local_environment.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_local_sources.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_literature.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_command_log.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_inventory.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\docs\\v4\\01_scope_and_overlap.txt",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\handoff.txt",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\inspect_assets_step01.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\finalize_step01.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\configs\\v4\\interfaces.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\docs\\v4\\02_protocol.txt",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\examples\\v4\\abstain_without_missing_slot_output.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\examples\\v4\\cancel_clears_task.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\examples\\v4\\confirmed_task_survives_nine_probes.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\examples\\v4\\empty_scene_and_history.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\examples\\v4\\expired_task_evidence.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\examples\\v4\\fixture_index.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\examples\\v4\\mapping_change_invalidates_old_evidence.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\examples\\v4\\missing_action_slot_output.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\examples\\v4\\missing_roi_feature.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\examples\\v4\\module_output.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\examples\\v4\\no_response_retains_probe_role.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\examples\\v4\\object_reorder_with_alias_binding.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\examples\\v4\\private_labels.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\examples\\v4\\private_labels_alias_variant.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\examples\\v4\\public_input.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\examples\\v4\\reject_clears_task.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\examples\\v4\\stop_clears_task.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\examples\\v4\\target_outside_candidates_output.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\interaction_contract_v4\\__init__.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\interaction_contract_v4\\validation.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\build_step02.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\build_step02_edgecases.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\verify_step02.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\complete_step02.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\handoff_step02.txt",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\inspect_step03.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\run_step03_probe.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\step03_text_probe.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\finalize_step03.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\docs\\v4\\03_backbone_gate.txt",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\handoff_step03.txt",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_remote_source_audit.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_text_capability.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_source_locations.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_verification.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_command_log.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_text_probe_precision_raw.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_text_probe_mask_raw.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_text_probe_tied_raw.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_text_probe_fast_raw.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_text_probe_overlay_raw.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_text_probe_raw.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_sources\\00_pi0.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_sources\\01_pi0_config.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_sources\\02_gemma.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_sources\\03_tokenizer.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_sources\\04_pi0_pytorch.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_sources\\05_gemma_pytorch.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_sources\\06_policy_config.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_sources\\07_config.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_sources\\08_pyproject.toml",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_sources\\09_pi0.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_sources\\10_pi0_config.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_sources\\11_gemma.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_sources\\12_tokenizer.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_sources\\13_pi0_pytorch.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_sources\\14_gemma_pytorch.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_sources\\15_policy_config.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_sources\\16_config.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_sources\\17_pyproject.toml",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_sources\\18__METADATA",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_sources\\19__CHECKPOINT_METADATA",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_sources\\20_modeling_gemma.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_sources\\21_modeling_paligemma.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_sources\\22_modeling_gemma.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_sources\\23_modeling_paligemma.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_sources\\24_modeling_gemma.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_sources\\25_modeling_gemma.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_load_trace.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_io_diagnostic.json",
+      "passed": true
+    }
+  ]
+}

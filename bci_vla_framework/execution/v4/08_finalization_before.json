@@ -1,0 +1,30 @@
+{
+  "created_at_utc": "2026-10-17T13:34:53.534703+00:00",
+  "historical_v2_gates": {
+    "G2": "未通过",
+    "G3": "未验证",
+    "G4": "未通过"
+  },
+  "files_before": [
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4_plan_progress.json",
+      "sha256": "89a8fe577adf00e8880d2e85d79325a95a5dc648a20921d18634ba98b060bfca"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\README.txt",
+      "sha256": "750b722b3bae6abb55234e1b15602b9788d5cdf947c118224a545e68c01ac24c"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\worklog.txt",
+      "sha256": "5f954462494b00951d6215332480a14b514049d91283beb67b30f061fbaf400a"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\handoff.txt",
+      "sha256": "7dfb089c4faf92dcf7dd092dacd14945f6f94d779aaa05caf6a79126de74049d"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\handoff.txt",
+      "sha256": "8189f9fd6a0ded7d8200a524e9967c18b36be807d3d74b3006e5bccf6873cb21"
+    }
+  ]
+}

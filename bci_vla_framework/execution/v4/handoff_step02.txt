@@ -1,0 +1,12 @@
+﻿V4-02交接：输入输出与两类澄清协议
+日期：2026-10-17（Asia/Hong_Kong）。
+已完成：schema、11个公开输入、2个私有标签、4个模块输出夹具、标准库参考校验器及中文协议说明。
+复验：在D:\Scene_Aware\bci_vla_framework运行 python execution/v4/verify_step02.py。
+结果见execution/v4/02_verification.json；本轮128/128项通过，含历史来源文件保护检查，仅为合成协议/软件检查。
+协议：D:\Scene_Aware\bci_vla_framework\docs\v4\02_protocol.txt。
+冻结来源：execution/v4/02_source_manifest.json；验收：execution/v4/02_acceptance.json。
+分数按选项ID绑定；PROBE不改任务；NO_RESPONSE保留问题角色；确认绑定精确任务/版本但不授予执行权限。
+空输入哨兵、候选之外、候选歧义、缺槽和弃权分别表示。示例前缀为全零占位，不是神经预测。
+新Transformer未实现/训练；真实特征维数和π0.5文本/子任务能力未验证；旧G2/G3/G4结论不升级。
+下一步V4-03核实主干能力，本步没有执行步骤03、模型加载、EEG或实体动作。
+原步骤01交接execution/v4/handoff.txt及其冻结来源未改。不要重跑build_step02.py覆盖接口；有意更新需修改版本、样例、校验和冻结清单。

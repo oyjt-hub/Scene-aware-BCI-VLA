@@ -1,0 +1,64 @@
+﻿{
+  "scope": "Same allowed validation scenes; three seeds do not increase independent sample size",
+  "restricted_training_complete": true,
+  "full_step08_complete": false,
+  "on_prefix_semantic_gate_passed": false,
+  "runs": [
+    {
+      "seed": 0,
+      "pointer": {
+        "correct": 16,
+        "count": 16,
+        "rate": 1.0
+      },
+      "paired_evidence": {
+        "both_correct": 0,
+        "count": 8
+      },
+      "joint_alias": {
+        "both_correct": 0,
+        "count": 8
+      }
+    },
+    {
+      "seed": 1,
+      "pointer": {
+        "correct": 16,
+        "count": 16,
+        "rate": 1.0
+      },
+      "paired_evidence": {
+        "both_correct": 0,
+        "count": 8
+      },
+      "joint_alias": {
+        "both_correct": 0,
+        "count": 8
+      }
+    },
+    {
+      "seed": 2,
+      "pointer": {
+        "correct": 16,
+        "count": 16,
+        "rate": 1.0
+      },
+      "paired_evidence": {
+        "both_correct": 0,
+        "count": 8
+      },
+      "joint_alias": {
+        "both_correct": 0,
+        "count": 8
+      }
+    }
+  ],
+  "observed_failure": "Object pointer succeeds on the restricted original validation points, but generated task aliases do not reliably follow evidence changes or alias rebinding.",
+  "not_proven": "The experiment localizes a language-binding failure; it does not establish that training data alone or a particular architecture is its sole cause.",
+  "next_work": [
+    "Balance train object choices and alias permutations within scenes using training groups only",
+    "Add same-prompt different-choice paired training and explicit alias-span supervision",
+    "Recheck evidence changes and joint alias binding before confidence calibration or action dispatch"
+  ],
+  "no_new_training_or_test_access": true
+}

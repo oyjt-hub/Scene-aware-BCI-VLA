@@ -1,0 +1,67 @@
+{
+  "scope": "plan review and document consistency only; no neural implementation, training, task success or novelty validation",
+  "version": "V4-plan-2",
+  "status": "PASS",
+  "checks": {
+    "version_synced": true,
+    "fourteen_steps_titles_synced": true,
+    "numbering_sequential": true,
+    "implementation_unstarted": true,
+    "dependency_order_valid": true,
+    "training_requires_integration": true,
+    "baseline_step_does_not_require_future_implementation": true,
+    "all_steps_have_execution_fields": true,
+    "split_history_and_query_path": true,
+    "prefix_count_consistent": true,
+    "persistent_state_and_instance_binding_defined": true,
+    "unknown_semantics_separated": true,
+    "capability_gates_remain_unverified": true,
+    "formal_test_after_development": true,
+    "calibration_bound_to_final_versions": true,
+    "paired_rng_independent_of_method_and_call_order": true,
+    "risk_denominator_and_delay_defined": true,
+    "baseline_information_limits_declared": true,
+    "total_schedule_estimate_withdrawn": true,
+    "scope_and_action_expert_preserved": true,
+    "txt_bom_crlf": true,
+    "referenced_review_exists": true,
+    "historical_snapshot_unchanged": true,
+    "v3_manifest_still_valid": true,
+    "original_v4_plan_1_archive_intact": true,
+    "historical_gates_preserved": true
+  },
+  "review_report": "D:\\Scene_Aware\\BCI_VLA框架_意图更新与澄清_计划审查_V4.txt",
+  "historical_files_compared": 26,
+  "historical_files_changed": [],
+  "v3_manifest_mismatches": [],
+  "original_v4_archive_mismatches": [],
+  "planning_artifacts": [
+    {
+      "path": "D:\\Scene_Aware\\BCI_VLA框架_意图更新与澄清_执行计划_V4.txt",
+      "sha256": "b4e6e5335b1e4d51193cb0d9f16a6ab0d59511ec16e2f8f3ffd2fe1c7d3f6fb3"
+    },
+    {
+      "path": "D:\\Scene_Aware\\BCI_VLA当前计划入口_V4.txt",
+      "sha256": "99231096cf2b5633e61083e2a1d713f1475c249d4ca0b47dd793180177adb248"
+    },
+    {
+      "path": "D:\\Scene_Aware\\BCI_VLA框架_意图更新与澄清_计划审查_V4.txt",
+      "sha256": "201363183863d96bad75a2492d45a0895eb0581d4bae094d3fbf2896db300206"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\configs\\design_v4.json",
+      "sha256": "9c48b4e27577368e7be84c53662cf6b33b50a8d94bb3647fd4cf9ecfcbe9b33f"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4_plan_progress.json",
+      "sha256": "93bdd235616b5482285eb4de08bad5af779a3a9558fb076480c4ebaed9531432"
+    }
+  ],
+  "remaining_empirical_gates": [
+    "pi05 text/subtask capability",
+    "low-level instance grounding",
+    "data and compute availability",
+    "benefit vs strong baselines"
+  ],
+  "note": "All 14 implementation stages remain unstarted. Original V4-plan-1 is archived. Previous 18 checks covered document structure, not these method-level review findings."
+}

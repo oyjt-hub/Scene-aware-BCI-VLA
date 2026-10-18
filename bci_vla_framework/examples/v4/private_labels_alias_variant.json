@@ -1,0 +1,61 @@
+{
+  "record_type": "PRIVATE_LABELS",
+  "schema_version": "bci-vla-interaction/4.0",
+  "sample_id": "fixture-001",
+  "variant_id": "hidden-red",
+  "public_input_sha256": "6a0125452d38938b463599ec828a801fb900245fd5d55957c3bcbd2fef241258",
+  "split": "development_fixture",
+  "hidden_truth": {
+    "goal": {
+      "task_id": "task-red",
+      "task_revision": 1,
+      "suggestion_id": "suggestion-task-red",
+      "context": {
+        "session_id": "fixture-session",
+        "scene_id": "table-1",
+        "scene_revision": 1,
+        "mapping_id": "screen-map",
+        "mapping_revision": 1
+      },
+      "action": "pick",
+      "source_id": "cup-red",
+      "destination_id": null,
+      "valid_until_s": 120.0,
+      "capability_verified": false
+    },
+    "channel_injected_mode": "synthetic_noise",
+    "changed_at_s": null
+  },
+  "identifiability": {
+    "intent": "AMBIGUOUS",
+    "channel": "INSUFFICIENT"
+  },
+  "labels": {
+    "intent": {
+      "mode": "SET",
+      "candidate_ids": [
+        "cup-blue",
+        "cup-red"
+      ],
+      "outside": false,
+      "mask": true
+    },
+    "main_task": {
+      "mode": "CLARIFICATION",
+      "task": null,
+      "text": "Which cup and what task?",
+      "mask": true
+    },
+    "channel": {
+      "mask": false,
+      "next_probe_success": null,
+      "target_time_s": null
+    },
+    "interaction": {
+      "mask": true,
+      "action": "ASK_INTENT",
+      "teacher": "public_rule_v1",
+      "teacher_input_sha256": "6a0125452d38938b463599ec828a801fb900245fd5d55957c3bcbd2fef241258"
+    }
+  }
+}

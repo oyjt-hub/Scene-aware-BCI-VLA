@@ -1,0 +1,2008 @@
+{
+  "scope": "LIBERO capture interaction-runner/legacy-adapter integrity only; no neural or robot success claim",
+  "status": "PASS",
+  "checks": 500,
+  "passed": 500,
+  "results": [
+    {
+      "name": "B0_32_B1_binary_16",
+      "passed": true
+    },
+    {
+      "name": "B1_unsupported_explicit",
+      "passed": true
+    },
+    {
+      "name": "actual_legacy_filter_updates",
+      "passed": true
+    },
+    {
+      "name": "no_actions:B03e7f4a934272c0ac1dcfa709",
+      "passed": true
+    },
+    {
+      "name": "clock_monotonic:B03e7f4a934272c0ac1dcfa709",
+      "passed": true
+    },
+    {
+      "name": "public_inputs_have_no_private_truth:B03e7f4a934272c0ac1dcfa709",
+      "passed": true
+    },
+    {
+      "name": "probe_never_replaces_confirmed:B03e7f4a934272c0ac1dcfa709",
+      "passed": true
+    },
+    {
+      "name": "submitted_only_after_exact_confirmation:B03e7f4a934272c0ac1dcfa709",
+      "passed": true
+    },
+    {
+      "name": "no_actions:B1_binary_filter_fixed_policy3e7f4a934272c0ac1dcfa709",
+      "passed": true
+    },
+    {
+      "name": "clock_monotonic:B1_binary_filter_fixed_policy3e7f4a934272c0ac1dcfa709",
+      "passed": true
+    },
+    {
+      "name": "public_inputs_have_no_private_truth:B1_binary_filter_fixed_policy3e7f4a934272c0ac1dcfa709",
+      "passed": true
+    },
+    {
+      "name": "probe_never_replaces_confirmed:B1_binary_filter_fixed_policy3e7f4a934272c0ac1dcfa709",
+      "passed": true
+    },
+    {
+      "name": "submitted_only_after_exact_confirmation:B1_binary_filter_fixed_policy3e7f4a934272c0ac1dcfa709",
+      "passed": true
+    },
+    {
+      "name": "no_actions:B03e7f4a934272c0ac1dcfa709",
+      "passed": true
+    },
+    {
+      "name": "clock_monotonic:B03e7f4a934272c0ac1dcfa709",
+      "passed": true
+    },
+    {
+      "name": "public_inputs_have_no_private_truth:B03e7f4a934272c0ac1dcfa709",
+      "passed": true
+    },
+    {
+      "name": "probe_never_replaces_confirmed:B03e7f4a934272c0ac1dcfa709",
+      "passed": true
+    },
+    {
+      "name": "submitted_only_after_exact_confirmation:B03e7f4a934272c0ac1dcfa709",
+      "passed": true
+    },
+    {
+      "name": "no_actions:B1_binary_filter_fixed_policy3e7f4a934272c0ac1dcfa709",
+      "passed": true
+    },
+    {
+      "name": "clock_monotonic:B1_binary_filter_fixed_policy3e7f4a934272c0ac1dcfa709",
+      "passed": true
+    },
+    {
+      "name": "public_inputs_have_no_private_truth:B1_binary_filter_fixed_policy3e7f4a934272c0ac1dcfa709",
+      "passed": true
+    },
+    {
+      "name": "probe_never_replaces_confirmed:B1_binary_filter_fixed_policy3e7f4a934272c0ac1dcfa709",
+      "passed": true
+    },
+    {
+      "name": "submitted_only_after_exact_confirmation:B1_binary_filter_fixed_policy3e7f4a934272c0ac1dcfa709",
+      "passed": true
+    },
+    {
+      "name": "no_actions:B03e7f4a934272c0ac1dcfa709",
+      "passed": true
+    },
+    {
+      "name": "clock_monotonic:B03e7f4a934272c0ac1dcfa709",
+      "passed": true
+    },
+    {
+      "name": "public_inputs_have_no_private_truth:B03e7f4a934272c0ac1dcfa709",
+      "passed": true
+    },
+    {
+      "name": "probe_never_replaces_confirmed:B03e7f4a934272c0ac1dcfa709",
+      "passed": true
+    },
+    {
+      "name": "submitted_only_after_exact_confirmation:B03e7f4a934272c0ac1dcfa709",
+      "passed": true
+    },
+    {
+      "name": "no_actions:B1_binary_filter_fixed_policy3e7f4a934272c0ac1dcfa709",
+      "passed": true
+    },
+    {
+      "name": "clock_monotonic:B1_binary_filter_fixed_policy3e7f4a934272c0ac1dcfa709",
+      "passed": true
+    },
+    {
+      "name": "public_inputs_have_no_private_truth:B1_binary_filter_fixed_policy3e7f4a934272c0ac1dcfa709",
+      "passed": true
+    },
+    {
+      "name": "probe_never_replaces_confirmed:B1_binary_filter_fixed_policy3e7f4a934272c0ac1dcfa709",
+      "passed": true
+    },
+    {
+      "name": "submitted_only_after_exact_confirmation:B1_binary_filter_fixed_policy3e7f4a934272c0ac1dcfa709",
+      "passed": true
+    },
+    {
+      "name": "no_actions:B03e7f4a934272c0ac1dcfa709",
+      "passed": true
+    },
+    {
+      "name": "clock_monotonic:B03e7f4a934272c0ac1dcfa709",
+      "passed": true
+    },
+    {
+      "name": "public_inputs_have_no_private_truth:B03e7f4a934272c0ac1dcfa709",
+      "passed": true
+    },
+    {
+      "name": "probe_never_replaces_confirmed:B03e7f4a934272c0ac1dcfa709",
+      "passed": true
+    },
+    {
+      "name": "submitted_only_after_exact_confirmation:B03e7f4a934272c0ac1dcfa709",
+      "passed": true
+    },
+    {
+      "name": "no_actions:B1_binary_filter_fixed_policy3e7f4a934272c0ac1dcfa709",
+      "passed": true
+    },
+    {
+      "name": "clock_monotonic:B1_binary_filter_fixed_policy3e7f4a934272c0ac1dcfa709",
+      "passed": true
+    },
+    {
+      "name": "public_inputs_have_no_private_truth:B1_binary_filter_fixed_policy3e7f4a934272c0ac1dcfa709",
+      "passed": true
+    },
+    {
+      "name": "probe_never_replaces_confirmed:B1_binary_filter_fixed_policy3e7f4a934272c0ac1dcfa709",
+      "passed": true
+    },
+    {
+      "name": "submitted_only_after_exact_confirmation:B1_binary_filter_fixed_policy3e7f4a934272c0ac1dcfa709",
+      "passed": true
+    },
+    {
+      "name": "no_actions:B0a733559f6120147aa83fb6dd",
+      "passed": true
+    },
+    {
+      "name": "clock_monotonic:B0a733559f6120147aa83fb6dd",
+      "passed": true
+    },
+    {
+      "name": "public_inputs_have_no_private_truth:B0a733559f6120147aa83fb6dd",
+      "passed": true
+    },
+    {
+      "name": "probe_never_replaces_confirmed:B0a733559f6120147aa83fb6dd",
+      "passed": true
+    },
+    {
+      "name": "submitted_only_after_exact_confirmation:B0a733559f6120147aa83fb6dd",
+      "passed": true
+    },
+    {
+      "name": "no_actions:B1_binary_filter_fixed_policya733559f6120147aa83fb6dd",
+      "passed": true
+    },
+    {
+      "name": "clock_monotonic:B1_binary_filter_fixed_policya733559f6120147aa83fb6dd",
+      "passed": true
+    },
+    {
+      "name": "public_inputs_have_no_private_truth:B1_binary_filter_fixed_policya733559f6120147aa83fb6dd",
+      "passed": true
+    },
+    {
+      "name": "probe_never_replaces_confirmed:B1_binary_filter_fixed_policya733559f6120147aa83fb6dd",
+      "passed": true
+    },
+    {
+      "name": "submitted_only_after_exact_confirmation:B1_binary_filter_fixed_policya733559f6120147aa83fb6dd",
+      "passed": true
+    },
+    {
+      "name": "no_actions:B0a733559f6120147aa83fb6dd",
+      "passed": true
+    },
+    {
+      "name": "clock_monotonic:B0a733559f6120147aa83fb6dd",
+      "passed": true
+    },
+    {
+      "name": "public_inputs_have_no_private_truth:B0a733559f6120147aa83fb6dd",
+      "passed": true
+    },
+    {
+      "name": "probe_never_replaces_confirmed:B0a733559f6120147aa83fb6dd",
+      "passed": true
+    },
+    {
+      "name": "submitted_only_after_exact_confirmation:B0a733559f6120147aa83fb6dd",
+      "passed": true
+    },
+    {
+      "name": "no_actions:B1_binary_filter_fixed_policya733559f6120147aa83fb6dd",
+      "passed": true
+    },
+    {
+      "name": "clock_monotonic:B1_binary_filter_fixed_policya733559f6120147aa83fb6dd",
+      "passed": true
+    },
+    {
+      "name": "public_inputs_have_no_private_truth:B1_binary_filter_fixed_policya733559f6120147aa83fb6dd",
+      "passed": true
+    },
+    {
+      "name": "probe_never_replaces_confirmed:B1_binary_filter_fixed_policya733559f6120147aa83fb6dd",
+      "passed": true
+    },
+    {
+      "name": "submitted_only_after_exact_confirmation:B1_binary_filter_fixed_policya733559f6120147aa83fb6dd",
+      "passed": true
+    },
+    {
+      "name": "no_actions:B0a733559f6120147aa83fb6dd",
+      "passed": true
+    },
+    {
+      "name": "clock_monotonic:B0a733559f6120147aa83fb6dd",
+      "passed": true
+    },
+    {
+      "name": "public_inputs_have_no_private_truth:B0a733559f6120147aa83fb6dd",
+      "passed": true
+    },
+    {
+      "name": "probe_never_replaces_confirmed:B0a733559f6120147aa83fb6dd",
+      "passed": true
+    },
+    {
+      "name": "submitted_only_after_exact_confirmation:B0a733559f6120147aa83fb6dd",
+      "passed": true
+    },
+    {
+      "name": "no_actions:B1_binary_filter_fixed_policya733559f6120147aa83fb6dd",
+      "passed": true
+    },
+    {
+      "name": "clock_monotonic:B1_binary_filter_fixed_policya733559f6120147aa83fb6dd",
+      "passed": true
+    },
+    {
+      "name": "public_inputs_have_no_private_truth:B1_binary_filter_fixed_policya733559f6120147aa83fb6dd",
+      "passed": true
+    },
+    {
+      "name": "probe_never_replaces_confirmed:B1_binary_filter_fixed_policya733559f6120147aa83fb6dd",
+      "passed": true
+    },
+    {
+      "name": "submitted_only_after_exact_confirmation:B1_binary_filter_fixed_policya733559f6120147aa83fb6dd",
+      "passed": true
+    },
+    {
+      "name": "no_actions:B0a733559f6120147aa83fb6dd",
+      "passed": true
+    },
+    {
+      "name": "clock_monotonic:B0a733559f6120147aa83fb6dd",
+      "passed": true
+    },
+    {
+      "name": "public_inputs_have_no_private_truth:B0a733559f6120147aa83fb6dd",
+      "passed": true
+    },
+    {
+      "name": "probe_never_replaces_confirmed:B0a733559f6120147aa83fb6dd",
+      "passed": true
+    },
+    {
+      "name": "submitted_only_after_exact_confirmation:B0a733559f6120147aa83fb6dd",
+      "passed": true
+    },
+    {
+      "name": "no_actions:B1_binary_filter_fixed_policya733559f6120147aa83fb6dd",
+      "passed": true
+    },
+    {
+      "name": "clock_monotonic:B1_binary_filter_fixed_policya733559f6120147aa83fb6dd",
+      "passed": true
+    },
+    {
+      "name": "public_inputs_have_no_private_truth:B1_binary_filter_fixed_policya733559f6120147aa83fb6dd",
+      "passed": true
+    },
+    {
+      "name": "probe_never_replaces_confirmed:B1_binary_filter_fixed_policya733559f6120147aa83fb6dd",
+      "passed": true
+    },
+    {
+      "name": "submitted_only_after_exact_confirmation:B1_binary_filter_fixed_policya733559f6120147aa83fb6dd",
+      "passed": true
+    },
+    {
+      "name": "no_actions:B03ca46f06f2e98c7585e4453d",
+      "passed": true
+    },
+    {
+      "name": "clock_monotonic:B03ca46f06f2e98c7585e4453d",
+      "passed": true
+    },
+    {
+      "name": "public_inputs_have_no_private_truth:B03ca46f06f2e98c7585e4453d",
+      "passed": true
+    },
+    {
+      "name": "probe_never_replaces_confirmed:B03ca46f06f2e98c7585e4453d",
+      "passed": true
+    },
+    {
+      "name": "submitted_only_after_exact_confirmation:B03ca46f06f2e98c7585e4453d",
+      "passed": true
+    },
+    {
+      "name": "no_actions:B1_binary_filter_fixed_policy3ca46f06f2e98c7585e4453d",
+      "passed": true
+    },
+    {
+      "name": "clock_monotonic:B1_binary_filter_fixed_policy3ca46f06f2e98c7585e4453d",
+      "passed": true
+    },
+    {
+      "name": "public_inputs_have_no_private_truth:B1_binary_filter_fixed_policy3ca46f06f2e98c7585e4453d",
+      "passed": true
+    },
+    {
+      "name": "probe_never_replaces_confirmed:B1_binary_filter_fixed_policy3ca46f06f2e98c7585e4453d",
+      "passed": true
+    },
+    {
+      "name": "submitted_only_after_exact_confirmation:B1_binary_filter_fixed_policy3ca46f06f2e98c7585e4453d",
+      "passed": true
+    },
+    {
+      "name": "no_actions:B03ca46f06f2e98c7585e4453d",
+      "passed": true
+    },
+    {
+      "name": "clock_monotonic:B03ca46f06f2e98c7585e4453d",
+      "passed": true
+    },
+    {
+      "name": "public_inputs_have_no_private_truth:B03ca46f06f2e98c7585e4453d",
+      "passed": true
+    },
+    {
+      "name": "probe_never_replaces_confirmed:B03ca46f06f2e98c7585e4453d",
+      "passed": true
+    },
+    {
+      "name": "submitted_only_after_exact_confirmation:B03ca46f06f2e98c7585e4453d",
+      "passed": true
+    },
+    {
+      "name": "no_actions:B1_binary_filter_fixed_policy3ca46f06f2e98c7585e4453d",
+      "passed": true
+    },
+    {
+      "name": "clock_monotonic:B1_binary_filter_fixed_policy3ca46f06f2e98c7585e4453d",
+      "passed": true
+    },
+    {
+      "name": "public_inputs_have_no_private_truth:B1_binary_filter_fixed_policy3ca46f06f2e98c7585e4453d",
+      "passed": true
+    },
+    {
+      "name": "probe_never_replaces_confirmed:B1_binary_filter_fixed_policy3ca46f06f2e98c7585e4453d",
+      "passed": true
+    },
+    {
+      "name": "submitted_only_after_exact_confirmation:B1_binary_filter_fixed_policy3ca46f06f2e98c7585e4453d",
+      "passed": true
+    },
+    {
+      "name": "no_actions:B03ca46f06f2e98c7585e4453d",
+      "passed": true
+    },
+    {
+      "name": "clock_monotonic:B03ca46f06f2e98c7585e4453d",
+      "passed": true
+    },
+    {
+      "name": "public_inputs_have_no_private_truth:B03ca46f06f2e98c7585e4453d",
+      "passed": true
+    },
+    {
+      "name": "probe_never_replaces_confirmed:B03ca46f06f2e98c7585e4453d",
+      "passed": true
+    },
+    {
+      "name": "submitted_only_after_exact_confirmation:B03ca46f06f2e98c7585e4453d",
+      "passed": true
+    },
+    {
+      "name": "no_actions:B1_binary_filter_fixed_policy3ca46f06f2e98c7585e4453d",
+      "passed": true
+    },
+    {
+      "name": "clock_monotonic:B1_binary_filter_fixed_policy3ca46f06f2e98c7585e4453d",
+      "passed": true
+    },
+    {
+      "name": "public_inputs_have_no_private_truth:B1_binary_filter_fixed_policy3ca46f06f2e98c7585e4453d",
+      "passed": true
+    },
+    {
+      "name": "probe_never_replaces_confirmed:B1_binary_filter_fixed_policy3ca46f06f2e98c7585e4453d",
+      "passed": true
+    },
+    {
+      "name": "submitted_only_after_exact_confirmation:B1_binary_filter_fixed_policy3ca46f06f2e98c7585e4453d",
+      "passed": true
+    },
+    {
+      "name": "no_actions:B03ca46f06f2e98c7585e4453d",
+      "passed": true
+    },
+    {
+      "name": "clock_monotonic:B03ca46f06f2e98c7585e4453d",
+      "passed": true
+    },
+    {
+      "name": "public_inputs_have_no_private_truth:B03ca46f06f2e98c7585e4453d",
+      "passed": true
+    },
+    {
+      "name": "probe_never_replaces_confirmed:B03ca46f06f2e98c7585e4453d",
+      "passed": true
+    },
+    {
+      "name": "submitted_only_after_exact_confirmation:B03ca46f06f2e98c7585e4453d",
+      "passed": true
+    },
+    {
+      "name": "no_actions:B1_binary_filter_fixed_policy3ca46f06f2e98c7585e4453d",
+      "passed": true
+    },
+    {
+      "name": "clock_monotonic:B1_binary_filter_fixed_policy3ca46f06f2e98c7585e4453d",
+      "passed": true
+    },
+    {
+      "name": "public_inputs_have_no_private_truth:B1_binary_filter_fixed_policy3ca46f06f2e98c7585e4453d",
+      "passed": true
+    },
+    {
+      "name": "probe_never_replaces_confirmed:B1_binary_filter_fixed_policy3ca46f06f2e98c7585e4453d",
+      "passed": true
+    },
+    {
+      "name": "submitted_only_after_exact_confirmation:B1_binary_filter_fixed_policy3ca46f06f2e98c7585e4453d",
+      "passed": true
+    },
+    {
+      "name": "no_actions:B08a73e47aa9c92d370ca37806",
+      "passed": true
+    },
+    {
+      "name": "clock_monotonic:B08a73e47aa9c92d370ca37806",
+      "passed": true
+    },
+    {
+      "name": "public_inputs_have_no_private_truth:B08a73e47aa9c92d370ca37806",
+      "passed": true
+    },
+    {
+      "name": "probe_never_replaces_confirmed:B08a73e47aa9c92d370ca37806",
+      "passed": true
+    },
+    {
+      "name": "submitted_only_after_exact_confirmation:B08a73e47aa9c92d370ca37806",
+      "passed": true
+    },
+    {
+      "name": "no_actions:B1_binary_filter_fixed_policy8a73e47aa9c92d370ca37806",
+      "passed": true
+    },
+    {
+      "name": "clock_monotonic:B1_binary_filter_fixed_policy8a73e47aa9c92d370ca37806",
+      "passed": true
+    },
+    {
+      "name": "public_inputs_have_no_private_truth:B1_binary_filter_fixed_policy8a73e47aa9c92d370ca37806",
+      "passed": true
+    },
+    {
+      "name": "probe_never_replaces_confirmed:B1_binary_filter_fixed_policy8a73e47aa9c92d370ca37806",
+      "passed": true
+    },
+    {
+      "name": "submitted_only_after_exact_confirmation:B1_binary_filter_fixed_policy8a73e47aa9c92d370ca37806",
+      "passed": true
+    },
+    {
+      "name": "no_actions:B08a73e47aa9c92d370ca37806",
+      "passed": true
+    },
+    {
+      "name": "clock_monotonic:B08a73e47aa9c92d370ca37806",
+      "passed": true
+    },
+    {
+      "name": "public_inputs_have_no_private_truth:B08a73e47aa9c92d370ca37806",
+      "passed": true
+    },
+    {
+      "name": "probe_never_replaces_confirmed:B08a73e47aa9c92d370ca37806",
+      "passed": true
+    },
+    {
+      "name": "submitted_only_after_exact_confirmation:B08a73e47aa9c92d370ca37806",
+      "passed": true
+    },
+    {
+      "name": "no_actions:B1_binary_filter_fixed_policy8a73e47aa9c92d370ca37806",
+      "passed": true
+    },
+    {
+      "name": "clock_monotonic:B1_binary_filter_fixed_policy8a73e47aa9c92d370ca37806",
+      "passed": true
+    },
+    {
+      "name": "public_inputs_have_no_private_truth:B1_binary_filter_fixed_policy8a73e47aa9c92d370ca37806",
+      "passed": true
+    },
+    {
+      "name": "probe_never_replaces_confirmed:B1_binary_filter_fixed_policy8a73e47aa9c92d370ca37806",
+      "passed": true
+    },
+    {
+      "name": "submitted_only_after_exact_confirmation:B1_binary_filter_fixed_policy8a73e47aa9c92d370ca37806",
+      "passed": true
+    },
+    {
+      "name": "no_actions:B08a73e47aa9c92d370ca37806",
+      "passed": true
+    },
+    {
+      "name": "clock_monotonic:B08a73e47aa9c92d370ca37806",
+      "passed": true
+    },
+    {
+      "name": "public_inputs_have_no_private_truth:B08a73e47aa9c92d370ca37806",
+      "passed": true
+    },
+    {
+      "name": "probe_never_replaces_confirmed:B08a73e47aa9c92d370ca37806",
+      "passed": true
+    },
+    {
+      "name": "submitted_only_after_exact_confirmation:B08a73e47aa9c92d370ca37806",
+      "passed": true
+    },
+    {
+      "name": "no_actions:B1_binary_filter_fixed_policy8a73e47aa9c92d370ca37806",
+      "passed": true
+    },
+    {
+      "name": "clock_monotonic:B1_binary_filter_fixed_policy8a73e47aa9c92d370ca37806",
+      "passed": true
+    },
+    {
+      "name": "public_inputs_have_no_private_truth:B1_binary_filter_fixed_policy8a73e47aa9c92d370ca37806",
+      "passed": true
+    },
+    {
+      "name": "probe_never_replaces_confirmed:B1_binary_filter_fixed_policy8a73e47aa9c92d370ca37806",
+      "passed": true
+    },
+    {
+      "name": "submitted_only_after_exact_confirmation:B1_binary_filter_fixed_policy8a73e47aa9c92d370ca37806",
+      "passed": true
+    },
+    {
+      "name": "no_actions:B08a73e47aa9c92d370ca37806",
+      "passed": true
+    },
+    {
+      "name": "clock_monotonic:B08a73e47aa9c92d370ca37806",
+      "passed": true
+    },
+    {
+      "name": "public_inputs_have_no_private_truth:B08a73e47aa9c92d370ca37806",
+      "passed": true
+    },
+    {
+      "name": "probe_never_replaces_confirmed:B08a73e47aa9c92d370ca37806",
+      "passed": true
+    },
+    {
+      "name": "submitted_only_after_exact_confirmation:B08a73e47aa9c92d370ca37806",
+      "passed": true
+    },
+    {
+      "name": "no_actions:B1_binary_filter_fixed_policy8a73e47aa9c92d370ca37806",
+      "passed": true
+    },
+    {
+      "name": "clock_monotonic:B1_binary_filter_fixed_policy8a73e47aa9c92d370ca37806",
+      "passed": true
+    },
+    {
+      "name": "public_inputs_have_no_private_truth:B1_binary_filter_fixed_policy8a73e47aa9c92d370ca37806",
+      "passed": true
+    },
+    {
+      "name": "probe_never_replaces_confirmed:B1_binary_filter_fixed_policy8a73e47aa9c92d370ca37806",
+      "passed": true
+    },
+    {
+      "name": "submitted_only_after_exact_confirmation:B1_binary_filter_fixed_policy8a73e47aa9c92d370ca37806",
+      "passed": true
+    },
+    {
+      "name": "no_actions:B0dfaa20a11afa4e9a7221ad55",
+      "passed": true
+    },
+    {
+      "name": "clock_monotonic:B0dfaa20a11afa4e9a7221ad55",
+      "passed": true
+    },
+    {
+      "name": "public_inputs_have_no_private_truth:B0dfaa20a11afa4e9a7221ad55",
+      "passed": true
+    },
+    {
+      "name": "probe_never_replaces_confirmed:B0dfaa20a11afa4e9a7221ad55",
+      "passed": true
+    },
+    {
+      "name": "submitted_only_after_exact_confirmation:B0dfaa20a11afa4e9a7221ad55",
+      "passed": true
+    },
+    {
+      "name": "no_actions:B0dfaa20a11afa4e9a7221ad55",
+      "passed": true
+    },
+    {
+      "name": "clock_monotonic:B0dfaa20a11afa4e9a7221ad55",
+      "passed": true
+    },
+    {
+      "name": "public_inputs_have_no_private_truth:B0dfaa20a11afa4e9a7221ad55",
+      "passed": true
+    },
+    {
+      "name": "probe_never_replaces_confirmed:B0dfaa20a11afa4e9a7221ad55",
+      "passed": true
+    },
+    {
+      "name": "submitted_only_after_exact_confirmation:B0dfaa20a11afa4e9a7221ad55",
+      "passed": true
+    },
+    {
+      "name": "no_actions:B0dfaa20a11afa4e9a7221ad55",
+      "passed": true
+    },
+    {
+      "name": "clock_monotonic:B0dfaa20a11afa4e9a7221ad55",
+      "passed": true
+    },
+    {
+      "name": "public_inputs_have_no_private_truth:B0dfaa20a11afa4e9a7221ad55",
+      "passed": true
+    },
+    {
+      "name": "probe_never_replaces_confirmed:B0dfaa20a11afa4e9a7221ad55",
+      "passed": true
+    },
+    {
+      "name": "submitted_only_after_exact_confirmation:B0dfaa20a11afa4e9a7221ad55",
+      "passed": true
+    },
+    {
+      "name": "no_actions:B0dfaa20a11afa4e9a7221ad55",
+      "passed": true
+    },
+    {
+      "name": "clock_monotonic:B0dfaa20a11afa4e9a7221ad55",
+      "passed": true
+    },
+    {
+      "name": "public_inputs_have_no_private_truth:B0dfaa20a11afa4e9a7221ad55",
+      "passed": true
+    },
+    {
+      "name": "probe_never_replaces_confirmed:B0dfaa20a11afa4e9a7221ad55",
+      "passed": true
+    },
+    {
+      "name": "submitted_only_after_exact_confirmation:B0dfaa20a11afa4e9a7221ad55",
+      "passed": true
+    },
+    {
+      "name": "no_actions:B07d02da34438c898381a919fe",
+      "passed": true
+    },
+    {
+      "name": "clock_monotonic:B07d02da34438c898381a919fe",
+      "passed": true
+    },
+    {
+      "name": "public_inputs_have_no_private_truth:B07d02da34438c898381a919fe",
+      "passed": true
+    },
+    {
+      "name": "probe_never_replaces_confirmed:B07d02da34438c898381a919fe",
+      "passed": true
+    },
+    {
+      "name": "submitted_only_after_exact_confirmation:B07d02da34438c898381a919fe",
+      "passed": true
+    },
+    {
+      "name": "no_actions:B07d02da34438c898381a919fe",
+      "passed": true
+    },
+    {
+      "name": "clock_monotonic:B07d02da34438c898381a919fe",
+      "passed": true
+    },
+    {
+      "name": "public_inputs_have_no_private_truth:B07d02da34438c898381a919fe",
+      "passed": true
+    },
+    {
+      "name": "probe_never_replaces_confirmed:B07d02da34438c898381a919fe",
+      "passed": true
+    },
+    {
+      "name": "submitted_only_after_exact_confirmation:B07d02da34438c898381a919fe",
+      "passed": true
+    },
+    {
+      "name": "no_actions:B07d02da34438c898381a919fe",
+      "passed": true
+    },
+    {
+      "name": "clock_monotonic:B07d02da34438c898381a919fe",
+      "passed": true
+    },
+    {
+      "name": "public_inputs_have_no_private_truth:B07d02da34438c898381a919fe",
+      "passed": true
+    },
+    {
+      "name": "probe_never_replaces_confirmed:B07d02da34438c898381a919fe",
+      "passed": true
+    },
+    {
+      "name": "submitted_only_after_exact_confirmation:B07d02da34438c898381a919fe",
+      "passed": true
+    },
+    {
+      "name": "no_actions:B07d02da34438c898381a919fe",
+      "passed": true
+    },
+    {
+      "name": "clock_monotonic:B07d02da34438c898381a919fe",
+      "passed": true
+    },
+    {
+      "name": "public_inputs_have_no_private_truth:B07d02da34438c898381a919fe",
+      "passed": true
+    },
+    {
+      "name": "probe_never_replaces_confirmed:B07d02da34438c898381a919fe",
+      "passed": true
+    },
+    {
+      "name": "submitted_only_after_exact_confirmation:B07d02da34438c898381a919fe",
+      "passed": true
+    },
+    {
+      "name": "no_actions:B066c54cbd120fded5bec9b5b7",
+      "passed": true
+    },
+    {
+      "name": "clock_monotonic:B066c54cbd120fded5bec9b5b7",
+      "passed": true
+    },
+    {
+      "name": "public_inputs_have_no_private_truth:B066c54cbd120fded5bec9b5b7",
+      "passed": true
+    },
+    {
+      "name": "probe_never_replaces_confirmed:B066c54cbd120fded5bec9b5b7",
+      "passed": true
+    },
+    {
+      "name": "submitted_only_after_exact_confirmation:B066c54cbd120fded5bec9b5b7",
+      "passed": true
+    },
+    {
+      "name": "no_actions:B066c54cbd120fded5bec9b5b7",
+      "passed": true
+    },
+    {
+      "name": "clock_monotonic:B066c54cbd120fded5bec9b5b7",
+      "passed": true
+    },
+    {
+      "name": "public_inputs_have_no_private_truth:B066c54cbd120fded5bec9b5b7",
+      "passed": true
+    },
+    {
+      "name": "probe_never_replaces_confirmed:B066c54cbd120fded5bec9b5b7",
+      "passed": true
+    },
+    {
+      "name": "submitted_only_after_exact_confirmation:B066c54cbd120fded5bec9b5b7",
+      "passed": true
+    },
+    {
+      "name": "no_actions:B066c54cbd120fded5bec9b5b7",
+      "passed": true
+    },
+    {
+      "name": "clock_monotonic:B066c54cbd120fded5bec9b5b7",
+      "passed": true
+    },
+    {
+      "name": "public_inputs_have_no_private_truth:B066c54cbd120fded5bec9b5b7",
+      "passed": true
+    },
+    {
+      "name": "probe_never_replaces_confirmed:B066c54cbd120fded5bec9b5b7",
+      "passed": true
+    },
+    {
+      "name": "submitted_only_after_exact_confirmation:B066c54cbd120fded5bec9b5b7",
+      "passed": true
+    },
+    {
+      "name": "no_actions:B066c54cbd120fded5bec9b5b7",
+      "passed": true
+    },
+    {
+      "name": "clock_monotonic:B066c54cbd120fded5bec9b5b7",
+      "passed": true
+    },
+    {
+      "name": "public_inputs_have_no_private_truth:B066c54cbd120fded5bec9b5b7",
+      "passed": true
+    },
+    {
+      "name": "probe_never_replaces_confirmed:B066c54cbd120fded5bec9b5b7",
+      "passed": true
+    },
+    {
+      "name": "submitted_only_after_exact_confirmation:B066c54cbd120fded5bec9b5b7",
+      "passed": true
+    },
+    {
+      "name": "no_actions:B08ce9cefdbfafe24aab2e9805",
+      "passed": true
+    },
+    {
+      "name": "clock_monotonic:B08ce9cefdbfafe24aab2e9805",
+      "passed": true
+    },
+    {
+      "name": "public_inputs_have_no_private_truth:B08ce9cefdbfafe24aab2e9805",
+      "passed": true
+    },
+    {
+      "name": "probe_never_replaces_confirmed:B08ce9cefdbfafe24aab2e9805",
+      "passed": true
+    },
+    {
+      "name": "submitted_only_after_exact_confirmation:B08ce9cefdbfafe24aab2e9805",
+      "passed": true
+    },
+    {
+      "name": "no_actions:B08ce9cefdbfafe24aab2e9805",
+      "passed": true
+    },
+    {
+      "name": "clock_monotonic:B08ce9cefdbfafe24aab2e9805",
+      "passed": true
+    },
+    {
+      "name": "public_inputs_have_no_private_truth:B08ce9cefdbfafe24aab2e9805",
+      "passed": true
+    },
+    {
+      "name": "probe_never_replaces_confirmed:B08ce9cefdbfafe24aab2e9805",
+      "passed": true
+    },
+    {
+      "name": "submitted_only_after_exact_confirmation:B08ce9cefdbfafe24aab2e9805",
+      "passed": true
+    },
+    {
+      "name": "no_actions:B08ce9cefdbfafe24aab2e9805",
+      "passed": true
+    },
+    {
+      "name": "clock_monotonic:B08ce9cefdbfafe24aab2e9805",
+      "passed": true
+    },
+    {
+      "name": "public_inputs_have_no_private_truth:B08ce9cefdbfafe24aab2e9805",
+      "passed": true
+    },
+    {
+      "name": "probe_never_replaces_confirmed:B08ce9cefdbfafe24aab2e9805",
+      "passed": true
+    },
+    {
+      "name": "submitted_only_after_exact_confirmation:B08ce9cefdbfafe24aab2e9805",
+      "passed": true
+    },
+    {
+      "name": "no_actions:B08ce9cefdbfafe24aab2e9805",
+      "passed": true
+    },
+    {
+      "name": "clock_monotonic:B08ce9cefdbfafe24aab2e9805",
+      "passed": true
+    },
+    {
+      "name": "public_inputs_have_no_private_truth:B08ce9cefdbfafe24aab2e9805",
+      "passed": true
+    },
+    {
+      "name": "probe_never_replaces_confirmed:B08ce9cefdbfafe24aab2e9805",
+      "passed": true
+    },
+    {
+      "name": "submitted_only_after_exact_confirmation:B08ce9cefdbfafe24aab2e9805",
+      "passed": true
+    },
+    {
+      "name": "deterministic_replay:B0",
+      "passed": true
+    },
+    {
+      "name": "direct_control:B0STOP",
+      "passed": true
+    },
+    {
+      "name": "direct_control:B0CANCEL",
+      "passed": true
+    },
+    {
+      "name": "mapping_change_invalidates_old_confirm:B0",
+      "passed": true
+    },
+    {
+      "name": "deterministic_replay:B1_binary_filter_fixed_policy",
+      "passed": true
+    },
+    {
+      "name": "direct_control:B1_binary_filter_fixed_policySTOP",
+      "passed": true
+    },
+    {
+      "name": "direct_control:B1_binary_filter_fixed_policyCANCEL",
+      "passed": true
+    },
+    {
+      "name": "mapping_change_invalidates_old_confirm:B1_binary_filter_fixed_policy",
+      "passed": true
+    },
+    {
+      "name": "no_submission_without_confirmation",
+      "passed": true
+    },
+    {
+      "name": "STOP_bypasses_policy",
+      "passed": true
+    },
+    {
+      "name": "pending_requires_WAIT:B0",
+      "passed": true
+    },
+    {
+      "name": "pending_requires_WAIT:B1_binary_filter_fixed_policy",
+      "passed": true
+    },
+    {
+      "name": "noise_question_ids_session_and_order_independent",
+      "passed": true
+    },
+    {
+      "name": "noise_extra_calls_do_not_change_future",
+      "passed": true
+    },
+    {
+      "name": "positive_bound_submission",
+      "passed": true
+    },
+    {
+      "name": "duplicate_submission_rejected",
+      "passed": true
+    },
+    {
+      "name": "wrong_task_version_rejected",
+      "passed": true
+    },
+    {
+      "name": "reject_is_not_accept",
+      "passed": true
+    },
+    {
+      "name": "stale_mapping_rejected",
+      "passed": true
+    },
+    {
+      "name": "expired_confirmation_rejected",
+      "passed": true
+    },
+    {
+      "name": "formal_test_blocked",
+      "passed": true
+    },
+    {
+      "name": "B1_no_candidate_dropping",
+      "passed": true
+    },
+    {
+      "name": "B2_serialization_complete_not_truncated",
+      "passed": true
+    },
+    {
+      "name": "B2_token_count_not_fabricated",
+      "passed": true
+    },
+    {
+      "name": "fixed_inquiry_public_diagnostics_first",
+      "passed": true
+    },
+    {
+      "name": "fixed_inquiry_rejects_unknown_candidate",
+      "passed": true
+    },
+    {
+      "name": "neural_methods_not_claimed_run",
+      "passed": true
+    },
+    {
+      "name": "aux_supervision_controls_registered",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\configs\\design_v4.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\progress.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v3_plan_progress.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_git_before.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_remote_inventory.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_remote_supplement.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_remote_paths.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_workspace_weights.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_candidate_weights.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_local_environment.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_local_sources.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_literature.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_command_log.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_inventory.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\docs\\v4\\01_scope_and_overlap.txt",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\handoff.txt",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\inspect_assets_step01.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\finalize_step01.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\configs\\v4\\interfaces.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\docs\\v4\\02_protocol.txt",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\examples\\v4\\abstain_without_missing_slot_output.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\examples\\v4\\cancel_clears_task.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\examples\\v4\\confirmed_task_survives_nine_probes.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\examples\\v4\\empty_scene_and_history.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\examples\\v4\\expired_task_evidence.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\examples\\v4\\fixture_index.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\examples\\v4\\mapping_change_invalidates_old_evidence.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\examples\\v4\\missing_action_slot_output.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\examples\\v4\\missing_roi_feature.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\examples\\v4\\module_output.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\examples\\v4\\no_response_retains_probe_role.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\examples\\v4\\object_reorder_with_alias_binding.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\examples\\v4\\private_labels.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\examples\\v4\\private_labels_alias_variant.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\examples\\v4\\public_input.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\examples\\v4\\reject_clears_task.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\examples\\v4\\stop_clears_task.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\examples\\v4\\target_outside_candidates_output.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\interaction_contract_v4\\__init__.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\interaction_contract_v4\\validation.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\build_step02.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\build_step02_edgecases.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\verify_step02.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\complete_step02.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\handoff_step02.txt",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\inspect_step03.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\run_step03_probe.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\step03_text_probe.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\finalize_step03.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\docs\\v4\\03_backbone_gate.txt",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\handoff_step03.txt",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_remote_source_audit.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_text_capability.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_source_locations.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_verification.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_command_log.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_text_probe_precision_raw.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_text_probe_mask_raw.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_text_probe_tied_raw.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_text_probe_fast_raw.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_text_probe_overlay_raw.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_text_probe_raw.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_sources\\00_pi0.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_sources\\01_pi0_config.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_sources\\02_gemma.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_sources\\03_tokenizer.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_sources\\04_pi0_pytorch.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_sources\\05_gemma_pytorch.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_sources\\06_policy_config.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_sources\\07_config.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_sources\\08_pyproject.toml",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_sources\\09_pi0.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_sources\\10_pi0_config.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_sources\\11_gemma.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_sources\\12_tokenizer.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_sources\\13_pi0_pytorch.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_sources\\14_gemma_pytorch.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_sources\\15_policy_config.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_sources\\16_config.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_sources\\17_pyproject.toml",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_sources\\18__METADATA",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_sources\\19__CHECKPOINT_METADATA",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_sources\\20_modeling_gemma.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_sources\\21_modeling_paligemma.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_sources\\22_modeling_gemma.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_sources\\23_modeling_paligemma.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_sources\\24_modeling_gemma.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_sources\\25_modeling_gemma.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_load_trace.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_io_diagnostic.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\data_v4\\__init__.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\data_v4\\channel.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\data_v4\\contracts.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\configs\\v4\\interfaces_data_4_1.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\configs\\v4\\platform_binding.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\annotation_rules.txt",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\calibration_audit\\private_future_probe.jsonl",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\calibration_audit\\private_labels.jsonl",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\calibration_audit\\public_input.jsonl",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\calibration_fit\\private_future_probe.jsonl",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\calibration_fit\\private_labels.jsonl",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\calibration_fit\\public_input.jsonl",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\capture_manifest.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\04154e43d8656849881935c8_0.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\04154e43d8656849881935c8_1.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\0984040b886020f7c7d38775_0.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\0984040b886020f7c7d38775_1.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\09b8103eb9900503cd143c36_0.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\09b8103eb9900503cd143c36_1.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\14d082de49bc8047a0112724_0.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\14d082de49bc8047a0112724_1.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\17243b91180af53121bbb044_0.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\17243b91180af53121bbb044_1.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\1f78b94654ffba049895ff20_0.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\1f78b94654ffba049895ff20_1.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\223d74563971711fb916a384_0.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\223d74563971711fb916a384_1.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\29e708d5a05f0918b4eb0a98_0.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\29e708d5a05f0918b4eb0a98_1.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\2a97a8cf372c38008bb97a22_0.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\2a97a8cf372c38008bb97a22_1.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\2db4ddf92e39816c249d5b8c_0.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\2db4ddf92e39816c249d5b8c_1.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\389bd0cd546eb2dd1c59be96_0.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\389bd0cd546eb2dd1c59be96_1.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\3c99faa62d8837c0a03dc323_0.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\3c99faa62d8837c0a03dc323_1.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\3ca46f06f2e98c7585e4453d_0.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\3ca46f06f2e98c7585e4453d_1.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\3e7f4a934272c0ac1dcfa709_0.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\3e7f4a934272c0ac1dcfa709_1.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\46090868d3ca5183d06c31d4_0.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\46090868d3ca5183d06c31d4_1.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\4e9f98b02d0aa8f685be49dd_0.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\4e9f98b02d0aa8f685be49dd_1.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\5d1f6264a4adb79b3e423b36_0.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\5d1f6264a4adb79b3e423b36_1.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\64fcf448cd902179694b3865_0.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\64fcf448cd902179694b3865_1.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\65f82be576efd9a4d3381acc_0.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\65f82be576efd9a4d3381acc_1.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\6601432a410389a03c224d0b_0.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\6601432a410389a03c224d0b_1.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\66c54cbd120fded5bec9b5b7_0.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\66c54cbd120fded5bec9b5b7_1.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\66ef3be961d17a889d947544_0.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\66ef3be961d17a889d947544_1.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\67c5dafe72c0b3ace0f3fd3e_0.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\67c5dafe72c0b3ace0f3fd3e_1.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\6914de021eca3ca8b3623068_0.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\6914de021eca3ca8b3623068_1.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\6c8727dd8d0fbad1eabe4812_0.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\6c8727dd8d0fbad1eabe4812_1.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\6d0170acdb81587a5592a8e1_0.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\6d0170acdb81587a5592a8e1_1.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\70ccc7920d34f4976ad77fdb_0.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\70ccc7920d34f4976ad77fdb_1.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\7174f73d7055530f63773963_0.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\7174f73d7055530f63773963_1.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\7853000cdec12ff4721d82c0_0.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\7853000cdec12ff4721d82c0_1.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\78bcd6a1fbf96117e96c58a0_0.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\78bcd6a1fbf96117e96c58a0_1.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\7c1b421e001fe3762a4d33fe_0.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\7c1b421e001fe3762a4d33fe_1.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\7d02da34438c898381a919fe_0.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\7d02da34438c898381a919fe_1.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\89662819c6a1025773fec0d4_0.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\89662819c6a1025773fec0d4_1.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\8a73e47aa9c92d370ca37806_0.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\8a73e47aa9c92d370ca37806_1.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\8ce9cefdbfafe24aab2e9805_0.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\8ce9cefdbfafe24aab2e9805_1.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\91d9a10410845c55cbc2cefc_0.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\91d9a10410845c55cbc2cefc_1.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\a733559f6120147aa83fb6dd_0.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\a733559f6120147aa83fb6dd_1.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\b1340504dff3a8b97fdd4ff9_0.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\b1340504dff3a8b97fdd4ff9_1.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\b3822826721b2af0c156cace_0.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\b3822826721b2af0c156cace_1.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\bcaaaade5149b94f01a42ed9_0.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\bcaaaade5149b94f01a42ed9_1.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\c777e572b2cd48a617e18044_0.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\c777e572b2cd48a617e18044_1.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\ca3b07c2533c3c18c1047dea_0.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\ca3b07c2533c3c18c1047dea_1.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\d5a72e8178af177f104dc7f6_0.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\d5a72e8178af177f104dc7f6_1.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\dfaa20a11afa4e9a7221ad55_0.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\dfaa20a11afa4e9a7221ad55_1.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\e356a9fe34621accf867531b_0.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\e356a9fe34621accf867531b_1.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\e4ec97847818bc2afe594b34_0.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\e4ec97847818bc2afe594b34_1.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\e59a2ecd6fcdc4f613abd127_0.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\e59a2ecd6fcdc4f613abd127_1.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\f286c7db45beae1e42c827f0_0.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\f286c7db45beae1e42c827f0_1.png",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\counterfactual_pairs.jsonl",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\data_manifest.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\language_annotations.jsonl",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\lineage.jsonl",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\private_worlds.jsonl",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\split_manifest.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\train\\private_future_probe.jsonl",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\train\\private_labels.jsonl",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\train\\public_input.jsonl",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\validation\\private_future_probe.jsonl",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\validation\\private_labels.jsonl",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\validation\\public_input.jsonl",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\docs\\v4\\04_data_status.txt",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\04_acceptance.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\04_before_manifest.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\04_capture_job.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\04_capture_plan.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\04_command_log.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\04_dataset_paths.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\04_libero_catalog.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\04_progress_before.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\04_verification.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\build_step04_data.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\finalize_step04.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\handoff_step04.txt",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\inspect_step04.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\prepare_step04.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\run_step04_capture.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\step04_libero_capture.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\verify_step04.py",
+      "passed": true
+    }
+  ]
+}

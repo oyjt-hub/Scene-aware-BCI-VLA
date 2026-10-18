@@ -1,0 +1,42 @@
+{
+  "scope": "read-only asset inventory; no neural tests or model execution",
+  "attempts": [
+    {
+      "command": "python -B execution/v4/inspect_assets_step01.py",
+      "result": "initial sandbox denial reading existing known_hosts; same read-only command then approved and succeeded",
+      "artifact": "01_remote_inventory.json"
+    },
+    {
+      "command": "python -B execution/v4/inspect_assets_step01.py --supplement",
+      "result": "succeeded; bounded pi05 hash read stopped after 32 seconds with complete=false; no digest asserted",
+      "artifact": "01_remote_supplement.json"
+    },
+    {
+      "command": "python -B execution/v4/inspect_assets_step01.py --integrity",
+      "result": "SSH read timed out at 100 seconds; full current checkpoint SHA256 not obtained",
+      "artifact": null
+    },
+    {
+      "command": "python -B execution/v4/inspect_assets_step01.py --paths",
+      "result": "succeeded; tokenizer hash and alternate Florence/SAM paths recorded",
+      "artifact": "01_remote_paths.json"
+    },
+    {
+      "command": "inspect_assets_step01.py --workspace (initial recursive version)",
+      "result": "SSH read timed out; no result used; scan narrowed before successful retry",
+      "artifact": null
+    },
+    {
+      "command": "inspect_assets_step01.py --workspace (bounded top-level version)",
+      "result": "succeeded, 162 names plus exact known weight metadata",
+      "artifact": "01_workspace_weights.json"
+    },
+    {
+      "command": "inspect_assets_step01.py --candidates",
+      "result": "succeeded; base/droid/fold/uniform and actual Florence/SAM files located",
+      "artifact": "01_candidate_weights.json"
+    }
+  ],
+  "full_weight_sha256_current_status": "not_verified_this_turn",
+  "credentials_recorded": false
+}

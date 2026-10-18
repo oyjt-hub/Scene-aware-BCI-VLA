@@ -24,3 +24,5 @@
 *.safetensors
 /bci_vla_framework/runs/pilot_virtual_13_streamcheck_01/raw_stream.bin
 /bci_vla_framework/runs/pilot_virtual_13_samplingcheck_01/processed_signal.npy
+/bci_vla_framework/execution/v4/11_upstream_codeload.zip
+/bci_vla_framework/third_party/openpi_with_subtask/uv-x86_64-unknown-linux-gnu.tar.gz

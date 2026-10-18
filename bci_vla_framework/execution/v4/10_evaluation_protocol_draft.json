@@ -1,0 +1,89 @@
+{
+  "version": "V4-10-formal-protocol-draft/0.1",
+  "status": "DRAFT_NOT_FINAL_LOCK_NOT_TEST_AUTHORIZATION",
+  "formal_test_accessed": false,
+  "planned_final_lock": "V4-13 after all applicable training and calibration",
+  "primary_endpoint": "Correct final confirmed goal/task within error-risk and interaction budgets; frozen-capture simulated submission is distinct from robot completion",
+  "primary_comparison": "Full vs B4_aux shared-query with matched data/LoRA/binding/parameter budget and shared fixed inquiry contract",
+  "additional_comparisons": [
+    "B0 recent choice",
+    "B1 binary filter",
+    "B2 same-information text",
+    "B3_aux matched MLP"
+  ],
+  "current_comparison_scope": "Full same-checkpoint confirmation-gate engineering ablation only; not architecture comparison",
+  "risk": {
+    "threshold": 0.1,
+    "development_basis": "scene-macro episode-any-error point estimate only",
+    "formal_basis": "one-sided 95% upper bound on scene-any-error as conservative gate; also report episode-any-error and submission-conditional error",
+    "assumptions": "independent representative scene/task clusters; equal locked initialization/scenario composition; unavailable capacity is a blocker",
+    "multiplicity": "Primary Full risk claim has a single prespecified one-sided bound; other method bounds descriptive unless a joint alpha allocation is locked at V4-13."
+  },
+  "budgets": {
+    "questions": 12,
+    "probes": 6,
+    "intent_queries": 4,
+    "retries": 4
+  },
+  "horizon_s": 24,
+  "minimum_effective_gain": 0.1,
+  "gain_status": "provisional design target, not tuned to formal outcomes; finalize effect and sample assumptions using development only",
+  "statistics": {
+    "unit": "paired scene/task clusters; keep all initializations and scenarios together",
+    "effect_interval": "paired scene-cluster bootstrap after adequate independent cluster count",
+    "primary_alpha": 0.05,
+    "multiplicity": "one prespecified primary comparison; secondary/ablation results descriptive or Holm-corrected within declared family",
+    "all_failures_in_denominator": true,
+    "always_wait_is_unresolved": true,
+    "training_seeds_not_independent_test_units": true
+  },
+  "sample_size": {
+    "status": "DRAFT_ASSUMPTIONS_NOT_CAPACITY_CONFIRMED",
+    "effect_delta": 0.1,
+    "two_sided_alpha": 0.05,
+    "power": 0.8,
+    "independent_unit": "scene/task cluster, not augmented condition or training seed",
+    "normal_approximation_scene_counts_by_assumed_paired_sd": {
+      "0.2": 32,
+      "0.25": 50,
+      "0.35": 97,
+      "1.0": 785
+    },
+    "assumed_paired_sd_not_estimated_from_two_dev_scenes": 0.25,
+    "illustrative_effect_target_scenes": 56,
+    "zero_scene_errors_min_scenes_for_one_sided_95_upper_le_10_percent": 29,
+    "risk_model": "independent scene-any-error Bernoulli bound; conservative for average episode risk; independence and sampling assumptions required",
+    "currently_observed_zero_errors_8_episode_upper_if_independent": 0.31234397806636793,
+    "upper_bound_caveat": "illustration only: present episodes share only two scene groups",
+    "formal_sample_count_locked": false
+  },
+  "latency": {
+    "total": "from private scorer change time to first correct updated confirmation; unresolved censored at horizon",
+    "identifiable_anchor": "trusted explicit public goal declaration only; no such anchor in present raw-noise captures",
+    "conditional_latency": "report only where anchor exists; publish coverage and censoring, never relabel noisy agreement as identified truth",
+    "future_anchor_options": "A validated probabilistic public change-evidence rule under explicit channel assumptions may be preregistered; label it operational, not noiseless truth. None is validated here."
+  },
+  "freeze_requirements": [
+    "all baseline/ablation training on train/validation",
+    "same new binding mechanism for B3/B4/Full",
+    "method-specific checkpoint/schema/policy calibration",
+    "shared fixed inquiry for structure comparison",
+    "adequate new independent heldout scene capacity",
+    "full VLM and LIBERO-action interface gates when claiming execution",
+    "exact parsing/timeout/no-response failure accounting",
+    "write immutable V4-13 lock before one-time formal test opening"
+  ],
+  "known_blockers": [
+    "full Step08 hidden-intent and placement supervision incomplete",
+    "8 conflicting-declaration language failures",
+    "only two development scene groups; architecture effect and formal sample feasibility unverified"
+  ],
+  "current_frozen_development_binding": {
+    "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+    "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+    "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+    "policy_sha256": "48b556069f0384346692b3294cddc293cc958f1bf2f6262a86e2fc893d117339"
+  },
+  "no_test_result_tuning": true,
+  "development_effect_estimate_is_architecture_power_basis": false
+}

@@ -1,0 +1,52 @@
+test_01_actual_LIBERO_shapes_all_controls (test_neural_interaction_v4.ConnectorTests.test_01_actual_LIBERO_shapes_all_controls) ... ok
+test_02_actual_parameter_budget (test_neural_interaction_v4.ConnectorTests.test_02_actual_parameter_budget) ... ok
+test_03_empty_observation_and_zero_N_H (test_neural_interaction_v4.ConnectorTests.test_03_empty_observation_and_zero_N_H) ... ok
+test_04_batch_isolation (test_neural_interaction_v4.ConnectorTests.test_04_batch_isolation) ... ok
+test_05_joint_object_permutation (test_neural_interaction_v4.ConnectorTests.test_05_joint_object_permutation) ... ok
+test_06_alias_label_not_numeric_features (test_neural_interaction_v4.ConnectorTests.test_06_alias_label_not_numeric_features) ... ok
+test_07_padding_NaN_ignored_valid_illegal_rejected (test_neural_interaction_v4.ConnectorTests.test_07_padding_NaN_ignored_valid_illegal_rejected) ... ok
+test_08_channel_barrier_at_every_layer (test_neural_interaction_v4.ConnectorTests.test_08_channel_barrier_at_every_layer) ... ok
+test_09_PROBE_object_semantics_invariance (test_neural_interaction_v4.ConnectorTests.test_09_PROBE_object_semantics_invariance) ... FAIL
+test_10_diagnostic_numeric_effect_and_oneway_gradient (test_neural_interaction_v4.ConnectorTests.test_10_diagnostic_numeric_effect_and_oneway_gradient) ... ok
+test_11_persistent_summary_or_insufficient (test_neural_interaction_v4.ConnectorTests.test_11_persistent_summary_or_insufficient) ... ok
+test_12_long_probe_history_preserves_confirmed_task (test_neural_interaction_v4.ConnectorTests.test_12_long_probe_history_preserves_confirmed_task) ... ok
+test_13_STOP_CANCEL_no_torch_import (test_neural_interaction_v4.ConnectorTests.test_13_STOP_CANCEL_no_torch_import) ... FAIL
+test_14_private_loss_binding_no_forward_label (test_neural_interaction_v4.ConnectorTests.test_14_private_loss_binding_no_forward_label) ... ok
+test_15_backward_all_models_and_components (test_neural_interaction_v4.ConnectorTests.test_15_backward_all_models_and_components) ... ok
+test_16_public_hidden_field_and_feature_profile_rejected (test_neural_interaction_v4.ConnectorTests.test_16_public_hidden_field_and_feature_profile_rejected) ... ok
+test_17_option_order_invariance (test_neural_interaction_v4.ConnectorTests.test_17_option_order_invariance) ... ok
+
+======================================================================
+FAIL: test_09_PROBE_object_semantics_invariance (test_neural_interaction_v4.ConnectorTests.test_09_PROBE_object_semantics_invariance)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/oyjt/Scene-aware-BCI-VLA-runs/v4_step06_cpu_20261017_v1/tests/test_neural_interaction_v4.py", line 100, in test_09_PROBE_object_semantics_invariance
+    self.assertGreater(changed,0)
+AssertionError: 0 not greater than 0
+
+======================================================================
+FAIL: test_13_STOP_CANCEL_no_torch_import (test_neural_interaction_v4.ConnectorTests.test_13_STOP_CANCEL_no_torch_import)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/oyjt/Scene-aware-BCI-VLA-runs/v4_step06_cpu_20261017_v1/tests/test_neural_interaction_v4.py", line 131, in test_13_STOP_CANCEL_no_torch_import
+    r=subprocess.run([sys.executable,'-c',code],cwd=ROOT,capture_output=True,text=True);self.assertEqual(r.returncode,0,r.stderr)
+                                                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/home/oyjt/Scene-aware-BCI-VLA-runs/v4_step06_cpu_20261017_v1/bci_vla/neural_interaction_v4/control.py", line 7, in route_control
+    return {'route':control_route(history[-1]),'call_neural_module':False,'execution_authorized':False}
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/oyjt/Scene-aware-BCI-VLA-runs/v4_step06_cpu_20261017_v1/bci_vla/interaction_contract_v4/validation.py", line 376, in control_route
+    _shape(event, schema["$defs"]["event"], schema["$defs"])
+  File "/home/oyjt/Scene-aware-BCI-VLA-runs/v4_step06_cpu_20261017_v1/bci_vla/interaction_contract_v4/validation.py", line 93, in _shape
+    require(set(schema.get("required", ())) <= set(value), "shape:missing_field:" + path)
+  File "/home/oyjt/Scene-aware-BCI-VLA-runs/v4_step06_cpu_20261017_v1/bci_vla/interaction_contract_v4/validation.py", line 26, in require
+    raise ContractError(code)
+bci_vla.interaction_contract_v4.validation.ContractError: shape:missing_field:$
+
+
+----------------------------------------------------------------------
+Ran 17 tests in 3.135s
+
+FAILED (failures=2)
+{"status": "FAIL", "tests_run": 17, "elapsed_s": 3.3764638900756836, "torch": "2.7.1+cu126", "cuda_initialized": false}

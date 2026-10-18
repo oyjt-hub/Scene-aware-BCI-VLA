@@ -1,0 +1,266 @@
+﻿V4-08 交互模块与高层语言开发训练（2026-10-17）
+
+一、结论
+受限开发训练完成；步骤08整体仍未完成。
+本轮是模拟交互下的明确公开声明教学，不能称脑机隐藏意图推理已验证。
+真实放置阶段、真实含噪隐藏意图监督与外部泛化仍缺；旧G2/G3/G4不升级。
+
+关键语义复验：本轮尚未打通选中对象内部token到VLM目标文字的可靠绑定；不能仅用训练损失下降或对象指针通过替代此能力。
+Full/seed0：声明对象指针16/16；同场景证据切换双侧同时正确0/8；别名重绑定双侧同时正确0/8。
+Full/seed1：声明对象指针16/16；同场景证据切换双侧同时正确0/8；别名重绑定双侧同时正确0/8。
+Full/seed2：声明对象指针16/16；同场景证据切换双侧同时正确0/8；别名重绑定双侧同时正确0/8。
+二、数据与监督范围
+实际LIBERO图像＋特权投影框＋6维RGB统计；脑机输入模拟，Florence/SAM未接入。
+train实测清单：{"public_rows": 128, "private_variants": 144, "base_episodes": 24, "scene_groups": 6, "family_counts": {"noisy_ambiguous": 16, "declared_pick": 16, "missing_action": 16, "missing_source": 16, "conflicting_declarations": 16, "no_response": 16, "missing_destination": 16, "next_pick_symbolic": 16}, "point_targets": 64, "counterfactual_anchors": 16, "channel_targets": 16, "channel_outcomes": {"True": 11, "False": 5}, "episode_counts": {"04154e43d8656849881935c8": 6, "0984040b886020f7c7d38775": 6, "09b8103eb9900503cd143c36": 6, "1f78b94654ffba049895ff20": 6, "223d74563971711fb916a384": 6, "2a97a8cf372c38008bb97a22": 6, "2db4ddf92e39816c249d5b8c": 6, "46090868d3ca5183d06c31d4": 6, "4e9f98b02d0aa8f685be49dd": 5, "64fcf448cd902179694b3865": 5, "65f82be576efd9a4d3381acc": 5, "6601432a410389a03c224d0b": 5, "67c5dafe72c0b3ace0f3fd3e": 5, "6914de021eca3ca8b3623068": 5, "6c8727dd8d0fbad1eabe4812": 5, "70ccc7920d34f4976ad77fdb": 5, "7174f73d7055530f63773963": 5, "7c1b421e001fe3762a4d33fe": 5, "91d9a10410845c55cbc2cefc": 5, "b3822826721b2af0c156cace": 5, "bcaaaade5149b94f01a42ed9": 5, "ca3b07c2533c3c18c1047dea": 5, "e59a2ecd6fcdc4f613abd127": 5, "f286c7db45beae1e42c827f0": 5}}
+validation实测清单：{"public_rows": 32, "private_variants": 36, "base_episodes": 8, "scene_groups": 2, "family_counts": {"noisy_ambiguous": 4, "declared_pick": 4, "missing_action": 4, "missing_source": 4, "conflicting_declarations": 4, "no_response": 4, "missing_destination": 4, "next_pick_symbolic": 4}, "point_targets": 16, "counterfactual_anchors": 4, "channel_targets": 4, "channel_outcomes": {"True": 3, "False": 1}, "episode_counts": {"3ca46f06f2e98c7585e4453d": 4, "3e7f4a934272c0ac1dcfa709": 4, "66c54cbd120fded5bec9b5b7": 4, "7d02da34438c898381a919fe": 4, "8a73e47aa9c92d370ca37806": 4, "8ce9cefdbfafe24aab2e9805": 4, "a733559f6120147aa83fb6dd": 4, "dfaa20a11afa4e9a7221ad55": 4}}
+POINT仅表示受限公开声明对象绑定；相同public隐藏反事实仍歧义/澄清，并只计一次权重。
+主任务限公开动作菜单；缺动作/来源/目的、声明冲突或未响应时要求澄清/弃权。
+next_pick_symbolic是明确empty夹爪的纯文本符号干预，不伪装真实抓取/放置阶段帧。
+所有方法共用公开prompt和对象字典；Full/B3/B4经内部token，B2用完整同信息文本。
+
+三、实际配置
+{
+  "version": "V4-08-development-pilot-3",
+  "scope": "Restricted public declaration curriculum, actual LIBERO images, simulated BCI; not formal hidden-intent or action evaluation",
+  "methods": [
+    "Full",
+    "B3_aux",
+    "B4_aux",
+    "B2"
+  ],
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "optimizer_steps": 200,
+  "smoke_steps": 20,
+  "batch_size": 1,
+  "connector_learning_rate": 2e-05,
+  "language_lora_learning_rate": 0.0001,
+  "learning_rate_reason": "Attempt2 Full/B3 smoke failed with large language-loss overshoot. Apply the same reduced rates and 20-step smoke to all methods, preserving all failures and restarting initialization.",
+  "weight_decay": 0.0,
+  "max_grad_norm": 1.0,
+  "loss_weights": {
+    "language": 1.0,
+    "intent": 0.25,
+    "channel": 0.25,
+    "interaction": 0.1,
+    "missing_slots": 0.1,
+    "abstain": 0.1
+  },
+  "checkpoint_steps": [
+    100,
+    200
+  ],
+  "validation_examples": 32,
+  "selection": "Lowest equally weighted validation scene-group language CE; ties select earliest step",
+  "max_text_tokens": 6144,
+  "context_budget_reason": "Attempt1 stopped before any optimizer update: complete B2 evidence required at least 4089 tokens. Expanded uniformly; no truncation or loss of public evidence.",
+  "max_answer_tokens": 32,
+  "no_truncation": true,
+  "shared_language_lora": {
+    "rank": 16,
+    "alpha": 32,
+    "targets": [
+      "q_proj",
+      "v_proj",
+      "o_proj"
+    ],
+    "initialization": "V4-03R step240",
+    "trainable_for_all_methods": true
+  },
+  "base_sha256": "4616e4c1966a5fb063b442ea5d69857f45e873222d839b794634d87d252ab9e7",
+  "initial_language_adapter_sha256": "c1dbc8bd23e8e2590ac2670839a068d82423aa0c4620e734d2d99618afaec380",
+  "test_access": false,
+  "calibration_access": false,
+  "action_sampling": false,
+  "inquiry_policy": "Existing common fixed rule; interaction-head loss is auxiliary, not a deployed learned inquiry policy",
+  "remaining_scope": [
+    "Real placement phase remains missing",
+    "No claim of general noisy hidden-intent robustness",
+    "B2 has different representation, parameter count and token cost"
+  ]
+}
+共同高层LoRA初始化/预算单列；B2没有连接器，参数量和文本token开销不同。
+烟测后重置共同初始化；烟测成本另计，不把过拟合权重带入比较。
+
+四、按方法与seed记录原始开发结果
+方法 | seed | 状态 | 实际步数 | 选中step | validation精确匹配 | 场景等权CE | run秒 | 峰值GPU字节
+B2 | 0 | DEVELOPMENT_TRAINING_COMPLETE | 200 | 200 | 19/32 | 0.2165 | 131.38 | 21771383296
+  各family：conflicting_declarations=2/4, CE=0.1309, pointer=0/0; declared_pick=1/4, CE=0.2049, pointer=0/0; missing_action=4/4, CE=0.0038, pointer=0/0; missing_destination=0/4, CE=0.5522, pointer=0/0; missing_source=4/4, CE=0.0480, pointer=0/0; next_pick_symbolic=2/4, CE=0.2040, pointer=0/0; no_response=4/4, CE=0.0576, pointer=0/0; noisy_ambiguous=2/4, CE=0.5304, pointer=0/0
+  场景CE：{"mean": 0.216458163340576, "group_means": {"be407422cd63db52190d": 0.25737282875343226, "c643a21fa2fbdfc32c20": 0.17554349792771973}, "group_counts": {"be407422cd63db52190d": 16, "c643a21fa2fbdfc32c20": 16}}
+  原验证目标组成：{"clarification_rows": 24, "all_rows": 32, "declared_pick_target_counts": {"Pick up OBJ_1.": 4}}
+B2 | 1 | DEVELOPMENT_TRAINING_COMPLETE | 200 | 200 | 18/32 | 0.3546 | 132.24 | 21761100288
+  各family：conflicting_declarations=4/4, CE=0.0066, pointer=0/0; declared_pick=0/4, CE=1.0391, pointer=0/0; missing_action=4/4, CE=0.0077, pointer=0/0; missing_destination=0/4, CE=0.7438, pointer=0/0; missing_source=4/4, CE=0.0073, pointer=0/0; next_pick_symbolic=0/4, CE=0.8510, pointer=0/0; no_response=4/4, CE=0.0089, pointer=0/0; noisy_ambiguous=2/4, CE=0.1722, pointer=0/0
+  场景CE：{"mean": 0.35457820368174, "group_means": {"be407422cd63db52190d": 0.46524736046558246, "c643a21fa2fbdfc32c20": 0.2439090468978975}, "group_counts": {"be407422cd63db52190d": 16, "c643a21fa2fbdfc32c20": 16}}
+  原验证目标组成：{"clarification_rows": 24, "all_rows": 32, "declared_pick_target_counts": {"Pick up OBJ_1.": 4}}
+B2 | 2 | DEVELOPMENT_TRAINING_COMPLETE | 200 | 100 | 14/32 | 0.4978 | 132.35 | 21771131392
+  各family：conflicting_declarations=4/4, CE=0.0397, pointer=0/0; declared_pick=0/4, CE=0.6156, pointer=0/0; missing_action=2/4, CE=0.1941, pointer=0/0; missing_destination=0/4, CE=1.6206, pointer=0/0; missing_source=4/4, CE=0.0243, pointer=0/0; next_pick_symbolic=0/4, CE=0.7384, pointer=0/0; no_response=4/4, CE=0.0316, pointer=0/0; noisy_ambiguous=0/4, CE=0.7177, pointer=0/0
+  场景CE：{"mean": 0.4977716492721811, "group_means": {"be407422cd63db52190d": 0.5151386727811769, "c643a21fa2fbdfc32c20": 0.4804046257631853}, "group_counts": {"be407422cd63db52190d": 16, "c643a21fa2fbdfc32c20": 16}}
+  原验证目标组成：{"clarification_rows": 24, "all_rows": 32, "declared_pick_target_counts": {"Pick up OBJ_1.": 4}}
+B3_aux | 0 | DEVELOPMENT_TRAINING_COMPLETE | 200 | 200 | 18/32 | 0.2501 | 57.45 | 12133028864
+  各family：conflicting_declarations=0/4, CE=0.8984, pointer=0/0; declared_pick=0/4, CE=0.2607, pointer=4/4; missing_action=0/4, CE=0.5976, pointer=4/4; missing_destination=4/4, CE=0.0149, pointer=4/4; missing_source=4/4, CE=0.0165, pointer=0/0; next_pick_symbolic=2/4, CE=0.1985, pointer=4/4; no_response=4/4, CE=0.0121, pointer=0/0; noisy_ambiguous=4/4, CE=0.0023, pointer=0/0
+  场景CE：{"mean": 0.25013915196905145, "group_means": {"be407422cd63db52190d": 0.24105302906536963, "c643a21fa2fbdfc32c20": 0.2592252748727333}, "group_counts": {"be407422cd63db52190d": 16, "c643a21fa2fbdfc32c20": 16}}
+  原验证目标组成：{"clarification_rows": 24, "all_rows": 32, "declared_pick_target_counts": {"Pick up OBJ_1.": 4}}
+B3_aux | 1 | DEVELOPMENT_TRAINING_COMPLETE | 200 | 200 | 18/32 | 0.2645 | 58.28 | 12137849856
+  各family：conflicting_declarations=0/4, CE=0.2700, pointer=0/0; declared_pick=4/4, CE=0.2383, pointer=4/4; missing_action=0/4, CE=0.4667, pointer=4/4; missing_destination=0/4, CE=0.7541, pointer=4/4; missing_source=4/4, CE=0.0217, pointer=0/0; next_pick_symbolic=2/4, CE=0.3224, pointer=4/4; no_response=4/4, CE=0.0393, pointer=0/0; noisy_ambiguous=4/4, CE=0.0037, pointer=0/0
+  场景CE：{"mean": 0.26452886622428196, "group_means": {"be407422cd63db52190d": 0.260810343635967, "c643a21fa2fbdfc32c20": 0.2682473888125969}, "group_counts": {"be407422cd63db52190d": 16, "c643a21fa2fbdfc32c20": 16}}
+  原验证目标组成：{"clarification_rows": 24, "all_rows": 32, "declared_pick_target_counts": {"Pick up OBJ_1.": 4}}
+B3_aux | 2 | DEVELOPMENT_TRAINING_COMPLETE | 200 | 200 | 15/32 | 0.2101 | 59.00 | 12135007744
+  各family：conflicting_declarations=0/4, CE=0.2121, pointer=0/0; declared_pick=0/4, CE=0.4529, pointer=4/4; missing_action=1/4, CE=0.1386, pointer=4/4; missing_destination=0/4, CE=0.5195, pointer=4/4; missing_source=4/4, CE=0.0183, pointer=0/0; next_pick_symbolic=2/4, CE=0.3032, pointer=4/4; no_response=4/4, CE=0.0300, pointer=0/0; noisy_ambiguous=4/4, CE=0.0058, pointer=0/0
+  场景CE：{"mean": 0.21006064420362236, "group_means": {"be407422cd63db52190d": 0.23251694432110526, "c643a21fa2fbdfc32c20": 0.18760434408613946}, "group_counts": {"be407422cd63db52190d": 16, "c643a21fa2fbdfc32c20": 16}}
+  原验证目标组成：{"clarification_rows": 24, "all_rows": 32, "declared_pick_target_counts": {"Pick up OBJ_1.": 4}}
+B4_aux | 0 | DEVELOPMENT_TRAINING_COMPLETE | 200 | 200 | 19/32 | 0.2306 | 61.33 | 12140554752
+  各family：conflicting_declarations=0/4, CE=0.7743, pointer=0/0; declared_pick=1/4, CE=0.2648, pointer=4/4; missing_action=0/4, CE=0.4641, pointer=4/4; missing_destination=4/4, CE=0.0465, pointer=4/4; missing_source=4/4, CE=0.0123, pointer=0/0; next_pick_symbolic=2/4, CE=0.2183, pointer=4/4; no_response=4/4, CE=0.0224, pointer=0/0; noisy_ambiguous=4/4, CE=0.0422, pointer=0/0
+  场景CE：{"mean": 0.2306166103517171, "group_means": {"be407422cd63db52190d": 0.2649501075502485, "c643a21fa2fbdfc32c20": 0.1962831131531857}, "group_counts": {"be407422cd63db52190d": 16, "c643a21fa2fbdfc32c20": 16}}
+  原验证目标组成：{"clarification_rows": 24, "all_rows": 32, "declared_pick_target_counts": {"Pick up OBJ_1.": 4}}
+B4_aux | 1 | DEVELOPMENT_TRAINING_COMPLETE | 200 | 200 | 16/32 | 0.3231 | 62.11 | 12142073856
+  各family：conflicting_declarations=4/4, CE=0.0101, pointer=0/0; declared_pick=0/4, CE=0.7086, pointer=4/4; missing_action=0/4, CE=0.8611, pointer=4/4; missing_destination=0/4, CE=0.5746, pointer=4/4; missing_source=4/4, CE=0.0009, pointer=0/0; next_pick_symbolic=0/4, CE=0.4214, pointer=4/4; no_response=4/4, CE=0.0010, pointer=0/0; noisy_ambiguous=4/4, CE=0.0072, pointer=0/0
+  场景CE：{"mean": 0.3231159416045557, "group_means": {"be407422cd63db52190d": 0.30158224385013455, "c643a21fa2fbdfc32c20": 0.34464963935897686}, "group_counts": {"be407422cd63db52190d": 16, "c643a21fa2fbdfc32c20": 16}}
+  原验证目标组成：{"clarification_rows": 24, "all_rows": 32, "declared_pick_target_counts": {"Pick up OBJ_1.": 4}}
+B4_aux | 2 | DEVELOPMENT_TRAINING_COMPLETE | 200 | 200 | 24/32 | 0.1698 | 63.20 | 12142154240
+  各family：conflicting_declarations=4/4, CE=0.0452, pointer=0/0; declared_pick=0/4, CE=0.8062, pointer=4/4; missing_action=4/4, CE=0.0029, pointer=4/4; missing_destination=2/4, CE=0.2584, pointer=4/4; missing_source=4/4, CE=0.0007, pointer=0/0; next_pick_symbolic=2/4, CE=0.2376, pointer=4/4; no_response=4/4, CE=0.0006, pointer=0/0; noisy_ambiguous=4/4, CE=0.0065, pointer=0/0
+  场景CE：{"mean": 0.16975825150075252, "group_means": {"be407422cd63db52190d": 0.2092547340253077, "c643a21fa2fbdfc32c20": 0.13026176897619735}, "group_counts": {"be407422cd63db52190d": 16, "c643a21fa2fbdfc32c20": 16}}
+  原验证目标组成：{"clarification_rows": 24, "all_rows": 32, "declared_pick_target_counts": {"Pick up OBJ_1.": 4}}
+Full | 0 | DEVELOPMENT_TRAINING_COMPLETE | 200 | 200 | 18/32 | 0.1912 | 62.16 | 11944500224
+  各family：conflicting_declarations=0/4, CE=0.7794, pointer=0/0; declared_pick=0/4, CE=0.2774, pointer=4/4; missing_action=0/4, CE=0.2190, pointer=4/4; missing_destination=4/4, CE=0.0061, pointer=4/4; missing_source=4/4, CE=0.0013, pointer=0/0; next_pick_symbolic=2/4, CE=0.2354, pointer=4/4; no_response=4/4, CE=0.0013, pointer=0/0; noisy_ambiguous=4/4, CE=0.0095, pointer=0/0
+  场景CE：{"mean": 0.1911781761536986, "group_means": {"be407422cd63db52190d": 0.16030485353985569, "c643a21fa2fbdfc32c20": 0.2220514987675415}, "group_counts": {"be407422cd63db52190d": 16, "c643a21fa2fbdfc32c20": 16}}
+  原验证目标组成：{"clarification_rows": 24, "all_rows": 32, "declared_pick_target_counts": {"Pick up OBJ_1.": 4}}
+Full | 1 | DEVELOPMENT_TRAINING_COMPLETE | 200 | 200 | 18/32 | 0.2226 | 61.92 | 11988918784
+  各family：conflicting_declarations=0/4, CE=0.2102, pointer=0/0; declared_pick=4/4, CE=0.1424, pointer=4/4; missing_action=0/4, CE=0.6046, pointer=4/4; missing_destination=0/4, CE=0.6075, pointer=4/4; missing_source=4/4, CE=0.0023, pointer=0/0; next_pick_symbolic=2/4, CE=0.2085, pointer=4/4; no_response=4/4, CE=0.0025, pointer=0/0; noisy_ambiguous=4/4, CE=0.0027, pointer=0/0
+  场景CE：{"mean": 0.22258630527358036, "group_means": {"be407422cd63db52190d": 0.2480748847592622, "c643a21fa2fbdfc32c20": 0.19709772578789853}, "group_counts": {"be407422cd63db52190d": 16, "c643a21fa2fbdfc32c20": 16}}
+  原验证目标组成：{"clarification_rows": 24, "all_rows": 32, "declared_pick_target_counts": {"Pick up OBJ_1.": 4}}
+Full | 2 | DEVELOPMENT_TRAINING_COMPLETE | 200 | 200 | 20/32 | 0.1733 | 62.60 | 11987532800
+  各family：conflicting_declarations=0/4, CE=0.3945, pointer=0/0; declared_pick=0/4, CE=0.6137, pointer=4/4; missing_action=4/4, CE=0.0384, pointer=4/4; missing_destination=2/4, CE=0.1650, pointer=4/4; missing_source=4/4, CE=0.0160, pointer=0/0; next_pick_symbolic=2/4, CE=0.1351, pointer=4/4; no_response=4/4, CE=0.0076, pointer=0/0; noisy_ambiguous=4/4, CE=0.0158, pointer=0/0
+  场景CE：{"mean": 0.17327031446257024, "group_means": {"be407422cd63db52190d": 0.25138411845546216, "c643a21fa2fbdfc32c20": 0.09515651046967832}, "group_counts": {"be407422cd63db52190d": 16, "c643a21fa2fbdfc32c20": 16}}
+  原验证目标组成：{"clarification_rows": 24, "all_rows": 32, "declared_pick_target_counts": {"Pick up OBJ_1.": 4}}
+
+五、三种子汇总（仅开发结果）
+Full：完成seed=[0, 1, 2]；精确率均值=0.5833，样本SD=0.0361；CE均值=0.1957，样本SD=0.0250。
+B3_aux：完成seed=[0, 1, 2]；精确率均值=0.5312，样本SD=0.0541；CE均值=0.2416，样本SD=0.0282。
+B4_aux：完成seed=[0, 1, 2]；精确率均值=0.6146，样本SD=0.1263；CE均值=0.2412，样本SD=0.0772。
+B2：完成seed=[0, 1, 2]；精确率均值=0.5312，样本SD=0.0827；CE均值=0.3563，样本SD=0.1407。
+Validation参与checkpoint选优及开发修复；不是独立外部/test泛化结果。
+32条validation来自8回合/2场景组；3seed重复同一批例子，不是96次独立机器人实验。
+原验证集以澄清答案为主，declared_pick还可能集中于同一个OBJ别名；上面的组成由真实trace逐项统计。
+因此整体exact很高也不能单独证明模型读取了交互证据；需看以下双侧对象改变与联合别名重绑定。
+本轮不据此宣布基线优势、统计显著、真实脑机鲁棒或未知场景泛化。
+
+六、失败尝试与成本
+attempt1：FAIL；报告总耗时=55.47秒；训练optimizer=0步；烟测记录=0次。
+  原始失败：complete B2 prompt needs 4089 text tokens, budget 3072; no truncation
+attempt2：PILOT_WITH_FAILURES；报告总耗时=170.68秒；训练optimizer=200步；烟测记录=24次。
+  Full/seed0：FAIL，训练0步，烟测6次，耗时3.06秒，错误=Single-batch smoke loss did not decrease。
+  B3_aux/seed0：FAIL，训练0步，烟测6次，耗时1.66秒，错误=Single-batch smoke loss did not decrease。
+  B4_aux/seed0：DEVELOPMENT_TRAINING_COMPLETE，训练100步，烟测6次，耗时39.05秒，错误=None。
+  B2/seed0：DEVELOPMENT_TRAINING_COMPLETE，训练100步，烟测6次，耗时79.19秒，错误=None。
+attempt3：DEVELOPMENT_PILOT_COMPLETE；报告总耗时=974.43秒；训练optimizer=2400步；烟测记录=240次。
+  Full/seed0：DEVELOPMENT_TRAINING_COMPLETE，训练200步，烟测20次，耗时62.16秒，错误=None。
+  B3_aux/seed0：DEVELOPMENT_TRAINING_COMPLETE，训练200步，烟测20次，耗时57.45秒，错误=None。
+  B4_aux/seed0：DEVELOPMENT_TRAINING_COMPLETE，训练200步，烟测20次，耗时61.33秒，错误=None。
+  B2/seed0：DEVELOPMENT_TRAINING_COMPLETE，训练200步，烟测20次，耗时131.38秒，错误=None。
+  Full/seed1：DEVELOPMENT_TRAINING_COMPLETE，训练200步，烟测20次，耗时61.92秒，错误=None。
+  B3_aux/seed1：DEVELOPMENT_TRAINING_COMPLETE，训练200步，烟测20次，耗时58.28秒，错误=None。
+  B4_aux/seed1：DEVELOPMENT_TRAINING_COMPLETE，训练200步，烟测20次，耗时62.11秒，错误=None。
+  B2/seed1：DEVELOPMENT_TRAINING_COMPLETE，训练200步，烟测20次，耗时132.24秒，错误=None。
+  Full/seed2：DEVELOPMENT_TRAINING_COMPLETE，训练200步，烟测20次，耗时62.60秒，错误=None。
+  B3_aux/seed2：DEVELOPMENT_TRAINING_COMPLETE，训练200步，烟测20次，耗时59.00秒，错误=None。
+  B4_aux/seed2：DEVELOPMENT_TRAINING_COMPLETE，训练200步，烟测20次，耗时63.20秒，错误=None。
+  B2/seed2：DEVELOPMENT_TRAINING_COMPLETE，训练200步，烟测20次，耗时132.35秒，错误=None。
+历次报告总耗时合计=1200.58秒；训练optimizer合计=2600步；烟测记录合计=264次。
+attempt总耗时含加载/预检/验证，不再与run耗时相加。早期烟测逐步梯度缺日志时不编造更新次数。
+
+七、训练后对象绑定与别名诊断
+真实challenge状态：VERIFIED_DEVELOPMENT_DIAGNOSTICS
+实际计数：{"source_rows": 8, "paired_evidence_pairs": 8, "joint_alias_pairs": 8, "unique_public_examples": 24}
+额外GPU诊断耗时：162.20秒（与训练成本分列）。
+两侧同时正确才计绑定成功；仅output_changed不足以说明答案正确。三seed重复同一组public，不增加独立场景/回合样本。
+pointer与missing-slot/abstain是辅助头开发统计；0.5阈值未校准，少量模拟channel监督的Brier不证明真实BCI可靠性。
+Full/seed0：实际unique public=24。
+  paired_evidence：双侧同时正确=0/8；输出变化=0/8；移除交互后首侧正确=3/8。
+    按family：{"declared_pick": {"both_correct": 0, "count": 4, "output_changed": 0, "first_without_interaction_exact": 1}, "next_pick_symbolic": {"both_correct": 0, "count": 4, "output_changed": 0, "first_without_interaction_exact": 2}}
+  joint_alias：双侧同时正确=0/8；输出变化=0/8；移除交互后首侧正确=3/8。
+    按family：{"declared_pick": {"both_correct": 0, "count": 4, "output_changed": 0, "first_without_interaction_exact": 1}, "next_pick_symbolic": {"both_correct": 0, "count": 4, "output_changed": 0, "first_without_interaction_exact": 2}}
+  原validation辅助头实测：{"pointer": {"correct": 16, "count": 16, "rate": 1.0}, "channel_Brier": {"mean": 0.24767320150308691, "count": 4}, "train_frequency_channel_Brier_reference": 0.19140625, "missing_slots": {"correct": 64, "count": 88, "rate": 0.7272727272727273}, "abstain_at_uncalibrated_0_5": {"correct": 24, "count": 32, "rate": 0.75}, "confusion_at_uncalibrated_0_5": {"ACTION": {"TP": 0, "TN": 24, "FP": 0, "FN": 4, "precision": null, "recall": 0.0, "F1": 0.0, "balanced_accuracy": 0.5}, "SOURCE": {"TP": 16, "TN": 0, "FP": 16, "FN": 0, "precision": 0.5, "recall": 1.0, "F1": 0.6666666666666666, "balanced_accuracy": 0.5}, "DESTINATION": {"TP": 0, "TN": 24, "FP": 0, "FN": 4, "precision": null, "recall": 0.0, "F1": 0.0, "balanced_accuracy": 0.5}, "ABSTAIN": {"TP": 24, "TN": 0, "FP": 8, "FN": 0, "precision": 0.75, "recall": 1.0, "F1": 0.8571428571428571, "balanced_accuracy": 0.5}}}
+B3_aux/seed0：实际unique public=24。
+  paired_evidence：双侧同时正确=0/8；输出变化=1/8；移除交互后首侧正确=1/8。
+    按family：{"declared_pick": {"both_correct": 0, "count": 4, "output_changed": 0, "first_without_interaction_exact": 1}, "next_pick_symbolic": {"both_correct": 0, "count": 4, "output_changed": 1, "first_without_interaction_exact": 0}}
+  joint_alias：双侧同时正确=0/8；输出变化=0/8；移除交互后首侧正确=1/8。
+    按family：{"declared_pick": {"both_correct": 0, "count": 4, "output_changed": 0, "first_without_interaction_exact": 1}, "next_pick_symbolic": {"both_correct": 0, "count": 4, "output_changed": 0, "first_without_interaction_exact": 0}}
+  原validation辅助头实测：{"pointer": {"correct": 16, "count": 16, "rate": 1.0}, "channel_Brier": {"mean": 0.24495998073310066, "count": 4}, "train_frequency_channel_Brier_reference": 0.19140625, "missing_slots": {"correct": 44, "count": 88, "rate": 0.5}, "abstain_at_uncalibrated_0_5": {"correct": 24, "count": 32, "rate": 0.75}, "confusion_at_uncalibrated_0_5": {"ACTION": {"TP": 0, "TN": 24, "FP": 0, "FN": 4, "precision": null, "recall": 0.0, "F1": 0.0, "balanced_accuracy": 0.5}, "SOURCE": {"TP": 16, "TN": 0, "FP": 16, "FN": 0, "precision": 0.5, "recall": 1.0, "F1": 0.6666666666666666, "balanced_accuracy": 0.5}, "DESTINATION": {"TP": 4, "TN": 0, "FP": 24, "FN": 0, "precision": 0.14285714285714285, "recall": 1.0, "F1": 0.25, "balanced_accuracy": 0.5}, "ABSTAIN": {"TP": 24, "TN": 0, "FP": 8, "FN": 0, "precision": 0.75, "recall": 1.0, "F1": 0.8571428571428571, "balanced_accuracy": 0.5}}}
+B4_aux/seed0：实际unique public=24。
+  paired_evidence：双侧同时正确=0/8；输出变化=0/8；移除交互后首侧正确=6/8。
+    按family：{"declared_pick": {"both_correct": 0, "count": 4, "output_changed": 0, "first_without_interaction_exact": 4}, "next_pick_symbolic": {"both_correct": 0, "count": 4, "output_changed": 0, "first_without_interaction_exact": 2}}
+  joint_alias：双侧同时正确=0/8；输出变化=0/8；移除交互后首侧正确=6/8。
+    按family：{"declared_pick": {"both_correct": 0, "count": 4, "output_changed": 0, "first_without_interaction_exact": 4}, "next_pick_symbolic": {"both_correct": 0, "count": 4, "output_changed": 0, "first_without_interaction_exact": 2}}
+  原validation辅助头实测：{"pointer": {"correct": 16, "count": 16, "rate": 1.0}, "channel_Brier": {"mean": 0.24671943454785694, "count": 4}, "train_frequency_channel_Brier_reference": 0.19140625, "missing_slots": {"correct": 83, "count": 88, "rate": 0.9431818181818182}, "abstain_at_uncalibrated_0_5": {"correct": 28, "count": 32, "rate": 0.875}, "confusion_at_uncalibrated_0_5": {"ACTION": {"TP": 4, "TN": 24, "FP": 0, "FN": 0, "precision": 1.0, "recall": 1.0, "F1": 1.0, "balanced_accuracy": 1.0}, "SOURCE": {"TP": 14, "TN": 15, "FP": 1, "FN": 2, "precision": 0.9333333333333333, "recall": 0.875, "F1": 0.9032258064516129, "balanced_accuracy": 0.90625}, "DESTINATION": {"TP": 2, "TN": 24, "FP": 0, "FN": 2, "precision": 1.0, "recall": 0.5, "F1": 0.6666666666666666, "balanced_accuracy": 0.75}, "ABSTAIN": {"TP": 20, "TN": 8, "FP": 0, "FN": 4, "precision": 1.0, "recall": 0.8333333333333334, "F1": 0.9090909090909091, "balanced_accuracy": 0.9166666666666667}}}
+B2/seed0：实际unique public=24。
+  paired_evidence：双侧同时正确=0/8；输出变化=3/8；移除交互后首侧正确=0/8。
+    按family：{"declared_pick": {"both_correct": 0, "count": 4, "output_changed": 2, "first_without_interaction_exact": 0}, "next_pick_symbolic": {"both_correct": 0, "count": 4, "output_changed": 1, "first_without_interaction_exact": 0}}
+  joint_alias：双侧同时正确=0/8；输出变化=0/8；移除交互后首侧正确=0/8。
+    按family：{"declared_pick": {"both_correct": 0, "count": 4, "output_changed": 0, "first_without_interaction_exact": 0}, "next_pick_symbolic": {"both_correct": 0, "count": 4, "output_changed": 0, "first_without_interaction_exact": 0}}
+  原validation辅助头实测：{}
+Full/seed1：实际unique public=24。
+  paired_evidence：双侧同时正确=0/8；输出变化=0/8；移除交互后首侧正确=0/8。
+    按family：{"declared_pick": {"both_correct": 0, "count": 4, "output_changed": 0, "first_without_interaction_exact": 0}, "next_pick_symbolic": {"both_correct": 0, "count": 4, "output_changed": 0, "first_without_interaction_exact": 0}}
+  joint_alias：双侧同时正确=0/8；输出变化=0/8；移除交互后首侧正确=0/8。
+    按family：{"declared_pick": {"both_correct": 0, "count": 4, "output_changed": 0, "first_without_interaction_exact": 0}, "next_pick_symbolic": {"both_correct": 0, "count": 4, "output_changed": 0, "first_without_interaction_exact": 0}}
+  原validation辅助头实测：{"pointer": {"correct": 16, "count": 16, "rate": 1.0}, "channel_Brier": {"mean": 0.21674749528228876, "count": 4}, "train_frequency_channel_Brier_reference": 0.19140625, "missing_slots": {"correct": 64, "count": 88, "rate": 0.7272727272727273}, "abstain_at_uncalibrated_0_5": {"correct": 24, "count": 32, "rate": 0.75}, "confusion_at_uncalibrated_0_5": {"ACTION": {"TP": 0, "TN": 24, "FP": 0, "FN": 4, "precision": null, "recall": 0.0, "F1": 0.0, "balanced_accuracy": 0.5}, "SOURCE": {"TP": 16, "TN": 0, "FP": 16, "FN": 0, "precision": 0.5, "recall": 1.0, "F1": 0.6666666666666666, "balanced_accuracy": 0.5}, "DESTINATION": {"TP": 0, "TN": 24, "FP": 0, "FN": 4, "precision": null, "recall": 0.0, "F1": 0.0, "balanced_accuracy": 0.5}, "ABSTAIN": {"TP": 24, "TN": 0, "FP": 8, "FN": 0, "precision": 0.75, "recall": 1.0, "F1": 0.8571428571428571, "balanced_accuracy": 0.5}}}
+B3_aux/seed1：实际unique public=24。
+  paired_evidence：双侧同时正确=0/8；输出变化=3/8；移除交互后首侧正确=0/8。
+    按family：{"declared_pick": {"both_correct": 0, "count": 4, "output_changed": 3, "first_without_interaction_exact": 0}, "next_pick_symbolic": {"both_correct": 0, "count": 4, "output_changed": 0, "first_without_interaction_exact": 0}}
+  joint_alias：双侧同时正确=0/8；输出变化=2/8；移除交互后首侧正确=0/8。
+    按family：{"declared_pick": {"both_correct": 0, "count": 4, "output_changed": 2, "first_without_interaction_exact": 0}, "next_pick_symbolic": {"both_correct": 0, "count": 4, "output_changed": 0, "first_without_interaction_exact": 0}}
+  原validation辅助头实测：{"pointer": {"correct": 16, "count": 16, "rate": 1.0}, "channel_Brier": {"mean": 0.24992712549932428, "count": 4}, "train_frequency_channel_Brier_reference": 0.19140625, "missing_slots": {"correct": 64, "count": 88, "rate": 0.7272727272727273}, "abstain_at_uncalibrated_0_5": {"correct": 24, "count": 32, "rate": 0.75}, "confusion_at_uncalibrated_0_5": {"ACTION": {"TP": 0, "TN": 24, "FP": 0, "FN": 4, "precision": null, "recall": 0.0, "F1": 0.0, "balanced_accuracy": 0.5}, "SOURCE": {"TP": 16, "TN": 0, "FP": 16, "FN": 0, "precision": 0.5, "recall": 1.0, "F1": 0.6666666666666666, "balanced_accuracy": 0.5}, "DESTINATION": {"TP": 0, "TN": 24, "FP": 0, "FN": 4, "precision": null, "recall": 0.0, "F1": 0.0, "balanced_accuracy": 0.5}, "ABSTAIN": {"TP": 24, "TN": 0, "FP": 8, "FN": 0, "precision": 0.75, "recall": 1.0, "F1": 0.8571428571428571, "balanced_accuracy": 0.5}}}
+B4_aux/seed1：实际unique public=24。
+  paired_evidence：双侧同时正确=0/8；输出变化=0/8；移除交互后首侧正确=4/8。
+    按family：{"declared_pick": {"both_correct": 0, "count": 4, "output_changed": 0, "first_without_interaction_exact": 0}, "next_pick_symbolic": {"both_correct": 0, "count": 4, "output_changed": 0, "first_without_interaction_exact": 4}}
+  joint_alias：双侧同时正确=0/8；输出变化=0/8；移除交互后首侧正确=4/8。
+    按family：{"declared_pick": {"both_correct": 0, "count": 4, "output_changed": 0, "first_without_interaction_exact": 0}, "next_pick_symbolic": {"both_correct": 0, "count": 4, "output_changed": 0, "first_without_interaction_exact": 4}}
+  原validation辅助头实测：{"pointer": {"correct": 16, "count": 16, "rate": 1.0}, "channel_Brier": {"mean": 0.2243145043510042, "count": 4}, "train_frequency_channel_Brier_reference": 0.19140625, "missing_slots": {"correct": 78, "count": 88, "rate": 0.8863636363636364}, "abstain_at_uncalibrated_0_5": {"correct": 24, "count": 32, "rate": 0.75}, "confusion_at_uncalibrated_0_5": {"ACTION": {"TP": 4, "TN": 24, "FP": 0, "FN": 0, "precision": 1.0, "recall": 1.0, "F1": 1.0, "balanced_accuracy": 1.0}, "SOURCE": {"TP": 12, "TN": 14, "FP": 2, "FN": 4, "precision": 0.8571428571428571, "recall": 0.75, "F1": 0.8, "balanced_accuracy": 0.8125}, "DESTINATION": {"TP": 0, "TN": 24, "FP": 0, "FN": 4, "precision": null, "recall": 0.0, "F1": 0.0, "balanced_accuracy": 0.5}, "ABSTAIN": {"TP": 24, "TN": 0, "FP": 8, "FN": 0, "precision": 0.75, "recall": 1.0, "F1": 0.8571428571428571, "balanced_accuracy": 0.5}}}
+B2/seed1：实际unique public=24。
+  paired_evidence：双侧同时正确=0/8；输出变化=0/8；移除交互后首侧正确=0/8。
+    按family：{"declared_pick": {"both_correct": 0, "count": 4, "output_changed": 0, "first_without_interaction_exact": 0}, "next_pick_symbolic": {"both_correct": 0, "count": 4, "output_changed": 0, "first_without_interaction_exact": 0}}
+  joint_alias：双侧同时正确=0/8；输出变化=0/8；移除交互后首侧正确=0/8。
+    按family：{"declared_pick": {"both_correct": 0, "count": 4, "output_changed": 0, "first_without_interaction_exact": 0}, "next_pick_symbolic": {"both_correct": 0, "count": 4, "output_changed": 0, "first_without_interaction_exact": 0}}
+  原validation辅助头实测：{}
+Full/seed2：实际unique public=24。
+  paired_evidence：双侧同时正确=0/8；输出变化=0/8；移除交互后首侧正确=0/8。
+    按family：{"declared_pick": {"both_correct": 0, "count": 4, "output_changed": 0, "first_without_interaction_exact": 0}, "next_pick_symbolic": {"both_correct": 0, "count": 4, "output_changed": 0, "first_without_interaction_exact": 0}}
+  joint_alias：双侧同时正确=0/8；输出变化=0/8；移除交互后首侧正确=0/8。
+    按family：{"declared_pick": {"both_correct": 0, "count": 4, "output_changed": 0, "first_without_interaction_exact": 0}, "next_pick_symbolic": {"both_correct": 0, "count": 4, "output_changed": 0, "first_without_interaction_exact": 0}}
+  原validation辅助头实测：{"pointer": {"correct": 16, "count": 16, "rate": 1.0}, "channel_Brier": {"mean": 0.20564927400447974, "count": 4}, "train_frequency_channel_Brier_reference": 0.19140625, "missing_slots": {"correct": 64, "count": 88, "rate": 0.7272727272727273}, "abstain_at_uncalibrated_0_5": {"correct": 24, "count": 32, "rate": 0.75}, "confusion_at_uncalibrated_0_5": {"ACTION": {"TP": 0, "TN": 24, "FP": 0, "FN": 4, "precision": null, "recall": 0.0, "F1": 0.0, "balanced_accuracy": 0.5}, "SOURCE": {"TP": 16, "TN": 0, "FP": 16, "FN": 0, "precision": 0.5, "recall": 1.0, "F1": 0.6666666666666666, "balanced_accuracy": 0.5}, "DESTINATION": {"TP": 0, "TN": 24, "FP": 0, "FN": 4, "precision": null, "recall": 0.0, "F1": 0.0, "balanced_accuracy": 0.5}, "ABSTAIN": {"TP": 24, "TN": 0, "FP": 8, "FN": 0, "precision": 0.75, "recall": 1.0, "F1": 0.8571428571428571, "balanced_accuracy": 0.5}}}
+B3_aux/seed2：实际unique public=24。
+  paired_evidence：双侧同时正确=0/8；输出变化=0/8；移除交互后首侧正确=2/8。
+    按family：{"declared_pick": {"both_correct": 0, "count": 4, "output_changed": 0, "first_without_interaction_exact": 0}, "next_pick_symbolic": {"both_correct": 0, "count": 4, "output_changed": 0, "first_without_interaction_exact": 2}}
+  joint_alias：双侧同时正确=0/8；输出变化=0/8；移除交互后首侧正确=2/8。
+    按family：{"declared_pick": {"both_correct": 0, "count": 4, "output_changed": 0, "first_without_interaction_exact": 0}, "next_pick_symbolic": {"both_correct": 0, "count": 4, "output_changed": 0, "first_without_interaction_exact": 2}}
+  原validation辅助头实测：{"pointer": {"correct": 16, "count": 16, "rate": 1.0}, "channel_Brier": {"mean": 0.2523725384548068, "count": 4}, "train_frequency_channel_Brier_reference": 0.19140625, "missing_slots": {"correct": 64, "count": 88, "rate": 0.7272727272727273}, "abstain_at_uncalibrated_0_5": {"correct": 24, "count": 32, "rate": 0.75}, "confusion_at_uncalibrated_0_5": {"ACTION": {"TP": 0, "TN": 24, "FP": 0, "FN": 4, "precision": null, "recall": 0.0, "F1": 0.0, "balanced_accuracy": 0.5}, "SOURCE": {"TP": 0, "TN": 16, "FP": 0, "FN": 16, "precision": null, "recall": 0.0, "F1": 0.0, "balanced_accuracy": 0.5}, "DESTINATION": {"TP": 0, "TN": 24, "FP": 0, "FN": 4, "precision": null, "recall": 0.0, "F1": 0.0, "balanced_accuracy": 0.5}, "ABSTAIN": {"TP": 24, "TN": 0, "FP": 8, "FN": 0, "precision": 0.75, "recall": 1.0, "F1": 0.8571428571428571, "balanced_accuracy": 0.5}}}
+B4_aux/seed2：实际unique public=24。
+  paired_evidence：双侧同时正确=0/8；输出变化=0/8；移除交互后首侧正确=0/8。
+    按family：{"declared_pick": {"both_correct": 0, "count": 4, "output_changed": 0, "first_without_interaction_exact": 0}, "next_pick_symbolic": {"both_correct": 0, "count": 4, "output_changed": 0, "first_without_interaction_exact": 0}}
+  joint_alias：双侧同时正确=0/8；输出变化=0/8；移除交互后首侧正确=0/8。
+    按family：{"declared_pick": {"both_correct": 0, "count": 4, "output_changed": 0, "first_without_interaction_exact": 0}, "next_pick_symbolic": {"both_correct": 0, "count": 4, "output_changed": 0, "first_without_interaction_exact": 0}}
+  原validation辅助头实测：{"pointer": {"correct": 16, "count": 16, "rate": 1.0}, "channel_Brier": {"mean": 0.1867559821099345, "count": 4}, "train_frequency_channel_Brier_reference": 0.19140625, "missing_slots": {"correct": 80, "count": 88, "rate": 0.9090909090909091}, "abstain_at_uncalibrated_0_5": {"correct": 28, "count": 32, "rate": 0.875}, "confusion_at_uncalibrated_0_5": {"ACTION": {"TP": 4, "TN": 24, "FP": 0, "FN": 0, "precision": 1.0, "recall": 1.0, "F1": 1.0, "balanced_accuracy": 1.0}, "SOURCE": {"TP": 12, "TN": 16, "FP": 0, "FN": 4, "precision": 1.0, "recall": 0.75, "F1": 0.8571428571428571, "balanced_accuracy": 0.875}, "DESTINATION": {"TP": 0, "TN": 24, "FP": 0, "FN": 4, "precision": null, "recall": 0.0, "F1": 0.0, "balanced_accuracy": 0.5}, "ABSTAIN": {"TP": 24, "TN": 4, "FP": 4, "FN": 0, "precision": 0.8571428571428571, "recall": 1.0, "F1": 0.9230769230769231, "balanced_accuracy": 0.75}}}
+B2/seed2：实际unique public=24。
+  paired_evidence：双侧同时正确=0/8；输出变化=0/8；移除交互后首侧正确=0/8。
+    按family：{"declared_pick": {"both_correct": 0, "count": 4, "output_changed": 0, "first_without_interaction_exact": 0}, "next_pick_symbolic": {"both_correct": 0, "count": 4, "output_changed": 0, "first_without_interaction_exact": 0}}
+  joint_alias：双侧同时正确=0/8；输出变化=0/8；移除交互后首侧正确=0/8。
+    按family：{"declared_pick": {"both_correct": 0, "count": 4, "output_changed": 0, "first_without_interaction_exact": 0}, "next_pick_symbolic": {"both_correct": 0, "count": 4, "output_changed": 0, "first_without_interaction_exact": 0}}
+  原validation辅助头实测：{}
+按种子均值/样本SD：{"Full": {"paired_evidence": {"both_correct_rate_across_seeds": {"count": 3, "mean": 0.0, "sample_SD": 0.0, "values": [0.0, 0.0, 0.0]}, "family_both_correct_rate_across_seeds": {"declared_pick": {"count": 3, "mean": 0.0, "sample_SD": 0.0, "values": [0.0, 0.0, 0.0]}, "next_pick_symbolic": {"count": 3, "mean": 0.0, "sample_SD": 0.0, "values": [0.0, 0.0, 0.0]}}}, "joint_alias": {"both_correct_rate_across_seeds": {"count": 3, "mean": 0.0, "sample_SD": 0.0, "values": [0.0, 0.0, 0.0]}, "family_both_correct_rate_across_seeds": {"declared_pick": {"count": 3, "mean": 0.0, "sample_SD": 0.0, "values": [0.0, 0.0, 0.0]}, "next_pick_symbolic": {"count": 3, "mean": 0.0, "sample_SD": 0.0, "values": [0.0, 0.0, 0.0]}}}}, "B3_aux": {"paired_evidence": {"both_correct_rate_across_seeds": {"count": 3, "mean": 0.0, "sample_SD": 0.0, "values": [0.0, 0.0, 0.0]}, "family_both_correct_rate_across_seeds": {"declared_pick": {"count": 3, "mean": 0.0, "sample_SD": 0.0, "values": [0.0, 0.0, 0.0]}, "next_pick_symbolic": {"count": 3, "mean": 0.0, "sample_SD": 0.0, "values": [0.0, 0.0, 0.0]}}}, "joint_alias": {"both_correct_rate_across_seeds": {"count": 3, "mean": 0.0, "sample_SD": 0.0, "values": [0.0, 0.0, 0.0]}, "family_both_correct_rate_across_seeds": {"declared_pick": {"count": 3, "mean": 0.0, "sample_SD": 0.0, "values": [0.0, 0.0, 0.0]}, "next_pick_symbolic": {"count": 3, "mean": 0.0, "sample_SD": 0.0, "values": [0.0, 0.0, 0.0]}}}}, "B4_aux": {"paired_evidence": {"both_correct_rate_across_seeds": {"count": 3, "mean": 0.0, "sample_SD": 0.0, "values": [0.0, 0.0, 0.0]}, "family_both_correct_rate_across_seeds": {"declared_pick": {"count": 3, "mean": 0.0, "sample_SD": 0.0, "values": [0.0, 0.0, 0.0]}, "next_pick_symbolic": {"count": 3, "mean": 0.0, "sample_SD": 0.0, "values": [0.0, 0.0, 0.0]}}}, "joint_alias": {"both_correct_rate_across_seeds": {"count": 3, "mean": 0.0, "sample_SD": 0.0, "values": [0.0, 0.0, 0.0]}, "family_both_correct_rate_across_seeds": {"declared_pick": {"count": 3, "mean": 0.0, "sample_SD": 0.0, "values": [0.0, 0.0, 0.0]}, "next_pick_symbolic": {"count": 3, "mean": 0.0, "sample_SD": 0.0, "values": [0.0, 0.0, 0.0]}}}}, "B2": {"paired_evidence": {"both_correct_rate_across_seeds": {"count": 3, "mean": 0.0, "sample_SD": 0.0, "values": [0.0, 0.0, 0.0]}, "family_both_correct_rate_across_seeds": {"declared_pick": {"count": 3, "mean": 0.0, "sample_SD": 0.0, "values": [0.0, 0.0, 0.0]}, "next_pick_symbolic": {"count": 3, "mean": 0.0, "sample_SD": 0.0, "values": [0.0, 0.0, 0.0]}}}, "joint_alias": {"both_correct_rate_across_seeds": {"count": 3, "mean": 0.0, "sample_SD": 0.0, "values": [0.0, 0.0, 0.0]}, "family_both_correct_rate_across_seeds": {"declared_pick": {"count": 3, "mean": 0.0, "sample_SD": 0.0, "values": [0.0, 0.0, 0.0]}, "next_pick_symbolic": {"count": 3, "mean": 0.0, "sample_SD": 0.0, "values": [0.0, 0.0, 0.0]}}}}}
+
+八、本地CPU机制测试与checkpoint
+CPU实际日志汇总：{"status": "PASS_CPU_MECHANICS_ONLY", "tests_run": 39, "elapsed_s": 6.866, "log": "execution\\v4\\08_cpu_tests.log", "sha256": "dc2e3efc7c268b5562311c486eb370b8d1c5d3ac1ab8a78cb6733a955de57403", "new_challenge_generator_tests": 5, "scope": "CPU数据/优化器/B2序列化/challenge生成机制；不是GPU语义或机器人任务性能证据。"}
+选中权重重新计算SHA256：21/21份通过。
+仅本地选中safetensors重新计算SHA256；optimizer/RNG状态只保留远端report哈希，未下载或加载。
+各文件路径/SHA256见08_training_audit.json与checkpoint manifest。
+
+九、剩余工作
+- 步骤08整体未完成：补放置阶段、可辨识含噪隐藏意图监督及更充分分组开发验证。
+- 未做低层实例到达/抓取、完整VLA闭环或任务成功率评价。
+- 正式test封存；真实EEG/实体机器人排除；可靠性未校准，交互头不等于已部署澄清策略。
+原始report：execution\v4\08_real_attempt3.json
+审计：execution/v4/08_training_audit.json。
+交接：execution/v4/handoff_step08.txt。

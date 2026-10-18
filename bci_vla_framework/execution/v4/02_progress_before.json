@@ -1,0 +1,225 @@
+{
+  "plan_version": "V4-plan-2",
+  "plan_file": "D:\\Scene_Aware\\BCI_VLA框架_意图更新与澄清_执行计划_V4.txt",
+  "current_stage": "V4-01_completed",
+  "next_step": "V4-02",
+  "implementation_started": false,
+  "training_started": false,
+  "new_experiments_run": false,
+  "excluded": [
+    "real EEG acquisition",
+    "physical robot actions"
+  ],
+  "historical_progress_files": [
+    "execution/progress.json",
+    "execution/v3_plan_progress.json"
+  ],
+  "historical_v2_gates": {
+    "G2": "未通过",
+    "G3": "未验证",
+    "G4": "未通过"
+  },
+  "steps": [
+    {
+      "step_id": "V4-01",
+      "title": "核对资产、范围与研究对照",
+      "status": "已完成",
+      "depends_on": [],
+      "conditional_dependencies": [],
+      "actual_artifacts": [
+        "execution/v4/01_inventory.json",
+        "docs/v4/01_scope_and_overlap.txt",
+        "execution/v4/01_literature.json",
+        "execution/v4/01_source_manifest.json",
+        "execution/v4/01_acceptance.json",
+        "execution/v4/handoff.txt"
+      ],
+      "verification": {
+        "scope": "inventory/documentation only",
+        "status": "PASS",
+        "report": "execution/v4/01_acceptance.json",
+        "checks": 16
+      },
+      "completed_at_utc": "2026-10-16T16:13:45.619453+00:00"
+    },
+    {
+      "step_id": "V4-02",
+      "title": "冻结输入输出和两类澄清协议",
+      "status": "未开始",
+      "depends_on": [
+        "V4-01"
+      ],
+      "conditional_dependencies": [],
+      "actual_artifacts": [],
+      "verification": null
+    },
+    {
+      "step_id": "V4-03",
+      "title": "核实π0.5高层文本能力",
+      "status": "未开始",
+      "depends_on": [
+        "V4-01",
+        "V4-02"
+      ],
+      "conditional_dependencies": [],
+      "actual_artifacts": [],
+      "verification": null
+    },
+    {
+      "step_id": "V4-04",
+      "title": "建立含噪交互数据与分组划分",
+      "status": "未开始",
+      "depends_on": [
+        "V4-02"
+      ],
+      "conditional_dependencies": [
+        "Task vocabulary and execution claims require V4-03 capability audit."
+      ],
+      "actual_artifacts": [],
+      "verification": null
+    },
+    {
+      "step_id": "V4-05",
+      "title": "登记基线并建立公共交互评估器",
+      "status": "未开始",
+      "depends_on": [
+        "V4-02",
+        "V4-04"
+      ],
+      "conditional_dependencies": [
+        "Only registry, common mock interaction runner and rule references complete here; neural baselines implemented in 06/07 and trained in 08."
+      ],
+      "actual_artifacts": [],
+      "verification": null
+    },
+    {
+      "step_id": "V4-06",
+      "title": "实现小型Transformer的CPU原型",
+      "status": "未开始",
+      "depends_on": [
+        "V4-02"
+      ],
+      "conditional_dependencies": [
+        "CPU fixtures must conform to V4-02; V4-04 fixtures may be added later."
+      ],
+      "actual_artifacts": [],
+      "verification": null
+    },
+    {
+      "step_id": "V4-07",
+      "title": "接入π0.5高层内部token",
+      "status": "未开始",
+      "depends_on": [
+        "V4-03",
+        "V4-06"
+      ],
+      "conditional_dependencies": [],
+      "actual_artifacts": [],
+      "verification": null
+    },
+    {
+      "step_id": "V4-08",
+      "title": "训练模块、基线及高层语言输出",
+      "status": "未开始",
+      "depends_on": [
+        "V4-04",
+        "V4-05",
+        "V4-06",
+        "V4-07"
+      ],
+      "conditional_dependencies": [
+        "Auxiliary pretraining may precede 07 as partial work only; high-level and semantic-subtask capability must be verified or trained before completion."
+      ],
+      "actual_artifacts": [],
+      "verification": null
+    },
+    {
+      "step_id": "V4-09",
+      "title": "校准置信度与选择澄清策略",
+      "status": "未开始",
+      "depends_on": [
+        "V4-08"
+      ],
+      "conditional_dependencies": [],
+      "actual_artifacts": [],
+      "verification": null
+    },
+    {
+      "step_id": "V4-10",
+      "title": "开发离线验收与正式评价预案",
+      "status": "未开始",
+      "depends_on": [
+        "V4-05",
+        "V4-07",
+        "V4-08",
+        "V4-09"
+      ],
+      "conditional_dependencies": [
+        "Development and calibration-audit only; formal test remains sealed."
+      ],
+      "actual_artifacts": [],
+      "verification": null
+    },
+    {
+      "step_id": "V4-11",
+      "title": "接入主任务确认、subtask及执行授权",
+      "status": "未开始",
+      "depends_on": [
+        "V4-07",
+        "V4-10"
+      ],
+      "conditional_dependencies": [],
+      "actual_artifacts": [],
+      "verification": null
+    },
+    {
+      "step_id": "V4-12",
+      "title": "LIBERO开发闭环与视觉来源检查",
+      "status": "未开始",
+      "depends_on": [
+        "V4-10",
+        "V4-11"
+      ],
+      "conditional_dependencies": [
+        "Development scenes and seeds only; formal test remains sealed until 13."
+      ],
+      "actual_artifacts": [],
+      "verification": null
+    },
+    {
+      "step_id": "V4-13",
+      "title": "最终冻结与独立正式对照/消融测试",
+      "status": "未开始",
+      "depends_on": [
+        "V4-05",
+        "V4-10",
+        "V4-11",
+        "V4-12"
+      ],
+      "conditional_dependencies": [
+        "Complete all final baseline/ablation training and calibration on allowed partitions; freeze every method, protocol and code before opening formal test once."
+      ],
+      "actual_artifacts": [],
+      "verification": null
+    },
+    {
+      "step_id": "V4-14",
+      "title": "整理论文证据、复现入口与备份",
+      "status": "未开始",
+      "depends_on": [
+        "V4-10",
+        "V4-11",
+        "V4-12",
+        "V4-13"
+      ],
+      "conditional_dependencies": [],
+      "actual_artifacts": [],
+      "verification": null
+    }
+  ],
+  "authorization_this_turn": "Complete V4-01 read-only inventory including user-requested workspace weight-location check; no V4-02 implementation, model loads, training, EEG or robot operations.",
+  "review_completed": true,
+  "review_status": "plan_only_no_implementation",
+  "execution_started": true,
+  "implementation_started_meaning": "Neural/model code implementation; inventory-only work does not set this flag."
+}

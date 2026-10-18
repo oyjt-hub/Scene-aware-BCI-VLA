@@ -1,0 +1,19 @@
+{
+  "action": "upload current project source/schema/config plus pinned upstream methods and run isolated development probe",
+  "destination": "/home/oyjt/Scene-aware-BCI-VLA-runs/v4_step11_upstream_probe_20261018_v1",
+  "decision": "REJECTED_BY_AUTOMATIC_APPROVAL_REVIEW",
+  "reason": "用户未明确授权将这批私有源代码外传到该具体目的地",
+  "upload_performed": false,
+  "probe_executed": false,
+  "pending_human_authorization": true,
+  "source_files": 35,
+  "bundle_bytes": 102810,
+  "bundle_sha256": "653994401e5142fd4aaa3b05caef40dcedfd1a47ae06877fc9760c71743f9d59",
+  "excluded_uploads": [
+    "data",
+    "images",
+    "EEG",
+    "weights",
+    "credentials"
+  ]
+}

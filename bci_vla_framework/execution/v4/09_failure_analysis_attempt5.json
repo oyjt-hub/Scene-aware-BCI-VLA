@@ -1,0 +1,234 @@
+{
+  "source_zip_sha256": "14042bd92368ea958eb844e99dfdfa5c08572eaeb12dc0c466482b80a756d81f",
+  "failure_cases": [
+    {
+      "source": "results/online_audit/5d1f6264a4adb79b3e423b36_both_change.json",
+      "summary": {
+        "split": "calibration_audit",
+        "policy_id": "fixed_i88_c4_b8",
+        "group_id": "f52e2e1abd05724127c1",
+        "episode_id": "5d1f6264a4adb79b3e423b36",
+        "scenario": "both_change",
+        "resolved_correctly": false,
+        "wrong_submission": true,
+        "wrong_submission_count": 1,
+        "submission_count": 1,
+        "questions": 8,
+        "probes": 3,
+        "intent_queries": 2,
+        "task_queries": 2,
+        "confirmations": 1,
+        "waits": 4,
+        "no_responses": 1,
+        "rejects": 0,
+        "interaction_cost": 24.0,
+        "cost_units": "simulated seconds; each question or wait slot charged 2s",
+        "VLA_called": false,
+        "real_dynamics_advanced": false
+      },
+      "public_decision_timeline": [
+        {
+          "at_s": 0.0,
+          "action": "PROBE",
+          "reason": "CHANNEL_CHECK_REQUIRED",
+          "observed_response_role": "PROBE"
+        },
+        {
+          "at_s": 2.0,
+          "action": "PROBE",
+          "reason": "CHANNEL_CHECK_REQUIRED",
+          "observed_response_role": "PROBE"
+        },
+        {
+          "at_s": 4.0,
+          "action": "PROBE",
+          "reason": "CHANNEL_CHECK_REQUIRED",
+          "observed_response_role": "PROBE"
+        },
+        {
+          "at_s": 6.0,
+          "action": "TASK",
+          "reason": "FRESH_TASK_EVIDENCE_REQUIRED",
+          "observed_response_role": "TASK"
+        },
+        {
+          "at_s": 8.0,
+          "action": "CONFIRM",
+          "reason": "CONFIRM_EXACT_TASK_SUGGESTION",
+          "observed_response_role": "CONFIRM"
+        },
+        {
+          "at_s": 10.0,
+          "action": "INTENT_QUERY",
+          "reason": "INTENT_AMBIGUOUS",
+          "observed_response_role": "NO_RESPONSE"
+        },
+        {
+          "at_s": 12.0,
+          "action": "TASK",
+          "reason": "FRESH_TASK_EVIDENCE_REQUIRED",
+          "observed_response_role": "TASK"
+        },
+        {
+          "at_s": 14.0,
+          "action": "INTENT_QUERY",
+          "reason": "INTENT_AMBIGUOUS",
+          "observed_response_role": "INTENT_QUERY"
+        }
+      ]
+    },
+    {
+      "source": "results/online_audit/e356a9fe34621accf867531b_both_change.json",
+      "summary": {
+        "split": "calibration_audit",
+        "policy_id": "fixed_i88_c4_b8",
+        "group_id": "f52e2e1abd05724127c1",
+        "episode_id": "e356a9fe34621accf867531b",
+        "scenario": "both_change",
+        "resolved_correctly": false,
+        "wrong_submission": true,
+        "wrong_submission_count": 1,
+        "submission_count": 1,
+        "questions": 8,
+        "probes": 3,
+        "intent_queries": 3,
+        "task_queries": 1,
+        "confirmations": 1,
+        "waits": 4,
+        "no_responses": 0,
+        "rejects": 0,
+        "interaction_cost": 24.0,
+        "cost_units": "simulated seconds; each question or wait slot charged 2s",
+        "VLA_called": false,
+        "real_dynamics_advanced": false
+      },
+      "public_decision_timeline": [
+        {
+          "at_s": 0.0,
+          "action": "PROBE",
+          "reason": "CHANNEL_CHECK_REQUIRED",
+          "observed_response_role": "PROBE"
+        },
+        {
+          "at_s": 2.0,
+          "action": "PROBE",
+          "reason": "CHANNEL_CHECK_REQUIRED",
+          "observed_response_role": "PROBE"
+        },
+        {
+          "at_s": 4.0,
+          "action": "PROBE",
+          "reason": "CHANNEL_CHECK_REQUIRED",
+          "observed_response_role": "PROBE"
+        },
+        {
+          "at_s": 6.0,
+          "action": "TASK",
+          "reason": "FRESH_TASK_EVIDENCE_REQUIRED",
+          "observed_response_role": "TASK"
+        },
+        {
+          "at_s": 8.0,
+          "action": "CONFIRM",
+          "reason": "CONFIRM_EXACT_TASK_SUGGESTION",
+          "observed_response_role": "CONFIRM"
+        },
+        {
+          "at_s": 10.0,
+          "action": "INTENT_QUERY",
+          "reason": "INTENT_AMBIGUOUS",
+          "observed_response_role": "INTENT_QUERY"
+        },
+        {
+          "at_s": 12.0,
+          "action": "INTENT_QUERY",
+          "reason": "INTENT_AMBIGUOUS",
+          "observed_response_role": "INTENT_QUERY"
+        },
+        {
+          "at_s": 14.0,
+          "action": "INTENT_QUERY",
+          "reason": "INTENT_AMBIGUOUS",
+          "observed_response_role": "INTENT_QUERY"
+        }
+      ]
+    },
+    {
+      "source": "results/online_audit/e356a9fe34621accf867531b_goal_change.json",
+      "summary": {
+        "split": "calibration_audit",
+        "policy_id": "fixed_i88_c4_b8",
+        "group_id": "f52e2e1abd05724127c1",
+        "episode_id": "e356a9fe34621accf867531b",
+        "scenario": "goal_change",
+        "resolved_correctly": false,
+        "wrong_submission": true,
+        "wrong_submission_count": 1,
+        "submission_count": 1,
+        "questions": 8,
+        "probes": 3,
+        "intent_queries": 3,
+        "task_queries": 1,
+        "confirmations": 1,
+        "waits": 4,
+        "no_responses": 0,
+        "rejects": 0,
+        "interaction_cost": 24.0,
+        "cost_units": "simulated seconds; each question or wait slot charged 2s",
+        "VLA_called": false,
+        "real_dynamics_advanced": false
+      },
+      "public_decision_timeline": [
+        {
+          "at_s": 0.0,
+          "action": "PROBE",
+          "reason": "CHANNEL_CHECK_REQUIRED",
+          "observed_response_role": "PROBE"
+        },
+        {
+          "at_s": 2.0,
+          "action": "PROBE",
+          "reason": "CHANNEL_CHECK_REQUIRED",
+          "observed_response_role": "PROBE"
+        },
+        {
+          "at_s": 4.0,
+          "action": "PROBE",
+          "reason": "CHANNEL_CHECK_REQUIRED",
+          "observed_response_role": "PROBE"
+        },
+        {
+          "at_s": 6.0,
+          "action": "TASK",
+          "reason": "FRESH_TASK_EVIDENCE_REQUIRED",
+          "observed_response_role": "TASK"
+        },
+        {
+          "at_s": 8.0,
+          "action": "CONFIRM",
+          "reason": "CONFIRM_EXACT_TASK_SUGGESTION",
+          "observed_response_role": "CONFIRM"
+        },
+        {
+          "at_s": 10.0,
+          "action": "INTENT_QUERY",
+          "reason": "INTENT_AMBIGUOUS",
+          "observed_response_role": "INTENT_QUERY"
+        },
+        {
+          "at_s": 12.0,
+          "action": "INTENT_QUERY",
+          "reason": "INTENT_AMBIGUOUS",
+          "observed_response_role": "INTENT_QUERY"
+        },
+        {
+          "at_s": 14.0,
+          "action": "INTENT_QUERY",
+          "reason": "INTENT_AMBIGUOUS",
+          "observed_response_role": "INTENT_QUERY"
+        }
+      ]
+    }
+  ],
+  "engineering_hypothesis": "Single noisy accept commits a proposal based on earlier selection; no selection consistency or post-selection diagnostic certificate. Not a diagnosis of private injected state."
+}

@@ -1,0 +1,101 @@
+{
+  "step": "V4-02",
+  "files": [
+    {
+      "path": "D:\\Scene_Aware\\BCI_VLA框架_意图更新与澄清_执行计划_V4.txt",
+      "sha256": "b4e6e5335b1e4d51193cb0d9f16a6ab0d59511ec16e2f8f3ffd2fe1c7d3f6fb3"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\configs\\design_v4.json",
+      "sha256": "9c48b4e27577368e7be84c53662cf6b33b50a8d94bb3647fd4cf9ecfcbe9b33f"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\progress.json",
+      "sha256": "8f5b07bd889b61ff7a5f02803e86aa8b06fdeec9c69ff5edcb5bd133cc859dd6"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v3_plan_progress.json",
+      "sha256": "025dd7d73caf948f69a83cee857232588c123570c023239cc5a2a8461a9bde83"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\protocols.py",
+      "sha256": "3de0e8a42c1462f37af4f2a1769aea907a5996c9733e15b0ea522a23ac44c424"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\contracts\\records.py",
+      "sha256": "34cf6ea26a4b6ec40b0f0dbc68313c4a04077620b3a6b322e627a2d146a69303"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\contracts\\session.py",
+      "sha256": "7d46d82290e675e6fb7ecf580bbeaa6a0a152755b714acaff8a0b5e9607fc325"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_acceptance.json",
+      "sha256": "fe9ee4b4c318fbde2092f25d2c0e75966fb568ab5537cb168a9db82161cb23ef"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_source_manifest.json",
+      "sha256": "582f71957a220f3fb5281ee4506d444adc54b23576aeabb804344bd9a0d9cd56"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_git_before.json",
+      "sha256": "2ff5e492bd95c1e11410a0fd59ab7f7929b1ecbd49a497423b39ba924cb6149f"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_remote_inventory.json",
+      "sha256": "51470a6e4927169f16ea5f8398280c802ba582468f108becfdb8e189710b375a"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_remote_supplement.json",
+      "sha256": "5ec026468c570455f9223ad5e9824ea629cfdec84d230a8d6b3ce1b27b0a0bbd"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_remote_paths.json",
+      "sha256": "c674533c508dda738947292dbfe5434a9bc9403b78d914b85ba9eab6c2c4cc8d"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_workspace_weights.json",
+      "sha256": "261eaedd3e5d8806435dd075c6a169ef5080d79e7791aa2b3e9ce4a3afc94182"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_candidate_weights.json",
+      "sha256": "6e26ce304b035fdb399b52bc45a00bff6b34b3c68afb8cc4da905b60df712d38"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_local_environment.json",
+      "sha256": "72e3f4624968f9b7ec55093df96951d07ddcd0009e2266d86fd99f8fadb3ec5e"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_local_sources.json",
+      "sha256": "6fa1397ed474caae3e173281b0d46d0a661dbbe9375e97386a527f1241c8f5e4"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_literature.json",
+      "sha256": "c8ffb37083d600b2dc28b33360f93c68202e5023d59145389007a6cc33caa55a"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_command_log.json",
+      "sha256": "a367faa8ebc3579991445bf0619a46c017b0e80bf066350c12bb2d3e8603dd14"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_inventory.json",
+      "sha256": "29f4d4f6d70ce75301618e2be9b23f957973b1d008e5504d7953d8b7f7676966"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\docs\\v4\\01_scope_and_overlap.txt",
+      "sha256": "4c0498b3d2c854b1cf075c7ac1b9713e2b1c61e3aec0459b55530326d37cbdae"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\handoff.txt",
+      "sha256": "8189f9fd6a0ded7d8200a524e9967c18b36be807d3d74b3006e5bccf6873cb21"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\inspect_assets_step01.py",
+      "sha256": "a4da8c483b94ba4edfb6f1a5e722ff8fada891374035236a2fe3a35827ce65ce"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\finalize_step01.py",
+      "sha256": "1c042e5d6c5d173aa99386999f1290d5a20a2fd4a206b190d089dfc853ff6421"
+    }
+  ]
+}

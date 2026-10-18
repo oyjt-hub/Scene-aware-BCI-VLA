@@ -1,0 +1,12 @@
+﻿V4-05交接（2026-10-17）
+已完成基线登记、公共询问/带噪回应/时钟/模拟确认提交runner、B0及适用二候选原过滤器参考。
+平台为真实LIBERO冻结采集数据回放；本步不推进新动力学，不调用VLA动作，不是机器人任务成功结果。
+B0运行32轮，B1_binary_filter_fixed_policy运行16轮；后者实际原JointBeliefFilter成功更新176次。多候选B1明确不适用。
+神经B2/B3/B4/Full及同aux对照仅登记，未实现/训练；B2只有完整文本序列化样例，真实token数未测。
+登记：configs/v4/baseline_registry.json；说明：docs/v4/05_fairness_table.txt；日志：execution/v4/05_runs。
+复验：python execution/v4/verify_step05.py。500项数据/软件完整性检查通过，不是模型能力验收。
+原完整DiagnosticPolicy缺匹配后果表，本步使用公共fixed_inquiry；没有伪造NOIR或神经结果。
+模拟请求始终execution_authorized=false/VLA_called=false/physical_dispatched=false。STOP不调用策略，PROBE不改确认任务。
+当前2秒统一交互计费，壁钟计算耗时另记；正式神经评估前须共同冻结推理延时规则。
+下一步06 CPU模块；步骤03高层门槛、步骤04主任务/放置监督缺口保留，不能直接开始08训练。
+正式test未解封，真实EEG和实体动作排除。后续实际VLA动力学闭环仍固定在LIBERO。

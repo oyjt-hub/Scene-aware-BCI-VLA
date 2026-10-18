@@ -1,0 +1,115 @@
+{
+  "scope": "source/schema/config ONLY; no local data, images, private labels or credentials",
+  "remote_job": "/home/oyjt/Scene-aware-BCI-VLA-runs/v4_step08_training_20261017_v1",
+  "GPU": 7,
+  "files": [
+    {
+      "path": "bci_vla/__init__.py",
+      "sha256": "3fac5721bda7a5a98a1a9fe207e7797900f81e746a0e2905452c1a8ec8d9823b"
+    },
+    {
+      "path": "bci_vla/data_v4/__init__.py",
+      "sha256": "073d6dec761c49e5186558017c5830a68f0f1316f73da4ac57ea70331223f8ac"
+    },
+    {
+      "path": "bci_vla/data_v4/channel.py",
+      "sha256": "4e1dbb76ee44ef8a563f5e565b5d6f69da29888d26ab89c86aa0f625d59e15ec"
+    },
+    {
+      "path": "bci_vla/data_v4/contracts.py",
+      "sha256": "4638b75b1db24a7512ee1325e11f74ad74e927f564bb32cf8f6b8672b6c96f40"
+    },
+    {
+      "path": "bci_vla/high_level_v4/__init__.py",
+      "sha256": "f007ce25e71c051a47904a5d2b10b982b562142836ce00806c7feca37617cd01"
+    },
+    {
+      "path": "bci_vla/high_level_v4/lora.py",
+      "sha256": "a0c09c942d0821f1aaba85f26c6e6f18bc05c53235c84c0f6e9ad3c0f27f6880"
+    },
+    {
+      "path": "bci_vla/interaction_contract_v4/__init__.py",
+      "sha256": "73bf2645280cea59121de59d648a8a8c4f954264680ee9e46d35c16428262cd3"
+    },
+    {
+      "path": "bci_vla/interaction_contract_v4/validation.py",
+      "sha256": "bda1a3f6b1c7310841d31aec5ce18d8d1d646a427e4939aa1fa8525214f3ea0a"
+    },
+    {
+      "path": "bci_vla/neural_interaction_v4/__init__.py",
+      "sha256": "0215fb2422c090ffb206fceb2caec61f87e44bb0ebd6e6e9109a7c5b06777c49"
+    },
+    {
+      "path": "bci_vla/neural_interaction_v4/config.py",
+      "sha256": "cfb3ed1d99514bbd51f473824539e7c6dc900dea5285422020f3b4dc683c3b8f"
+    },
+    {
+      "path": "bci_vla/neural_interaction_v4/control.py",
+      "sha256": "9d1a2167eb85ce19574fddf3e4a87ab213a7edb567be7194fdc2dd89c1e0a617"
+    },
+    {
+      "path": "bci_vla/neural_interaction_v4/export.py",
+      "sha256": "40a35773709e052a392a565b02d6cf02c505b3d43acd2d7f19ba2e4a000a7da8"
+    },
+    {
+      "path": "bci_vla/neural_interaction_v4/losses.py",
+      "sha256": "89cd41e5cc6d71af3ed5821328912625ef27f47255c45ebcdc4b365e9e2d87a4"
+    },
+    {
+      "path": "bci_vla/neural_interaction_v4/model.py",
+      "sha256": "2854765aa0fe57ff9392e773ee8c8a5e45d65dd15ce61710437d005a2e2810dc"
+    },
+    {
+      "path": "bci_vla/neural_interaction_v4/tensorizer.py",
+      "sha256": "78e09bda4daa7df830c2381f839b12a99351b147e2a62c28630819e6f10c624a"
+    },
+    {
+      "path": "bci_vla/prefix_integration_v4/__init__.py",
+      "sha256": "a8111dbaeec7ced5bfe54d6c23440dc93578168df40f11039b799ac6dbeebbc5"
+    },
+    {
+      "path": "bci_vla/prefix_integration_v4/adapter.py",
+      "sha256": "386fbf6e801e66a046fc8544ae4456fd8eb602133e38dcebaaccc7184d121cb9"
+    },
+    {
+      "path": "bci_vla/training_v4/data.py",
+      "sha256": "0b2e66321530d8c67b0909c3f396da3c787dcd46dd33b268953961389f935c1b"
+    },
+    {
+      "path": "bci_vla/training_v4/engine.py",
+      "sha256": "4a32219dc1ea0e85d745ec0b5d57e12646c4c0120b77b32d8a63407df430ca76"
+    },
+    {
+      "path": "bci_vla/training_v4/text_baseline.py",
+      "sha256": "f0a1dcc2a38226e251a5d8b0d803db56bde60dfc5c490f0ccb98951c05c0598e"
+    },
+    {
+      "path": "configs/v4/interfaces.json",
+      "sha256": "2b37aef3dab7f952c9f2a76300702cccc2b0e16a34a0a98f0fdedd473aefd119"
+    },
+    {
+      "path": "configs/v4/interfaces_data_4_1.json",
+      "sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31"
+    },
+    {
+      "path": "configs/v4/train_data_step08.json",
+      "sha256": "eb5d6fb29534a8bd1901e0dfeafebf7752afc022a8ca5ae8e84d26c8112d7f4c"
+    },
+    {
+      "path": "configs/v4/train_step08_pilot.json",
+      "sha256": "297cfae1d73fd3d756ba5f1a90f663dba1feddd17d14e7db0da0c8680aaca952"
+    },
+    {
+      "path": "execution/v4/build_step04_data.py",
+      "sha256": "5e8dfe8ce697ca5710687d9c469c6fe568890413df8287c170317e19df51887a"
+    },
+    {
+      "path": "execution/v4/build_step08_data.py",
+      "sha256": "28a47a86670b4ef0c79990b36ed9bd0d72a73720e78f819b8de4a590487c10c9"
+    },
+    {
+      "path": "execution/v4/step08_real_training.py",
+      "sha256": "a21119f67287687c5cc82c5af1a80e6305f6bda998c68ba6196d96123f450a3b"
+    }
+  ]
+}

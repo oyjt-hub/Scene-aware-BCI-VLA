@@ -1,0 +1,73 @@
+{
+  "version": "V4-09-binding-repair-4",
+  "scope": "Repair public-object reference binding before Step09 calibration; actual LIBERO development images and simulated public declarations only",
+  "methods": [
+    "Full"
+  ],
+  "seeds": [
+    0
+  ],
+  "optimizer_steps": 1296,
+  "smoke_steps": 10,
+  "batch_size": 1,
+  "connector_learning_rate": 2e-06,
+  "language_lora_learning_rate": 2e-05,
+  "weight_decay": 0.0,
+  "max_grad_norm": 1.0,
+  "loss_weights": {
+    "language": 1.0,
+    "intent": 0.25,
+    "channel": 0.25,
+    "interaction": 0.1,
+    "missing_slots": 0.1,
+    "abstain": 0.1
+  },
+  "alias_loss_weight": 4.0,
+  "checkpoint_steps": [
+    432,
+    864,
+    1296
+  ],
+  "validation_examples": 128,
+  "selection": "Lowest equally weighted validation scene-group unweighted language CE; ties earliest step",
+  "max_text_tokens": 6144,
+  "max_answer_tokens": 32,
+  "binding": {
+    "version": "public-object-reference/0.1",
+    "mode": "reference",
+    "prefix_order": "diagnostic[4],bound_intent[4]",
+    "residual_scale": 1.0,
+    "reference_scale": 1.0,
+    "source": "predicted candidate weights and public aliases in frozen native VLM embeddings; no target text"
+  },
+  "initialization": "Continue preserved attempt2 Full selected step150; three exhaustive shuffled train epochs; retain original intent residual at scale1 and preserve all baseline non-alias CE gradients. No new baseline performance claim.",
+  "previous_job": "/home/oyjt/Scene-aware-BCI-VLA-runs/v4_step09_binding_20261018_v2",
+  "base_sha256": "4616e4c1966a5fb063b442ea5d69857f45e873222d839b794634d87d252ab9e7",
+  "initial_language_adapter_sha256": "c1dbc8bd23e8e2590ac2670839a068d82423aa0c4620e734d2d99618afaec380",
+  "shared_language_lora": {
+    "rank": 16,
+    "alpha": 32,
+    "targets": [
+      "q_proj",
+      "v_proj",
+      "o_proj"
+    ]
+  },
+  "development_binding_gate": {
+    "choice_group_all_correct_fraction": 0.9,
+    "joint_alias_pair_both_correct_fraction": 0.9,
+    "scope": "development-only readiness, not statistical safety guarantee"
+  },
+  "test_access": false,
+  "calibration_access": false,
+  "action_sampling": false,
+  "inquiry_policy": "No active policy deployment during binding repair",
+  "remaining_scope": [
+    "Real EEG and physical actions excluded",
+    "General hidden-intent and placement-stage scope still unproved",
+    "All baselines must receive the same binding mechanism before final structural comparisons"
+  ],
+  "sampling": "complete_row_coverage",
+  "language_objective": "mean_CE_plus_alias_bonus",
+  "alias_bonus_beta": 0.5
+}

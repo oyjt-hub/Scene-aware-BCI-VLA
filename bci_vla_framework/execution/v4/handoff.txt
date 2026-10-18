@@ -1,0 +1,9 @@
+V4-11部分完成：按用户要求采用LisavilaLee/openpi_with_subtask，固定99c738a。
+复用上游方法体+当前PyTorch同VLM互操作；没有把上游能力算作自有创新。
+本地28项授权/上游接口机制测试通过，均为显式替身，不是真实VLM能力。
+主任务确认仅授权规划，子任务需单独确认；STOP/CANCEL/版本变更撤销并清队列缓存。
+35文件约103KB源码包已准备：execution/v4/11_code_manifest1.json；无本地数据/权重/凭据。
+自动审批拒绝向现有服务器新隔离目录上传源码；未上传、未运行实权重探针。
+取得明确上传授权后执行 python execution/v4/run_step11_upstream.py 1 --execute-prepared。
+当前LoRA旧提示格式不代表已通过上游Task/Subtask格式，真实复验可能需要适配训练。
+步骤11整体未完成，旧08缺口/09冻结/10证据/正式test封存/EEG和实体排除保持。

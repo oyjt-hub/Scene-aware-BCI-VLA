@@ -1,0 +1,15 @@
+﻿V4-04 LIBERO开发数据状态（2026-10-17）
+已完成：实际LIBERO_90开发场景采集、含噪BCI数据生成、公开/私有分离、分组划分及可复验数据读取。
+48个底层回合，96张实际渲染图；分区train/validation/calibration_fit/calibration_audit=24/8/8/8。
+4224条公开历史快照、4608条私有标签、384组同公开输入反事实对。增强行不是独立机器人回合。
+另预留8个test回合，只冻结编号，未渲染、未生成噪声或评价。正式test留到步骤13。
+数据入口：D:\Scene_Aware\bci_vla_framework\data\v4\data_manifest.json。
+详细规则：D:\Scene_Aware\bci_vla_framework\data\v4\annotation_rules.txt。
+复验命令：python execution/v4/verify_step04.py；222/222项数据/来源检查通过。
+当前视觉为实际LIBERO图像+特权场景投影，ROI只用RGB统计，语义特征缺失；并非Florence/SAM检测结果。
+当前仿真只复位、稳定并中性步进，没有成功抓取/放置轨迹。真实脑机未采集，未训练模型，未运行完整VLA任务闭环。
+训练级缺口：歧义意图标签保守；主任务重述不等于主任务proposal监督；缺放置阶段真实帧与标注。
+默认专家HDF5目录不可用，另发现现有LeRobot LIBERO10候选；需要核实其状态/标注并先检查血缘，不能跨入预留test场景。
+步骤04完成范围是开发数据管线；training_data_ready=false。步骤03高层文本能力门槛仍未通过。
+下一步05公共runner和06 CPU模块可继续；步骤08高层训练之前必须补齐上述监督及能力缺口。
+后续数据、评估与VLA动力学闭环统一使用LIBERO；纯夹具仅用于接口单元测试。

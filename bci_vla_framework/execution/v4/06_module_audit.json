@@ -1,0 +1,190 @@
+{
+  "step_id": "V4-06",
+  "status": "PASS_CPU_ENGINEERING_ONLY",
+  "completed_at_utc": "2026-10-17T06:48:54.955021+00:00",
+  "runtime": {
+    "python": "3.13.0",
+    "torch": "2.7.1+cpu",
+    "platform": "Windows",
+    "device": "cpu",
+    "cuda_initialized": false,
+    "execution_location": "local_windows"
+  },
+  "models": {
+    "Full": {
+      "parameters": 7281930,
+      "component_parameters": {
+        "intent_queries": 1024,
+        "channel_queries": 1024,
+        "features": 559104,
+        "reliability": 257,
+        "typed_summary": 266496,
+        "prefix_projection": 526848,
+        "pointer_object": 65792,
+        "pointer_intent": 65792,
+        "outside": 257,
+        "missing_slots": 771,
+        "abstain": 257,
+        "interaction": 1028,
+        "task_history": 789760,
+        "diagnostic_history": 789760,
+        "intent_blocks": 2106880,
+        "channel_blocks": 2106880
+      },
+      "device": "cpu",
+      "mlp_width": null,
+      "trainable": true,
+      "trained": false,
+      "prefix_tokens": 8,
+      "aux_labels": "same masked intent/channel/interaction losses; no language loss yet"
+    },
+    "B3_aux": {
+      "parameters": 7269034,
+      "component_parameters": {
+        "features": 559104,
+        "reliability": 257,
+        "typed_summary": 266496,
+        "prefix_projection": 526848,
+        "pointer_object": 65792,
+        "pointer_intent": 65792,
+        "outside": 257,
+        "missing_slots": 771,
+        "abstain": 257,
+        "interaction": 1028,
+        "pool_mlp": 5782432
+      },
+      "device": "cpu",
+      "mlp_width": 992,
+      "trainable": true,
+      "trained": false,
+      "prefix_tokens": 8,
+      "aux_labels": "same masked intent/channel/interaction losses; no language loss yet"
+    },
+    "B4_aux": {
+      "parameters": 7281930,
+      "component_parameters": {
+        "queries": 2048,
+        "features": 559104,
+        "reliability": 257,
+        "typed_summary": 266496,
+        "prefix_projection": 526848,
+        "pointer_object": 65792,
+        "pointer_intent": 65792,
+        "outside": 257,
+        "missing_slots": 771,
+        "abstain": 257,
+        "interaction": 1028,
+        "shared_history": 1579520,
+        "blocks": 4213760
+      },
+      "device": "cpu",
+      "mlp_width": null,
+      "trainable": true,
+      "trained": false,
+      "prefix_tokens": 8,
+      "aux_labels": "same masked intent/channel/interaction losses; no language loss yet"
+    }
+  },
+  "baseline_parameter_difference_fraction": {
+    "Full": 0.0,
+    "B3_aux": -0.0017709590726634286,
+    "B4_aux": 0.0
+  },
+  "architecture": {
+    "hidden_size": 256,
+    "heads": 4,
+    "history_layers_per_group": 1,
+    "fusion_blocks_per_group": 2,
+    "ffn_dim": 1024,
+    "history_limit": 8,
+    "candidate_limit": 16,
+    "query_groups": [
+      4,
+      4
+    ],
+    "prefix_composition": "4 intent query latents + 4 typed diagnostic summary latents; raw channel queries do not cross",
+    "prefix_shape": [
+      8,
+      2048
+    ],
+    "vlm_dimension_source": "V4-03 actual pi0.5 config; no VLM loaded here",
+    "typed_diagnostic_fields": [
+      "attempt_count/64",
+      "correct_count/64",
+      "no_response_count/64",
+      "covered_symbols/16",
+      "age/30 clamped4",
+      "truncated",
+      "has_evidence",
+      "sufficient",
+      "expired",
+      "insufficient",
+      "masked_uncalibrated_reliability",
+      "has_current_or_unexpired_summary"
+    ],
+    "channel_allowed_memory": "deidentified diagnostic history + public diagnostic summary only; task/object inputs have no gradient path into reliability",
+    "outputs": [
+      "candidate+outside logits/probabilities",
+      "missing slots logits [source,destination,action]",
+      "abstain logit",
+      "reliability logit/probability/validity",
+      "interaction logits [PROPOSE_TASK,ASK_INTENT,CHECK_CHANNEL,WAIT]",
+      "prefix [B,8,2048]"
+    ]
+  },
+  "data": {
+    "platform": "actual frozen LIBERO captures; simulated BCI",
+    "splits": [
+      "train",
+      "validation"
+    ],
+    "public_count": 66,
+    "private_count": 68,
+    "sources": [
+      {
+        "path": "data\\v4\\train\\public_input.jsonl",
+        "sha256": "2453a89a63ef0b6058086c731d96cfaa6074065b7c46fa195382dfe3edbc01ca"
+      },
+      {
+        "path": "data\\v4\\train\\private_labels.jsonl",
+        "sha256": "cbb754130d82da5d7ebcb6ed0ac0d3f775ade856af9822fe9ce5f88e43b61a62"
+      },
+      {
+        "path": "data\\v4\\validation\\public_input.jsonl",
+        "sha256": "f15bbb141048c8524c6c9700f5b6f7f12779ce1e332c70dda85c16ee6877d06d"
+      },
+      {
+        "path": "data\\v4\\validation\\private_labels.jsonl",
+        "sha256": "4e74188a1c533057eb48bb02bf3ad530a5674594e2853a86f4c18d5d026f973b"
+      }
+    ],
+    "formal_test_accessed": false,
+    "calibration_accessed": false
+  },
+  "tests_run": 20,
+  "gradient_scope": "backward only, real masked auxiliary losses plus explicitly synthetic wiring objective; no optimizer step or claim of learned reasoning",
+  "supervision_limits": [
+    "conservative current SET includes all candidates and outside; intent loss gives no discriminative supervision",
+    "missing-slot and abstain heads only wiring-tested, no current private labels for these heads",
+    "high-level language loss and VLA integration belong to later gated stages",
+    "B3/B4 with and without auxiliary supervision reuse same architectures/parameters; no variants have been trained"
+  ],
+  "controls": "STOP/CANCEL uses validated pure contract routing before neural call; this module has no device dispatch or authorization",
+  "first_attempt": "17 tests; 2 test-fixture failures (PROBE kind DIAGNOSTIC and incomplete control events), fixed; preserved log",
+  "second_attempt": "19 tests passed on existing project server CPU; final extended 20 tests rerun locally",
+  "approval_event": "Expanded simulator-label upload refused by auto-review twice, including after source audit; no expanded payload uploaded. Final verification completed locally using official downloaded CPU dependency; no unresolved upload is needed for Step06.",
+  "not_claimed": [
+    "trained reasoning",
+    "calibrated confidence",
+    "pi0.5 high-level integration",
+    "successful manipulation",
+    "new LIBERO dynamics",
+    "formal test performance"
+  ],
+  "high_level_gate_passed": false,
+  "training_data_ready": false,
+  "training_run": false,
+  "formal_test_unsealed": false,
+  "real_EEG": false,
+  "physical_robot": false
+}

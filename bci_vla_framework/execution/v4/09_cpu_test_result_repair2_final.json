@@ -1,0 +1,10 @@
+{
+  "status": "PASS_CPU_MECHANISMS_ONLY",
+  "tests_run": 87,
+  "failures": 0,
+  "errors": 0,
+  "elapsed_s": 27.034,
+  "log": "execution\\v4\\09_cpu_tests_repair2_final.log",
+  "log_sha256": "4b465aee9e13967e9339de4090a9f358cf7ac426d19efd43773d508387a285fa",
+  "scope": "CPU public evidence certificate, calibration and routing mechanics only; not robot task performance"
+}

@@ -1,0 +1,169 @@
+{
+  "scope": "Repair public-object reference binding before Step09 calibration; actual LIBERO development images and simulated public declarations only",
+  "step_id": "V4-09-binding-remediation",
+  "status": "PILOT_WITH_FAILURES",
+  "config": {
+    "version": "V4-09-binding-repair-1",
+    "scope": "Repair public-object reference binding before Step09 calibration; actual LIBERO development images and simulated public declarations only",
+    "methods": [
+      "Full",
+      "Full_reorder_only"
+    ],
+    "seeds": [
+      0
+    ],
+    "optimizer_steps": 300,
+    "smoke_steps": 10,
+    "batch_size": 1,
+    "connector_learning_rate": 2e-05,
+    "language_lora_learning_rate": 0.0001,
+    "weight_decay": 0.0,
+    "max_grad_norm": 1.0,
+    "loss_weights": {
+      "language": 1.0,
+      "intent": 0.25,
+      "channel": 0.25,
+      "interaction": 0.1,
+      "missing_slots": 0.1,
+      "abstain": 0.1
+    },
+    "alias_loss_weight": 4.0,
+    "checkpoint_steps": [
+      150,
+      300
+    ],
+    "validation_examples": 128,
+    "selection": "Lowest equally weighted validation scene-group unweighted language CE; ties earliest step",
+    "max_text_tokens": 6144,
+    "max_answer_tokens": 32,
+    "binding": {
+      "version": "public-object-reference/0.1",
+      "mode": "reference",
+      "prefix_order": "diagnostic[4],bound_intent[4]",
+      "residual_scale": 0.1,
+      "reference_scale": 1.0,
+      "source": "predicted candidate weights and public aliases in frozen native VLM embeddings; no target text"
+    },
+    "initialization": "Continue each matched method from preserved Step08 selected seed0; Full and reorder-only control use identical Full initialization",
+    "previous_job": "/home/oyjt/Scene-aware-BCI-VLA-runs/v4_step08_training_20261017_v3",
+    "base_sha256": "4616e4c1966a5fb063b442ea5d69857f45e873222d839b794634d87d252ab9e7",
+    "initial_language_adapter_sha256": "c1dbc8bd23e8e2590ac2670839a068d82423aa0c4620e734d2d99618afaec380",
+    "shared_language_lora": {
+      "rank": 16,
+      "alpha": 32,
+      "targets": [
+        "q_proj",
+        "v_proj",
+        "o_proj"
+      ]
+    },
+    "development_binding_gate": {
+      "choice_group_all_correct_fraction": 0.9,
+      "joint_alias_pair_both_correct_fraction": 0.9,
+      "scope": "development-only readiness, not statistical safety guarantee"
+    },
+    "test_access": false,
+    "calibration_access": false,
+    "action_sampling": false,
+    "inquiry_policy": "No active policy deployment during binding repair",
+    "remaining_scope": [
+      "Real EEG and physical actions excluded",
+      "General hidden-intent and placement-stage scope still unproved",
+      "All baselines must receive the same binding mechanism before final structural comparisons"
+    ]
+  },
+  "formal_test_accessed": false,
+  "calibration_accessed": false,
+  "action_sampling": false,
+  "physical_actions": false,
+  "runs": [
+    {
+      "method": "Full",
+      "seed": 0,
+      "status": "FAIL",
+      "optimizer_steps": 0,
+      "schedule_sha256": "6df67910728bafd7cb589905cdfa59a362ff13ca3e9fad2573f0004296f9ed60",
+      "history": [],
+      "checkpoints": [],
+      "trainable_parameters": {
+        "connector": 7281930,
+        "language_lora": 3022848
+      },
+      "initialization": {
+        "path": "/home/oyjt/Scene-aware-BCI-VLA-runs/v4_step08_training_20261017_v3/results/Full_seed0/step200",
+        "hashes": {
+          "connector.safetensors": "251a20323ee9ca188ee51fb2e97ac7b589be13e4249982c11f060856f76fe0bb",
+          "language_lora.safetensors": "95be1bfb066b3c577f07e1bd2a55f40718d436702c7c3c80fa63ea17cdb73c39",
+          "optimizer.pt": "004b1e2d95a944b43e65b9563be7ba9930f02e42d6fb9eec8d7b58337370a8a7"
+        },
+        "original_method": "Full"
+      },
+      "binding": {
+        "version": "public-object-reference/0.1",
+        "mode": "reference",
+        "prefix_order": "diagnostic[4],bound_intent[4]",
+        "residual_scale": 0.1,
+        "reference_scale": 1.0,
+        "source": "predicted candidate weights and public aliases in frozen native VLM embeddings; no target text"
+      },
+      "error": "Alias span did not align with real tokenizer",
+      "traceback": "Traceback (most recent call last):\n  File \"/home/oyjt/Scene-aware-BCI-VLA-runs/v4_step09_binding_20261018_v1/execution/v4/step09_binding_training.py\", line 313, in main\n    terms, output, _ = forward(smoke_row, method, connector)\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/oyjt/Scene-aware-BCI-VLA-runs/v4_step09_binding_20261018_v1/execution/v4/step09_binding_training.py\", line 198, in forward\n    raise ValueError('Alias span did not align with real tokenizer')\nValueError: Alias span did not align with real tokenizer\n",
+      "elapsed_s": 1.5890916991047561
+    },
+    {
+      "method": "Full_reorder_only",
+      "seed": 0,
+      "status": "FAIL",
+      "optimizer_steps": 0,
+      "schedule_sha256": "6df67910728bafd7cb589905cdfa59a362ff13ca3e9fad2573f0004296f9ed60",
+      "history": [],
+      "checkpoints": [],
+      "trainable_parameters": {
+        "connector": 7281930,
+        "language_lora": 3022848
+      },
+      "initialization": {
+        "path": "/home/oyjt/Scene-aware-BCI-VLA-runs/v4_step08_training_20261017_v3/results/Full_seed0/step200",
+        "hashes": {
+          "connector.safetensors": "251a20323ee9ca188ee51fb2e97ac7b589be13e4249982c11f060856f76fe0bb",
+          "language_lora.safetensors": "95be1bfb066b3c577f07e1bd2a55f40718d436702c7c3c80fa63ea17cdb73c39",
+          "optimizer.pt": "004b1e2d95a944b43e65b9563be7ba9930f02e42d6fb9eec8d7b58337370a8a7"
+        },
+        "original_method": "Full"
+      },
+      "binding": {
+        "version": "public-object-reference/0.1",
+        "mode": "reorder_only",
+        "prefix_order": "diagnostic[4],bound_intent[4]",
+        "residual_scale": 0.1,
+        "reference_scale": 1.0,
+        "source": "predicted candidate weights and public aliases in frozen native VLM embeddings; no target text"
+      },
+      "error": "Alias span did not align with real tokenizer",
+      "traceback": "Traceback (most recent call last):\n  File \"/home/oyjt/Scene-aware-BCI-VLA-runs/v4_step09_binding_20261018_v1/execution/v4/step09_binding_training.py\", line 313, in main\n    terms, output, _ = forward(smoke_row, method, connector)\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/oyjt/Scene-aware-BCI-VLA-runs/v4_step09_binding_20261018_v1/execution/v4/step09_binding_training.py\", line 198, in forward\n    raise ValueError('Alias span did not align with real tokenizer')\nValueError: Alias span did not align with real tokenizer\n",
+      "elapsed_s": 0.423121090978384
+    }
+  ],
+  "tokenizer_sha256": "8986bb4f423f07f8c7f70d0dbe3526fb2316056c17bae71b1ea975e77a168fc6",
+  "text_token_preflight": {
+    "Full": {
+      "min": 473,
+      "max": 1096,
+      "mean": 885.4528985507246
+    },
+    "Full_reorder_only": {
+      "min": 473,
+      "max": 1096,
+      "mean": 885.4528985507246
+    }
+  },
+  "frozen_base_unchanged": true,
+  "action_expert_unchanged": true,
+  "elapsed_s": 49.39723145891912,
+  "full_step08_complete": false,
+  "seeds_1_2_not_run": true,
+  "place_phase_ready": false,
+  "remote_job": "/home/oyjt/Scene-aware-BCI-VLA-runs/v4_step09_binding_20261018_v1",
+  "remote_exit_code": 1,
+  "stderr": ""
+}

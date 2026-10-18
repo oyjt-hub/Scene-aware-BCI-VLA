@@ -1,0 +1,72 @@
+V4-11：指定开源子任务实现接入与逐步授权（本地机制完成，实权重尚未验收）
+
+一、此次变更
+用户指定子任务实现：https://github.com/LisavilaLee/openpi_with_subtask
+已通过 GitHub 官方 codeload 下载源码，归档内提交号：
+99c738a322300166499efa0b614ffa95dbb9b21e。
+本地位置：third_party/openpi_with_subtask；原始源码未修改。
+来源和文件 SHA256：configs/v4/upstream_subtask_source.json。
+保留上游 Apache-2.0 LICENSE 和 LICENSE_GEMMA.txt；本项目不能把上游子任务方法当成自有创新。
+
+二、采用哪些上游实现
+直接加载哈希固定的源文件中下列函数的方法体：
+models/pi0.py：make_attn_mask、Pi05Subtask.generate_subtask、build_full_observation。
+models/tokenizer.py：tokenize_high_level_prefix、tokenize_high_low_prompt、detokenize。
+高层指令按上游格式组织为 Task: <main task>. Subtask:，自回归生成子任务 token，
+再由上游函数构造包含子任务的观察输入。并非另外拉一个外部 LLM。
+
+上游新增子任务生成仅存在 JAX 路径，当前使用 PyTorch π0.5 + 高层 LoRA。
+high_level_v4/upstream_subtask.py 负责 JAX CPU 数组与 PyTorch 张量、KV cache 的互操作，
+复用当前同一个 VLM 的图像编码、词嵌入、注意力和 LM head，并保留8个交互软 token。
+这是“上游方法体 + 本项目后端适配”，不是完整运行上游原生 JAX 检查点。
+不重新执行上游顶层导入、下载或模型初始化代码，也不覆盖 openpi/transformers 安装。
+抽取的方法体经过文件 SHA256 检查，移除类型装饰器并延迟类型注解；计算语句保持原样。
+
+三、输入输出和执行顺序
+1. 场景公开输入包含可见对象、位置、ROI 特征、选择证据和交互历史。
+2. 当前小 Transformer 编码并输出8个软 token，绑定到高层 VLM 输入。
+3. 高层主任务分支生成建议文本；严格解析并绑定源物体、目标、场景/映射版本和模型版本。
+4. 用户在可信界面确认准确的主任务建议。本轮仅有显式模拟确认回调，未连接真实EEG。
+5. 同一 VLM 使用上游子任务格式和生成方法，读取确认任务和当前公开证据，生成子任务。
+6. 校验文本引用和候选分布的一致性，子任务必须属于已确认主任务的范围。
+7. 用户必须再次确认这个子任务；主任务确认只授予规划资格，不能自动授予所有子任务执行资格。
+8. 目前只消费一次虚拟语义请求：simulation_authorized=true，execution_authorized=false。
+   没有动作专家采样、机器人关节输出或 LIBERO 动力学调用。步骤12才处理动作闭环。
+
+四、授权与失效
+每个建议有独立随机 suggestion_id、父建议ID、内容摘要、上下文与权重绑定和过期时间。
+确认回调绑定准确建议摘要和一次性receipt_id；这是可信模拟UI边界，不是身份认证服务。
+语言输出不能自行产生确认、调用关节控制或扩大权限。
+新主任务、目标/场景/映射/证据/模型变化、超时、时间倒退、拒绝、解析错误均撤销旧授权。
+STOP/CANCEL 锁存并清除建议、已确认父任务、虚拟队列和生成缓存。
+此处只证明软件控制路径，未证明异步硬件急停或物理停止时间。
+
+上游 policy.py 默认按主任务字符串缓存子任务，本项目不使用该缓存：
+即使主任务文字相同，图像、选择证据或授权变化也必须重新生成。
+上游 tokenization 会小写并替换下划线；仅对已注册 OBJ_0 与 obj 0 建立可逆文字对应，
+不允许将不匹配指针或未知物体“修正”为另一个实例。
+解析失败、无EOS、物体幻觉、指针/文本冲突全部拒绝，并保留原始输出记录。
+
+五、本轮实际完成与证据
+execution/v4/11_local_tests.json：28项本地测试通过。
+包含22项授权/负例测试和6项上游生成方法/张量互操作机制测试。
+已验证原有8个声明冲突样例在适配边界被拒绝且不调用模型。
+上游方法测试使用显式 TinyTorchBridge 脚本化logits和numpy数组替身，不能证明真实JAX或真实VLM能力。
+主任务与子任务受限本地闭环也使用 StubBackend，必须与真实能力证据区分。
+真实运行脚本：execution/v4/step11_upstream_probe.py。
+准备入口：python execution/v4/run_step11_upstream.py 1 --prepare-only。
+明确取得上传授权后执行：python execution/v4/run_step11_upstream.py 1 --execute-prepared。
+可审查上传内容：execution/v4/11_code_manifest1.json 和11_code_bundle1.zip。
+上传内容仅源码、schema、配置与许可证；不包含本地数据、EEG、照片、权重或凭据。
+计划目的地：/home/oyjt/Scene-aware-BCI-VLA-runs/v4_step11_upstream_probe_20261018_v1。
+当前未上传、未运行该实权重探针：自动审批以“未明确授权向该具体目的地上传这批私有源码”为由拒绝。
+
+六、仍未完成
+1. 服务器真实运行时/JAX与Torch互操作尚未执行；真实依赖兼容性未验收。
+2. 当前LoRA使用旧 MAIN_TASK/NEXT_SUBTASK 提示训练，上游 Task/Subtask 格式发生分布变化。
+   既有03R语言验收不能自动转移；当前权重可能需要重新训练/适配，上游仓库源码不等于训练好的子任务权重。
+3. 上游同时训练子任务CE与动作flow loss，本轮没有复现其联合训练，也未训练新权重。
+4. 即使真实受限pick复验通过，也不能宣称任意主任务分解、多步放置或同类实例动作落地已经通过。
+5. 当前逐步授权只覆盖显式声明协议，不替代步骤09的含噪询问门控；VLA开关仍关闭。
+6. 步骤08完整训练/基线缺口、旧G2/G3/G4、正式test封存保持原状态。
+因此步骤11整体状态为“部分完成，实权重复验待上传授权”，不能写成全部完成。

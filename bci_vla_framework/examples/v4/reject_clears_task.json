@@ -1,0 +1,814 @@
+{
+  "record_type": "PUBLIC_INPUT",
+  "schema_version": "bci-vla-interaction/4.0",
+  "sample_id": "fixture-001",
+  "context": {
+    "session_id": "fixture-session",
+    "scene_id": "table-1",
+    "scene_revision": 1,
+    "mapping_id": "screen-map",
+    "mapping_revision": 1
+  },
+  "as_of_s": 12.0,
+  "provenance": {
+    "bci": "synthetic_fixture",
+    "vision": "annotated_fixture",
+    "feature_profile_id": "fixture-4x3",
+    "real_eeg": false,
+    "physical_robot": false
+  },
+  "scene": {
+    "observed_at_s": 11.0,
+    "image_ref": null,
+    "image_valid": false,
+    "roi_dim": 4,
+    "semantic_dim": 3,
+    "objects": [
+      {
+        "instance_id": "cup-blue",
+        "alias": "OBJ_0",
+        "label": "cup",
+        "bbox_xyxy": [
+          0.1,
+          0.2,
+          0.3,
+          0.6
+        ],
+        "object_valid": true,
+        "roi_feature": [
+          0.1,
+          0.2,
+          0.3,
+          0.4
+        ],
+        "roi_valid": true,
+        "semantic_feature": [
+          0.2,
+          0.3,
+          0.4
+        ],
+        "semantic_valid": true
+      },
+      {
+        "instance_id": "cup-red",
+        "alias": "OBJ_1",
+        "label": "cup",
+        "bbox_xyxy": [
+          0.4,
+          0.2,
+          0.6,
+          0.6
+        ],
+        "object_valid": true,
+        "roi_feature": [
+          1.1,
+          0.2,
+          0.3,
+          0.4
+        ],
+        "roi_valid": true,
+        "semantic_feature": [
+          0.2,
+          0.3,
+          0.4
+        ],
+        "semantic_valid": true
+      },
+      {
+        "instance_id": "tray",
+        "alias": "OBJ_2",
+        "label": "tray",
+        "bbox_xyxy": [
+          0.7,
+          0.3,
+          0.95,
+          0.8
+        ],
+        "object_valid": true,
+        "roi_feature": [
+          2.1,
+          0.2,
+          0.3,
+          0.4
+        ],
+        "roi_valid": true,
+        "semantic_feature": [
+          0.2,
+          0.3,
+          0.4
+        ],
+        "semantic_valid": true
+      }
+    ],
+    "truncation": {
+      "original_count": 3,
+      "retained_count": 3,
+      "policy": "none",
+      "target_recall_known": false
+    }
+  },
+  "history": [
+    {
+      "event_id": "e-reject",
+      "sequence": 99,
+      "role": "REJECT",
+      "original_role": "CONFIRM",
+      "question": {
+        "question_id": "q-reject",
+        "role": "CONFIRM",
+        "context": {
+          "session_id": "fixture-session",
+          "scene_id": "table-1",
+          "scene_revision": 1,
+          "mapping_id": "screen-map",
+          "mapping_revision": 1
+        },
+        "layout_id": "confirm-2",
+        "issued_at_s": 11,
+        "expires_at_s": 12,
+        "presentation_ack": true,
+        "options": [
+          {
+            "option_id": "accept",
+            "symbol": "s0",
+            "kind": "DECISION",
+            "reference": "accept"
+          },
+          {
+            "option_id": "reject",
+            "symbol": "s1",
+            "kind": "DECISION",
+            "reference": "reject"
+          }
+        ],
+        "diagnostic_option_id": null,
+        "proposal": {
+          "task_id": "task-blue",
+          "task_revision": 1,
+          "suggestion_id": "suggestion-task-blue",
+          "context": {
+            "session_id": "fixture-session",
+            "scene_id": "table-1",
+            "scene_revision": 1,
+            "mapping_id": "screen-map",
+            "mapping_revision": 1
+          },
+          "action": "pick",
+          "source_id": "cup-blue",
+          "destination_id": null,
+          "valid_until_s": 120.0,
+          "capability_verified": false
+        }
+      },
+      "started_at_s": 11.1,
+      "ended_at_s": 11.5,
+      "valid": true,
+      "invalid_reason": null,
+      "evidence": {
+        "score_kind": "RAW_SCORE",
+        "values": [
+          {
+            "option_id": "accept",
+            "value": 0.8
+          },
+          {
+            "option_id": "reject",
+            "value": 0.2
+          }
+        ],
+        "selected_option_id": "reject",
+        "calibration": null
+      }
+    }
+  ],
+  "current_event_id": "e-reject",
+  "selection_event_id": null,
+  "task_options": [],
+  "public_state": {
+    "confirmed_task": null,
+    "pending_suggestion": null,
+    "pending_question": null,
+    "diagnostics": {
+      "context": {
+        "session_id": "fixture-session",
+        "scene_id": "table-1",
+        "scene_revision": 1,
+        "mapping_id": "screen-map",
+        "mapping_revision": 1
+      },
+      "layout_id": "probe-3",
+      "window_s": 30,
+      "ttl_s": 15,
+      "min_attempts": 3,
+      "min_covered_symbols": 2,
+      "receipts": [
+        {
+          "event_id": "p0",
+          "sequence": 2,
+          "role": "PROBE",
+          "original_role": null,
+          "question": {
+            "question_id": "qp0",
+            "role": "PROBE",
+            "context": {
+              "session_id": "fixture-session",
+              "scene_id": "table-1",
+              "scene_revision": 1,
+              "mapping_id": "screen-map",
+              "mapping_revision": 1
+            },
+            "layout_id": "probe-3",
+            "issued_at_s": 2.0,
+            "expires_at_s": 3.0,
+            "presentation_ack": true,
+            "options": [
+              {
+                "option_id": "o0",
+                "symbol": "s0",
+                "kind": "DIAGNOSTIC",
+                "reference": "cup-blue"
+              },
+              {
+                "option_id": "o1",
+                "symbol": "s1",
+                "kind": "DIAGNOSTIC",
+                "reference": "cup-red"
+              },
+              {
+                "option_id": "o2",
+                "symbol": "s2",
+                "kind": "DIAGNOSTIC",
+                "reference": "tray"
+              }
+            ],
+            "diagnostic_option_id": "o0",
+            "proposal": null
+          },
+          "started_at_s": 2.1,
+          "ended_at_s": 2.5,
+          "valid": true,
+          "invalid_reason": null,
+          "evidence": {
+            "score_kind": "RAW_SCORE",
+            "values": [
+              {
+                "option_id": "o0",
+                "value": 0.8
+              },
+              {
+                "option_id": "o1",
+                "value": 0.2
+              },
+              {
+                "option_id": "o2",
+                "value": 0.2
+              }
+            ],
+            "selected_option_id": "o0",
+            "calibration": null
+          }
+        },
+        {
+          "event_id": "p1",
+          "sequence": 3,
+          "role": "PROBE",
+          "original_role": null,
+          "question": {
+            "question_id": "qp1",
+            "role": "PROBE",
+            "context": {
+              "session_id": "fixture-session",
+              "scene_id": "table-1",
+              "scene_revision": 1,
+              "mapping_id": "screen-map",
+              "mapping_revision": 1
+            },
+            "layout_id": "probe-3",
+            "issued_at_s": 3.0,
+            "expires_at_s": 4.0,
+            "presentation_ack": true,
+            "options": [
+              {
+                "option_id": "o0",
+                "symbol": "s0",
+                "kind": "DIAGNOSTIC",
+                "reference": "cup-blue"
+              },
+              {
+                "option_id": "o1",
+                "symbol": "s1",
+                "kind": "DIAGNOSTIC",
+                "reference": "cup-red"
+              },
+              {
+                "option_id": "o2",
+                "symbol": "s2",
+                "kind": "DIAGNOSTIC",
+                "reference": "tray"
+              }
+            ],
+            "diagnostic_option_id": "o1",
+            "proposal": null
+          },
+          "started_at_s": 3.1,
+          "ended_at_s": 3.5,
+          "valid": true,
+          "invalid_reason": null,
+          "evidence": {
+            "score_kind": "RAW_SCORE",
+            "values": [
+              {
+                "option_id": "o0",
+                "value": 0.2
+              },
+              {
+                "option_id": "o1",
+                "value": 0.8
+              },
+              {
+                "option_id": "o2",
+                "value": 0.2
+              }
+            ],
+            "selected_option_id": "o1",
+            "calibration": null
+          }
+        },
+        {
+          "event_id": "p2",
+          "sequence": 4,
+          "role": "PROBE",
+          "original_role": null,
+          "question": {
+            "question_id": "qp2",
+            "role": "PROBE",
+            "context": {
+              "session_id": "fixture-session",
+              "scene_id": "table-1",
+              "scene_revision": 1,
+              "mapping_id": "screen-map",
+              "mapping_revision": 1
+            },
+            "layout_id": "probe-3",
+            "issued_at_s": 4.0,
+            "expires_at_s": 5.0,
+            "presentation_ack": true,
+            "options": [
+              {
+                "option_id": "o0",
+                "symbol": "s0",
+                "kind": "DIAGNOSTIC",
+                "reference": "cup-blue"
+              },
+              {
+                "option_id": "o1",
+                "symbol": "s1",
+                "kind": "DIAGNOSTIC",
+                "reference": "cup-red"
+              },
+              {
+                "option_id": "o2",
+                "symbol": "s2",
+                "kind": "DIAGNOSTIC",
+                "reference": "tray"
+              }
+            ],
+            "diagnostic_option_id": "o0",
+            "proposal": null
+          },
+          "started_at_s": 4.1,
+          "ended_at_s": 4.5,
+          "valid": true,
+          "invalid_reason": null,
+          "evidence": {
+            "score_kind": "RAW_SCORE",
+            "values": [
+              {
+                "option_id": "o0",
+                "value": 0.8
+              },
+              {
+                "option_id": "o1",
+                "value": 0.2
+              },
+              {
+                "option_id": "o2",
+                "value": 0.2
+              }
+            ],
+            "selected_option_id": "o0",
+            "calibration": null
+          }
+        },
+        {
+          "event_id": "p3",
+          "sequence": 5,
+          "role": "PROBE",
+          "original_role": null,
+          "question": {
+            "question_id": "qp3",
+            "role": "PROBE",
+            "context": {
+              "session_id": "fixture-session",
+              "scene_id": "table-1",
+              "scene_revision": 1,
+              "mapping_id": "screen-map",
+              "mapping_revision": 1
+            },
+            "layout_id": "probe-3",
+            "issued_at_s": 5.0,
+            "expires_at_s": 6.0,
+            "presentation_ack": true,
+            "options": [
+              {
+                "option_id": "o0",
+                "symbol": "s0",
+                "kind": "DIAGNOSTIC",
+                "reference": "cup-blue"
+              },
+              {
+                "option_id": "o1",
+                "symbol": "s1",
+                "kind": "DIAGNOSTIC",
+                "reference": "cup-red"
+              },
+              {
+                "option_id": "o2",
+                "symbol": "s2",
+                "kind": "DIAGNOSTIC",
+                "reference": "tray"
+              }
+            ],
+            "diagnostic_option_id": "o1",
+            "proposal": null
+          },
+          "started_at_s": 5.1,
+          "ended_at_s": 5.5,
+          "valid": true,
+          "invalid_reason": null,
+          "evidence": {
+            "score_kind": "RAW_SCORE",
+            "values": [
+              {
+                "option_id": "o0",
+                "value": 0.2
+              },
+              {
+                "option_id": "o1",
+                "value": 0.8
+              },
+              {
+                "option_id": "o2",
+                "value": 0.2
+              }
+            ],
+            "selected_option_id": "o1",
+            "calibration": null
+          }
+        },
+        {
+          "event_id": "p4",
+          "sequence": 6,
+          "role": "PROBE",
+          "original_role": null,
+          "question": {
+            "question_id": "qp4",
+            "role": "PROBE",
+            "context": {
+              "session_id": "fixture-session",
+              "scene_id": "table-1",
+              "scene_revision": 1,
+              "mapping_id": "screen-map",
+              "mapping_revision": 1
+            },
+            "layout_id": "probe-3",
+            "issued_at_s": 6.0,
+            "expires_at_s": 7.0,
+            "presentation_ack": true,
+            "options": [
+              {
+                "option_id": "o0",
+                "symbol": "s0",
+                "kind": "DIAGNOSTIC",
+                "reference": "cup-blue"
+              },
+              {
+                "option_id": "o1",
+                "symbol": "s1",
+                "kind": "DIAGNOSTIC",
+                "reference": "cup-red"
+              },
+              {
+                "option_id": "o2",
+                "symbol": "s2",
+                "kind": "DIAGNOSTIC",
+                "reference": "tray"
+              }
+            ],
+            "diagnostic_option_id": "o0",
+            "proposal": null
+          },
+          "started_at_s": 6.1,
+          "ended_at_s": 6.5,
+          "valid": true,
+          "invalid_reason": null,
+          "evidence": {
+            "score_kind": "RAW_SCORE",
+            "values": [
+              {
+                "option_id": "o0",
+                "value": 0.8
+              },
+              {
+                "option_id": "o1",
+                "value": 0.2
+              },
+              {
+                "option_id": "o2",
+                "value": 0.2
+              }
+            ],
+            "selected_option_id": "o0",
+            "calibration": null
+          }
+        },
+        {
+          "event_id": "p5",
+          "sequence": 7,
+          "role": "PROBE",
+          "original_role": null,
+          "question": {
+            "question_id": "qp5",
+            "role": "PROBE",
+            "context": {
+              "session_id": "fixture-session",
+              "scene_id": "table-1",
+              "scene_revision": 1,
+              "mapping_id": "screen-map",
+              "mapping_revision": 1
+            },
+            "layout_id": "probe-3",
+            "issued_at_s": 7.0,
+            "expires_at_s": 8.0,
+            "presentation_ack": true,
+            "options": [
+              {
+                "option_id": "o0",
+                "symbol": "s0",
+                "kind": "DIAGNOSTIC",
+                "reference": "cup-blue"
+              },
+              {
+                "option_id": "o1",
+                "symbol": "s1",
+                "kind": "DIAGNOSTIC",
+                "reference": "cup-red"
+              },
+              {
+                "option_id": "o2",
+                "symbol": "s2",
+                "kind": "DIAGNOSTIC",
+                "reference": "tray"
+              }
+            ],
+            "diagnostic_option_id": "o1",
+            "proposal": null
+          },
+          "started_at_s": 7.1,
+          "ended_at_s": 7.5,
+          "valid": true,
+          "invalid_reason": null,
+          "evidence": {
+            "score_kind": "RAW_SCORE",
+            "values": [
+              {
+                "option_id": "o0",
+                "value": 0.2
+              },
+              {
+                "option_id": "o1",
+                "value": 0.8
+              },
+              {
+                "option_id": "o2",
+                "value": 0.2
+              }
+            ],
+            "selected_option_id": "o1",
+            "calibration": null
+          }
+        },
+        {
+          "event_id": "p6",
+          "sequence": 8,
+          "role": "PROBE",
+          "original_role": null,
+          "question": {
+            "question_id": "qp6",
+            "role": "PROBE",
+            "context": {
+              "session_id": "fixture-session",
+              "scene_id": "table-1",
+              "scene_revision": 1,
+              "mapping_id": "screen-map",
+              "mapping_revision": 1
+            },
+            "layout_id": "probe-3",
+            "issued_at_s": 8.0,
+            "expires_at_s": 9.0,
+            "presentation_ack": true,
+            "options": [
+              {
+                "option_id": "o0",
+                "symbol": "s0",
+                "kind": "DIAGNOSTIC",
+                "reference": "cup-blue"
+              },
+              {
+                "option_id": "o1",
+                "symbol": "s1",
+                "kind": "DIAGNOSTIC",
+                "reference": "cup-red"
+              },
+              {
+                "option_id": "o2",
+                "symbol": "s2",
+                "kind": "DIAGNOSTIC",
+                "reference": "tray"
+              }
+            ],
+            "diagnostic_option_id": "o0",
+            "proposal": null
+          },
+          "started_at_s": 8.1,
+          "ended_at_s": 8.5,
+          "valid": true,
+          "invalid_reason": null,
+          "evidence": {
+            "score_kind": "RAW_SCORE",
+            "values": [
+              {
+                "option_id": "o0",
+                "value": 0.8
+              },
+              {
+                "option_id": "o1",
+                "value": 0.2
+              },
+              {
+                "option_id": "o2",
+                "value": 0.2
+              }
+            ],
+            "selected_option_id": "o0",
+            "calibration": null
+          }
+        },
+        {
+          "event_id": "p7",
+          "sequence": 9,
+          "role": "PROBE",
+          "original_role": null,
+          "question": {
+            "question_id": "qp7",
+            "role": "PROBE",
+            "context": {
+              "session_id": "fixture-session",
+              "scene_id": "table-1",
+              "scene_revision": 1,
+              "mapping_id": "screen-map",
+              "mapping_revision": 1
+            },
+            "layout_id": "probe-3",
+            "issued_at_s": 9.0,
+            "expires_at_s": 10.0,
+            "presentation_ack": true,
+            "options": [
+              {
+                "option_id": "o0",
+                "symbol": "s0",
+                "kind": "DIAGNOSTIC",
+                "reference": "cup-blue"
+              },
+              {
+                "option_id": "o1",
+                "symbol": "s1",
+                "kind": "DIAGNOSTIC",
+                "reference": "cup-red"
+              },
+              {
+                "option_id": "o2",
+                "symbol": "s2",
+                "kind": "DIAGNOSTIC",
+                "reference": "tray"
+              }
+            ],
+            "diagnostic_option_id": "o1",
+            "proposal": null
+          },
+          "started_at_s": 9.1,
+          "ended_at_s": 9.5,
+          "valid": true,
+          "invalid_reason": null,
+          "evidence": {
+            "score_kind": "RAW_SCORE",
+            "values": [
+              {
+                "option_id": "o0",
+                "value": 0.2
+              },
+              {
+                "option_id": "o1",
+                "value": 0.8
+              },
+              {
+                "option_id": "o2",
+                "value": 0.2
+              }
+            ],
+            "selected_option_id": "o1",
+            "calibration": null
+          }
+        },
+        {
+          "event_id": "p8",
+          "sequence": 10,
+          "role": "PROBE",
+          "original_role": null,
+          "question": {
+            "question_id": "qp8",
+            "role": "PROBE",
+            "context": {
+              "session_id": "fixture-session",
+              "scene_id": "table-1",
+              "scene_revision": 1,
+              "mapping_id": "screen-map",
+              "mapping_revision": 1
+            },
+            "layout_id": "probe-3",
+            "issued_at_s": 10.0,
+            "expires_at_s": 11.0,
+            "presentation_ack": true,
+            "options": [
+              {
+                "option_id": "o0",
+                "symbol": "s0",
+                "kind": "DIAGNOSTIC",
+                "reference": "cup-blue"
+              },
+              {
+                "option_id": "o1",
+                "symbol": "s1",
+                "kind": "DIAGNOSTIC",
+                "reference": "cup-red"
+              },
+              {
+                "option_id": "o2",
+                "symbol": "s2",
+                "kind": "DIAGNOSTIC",
+                "reference": "tray"
+              }
+            ],
+            "diagnostic_option_id": "o0",
+            "proposal": null
+          },
+          "started_at_s": 10.1,
+          "ended_at_s": 10.5,
+          "valid": true,
+          "invalid_reason": null,
+          "evidence": {
+            "score_kind": "RAW_SCORE",
+            "values": [
+              {
+                "option_id": "o0",
+                "value": 0.8
+              },
+              {
+                "option_id": "o1",
+                "value": 0.2
+              },
+              {
+                "option_id": "o2",
+                "value": 0.2
+              }
+            ],
+            "selected_option_id": "o0",
+            "calibration": null
+          }
+        }
+      ],
+      "attempt_count": 9,
+      "correct_count": 9,
+      "no_response_count": 0,
+      "covered_symbols": [
+        "s0",
+        "s1"
+      ],
+      "latest_ended_at_s": 10.5,
+      "status": "SUFFICIENT",
+      "truncated": false
+    },
+    "stop_latched": false,
+    "execution_authorized": false
+  }
+}

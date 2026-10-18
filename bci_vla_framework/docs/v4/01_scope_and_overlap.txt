@@ -1,0 +1,147 @@
+﻿V4-01：资产、研究范围与近邻对照
+完成日期：2026-10-17（香港时间；盘点从10月16日晚开始）
+依据：V4-plan-2。本步骤只做只读盘点与文档交付，不启动模型、训练、推理服务、EEG或机器人。
+验收含义：资产来源和能力缺口已列清；不表示所有模型已可运行，也不表示新模块或研究收益已验证。
+
+一、结论与范围
+可以继续V4-02的接口设计：已有事件/授权代码、模型源码、历史LIBERO适配与可定位的模型文件。
+新模块要将场景、选择证据及历史编码成内部token，接入π0.5高层；具体接口与两类澄清在02冻结。
+首版保留低层动作专家结构，使用合成脑机输入和LIBERO；真实EEG与实体机器人继续排除。
+候选主张是含噪交互证据的编码及其对意图更新/澄清的作用，尚未证明优于文本、MLP或标准查询连接器。
+同类对象接地、高层主任务/子任务生成、实际梯度接入与校准效用，均不能由本次文件盘点判定通过。
+
+二、版本与代码现状
+本地Git分支：work/step16-synthetic-20261016。
+本地HEAD：5482cb3（完整值见execution/v4/01_git_before.json）。已有V3/V4文档变更保留，未reset/提交/推送。
+服务器原仓库：/home/oyjt/Scene-aware-BCI-VLA，main，d2245527a767707c19d7305caacb02fa5de89dc3；本次盘点时工作区干净。
+服务器既有OpenPI：/home/oyjt/openpi，main，981483dca0fd9acba698fea00aa6e52d56a66c58；存在已修改/暂存文件。
+OpenPI的Git提交号不能单独代表当前源码，相关文件本轮SHA256已记录。后续使用隔离目录，不覆盖既有工作。
+另有~/workspace/openpi及~/workspace/openpi_v2，它们与~/openpi不是同一个绝对路径；不能因名称相似自动互换。
+适用AGENTS.md检查：D盘根、工作区根、项目根及本步骤docs/execution父目录未发现指令文件。
+
+三、权重实际位置（已按用户提示检查~/workspace）
+1. 当前历史LIBERO低层参考权重
+   /home/oyjt/workspace/RLinf-RECAP/models/baseline_sft/RLinf-Pi05-LIBERO-SFT/model.safetensors
+   本轮stat确认存在，7473091464字节，符号路径解析到/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/RLinf-RECAP/。
+   norm_stats位于同目录assets/physical-intelligence/libero/norm_stats.json。
+   norm_stats本轮SHA256：dae37d79a22108af83df9189c6710a3ec8e077d65b28e34bdf1da724e5ae30f1。
+   历史完整权重SHA256：4616e4c1966a5fb063b442ea5d69857f45e873222d839b794634d87d252ab9e7，来源execution/15C_current_assets.json。
+   本轮完整大权重哈希未取得：一次32秒预算读未完成，后续完整复核SSH读取超时。不能把历史哈希填成本轮已验证。
+   当前文件大小/位置存在不等于完整性复核通过；后续选定权重前应按I/O资源预算补做完整验证。
+
+2. 其他π0.5候选
+   /home/oyjt/workspace/checkpoints/pi05_base/params
+   /home/oyjt/workspace/checkpoints/pi05_droid/params
+   /home/oyjt/workspace/checkpoints/pi05_fold_clothes/
+   /home/oyjt/workspace/checkpoints/uniform/
+   /home/oyjt/workspace/checkpoints/uniform_rtc_v2/
+   /home/oyjt/workspace/checkpoints/uniform_table_rtc_v2/
+   base/droid目录含参数分片元数据；其余含训练子目录。本轮没有逐分片哈希、自动选最大step、加载或切换任何候选。
+   “base”“fold”“uniform”目录名不证明高层文本/任务分解或论文实验身份，需V4-03逐项审计。
+
+3. 第二低层模型的历史参考
+   /home/oyjt/workspace/Qwen2.5-VL-GR00T-LIBERO-4in1/checkpoints/steps_30000_pytorch_model.pt
+   本轮确认存在，8442334155字节；历史哈希在execution/15C_current_assets.json，本轮不重算。
+   它是已有工程参考，不自动作为V4新增训练或完整公平基线结果。
+
+4. Florence真实权重
+   /home/oyjt/Grounded-SAM-2/Florence-2-large/model.safetensors
+   本轮确认存在，1553563458字节；同目录有tokenizer、processor和config文件。
+   config/tokenizer_config及对应前端源码的小文件SHA256已记录；大视觉权重本轮未全量哈希。
+
+5. SAM真实权重
+   /home/oyjt/Grounded-SAM-2/checkpoints/sam2.1_hiera_large.pt
+   本轮确认存在，898083611字节；未加载，未全量哈希。
+
+视觉路径纠正：原仓库副本/home/oyjt/Scene-aware-BCI-VLA/Grounded-SAM-2的默认权重相对路径缺失，
+但独立/home/oyjt/Grounded-SAM-2目录保留实际权重。因此状态应为“已定位可用候选文件、运行路径绑定待核验”，不能写“服务器没有视觉权重”。
+HuggingFace Florence缓存本轮所见仅配置/代码，也不能用这个不完整缓存替代实际本地完整模型目录。
+
+四、tokenizer、环境与资源
+PaliGemma tokenizer：/home/oyjt/.cache/openpi/big_vision/paligemma_tokenizer.model，4264023字节。
+本轮SHA256：8986bb4f423f07f8c7f70d0dbe3526fb2316056c17bae71b1ea975e77a168fc6。
+本次只确认文件与源码引用，没有实例化tokenizer或确认其文本解码/高层输出适配能力。
+OpenPI环境：/home/oyjt/openpi/.venv，所见python3.11发行包元数据为torch2.7.1、transformers4.53.2等。
+LIBERO环境：/home/oyjt/workspace/miniconda3/envs/libero，bin/python解析到python3.10；对应site-packages可见torch2.4.0+cu124、transformers4.39.3、robosuite1.4.0、mujoco3.4.0元数据。
+包元数据不等于导入兼容性验证；该环境还存在其他Python版本目录，后续须固定解释器，不混用site-packages。
+LIBERO源码：/home/oyjt/LIBERO存在；历史模型服务使用隔离Transformers overlay，见step15_pi05_orchestrator.py。
+本机本轮使用的Python3.13环境未检测到torch/transformers/pytest发行包，不能据此认定电脑其他解释器也没有这些包。
+V4-02可继续用标准库设计schema；06 CPU网络检查需选定已有服务器环境或另建隔离环境，01没有安装依赖。
+服务器nvidia-smi本轮报告8张NVIDIA GeForce RTX4090，驱动显示每张49140MiB，多张近空闲。
+显存为驱动所报，未做硬件容量复核；负载为瞬时快照，未预约资源。已有其他计算进程，未停止或修改。
+
+五、已有代码可复用什么
+本地context_intent/scene_context/model.py有RelationAttention、IntentModel、NeuralPredictor等早期原型。
+该原型输出结构化候选/模板指令，没有已训练权重，也没有V4角色路由、诊断摘要或π0.5内部token接入证据。
+可以参考其schema、候选约束和标注思路，不能将其直接标为V4网络完成。
+bci_vla/core/joint_belief.py及diagnostic_policy.py可作现有联合信念/交互参考；contracts/session.py可复用确认/授权边界。
+PacketReplayTransport是合成软件传输，SSVEPAdapterShell是接口壳，不是第二真实脑机或已校准通道。
+已有LIBERO适配、独立终点和故障记录属于V2工程来源；V4新代码目录bci_vla/neural_interaction_v4尚不存在。
+本轮没有建立该神经网络目录，没有训练、模型推理、仿真动作或新性能结果。
+
+六、已有证据的使用边界
+V2步骤14C/15C提供实际VLA—LIBERO工程适配与失败轨迹，但不能证明V4编码器有效。
+V2步骤16的6272个合成回合属于符号/策略复验，不是新模块的视觉—动作训练集。
+历史M与B9行为/结局相同、M未主动选择PROBE、M2错误启动观察比例增加等负结果保留。
+G2未通过、G3未验证、G4未通过；本次盘点不升级任何门槛。
+V4正式train/validation/calibration/test尚未建立，正式样本量与计算预算尚未确定。
+
+七、近邻对照（2026-10-16/17只读网页核查）
+以下“与本方案关系/所需对照”为研究判断，不代表对方完整方法不存在某个功能，也不是穷尽查重。
+
+L01 BLIP-2：冻结视觉/语言主干之间的可训练查询连接器已有先例。
+来源：https://arxiv.org/abs/2301.12597 （摘要页）；普通查询连接器必须作为结构对照。
+L02 Perceiver：将可变大输入压缩为固定潜在瓶颈已有先例。
+来源：https://arxiv.org/abs/2103.03206 （摘要页）；固定K查询本身不作为原创。
+L03 Long-context Q-Former：上下文多模态token接入语言模型并生成确认描述/动作步骤，结构功能接近。
+来源：https://arxiv.org/abs/2511.17335 及 https://arxiv.org/html/2511.17335v1 （方法正文）。
+所需差异证据：按在线可见历史处理含噪选择，区分诊断与任务证据，而非仅增加上下文。
+L04 NOIR：EEG传递目标对象/动作并结合机器人学习减少交互，应用领域接近。
+来源：https://arxiv.org/abs/2311.01454 （摘要页）；不把“脑机驱动机器人”本身作为新贡献。
+L05 NOIR2.0：基础模型辅助对象/技能预测与少样本适配，直接影响任务建议的创新边界。
+来源：https://arxiv.org/abs/2511.20848 及 https://arxiv.org/html/2511.20848v1 （方法正文）。
+L06 Gaze2Act：人类选择/空间线索条件化VLA，支持对象消歧与动态交互，属于直接近邻。
+来源：https://arxiv.org/abs/2605.30282 及 https://zuo-kuangji.github.io/Gaze2Act/ （摘要/作者项目页）。
+所需差异证据：含噪通道证据的处理，而非只将注视换成脑机输入。
+L07 π0.5：语义子任务及动作专家是原有框架能力范围，不作为新子任务理论贡献。
+来源：https://arxiv.org/abs/2504.16054 （摘要页；相关方法正文在前轮已核查）。
+L08 UPS：联合考虑语义歧义与低层动作能力，选择执行/澄清/干预，已有不确定性策略先例。
+来源：https://arxiv.org/abs/2602.22474 （v2摘要页）；不能把“拿不准就问”单列为原创。
+L09 MIGU：作者项目页描述融合不确定的语言/指向证据形成目标信念，并在执行与澄清之间选择。
+来源：https://multimodal-instruction.github.io/ （本轮仅项目页，未完成全文审计）。
+它补充了多模态目标证据融合与主动澄清的重叠风险，应与本方案的通道诊断目标逐项比较。
+L10 BAL：把机器人意图澄清作为对形式任务候选的主动学习，LLM辅助生成问题。
+来源：https://arxiv.org/abs/2609.34270 （摘要页）；主动选问题/信息增益本身已有先例。
+L11 Knowing When to Ask：结合显式对话与隐式意图线索进行人机联合规划，已有交流成本优化。
+来源：https://arxiv.org/abs/2603.07822 （v2摘要页；当前标题与v1不同）。
+上述论文均未在本项目复现，也不能给NOIR/MIGU等填入虚构实测性能。详见execution/v4/01_literature.json。
+
+八、候选贡献、对照与否证条件
+C1：有角色约束的场景/交互编码器，是否改善对象绑定与含噪意图更新？
+对照：同外部信息文本、同张量MLP、同张量/监督/预算的普通查询模块；共享固定询问策略。
+否证：普通查询/MLP达到相同效果，或收益仅来自额外数据、监督、容量，则不主张该结构独有优势。
+C2：显式区分意图澄清和已知目标诊断，是否在相同风险/交互预算下减少误更新？
+对照：角色混合、近期历史/诊断摘要消融、相同PROBE机会的现有联合信念、固定阈值。
+否证：额外诊断信息无价值、策略只增加暂停、或简单阈值同样有效，则收缩至相应工程/表示贡献。
+C3：内部token实际接入π0.5高层后，是否改善主任务/子任务及闭环结果？
+对照：同图像/对象字典/公开证据的文本路径、相同模型训练范围/预算；单列低层实例接地误差。
+否证：只实现外部文字转发、没有高层梯度，或低层适配差异解释了收益，则不能归因于VLA内部条件模块。
+证据相同且不可辨识时，不能以猜中隐藏真相作为方法目标；合理候选/弃权/询问需单独评价。
+固定询问MVP不称端到端学会澄清。论文创新是否充分留待独立对照，01不宣布首次/通用/已成立。
+
+九、缺口、影响与责任步骤
+I01 高层文本和语义子任务能力未验证：03硬门槛；02标准库接口工作可先做。
+I02 内部token路由、OBJ_i绑定与梯度尚未实现：02设计、06/07实现检查。
+I03 当前大权重完整性未重新验证、base等候选未逐分片审计：03选模前补，不能自动切换。
+I04 Florence/SAM实际权重已找到，但与原仓库启动目录/导入路径的绑定未验证：12视觉联调；早期用显式标注/特权场景。
+I05 OpenPI有已有改动，且存在多个副本/环境：03保留源码哈希与隔离接入，不覆盖或混装。
+I06 默认本地Python无Torch，服务器环境只做元数据盘点：06前选定/验证解释器；01不安装。
+I07 新视觉交互数据/子任务标注、校准与正式分区缺失：04；02先定义字段与来源。
+I08 时间窗、诊断覆盖、监督mask、任务语法和风险阈值待冻结：02/09/10，不能拿隐藏故障标签替代定义。
+I09 训练/仿真成本与资源预约未确定：03/08/12试跑后估算；GPU瞬时空闲不代表已预约。
+I10 近邻重叠较多：后续按强基线与否证条件验收；无实证收益时收缩论文表述。
+
+十、下一步交接
+下一步为V4-02“冻结输入输出和两类澄清协议”。01的资产未知项有明确后续责任，不阻塞本地schema设计。
+02应优先处理：公开/私有分离、OBJ_i绑定、窗口外会话状态、两类问题及有角色的NO_RESPONSE、通道估计量与证据不足。
+本步骤未执行02、未验证03能力、未开展网络实现/训练/仿真实验。当前状态以execution/v4_plan_progress.json为准。

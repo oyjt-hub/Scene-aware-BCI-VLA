@@ -1,0 +1,9 @@
+﻿当前V4-plan-2；2026-10-17。
+03R限定高层语言协议通过（原SFT＋高层LoRA）；06小模块仍未训练。
+07真实8×2048 prefix工程接入完成：38本地测试＋28真实模型工程检查；off logits差0。
+开启随机prefix输出task task.，语义未通过；不可宣称理解脑机或完整VLA闭环。
+最新交接：D:\Scene_Aware\bci_vla_framework\execution\v4\handoff_step07.txt。
+03R说明：D:\Scene_Aware\bci_vla_framework\docs\v4\03R_backbone_remediation.txt。
+07说明：D:\Scene_Aware\bci_vla_framework\docs\v4\07_integration.txt。
+下一步08之前须补齐04监督缺口。所有神经对照共用03R高层初始化/预算。
+正式test封存；真实EEG/实体动作排除；同类实例低层执行未验证。

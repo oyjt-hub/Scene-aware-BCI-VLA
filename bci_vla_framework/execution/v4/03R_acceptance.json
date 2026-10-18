@@ -1,0 +1,9 @@
+{
+  "status": "PASS_RESTRICTED_HIGH_LEVEL_LANGUAGE_GATE",
+  "completed_at_utc": "2026-10-17T07:37:47.658030+00:00",
+  "scope": "canonical observable-public-state language protocol only; explicitly selected object/allowed pick, missing-action clarification, confirmed pick/put + empty/holding-selected gripper -> next subtask/Done",
+  "same_class_low_level_grounding": "NOT_VERIFIED",
+  "general_planning": "NOT_ESTABLISHED",
+  "next_step": "V4-07 real prefix integration; not yet accepted",
+  "formal_test_unsealed": false
+}

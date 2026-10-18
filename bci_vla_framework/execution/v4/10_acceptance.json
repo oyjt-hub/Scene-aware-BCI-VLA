@@ -1,0 +1,368 @@
+{
+  "version": "V4-10-development-acceptance/0.1",
+  "status": "PASS_RESTRICTED_DEVELOPMENT_ONLY",
+  "scope": "development validation only; frozen LIBERO captures and simulated BCI; public fixed pick action",
+  "checks": {
+    "frozen_policy_and_model_unchanged": true,
+    "reference_replays": true,
+    "all_wait_control_unresolved": true,
+    "all_negative_submissions_rejected": true,
+    "formal_test_sealed": true,
+    "no_VLA_or_physical_execution": true,
+    "new_metric_tests_passed": true
+  },
+  "summary": {
+    "Full_frozen": {
+      "scene_groups": 2,
+      "base_episodes": 8,
+      "condition_instances": 32,
+      "resolution": 0.40625,
+      "wrong_episode_rate": 0.0,
+      "resolved_conditions": 13,
+      "wrong_base_episodes": 0,
+      "submissions": 13,
+      "wrong_submissions": 0,
+      "conditional_submission_error": 0.0,
+      "mean_questions": 10.03125,
+      "mean_waits": 1.96875,
+      "no_responses": 23,
+      "rejects": 1,
+      "clock_cost_s_per_condition": 24.0,
+      "base_rows": [
+        {
+          "group_id": "be407422cd63db52190d",
+          "episode_id": "3ca46f06f2e98c7585e4453d",
+          "resolution": 0.5,
+          "wrong_episode": false,
+          "condition_count": 4
+        },
+        {
+          "group_id": "be407422cd63db52190d",
+          "episode_id": "3e7f4a934272c0ac1dcfa709",
+          "resolution": 0.5,
+          "wrong_episode": false,
+          "condition_count": 4
+        },
+        {
+          "group_id": "be407422cd63db52190d",
+          "episode_id": "8a73e47aa9c92d370ca37806",
+          "resolution": 0.25,
+          "wrong_episode": false,
+          "condition_count": 4
+        },
+        {
+          "group_id": "be407422cd63db52190d",
+          "episode_id": "a733559f6120147aa83fb6dd",
+          "resolution": 0.5,
+          "wrong_episode": false,
+          "condition_count": 4
+        },
+        {
+          "group_id": "c643a21fa2fbdfc32c20",
+          "episode_id": "66c54cbd120fded5bec9b5b7",
+          "resolution": 0.0,
+          "wrong_episode": false,
+          "condition_count": 4
+        },
+        {
+          "group_id": "c643a21fa2fbdfc32c20",
+          "episode_id": "7d02da34438c898381a919fe",
+          "resolution": 0.5,
+          "wrong_episode": false,
+          "condition_count": 4
+        },
+        {
+          "group_id": "c643a21fa2fbdfc32c20",
+          "episode_id": "8ce9cefdbfafe24aab2e9805",
+          "resolution": 0.5,
+          "wrong_episode": false,
+          "condition_count": 4
+        },
+        {
+          "group_id": "c643a21fa2fbdfc32c20",
+          "episode_id": "dfaa20a11afa4e9a7221ad55",
+          "resolution": 0.5,
+          "wrong_episode": false,
+          "condition_count": 4
+        }
+      ],
+      "risk_basis": "scene-macro base-episode point estimate; not a population guarantee"
+    },
+    "Full_no_recheck": {
+      "scene_groups": 2,
+      "base_episodes": 8,
+      "condition_instances": 32,
+      "resolution": 0.65625,
+      "wrong_episode_rate": 0.875,
+      "resolved_conditions": 21,
+      "wrong_base_episodes": 7,
+      "submissions": 34,
+      "wrong_submissions": 13,
+      "conditional_submission_error": 0.38235294117647056,
+      "mean_questions": 9.09375,
+      "mean_waits": 2.90625,
+      "no_responses": 26,
+      "rejects": 27,
+      "clock_cost_s_per_condition": 24.0,
+      "base_rows": [
+        {
+          "group_id": "be407422cd63db52190d",
+          "episode_id": "3ca46f06f2e98c7585e4453d",
+          "resolution": 0.75,
+          "wrong_episode": true,
+          "condition_count": 4
+        },
+        {
+          "group_id": "be407422cd63db52190d",
+          "episode_id": "3e7f4a934272c0ac1dcfa709",
+          "resolution": 0.75,
+          "wrong_episode": true,
+          "condition_count": 4
+        },
+        {
+          "group_id": "be407422cd63db52190d",
+          "episode_id": "8a73e47aa9c92d370ca37806",
+          "resolution": 0.5,
+          "wrong_episode": true,
+          "condition_count": 4
+        },
+        {
+          "group_id": "be407422cd63db52190d",
+          "episode_id": "a733559f6120147aa83fb6dd",
+          "resolution": 0.75,
+          "wrong_episode": true,
+          "condition_count": 4
+        },
+        {
+          "group_id": "c643a21fa2fbdfc32c20",
+          "episode_id": "66c54cbd120fded5bec9b5b7",
+          "resolution": 0.5,
+          "wrong_episode": true,
+          "condition_count": 4
+        },
+        {
+          "group_id": "c643a21fa2fbdfc32c20",
+          "episode_id": "7d02da34438c898381a919fe",
+          "resolution": 1.0,
+          "wrong_episode": false,
+          "condition_count": 4
+        },
+        {
+          "group_id": "c643a21fa2fbdfc32c20",
+          "episode_id": "8ce9cefdbfafe24aab2e9805",
+          "resolution": 0.5,
+          "wrong_episode": true,
+          "condition_count": 4
+        },
+        {
+          "group_id": "c643a21fa2fbdfc32c20",
+          "episode_id": "dfaa20a11afa4e9a7221ad55",
+          "resolution": 0.5,
+          "wrong_episode": true,
+          "condition_count": 4
+        }
+      ],
+      "risk_basis": "scene-macro base-episode point estimate; not a population guarantee"
+    },
+    "AlwaysWait": {
+      "scene_groups": 2,
+      "base_episodes": 8,
+      "condition_instances": 32,
+      "resolution": 0.0,
+      "wrong_episode_rate": 0.0,
+      "resolved_conditions": 0,
+      "wrong_base_episodes": 0,
+      "submissions": 0,
+      "wrong_submissions": 0,
+      "conditional_submission_error": null,
+      "mean_questions": 0.0,
+      "mean_waits": 12.0,
+      "no_responses": 0,
+      "rejects": 0,
+      "clock_cost_s_per_condition": 24.0,
+      "base_rows": [
+        {
+          "group_id": "be407422cd63db52190d",
+          "episode_id": "3ca46f06f2e98c7585e4453d",
+          "resolution": 0.0,
+          "wrong_episode": false,
+          "condition_count": 4
+        },
+        {
+          "group_id": "be407422cd63db52190d",
+          "episode_id": "3e7f4a934272c0ac1dcfa709",
+          "resolution": 0.0,
+          "wrong_episode": false,
+          "condition_count": 4
+        },
+        {
+          "group_id": "be407422cd63db52190d",
+          "episode_id": "8a73e47aa9c92d370ca37806",
+          "resolution": 0.0,
+          "wrong_episode": false,
+          "condition_count": 4
+        },
+        {
+          "group_id": "be407422cd63db52190d",
+          "episode_id": "a733559f6120147aa83fb6dd",
+          "resolution": 0.0,
+          "wrong_episode": false,
+          "condition_count": 4
+        },
+        {
+          "group_id": "c643a21fa2fbdfc32c20",
+          "episode_id": "66c54cbd120fded5bec9b5b7",
+          "resolution": 0.0,
+          "wrong_episode": false,
+          "condition_count": 4
+        },
+        {
+          "group_id": "c643a21fa2fbdfc32c20",
+          "episode_id": "7d02da34438c898381a919fe",
+          "resolution": 0.0,
+          "wrong_episode": false,
+          "condition_count": 4
+        },
+        {
+          "group_id": "c643a21fa2fbdfc32c20",
+          "episode_id": "8ce9cefdbfafe24aab2e9805",
+          "resolution": 0.0,
+          "wrong_episode": false,
+          "condition_count": 4
+        },
+        {
+          "group_id": "c643a21fa2fbdfc32c20",
+          "episode_id": "dfaa20a11afa4e9a7221ad55",
+          "resolution": 0.0,
+          "wrong_episode": false,
+          "condition_count": 4
+        }
+      ],
+      "risk_basis": "scene-macro base-episode point estimate; not a population guarantee"
+    }
+  },
+  "audit_by_method": {
+    "Full_frozen": {
+      "public_records": 384,
+      "questions": 321,
+      "confirmations": 14,
+      "evidence_contracts": 14,
+      "simulated_requests": 13
+    },
+    "Full_no_recheck": {
+      "public_records": 384,
+      "questions": 291,
+      "confirmations": 77,
+      "evidence_contracts": 77,
+      "simulated_requests": 34
+    },
+    "AlwaysWait": {
+      "public_records": 384
+    }
+  },
+  "per_scenario": {
+    "Full_frozen": {
+      "both_change": {
+        "resolved": 0,
+        "conditions": 8,
+        "wrong_conditions": 0
+      },
+      "channel_change": {
+        "resolved": 0,
+        "conditions": 8,
+        "wrong_conditions": 0
+      },
+      "goal_change": {
+        "resolved": 7,
+        "conditions": 8,
+        "wrong_conditions": 0
+      },
+      "stable": {
+        "resolved": 6,
+        "conditions": 8,
+        "wrong_conditions": 0
+      }
+    },
+    "Full_no_recheck": {
+      "both_change": {
+        "resolved": 1,
+        "conditions": 8,
+        "wrong_conditions": 7
+      },
+      "channel_change": {
+        "resolved": 4,
+        "conditions": 8,
+        "wrong_conditions": 3
+      },
+      "goal_change": {
+        "resolved": 8,
+        "conditions": 8,
+        "wrong_conditions": 2
+      },
+      "stable": {
+        "resolved": 8,
+        "conditions": 8,
+        "wrong_conditions": 0
+      }
+    },
+    "AlwaysWait": {
+      "both_change": {
+        "resolved": 0,
+        "conditions": 8,
+        "wrong_conditions": 0
+      },
+      "channel_change": {
+        "resolved": 0,
+        "conditions": 8,
+        "wrong_conditions": 0
+      },
+      "goal_change": {
+        "resolved": 0,
+        "conditions": 8,
+        "wrong_conditions": 0
+      },
+      "stable": {
+        "resolved": 0,
+        "conditions": 8,
+        "wrong_conditions": 0
+      }
+    }
+  },
+  "replay_tolerance": {
+    "bitwise_matches": 7,
+    "numeric_and_discrete_matches": 32,
+    "max_raw_float_difference": 2.220446049250313e-16,
+    "registered_absolute_tolerance": 1e-12,
+    "actual_model_tensor_pairs_equal": 178
+  },
+  "main_conditions": 96,
+  "additional_control_runs": 32,
+  "snapshot_checks": {
+    "ambiguous_public": 64,
+    "outside_no_response": 64
+  },
+  "metric_tests": {
+    "successful": true,
+    "tests": 7,
+    "failures": 0,
+    "errors": 0,
+    "elapsed_s": 0.012617999920621514,
+    "log_sha256": "c5ca87e7fd55f3ea12173cb54a4142f2228731d0b5fc0a27aeb3eb84563474bd"
+  },
+  "frozen_binding": {
+    "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+    "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+    "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+    "policy_sha256": "48b556069f0384346692b3294cddc293cc958f1bf2f6262a86e2fc893d117339"
+  },
+  "full_step08_complete": false,
+  "language_parser_evaluated": false,
+  "language_parsing_failure_rate": null,
+  "formal_evaluation_ready": false,
+  "formal_protocol_status": "DRAFT_NOT_FINAL_LOCK_NOT_TEST_AUTHORIZATION",
+  "statistical_guarantee_claimed": false,
+  "neural_architecture_gain_established": false,
+  "step11_allowed_scope": "adapter and authorization development only, retain known semantic failures as rejection cases",
+  "source_result": "runs/step10_development/v2/result.json",
+  "created_at_utc": "2026-10-17T20:00:37.549905+00:00"
+}

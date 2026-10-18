@@ -1,0 +1,95 @@
+{
+  "checked_at_utc": "2026-10-16T16:13:45.619453+00:00",
+  "scope": "targeted primary-source comparison, not exhaustive novelty certification",
+  "local_implementations_of_papers_claimed": false,
+  "papers": [
+    {
+      "id": "L01",
+      "title": "BLIP-2",
+      "url": "https://arxiv.org/abs/2301.12597",
+      "reading_depth": "abstract",
+      "observed_overlap": "查询网络桥接冻结视觉与语言主干已有先例",
+      "research_implication": "普通查询连接器必须作为对照"
+    },
+    {
+      "id": "L02",
+      "title": "Perceiver",
+      "url": "https://arxiv.org/abs/2103.03206",
+      "reading_depth": "abstract",
+      "observed_overlap": "固定潜在瓶颈压缩可变输入已有先例",
+      "research_implication": "K个query本身不作为原创"
+    },
+    {
+      "id": "L03",
+      "title": "Robot Confirmation Generation and Action Planning Using Long-context Q-Former Integrated with Multimodal LLM",
+      "url": "https://arxiv.org/html/2511.17335v1",
+      "reading_depth": "method HTML",
+      "observed_overlap": "上下文查询token生成确认描述和动作步骤，结构/功能接近",
+      "research_implication": "验证交互来源处理与在线含噪意图更新的额外作用"
+    },
+    {
+      "id": "L04",
+      "title": "NOIR",
+      "url": "https://arxiv.org/abs/2311.01454",
+      "reading_depth": "abstract",
+      "observed_overlap": "脑机目标对象和动作控制机器人已有先例",
+      "research_implication": "不能以脑机机器人链路本身主张原创"
+    },
+    {
+      "id": "L05",
+      "title": "NOIR 2.0",
+      "url": "https://arxiv.org/html/2511.20848v1",
+      "reading_depth": "method HTML",
+      "observed_overlap": "基础模型辅助预测对象/技能与减少交互",
+      "research_implication": "单纯场景任务建议不足以区分"
+    },
+    {
+      "id": "L06",
+      "title": "Gaze2Act",
+      "url": "https://zuo-kuangji.github.io/Gaze2Act/",
+      "reading_depth": "abstract and author project",
+      "observed_overlap": "人类目标与位置线索条件化VLA并支持动态交互",
+      "research_implication": "不能仅把注视换成脑机作为方法创新"
+    },
+    {
+      "id": "L07",
+      "title": "pi0.5",
+      "url": "https://arxiv.org/abs/2504.16054",
+      "reading_depth": "abstract refreshed; method checked in previous turn",
+      "observed_overlap": "语义子任务和动作专家是原框架机制",
+      "research_implication": "真实检查点能力另由V4-03核实"
+    },
+    {
+      "id": "L08",
+      "title": "When to Act, Ask, or Learn: Uncertainty-Aware Policy Steering",
+      "url": "https://arxiv.org/abs/2602.22474",
+      "reading_depth": "v2 abstract",
+      "observed_overlap": "语义歧义和动作能力影响执行/询问/干预",
+      "research_implication": "不确定时询问已有先例"
+    },
+    {
+      "id": "L09",
+      "title": "MIGU: Multimodal Instruction Grounding under Uncertainty for Manipulation Planning",
+      "url": "https://multimodal-instruction.github.io/",
+      "reading_depth": "author project only",
+      "observed_overlap": "不确定语言/指向证据融合及执行/澄清选择",
+      "research_implication": "补充证据融合近邻，全文尚未审计"
+    },
+    {
+      "id": "L10",
+      "title": "Bayesian Active Learning for Intent Disambiguation in Interactive Robot Planning",
+      "url": "https://arxiv.org/abs/2609.34270",
+      "reading_depth": "abstract",
+      "observed_overlap": "任务候选上的主动澄清已有先例",
+      "research_implication": "信息增益选问题不单列原创"
+    },
+    {
+      "id": "L11",
+      "title": "Knowing When to Ask: Resolving Uncertainty in Human-Robot Joint Planning via Explicit Dialogue and Implicit Intent Cues",
+      "url": "https://arxiv.org/abs/2603.07822",
+      "reading_depth": "v2 abstract",
+      "observed_overlap": "显式对话与隐式线索用于不确定人机规划",
+      "research_implication": "需验证通道诊断与内部token的实质收益"
+    }
+  ]
+}

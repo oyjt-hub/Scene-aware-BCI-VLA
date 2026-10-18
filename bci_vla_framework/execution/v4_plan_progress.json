@@ -1,0 +1,422 @@
+{
+  "plan_version": "V4-plan-2",
+  "plan_file": "D:\\Scene_Aware\\BCI_VLA框架_意图更新与澄清_执行计划_V4.txt",
+  "current_stage": "V4-11_local_mechanisms_passed_pending_remote_upload_authorization",
+  "next_step": "V4-11_real_weight_probe",
+  "implementation_started": true,
+  "training_started": true,
+  "new_experiments_run": true,
+  "excluded": [
+    "real EEG acquisition",
+    "physical robot actions"
+  ],
+  "historical_progress_files": [
+    "execution/progress.json",
+    "execution/v3_plan_progress.json"
+  ],
+  "historical_v2_gates": {
+    "G2": "未通过",
+    "G3": "未验证",
+    "G4": "未通过"
+  },
+  "steps": [
+    {
+      "step_id": "V4-01",
+      "title": "核对资产、范围与研究对照",
+      "status": "已完成",
+      "depends_on": [],
+      "conditional_dependencies": [],
+      "actual_artifacts": [
+        "execution/v4/01_inventory.json",
+        "docs/v4/01_scope_and_overlap.txt",
+        "execution/v4/01_literature.json",
+        "execution/v4/01_source_manifest.json",
+        "execution/v4/01_acceptance.json",
+        "execution/v4/handoff.txt"
+      ],
+      "verification": {
+        "scope": "inventory/documentation only",
+        "status": "PASS",
+        "report": "execution/v4/01_acceptance.json",
+        "checks": 16
+      },
+      "completed_at_utc": "2026-10-16T16:13:45.619453+00:00"
+    },
+    {
+      "step_id": "V4-02",
+      "title": "冻结输入输出和两类澄清协议",
+      "status": "已完成",
+      "depends_on": [
+        "V4-01"
+      ],
+      "conditional_dependencies": [],
+      "actual_artifacts": [
+        "configs/v4/interfaces.json",
+        "examples/v4/fixture_index.json",
+        "docs/v4/02_protocol.txt",
+        "bci_vla/interaction_contract_v4/validation.py",
+        "execution/v4/02_verification.json",
+        "execution/v4/02_source_manifest.json",
+        "execution/v4/02_acceptance.json",
+        "execution/v4/handoff_step02.txt"
+      ],
+      "verification": {
+        "scope": "synthetic interface/protocol/software acceptance only",
+        "status": "PASS",
+        "report": "execution/v4/02_verification.json",
+        "checks": 128
+      },
+      "completed_at_utc": "2026-10-16T16:37:04.101824+00:00"
+    },
+    {
+      "step_id": "V4-03",
+      "title": "核实π0.5高层文本能力",
+      "status": "已完成",
+      "depends_on": [
+        "V4-01",
+        "V4-02"
+      ],
+      "conditional_dependencies": [],
+      "actual_artifacts": [
+        "execution/v4/03_text_capability.json",
+        "docs/v4/03_backbone_gate.txt",
+        "execution/v4/03_source_manifest.json",
+        "execution/v4/03_acceptance.json",
+        "execution/v4/handoff_step03.txt"
+      ],
+      "verification": {
+        "scope": "capability audit; planning not established",
+        "status": "AUDIT_COMPLETE_WITH_CAPABILITY_GAPS",
+        "report": "execution/v4/03_text_capability.json",
+        "integrity_checks": 84
+      },
+      "completion_scope": "审计完成，能力门槛存在缺口",
+      "capability_gate_passed": false,
+      "completed_at_utc": "2026-10-16T17:32:48.421534+00:00",
+      "remediated_at_utc": "2026-10-17T07:37:47.658030+00:00",
+      "remediation_scope": "原LIBERO SFT＋高层LoRA的限定公共状态语言协议通过；保留泛化/低层实例限制",
+      "remediation_artifacts": [
+        "execution/v4/03R_text_capability.json",
+        "configs/v4/high_level_branch_step03R.json",
+        "artifacts/v4/high_level_lora/step240.safetensors",
+        "docs/v4/03R_backbone_remediation.txt"
+      ],
+      "high_level_language_gate": "PASSED_RESTRICTED_PROTOCOL"
+    },
+    {
+      "step_id": "V4-04",
+      "title": "建立含噪交互数据与分组划分",
+      "status": "已完成",
+      "depends_on": [
+        "V4-02"
+      ],
+      "conditional_dependencies": [
+        "Task vocabulary and execution claims require V4-03 capability audit."
+      ],
+      "actual_artifacts": [
+        "data/v4/data_manifest.json",
+        "data/v4/split_manifest.json",
+        "data/v4/annotation_rules.txt",
+        "execution/v4/04_verification.json",
+        "execution/v4/04_acceptance.json",
+        "execution/v4/handoff_step04.txt"
+      ],
+      "verification": {
+        "status": "DEVELOPMENT_PIPELINE_PASS_WITH_TRAINING_DATA_GAPS",
+        "scope": "actual LIBERO capture/data integrity, not successful manipulation or training readiness",
+        "checks": 222,
+        "report": "execution/v4/04_verification.json"
+      },
+      "completion_scope": "LIBERO开发数据管线完成；训练级主任务/放置监督未就绪",
+      "training_data_ready": false,
+      "completed_at_utc": "2026-10-17T06:13:39.618258+00:00"
+    },
+    {
+      "step_id": "V4-05",
+      "title": "登记基线并建立公共交互评估器",
+      "status": "已完成",
+      "depends_on": [
+        "V4-02",
+        "V4-04"
+      ],
+      "conditional_dependencies": [
+        "Only registry, common mock interaction runner and rule references complete here; neural baselines implemented in 06/07 and trained in 08."
+      ],
+      "actual_artifacts": [
+        "configs/v4/baseline_registry.json",
+        "docs/v4/05_fairness_table.txt",
+        "execution/v4/05_runs/summary.json",
+        "execution/v4/05_verification.json",
+        "execution/v4/05_acceptance.json",
+        "execution/v4/handoff_step05.txt"
+      ],
+      "verification": {
+        "status": "PASS_ENGINEERING_SCOPE",
+        "report": "execution/v4/05_verification.json",
+        "checks": 500
+      },
+      "completed_at_utc": "2026-10-17T06:23:13.835673+00:00",
+      "completion_scope": "基线登记/适用规则参考/真实LIBERO采集上的公共交互runner；神经和动作结果未运行"
+    },
+    {
+      "step_id": "V4-06",
+      "title": "实现小型Transformer的CPU原型",
+      "status": "已完成",
+      "depends_on": [
+        "V4-02"
+      ],
+      "conditional_dependencies": [
+        "CPU fixtures must conform to V4-02; V4-04 fixtures may be added later."
+      ],
+      "actual_artifacts": [
+        "bci_vla/neural_interaction_v4",
+        "tests/test_neural_interaction_v4.py",
+        "configs/v4/baseline_registry_step06.json",
+        "execution/v4/06_module_audit.json",
+        "execution/v4/06_cpu_result.json",
+        "execution/v4/06_verification.json",
+        "execution/v4/handoff_step06.txt"
+      ],
+      "verification": {
+        "status": "PASS_ENGINEERING_SCOPE",
+        "tests": 20,
+        "report": "execution/v4/06_verification.json"
+      },
+      "completed_at_utc": "2026-10-17T06:48:54.955021+00:00",
+      "completion_scope": "小型Transformer及B3/B4未训练CPU原型；接口、路由、等变、数值与梯度工程验收"
+    },
+    {
+      "step_id": "V4-07",
+      "title": "接入π0.5高层内部token",
+      "status": "工程接入已完成（开启语义待训练后验收）",
+      "depends_on": [
+        "V4-03",
+        "V4-06"
+      ],
+      "conditional_dependencies": [],
+      "actual_artifacts": [
+        "bci_vla/prefix_integration_v4",
+        "configs/v4/prefix_integration_step07.json",
+        "execution/v4/07_integration_audit.json",
+        "execution/v4/07_real_attempt2.json",
+        "docs/v4/07_integration.txt",
+        "execution/v4/handoff_step07.txt"
+      ],
+      "verification": {
+        "status": "PASS_ENGINEERING_ONLY_ON_SEMANTICS_NOT_PASSED",
+        "local_tests": 38,
+        "real_checks": 28,
+        "report": "execution/v4/07_integration_audit.json"
+      },
+      "completion_scope": "真实π0.5内部token/off/梯度/cache工程通过；随机prefix开启语义未通过，不是系统能力完成",
+      "dependency_remediation": "V4-03R restricted language protocol passed; use exact adapter and preserve scope",
+      "completed_at_utc": "2026-10-17T07:46:35.819426+00:00"
+    },
+    {
+      "step_id": "V4-08",
+      "title": "训练模块、基线及高层语言输出",
+      "status": "部分完成（受限开发训练完成）",
+      "depends_on": [
+        "V4-04",
+        "V4-05",
+        "V4-06",
+        "V4-07"
+      ],
+      "conditional_dependencies": [
+        "Auxiliary pretraining may precede 07 as partial work only; high-level and semantic-subtask capability must be verified or trained before completion."
+      ],
+      "actual_artifacts": [
+        "bci_vla/training_v4",
+        "configs/v4/train_step08_pilot.json",
+        "configs/v4/train_data_step08.json",
+        "docs/v4/08_training.txt",
+        "execution/v4/08_training_audit.json",
+        "execution/v4/08_acceptance.json",
+        "execution/v4/handoff_step08.txt",
+        "execution\\v4\\08_real_attempt3.json"
+      ],
+      "verification": {
+        "status": "PASS_RESTRICTED_DEVELOPMENT_TRAINING_ONLY",
+        "report": "execution/v4/08_training_audit.json",
+        "complete_runs": 12,
+        "full_step08_complete": false
+      },
+      "started_at_utc": "2026-10-17T13:06:47.697609+00:00",
+      "execution_scope": "Restricted explicit public declaration pilot; actual LIBERO images and simulated BCI; training/validation only",
+      "full_step_complete": false,
+      "restricted_development_training_complete": true,
+      "updated_at_utc": "2026-10-17T13:34:53.534703+00:00",
+      "completion_scope": "受限开发训练完成（四方法×三种子及本地权重核验）；步骤08整体未完成。",
+      "functional_binding_gate": "FAILED_DEVELOPMENT_PAIR_DIAGNOSTIC",
+      "binding_diagnosis": "execution/v4/08_binding_diagnosis.json",
+      "object_binding_remediation": {
+        "passed": true,
+        "scope": "seed0 restricted public-object binding only",
+        "choice_groups": "24/24",
+        "joint_alias_pairs": "24/24",
+        "report": "execution/v4/09_repair_audit.json",
+        "full_step08_complete": false,
+        "conflicting_declarations_language_passed": false
+      }
+    },
+    {
+      "step_id": "V4-09",
+      "title": "校准置信度与选择澄清策略",
+      "status": "受限开发范围完成",
+      "depends_on": [
+        "V4-08"
+      ],
+      "conditional_dependencies": [],
+      "actual_artifacts": [
+        "configs/v4/calibration_and_policy.json",
+        "configs/v4/policy_activation.json",
+        "docs/v4/09_policy_validation.txt",
+        "execution/v4/09_repair_audit.json",
+        "execution/v4/09_calibration_attempt7.json",
+        "execution/v4/09_checkpoint_manifest3.json"
+      ],
+      "verification": {
+        "engineering_repaired": true,
+        "policy_constraints_passed": true,
+        "CPU_tests": 88,
+        "formal_test": false,
+        "full_VLA_closed_loop": false,
+        "scope": "simulated BCI, public fixed-pick object confirmation; actual frozen LIBERO captures"
+      }
+    },
+    {
+      "step_id": "V4-10",
+      "title": "开发离线验收与正式评价预案",
+      "status": "受限开发验收与评价预案完成",
+      "depends_on": [
+        "V4-05",
+        "V4-07",
+        "V4-08",
+        "V4-09"
+      ],
+      "conditional_dependencies": [
+        "Development and calibration-audit only; formal test remains sealed."
+      ],
+      "actual_artifacts": [
+        "execution/v4/10_acceptance.json",
+        "execution/v4/10_evaluation_protocol_draft.json",
+        "docs/v4/10_development_report.txt",
+        "runs/step10_development/v2/"
+      ],
+      "verification": {
+        "status": "PASS_RESTRICTED_DEVELOPMENT_ONLY",
+        "validation_conditions": 96,
+        "extra_control_runs": 32,
+        "negative_submit_cases": 6,
+        "metric_tests": 7,
+        "formal_test": false,
+        "full_VLA_closed_loop": false,
+        "full_step08_complete": false,
+        "scope": "frozen fixed-pick simulated interaction only; formal protocol draft"
+      },
+      "completed_at_utc": "2026-10-17T20:00:37.551485+00:00"
+    },
+    {
+      "step_id": "V4-11",
+      "title": "接入主任务确认、subtask及执行授权",
+      "status": "部分完成：本地机制通过，指定上游实权重接入复验待上传授权",
+      "depends_on": [
+        "V4-07",
+        "V4-10"
+      ],
+      "conditional_dependencies": [],
+      "actual_artifacts": [
+        "bci_vla/high_level_v4/authorization.py",
+        "bci_vla/high_level_v4/upstream_subtask.py",
+        "configs/v4/upstream_subtask_source.json",
+        "execution/v4/11_acceptance.json",
+        "execution/v4/11_local_tests.json",
+        "execution/v4/11_local_virtual_trace.json",
+        "execution/v4/11_code_manifest1.json",
+        "docs/v4/11_authorization.txt"
+      ],
+      "verification": {
+        "status": "PARTIAL_LOCAL_MECHANISMS_PASSED_REMOTE_REAL_WEIGHTS_PENDING",
+        "local_tests": 28,
+        "actual_VLM_inference": false,
+        "report": "execution/v4/11_acceptance.json"
+      }
+    },
+    {
+      "step_id": "V4-12",
+      "title": "LIBERO开发闭环与视觉来源检查",
+      "status": "未开始",
+      "depends_on": [
+        "V4-10",
+        "V4-11"
+      ],
+      "conditional_dependencies": [
+        "Development scenes and seeds only; formal test remains sealed until 13."
+      ],
+      "actual_artifacts": [],
+      "verification": null
+    },
+    {
+      "step_id": "V4-13",
+      "title": "最终冻结与独立正式对照/消融测试",
+      "status": "未开始",
+      "depends_on": [
+        "V4-05",
+        "V4-10",
+        "V4-11",
+        "V4-12"
+      ],
+      "conditional_dependencies": [
+        "Complete all final baseline/ablation training and calibration on allowed partitions; freeze every method, protocol and code before opening formal test once."
+      ],
+      "actual_artifacts": [],
+      "verification": null
+    },
+    {
+      "step_id": "V4-14",
+      "title": "整理论文证据、复现入口与备份",
+      "status": "未开始",
+      "depends_on": [
+        "V4-10",
+        "V4-11",
+        "V4-12",
+        "V4-13"
+      ],
+      "conditional_dependencies": [],
+      "actual_artifacts": [],
+      "verification": null
+    }
+  ],
+  "authorization_this_turn": "步骤11；子任务改用用户指定 openpi_with_subtask；远程上传被自动审批拒绝，等待明确上传授权",
+  "review_completed": true,
+  "review_status": "V4-06_CPU_structure_verified_not_trained",
+  "execution_started": true,
+  "implementation_started_meaning": "Neural/model implementation only; contract/reference validation work does not set this flag.",
+  "latest_handoff": "execution/v4/handoff_step11.txt",
+  "development_capability_probe_run": true,
+  "formal_experiments_run": false,
+  "high_level_gate_passed": true,
+  "new_experiments_run_meaning": "restricted public-declaration development training only; no hidden-intent/action/test acceptance",
+  "data_platform": "LIBERO actual simulator; synthetic BCI only",
+  "training_data_ready": false,
+  "full_VLA_closed_loop_run": false,
+  "future_simulation_platform": "LIBERO",
+  "neural_baseline_training_run": true,
+  "high_level_gate_scope": "canonical observable-public-state language protocol only; explicitly selected object/allowed pick, missing-action clarification, confirmed pick/put + empty/holding-selected gripper -> next subtask/Done",
+  "high_level_gate_report": "execution/v4/03R_text_capability.json",
+  "high_level_lora_training_run": true,
+  "interaction_prefix_integrated": true,
+  "interaction_prefix_trained": true,
+  "on_prefix_semantics_passed": false,
+  "step08_dependency": "Fix observed token-to-language object binding first; remaining hidden-intent/placement supervision and external validation",
+  "restricted_development_training_complete": true,
+  "full_step08_complete": false,
+  "calibration_run": true,
+  "object_binding_remediation_passed": true,
+  "step09_engineering_repaired": true,
+  "step09_policy_constraints_passed": true,
+  "step10_restricted_development_passed": true,
+  "formal_evaluation_ready": false,
+  "development_interaction_evaluation_run": true,
+  "step10_data_platform": "LIBERO frozen captures; simulated BCI, no new robot dynamics"
+}

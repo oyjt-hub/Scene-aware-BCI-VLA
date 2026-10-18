@@ -1,0 +1,31 @@
+{
+  "status": "PASS_TRAINED_CONNECTOR_MECHANISMS",
+  "connector_sha256": "427fba987ad3b8a6b0b4e3dafb133f86980345706698b8b8ba48a41969f72464",
+  "probe_reference_changed": true,
+  "tensor_inputs_identical": true,
+  "output_max_abs_deltas": {
+    "prefix": 0.0,
+    "candidate_logits": 0.0,
+    "reliability_logit": 0.0,
+    "interaction_logits": 0.0
+  },
+  "controls": {
+    "stop": {
+      "action": "WAIT",
+      "model_calls": 0,
+      "route": "STOP_DIRECT_EXISTING_PATH",
+      "execution_authorized": false
+    },
+    "cancel": {
+      "action": "WAIT",
+      "model_calls": 0,
+      "route": "CANCEL_REVOKE_EXISTING_PATH",
+      "execution_authorized": false
+    }
+  },
+  "passed": true,
+  "scope": "Actual selected trained connector; PROBE object references only, not hidden-intent correctness or VLM/robot success",
+  "real_eeg": false,
+  "VLA_called": false,
+  "formal_test_accessed": false
+}

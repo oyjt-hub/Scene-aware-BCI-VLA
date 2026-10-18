@@ -1,0 +1,11 @@
+{
+  "optimizer_steps": 240,
+  "metrics": {
+    "clarify": 1.0,
+    "main": 1.0,
+    "subtask_after_symbolic": 1.0,
+    "subtask_before": 1.0,
+    "subtask_pick_done_symbolic": 1.0
+  },
+  "training_loss_last20": 4.476895837797201e-05
+}

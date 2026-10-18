@@ -1,0 +1,6 @@
+V4-09：受限开发策略通过。
+CPU 88项通过；对象组24/24、编号对24/24；语言112/120，声明冲突8条仍失败。
+选中策略：fixed_i6_c4_recheck；策略可用：True；禁止把校准指标改善称为完整BCI→VLA成功。
+报告docs/v4/09_policy_validation.txt；状态execution/v4/09_repair_audit.json。
+下一步可进入受限V4-10开发验收；steps08广义监督/放置仍缺。当前策略为固定规则门控，开发回归11/32解决、错误0/8，不是新的独立测试；旧G2/G3/G4保留。
+config实际启用状态见configs/v4/policy_activation.json。真实EEG/实体动作排除。

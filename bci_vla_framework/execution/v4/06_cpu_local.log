@@ -1,0 +1,26 @@
+test_01_actual_LIBERO_shapes_all_controls (test_neural_interaction_v4.ConnectorTests.test_01_actual_LIBERO_shapes_all_controls) ... ok
+test_02_actual_parameter_budget (test_neural_interaction_v4.ConnectorTests.test_02_actual_parameter_budget) ... ok
+test_03_empty_observation_and_zero_N_H (test_neural_interaction_v4.ConnectorTests.test_03_empty_observation_and_zero_N_H) ... ok
+test_04_batch_isolation (test_neural_interaction_v4.ConnectorTests.test_04_batch_isolation) ... ok
+test_05_joint_object_permutation (test_neural_interaction_v4.ConnectorTests.test_05_joint_object_permutation) ... ok
+test_06_alias_label_not_numeric_features (test_neural_interaction_v4.ConnectorTests.test_06_alias_label_not_numeric_features) ... ok
+test_07_padding_NaN_ignored_valid_illegal_rejected (test_neural_interaction_v4.ConnectorTests.test_07_padding_NaN_ignored_valid_illegal_rejected) ... ok
+test_08_channel_barrier_at_every_layer (test_neural_interaction_v4.ConnectorTests.test_08_channel_barrier_at_every_layer) ... ok
+test_09_PROBE_object_semantics_invariance (test_neural_interaction_v4.ConnectorTests.test_09_PROBE_object_semantics_invariance) ... ok
+test_10_diagnostic_numeric_effect_and_oneway_gradient (test_neural_interaction_v4.ConnectorTests.test_10_diagnostic_numeric_effect_and_oneway_gradient) ... ok
+test_11_persistent_summary_or_insufficient (test_neural_interaction_v4.ConnectorTests.test_11_persistent_summary_or_insufficient) ... ok
+test_12_long_probe_history_preserves_confirmed_task (test_neural_interaction_v4.ConnectorTests.test_12_long_probe_history_preserves_confirmed_task) ... ok
+test_13_STOP_CANCEL_no_torch_import (test_neural_interaction_v4.ConnectorTests.test_13_STOP_CANCEL_no_torch_import) ... ok
+test_14_private_loss_binding_no_forward_label (test_neural_interaction_v4.ConnectorTests.test_14_private_loss_binding_no_forward_label) ... ok
+test_15_backward_all_models_and_components (test_neural_interaction_v4.ConnectorTests.test_15_backward_all_models_and_components) ... ok
+test_16_public_hidden_field_and_feature_profile_rejected (test_neural_interaction_v4.ConnectorTests.test_16_public_hidden_field_and_feature_profile_rejected) ... ok
+test_17_option_order_invariance (test_neural_interaction_v4.ConnectorTests.test_17_option_order_invariance) ... ok
+test_18_object_gradient_equivariance (test_neural_interaction_v4.ConnectorTests.test_18_object_gradient_equivariance) ... ok
+test_19_tensor_history_bound_and_pending_mask (test_neural_interaction_v4.ConnectorTests.test_19_tensor_history_bound_and_pending_mask) ... ok
+test_20_shared_controls_do_not_have_Full_barrier (test_neural_interaction_v4.ConnectorTests.test_20_shared_controls_do_not_have_Full_barrier) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 1.423s
+
+OK
+{"status": "PASS", "tests_run": 20, "elapsed_s": 1.5125527381896973, "torch": "2.7.1+cpu", "cuda_initialized": false}

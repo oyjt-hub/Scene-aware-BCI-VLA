@@ -1,0 +1,156 @@
+{
+  "files": [
+    {
+      "path": "bci_vla/__init__.py",
+      "sha256": "3fac5721bda7a5a98a1a9fe207e7797900f81e746a0e2905452c1a8ec8d9823b"
+    },
+    {
+      "path": "bci_vla/data_v4/__init__.py",
+      "sha256": "073d6dec761c49e5186558017c5830a68f0f1316f73da4ac57ea70331223f8ac"
+    },
+    {
+      "path": "bci_vla/data_v4/channel.py",
+      "sha256": "4e1dbb76ee44ef8a563f5e565b5d6f69da29888d26ab89c86aa0f625d59e15ec"
+    },
+    {
+      "path": "bci_vla/data_v4/contracts.py",
+      "sha256": "4638b75b1db24a7512ee1325e11f74ad74e927f564bb32cf8f6b8672b6c96f40"
+    },
+    {
+      "path": "bci_vla/interaction_contract_v4/__init__.py",
+      "sha256": "73bf2645280cea59121de59d648a8a8c4f954264680ee9e46d35c16428262cd3"
+    },
+    {
+      "path": "bci_vla/interaction_contract_v4/validation.py",
+      "sha256": "bda1a3f6b1c7310841d31aec5ce18d8d1d646a427e4939aa1fa8525214f3ea0a"
+    },
+    {
+      "path": "bci_vla/neural_interaction_v4/__init__.py",
+      "sha256": "0215fb2422c090ffb206fceb2caec61f87e44bb0ebd6e6e9109a7c5b06777c49"
+    },
+    {
+      "path": "bci_vla/neural_interaction_v4/config.py",
+      "sha256": "cfb3ed1d99514bbd51f473824539e7c6dc900dea5285422020f3b4dc683c3b8f"
+    },
+    {
+      "path": "bci_vla/neural_interaction_v4/control.py",
+      "sha256": "9d1a2167eb85ce19574fddf3e4a87ab213a7edb567be7194fdc2dd89c1e0a617"
+    },
+    {
+      "path": "bci_vla/neural_interaction_v4/export.py",
+      "sha256": "40a35773709e052a392a565b02d6cf02c505b3d43acd2d7f19ba2e4a000a7da8"
+    },
+    {
+      "path": "bci_vla/neural_interaction_v4/losses.py",
+      "sha256": "89cd41e5cc6d71af3ed5821328912625ef27f47255c45ebcdc4b365e9e2d87a4"
+    },
+    {
+      "path": "bci_vla/neural_interaction_v4/model.py",
+      "sha256": "2854765aa0fe57ff9392e773ee8c8a5e45d65dd15ce61710437d005a2e2810dc"
+    },
+    {
+      "path": "bci_vla/neural_interaction_v4/tensorizer.py",
+      "sha256": "78e09bda4daa7df830c2381f839b12a99351b147e2a62c28630819e6f10c624a"
+    },
+    {
+      "path": "configs/v4/interfaces.json",
+      "sha256": "2b37aef3dab7f952c9f2a76300702cccc2b0e16a34a0a98f0fdedd473aefd119"
+    },
+    {
+      "path": "configs/v4/interfaces_data_4_1.json",
+      "sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31"
+    },
+    {
+      "path": "examples/v4/abstain_without_missing_slot_output.json",
+      "sha256": "2552b9ae9f529f5f0f9a5b401538b59c96c79cefa6323204869e554bcd9b4f43"
+    },
+    {
+      "path": "examples/v4/cancel_clears_task.json",
+      "sha256": "6e9c7cd81a62b464dc1963135658432f1f55d2f6c421ff7602a0619d7c11d098"
+    },
+    {
+      "path": "examples/v4/confirmed_task_survives_nine_probes.json",
+      "sha256": "5ab0cc8e97347f4d282776a56beaf1c99603a9f2baada6d3ab7bb2017b6039fc"
+    },
+    {
+      "path": "examples/v4/empty_scene_and_history.json",
+      "sha256": "a78e96c7ba9ee5fb90ae2d7f132dc6cc7c1a18b93d3fe0b25ca946976e4a9a0d"
+    },
+    {
+      "path": "examples/v4/expired_task_evidence.json",
+      "sha256": "54d1b3b1f743d29efd17b0b085cbf93084b30aae775fc0e330956e832b47710e"
+    },
+    {
+      "path": "examples/v4/fixture_index.json",
+      "sha256": "8948511ef482f4215237af131666d8fa330f735f909282f88b714e19932b2dd6"
+    },
+    {
+      "path": "examples/v4/mapping_change_invalidates_old_evidence.json",
+      "sha256": "e6493b61c8a71ae346e4a4bca63fc964d89b72b0a849532b6a4a4174c561afa4"
+    },
+    {
+      "path": "examples/v4/missing_action_slot_output.json",
+      "sha256": "09b9687e5618a603efad5745ebe8a81b35f810f629aab4c6605fb3376b2a462f"
+    },
+    {
+      "path": "examples/v4/missing_roi_feature.json",
+      "sha256": "30c35181d36c9ae54a0c4c84a0104a8f4474b971b1b89a1926aa24aebdfe312e"
+    },
+    {
+      "path": "examples/v4/module_output.json",
+      "sha256": "9beca2cbc28c38d79b44bb1244f4ac3e15932c7e3a4533b3afd9d07cdb379f9b"
+    },
+    {
+      "path": "examples/v4/no_response_retains_probe_role.json",
+      "sha256": "370995d62b9087abe6f4caa7796f76c9dc078f4d2c9dc29596bae1b77f7cb602"
+    },
+    {
+      "path": "examples/v4/object_reorder_with_alias_binding.json",
+      "sha256": "b6f621e87edc7b5e7920267596133097995f9ad73a0f97411d449dd4b072402e"
+    },
+    {
+      "path": "examples/v4/private_labels.json",
+      "sha256": "dea52da21c100647e64f34f38e31b37380f84b7c704a6f98d63f136c488bfd26"
+    },
+    {
+      "path": "examples/v4/private_labels_alias_variant.json",
+      "sha256": "5952576e662fddb233b6fcacd6790e48b02da7d7a32902f67f4cadc3aa57c9db"
+    },
+    {
+      "path": "examples/v4/public_input.json",
+      "sha256": "8075aaca07b58b57a4f2e32e71468872b426114af687cbf768fdb1121de17007"
+    },
+    {
+      "path": "examples/v4/reject_clears_task.json",
+      "sha256": "8adc0635ea621db5f072bca418efab4a8bd12996201de084a4a56ee68c72a0e0"
+    },
+    {
+      "path": "examples/v4/stop_clears_task.json",
+      "sha256": "1cc89279f1c0f1a38d57c107e74d95633047e43617c8dad90f65c1b052ca3d19"
+    },
+    {
+      "path": "examples/v4/target_outside_candidates_output.json",
+      "sha256": "6b3ed91e62936f0d8188319447046a74860fc17c39ee2a4446011cc1906c9bc1"
+    },
+    {
+      "path": "execution/v4/06_fixtures/manifest.json",
+      "sha256": "6caa886b01c5d7578cfefcbdf399c681c6caf024dce59ec942c7c62fab89b5b5"
+    },
+    {
+      "path": "execution/v4/06_fixtures/private.json",
+      "sha256": "b3b75b2a94d295dc43c3882af1c24005abc39286b42bcdda45b3b65d9e9c31f1"
+    },
+    {
+      "path": "execution/v4/06_fixtures/public.json",
+      "sha256": "5dbdd618112135b0a58b935838102531525c6225f9246739bf54c6d8346be208"
+    },
+    {
+      "path": "execution/v4/step06_cpu_check.py",
+      "sha256": "54711b50159dbcfa40fde3b3b588143aa25345c472781f956fe15a6c50322951"
+    },
+    {
+      "path": "tests/test_neural_interaction_v4.py",
+      "sha256": "a6842866001c906cfc3892a9f133c2ee2030884d6591eaf9d52fb568279e8b3f"
+    }
+  ]
+}

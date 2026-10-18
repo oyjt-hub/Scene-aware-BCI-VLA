@@ -1,0 +1,9 @@
+{
+  "status": "PASS_CPU_MECHANISMS_ONLY",
+  "tests_run": 78,
+  "failures": 0,
+  "errors": 0,
+  "elapsed_s": 26.429,
+  "log_sha256": "f272e5032de0dac026f26c24d9cead4b1d285de4012b3a244c1dd53856699c1b",
+  "scope": "Binding/loss/data/partition isolation/calibration/clarification/online-audit mechanisms; not real EEG or robot performance"
+}

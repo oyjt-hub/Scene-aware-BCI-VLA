@@ -1,0 +1,7 @@
+AUDIT_STAGE={"name": "adaptation_reloaded", "parameters": 3022848, "weights_sha256": "c1dbc8bd23e8e2590ac2670839a068d82423aa0c4620e734d2d99618afaec380"}
+AUDIT_STAGE={"name": "evaluation_progress", "completed": 40, "total": 200}
+AUDIT_STAGE={"name": "evaluation_progress", "completed": 80, "total": 200}
+AUDIT_STAGE={"name": "evaluation_progress", "completed": 120, "total": 200}
+AUDIT_STAGE={"name": "evaluation_progress", "completed": 160, "total": 200}
+AUDIT_STAGE={"name": "evaluation_progress", "completed": 200, "total": 200}
+AUDIT_RESULT={"scope": "development reload and contrast audit of restricted language pilot", "training": false, "formal_test_accessed": false, "actual_after_grasp_images": false, "status": "AUDIT_COMPLETE", "metrics": {"all_validation_original": {"exact": 120, "count": 120}, "joint_alias_permutation": {"exact": 40, "count": 40}, "unseen_wording": {"exact": 40, "count": 40}}, "cache_max_abs_logit_difference": 0.9375, "cache_argmax_all_agree": true, "off_regression_max_abs": 0.0, "adapters_disabled": true, "checkpoint_loaded": true, "high_level_gate_passed": false, "optimizer_steps": 0}

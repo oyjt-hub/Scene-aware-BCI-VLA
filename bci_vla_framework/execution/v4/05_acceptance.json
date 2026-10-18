@@ -1,0 +1,27 @@
+{
+  "step_id": "V4-05",
+  "status": "PASS_ENGINEERING_SCOPE",
+  "completed_at_utc": "2026-10-17T06:23:13.835673+00:00",
+  "checks": 500,
+  "methods_run": {
+    "B0": {
+      "runs": 32,
+      "submissions": 53
+    },
+    "B1_binary_filter_fixed_policy": {
+      "runs": 16,
+      "submissions": 12
+    }
+  },
+  "legacy_filter_successful_updates": 176,
+  "neural_baselines_registered_not_run": true,
+  "full_legacy_planner_run": false,
+  "VLA_actions_run": false,
+  "simulation_dynamics_advanced": false,
+  "LIBERO_capture_source": true,
+  "training_run": false,
+  "training_data_ready": false,
+  "high_level_gate_passed": false,
+  "formal_test_unsealed": false,
+  "next_step": "V4-06"
+}

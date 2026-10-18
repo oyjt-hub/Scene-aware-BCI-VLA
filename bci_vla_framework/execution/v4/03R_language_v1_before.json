@@ -1,0 +1,334 @@
+{
+  "label": "before",
+  "metrics": {
+    "clarify": 0.0,
+    "main": 0.0,
+    "subtask_after_symbolic": 0.0,
+    "subtask_before": 0.0,
+    "subtask_pick_done_symbolic": 0.0
+  },
+  "exact": 0,
+  "count": 40,
+  "cases": [
+    {
+      "episode": "3e7f4a934272c0ac1dcfa709",
+      "family": "clarify",
+      "expected": "Which task do you want?",
+      "generated": "1.0, 0.43",
+      "exact": false,
+      "visual": true
+    },
+    {
+      "episode": "a733559f6120147aa83fb6dd",
+      "family": "clarify",
+      "expected": "Which task do you want?",
+      "generated": "1.0, 0.6",
+      "exact": false,
+      "visual": true
+    },
+    {
+      "episode": "8a73e47aa9c92d370ca37806",
+      "family": "clarify",
+      "expected": "Which task do you want?",
+      "generated": "1.0, 0.66",
+      "exact": false,
+      "visual": true
+    },
+    {
+      "episode": "dfaa20a11afa4e9a7221ad55",
+      "family": "clarify",
+      "expected": "Which task do you want?",
+      "generated": "1",
+      "exact": false,
+      "visual": true
+    },
+    {
+      "episode": "7d02da34438c898381a919fe",
+      "family": "clarify",
+      "expected": "Which task do you want?",
+      "generated": "1",
+      "exact": false,
+      "visual": true
+    },
+    {
+      "episode": "7d02da34438c898381a919fe",
+      "family": "clarify",
+      "expected": "Which task do you want?",
+      "generated": "1",
+      "exact": false,
+      "visual": true
+    },
+    {
+      "episode": "66c54cbd120fded5bec9b5b7",
+      "family": "clarify",
+      "expected": "Which task do you want?",
+      "generated": "1",
+      "exact": false,
+      "visual": true
+    },
+    {
+      "episode": "8ce9cefdbfafe24aab2e9805",
+      "family": "clarify",
+      "expected": "Which task do you want?",
+      "generated": "1",
+      "exact": false,
+      "visual": true
+    },
+    {
+      "episode": "3e7f4a934272c0ac1dcfa709",
+      "family": "main",
+      "expected": "Pick up OBJ_0.",
+      "generated": "1.0, 0.68",
+      "exact": false,
+      "visual": true
+    },
+    {
+      "episode": "a733559f6120147aa83fb6dd",
+      "family": "main",
+      "expected": "Pick up OBJ_1.",
+      "generated": "1.0, 0.66",
+      "exact": false,
+      "visual": true
+    },
+    {
+      "episode": "8a73e47aa9c92d370ca37806",
+      "family": "main",
+      "expected": "Pick up OBJ_0.",
+      "generated": "1.0, 0.66",
+      "exact": false,
+      "visual": true
+    },
+    {
+      "episode": "dfaa20a11afa4e9a7221ad55",
+      "family": "main",
+      "expected": "Pick up OBJ_1.",
+      "generated": "1",
+      "exact": false,
+      "visual": true
+    },
+    {
+      "episode": "7d02da34438c898381a919fe",
+      "family": "main",
+      "expected": "Pick up OBJ_0.",
+      "generated": "1. 1",
+      "exact": false,
+      "visual": true
+    },
+    {
+      "episode": "7d02da34438c898381a919fe",
+      "family": "main",
+      "expected": "Pick up OBJ_3.",
+      "generated": "1. 1",
+      "exact": false,
+      "visual": true
+    },
+    {
+      "episode": "66c54cbd120fded5bec9b5b7",
+      "family": "main",
+      "expected": "Pick up OBJ_2.",
+      "generated": "1. 1",
+      "exact": false,
+      "visual": true
+    },
+    {
+      "episode": "8ce9cefdbfafe24aab2e9805",
+      "family": "main",
+      "expected": "Pick up OBJ_1.",
+      "generated": "1",
+      "exact": false,
+      "visual": true
+    },
+    {
+      "episode": "3e7f4a934272c0ac1dcfa709",
+      "family": "subtask_after_symbolic",
+      "expected": "Place OBJ_0 into OBJ_1.",
+      "generated": "1",
+      "exact": false,
+      "visual": false
+    },
+    {
+      "episode": "a733559f6120147aa83fb6dd",
+      "family": "subtask_after_symbolic",
+      "expected": "Place OBJ_1 into OBJ_0.",
+      "generated": "1",
+      "exact": false,
+      "visual": false
+    },
+    {
+      "episode": "8a73e47aa9c92d370ca37806",
+      "family": "subtask_after_symbolic",
+      "expected": "Place OBJ_0 into OBJ_1.",
+      "generated": "1",
+      "exact": false,
+      "visual": false
+    },
+    {
+      "episode": "dfaa20a11afa4e9a7221ad55",
+      "family": "subtask_after_symbolic",
+      "expected": "Place OBJ_1 into OBJ_2.",
+      "generated": "1",
+      "exact": false,
+      "visual": false
+    },
+    {
+      "episode": "7d02da34438c898381a919fe",
+      "family": "subtask_after_symbolic",
+      "expected": "Place OBJ_0 into OBJ_1.",
+      "generated": "1",
+      "exact": false,
+      "visual": false
+    },
+    {
+      "episode": "7d02da34438c898381a919fe",
+      "family": "subtask_after_symbolic",
+      "expected": "Place OBJ_3 into OBJ_0.",
+      "generated": "1",
+      "exact": false,
+      "visual": false
+    },
+    {
+      "episode": "66c54cbd120fded5bec9b5b7",
+      "family": "subtask_after_symbolic",
+      "expected": "Place OBJ_2 into OBJ_3.",
+      "generated": "1",
+      "exact": false,
+      "visual": false
+    },
+    {
+      "episode": "8ce9cefdbfafe24aab2e9805",
+      "family": "subtask_after_symbolic",
+      "expected": "Place OBJ_1 into OBJ_2.",
+      "generated": "1",
+      "exact": false,
+      "visual": false
+    },
+    {
+      "episode": "3e7f4a934272c0ac1dcfa709",
+      "family": "subtask_before",
+      "expected": "Pick up OBJ_0.",
+      "generated": "0.0000000000000000000000",
+      "exact": false,
+      "visual": true
+    },
+    {
+      "episode": "a733559f6120147aa83fb6dd",
+      "family": "subtask_before",
+      "expected": "Pick up OBJ_1.",
+      "generated": "0.0",
+      "exact": false,
+      "visual": true
+    },
+    {
+      "episode": "8a73e47aa9c92d370ca37806",
+      "family": "subtask_before",
+      "expected": "Pick up OBJ_0.",
+      "generated": "0.0",
+      "exact": false,
+      "visual": true
+    },
+    {
+      "episode": "dfaa20a11afa4e9a7221ad55",
+      "family": "subtask_before",
+      "expected": "Pick up OBJ_1.",
+      "generated": "1",
+      "exact": false,
+      "visual": true
+    },
+    {
+      "episode": "7d02da34438c898381a919fe",
+      "family": "subtask_before",
+      "expected": "Pick up OBJ_0.",
+      "generated": "1",
+      "exact": false,
+      "visual": true
+    },
+    {
+      "episode": "7d02da34438c898381a919fe",
+      "family": "subtask_before",
+      "expected": "Pick up OBJ_3.",
+      "generated": "1",
+      "exact": false,
+      "visual": true
+    },
+    {
+      "episode": "66c54cbd120fded5bec9b5b7",
+      "family": "subtask_before",
+      "expected": "Pick up OBJ_2.",
+      "generated": "1",
+      "exact": false,
+      "visual": true
+    },
+    {
+      "episode": "8ce9cefdbfafe24aab2e9805",
+      "family": "subtask_before",
+      "expected": "Pick up OBJ_1.",
+      "generated": "1",
+      "exact": false,
+      "visual": true
+    },
+    {
+      "episode": "3e7f4a934272c0ac1dcfa709",
+      "family": "subtask_pick_done_symbolic",
+      "expected": "Done.",
+      "generated": "1.0, 0.43",
+      "exact": false,
+      "visual": false
+    },
+    {
+      "episode": "a733559f6120147aa83fb6dd",
+      "family": "subtask_pick_done_symbolic",
+      "expected": "Done.",
+      "generated": "1.0, 0.47 0.000000000000",
+      "exact": false,
+      "visual": false
+    },
+    {
+      "episode": "8a73e47aa9c92d370ca37806",
+      "family": "subtask_pick_done_symbolic",
+      "expected": "Done.",
+      "generated": "1.0, 0.46",
+      "exact": false,
+      "visual": false
+    },
+    {
+      "episode": "dfaa20a11afa4e9a7221ad55",
+      "family": "subtask_pick_done_symbolic",
+      "expected": "Done.",
+      "generated": "1",
+      "exact": false,
+      "visual": false
+    },
+    {
+      "episode": "7d02da34438c898381a919fe",
+      "family": "subtask_pick_done_symbolic",
+      "expected": "Done.",
+      "generated": "1",
+      "exact": false,
+      "visual": false
+    },
+    {
+      "episode": "7d02da34438c898381a919fe",
+      "family": "subtask_pick_done_symbolic",
+      "expected": "Done.",
+      "generated": "1",
+      "exact": false,
+      "visual": false
+    },
+    {
+      "episode": "66c54cbd120fded5bec9b5b7",
+      "family": "subtask_pick_done_symbolic",
+      "expected": "Done.",
+      "generated": "1",
+      "exact": false,
+      "visual": false
+    },
+    {
+      "episode": "8ce9cefdbfafe24aab2e9805",
+      "family": "subtask_pick_done_symbolic",
+      "expected": "Done.",
+      "generated": "1",
+      "exact": false,
+      "visual": false
+    }
+  ]
+}

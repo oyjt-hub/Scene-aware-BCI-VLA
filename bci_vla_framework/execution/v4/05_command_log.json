@@ -1,0 +1,15 @@
+[
+  {
+    "command": "python execution/v4/prepare_step05.py",
+    "purpose": "baseline registration only"
+  },
+  {
+    "command": "python execution/v4/run_step05.py --refresh-unfrozen",
+    "purpose": "development B0/actual binary legacy-filter runs; one V2 response TTL issue repaired before final runs"
+  },
+  {
+    "command": "python execution/v4/verify_step05.py",
+    "status": "PASS",
+    "checks": 500
+  }
+]

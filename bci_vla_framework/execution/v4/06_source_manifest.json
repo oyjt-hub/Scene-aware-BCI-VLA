@@ -1,0 +1,137 @@
+{
+  "step": "V4-06",
+  "files": [
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\neural_interaction_v4\\__init__.py",
+      "sha256": "0215fb2422c090ffb206fceb2caec61f87e44bb0ebd6e6e9109a7c5b06777c49"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\neural_interaction_v4\\config.py",
+      "sha256": "cfb3ed1d99514bbd51f473824539e7c6dc900dea5285422020f3b4dc683c3b8f"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\neural_interaction_v4\\control.py",
+      "sha256": "9d1a2167eb85ce19574fddf3e4a87ab213a7edb567be7194fdc2dd89c1e0a617"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\neural_interaction_v4\\export.py",
+      "sha256": "40a35773709e052a392a565b02d6cf02c505b3d43acd2d7f19ba2e4a000a7da8"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\neural_interaction_v4\\losses.py",
+      "sha256": "89cd41e5cc6d71af3ed5821328912625ef27f47255c45ebcdc4b365e9e2d87a4"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\neural_interaction_v4\\model.py",
+      "sha256": "2854765aa0fe57ff9392e773ee8c8a5e45d65dd15ce61710437d005a2e2810dc"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\neural_interaction_v4\\tensorizer.py",
+      "sha256": "78e09bda4daa7df830c2381f839b12a99351b147e2a62c28630819e6f10c624a"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\configs\\v4\\baseline_registry_step06.json",
+      "sha256": "fc8ed3e01e59bb8a0c27cf7eb9ae1c64c4d6acc6772a2ac2f61c0999bf27f7cf"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\docs\\v4\\06_module.txt",
+      "sha256": "050d4d4b7633ec0f4b75572a1123b59bfd78b2900e9298a25e183d36761acc1d"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\06_acceptance.json",
+      "sha256": "02f6e5be38641ca7822bda50f30a68004fb6cbadc26950469050fb09ae324c64"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\06_before_manifest.json",
+      "sha256": "aa36ea9c5ba7c7226c1667d0afaf3a396bc833eb651e954271fdfbd9d8b2806f"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\06_command_log.json",
+      "sha256": "791851c52f82edc195c50d692563cba54c354dcfa2cdeaf1ab4ee4896bd707b0"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\06_cpu_attempt1.json",
+      "sha256": "b475e6a99f1f48f32ee9ee7debde21468b2e5f004e812b0dac8481572e686496"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\06_cpu_attempt1.log",
+      "sha256": "6f9a2c5d1c2d6bf3abd29d52307970412669290de3bfc59b46024731f9d7a3ae"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\06_cpu_attempt2.json",
+      "sha256": "23442f2fd56b36cd13b61b55f931292abd294b32d1e85a6cf5a3111b6e525aa6"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\06_cpu_attempt2.log",
+      "sha256": "419e87f8eea7eb97704539b397d57f177ca0e2e859c921a2b9836c470564181c"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\06_cpu_input_manifest.json",
+      "sha256": "3b0b7225ad66c732ea6c9527decc0184c725e8e4229262d55cd9403c8aec5df9"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\06_cpu_local.log",
+      "sha256": "3080f553211af9b3af88780731f664083b7419740d0faa2fbd08243a8d126f66"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\06_cpu_result.json",
+      "sha256": "5b1c5bc430bac82f143009d36b8e8fc2f03e6b0350caf03e75e999f7b83c8cd0"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\06_fixtures\\manifest.json",
+      "sha256": "6205d3fe59bb1221d802029d1606e5385b8ee7e17cc23a8938d6c5f927ac1d63"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\06_fixtures\\private.json",
+      "sha256": "4f4f799f7f22fc1ad77c6d70049ecfbd089c3e80da441edca01d45a6fdbe4b4c"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\06_fixtures\\public.json",
+      "sha256": "a0251f6e8aa324c188ff3f3d596073c600bf492901cc1a47ac92766094354fdd"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\06_module_audit.json",
+      "sha256": "f3abdfcffba6a2e6d87454ae5b61894f4950bbe12c4edd8136aaac1a0e3ac085"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\06_progress_before.json",
+      "sha256": "a37add24aff66d18d7baab5482a09dbfddac892fa11421cf9e723ee29365a7aa"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\06_upload_manifest.json",
+      "sha256": "7ef5feb300e0fdfffe4321e154b41ff288e4a5064ae6183ebbaf8bcd0e54607e"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\06_verification.json",
+      "sha256": "3970b9740f6efece8876c23ceabb832e0b48665c78daa03010d8359abdfc11ba"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\finalize_step06.py",
+      "sha256": "0fbea14c47c78da3b4f6c1c6f56beb5115d5a61437f8a361bd8a1c3f6837e006"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\handoff_step06.txt",
+      "sha256": "9122b833064e3b002be910490f168910ebb11682bb35f0937691672c11890850"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\prepare_step06.py",
+      "sha256": "4ad16515094600d720b9a753db13458b045dd29e95e4e9ec6573885f8aac5422"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\run_step06_cpu.py",
+      "sha256": "de947f99dc5c931065b65cae0f67525b61b756154afc87713573aece1147b1fd"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\run_step06_local.py",
+      "sha256": "9868afb8bf2193b76146285cec5d28110921c8d28186d672e31c4a35b012affa"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\step06_cpu_check.py",
+      "sha256": "3a40f256b844c4a04c28afaf95ef7baa18d5315ddf77cd9506a36737dbda1179"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\tests\\test_neural_interaction_v4.py",
+      "sha256": "9827b0f11a50ca0156b5fe9330ee9cf14b0b6a04d1afee71f65d37b0620903a4"
+    }
+  ]
+}

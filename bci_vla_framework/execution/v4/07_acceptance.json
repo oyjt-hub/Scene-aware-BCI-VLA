@@ -1,0 +1,12 @@
+{
+  "step_id": "V4-07",
+  "status": "PASS_ENGINEERING_ONLY_ON_SEMANTICS_NOT_PASSED",
+  "completed_at_utc": "2026-10-17T07:46:35.819426+00:00",
+  "local_tests": 38,
+  "real_checks": 28,
+  "on_semantics_passed": false,
+  "trained_interaction_prefix": false,
+  "instance_binding_scope": "native off language + tensor/metadata engineering, on semantics deferred",
+  "training_data_ready": false,
+  "next_step": "V4-08 after missing supervision is repaired"
+}

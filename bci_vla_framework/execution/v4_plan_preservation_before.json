@@ -1,0 +1,31 @@
+{
+  "scope": "before_plan_only_edit",
+  "files": {
+    "D:\\Scene_Aware\\BCI_VLA当前计划入口.txt": "b6462a15dbe282f963b2fbb7fe7f0ffe016b4420a01083ceb07fb30859728206",
+    "D:\\Scene_Aware\\BCI_VLA框架_神经交互模块方案_V3.txt": "fe589431be05cf6722948effa5dc8073d02866289b7dc8d1753faf2f6f17b819",
+    "D:\\Scene_Aware\\BCI_VLA通用交互框架_逐步执行手册.txt": "13b5813bec3a9d1bcdf44b13f46eb51d8ca57b8338a40bb90ce0c8608169b213",
+    "D:\\Scene_Aware\\BCI_VLA通用交互框架_逐步执行手册_V3.txt": "8bc8a4aa0ad6840d037d410bda94da1e3f46fae64a691ddaa2b6ef71193aaba6",
+    "D:\\Scene_Aware\\bci_vla_framework\\configs\\design_v3.json": "e16e8787df10d6f1bd976ace795a33c0aa1b2d7a7236f4e396353067f5511659",
+    "D:\\Scene_Aware\\bci_vla_framework\\execution\\03_source_manifest.json": "6764d4814bae9eb225c2a6c77186e5a865e0fc68f7a05a3ae52213b0078ade08",
+    "D:\\Scene_Aware\\bci_vla_framework\\execution\\04_source_manifest.json": "a88fc42ebf6a349ddc05717cb240c5b4300d28cde635f9bb5041be21a3119e8d",
+    "D:\\Scene_Aware\\bci_vla_framework\\execution\\05_source_manifest.json": "14f81d5998e42708c15854360fd4811bd51e97331e34811d7bc89f61e38bfd39",
+    "D:\\Scene_Aware\\bci_vla_framework\\execution\\06_source_manifest.json": "f2d4f753300e8a5db60eab6bb4b5fe89faafa083efdcd6bf25618834f24b0618",
+    "D:\\Scene_Aware\\bci_vla_framework\\execution\\07_source_manifest.json": "0018bae30f356d00440297bd4358671b15e6314c277d3dc104db8a9bfd774492",
+    "D:\\Scene_Aware\\bci_vla_framework\\execution\\08_source_manifest.json": "086c4a44d2ff23391da56b3ab605fd545b30fbd4463fffe34e03cb12f87e0589",
+    "D:\\Scene_Aware\\bci_vla_framework\\execution\\09_source_manifest.json": "8028c37b8c7353c76eb3a732a7b2efe1cc210545bdd5abccc8cff62a0688a9dd",
+    "D:\\Scene_Aware\\bci_vla_framework\\execution\\10_source_manifest.json": "2c21654d6e5f9761f7bdf88b9b96219e359ad13123a34d5be0de4d4999fb2259",
+    "D:\\Scene_Aware\\bci_vla_framework\\execution\\11_source_manifest.json": "7502da33b68bb06347b7e762b5f3e190eb934c1a7f299e2e893a6b4715d4fae5",
+    "D:\\Scene_Aware\\bci_vla_framework\\execution\\12R_source_manifest.json": "3247dfc93860cada3f44101d9fb37ac3a384cd5883c32687955c497b563e48bf",
+    "D:\\Scene_Aware\\bci_vla_framework\\execution\\12_source_manifest.json": "2be1668b4f554434e43abfdd27e30d83c71e16017359e70daed4ccba863b221b",
+    "D:\\Scene_Aware\\bci_vla_framework\\execution\\13_source_manifest.json": "c7afbb14f6300859dd6c493c5d525e3983d0560968a8dd1c717f5978e147e782",
+    "D:\\Scene_Aware\\bci_vla_framework\\execution\\14C_source_manifest.json": "18dd113bd3206f02456dc70030051e662093a2955b2fbbab74f192aff8e78994",
+    "D:\\Scene_Aware\\bci_vla_framework\\execution\\14_source_manifest.json": "671c30fd1356236757bd3ba8ddbad3b6127049307cc5a1dd3e9e3c2827665ec4",
+    "D:\\Scene_Aware\\bci_vla_framework\\execution\\15C_source_manifest.json": "d511ad48933ec491d2114b8ca1eeca8e04106c3bb9bac0c86f763c77fcb99631",
+    "D:\\Scene_Aware\\bci_vla_framework\\execution\\15_source_manifest.json": "2ce02d97e74f6075e35f8502d661cf2367ca867ebf34ce6c2ee0e3d06484289f",
+    "D:\\Scene_Aware\\bci_vla_framework\\execution\\16_source_manifest.json": "94ea4062d109695e7d8d2535342f4279a07ecad3dd4b32d9a2532dfcd9e446b9",
+    "D:\\Scene_Aware\\bci_vla_framework\\execution\\progress.json": "8f5b07bd889b61ff7a5f02803e86aa8b06fdeec9c69ff5edcb5bd133cc859dd6",
+    "D:\\Scene_Aware\\bci_vla_framework\\execution\\source_manifest.json": "735d9d7735ef68b3502413220df8845062a6052ede0a64f81f5f53ef7a4e2e37",
+    "D:\\Scene_Aware\\bci_vla_framework\\execution\\v3_plan_progress.json": "025dd7d73caf948f69a83cee857232588c123570c023239cc5a2a8461a9bde83",
+    "D:\\Scene_Aware\\bci_vla_framework\\execution\\write_plan_v3.py": "b8fb8a6fe981eea8f8b208b6a224ee5c608e36a7f5e2aa9bf1906ee16bff6439"
+  }
+}

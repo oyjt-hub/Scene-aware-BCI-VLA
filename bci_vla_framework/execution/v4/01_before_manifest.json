@@ -1,0 +1,150 @@
+{
+  "purpose": "before V4-01 read-only asset inventory and documentation updates",
+  "files": [
+    {
+      "path": "D:\\Scene_Aware\\BCI_VLA框架_意图更新与澄清_执行计划_V4.txt",
+      "sha256": "b4e6e5335b1e4d51193cb0d9f16a6ab0d59511ec16e2f8f3ffd2fe1c7d3f6fb3",
+      "bytes": 39684
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\configs\\design_v4.json",
+      "sha256": "9c48b4e27577368e7be84c53662cf6b33b50a8d94bb3647fd4cf9ecfcbe9b33f",
+      "bytes": 10702
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4_plan_progress.json",
+      "sha256": "93bdd235616b5482285eb4de08bad5af779a3a9558fb076480c4ebaed9531432",
+      "bytes": 5864
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\progress.json",
+      "sha256": "8f5b07bd889b61ff7a5f02803e86aa8b06fdeec9c69ff5edcb5bd133cc859dd6",
+      "bytes": 51245
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v3_plan_progress.json",
+      "sha256": "025dd7d73caf948f69a83cee857232588c123570c023239cc5a2a8461a9bde83",
+      "bytes": 1986
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4_plan_validation.json",
+      "sha256": "23e74911954ea047b2c163f860665ada818089185ece7ae405cd61a244e10f2b",
+      "bytes": 2913
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\docs\\14C_full_simulation_report.txt",
+      "sha256": "0780203a44abc9302be3f7db8755f13093e6d56db065add8a295e621bf7f1fa9",
+      "bytes": 5796
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\docs\\15C_full_transfer_report.txt",
+      "sha256": "7e60eddf3df8363449505b03701f01668c5e2cf68a8c94214cdc1f1bdc9829d5",
+      "bytes": 8077
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\docs\\16_G4_report.txt",
+      "sha256": "654b4f7d4de7faad5c3cdc688272e810d3b6326e1b2cf42dddb65ef8916df3fb",
+      "bytes": 8990
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\configs\\transfer\\step15_binding.json",
+      "sha256": "8f18b3ad8afab01e3a3b593f8e625fb314032f3e9137544bfe393815a04b3a5c",
+      "bytes": 1398
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\15C_current_assets.json",
+      "sha256": "4573e7e4ae08de2b60181e76b7200b39a15ca4fd23c3979925dfed6bbcf4d342",
+      "bytes": 950
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\03_source_manifest.json",
+      "sha256": "6764d4814bae9eb225c2a6c77186e5a865e0fc68f7a05a3ae52213b0078ade08",
+      "bytes": 3112
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\04_source_manifest.json",
+      "sha256": "a88fc42ebf6a349ddc05717cb240c5b4300d28cde635f9bb5041be21a3119e8d",
+      "bytes": 2915
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\05_source_manifest.json",
+      "sha256": "14f81d5998e42708c15854360fd4811bd51e97331e34811d7bc89f61e38bfd39",
+      "bytes": 7640
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\06_source_manifest.json",
+      "sha256": "f2d4f753300e8a5db60eab6bb4b5fe89faafa083efdcd6bf25618834f24b0618",
+      "bytes": 5074
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\07_source_manifest.json",
+      "sha256": "0018bae30f356d00440297bd4358671b15e6314c277d3dc104db8a9bfd774492",
+      "bytes": 8174
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\08_source_manifest.json",
+      "sha256": "086c4a44d2ff23391da56b3ab605fd545b30fbd4463fffe34e03cb12f87e0589",
+      "bytes": 5970
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\09_source_manifest.json",
+      "sha256": "8028c37b8c7353c76eb3a732a7b2efe1cc210545bdd5abccc8cff62a0688a9dd",
+      "bytes": 6420
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\10_source_manifest.json",
+      "sha256": "2c21654d6e5f9761f7bdf88b9b96219e359ad13123a34d5be0de4d4999fb2259",
+      "bytes": 8657
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\11_source_manifest.json",
+      "sha256": "7502da33b68bb06347b7e762b5f3e190eb934c1a7f299e2e893a6b4715d4fae5",
+      "bytes": 7482
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\12R_source_manifest.json",
+      "sha256": "3247dfc93860cada3f44101d9fb37ac3a384cd5883c32687955c497b563e48bf",
+      "bytes": 5400
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\12_source_manifest.json",
+      "sha256": "2be1668b4f554434e43abfdd27e30d83c71e16017359e70daed4ccba863b221b",
+      "bytes": 6119
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\13_source_manifest.json",
+      "sha256": "c7afbb14f6300859dd6c493c5d525e3983d0560968a8dd1c717f5978e147e782",
+      "bytes": 13643
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\14C_source_manifest.json",
+      "sha256": "18dd113bd3206f02456dc70030051e662093a2955b2fbbab74f192aff8e78994",
+      "bytes": 28625
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\14_source_manifest.json",
+      "sha256": "671c30fd1356236757bd3ba8ddbad3b6127049307cc5a1dd3e9e3c2827665ec4",
+      "bytes": 13608
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\15C_source_manifest.json",
+      "sha256": "d511ad48933ec491d2114b8ca1eeca8e04106c3bb9bac0c86f763c77fcb99631",
+      "bytes": 38540
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\15_source_manifest.json",
+      "sha256": "2ce02d97e74f6075e35f8502d661cf2367ca867ebf34ce6c2ee0e3d06484289f",
+      "bytes": 25666
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\16_source_manifest.json",
+      "sha256": "94ea4062d109695e7d8d2535342f4279a07ecad3dd4b32d9a2532dfcd9e446b9",
+      "bytes": 8773
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\source_manifest.json",
+      "sha256": "735d9d7735ef68b3502413220df8845062a6052ede0a64f81f5f53ef7a4e2e37",
+      "bytes": 727
+    }
+  ]
+}

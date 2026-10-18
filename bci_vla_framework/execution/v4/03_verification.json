@@ -1,0 +1,343 @@
+{
+  "scope": "source/provenance/preservation checks, separate from neural capability gates",
+  "status": "PASS",
+  "checks": 84,
+  "results": [
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\configs\\design_v4.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_acceptance.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_before_manifest.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_candidate_weights.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_command_log.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_git_before.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_inventory.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_literature.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_local_environment.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_local_sources.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_remote_inventory.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_remote_paths.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_remote_supplement.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_source_manifest.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\01_workspace_weights.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\02_acceptance.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\02_before_manifest.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\02_progress_before.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\02_source_manifest.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\02_verification.json",
+      "passed": true
+    },
+    {
+      "name": "step02_frozen:D:\\Scene_Aware\\bci_vla_framework\\configs\\v4\\interfaces.json",
+      "passed": true
+    },
+    {
+      "name": "step02_frozen:D:\\Scene_Aware\\bci_vla_framework\\docs\\v4\\02_protocol.txt",
+      "passed": true
+    },
+    {
+      "name": "step02_frozen:D:\\Scene_Aware\\bci_vla_framework\\examples\\v4\\abstain_without_missing_slot_output.json",
+      "passed": true
+    },
+    {
+      "name": "step02_frozen:D:\\Scene_Aware\\bci_vla_framework\\examples\\v4\\cancel_clears_task.json",
+      "passed": true
+    },
+    {
+      "name": "step02_frozen:D:\\Scene_Aware\\bci_vla_framework\\examples\\v4\\confirmed_task_survives_nine_probes.json",
+      "passed": true
+    },
+    {
+      "name": "step02_frozen:D:\\Scene_Aware\\bci_vla_framework\\examples\\v4\\empty_scene_and_history.json",
+      "passed": true
+    },
+    {
+      "name": "step02_frozen:D:\\Scene_Aware\\bci_vla_framework\\examples\\v4\\expired_task_evidence.json",
+      "passed": true
+    },
+    {
+      "name": "step02_frozen:D:\\Scene_Aware\\bci_vla_framework\\examples\\v4\\fixture_index.json",
+      "passed": true
+    },
+    {
+      "name": "step02_frozen:D:\\Scene_Aware\\bci_vla_framework\\examples\\v4\\mapping_change_invalidates_old_evidence.json",
+      "passed": true
+    },
+    {
+      "name": "step02_frozen:D:\\Scene_Aware\\bci_vla_framework\\examples\\v4\\missing_action_slot_output.json",
+      "passed": true
+    },
+    {
+      "name": "step02_frozen:D:\\Scene_Aware\\bci_vla_framework\\examples\\v4\\missing_roi_feature.json",
+      "passed": true
+    },
+    {
+      "name": "step02_frozen:D:\\Scene_Aware\\bci_vla_framework\\examples\\v4\\module_output.json",
+      "passed": true
+    },
+    {
+      "name": "step02_frozen:D:\\Scene_Aware\\bci_vla_framework\\examples\\v4\\no_response_retains_probe_role.json",
+      "passed": true
+    },
+    {
+      "name": "step02_frozen:D:\\Scene_Aware\\bci_vla_framework\\examples\\v4\\object_reorder_with_alias_binding.json",
+      "passed": true
+    },
+    {
+      "name": "step02_frozen:D:\\Scene_Aware\\bci_vla_framework\\examples\\v4\\private_labels.json",
+      "passed": true
+    },
+    {
+      "name": "step02_frozen:D:\\Scene_Aware\\bci_vla_framework\\examples\\v4\\private_labels_alias_variant.json",
+      "passed": true
+    },
+    {
+      "name": "step02_frozen:D:\\Scene_Aware\\bci_vla_framework\\examples\\v4\\public_input.json",
+      "passed": true
+    },
+    {
+      "name": "step02_frozen:D:\\Scene_Aware\\bci_vla_framework\\examples\\v4\\reject_clears_task.json",
+      "passed": true
+    },
+    {
+      "name": "step02_frozen:D:\\Scene_Aware\\bci_vla_framework\\examples\\v4\\stop_clears_task.json",
+      "passed": true
+    },
+    {
+      "name": "step02_frozen:D:\\Scene_Aware\\bci_vla_framework\\examples\\v4\\target_outside_candidates_output.json",
+      "passed": true
+    },
+    {
+      "name": "step02_frozen:D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\interaction_contract_v4\\__init__.py",
+      "passed": true
+    },
+    {
+      "name": "step02_frozen:D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\interaction_contract_v4\\validation.py",
+      "passed": true
+    },
+    {
+      "name": "step02_frozen:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\build_step02.py",
+      "passed": true
+    },
+    {
+      "name": "step02_frozen:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\build_step02_edgecases.py",
+      "passed": true
+    },
+    {
+      "name": "step02_frozen:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\verify_step02.py",
+      "passed": true
+    },
+    {
+      "name": "step02_frozen:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\complete_step02.py",
+      "passed": true
+    },
+    {
+      "name": "step02_frozen:D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\handoff_step02.txt",
+      "passed": true
+    },
+    {
+      "name": "syntax:inspect_step03.py",
+      "passed": true
+    },
+    {
+      "name": "syntax:step03_text_probe.py",
+      "passed": true
+    },
+    {
+      "name": "syntax:run_step03_probe.py",
+      "passed": true
+    },
+    {
+      "name": "syntax:finalize_step03.py",
+      "passed": true
+    },
+    {
+      "name": "remote_snapshot_hash:/home/oyjt/openpi/src/openpi/models/pi0.py",
+      "passed": true
+    },
+    {
+      "name": "remote_snapshot_hash:/home/oyjt/openpi/src/openpi/models/pi0_config.py",
+      "passed": true
+    },
+    {
+      "name": "remote_snapshot_hash:/home/oyjt/openpi/src/openpi/models/gemma.py",
+      "passed": true
+    },
+    {
+      "name": "remote_snapshot_hash:/home/oyjt/openpi/src/openpi/models/tokenizer.py",
+      "passed": true
+    },
+    {
+      "name": "remote_snapshot_hash:/home/oyjt/openpi/src/openpi/models_pytorch/pi0_pytorch.py",
+      "passed": true
+    },
+    {
+      "name": "remote_snapshot_hash:/home/oyjt/openpi/src/openpi/models_pytorch/gemma_pytorch.py",
+      "passed": true
+    },
+    {
+      "name": "remote_snapshot_hash:/home/oyjt/openpi/src/openpi/policies/policy_config.py",
+      "passed": true
+    },
+    {
+      "name": "remote_snapshot_hash:/home/oyjt/openpi/src/openpi/training/config.py",
+      "passed": true
+    },
+    {
+      "name": "remote_snapshot_hash:/home/oyjt/openpi/pyproject.toml",
+      "passed": true
+    },
+    {
+      "name": "remote_snapshot_hash:/home/oyjt/workspace/openpi/src/openpi/models/pi0.py",
+      "passed": true
+    },
+    {
+      "name": "remote_snapshot_hash:/home/oyjt/workspace/openpi/src/openpi/models/pi0_config.py",
+      "passed": true
+    },
+    {
+      "name": "remote_snapshot_hash:/home/oyjt/workspace/openpi/src/openpi/models/gemma.py",
+      "passed": true
+    },
+    {
+      "name": "remote_snapshot_hash:/home/oyjt/workspace/openpi/src/openpi/models/tokenizer.py",
+      "passed": true
+    },
+    {
+      "name": "remote_snapshot_hash:/home/oyjt/workspace/openpi/src/openpi/models_pytorch/pi0_pytorch.py",
+      "passed": true
+    },
+    {
+      "name": "remote_snapshot_hash:/home/oyjt/workspace/openpi/src/openpi/models_pytorch/gemma_pytorch.py",
+      "passed": true
+    },
+    {
+      "name": "remote_snapshot_hash:/home/oyjt/workspace/openpi/src/openpi/policies/policy_config.py",
+      "passed": true
+    },
+    {
+      "name": "remote_snapshot_hash:/home/oyjt/workspace/openpi/src/openpi/training/config.py",
+      "passed": true
+    },
+    {
+      "name": "remote_snapshot_hash:/home/oyjt/workspace/openpi/pyproject.toml",
+      "passed": true
+    },
+    {
+      "name": "remote_snapshot_hash:/home/oyjt/workspace/checkpoints/pi05_base/params/_METADATA",
+      "passed": true
+    },
+    {
+      "name": "remote_snapshot_hash:/home/oyjt/workspace/checkpoints/pi05_base/params/_CHECKPOINT_METADATA",
+      "passed": true
+    },
+    {
+      "name": "remote_snapshot_hash:/home/oyjt/openpi/.venv/lib/python3.11/site-packages/transformers/models/gemma/modeling_gemma.py",
+      "passed": true
+    },
+    {
+      "name": "remote_snapshot_hash:/home/oyjt/openpi/.venv/lib/python3.11/site-packages/transformers/models/paligemma/modeling_paligemma.py",
+      "passed": true
+    },
+    {
+      "name": "remote_snapshot_hash:/home/oyjt/workspace/openpi/.venv/lib/python3.11/site-packages/transformers/models/gemma/modeling_gemma.py",
+      "passed": true
+    },
+    {
+      "name": "remote_snapshot_hash:/home/oyjt/workspace/openpi/.venv/lib/python3.11/site-packages/transformers/models/paligemma/modeling_paligemma.py",
+      "passed": true
+    },
+    {
+      "name": "remote_snapshot_hash:/home/oyjt/workspace/miniconda3/envs/libero/lib/python3.10/site-packages/transformers/models/gemma/modeling_gemma.py",
+      "passed": true
+    },
+    {
+      "name": "remote_snapshot_hash:/home/oyjt/workspace/miniconda3/envs/libero/lib/python3.1/site-packages/transformers/models/gemma/modeling_gemma.py",
+      "passed": true
+    },
+    {
+      "name": "vlm_head_2048",
+      "passed": true
+    },
+    {
+      "name": "expert_head_not_vlm",
+      "passed": true
+    },
+    {
+      "name": "action_only_training_loss",
+      "passed": true
+    },
+    {
+      "name": "vlm_inputs_embeds_branch",
+      "passed": true
+    },
+    {
+      "name": "probe_no_actions_or_training",
+      "passed": true
+    },
+    {
+      "name": "historical_gates_unchanged",
+      "passed": true
+    },
+    {
+      "name": "later_steps_unstarted",
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "attempts": [
+    {
+      "attempt": 1,
+      "status": "FAILED_BINARY_COMPARISON_ON_CROSS_PLATFORM_GAUSSIAN_ROUNDING",
+      "evidence": "runs/step10_development/v1/preflight.json and episodes/",
+      "assertion": "canonical_digest(full journal) == server reference digest",
+      "cause": "Windows/Linux libm Gaussian score differences at floating-point last bits; not a changed policy decision",
+      "training": false
+    },
+    {
+      "attempt": 2,
+      "status": "PASS_RESTRICTED_DEVELOPMENT_ENGINEERING",
+      "evidence": "runs/step10_development/v2/result.json",
+      "fix": "exact non-floating fields, abs float tolerance1e-12 AND exact equality of tensorized model inputs",
+      "max_float_difference": 2.220446049250313e-16,
+      "training": false
+    }
+  ]
+}

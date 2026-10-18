@@ -1,0 +1,17 @@
+{
+  "version": "step09-balanced-public-binding/0.1",
+  "max_rows": {"train": 512, "validation": 128},
+  "source_partitions": ["train", "validation"],
+  "binding_families": ["declared_pick", "next_pick_symbolic"],
+  "target_balance": "Every physical candidate exactly once per family and fixed native prompt",
+  "alias_policy": "Complete non-identity cyclic permutation for alternating family within each scene's episode sequence",
+  "auxiliary_families": ["missing_action", "missing_source", "conflicting_declarations", "no_response", "missing_destination", "noisy_ambiguous"],
+  "selection": "Keep every original episode; fail before writing if complete groups exceed cap",
+  "same_prompt_multi_choice_groups": true,
+  "private_variants_weighted_once": true,
+  "public_only_teacher": true,
+  "frozen04_and08_overwrite": false,
+  "calibration_or_test_access": false,
+  "general_hidden_intent_supervision_ready": false,
+  "place_phase_supervision_ready": false
+}

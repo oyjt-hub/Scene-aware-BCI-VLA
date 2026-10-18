@@ -1,0 +1,29 @@
+{
+  "scope": "planning_only_not_network_implementation",
+  "files": [
+    {
+      "path": "D:\\Scene_Aware\\BCI_VLA框架_神经交互模块方案_V3.txt",
+      "sha256": "fe589431be05cf6722948effa5dc8073d02866289b7dc8d1753faf2f6f17b819"
+    },
+    {
+      "path": "D:\\Scene_Aware\\BCI_VLA通用交互框架_逐步执行手册_V3.txt",
+      "sha256": "8bc8a4aa0ad6840d037d410bda94da1e3f46fae64a691ddaa2b6ef71193aaba6"
+    },
+    {
+      "path": "D:\\Scene_Aware\\BCI_VLA当前计划入口.txt",
+      "sha256": "b6462a15dbe282f963b2fbb7fe7f0ffe016b4420a01083ceb07fb30859728206"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\configs\\design_v3.json",
+      "sha256": "e16e8787df10d6f1bd976ace795a33c0aa1b2d7a7236f4e396353067f5511659"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v3_plan_progress.json",
+      "sha256": "025dd7d73caf948f69a83cee857232588c123570c023239cc5a2a8461a9bde83"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\write_plan_v3.py",
+      "sha256": "b8fb8a6fe981eea8f8b208b6a224ee5c608e36a7f5e2aa9bf1906ee16bff6439"
+    }
+  ]
+}

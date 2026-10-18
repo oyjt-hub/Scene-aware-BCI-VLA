@@ -1,0 +1,10 @@
+{
+  "step_id": "V4-06",
+  "status": "PASS_ENGINEERING_SCOPE",
+  "completed_at_utc": "2026-10-17T06:48:54.955021+00:00",
+  "tests": 20,
+  "claims": "interface/masks/routing/equivariance/numerics/gradients only",
+  "high_level_gate_passed": false,
+  "training_data_ready": false,
+  "next_step": "V4-07 with unresolved V4-03 dependency"
+}

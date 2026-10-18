@@ -1,0 +1,61 @@
+﻿V4-03 π0.5主干文本与高层任务能力审计
+日期：2026-10-17，Asia/Hong_Kong。
+
+一、审计对象与边界
+源码：/home/oyjt/openpi；对照副本：/home/oyjt/workspace/openpi。
+实际探测权重：/home/oyjt/workspace/RLinf-RECAP/models/baseline_sft/RLinf-Pi05-LIBERO-SFT/model.safetensors。
+该checkpoint文件大小7,473,091,464字节；本轮读取完整参数头并尝试严格加载；没有重新计算完整7.5GB文件哈希，历史哈希不得冒称本轮校验。
+另有pi05_base等JAX权重目录，但本步没有转换或加载它们，不能把本轮结果外推到所有π0.5权重。
+源码快照及路径/哈希：execution/v4/03_remote_source_audit.json、03_sources、03_source_locations.json。
+当前两套PyTorch的pi0_pytorch.py、gemma_pytorch.py相同；JAX pi0.py与training/config.py不同。没有重置/修改任何现有源码。
+仅执行开发能力探测；不训练，不执行sample_actions，不连接EEG或机器人，不启动模型服务，不解封正式test。
+
+二、结构检查已确认的事实
+1. PaliGemma VLM使用Gemma 2B配置：隐藏维度2048；动作专家为1024维。实际VLM lm_head张量为[257152,2048]，动作专家lm_head为[257152,1024]。
+2. 高层8个交互token若接入此PyTorch模型，应投影为[B,8,2048]。步骤02中的[B,8,6]仅为JSON夹具，不能照搬到真实模型。
+3. embed_prefix把图像特征与语言embedding组合；语言embedding乘sqrt(hidden_size)，默认图文前缀内部双向可见。未来交互token应明确同一尺度与mask，而非把数值直接混进文本ID。
+4. PaliGemmaWithExpertModel.forward接受inputs_embeds=[prefix,None]，能走VLM独立分支并返回hidden states/cache；文本logits需要额外调用PaliGemma的lm_head。
+5. 当前PI0Pytorch.forward最终计算动作flow-matching MSE；JAX compute_loss也计算动作误差。没有找到该入口的主任务/子任务文本CE训练链路。
+6. 现有sample_actions是动作采样接口，不是生成主任务或subtask的接口。语言输出头存在，不代表该checkpoint接受过所需高层监督或能可靠规划。
+7. 当前检查的训练配置pi05_libero有action_horizon=10、discrete_state_input=False；此轮文本探测直接调用图文前缀，不经过完整动作策略变换，不能当作策略部署回归。
+
+三、运行环境与可复验脚本
+默认/home/oyjt/openpi/.venv缺少项目要求的transformers_replace补丁，首次初始化失败，原始trace保存在03_text_probe_raw.json。
+重跑使用既有隔离目录：/home/oyjt/Scene-aware-BCI-VLA-runs/step15C_full_20261016_v1/deps；不向全局site-packages复制补丁。
+远端Python通过stdin执行step03_text_probe.py，进程限时420秒，CUDA_VISIBLE_DEVICES=4，JAX固定CPU，模型库离线，禁止pyc写入；不创建常驻服务。
+本地调度脚本：execution/v4/run_step03_probe.py --existing-overlay；已有输出时拒绝覆盖，重复复验应使用新版本文件名并保留旧证据。
+该轮初始化/加载超时，没有得到文本结果。继续以--fast-overlay运行：关闭TORCHDYNAMO编译，使用no_init_weights跳过会被checkpoint覆盖的随机初始化；仍要求严格加载全部参数，不改变权重。
+默认/隔离/快速三轮原始trace分别为03_text_probe_raw.json、03_text_probe_overlay_raw.json、03_text_probe_fast_raw.json；汇总见03_text_capability.json。若输出显示failed，应按错误记录能力缺口，不能仅凭源码或已有LM头将运行门槛标为通过。
+额外短时诊断03_load_trace.json指出：no_init_weights后的输入embedding未与lm_head共享，导致严格加载缺键。checkpoint的__metadata__明确将embed_tokens.weight映射到lm_head.weight，不能把该去重别名当成权重损坏。
+最终以--tied-overlay按checkpoint元数据恢复同一Parameter绑定，再严格加载，保存03_text_probe_tied_raw.json；没有新建随机权重、忽略缺键或改写checkpoint。
+该轮严格加载与图像特征路径成功，文本前向暴露attention bias与query dtype不一致。使用--mask-overlay让注意力mask与BF16 embedding同类型，结果保存03_text_probe_mask_raw.json；修改仅在独立探测脚本。
+03_io_diagnostic.json抽查权重前/中/末三处各16MB读取约0.01秒，可用内存约221GB；此抽查不等于完整文件吞吐测试，也不支持把此前超时直接归因于I/O或内存耗尽。
+
+四、文本探测方法与范围
+四个开发提示：根据已选对象提出主任务；空夹爪时给出下一子任务；已抓住物体后给出下一子任务；选择两个同类杯子中的指定实例。
+物体字典及当前状态为显式文本夹具，图像为224×224合成常量0/1输入（归一化图像的中灰/白）。没有真实视觉检测或场景图像语义证据，也不调用外部LLM。
+teacher-forcing目标为人工开发夹具，不是模型答案。只在目标答案及EOS上算CE；prefix最后位置预测第一个答案token，其后每个答案位置预测下一token。
+prefix可双向可见，答案后缀使用因果mask；修改未来答案embedding后比较首个答案logit，排查未来答案泄漏。
+最小解码采用greedy，最多48个新token，遇SentencePiece EOS停止；保存原始token ID、文本、是否EOS、耗时。
+比较首个生成token后的一步cache解码与完整前向的logits，位置从真实prefix长度续接；该检查只覆盖此短序列，不代表长上下文cache全面通过。
+额外--precision-check结果保存在03_text_probe_precision_raw.json。同输入重复并用单位置lm_head读出时相对批量读出的最大差异0.125；改变被屏蔽未来输入也是0.125，解除因果遮罩的负对照为2.75。此检查包含读出矩阵形状引起的BF16舍入差异，不能解释为严格零差异证明。
+cache与完整前向的最大logit差异0.25，处于本轮粗容差边界；一步argmax均为235274。只通过短序列粗数值/argmax检查，严格数值等价、FP32复核和长上下文仍未验证。
+两种常量图像的特征差异只证明图像计算路径能被调用，不能证明理解物体或目标。无梯度/无优化器，不证明文本训练反向传播已经接通。
+
+五、研究门槛与后续接入分支
+审计完成与高层能力通过分开记录。四条人工文本夹具即便输出正确，也不足以证明真实场景任务规划、同类实例动作落地或泛化。
+同类实例低层定位门槛仍未验证：高层输出OBJ_1不保证原动作专家知道它对应哪个杯子。需要后续LIBERO开发闭环用同类多实例、位置/区域绑定及动作终点核验，不能用ID文本正确代替。
+当前checkpoint缺少可核验的主任务/子任务语言监督账本；不能因为名称含π0.5就默认拥有论文完整高层能力。
+优先保留同一VLM方案：先补独立高层文本入口、因果mask与主任务/下一子任务监督；根据开发结果评估高层LoRA/语言头适配，再接交互token。动作专家先冻结；共享VLM改动仍需关闭模块时的动作回归。
+备选是另选已验证文本能力的checkpoint或独立高层VLM，但必须明确改变系统边界、数据和计算预算；本步没有下载、切换或训练替代模型。
+高层LoRA/补训预算目前未实测；本轮纯前向文本loss和解码吞吐不等于训练吞吐/训练显存。步骤04先整理监督，步骤08试跑后按方法×种子×训练步重估，不承诺2–3周完成全部对照。
+步骤04的数据协议与步骤06的CPU模块可按夹具继续；步骤07内部接入成功、端到端训练和高层闭环声明需先解决本报告中的能力缺口。
+具体运行结论、通过项、缺口和未执行项以03_text_capability.json与03_acceptance.json为准，旧G2/G3/G4结论保持不变。
+
+六、本轮实际结果
+审计完成，能力门槛保留缺口。最小文本运行完成：True；文本loss/解码工程检查：True。
+main_task：生成=' 1000'；夹具期望='Pick up OBJ_0.'；loss=4.646833896636963。
+next_subtask：生成=' 00000000000000000000000000000000000000000000000'；夹具期望='Pick up OBJ_0.'；loss=4.956912517547607。
+next_after_grasp：生成=' 00000000000000000000000000000000000000000000000'；夹具期望='Place OBJ_0 into OBJ_2.'；loss=5.20111083984375。
+same_class_instance：生成=' 1'；夹具期望='OBJ_1.'；loss=2.813509702682495。
+本轮实际选用原始trace：03_text_probe_precision_raw.json。主任务/子任务语义未建立可靠性，同类实例低层落地未验证。

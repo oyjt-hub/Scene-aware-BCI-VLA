@@ -1,0 +1,57 @@
+[
+  {
+    "command": "python execution/v4/inspect_step03.py",
+    "scope": "read-only source/tensor-header audit",
+    "result": "saved; initial git timeout recorded and fixed with bounded exception handling"
+  },
+  {
+    "command": "python execution/v4/run_step03_probe.py",
+    "trace": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_text_probe_raw.json",
+    "execution_status": "failed",
+    "remote_exit_code": 0,
+    "error": "transformers_replace is not installed correctly. Please install it with `uv pip install transformers==4.53.2` and `cp -r ./src/openpi/models_pytorch/transformers_replace/* .venv/lib/python3.11/site-packages/transformers/`."
+  },
+  {
+    "command": "python execution/v4/run_step03_probe.py --existing-overlay",
+    "trace": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_text_probe_overlay_raw.json",
+    "execution_status": "failed",
+    "remote_exit_code": 124,
+    "error": "No structured probe output"
+  },
+  {
+    "command": "python execution/v4/run_step03_probe.py --fast-overlay",
+    "trace": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_text_probe_fast_raw.json",
+    "execution_status": "failed",
+    "remote_exit_code": 124,
+    "error": "No structured probe output"
+  },
+  {
+    "command": "python execution/v4/run_step03_probe.py --tied-overlay",
+    "trace": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_text_probe_tied_raw.json",
+    "execution_status": "failed",
+    "remote_exit_code": 0,
+    "error": "invalid dtype for bias - should match query's dtype"
+  },
+  {
+    "command": "python execution/v4/run_step03_probe.py --mask-overlay",
+    "trace": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_text_probe_mask_raw.json",
+    "execution_status": "completed",
+    "remote_exit_code": 0,
+    "error": null
+  },
+  {
+    "command": "python execution/v4/run_step03_probe.py --precision-check",
+    "trace": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_text_probe_precision_raw.json",
+    "execution_status": "completed",
+    "remote_exit_code": 0,
+    "error": null
+  },
+  {
+    "command": "python execution/v4/run_step03_probe.py --load-trace",
+    "trace": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_load_trace.json"
+  },
+  {
+    "command": "python execution/v4/run_step03_probe.py --io-check",
+    "trace": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\03_io_diagnostic.json"
+  }
+]

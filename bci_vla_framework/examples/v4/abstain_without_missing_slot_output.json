@@ -1,0 +1,167 @@
+{
+  "record_type": "MODULE_OUTPUT",
+  "schema_version": "bci-vla-interaction/4.0",
+  "context": {
+    "session_id": "fixture-session",
+    "scene_id": "table-1",
+    "scene_revision": 1,
+    "mapping_id": "screen-map",
+    "mapping_revision": 1
+  },
+  "source_input_sha256": "6a0125452d38938b463599ec828a801fb900245fd5d55957c3bcbd2fef241258",
+  "as_of_s": 12.0,
+  "provenance": "synthetic_fixture_not_model_prediction",
+  "soft_prefix": {
+    "dtype": "float32",
+    "shape": [
+      8,
+      6
+    ],
+    "tokens": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "intent_slots": 4,
+    "diagnostic_summary_slots": 4,
+    "raw_channel_queries_included": false
+  },
+  "intent": {
+    "candidate_distribution": [
+      {
+        "instance_id": "cup-blue",
+        "probability": 0.5
+      },
+      {
+        "instance_id": "cup-red",
+        "probability": 0.5
+      },
+      {
+        "instance_id": "tray",
+        "probability": 0
+      }
+    ],
+    "outside_probability": 0,
+    "allowed_candidate_ids": [
+      "cup-blue",
+      "cup-red"
+    ],
+    "abstain": true,
+    "missing_slots": []
+  },
+  "channel": {
+    "status": "INSUFFICIENT",
+    "probability": null,
+    "probability_calibrated": false,
+    "target_layout_id": "probe-3"
+  },
+  "task_proposal": null,
+  "interaction": {
+    "action": "ASK_INTENT",
+    "question": {
+      "question_id": "q-next",
+      "role": "INTENT_QUERY",
+      "context": {
+        "session_id": "fixture-session",
+        "scene_id": "table-1",
+        "scene_revision": 1,
+        "mapping_id": "screen-map",
+        "mapping_revision": 1
+      },
+      "layout_id": "task-3",
+      "issued_at_s": 12.0,
+      "expires_at_s": 16.0,
+      "presentation_ack": true,
+      "options": [
+        {
+          "option_id": "o0",
+          "symbol": "s0",
+          "kind": "OBJECT",
+          "reference": "cup-blue"
+        },
+        {
+          "option_id": "o1",
+          "symbol": "s1",
+          "kind": "OBJECT",
+          "reference": "cup-red"
+        },
+        {
+          "option_id": "o2",
+          "symbol": "s2",
+          "kind": "OBJECT",
+          "reference": "tray"
+        }
+      ],
+      "diagnostic_option_id": null,
+      "proposal": null
+    },
+    "reason_code": "ambiguous_target"
+  },
+  "control": {
+    "execution_authorized": false,
+    "requires_confirmation": true,
+    "stop_route": "existing_control_path",
+    "raw_robot_command": null
+  }
+}

@@ -1,0 +1,1880 @@
+{
+  "status": "PASS_RESTRICTED_DEVELOPMENT_ENGINEERING",
+  "scope": "development validation only; frozen LIBERO captures and simulated BCI; public fixed pick action",
+  "preflight": {
+    "scope": "development validation only; frozen LIBERO captures and simulated BCI; public fixed pick action",
+    "registered_before_replay": "2026-10-17T19:31:56.564258+00:00",
+    "source_sha256": {
+      "bci_vla/evaluation_v4/development.py": "104d978fe13c66361834fc0d7ed479bd0074caadd95216d28bed0e968aa78e85",
+      "execution/v4/run_step10.py": "0c0948829e6552a02d62e63a52d3426f425c4aab0f285e39a7cdcb5e14f42475",
+      "bci_vla/calibration_v4/policy.py": "cbf2bd561888281bd9c3f521c1880c8834c42534c763412927a4b007ede531d8",
+      "bci_vla/calibration_v4/calibration.py": "dd9c93ce8664bdbf889b79b8b4a0c6e6b4dff9cff0d8e5bea6c2f75985842ddb",
+      "bci_vla/calibration_v4/evidence_gate.py": "9da639d3788bc36555a288c4df2829f054ed4c37e3c90ce6c830bd7a592749b7",
+      "bci_vla/evaluation_v4/runner.py": "7a2ad06ccf184e48af8123f043f0cc91a9d85ac7697811a1fc5eb7570e8ab6b1",
+      "bci_vla/data_v4/channel.py": "4e1dbb76ee44ef8a563f5e565b5d6f69da29888d26ab89c86aa0f625d59e15ec",
+      "execution/v4/step09_calibrate_and_policy.py": "7d655f2a33303dff514f6ca62343b41fd74d5a92bcd1f3a2a163f81671504d2a"
+    },
+    "checkpoint_sha256": "427fba987ad3b8a6b0b4e3dafb133f86980345706698b8b8ba48a41969f72464",
+    "capture_manifest_sha256": "3d6c103bceb6fd4cdf5f75b11ab909bb04dd74dedf76681888915902a1871fdb",
+    "config_sha256": {
+      "Full_frozen": "48b556069f0384346692b3294cddc293cc958f1bf2f6262a86e2fc893d117339",
+      "Full_no_recheck": "071601070fce882dec2141ce90b5ddfb3fb435b5d242397996a829d75013113b"
+    },
+    "binding": {
+      "Full_frozen": {
+        "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+        "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+        "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+        "policy_sha256": "48b556069f0384346692b3294cddc293cc958f1bf2f6262a86e2fc893d117339"
+      },
+      "Full_no_recheck": {
+        "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+        "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+        "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+        "policy_sha256": "071601070fce882dec2141ce90b5ddfb3fb435b5d242397996a829d75013113b"
+      }
+    },
+    "units": {
+      "scene_groups": 2,
+      "base_episodes": 8,
+      "world_conditions": 4
+    },
+    "metrics": "scene macro of within-base mean resolution; scene macro of base-any-error; all conditions including waits in denominator",
+    "thresholds_refit": false,
+    "training": false,
+    "formal_test_accessed": false,
+    "VLM_loaded": false,
+    "VLA_called": false,
+    "replay_comparison": {
+      "floating_abs_tolerance": 1e-12,
+      "all_non_float_fields": "exact",
+      "changed_raw_publics": "must also have exactly equal tensorized model inputs"
+    }
+  },
+  "summary": {
+    "Full_frozen": {
+      "scene_groups": 2,
+      "base_episodes": 8,
+      "condition_instances": 32,
+      "resolution": 0.40625,
+      "wrong_episode_rate": 0.0,
+      "resolved_conditions": 13,
+      "wrong_base_episodes": 0,
+      "submissions": 13,
+      "wrong_submissions": 0,
+      "conditional_submission_error": 0.0,
+      "mean_questions": 10.03125,
+      "mean_waits": 1.96875,
+      "no_responses": 23,
+      "rejects": 1,
+      "clock_cost_s_per_condition": 24.0,
+      "base_rows": [
+        {
+          "group_id": "be407422cd63db52190d",
+          "episode_id": "3ca46f06f2e98c7585e4453d",
+          "resolution": 0.5,
+          "wrong_episode": false,
+          "condition_count": 4
+        },
+        {
+          "group_id": "be407422cd63db52190d",
+          "episode_id": "3e7f4a934272c0ac1dcfa709",
+          "resolution": 0.5,
+          "wrong_episode": false,
+          "condition_count": 4
+        },
+        {
+          "group_id": "be407422cd63db52190d",
+          "episode_id": "8a73e47aa9c92d370ca37806",
+          "resolution": 0.25,
+          "wrong_episode": false,
+          "condition_count": 4
+        },
+        {
+          "group_id": "be407422cd63db52190d",
+          "episode_id": "a733559f6120147aa83fb6dd",
+          "resolution": 0.5,
+          "wrong_episode": false,
+          "condition_count": 4
+        },
+        {
+          "group_id": "c643a21fa2fbdfc32c20",
+          "episode_id": "66c54cbd120fded5bec9b5b7",
+          "resolution": 0.0,
+          "wrong_episode": false,
+          "condition_count": 4
+        },
+        {
+          "group_id": "c643a21fa2fbdfc32c20",
+          "episode_id": "7d02da34438c898381a919fe",
+          "resolution": 0.5,
+          "wrong_episode": false,
+          "condition_count": 4
+        },
+        {
+          "group_id": "c643a21fa2fbdfc32c20",
+          "episode_id": "8ce9cefdbfafe24aab2e9805",
+          "resolution": 0.5,
+          "wrong_episode": false,
+          "condition_count": 4
+        },
+        {
+          "group_id": "c643a21fa2fbdfc32c20",
+          "episode_id": "dfaa20a11afa4e9a7221ad55",
+          "resolution": 0.5,
+          "wrong_episode": false,
+          "condition_count": 4
+        }
+      ],
+      "risk_basis": "scene-macro base-episode point estimate; not a population guarantee"
+    },
+    "Full_no_recheck": {
+      "scene_groups": 2,
+      "base_episodes": 8,
+      "condition_instances": 32,
+      "resolution": 0.65625,
+      "wrong_episode_rate": 0.875,
+      "resolved_conditions": 21,
+      "wrong_base_episodes": 7,
+      "submissions": 34,
+      "wrong_submissions": 13,
+      "conditional_submission_error": 0.38235294117647056,
+      "mean_questions": 9.09375,
+      "mean_waits": 2.90625,
+      "no_responses": 26,
+      "rejects": 27,
+      "clock_cost_s_per_condition": 24.0,
+      "base_rows": [
+        {
+          "group_id": "be407422cd63db52190d",
+          "episode_id": "3ca46f06f2e98c7585e4453d",
+          "resolution": 0.75,
+          "wrong_episode": true,
+          "condition_count": 4
+        },
+        {
+          "group_id": "be407422cd63db52190d",
+          "episode_id": "3e7f4a934272c0ac1dcfa709",
+          "resolution": 0.75,
+          "wrong_episode": true,
+          "condition_count": 4
+        },
+        {
+          "group_id": "be407422cd63db52190d",
+          "episode_id": "8a73e47aa9c92d370ca37806",
+          "resolution": 0.5,
+          "wrong_episode": true,
+          "condition_count": 4
+        },
+        {
+          "group_id": "be407422cd63db52190d",
+          "episode_id": "a733559f6120147aa83fb6dd",
+          "resolution": 0.75,
+          "wrong_episode": true,
+          "condition_count": 4
+        },
+        {
+          "group_id": "c643a21fa2fbdfc32c20",
+          "episode_id": "66c54cbd120fded5bec9b5b7",
+          "resolution": 0.5,
+          "wrong_episode": true,
+          "condition_count": 4
+        },
+        {
+          "group_id": "c643a21fa2fbdfc32c20",
+          "episode_id": "7d02da34438c898381a919fe",
+          "resolution": 1.0,
+          "wrong_episode": false,
+          "condition_count": 4
+        },
+        {
+          "group_id": "c643a21fa2fbdfc32c20",
+          "episode_id": "8ce9cefdbfafe24aab2e9805",
+          "resolution": 0.5,
+          "wrong_episode": true,
+          "condition_count": 4
+        },
+        {
+          "group_id": "c643a21fa2fbdfc32c20",
+          "episode_id": "dfaa20a11afa4e9a7221ad55",
+          "resolution": 0.5,
+          "wrong_episode": true,
+          "condition_count": 4
+        }
+      ],
+      "risk_basis": "scene-macro base-episode point estimate; not a population guarantee"
+    },
+    "AlwaysWait": {
+      "scene_groups": 2,
+      "base_episodes": 8,
+      "condition_instances": 32,
+      "resolution": 0.0,
+      "wrong_episode_rate": 0.0,
+      "resolved_conditions": 0,
+      "wrong_base_episodes": 0,
+      "submissions": 0,
+      "wrong_submissions": 0,
+      "conditional_submission_error": null,
+      "mean_questions": 0.0,
+      "mean_waits": 12.0,
+      "no_responses": 0,
+      "rejects": 0,
+      "clock_cost_s_per_condition": 24.0,
+      "base_rows": [
+        {
+          "group_id": "be407422cd63db52190d",
+          "episode_id": "3ca46f06f2e98c7585e4453d",
+          "resolution": 0.0,
+          "wrong_episode": false,
+          "condition_count": 4
+        },
+        {
+          "group_id": "be407422cd63db52190d",
+          "episode_id": "3e7f4a934272c0ac1dcfa709",
+          "resolution": 0.0,
+          "wrong_episode": false,
+          "condition_count": 4
+        },
+        {
+          "group_id": "be407422cd63db52190d",
+          "episode_id": "8a73e47aa9c92d370ca37806",
+          "resolution": 0.0,
+          "wrong_episode": false,
+          "condition_count": 4
+        },
+        {
+          "group_id": "be407422cd63db52190d",
+          "episode_id": "a733559f6120147aa83fb6dd",
+          "resolution": 0.0,
+          "wrong_episode": false,
+          "condition_count": 4
+        },
+        {
+          "group_id": "c643a21fa2fbdfc32c20",
+          "episode_id": "66c54cbd120fded5bec9b5b7",
+          "resolution": 0.0,
+          "wrong_episode": false,
+          "condition_count": 4
+        },
+        {
+          "group_id": "c643a21fa2fbdfc32c20",
+          "episode_id": "7d02da34438c898381a919fe",
+          "resolution": 0.0,
+          "wrong_episode": false,
+          "condition_count": 4
+        },
+        {
+          "group_id": "c643a21fa2fbdfc32c20",
+          "episode_id": "8ce9cefdbfafe24aab2e9805",
+          "resolution": 0.0,
+          "wrong_episode": false,
+          "condition_count": 4
+        },
+        {
+          "group_id": "c643a21fa2fbdfc32c20",
+          "episode_id": "dfaa20a11afa4e9a7221ad55",
+          "resolution": 0.0,
+          "wrong_episode": false,
+          "condition_count": 4
+        }
+      ],
+      "risk_basis": "scene-macro base-episode point estimate; not a population guarantee"
+    }
+  },
+  "paired_rule_comparison": {
+    "difference": -0.25,
+    "percentile_95": [
+      -0.25,
+      -0.25
+    ],
+    "resampling_unit": "paired scene; all episode/variant rows retained together",
+    "scene_groups": 2,
+    "replicates": 5000,
+    "inferential_claim_allowed": false,
+    "warning": "Two development scenes are insufficient for a reliable population interval or significance claim"
+  },
+  "goal_update_latency": {
+    "changed_conditions": 16,
+    "updates_observed": 7,
+    "censored": 9,
+    "mean_latency_among_observed_s": 11.821428571428571,
+    "restricted_mean_latency_including_censor_s": 14.171875,
+    "identified_public_anchor_coverage": 0.0,
+    "identifiable_response_latency": null,
+    "reason": "No trusted noiseless goal declaration exists; noisy consistency is a rule certificate, not mathematical identifiability",
+    "old_target_submissions_after_change": 0
+  },
+  "integrity_audit": {
+    "public_records": 1152,
+    "questions": 612,
+    "confirmations": 91,
+    "evidence_contracts": 91,
+    "simulated_requests": 47
+  },
+  "step09_discrete_replays_matched": 32,
+  "step09_bitwise_replays_matched": 7,
+  "cross_platform_tensor_pairs_checked": 178,
+  "robustness_runs": 32,
+  "robustness_summaries": [
+    {
+      "split": "validation",
+      "method": "Full_frozen",
+      "group_id": "be407422cd63db52190d",
+      "episode_id": "3e7f4a934272c0ac1dcfa709",
+      "resolved": false,
+      "wrong_episode": false,
+      "wrong_submissions": 0,
+      "submissions": 0,
+      "questions": 0,
+      "waits": 0,
+      "roles": {},
+      "no_responses": 0,
+      "rejects": 0,
+      "parsing_failures": 0,
+      "condition_failures": 0,
+      "clock_cost_s": 0.0,
+      "goal_changed": false,
+      "change_at_s": null,
+      "first_correct_update_s": null,
+      "total_update_latency_s": null,
+      "update_censored": false,
+      "censor_after_change_s": null,
+      "old_target_submissions_after_change": 0,
+      "identified_public_change_anchor_s": null,
+      "identifiable_anchor_status": "NOT_APPLICABLE",
+      "identifiable_response_latency_s": null,
+      "policy_runtime_ns": 0,
+      "VLA_called": false,
+      "real_dynamics_advanced": false,
+      "case": "STOP_immediate"
+    },
+    {
+      "split": "validation",
+      "method": "Full_frozen",
+      "group_id": "be407422cd63db52190d",
+      "episode_id": "3e7f4a934272c0ac1dcfa709",
+      "resolved": false,
+      "wrong_episode": false,
+      "wrong_submissions": 0,
+      "submissions": 0,
+      "questions": 6,
+      "waits": 0,
+      "roles": {
+        "PROBE": 4,
+        "TASK": 1,
+        "INTENT_QUERY": 1
+      },
+      "no_responses": 0,
+      "rejects": 0,
+      "parsing_failures": 0,
+      "condition_failures": 0,
+      "clock_cost_s": 12.0,
+      "goal_changed": false,
+      "change_at_s": null,
+      "first_correct_update_s": null,
+      "total_update_latency_s": null,
+      "update_censored": false,
+      "censor_after_change_s": null,
+      "old_target_submissions_after_change": 0,
+      "identified_public_change_anchor_s": null,
+      "identifiable_anchor_status": "NOT_APPLICABLE",
+      "identifiable_response_latency_s": null,
+      "policy_runtime_ns": 9468100,
+      "VLA_called": false,
+      "real_dynamics_advanced": false,
+      "case": "STOP_mid"
+    },
+    {
+      "split": "validation",
+      "method": "Full_frozen",
+      "group_id": "be407422cd63db52190d",
+      "episode_id": "3e7f4a934272c0ac1dcfa709",
+      "resolved": true,
+      "wrong_episode": false,
+      "wrong_submissions": 0,
+      "submissions": 1,
+      "questions": 10,
+      "waits": 0,
+      "roles": {
+        "PROBE": 6,
+        "TASK": 2,
+        "INTENT_QUERY": 1,
+        "CONFIRM": 1
+      },
+      "no_responses": 0,
+      "rejects": 0,
+      "parsing_failures": 0,
+      "condition_failures": 0,
+      "clock_cost_s": 20.0,
+      "goal_changed": false,
+      "change_at_s": null,
+      "first_correct_update_s": null,
+      "total_update_latency_s": null,
+      "update_censored": false,
+      "censor_after_change_s": null,
+      "old_target_submissions_after_change": 0,
+      "identified_public_change_anchor_s": null,
+      "identifiable_anchor_status": "NOT_APPLICABLE",
+      "identifiable_response_latency_s": null,
+      "policy_runtime_ns": 20451800,
+      "VLA_called": false,
+      "real_dynamics_advanced": false,
+      "case": "CANCEL_late"
+    },
+    {
+      "split": "validation",
+      "method": "Full_frozen",
+      "group_id": "be407422cd63db52190d",
+      "episode_id": "3e7f4a934272c0ac1dcfa709",
+      "resolved": false,
+      "wrong_episode": false,
+      "wrong_submissions": 0,
+      "submissions": 0,
+      "questions": 8,
+      "waits": 4,
+      "roles": {
+        "PROBE": 6,
+        "TASK": 1,
+        "INTENT_QUERY": 1
+      },
+      "no_responses": 0,
+      "rejects": 0,
+      "parsing_failures": 0,
+      "condition_failures": 0,
+      "clock_cost_s": 24.0,
+      "goal_changed": false,
+      "change_at_s": null,
+      "first_correct_update_s": null,
+      "total_update_latency_s": null,
+      "update_censored": false,
+      "censor_after_change_s": null,
+      "old_target_submissions_after_change": 0,
+      "identified_public_change_anchor_s": null,
+      "identifiable_anchor_status": "NOT_APPLICABLE",
+      "identifiable_response_latency_s": null,
+      "policy_runtime_ns": 79676500,
+      "VLA_called": false,
+      "real_dynamics_advanced": false,
+      "case": "mapping_change"
+    },
+    {
+      "split": "validation",
+      "method": "Full_frozen",
+      "group_id": "be407422cd63db52190d",
+      "episode_id": "a733559f6120147aa83fb6dd",
+      "resolved": false,
+      "wrong_episode": false,
+      "wrong_submissions": 0,
+      "submissions": 0,
+      "questions": 0,
+      "waits": 0,
+      "roles": {},
+      "no_responses": 0,
+      "rejects": 0,
+      "parsing_failures": 0,
+      "condition_failures": 0,
+      "clock_cost_s": 0.0,
+      "goal_changed": false,
+      "change_at_s": null,
+      "first_correct_update_s": null,
+      "total_update_latency_s": null,
+      "update_censored": false,
+      "censor_after_change_s": null,
+      "old_target_submissions_after_change": 0,
+      "identified_public_change_anchor_s": null,
+      "identifiable_anchor_status": "NOT_APPLICABLE",
+      "identifiable_response_latency_s": null,
+      "policy_runtime_ns": 0,
+      "VLA_called": false,
+      "real_dynamics_advanced": false,
+      "case": "STOP_immediate"
+    },
+    {
+      "split": "validation",
+      "method": "Full_frozen",
+      "group_id": "be407422cd63db52190d",
+      "episode_id": "a733559f6120147aa83fb6dd",
+      "resolved": false,
+      "wrong_episode": false,
+      "wrong_submissions": 0,
+      "submissions": 0,
+      "questions": 6,
+      "waits": 0,
+      "roles": {
+        "PROBE": 4,
+        "TASK": 1,
+        "INTENT_QUERY": 1
+      },
+      "no_responses": 0,
+      "rejects": 0,
+      "parsing_failures": 0,
+      "condition_failures": 0,
+      "clock_cost_s": 12.0,
+      "goal_changed": false,
+      "change_at_s": null,
+      "first_correct_update_s": null,
+      "total_update_latency_s": null,
+      "update_censored": false,
+      "censor_after_change_s": null,
+      "old_target_submissions_after_change": 0,
+      "identified_public_change_anchor_s": null,
+      "identifiable_anchor_status": "NOT_APPLICABLE",
+      "identifiable_response_latency_s": null,
+      "policy_runtime_ns": 10102700,
+      "VLA_called": false,
+      "real_dynamics_advanced": false,
+      "case": "STOP_mid"
+    },
+    {
+      "split": "validation",
+      "method": "Full_frozen",
+      "group_id": "be407422cd63db52190d",
+      "episode_id": "a733559f6120147aa83fb6dd",
+      "resolved": true,
+      "wrong_episode": false,
+      "wrong_submissions": 0,
+      "submissions": 1,
+      "questions": 10,
+      "waits": 0,
+      "roles": {
+        "PROBE": 6,
+        "TASK": 2,
+        "INTENT_QUERY": 1,
+        "CONFIRM": 1
+      },
+      "no_responses": 0,
+      "rejects": 0,
+      "parsing_failures": 0,
+      "condition_failures": 0,
+      "clock_cost_s": 20.0,
+      "goal_changed": false,
+      "change_at_s": null,
+      "first_correct_update_s": null,
+      "total_update_latency_s": null,
+      "update_censored": false,
+      "censor_after_change_s": null,
+      "old_target_submissions_after_change": 0,
+      "identified_public_change_anchor_s": null,
+      "identifiable_anchor_status": "NOT_APPLICABLE",
+      "identifiable_response_latency_s": null,
+      "policy_runtime_ns": 19548900,
+      "VLA_called": false,
+      "real_dynamics_advanced": false,
+      "case": "CANCEL_late"
+    },
+    {
+      "split": "validation",
+      "method": "Full_frozen",
+      "group_id": "be407422cd63db52190d",
+      "episode_id": "a733559f6120147aa83fb6dd",
+      "resolved": false,
+      "wrong_episode": false,
+      "wrong_submissions": 0,
+      "submissions": 0,
+      "questions": 8,
+      "waits": 4,
+      "roles": {
+        "PROBE": 6,
+        "TASK": 1,
+        "INTENT_QUERY": 1
+      },
+      "no_responses": 0,
+      "rejects": 0,
+      "parsing_failures": 0,
+      "condition_failures": 0,
+      "clock_cost_s": 24.0,
+      "goal_changed": false,
+      "change_at_s": null,
+      "first_correct_update_s": null,
+      "total_update_latency_s": null,
+      "update_censored": false,
+      "censor_after_change_s": null,
+      "old_target_submissions_after_change": 0,
+      "identified_public_change_anchor_s": null,
+      "identifiable_anchor_status": "NOT_APPLICABLE",
+      "identifiable_response_latency_s": null,
+      "policy_runtime_ns": 77230100,
+      "VLA_called": false,
+      "real_dynamics_advanced": false,
+      "case": "mapping_change"
+    },
+    {
+      "split": "validation",
+      "method": "Full_frozen",
+      "group_id": "be407422cd63db52190d",
+      "episode_id": "3ca46f06f2e98c7585e4453d",
+      "resolved": false,
+      "wrong_episode": false,
+      "wrong_submissions": 0,
+      "submissions": 0,
+      "questions": 0,
+      "waits": 0,
+      "roles": {},
+      "no_responses": 0,
+      "rejects": 0,
+      "parsing_failures": 0,
+      "condition_failures": 0,
+      "clock_cost_s": 0.0,
+      "goal_changed": false,
+      "change_at_s": null,
+      "first_correct_update_s": null,
+      "total_update_latency_s": null,
+      "update_censored": false,
+      "censor_after_change_s": null,
+      "old_target_submissions_after_change": 0,
+      "identified_public_change_anchor_s": null,
+      "identifiable_anchor_status": "NOT_APPLICABLE",
+      "identifiable_response_latency_s": null,
+      "policy_runtime_ns": 0,
+      "VLA_called": false,
+      "real_dynamics_advanced": false,
+      "case": "STOP_immediate"
+    },
+    {
+      "split": "validation",
+      "method": "Full_frozen",
+      "group_id": "be407422cd63db52190d",
+      "episode_id": "3ca46f06f2e98c7585e4453d",
+      "resolved": false,
+      "wrong_episode": false,
+      "wrong_submissions": 0,
+      "submissions": 0,
+      "questions": 6,
+      "waits": 0,
+      "roles": {
+        "PROBE": 4,
+        "TASK": 1,
+        "INTENT_QUERY": 1
+      },
+      "no_responses": 0,
+      "rejects": 0,
+      "parsing_failures": 0,
+      "condition_failures": 0,
+      "clock_cost_s": 12.0,
+      "goal_changed": false,
+      "change_at_s": null,
+      "first_correct_update_s": null,
+      "total_update_latency_s": null,
+      "update_censored": false,
+      "censor_after_change_s": null,
+      "old_target_submissions_after_change": 0,
+      "identified_public_change_anchor_s": null,
+      "identifiable_anchor_status": "NOT_APPLICABLE",
+      "identifiable_response_latency_s": null,
+      "policy_runtime_ns": 9504300,
+      "VLA_called": false,
+      "real_dynamics_advanced": false,
+      "case": "STOP_mid"
+    },
+    {
+      "split": "validation",
+      "method": "Full_frozen",
+      "group_id": "be407422cd63db52190d",
+      "episode_id": "3ca46f06f2e98c7585e4453d",
+      "resolved": true,
+      "wrong_episode": false,
+      "wrong_submissions": 0,
+      "submissions": 1,
+      "questions": 10,
+      "waits": 0,
+      "roles": {
+        "PROBE": 6,
+        "TASK": 2,
+        "INTENT_QUERY": 1,
+        "CONFIRM": 1
+      },
+      "no_responses": 0,
+      "rejects": 0,
+      "parsing_failures": 0,
+      "condition_failures": 0,
+      "clock_cost_s": 20.0,
+      "goal_changed": false,
+      "change_at_s": null,
+      "first_correct_update_s": null,
+      "total_update_latency_s": null,
+      "update_censored": false,
+      "censor_after_change_s": null,
+      "old_target_submissions_after_change": 0,
+      "identified_public_change_anchor_s": null,
+      "identifiable_anchor_status": "NOT_APPLICABLE",
+      "identifiable_response_latency_s": null,
+      "policy_runtime_ns": 21077000,
+      "VLA_called": false,
+      "real_dynamics_advanced": false,
+      "case": "CANCEL_late"
+    },
+    {
+      "split": "validation",
+      "method": "Full_frozen",
+      "group_id": "be407422cd63db52190d",
+      "episode_id": "3ca46f06f2e98c7585e4453d",
+      "resolved": false,
+      "wrong_episode": false,
+      "wrong_submissions": 0,
+      "submissions": 0,
+      "questions": 8,
+      "waits": 4,
+      "roles": {
+        "PROBE": 6,
+        "TASK": 1,
+        "INTENT_QUERY": 1
+      },
+      "no_responses": 0,
+      "rejects": 0,
+      "parsing_failures": 0,
+      "condition_failures": 0,
+      "clock_cost_s": 24.0,
+      "goal_changed": false,
+      "change_at_s": null,
+      "first_correct_update_s": null,
+      "total_update_latency_s": null,
+      "update_censored": false,
+      "censor_after_change_s": null,
+      "old_target_submissions_after_change": 0,
+      "identified_public_change_anchor_s": null,
+      "identifiable_anchor_status": "NOT_APPLICABLE",
+      "identifiable_response_latency_s": null,
+      "policy_runtime_ns": 76179500,
+      "VLA_called": false,
+      "real_dynamics_advanced": false,
+      "case": "mapping_change"
+    },
+    {
+      "split": "validation",
+      "method": "Full_frozen",
+      "group_id": "be407422cd63db52190d",
+      "episode_id": "8a73e47aa9c92d370ca37806",
+      "resolved": false,
+      "wrong_episode": false,
+      "wrong_submissions": 0,
+      "submissions": 0,
+      "questions": 0,
+      "waits": 0,
+      "roles": {},
+      "no_responses": 0,
+      "rejects": 0,
+      "parsing_failures": 0,
+      "condition_failures": 0,
+      "clock_cost_s": 0.0,
+      "goal_changed": false,
+      "change_at_s": null,
+      "first_correct_update_s": null,
+      "total_update_latency_s": null,
+      "update_censored": false,
+      "censor_after_change_s": null,
+      "old_target_submissions_after_change": 0,
+      "identified_public_change_anchor_s": null,
+      "identifiable_anchor_status": "NOT_APPLICABLE",
+      "identifiable_response_latency_s": null,
+      "policy_runtime_ns": 0,
+      "VLA_called": false,
+      "real_dynamics_advanced": false,
+      "case": "STOP_immediate"
+    },
+    {
+      "split": "validation",
+      "method": "Full_frozen",
+      "group_id": "be407422cd63db52190d",
+      "episode_id": "8a73e47aa9c92d370ca37806",
+      "resolved": false,
+      "wrong_episode": false,
+      "wrong_submissions": 0,
+      "submissions": 0,
+      "questions": 6,
+      "waits": 0,
+      "roles": {
+        "PROBE": 4,
+        "TASK": 1,
+        "INTENT_QUERY": 1
+      },
+      "no_responses": 0,
+      "rejects": 0,
+      "parsing_failures": 0,
+      "condition_failures": 0,
+      "clock_cost_s": 12.0,
+      "goal_changed": false,
+      "change_at_s": null,
+      "first_correct_update_s": null,
+      "total_update_latency_s": null,
+      "update_censored": false,
+      "censor_after_change_s": null,
+      "old_target_submissions_after_change": 0,
+      "identified_public_change_anchor_s": null,
+      "identifiable_anchor_status": "NOT_APPLICABLE",
+      "identifiable_response_latency_s": null,
+      "policy_runtime_ns": 9928100,
+      "VLA_called": false,
+      "real_dynamics_advanced": false,
+      "case": "STOP_mid"
+    },
+    {
+      "split": "validation",
+      "method": "Full_frozen",
+      "group_id": "be407422cd63db52190d",
+      "episode_id": "8a73e47aa9c92d370ca37806",
+      "resolved": false,
+      "wrong_episode": false,
+      "wrong_submissions": 0,
+      "submissions": 0,
+      "questions": 10,
+      "waits": 0,
+      "roles": {
+        "PROBE": 6,
+        "TASK": 2,
+        "INTENT_QUERY": 1,
+        "CONFIRM": 1
+      },
+      "no_responses": 0,
+      "rejects": 1,
+      "parsing_failures": 0,
+      "condition_failures": 0,
+      "clock_cost_s": 20.0,
+      "goal_changed": false,
+      "change_at_s": null,
+      "first_correct_update_s": null,
+      "total_update_latency_s": null,
+      "update_censored": false,
+      "censor_after_change_s": null,
+      "old_target_submissions_after_change": 0,
+      "identified_public_change_anchor_s": null,
+      "identifiable_anchor_status": "NOT_APPLICABLE",
+      "identifiable_response_latency_s": null,
+      "policy_runtime_ns": 19147500,
+      "VLA_called": false,
+      "real_dynamics_advanced": false,
+      "case": "CANCEL_late"
+    },
+    {
+      "split": "validation",
+      "method": "Full_frozen",
+      "group_id": "be407422cd63db52190d",
+      "episode_id": "8a73e47aa9c92d370ca37806",
+      "resolved": false,
+      "wrong_episode": false,
+      "wrong_submissions": 0,
+      "submissions": 0,
+      "questions": 8,
+      "waits": 4,
+      "roles": {
+        "PROBE": 6,
+        "TASK": 1,
+        "INTENT_QUERY": 1
+      },
+      "no_responses": 0,
+      "rejects": 0,
+      "parsing_failures": 0,
+      "condition_failures": 0,
+      "clock_cost_s": 24.0,
+      "goal_changed": false,
+      "change_at_s": null,
+      "first_correct_update_s": null,
+      "total_update_latency_s": null,
+      "update_censored": false,
+      "censor_after_change_s": null,
+      "old_target_submissions_after_change": 0,
+      "identified_public_change_anchor_s": null,
+      "identifiable_anchor_status": "NOT_APPLICABLE",
+      "identifiable_response_latency_s": null,
+      "policy_runtime_ns": 76708600,
+      "VLA_called": false,
+      "real_dynamics_advanced": false,
+      "case": "mapping_change"
+    },
+    {
+      "split": "validation",
+      "method": "Full_frozen",
+      "group_id": "c643a21fa2fbdfc32c20",
+      "episode_id": "dfaa20a11afa4e9a7221ad55",
+      "resolved": false,
+      "wrong_episode": false,
+      "wrong_submissions": 0,
+      "submissions": 0,
+      "questions": 0,
+      "waits": 0,
+      "roles": {},
+      "no_responses": 0,
+      "rejects": 0,
+      "parsing_failures": 0,
+      "condition_failures": 0,
+      "clock_cost_s": 0.0,
+      "goal_changed": false,
+      "change_at_s": null,
+      "first_correct_update_s": null,
+      "total_update_latency_s": null,
+      "update_censored": false,
+      "censor_after_change_s": null,
+      "old_target_submissions_after_change": 0,
+      "identified_public_change_anchor_s": null,
+      "identifiable_anchor_status": "NOT_APPLICABLE",
+      "identifiable_response_latency_s": null,
+      "policy_runtime_ns": 0,
+      "VLA_called": false,
+      "real_dynamics_advanced": false,
+      "case": "STOP_immediate"
+    },
+    {
+      "split": "validation",
+      "method": "Full_frozen",
+      "group_id": "c643a21fa2fbdfc32c20",
+      "episode_id": "dfaa20a11afa4e9a7221ad55",
+      "resolved": false,
+      "wrong_episode": false,
+      "wrong_submissions": 0,
+      "submissions": 0,
+      "questions": 6,
+      "waits": 0,
+      "roles": {
+        "PROBE": 3,
+        "TASK": 1,
+        "INTENT_QUERY": 2
+      },
+      "no_responses": 0,
+      "rejects": 0,
+      "parsing_failures": 0,
+      "condition_failures": 0,
+      "clock_cost_s": 12.0,
+      "goal_changed": false,
+      "change_at_s": null,
+      "first_correct_update_s": null,
+      "total_update_latency_s": null,
+      "update_censored": false,
+      "censor_after_change_s": null,
+      "old_target_submissions_after_change": 0,
+      "identified_public_change_anchor_s": null,
+      "identifiable_anchor_status": "NOT_APPLICABLE",
+      "identifiable_response_latency_s": null,
+      "policy_runtime_ns": 11738000,
+      "VLA_called": false,
+      "real_dynamics_advanced": false,
+      "case": "STOP_mid"
+    },
+    {
+      "split": "validation",
+      "method": "Full_frozen",
+      "group_id": "c643a21fa2fbdfc32c20",
+      "episode_id": "dfaa20a11afa4e9a7221ad55",
+      "resolved": true,
+      "wrong_episode": false,
+      "wrong_submissions": 0,
+      "submissions": 1,
+      "questions": 10,
+      "waits": 0,
+      "roles": {
+        "PROBE": 6,
+        "TASK": 1,
+        "INTENT_QUERY": 2,
+        "CONFIRM": 1
+      },
+      "no_responses": 0,
+      "rejects": 0,
+      "parsing_failures": 0,
+      "condition_failures": 0,
+      "clock_cost_s": 20.0,
+      "goal_changed": false,
+      "change_at_s": null,
+      "first_correct_update_s": null,
+      "total_update_latency_s": null,
+      "update_censored": false,
+      "censor_after_change_s": null,
+      "old_target_submissions_after_change": 0,
+      "identified_public_change_anchor_s": null,
+      "identifiable_anchor_status": "NOT_APPLICABLE",
+      "identifiable_response_latency_s": null,
+      "policy_runtime_ns": 22609300,
+      "VLA_called": false,
+      "real_dynamics_advanced": false,
+      "case": "CANCEL_late"
+    },
+    {
+      "split": "validation",
+      "method": "Full_frozen",
+      "group_id": "c643a21fa2fbdfc32c20",
+      "episode_id": "dfaa20a11afa4e9a7221ad55",
+      "resolved": false,
+      "wrong_episode": false,
+      "wrong_submissions": 0,
+      "submissions": 0,
+      "questions": 11,
+      "waits": 1,
+      "roles": {
+        "PROBE": 6,
+        "TASK": 2,
+        "INTENT_QUERY": 3
+      },
+      "no_responses": 0,
+      "rejects": 0,
+      "parsing_failures": 0,
+      "condition_failures": 0,
+      "clock_cost_s": 24.0,
+      "goal_changed": false,
+      "change_at_s": null,
+      "first_correct_update_s": null,
+      "total_update_latency_s": null,
+      "update_censored": false,
+      "censor_after_change_s": null,
+      "old_target_submissions_after_change": 0,
+      "identified_public_change_anchor_s": null,
+      "identifiable_anchor_status": "NOT_APPLICABLE",
+      "identifiable_response_latency_s": null,
+      "policy_runtime_ns": 84763700,
+      "VLA_called": false,
+      "real_dynamics_advanced": false,
+      "case": "mapping_change"
+    },
+    {
+      "split": "validation",
+      "method": "Full_frozen",
+      "group_id": "c643a21fa2fbdfc32c20",
+      "episode_id": "7d02da34438c898381a919fe",
+      "resolved": false,
+      "wrong_episode": false,
+      "wrong_submissions": 0,
+      "submissions": 0,
+      "questions": 0,
+      "waits": 0,
+      "roles": {},
+      "no_responses": 0,
+      "rejects": 0,
+      "parsing_failures": 0,
+      "condition_failures": 0,
+      "clock_cost_s": 0.0,
+      "goal_changed": false,
+      "change_at_s": null,
+      "first_correct_update_s": null,
+      "total_update_latency_s": null,
+      "update_censored": false,
+      "censor_after_change_s": null,
+      "old_target_submissions_after_change": 0,
+      "identified_public_change_anchor_s": null,
+      "identifiable_anchor_status": "NOT_APPLICABLE",
+      "identifiable_response_latency_s": null,
+      "policy_runtime_ns": 0,
+      "VLA_called": false,
+      "real_dynamics_advanced": false,
+      "case": "STOP_immediate"
+    },
+    {
+      "split": "validation",
+      "method": "Full_frozen",
+      "group_id": "c643a21fa2fbdfc32c20",
+      "episode_id": "7d02da34438c898381a919fe",
+      "resolved": false,
+      "wrong_episode": false,
+      "wrong_submissions": 0,
+      "submissions": 0,
+      "questions": 6,
+      "waits": 0,
+      "roles": {
+        "PROBE": 3,
+        "TASK": 1,
+        "INTENT_QUERY": 2
+      },
+      "no_responses": 1,
+      "rejects": 0,
+      "parsing_failures": 0,
+      "condition_failures": 0,
+      "clock_cost_s": 12.0,
+      "goal_changed": false,
+      "change_at_s": null,
+      "first_correct_update_s": null,
+      "total_update_latency_s": null,
+      "update_censored": false,
+      "censor_after_change_s": null,
+      "old_target_submissions_after_change": 0,
+      "identified_public_change_anchor_s": null,
+      "identifiable_anchor_status": "NOT_APPLICABLE",
+      "identifiable_response_latency_s": null,
+      "policy_runtime_ns": 11220500,
+      "VLA_called": false,
+      "real_dynamics_advanced": false,
+      "case": "STOP_mid"
+    },
+    {
+      "split": "validation",
+      "method": "Full_frozen",
+      "group_id": "c643a21fa2fbdfc32c20",
+      "episode_id": "7d02da34438c898381a919fe",
+      "resolved": false,
+      "wrong_episode": false,
+      "wrong_submissions": 0,
+      "submissions": 0,
+      "questions": 10,
+      "waits": 0,
+      "roles": {
+        "PROBE": 6,
+        "TASK": 1,
+        "INTENT_QUERY": 3
+      },
+      "no_responses": 1,
+      "rejects": 0,
+      "parsing_failures": 0,
+      "condition_failures": 0,
+      "clock_cost_s": 20.0,
+      "goal_changed": false,
+      "change_at_s": null,
+      "first_correct_update_s": null,
+      "total_update_latency_s": null,
+      "update_censored": false,
+      "censor_after_change_s": null,
+      "old_target_submissions_after_change": 0,
+      "identified_public_change_anchor_s": null,
+      "identifiable_anchor_status": "NOT_APPLICABLE",
+      "identifiable_response_latency_s": null,
+      "policy_runtime_ns": 22243200,
+      "VLA_called": false,
+      "real_dynamics_advanced": false,
+      "case": "CANCEL_late"
+    },
+    {
+      "split": "validation",
+      "method": "Full_frozen",
+      "group_id": "c643a21fa2fbdfc32c20",
+      "episode_id": "7d02da34438c898381a919fe",
+      "resolved": false,
+      "wrong_episode": false,
+      "wrong_submissions": 0,
+      "submissions": 0,
+      "questions": 12,
+      "waits": 0,
+      "roles": {
+        "PROBE": 6,
+        "TASK": 2,
+        "INTENT_QUERY": 4
+      },
+      "no_responses": 1,
+      "rejects": 0,
+      "parsing_failures": 0,
+      "condition_failures": 0,
+      "clock_cost_s": 24.0,
+      "goal_changed": false,
+      "change_at_s": null,
+      "first_correct_update_s": null,
+      "total_update_latency_s": null,
+      "update_censored": false,
+      "censor_after_change_s": null,
+      "old_target_submissions_after_change": 0,
+      "identified_public_change_anchor_s": null,
+      "identifiable_anchor_status": "NOT_APPLICABLE",
+      "identifiable_response_latency_s": null,
+      "policy_runtime_ns": 88779100,
+      "VLA_called": false,
+      "real_dynamics_advanced": false,
+      "case": "mapping_change"
+    },
+    {
+      "split": "validation",
+      "method": "Full_frozen",
+      "group_id": "c643a21fa2fbdfc32c20",
+      "episode_id": "66c54cbd120fded5bec9b5b7",
+      "resolved": false,
+      "wrong_episode": false,
+      "wrong_submissions": 0,
+      "submissions": 0,
+      "questions": 0,
+      "waits": 0,
+      "roles": {},
+      "no_responses": 0,
+      "rejects": 0,
+      "parsing_failures": 0,
+      "condition_failures": 0,
+      "clock_cost_s": 0.0,
+      "goal_changed": false,
+      "change_at_s": null,
+      "first_correct_update_s": null,
+      "total_update_latency_s": null,
+      "update_censored": false,
+      "censor_after_change_s": null,
+      "old_target_submissions_after_change": 0,
+      "identified_public_change_anchor_s": null,
+      "identifiable_anchor_status": "NOT_APPLICABLE",
+      "identifiable_response_latency_s": null,
+      "policy_runtime_ns": 0,
+      "VLA_called": false,
+      "real_dynamics_advanced": false,
+      "case": "STOP_immediate"
+    },
+    {
+      "split": "validation",
+      "method": "Full_frozen",
+      "group_id": "c643a21fa2fbdfc32c20",
+      "episode_id": "66c54cbd120fded5bec9b5b7",
+      "resolved": false,
+      "wrong_episode": false,
+      "wrong_submissions": 0,
+      "submissions": 0,
+      "questions": 6,
+      "waits": 0,
+      "roles": {
+        "PROBE": 4,
+        "TASK": 1,
+        "INTENT_QUERY": 1
+      },
+      "no_responses": 0,
+      "rejects": 0,
+      "parsing_failures": 0,
+      "condition_failures": 0,
+      "clock_cost_s": 12.0,
+      "goal_changed": false,
+      "change_at_s": null,
+      "first_correct_update_s": null,
+      "total_update_latency_s": null,
+      "update_censored": false,
+      "censor_after_change_s": null,
+      "old_target_submissions_after_change": 0,
+      "identified_public_change_anchor_s": null,
+      "identifiable_anchor_status": "NOT_APPLICABLE",
+      "identifiable_response_latency_s": null,
+      "policy_runtime_ns": 11978000,
+      "VLA_called": false,
+      "real_dynamics_advanced": false,
+      "case": "STOP_mid"
+    },
+    {
+      "split": "validation",
+      "method": "Full_frozen",
+      "group_id": "c643a21fa2fbdfc32c20",
+      "episode_id": "66c54cbd120fded5bec9b5b7",
+      "resolved": false,
+      "wrong_episode": false,
+      "wrong_submissions": 0,
+      "submissions": 0,
+      "questions": 7,
+      "waits": 3,
+      "roles": {
+        "PROBE": 4,
+        "TASK": 2,
+        "INTENT_QUERY": 1
+      },
+      "no_responses": 0,
+      "rejects": 0,
+      "parsing_failures": 0,
+      "condition_failures": 0,
+      "clock_cost_s": 20.0,
+      "goal_changed": false,
+      "change_at_s": null,
+      "first_correct_update_s": null,
+      "total_update_latency_s": null,
+      "update_censored": false,
+      "censor_after_change_s": null,
+      "old_target_submissions_after_change": 0,
+      "identified_public_change_anchor_s": null,
+      "identifiable_anchor_status": "NOT_APPLICABLE",
+      "identifiable_response_latency_s": null,
+      "policy_runtime_ns": 23010300,
+      "VLA_called": false,
+      "real_dynamics_advanced": false,
+      "case": "CANCEL_late"
+    },
+    {
+      "split": "validation",
+      "method": "Full_frozen",
+      "group_id": "c643a21fa2fbdfc32c20",
+      "episode_id": "66c54cbd120fded5bec9b5b7",
+      "resolved": false,
+      "wrong_episode": false,
+      "wrong_submissions": 0,
+      "submissions": 0,
+      "questions": 8,
+      "waits": 4,
+      "roles": {
+        "PROBE": 6,
+        "TASK": 1,
+        "INTENT_QUERY": 1
+      },
+      "no_responses": 0,
+      "rejects": 0,
+      "parsing_failures": 0,
+      "condition_failures": 0,
+      "clock_cost_s": 24.0,
+      "goal_changed": false,
+      "change_at_s": null,
+      "first_correct_update_s": null,
+      "total_update_latency_s": null,
+      "update_censored": false,
+      "censor_after_change_s": null,
+      "old_target_submissions_after_change": 0,
+      "identified_public_change_anchor_s": null,
+      "identifiable_anchor_status": "NOT_APPLICABLE",
+      "identifiable_response_latency_s": null,
+      "policy_runtime_ns": 81521400,
+      "VLA_called": false,
+      "real_dynamics_advanced": false,
+      "case": "mapping_change"
+    },
+    {
+      "split": "validation",
+      "method": "Full_frozen",
+      "group_id": "c643a21fa2fbdfc32c20",
+      "episode_id": "8ce9cefdbfafe24aab2e9805",
+      "resolved": false,
+      "wrong_episode": false,
+      "wrong_submissions": 0,
+      "submissions": 0,
+      "questions": 0,
+      "waits": 0,
+      "roles": {},
+      "no_responses": 0,
+      "rejects": 0,
+      "parsing_failures": 0,
+      "condition_failures": 0,
+      "clock_cost_s": 0.0,
+      "goal_changed": false,
+      "change_at_s": null,
+      "first_correct_update_s": null,
+      "total_update_latency_s": null,
+      "update_censored": false,
+      "censor_after_change_s": null,
+      "old_target_submissions_after_change": 0,
+      "identified_public_change_anchor_s": null,
+      "identifiable_anchor_status": "NOT_APPLICABLE",
+      "identifiable_response_latency_s": null,
+      "policy_runtime_ns": 0,
+      "VLA_called": false,
+      "real_dynamics_advanced": false,
+      "case": "STOP_immediate"
+    },
+    {
+      "split": "validation",
+      "method": "Full_frozen",
+      "group_id": "c643a21fa2fbdfc32c20",
+      "episode_id": "8ce9cefdbfafe24aab2e9805",
+      "resolved": false,
+      "wrong_episode": false,
+      "wrong_submissions": 0,
+      "submissions": 0,
+      "questions": 6,
+      "waits": 0,
+      "roles": {
+        "PROBE": 4,
+        "TASK": 1,
+        "INTENT_QUERY": 1
+      },
+      "no_responses": 0,
+      "rejects": 0,
+      "parsing_failures": 0,
+      "condition_failures": 0,
+      "clock_cost_s": 12.0,
+      "goal_changed": false,
+      "change_at_s": null,
+      "first_correct_update_s": null,
+      "total_update_latency_s": null,
+      "update_censored": false,
+      "censor_after_change_s": null,
+      "old_target_submissions_after_change": 0,
+      "identified_public_change_anchor_s": null,
+      "identifiable_anchor_status": "NOT_APPLICABLE",
+      "identifiable_response_latency_s": null,
+      "policy_runtime_ns": 12906500,
+      "VLA_called": false,
+      "real_dynamics_advanced": false,
+      "case": "STOP_mid"
+    },
+    {
+      "split": "validation",
+      "method": "Full_frozen",
+      "group_id": "c643a21fa2fbdfc32c20",
+      "episode_id": "8ce9cefdbfafe24aab2e9805",
+      "resolved": true,
+      "wrong_episode": false,
+      "wrong_submissions": 0,
+      "submissions": 1,
+      "questions": 10,
+      "waits": 0,
+      "roles": {
+        "PROBE": 6,
+        "TASK": 2,
+        "INTENT_QUERY": 1,
+        "CONFIRM": 1
+      },
+      "no_responses": 0,
+      "rejects": 0,
+      "parsing_failures": 0,
+      "condition_failures": 0,
+      "clock_cost_s": 20.0,
+      "goal_changed": false,
+      "change_at_s": null,
+      "first_correct_update_s": null,
+      "total_update_latency_s": null,
+      "update_censored": false,
+      "censor_after_change_s": null,
+      "old_target_submissions_after_change": 0,
+      "identified_public_change_anchor_s": null,
+      "identifiable_anchor_status": "NOT_APPLICABLE",
+      "identifiable_response_latency_s": null,
+      "policy_runtime_ns": 23345000,
+      "VLA_called": false,
+      "real_dynamics_advanced": false,
+      "case": "CANCEL_late"
+    },
+    {
+      "split": "validation",
+      "method": "Full_frozen",
+      "group_id": "c643a21fa2fbdfc32c20",
+      "episode_id": "8ce9cefdbfafe24aab2e9805",
+      "resolved": false,
+      "wrong_episode": false,
+      "wrong_submissions": 0,
+      "submissions": 0,
+      "questions": 8,
+      "waits": 4,
+      "roles": {
+        "PROBE": 6,
+        "TASK": 1,
+        "INTENT_QUERY": 1
+      },
+      "no_responses": 0,
+      "rejects": 0,
+      "parsing_failures": 0,
+      "condition_failures": 0,
+      "clock_cost_s": 24.0,
+      "goal_changed": false,
+      "change_at_s": null,
+      "first_correct_update_s": null,
+      "total_update_latency_s": null,
+      "update_censored": false,
+      "censor_after_change_s": null,
+      "old_target_submissions_after_change": 0,
+      "identified_public_change_anchor_s": null,
+      "identifiable_anchor_status": "NOT_APPLICABLE",
+      "identifiable_response_latency_s": null,
+      "policy_runtime_ns": 79448600,
+      "VLA_called": false,
+      "real_dynamics_advanced": false,
+      "case": "mapping_change"
+    }
+  ],
+  "negative_submissions": [
+    {
+      "case": "stop_latched",
+      "rejected": true,
+      "reason": "state:stop_did_not_clear"
+    },
+    {
+      "case": "wrong_confirmation",
+      "rejected": true,
+      "reason": "submission:exact_confirm_required"
+    },
+    {
+      "case": "wrong_suggestion",
+      "rejected": true,
+      "reason": "submission:exact_confirm_required"
+    },
+    {
+      "case": "stale_mapping",
+      "rejected": true,
+      "reason": "submission:exact_confirm_required"
+    },
+    {
+      "case": "duplicate_receipt",
+      "rejected": true,
+      "reason": "submission:duplicate"
+    },
+    {
+      "case": "expired_task",
+      "rejected": true,
+      "reason": "task:expired"
+    }
+  ],
+  "ambiguous_public_cases": 64,
+  "outside_no_response_cases": 64,
+  "source_and_weights_unchanged": true,
+  "calibration_refit": false,
+  "training": false,
+  "neural_architecture_gain_established": false,
+  "full_step08_complete": false,
+  "known_language_failures": {
+    "conflicting_declarations": 8,
+    "all_language_exact": "112/120"
+  },
+  "formal_test_accessed": false,
+  "VLA_called": false,
+  "VLM_loaded": false,
+  "real_dynamics_advanced": false,
+  "trace_manifest": [
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_frozen_3e7f4a934272c0ac1dcfa709_stable.json",
+      "sha256": "c40863013a9bf4224b9860ec7367c7a3ec70be48429573ea0db92d94edd74743"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_no_recheck_3e7f4a934272c0ac1dcfa709_stable.json",
+      "sha256": "08b032e571f8f3cfc252bfd96d9015f2f197aba3c0bca4c36b904c4cdcd1463e"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\AlwaysWait_3e7f4a934272c0ac1dcfa709_stable.json",
+      "sha256": "600f095296ed6e1e6824d8901021a573675062c4d8bc20ee426dae443b0f32b1"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_frozen_3e7f4a934272c0ac1dcfa709_goal_change.json",
+      "sha256": "30778c3c87f71308e67943f7e9e32aeeaa5a41421dabb5f304416fb9020cb5da"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_no_recheck_3e7f4a934272c0ac1dcfa709_goal_change.json",
+      "sha256": "acd60443f387f307cdc566f0bb98aeb31b7e878b7988dda9402132784647c2ae"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\AlwaysWait_3e7f4a934272c0ac1dcfa709_goal_change.json",
+      "sha256": "2031633c1eeb1c355b6763be22fabc24598fdb55b6649dbfd36b6f715434e138"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_frozen_3e7f4a934272c0ac1dcfa709_channel_change.json",
+      "sha256": "f07f02d251557d129da4f3996cec003f7b07e8f03265ac515ebbde7c19edfa19"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_no_recheck_3e7f4a934272c0ac1dcfa709_channel_change.json",
+      "sha256": "e705d8016ea79c2649826e542f7b3343b294818f219c8c07f359ded01b176eba"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\AlwaysWait_3e7f4a934272c0ac1dcfa709_channel_change.json",
+      "sha256": "245c60af5fa290e627837d9514cc5a66b3f06d632fec82b35d5d97059719b240"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_frozen_3e7f4a934272c0ac1dcfa709_both_change.json",
+      "sha256": "9af5f2f8c2d1149c430f021040ddb226275f4ae10a4cfbe79ed03f1b7d01f0b6"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_no_recheck_3e7f4a934272c0ac1dcfa709_both_change.json",
+      "sha256": "5efc28a4d65bbf631fe506a57ba17a80c4cd297b8db5ffa116478737f1831fef"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\AlwaysWait_3e7f4a934272c0ac1dcfa709_both_change.json",
+      "sha256": "8461ee98bf363599f382f19b18fd4d7801adb9c3b09bf5d08097c8fd7be2f5d9"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_frozen_a733559f6120147aa83fb6dd_stable.json",
+      "sha256": "9001d1229818c4a750044f2b05b28cc926abf3d1243ee48647b1cf6a68d21f00"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_no_recheck_a733559f6120147aa83fb6dd_stable.json",
+      "sha256": "203847ab02d745478773ac3b6c5173a3b1ea3c83c8c3a5c5dc82d8069ec5394c"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\AlwaysWait_a733559f6120147aa83fb6dd_stable.json",
+      "sha256": "aff44342dec8c127146fd05f13c51c88176601c318a3565bc82a9d73240aba9b"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_frozen_a733559f6120147aa83fb6dd_goal_change.json",
+      "sha256": "156e8f97620b0ba8d8dbfcc40f5d3466e565bf78e910baae35259048e865cdbc"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_no_recheck_a733559f6120147aa83fb6dd_goal_change.json",
+      "sha256": "75adde9c08e06d60b655c99d0dd4de0dff633e88129e1d0451ec8cc2fe3673dc"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\AlwaysWait_a733559f6120147aa83fb6dd_goal_change.json",
+      "sha256": "30ae88a1968dc8705a348e464262b47b5faeb1b2745ec098b15ace38cc71eea9"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_frozen_a733559f6120147aa83fb6dd_channel_change.json",
+      "sha256": "1f6a25e3451ab05a810070b19a1a3563b563b7e0bd47bdce8d824d80dc69e7cb"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_no_recheck_a733559f6120147aa83fb6dd_channel_change.json",
+      "sha256": "8448a5724835f17241f0ddaf01dd5ee7dfe2a6ba61ef41166fba1389ee14c9c4"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\AlwaysWait_a733559f6120147aa83fb6dd_channel_change.json",
+      "sha256": "5a1de016ecab0ea928d8f47d6b4381ab30e5424d351f97dcb52bb8eb8fdaa7e6"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_frozen_a733559f6120147aa83fb6dd_both_change.json",
+      "sha256": "68bc717311c84f3c2577579779f1dfc4d66f3e603dff930b99ec6a07af4c5626"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_no_recheck_a733559f6120147aa83fb6dd_both_change.json",
+      "sha256": "17059f8b867570ab22a56871105c09155965e1707c75a45a2ade43ba11a5fb38"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\AlwaysWait_a733559f6120147aa83fb6dd_both_change.json",
+      "sha256": "d8b81d9908e237feb77f8bbe2dd996247f162a5816aa5f6f2f685945a97f931d"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_frozen_3ca46f06f2e98c7585e4453d_stable.json",
+      "sha256": "fa49e3fd6cacb4600d7ee19eaccfff03e5769cf77625fd38ace83c8e7d0faebb"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_no_recheck_3ca46f06f2e98c7585e4453d_stable.json",
+      "sha256": "75800d864dfe99eab6197cf97023e1c95e1593f28ddf180698a8fe177368878d"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\AlwaysWait_3ca46f06f2e98c7585e4453d_stable.json",
+      "sha256": "2aed5de813ed3865a6a668a3a2601e369596aadd621e5cfccb1172b3fdf6cf6e"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_frozen_3ca46f06f2e98c7585e4453d_goal_change.json",
+      "sha256": "374519f44cf288d3fc3fa7a1aa3824432bdf7cdf05a3f4512be1bf874c6e485e"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_no_recheck_3ca46f06f2e98c7585e4453d_goal_change.json",
+      "sha256": "caacd485381e433f72e8f2567bb081cfcbde9557e0c4195a90917c85aa94ccfb"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\AlwaysWait_3ca46f06f2e98c7585e4453d_goal_change.json",
+      "sha256": "1ae6a2c1152203eea5b842b9509d86bc65a6a20e4242599bf66e9b0d0b3ccfb7"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_frozen_3ca46f06f2e98c7585e4453d_channel_change.json",
+      "sha256": "7b6860f1d691ddf140a058270523b25ecc895f6f9505499ff5b1ba987b1f884c"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_no_recheck_3ca46f06f2e98c7585e4453d_channel_change.json",
+      "sha256": "9e174f9b9a2e2c71386f3d892b64b679bb68ac68d8f5c3cc091697a3b2d1531f"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\AlwaysWait_3ca46f06f2e98c7585e4453d_channel_change.json",
+      "sha256": "8b2a3ecf23a60718780dd1e2d1a9d2c1dc3b2b8ed1706286b4eeddf12ca4f09e"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_frozen_3ca46f06f2e98c7585e4453d_both_change.json",
+      "sha256": "54b8d4e0e2b7675c780aa49c737ef2c7f12ecd21aa29f9789884b7f0906b5376"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_no_recheck_3ca46f06f2e98c7585e4453d_both_change.json",
+      "sha256": "f127e998ff341e9d6549a4582cfd51e27f50abb45bb09b9317451eea56389c2c"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\AlwaysWait_3ca46f06f2e98c7585e4453d_both_change.json",
+      "sha256": "0e2441b684d78f0a25086acd2cf2b4dcc5489c6a97f464b69cd23e06f9516cea"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_frozen_8a73e47aa9c92d370ca37806_stable.json",
+      "sha256": "d6d75be2b8a87ce9f02e54ff83ab0b740f482d633cb9632f9973722bf67719ea"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_no_recheck_8a73e47aa9c92d370ca37806_stable.json",
+      "sha256": "9e63873b6383e7d13780a3be3daed0520ce2c796ac4273659cf7a18ca145ab60"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\AlwaysWait_8a73e47aa9c92d370ca37806_stable.json",
+      "sha256": "ffe6c162c3ab6f1ee227b09b9c3785ea63e08aaffe45ebf8ecadc6e9fc0ffce0"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_frozen_8a73e47aa9c92d370ca37806_goal_change.json",
+      "sha256": "80160144056210237565b3e73a32d982bcdd95595aa9c9aeb74ff65cf76a630e"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_no_recheck_8a73e47aa9c92d370ca37806_goal_change.json",
+      "sha256": "7972baa20a68d6663c9a05acc1532b2e23b7e5fb69a7bf6dacfbf0da6c8f6391"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\AlwaysWait_8a73e47aa9c92d370ca37806_goal_change.json",
+      "sha256": "7561cce7342b9d154e166fc48738b7edeb77e46755c2b6e8b03b485894404683"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_frozen_8a73e47aa9c92d370ca37806_channel_change.json",
+      "sha256": "54812f2a176d8b020bdf35aa03bd8ac6a673879386df5b0e30615c7193252825"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_no_recheck_8a73e47aa9c92d370ca37806_channel_change.json",
+      "sha256": "5b47218af2bf69a351586385dd0d7fad35e1cbe5dadc8161f0cb654b924e2bb5"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\AlwaysWait_8a73e47aa9c92d370ca37806_channel_change.json",
+      "sha256": "7d1cb686021ef8cbdc8637ad1a8593689776dc5db745d3ad3bec3b379f6215b8"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_frozen_8a73e47aa9c92d370ca37806_both_change.json",
+      "sha256": "ed19686746216ceed5af264c47182cee087936c833dd72cb0bc2801852678491"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_no_recheck_8a73e47aa9c92d370ca37806_both_change.json",
+      "sha256": "2074249c77c47f8ff8e769975a343f0c19bf38840ee660441b748fdd315f2d38"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\AlwaysWait_8a73e47aa9c92d370ca37806_both_change.json",
+      "sha256": "c81a9d792772bfd7438e343ffda2c5f166b169c6220244ab789fea6b94e8fb26"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_frozen_dfaa20a11afa4e9a7221ad55_stable.json",
+      "sha256": "11d0870edf0e5653317d0561e81956f337cfc614b733c90cf3fe5a4dfce83978"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_no_recheck_dfaa20a11afa4e9a7221ad55_stable.json",
+      "sha256": "88ce33a2480dd432a050baa5c8671d90e7240fc8e6afffac3b46ab323b6bca5e"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\AlwaysWait_dfaa20a11afa4e9a7221ad55_stable.json",
+      "sha256": "9336e7f697102edb0b6374cb87382d3ee0bcf201405d2279978f05526692c7d1"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_frozen_dfaa20a11afa4e9a7221ad55_goal_change.json",
+      "sha256": "f4f0c6637e242eaea6b38da85e03184c6e6475413dc10904f1f7c810f7c22203"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_no_recheck_dfaa20a11afa4e9a7221ad55_goal_change.json",
+      "sha256": "a8900339aa7789da09152b0f5ab3ff658eb93a1a954b76a9fd3abf4606a3f8d1"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\AlwaysWait_dfaa20a11afa4e9a7221ad55_goal_change.json",
+      "sha256": "462488d242012d377db598ae2cbf3462f8830f0383d14d94803866a48cadb9f8"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_frozen_dfaa20a11afa4e9a7221ad55_channel_change.json",
+      "sha256": "7f54b3051599b966fcd06c5662aa14f009fe9ee456415e4f56d7ca81809d3510"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_no_recheck_dfaa20a11afa4e9a7221ad55_channel_change.json",
+      "sha256": "be1aabb17ed714e0890ec5e39b17cf799b4a7932b3adbbef79b51c7f3286a921"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\AlwaysWait_dfaa20a11afa4e9a7221ad55_channel_change.json",
+      "sha256": "0fee76780f4d636a5ab8111b2a38c1c44391decb031d0b21175f939001cec3da"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_frozen_dfaa20a11afa4e9a7221ad55_both_change.json",
+      "sha256": "a6e62cf461c34804ac119caad5140e2f77b3c88fc38cb44098860d653678089e"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_no_recheck_dfaa20a11afa4e9a7221ad55_both_change.json",
+      "sha256": "2823d6358ccbca8305b20578495e4cf4c030e6e92bd6d6445cb3560f84b11a0c"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\AlwaysWait_dfaa20a11afa4e9a7221ad55_both_change.json",
+      "sha256": "1c76b588d649934c0d887d5c45df0aedc181607f2cb0a65bfaa24df86a7633d8"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_frozen_7d02da34438c898381a919fe_stable.json",
+      "sha256": "642c34360ff4f57992fb8ad9797b1d48d9ea60c2e80b27ac91ad188a0bac6e1e"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_no_recheck_7d02da34438c898381a919fe_stable.json",
+      "sha256": "d1d8c066827aa33c4c3da7e5b55e84322f5e25bd79b0113e6007dfb6d53ba7ab"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\AlwaysWait_7d02da34438c898381a919fe_stable.json",
+      "sha256": "cc78f7be958434dc8b64b2e6a35fd6018e846f01656518bab2f0bce098aa3ddd"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_frozen_7d02da34438c898381a919fe_goal_change.json",
+      "sha256": "818cfe2c5124fff28cb88fa88c265d8b6de394b36fad9802f28c77b06c04e148"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_no_recheck_7d02da34438c898381a919fe_goal_change.json",
+      "sha256": "69856cb31537ecdd154263aa9eee98565a473c60004a6d6df5c2ab23d59160ec"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\AlwaysWait_7d02da34438c898381a919fe_goal_change.json",
+      "sha256": "ddc822c2bd898a94037aa2a046b69051e7399fc7d3ff8f4322139a34838c98a6"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_frozen_7d02da34438c898381a919fe_channel_change.json",
+      "sha256": "ff634c4b6320cd301fc97aa03f0b04f7f24799c446cfd46ad22ff83d9e3defd4"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_no_recheck_7d02da34438c898381a919fe_channel_change.json",
+      "sha256": "7b6b9d3a56d1f82f7cb4b38df6b5f1c0d9838675180c1ebf5cc75b49b817ed43"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\AlwaysWait_7d02da34438c898381a919fe_channel_change.json",
+      "sha256": "4d0df6399fcaf3e086ba278c5d1436ae3342271912f814f949b55b87927c7924"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_frozen_7d02da34438c898381a919fe_both_change.json",
+      "sha256": "410dc861fd1f8bcf1042490bf69e6a0993037dde504010ff52963db7dc361db8"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_no_recheck_7d02da34438c898381a919fe_both_change.json",
+      "sha256": "3e0c6d8a1228b2d8e23258a5f6230b89b88724b5efce264fdc77abe2a88fc40a"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\AlwaysWait_7d02da34438c898381a919fe_both_change.json",
+      "sha256": "146b7bae6cfa5c10ee308fa4e254ee8aeafa1d7fb2352523f8bc2d2f1503e7e7"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_frozen_66c54cbd120fded5bec9b5b7_stable.json",
+      "sha256": "772f0b968a87e5c6d16e67c7dcf938674c2a8bfb740dbbb3d5866070c3a4c076"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_no_recheck_66c54cbd120fded5bec9b5b7_stable.json",
+      "sha256": "4b6b1353c1b65b2727cb18ff6f6580e869b0511170b6093e377fcb7256bbec0d"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\AlwaysWait_66c54cbd120fded5bec9b5b7_stable.json",
+      "sha256": "ec8f33cc04dbcaa5d29d717227fb434587c2cc30fd3ab6ffd3bdac4ef56b070f"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_frozen_66c54cbd120fded5bec9b5b7_goal_change.json",
+      "sha256": "890711aedb173b44793975691a86ae4fef33aba63beaa48d95bc675bd46a55a2"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_no_recheck_66c54cbd120fded5bec9b5b7_goal_change.json",
+      "sha256": "da59ecd99b6f0a37d8fb7d718a4acefd16419b218a1d0c130b04cc19fa156b9f"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\AlwaysWait_66c54cbd120fded5bec9b5b7_goal_change.json",
+      "sha256": "f87c2f7fd2546f1b90ac48cafcf36e78425074a9d9ff74a9e1dfe00cab65e9e0"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_frozen_66c54cbd120fded5bec9b5b7_channel_change.json",
+      "sha256": "4119c62203ee2cc884b527da495a83b30f21a66fbc8ab7222b8ac2cc3dbe492b"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_no_recheck_66c54cbd120fded5bec9b5b7_channel_change.json",
+      "sha256": "11b84267e310ba1fbc8e2f7704edf14b3a495dba17b256417b562cfba2aa7b29"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\AlwaysWait_66c54cbd120fded5bec9b5b7_channel_change.json",
+      "sha256": "fb8ad0eb2ff39bd91bf4f9a541f679d66a96e7cece0a41c3ec68850bbed9976d"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_frozen_66c54cbd120fded5bec9b5b7_both_change.json",
+      "sha256": "51a0844a3484f0e1312e6231be5d5f1c2c80885b36a7c16fb6142e0d4f5a3081"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_no_recheck_66c54cbd120fded5bec9b5b7_both_change.json",
+      "sha256": "0704d3e613c2d6e0b06003026c4b1f2fefb15985cd98d8e54cdf8c5951db7c04"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\AlwaysWait_66c54cbd120fded5bec9b5b7_both_change.json",
+      "sha256": "855240bf361d71b9a5e5f0c031d7f0fd9d037a29ae2758024d540040f30a073e"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_frozen_8ce9cefdbfafe24aab2e9805_stable.json",
+      "sha256": "e0c29f3841d2abef9f61934c5ad2d1dec0f0881da6b10322328734baea27d724"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_no_recheck_8ce9cefdbfafe24aab2e9805_stable.json",
+      "sha256": "ab0a0820e4955d9b9f7c07adfc76b47dfd5ef6871edecea56c9807728f09a0cb"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\AlwaysWait_8ce9cefdbfafe24aab2e9805_stable.json",
+      "sha256": "8bc3f1bd49d52dfc62402295407e45dadf2d0b176864e0f53b2b1696a46c1803"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_frozen_8ce9cefdbfafe24aab2e9805_goal_change.json",
+      "sha256": "4e60ccafab9805173f25855995a23b232766d534e95baab86f7e54d300e60548"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_no_recheck_8ce9cefdbfafe24aab2e9805_goal_change.json",
+      "sha256": "6a0d085e3d6fc2759254c53ac956969e114d6d94dc043f655395904a37b739d4"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\AlwaysWait_8ce9cefdbfafe24aab2e9805_goal_change.json",
+      "sha256": "b2b7432705c984028e9bfe8549c46cb2c23490fc9d218285e3dc5f321be7974c"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_frozen_8ce9cefdbfafe24aab2e9805_channel_change.json",
+      "sha256": "723250af3997769f577cf27b8152af5e84ffab501939782b441c47383b6a51f6"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_no_recheck_8ce9cefdbfafe24aab2e9805_channel_change.json",
+      "sha256": "e2dfbb8b59307b2f0828ea0d95b7b164a205010f962020238a1209641dafeca7"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\AlwaysWait_8ce9cefdbfafe24aab2e9805_channel_change.json",
+      "sha256": "3635a20bbd76fb23538272845f4094c590471418590f2b3ac65cc0f53d592add"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_frozen_8ce9cefdbfafe24aab2e9805_both_change.json",
+      "sha256": "4ce9f43a8d0962cdd7c6eb3345fb525cc5bc1bcda586698d604665a1014899b4"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\Full_no_recheck_8ce9cefdbfafe24aab2e9805_both_change.json",
+      "sha256": "743f1ea1fbd4b76f3f6dcc85fdd2386e9ba48338e897063550eb56c03762cdfa"
+    },
+    {
+      "path": "runs\\step10_development\\v2\\episodes\\AlwaysWait_8ce9cefdbfafe24aab2e9805_both_change.json",
+      "sha256": "e163273890e75d4d14d09703467c0fc08ae0a0c8a4969b901a0dfbce0f2decd6"
+    }
+  ],
+  "future_step11_scope": "adapter/authorization development only; no unrestricted VLM or robot execution"
+}

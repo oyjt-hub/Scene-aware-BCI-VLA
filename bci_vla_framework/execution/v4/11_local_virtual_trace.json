@@ -1,0 +1,552 @@
+{
+  "scope": "StubBackend scripted text; no real model inference",
+  "journal": [
+    {
+      "event": "REVOKED",
+      "reason": "new_main_proposal"
+    },
+    {
+      "event": "VLM_RAW",
+      "mode": "main_task",
+      "result": {
+        "raw_text": "Pick up OBJ_0.",
+        "stopped_at_eos": true,
+        "model_binding": {
+          "base": "test-only",
+          "connector": "test-only",
+          "language_lora": "test-only"
+        },
+        "candidate_probabilities": {
+          "plate_1": 0.98,
+          "white_bowl_1": 0.01
+        },
+        "outside_probability": 0.01
+      }
+    },
+    {
+      "event": "SIMULATED_UI_CONFIRMATION",
+      "receipt_id": "local-main-sim",
+      "proposal_sha256": "109bd4186a0052f9be8735dc8c14a1d9b0a4f57c030e25525e0870678eb42d85",
+      "kind": "MAIN"
+    },
+    {
+      "event": "VLM_RAW",
+      "mode": "next_subtask",
+      "result": {
+        "raw_text": "Pick up OBJ_0.",
+        "stopped_at_eos": true,
+        "model_binding": {
+          "base": "test-only",
+          "connector": "test-only",
+          "language_lora": "test-only"
+        },
+        "candidate_probabilities": {
+          "plate_1": 0.98,
+          "white_bowl_1": 0.01
+        },
+        "outside_probability": 0.01
+      }
+    },
+    {
+      "event": "SIMULATED_UI_CONFIRMATION",
+      "receipt_id": "local-sub-sim",
+      "proposal_sha256": "36d20829823f918ab73fc740b85a6c66511e25a2454f5d8b058574beb6522a1b",
+      "kind": "SUBTASK"
+    },
+    {
+      "event": "VIRTUAL_DISPATCH",
+      "result": {
+        "semantic_request": {
+          "action": "pick",
+          "source_id": "plate_1",
+          "destination_id": null,
+          "kind": "SUBTASK",
+          "suggestion_id": "7bd68a645a4e458da5bfa84c1d82a1d2",
+          "parent_id": "733208f6a6c34302ba30af57fa370414",
+          "context": {
+            "session_id": "session-3ca46f06f2e98c7585e4453d",
+            "scene_id": "be407422cd63db52190d",
+            "scene_revision": 1,
+            "mapping_id": "map-1",
+            "mapping_revision": 1
+          },
+          "public_sha256": "b2ff5e738ca8020bb7868425d6fe9746055724f7b8da686eab6c697d878d2611",
+          "model_binding": {
+            "base": "test-only",
+            "connector": "test-only",
+            "language_lora": "test-only"
+          },
+          "expires_at_s": 16.6,
+          "execution_authorized": false,
+          "physical_actions": false,
+          "authorization_scope": "one_virtual_semantic_subtask",
+          "sha256": "36d20829823f918ab73fc740b85a6c66511e25a2454f5d8b058574beb6522a1b"
+        },
+        "simulation_authorized": true,
+        "execution_authorized": false,
+        "VLA_called": false,
+        "joint_action": null,
+        "physical_actions": false
+      }
+    }
+  ],
+  "result": {
+    "semantic_request": {
+      "action": "pick",
+      "source_id": "plate_1",
+      "destination_id": null,
+      "kind": "SUBTASK",
+      "suggestion_id": "7bd68a645a4e458da5bfa84c1d82a1d2",
+      "parent_id": "733208f6a6c34302ba30af57fa370414",
+      "context": {
+        "session_id": "session-3ca46f06f2e98c7585e4453d",
+        "scene_id": "be407422cd63db52190d",
+        "scene_revision": 1,
+        "mapping_id": "map-1",
+        "mapping_revision": 1
+      },
+      "public_sha256": "b2ff5e738ca8020bb7868425d6fe9746055724f7b8da686eab6c697d878d2611",
+      "model_binding": {
+        "base": "test-only",
+        "connector": "test-only",
+        "language_lora": "test-only"
+      },
+      "expires_at_s": 16.6,
+      "execution_authorized": false,
+      "physical_actions": false,
+      "authorization_scope": "one_virtual_semantic_subtask",
+      "sha256": "36d20829823f918ab73fc740b85a6c66511e25a2454f5d8b058574beb6522a1b"
+    },
+    "simulation_authorized": true,
+    "execution_authorized": false,
+    "VLA_called": false,
+    "joint_action": null,
+    "physical_actions": false
+  },
+  "confirmed_public_schema_passed": true,
+  "confirmed_model_input": {
+    "record_type": "PUBLIC_INPUT",
+    "schema_version": "bci-vla-interaction/4.1",
+    "sample_id": "52f67a99199073276ff2d975c0be7c3d",
+    "context": {
+      "session_id": "session-3ca46f06f2e98c7585e4453d",
+      "scene_id": "be407422cd63db52190d",
+      "scene_revision": 1,
+      "mapping_id": "map-1",
+      "mapping_revision": 1
+    },
+    "as_of_s": 6.8,
+    "provenance": {
+      "bci": "simulated_channel",
+      "vision": "privileged_simulator",
+      "feature_profile_id": "libero-projected-rgb-stats-6-semantic-missing-1",
+      "real_eeg": false,
+      "physical_robot": false
+    },
+    "scene": {
+      "observed_at_s": 0.0,
+      "image_ref": "captures/images/3ca46f06f2e98c7585e4453d_0.png",
+      "image_valid": true,
+      "roi_dim": 6,
+      "semantic_dim": 1,
+      "objects": [
+        {
+          "instance_id": "plate_1",
+          "alias": "OBJ_0",
+          "label": "plate",
+          "bbox_xyxy": [
+            0.37109375,
+            0.55078125,
+            0.58984375,
+            0.765625
+          ],
+          "object_valid": true,
+          "roi_feature": [
+            0.7825755302120996,
+            0.7127988695478065,
+            0.6581595138055404,
+            0.04473918024387651,
+            0.08069329616237447,
+            0.08984299335629779
+          ],
+          "roi_valid": true,
+          "semantic_feature": null,
+          "semantic_valid": false
+        },
+        {
+          "instance_id": "white_bowl_1",
+          "alias": "OBJ_1",
+          "label": "white bowl",
+          "bbox_xyxy": [
+            0.0390625,
+            0.390625,
+            0.21484375,
+            0.52734375
+          ],
+          "object_valid": true,
+          "roi_feature": [
+            0.43582511265374446,
+            0.4418877116063699,
+            0.44564852027766494,
+            0.2345289487186856,
+            0.24115070644874298,
+            0.24699457258451038
+          ],
+          "roi_valid": true,
+          "semantic_feature": null,
+          "semantic_valid": false
+        }
+      ],
+      "truncation": {
+        "original_count": 2,
+        "retained_count": 2,
+        "policy": "none",
+        "target_recall_known": false
+      }
+    },
+    "history": [
+      {
+        "event_id": "declared-e-1",
+        "sequence": 1,
+        "role": "TASK",
+        "original_role": null,
+        "question": {
+          "question_id": "declared-q-1",
+          "role": "TASK",
+          "context": {
+            "session_id": "session-3ca46f06f2e98c7585e4453d",
+            "scene_id": "be407422cd63db52190d",
+            "scene_revision": 1,
+            "mapping_id": "map-1",
+            "mapping_revision": 1
+          },
+          "layout_id": "declared-task-2",
+          "issued_at_s": 4.0,
+          "expires_at_s": 5.0,
+          "presentation_ack": true,
+          "options": [
+            {
+              "option_id": "o0",
+              "symbol": "s0",
+              "kind": "OBJECT",
+              "reference": "plate_1"
+            },
+            {
+              "option_id": "o1",
+              "symbol": "s1",
+              "kind": "OBJECT",
+              "reference": "white_bowl_1"
+            }
+          ],
+          "diagnostic_option_id": null,
+          "proposal": null
+        },
+        "started_at_s": 4.1,
+        "ended_at_s": 4.6,
+        "valid": true,
+        "invalid_reason": null,
+        "evidence": {
+          "score_kind": "HARD_LABEL",
+          "values": [
+            {
+              "option_id": "o0",
+              "value": 1
+            },
+            {
+              "option_id": "o1",
+              "value": 0
+            }
+          ],
+          "selected_option_id": "o0",
+          "calibration": null
+        }
+      },
+      {
+        "event_id": "declared-e-2",
+        "sequence": 2,
+        "role": "INTENT_QUERY",
+        "original_role": null,
+        "question": {
+          "question_id": "declared-q-2",
+          "role": "INTENT_QUERY",
+          "context": {
+            "session_id": "session-3ca46f06f2e98c7585e4453d",
+            "scene_id": "be407422cd63db52190d",
+            "scene_revision": 1,
+            "mapping_id": "map-1",
+            "mapping_revision": 1
+          },
+          "layout_id": "declared-intent_query-2",
+          "issued_at_s": 6.0,
+          "expires_at_s": 7.0,
+          "presentation_ack": true,
+          "options": [
+            {
+              "option_id": "o0",
+              "symbol": "s0",
+              "kind": "TASK",
+              "reference": "declared-task-a92451b562c9"
+            },
+            {
+              "option_id": "o1",
+              "symbol": "s1",
+              "kind": "TASK",
+              "reference": "declared-task-dbefe50612b2"
+            }
+          ],
+          "diagnostic_option_id": null,
+          "proposal": null
+        },
+        "started_at_s": 6.1,
+        "ended_at_s": 6.6,
+        "valid": true,
+        "invalid_reason": null,
+        "evidence": {
+          "score_kind": "HARD_LABEL",
+          "values": [
+            {
+              "option_id": "o0",
+              "value": 1
+            },
+            {
+              "option_id": "o1",
+              "value": 0
+            }
+          ],
+          "selected_option_id": "o0",
+          "calibration": null
+        }
+      },
+      {
+        "event_id": "local-main-sim",
+        "sequence": 3,
+        "role": "CONFIRM",
+        "original_role": null,
+        "question": {
+          "question_id": "q-local-main-sim",
+          "role": "CONFIRM",
+          "context": {
+            "session_id": "session-3ca46f06f2e98c7585e4453d",
+            "scene_id": "be407422cd63db52190d",
+            "scene_revision": 1,
+            "mapping_id": "map-1",
+            "mapping_revision": 1
+          },
+          "layout_id": "step11-confirm",
+          "issued_at_s": 6.7,
+          "expires_at_s": 16.6,
+          "presentation_ack": true,
+          "options": [
+            {
+              "option_id": "accept",
+              "symbol": "s0",
+              "kind": "DECISION",
+              "reference": "accept"
+            },
+            {
+              "option_id": "reject",
+              "symbol": "s1",
+              "kind": "DECISION",
+              "reference": "reject"
+            }
+          ],
+          "diagnostic_option_id": null,
+          "proposal": {
+            "suggestion_id": "733208f6a6c34302ba30af57fa370414",
+            "context": {
+              "session_id": "session-3ca46f06f2e98c7585e4453d",
+              "scene_id": "be407422cd63db52190d",
+              "scene_revision": 1,
+              "mapping_id": "map-1",
+              "mapping_revision": 1
+            },
+            "action": "pick",
+            "source_id": "plate_1",
+            "destination_id": null,
+            "task_id": "step11-733208f6a6c34302ba30af57fa370414",
+            "task_revision": 1,
+            "valid_until_s": 16.6,
+            "capability_verified": false
+          }
+        },
+        "started_at_s": 6.75,
+        "ended_at_s": 6.8,
+        "valid": true,
+        "invalid_reason": null,
+        "evidence": {
+          "score_kind": "HARD_LABEL",
+          "values": [
+            {
+              "option_id": "accept",
+              "value": 1
+            },
+            {
+              "option_id": "reject",
+              "value": 0
+            }
+          ],
+          "selected_option_id": "accept",
+          "calibration": null
+        }
+      }
+    ],
+    "current_event_id": "local-main-sim",
+    "selection_event_id": "declared-e-1",
+    "task_options": [
+      {
+        "task_id": "declared-task-a92451b562c9",
+        "task_revision": 1,
+        "suggestion_id": "declared-suggestion-a92451b562c9",
+        "context": {
+          "session_id": "session-3ca46f06f2e98c7585e4453d",
+          "scene_id": "be407422cd63db52190d",
+          "scene_revision": 1,
+          "mapping_id": "map-1",
+          "mapping_revision": 1
+        },
+        "action": "pick",
+        "source_id": "plate_1",
+        "destination_id": null,
+        "valid_until_s": 120.0,
+        "capability_verified": false
+      },
+      {
+        "task_id": "declared-task-dbefe50612b2",
+        "task_revision": 1,
+        "suggestion_id": "declared-suggestion-dbefe50612b2",
+        "context": {
+          "session_id": "session-3ca46f06f2e98c7585e4453d",
+          "scene_id": "be407422cd63db52190d",
+          "scene_revision": 1,
+          "mapping_id": "map-1",
+          "mapping_revision": 1
+        },
+        "action": "pick",
+        "source_id": "white_bowl_1",
+        "destination_id": null,
+        "valid_until_s": 120.0,
+        "capability_verified": false
+      }
+    ],
+    "public_state": {
+      "confirmed_task": {
+        "task": {
+          "suggestion_id": "733208f6a6c34302ba30af57fa370414",
+          "context": {
+            "session_id": "session-3ca46f06f2e98c7585e4453d",
+            "scene_id": "be407422cd63db52190d",
+            "scene_revision": 1,
+            "mapping_id": "map-1",
+            "mapping_revision": 1
+          },
+          "action": "pick",
+          "source_id": "plate_1",
+          "destination_id": null,
+          "task_id": "step11-733208f6a6c34302ba30af57fa370414",
+          "task_revision": 1,
+          "valid_until_s": 16.6,
+          "capability_verified": false
+        },
+        "confirmation_receipt": {
+          "event_id": "local-main-sim",
+          "sequence": 3,
+          "role": "CONFIRM",
+          "original_role": null,
+          "question": {
+            "question_id": "q-local-main-sim",
+            "role": "CONFIRM",
+            "context": {
+              "session_id": "session-3ca46f06f2e98c7585e4453d",
+              "scene_id": "be407422cd63db52190d",
+              "scene_revision": 1,
+              "mapping_id": "map-1",
+              "mapping_revision": 1
+            },
+            "layout_id": "step11-confirm",
+            "issued_at_s": 6.7,
+            "expires_at_s": 16.6,
+            "presentation_ack": true,
+            "options": [
+              {
+                "option_id": "accept",
+                "symbol": "s0",
+                "kind": "DECISION",
+                "reference": "accept"
+              },
+              {
+                "option_id": "reject",
+                "symbol": "s1",
+                "kind": "DECISION",
+                "reference": "reject"
+              }
+            ],
+            "diagnostic_option_id": null,
+            "proposal": {
+              "suggestion_id": "733208f6a6c34302ba30af57fa370414",
+              "context": {
+                "session_id": "session-3ca46f06f2e98c7585e4453d",
+                "scene_id": "be407422cd63db52190d",
+                "scene_revision": 1,
+                "mapping_id": "map-1",
+                "mapping_revision": 1
+              },
+              "action": "pick",
+              "source_id": "plate_1",
+              "destination_id": null,
+              "task_id": "step11-733208f6a6c34302ba30af57fa370414",
+              "task_revision": 1,
+              "valid_until_s": 16.6,
+              "capability_verified": false
+            }
+          },
+          "started_at_s": 6.75,
+          "ended_at_s": 6.8,
+          "valid": true,
+          "invalid_reason": null,
+          "evidence": {
+            "score_kind": "HARD_LABEL",
+            "values": [
+              {
+                "option_id": "accept",
+                "value": 1
+              },
+              {
+                "option_id": "reject",
+                "value": 0
+              }
+            ],
+            "selected_option_id": "accept",
+            "calibration": null
+          }
+        }
+      },
+      "pending_suggestion": null,
+      "pending_question": null,
+      "diagnostics": {
+        "context": {
+          "session_id": "session-3ca46f06f2e98c7585e4453d",
+          "scene_id": "be407422cd63db52190d",
+          "scene_revision": 1,
+          "mapping_id": "map-1",
+          "mapping_revision": 1
+        },
+        "layout_id": "probe-2",
+        "window_s": 30,
+        "ttl_s": 15,
+        "min_attempts": 3,
+        "min_covered_symbols": 2,
+        "receipts": [],
+        "attempt_count": 0,
+        "correct_count": 0,
+        "no_response_count": 0,
+        "covered_symbols": [],
+        "latest_ended_at_s": null,
+        "status": "INSUFFICIENT",
+        "truncated": false
+      },
+      "stop_latched": false,
+      "execution_authorized": false
+    }
+  },
+  "VLA_called": false
+}

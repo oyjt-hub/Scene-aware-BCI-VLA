@@ -1,0 +1,23 @@
+{
+  "step_id": "V4-04",
+  "status": "DEVELOPMENT_PIPELINE_PASS_WITH_TRAINING_DATA_GAPS",
+  "completed_at_utc": "2026-10-17T06:13:39.618258+00:00",
+  "actual_simulation_platform": "LIBERO",
+  "capture_status": "PASS",
+  "integrity_checks": 222,
+  "integrity_passed": true,
+  "base_episodes": 48,
+  "rendered_images": 96,
+  "public_rows": 4224,
+  "private_rows": 4608,
+  "counterfactual_pairs": 384,
+  "training_data_ready": false,
+  "place_phase_supervision_ready": false,
+  "successful_manipulation_episodes": 0,
+  "test_sealed": true,
+  "training_run": false,
+  "real_EEG": false,
+  "physical_robot": false,
+  "full_VLA_closed_loop_run": false,
+  "next_step": "V4-05"
+}

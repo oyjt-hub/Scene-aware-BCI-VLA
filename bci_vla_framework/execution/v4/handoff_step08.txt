@@ -1,0 +1,16 @@
+﻿关键语义缺口：Full三个种子的证据切换与别名重绑定均0/8（双侧同时正确）；原声明对象指针均16/16。下一步先修内部token→目标语言绑定，不能进入动作闭环或宣称意图推理已通过。
+
+V4-08最新状态：受限开发训练完成（四方法×三种子及本地权重核验）；步骤08整体未完成。
+实际LIBERO＋模拟交互；公开声明教学，128训练/32验证，结果按3seed分别记录。
+报告docs/v4/08_training.txt；审计execution/v4/08_training_audit.json；交接execution/v4/handoff_step08.txt。
+放置/真实含噪隐藏意图/外部泛化未完成；完整VLA闭环未运行；旧G2/G3/G4不升级。
+POINT是公开声明绑定；同public隐藏反事实仍保留歧义并只计一次权重。
+empty夹爪子任务为纯文本符号干预，不是实际抓取/放置帧。
+原始报告：execution\v4\08_real_attempt3.json；本地checkpoint清单：D:\Scene_Aware\bci_vla_framework\execution\v4\08_checkpoint_manifest3.json
+历次失败及成本全部保留；烟测后重置共同03R初始化；validation参与checkpoint选优。
+原验证目标组成偏澄清且declared_pick对象集中；不能由整体exact声称理解意图。
+训练后challenge状态：VERIFIED_DEVELOPMENT_DIAGNOSTICS；双侧正确与别名重绑定按family分别记录，三seed不增独立样本。
+CPU机制测试实际日志：{"status": "PASS_CPU_MECHANICS_ONLY", "tests_run": 39, "elapsed_s": 6.866, "log": "execution\\v4\\08_cpu_tests.log", "sha256": "dc2e3efc7c268b5562311c486eb370b8d1c5d3ac1ab8a78cb6733a955de57403", "new_challenge_generator_tests": 5, "scope": "CPU数据/优化器/B2序列化/challenge生成机制；不是GPU语义或机器人任务性能证据。"}
+具体缺项：受限pilot记录完整；广义监督与外部验证仍缺
+full_step08=false；不自动推进正式实验。正式test/校准未使用，真实EEG/实体机器人排除。
+动作专家结构不改，无新动作采样/完整VLA闭环；旧G2/G3/G4保持原结论。

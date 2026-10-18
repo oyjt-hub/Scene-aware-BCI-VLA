@@ -1,0 +1,54 @@
+{
+  "version": "V4-09-calibration-policy-template-2",
+  "status": "TEMPLATE_NOT_FITTED_OR_VALIDATED",
+  "variant": "fixed_threshold",
+  "thresholds": {
+    "intent_confidence": 0.8,
+    "normalized_entropy": 0.5,
+    "channel_success": 0.6,
+    "outside_probability": 0.2
+  },
+  "budgets": {
+    "questions": 12,
+    "probes": 6,
+    "intent_queries": 4,
+    "retries": 4
+  },
+  "selection_freshness_s": 4.0,
+  "calibration": {
+    "fit_split": "calibration_fit",
+    "audit_split": "calibration_audit",
+    "temperature_bounds": [
+      0.05,
+      20.0
+    ],
+    "min_samples": 8,
+    "min_groups": 2,
+    "ece_bins": 10
+  },
+  "policy_selection": {
+    "split": "validation",
+    "max_wrong_episode_rate": 0.1,
+    "min_resolved_fraction": 0.0,
+    "risk_basis": "development point estimate; not a statistical guarantee",
+    "require_positive_resolution": true
+  },
+  "candidate_variants": [
+    "fixed_threshold",
+    "entropy_threshold",
+    "auxiliary"
+  ],
+  "binding_fields": [
+    "model_sha256",
+    "data_sha256",
+    "input_schema_sha256",
+    "policy_sha256"
+  ],
+  "scope": "simulated BCI over actual LIBERO observations; no real EEG calibration",
+  "unknown_probability": null,
+  "user_confirmation_required": true,
+  "execution_authorized": false,
+  "formal_test_access": false,
+  "calibration_run": false,
+  "policy_validation_run": false
+}

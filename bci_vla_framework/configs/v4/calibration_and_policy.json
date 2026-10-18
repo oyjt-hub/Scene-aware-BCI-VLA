@@ -1,0 +1,70 @@
+{
+  "version": "V4-09-calibration-policy-template-2",
+  "status": "FROZEN_DEVELOPMENT_POLICY",
+  "variant": "fixed_threshold",
+  "thresholds": {
+    "intent_confidence": 0.6,
+    "normalized_entropy": 0.5,
+    "channel_success": 0.4,
+    "outside_probability": 0.2
+  },
+  "budgets": {
+    "questions": 12,
+    "probes": 6,
+    "intent_queries": 4,
+    "retries": 4
+  },
+  "selection_freshness_s": 8.0,
+  "calibration": {
+    "fit_split": "calibration_fit",
+    "audit_split": "calibration_audit",
+    "temperature_bounds": [
+      0.05,
+      20.0
+    ],
+    "min_samples": 8,
+    "min_groups": 2,
+    "ece_bins": 10
+  },
+  "policy_selection": {
+    "split": "validation",
+    "max_wrong_episode_rate": 0.1,
+    "min_resolved_fraction": 0.0,
+    "risk_basis": "development point estimate; not a statistical guarantee",
+    "require_positive_resolution": true,
+    "resolution_field": "condition_resolution_fraction"
+  },
+  "candidate_variants": [
+    "fixed_threshold",
+    "entropy_threshold",
+    "auxiliary"
+  ],
+  "binding_fields": [
+    "model_sha256",
+    "data_sha256",
+    "input_schema_sha256",
+    "policy_sha256"
+  ],
+  "unknown_probability": null,
+  "user_confirmation_required": true,
+  "execution_authorized": false,
+  "interaction_protocol": {
+    "version": "public-pick-object-confirmation/0.1",
+    "declared_action": "pick",
+    "scope": "object selection and exact confirmation only; no inferred action or missing-action claim"
+  },
+  "implementation_binding": {
+    "bci_vla/calibration_v4/policy.py": "cbf2bd561888281bd9c3f521c1880c8834c42534c763412927a4b007ede531d8",
+    "bci_vla/calibration_v4/calibration.py": "dd9c93ce8664bdbf889b79b8b4a0c6e6b4dff9cff0d8e5bea6c2f75985842ddb",
+    "bci_vla/calibration_v4/evidence_gate.py": "9da639d3788bc36555a288c4df2829f054ed4c37e3c90ce6c830bd7a592749b7",
+    "bci_vla/evaluation_v4/runner.py": "7a2ad06ccf184e48af8123f043f0cc91a9d85ac7697811a1fc5eb7570e8ab6b1",
+    "bci_vla/data_v4/channel.py": "4e1dbb76ee44ef8a563f5e565b5d6f69da29888d26ab89c86aa0f625d59e15ec",
+    "execution/v4/step09_calibrate_and_policy.py": "7d655f2a33303dff514f6ca62343b41fd74d5a92bcd1f3a2a163f81671504d2a"
+  },
+  "confirmation_gate": {
+    "mode": "consistent_recheck",
+    "consistent_selections": 2,
+    "correct_probes": 3,
+    "selection_max_age_s": 12.0
+  }
+}

@@ -1,0 +1,507 @@
+{
+  "scope": "restricted high-level language remediation pilot",
+  "checkpoint": "/home/oyjt/workspace/RLinf-RECAP/models/baseline_sft/RLinf-Pi05-LIBERO-SFT/model.safetensors",
+  "training_run": true,
+  "optimizer_steps": 240,
+  "base_checkpoint_modified": false,
+  "formal_test_accessed": false,
+  "hidden_labels_used": false,
+  "action_sampling": false,
+  "stages": [
+    {
+      "name": "strict_checkpoint_loaded",
+      "seconds": 6.31393329706043
+    },
+    {
+      "name": "data_frozen",
+      "train": 480,
+      "validation": 120,
+      "evaluation": 40,
+      "families": [
+        "clarify",
+        "main",
+        "subtask_after_symbolic",
+        "subtask_before",
+        "subtask_pick_done_symbolic"
+      ],
+      "actual_after_grasp_images": false
+    },
+    {
+      "name": "development_eval",
+      "label": "before",
+      "metrics": {
+        "clarify": 0.0,
+        "main": 0.0,
+        "subtask_after_symbolic": 0.0,
+        "subtask_before": 0.0,
+        "subtask_pick_done_symbolic": 0.0
+      },
+      "exact": 0,
+      "count": 40
+    },
+    {
+      "name": "lora_installed",
+      "count": 54,
+      "trainable_parameters": 3022848,
+      "base_frozen": true,
+      "initially_disabled": true
+    },
+    {
+      "name": "training",
+      "step": 20,
+      "last20_mean_loss": 2.835883333720267,
+      "grad_norm": 26.16132164001465,
+      "elapsed_s": 13.883566987002268
+    },
+    {
+      "name": "training",
+      "step": 40,
+      "last20_mean_loss": 0.4913727932609618,
+      "grad_norm": 1.2513375282287598,
+      "elapsed_s": 15.638047253945842
+    },
+    {
+      "name": "training",
+      "step": 60,
+      "last20_mean_loss": 0.23471448495984076,
+      "grad_norm": 0.10231230407953262,
+      "elapsed_s": 17.505816265940666
+    },
+    {
+      "name": "training",
+      "step": 80,
+      "last20_mean_loss": 0.30791041134652913,
+      "grad_norm": 4.917557239532471,
+      "elapsed_s": 19.411031899042428
+    },
+    {
+      "name": "training",
+      "step": 100,
+      "last20_mean_loss": 0.1645940944174072,
+      "grad_norm": 0.055656373500823975,
+      "elapsed_s": 21.20609406195581
+    },
+    {
+      "name": "training",
+      "step": 120,
+      "last20_mean_loss": 0.03778562450206664,
+      "grad_norm": 0.10151227563619614,
+      "elapsed_s": 23.153511160984635
+    },
+    {
+      "name": "development_eval",
+      "label": "step120",
+      "metrics": {
+        "clarify": 1.0,
+        "main": 1.0,
+        "subtask_after_symbolic": 1.0,
+        "subtask_before": 1.0,
+        "subtask_pick_done_symbolic": 1.0
+      },
+      "exact": 40,
+      "count": 40
+    },
+    {
+      "name": "training",
+      "step": 140,
+      "last20_mean_loss": 0.002401616211864166,
+      "grad_norm": 0.0037801843136548996,
+      "elapsed_s": 32.059845661977306
+    },
+    {
+      "name": "training",
+      "step": 160,
+      "last20_mean_loss": 0.00026372641659691,
+      "grad_norm": 0.0030341893434524536,
+      "elapsed_s": 33.75033898791298
+    },
+    {
+      "name": "training",
+      "step": 180,
+      "last20_mean_loss": 0.00014517557192448294,
+      "grad_norm": 0.0022465840447694063,
+      "elapsed_s": 35.59702394809574
+    },
+    {
+      "name": "training",
+      "step": 200,
+      "last20_mean_loss": 8.055110829445767e-05,
+      "grad_norm": 0.0010025688679888844,
+      "elapsed_s": 37.27270634495653
+    },
+    {
+      "name": "training",
+      "step": 220,
+      "last20_mean_loss": 6.067448093745042e-05,
+      "grad_norm": 0.0008045189315453172,
+      "elapsed_s": 39.121474341955036
+    },
+    {
+      "name": "training",
+      "step": 240,
+      "last20_mean_loss": 4.476895837797201e-05,
+      "grad_norm": 0.0007396790315397084,
+      "elapsed_s": 40.88553975895047
+    },
+    {
+      "name": "development_eval",
+      "label": "step240",
+      "metrics": {
+        "clarify": 1.0,
+        "main": 1.0,
+        "subtask_after_symbolic": 1.0,
+        "subtask_before": 1.0,
+        "subtask_pick_done_symbolic": 1.0
+      },
+      "exact": 40,
+      "count": 40
+    }
+  ],
+  "latest_evaluation": {
+    "label": "step240",
+    "metrics": {
+      "clarify": 1.0,
+      "main": 1.0,
+      "subtask_after_symbolic": 1.0,
+      "subtask_before": 1.0,
+      "subtask_pick_done_symbolic": 1.0
+    },
+    "exact": 40,
+    "count": 40,
+    "cases": [
+      {
+        "episode": "3e7f4a934272c0ac1dcfa709",
+        "family": "clarify",
+        "expected": "Which task do you want?",
+        "generated": "Which task do you want?",
+        "exact": true,
+        "visual": true
+      },
+      {
+        "episode": "a733559f6120147aa83fb6dd",
+        "family": "clarify",
+        "expected": "Which task do you want?",
+        "generated": "Which task do you want?",
+        "exact": true,
+        "visual": true
+      },
+      {
+        "episode": "8a73e47aa9c92d370ca37806",
+        "family": "clarify",
+        "expected": "Which task do you want?",
+        "generated": "Which task do you want?",
+        "exact": true,
+        "visual": true
+      },
+      {
+        "episode": "dfaa20a11afa4e9a7221ad55",
+        "family": "clarify",
+        "expected": "Which task do you want?",
+        "generated": "Which task do you want?",
+        "exact": true,
+        "visual": true
+      },
+      {
+        "episode": "7d02da34438c898381a919fe",
+        "family": "clarify",
+        "expected": "Which task do you want?",
+        "generated": "Which task do you want?",
+        "exact": true,
+        "visual": true
+      },
+      {
+        "episode": "7d02da34438c898381a919fe",
+        "family": "clarify",
+        "expected": "Which task do you want?",
+        "generated": "Which task do you want?",
+        "exact": true,
+        "visual": true
+      },
+      {
+        "episode": "66c54cbd120fded5bec9b5b7",
+        "family": "clarify",
+        "expected": "Which task do you want?",
+        "generated": "Which task do you want?",
+        "exact": true,
+        "visual": true
+      },
+      {
+        "episode": "8ce9cefdbfafe24aab2e9805",
+        "family": "clarify",
+        "expected": "Which task do you want?",
+        "generated": "Which task do you want?",
+        "exact": true,
+        "visual": true
+      },
+      {
+        "episode": "3e7f4a934272c0ac1dcfa709",
+        "family": "main",
+        "expected": "Pick up OBJ_0.",
+        "generated": "Pick up OBJ_0.",
+        "exact": true,
+        "visual": true
+      },
+      {
+        "episode": "a733559f6120147aa83fb6dd",
+        "family": "main",
+        "expected": "Pick up OBJ_1.",
+        "generated": "Pick up OBJ_1.",
+        "exact": true,
+        "visual": true
+      },
+      {
+        "episode": "8a73e47aa9c92d370ca37806",
+        "family": "main",
+        "expected": "Pick up OBJ_0.",
+        "generated": "Pick up OBJ_0.",
+        "exact": true,
+        "visual": true
+      },
+      {
+        "episode": "dfaa20a11afa4e9a7221ad55",
+        "family": "main",
+        "expected": "Pick up OBJ_1.",
+        "generated": "Pick up OBJ_1.",
+        "exact": true,
+        "visual": true
+      },
+      {
+        "episode": "7d02da34438c898381a919fe",
+        "family": "main",
+        "expected": "Pick up OBJ_0.",
+        "generated": "Pick up OBJ_0.",
+        "exact": true,
+        "visual": true
+      },
+      {
+        "episode": "7d02da34438c898381a919fe",
+        "family": "main",
+        "expected": "Pick up OBJ_3.",
+        "generated": "Pick up OBJ_3.",
+        "exact": true,
+        "visual": true
+      },
+      {
+        "episode": "66c54cbd120fded5bec9b5b7",
+        "family": "main",
+        "expected": "Pick up OBJ_2.",
+        "generated": "Pick up OBJ_2.",
+        "exact": true,
+        "visual": true
+      },
+      {
+        "episode": "8ce9cefdbfafe24aab2e9805",
+        "family": "main",
+        "expected": "Pick up OBJ_1.",
+        "generated": "Pick up OBJ_1.",
+        "exact": true,
+        "visual": true
+      },
+      {
+        "episode": "3e7f4a934272c0ac1dcfa709",
+        "family": "subtask_after_symbolic",
+        "expected": "Place OBJ_0 into OBJ_1.",
+        "generated": "Place OBJ_0 into OBJ_1.",
+        "exact": true,
+        "visual": false
+      },
+      {
+        "episode": "a733559f6120147aa83fb6dd",
+        "family": "subtask_after_symbolic",
+        "expected": "Place OBJ_1 into OBJ_0.",
+        "generated": "Place OBJ_1 into OBJ_0.",
+        "exact": true,
+        "visual": false
+      },
+      {
+        "episode": "8a73e47aa9c92d370ca37806",
+        "family": "subtask_after_symbolic",
+        "expected": "Place OBJ_0 into OBJ_1.",
+        "generated": "Place OBJ_0 into OBJ_1.",
+        "exact": true,
+        "visual": false
+      },
+      {
+        "episode": "dfaa20a11afa4e9a7221ad55",
+        "family": "subtask_after_symbolic",
+        "expected": "Place OBJ_1 into OBJ_2.",
+        "generated": "Place OBJ_1 into OBJ_2.",
+        "exact": true,
+        "visual": false
+      },
+      {
+        "episode": "7d02da34438c898381a919fe",
+        "family": "subtask_after_symbolic",
+        "expected": "Place OBJ_0 into OBJ_1.",
+        "generated": "Place OBJ_0 into OBJ_1.",
+        "exact": true,
+        "visual": false
+      },
+      {
+        "episode": "7d02da34438c898381a919fe",
+        "family": "subtask_after_symbolic",
+        "expected": "Place OBJ_3 into OBJ_0.",
+        "generated": "Place OBJ_3 into OBJ_0.",
+        "exact": true,
+        "visual": false
+      },
+      {
+        "episode": "66c54cbd120fded5bec9b5b7",
+        "family": "subtask_after_symbolic",
+        "expected": "Place OBJ_2 into OBJ_3.",
+        "generated": "Place OBJ_2 into OBJ_3.",
+        "exact": true,
+        "visual": false
+      },
+      {
+        "episode": "8ce9cefdbfafe24aab2e9805",
+        "family": "subtask_after_symbolic",
+        "expected": "Place OBJ_1 into OBJ_2.",
+        "generated": "Place OBJ_1 into OBJ_2.",
+        "exact": true,
+        "visual": false
+      },
+      {
+        "episode": "3e7f4a934272c0ac1dcfa709",
+        "family": "subtask_before",
+        "expected": "Pick up OBJ_0.",
+        "generated": "Pick up OBJ_0.",
+        "exact": true,
+        "visual": true
+      },
+      {
+        "episode": "a733559f6120147aa83fb6dd",
+        "family": "subtask_before",
+        "expected": "Pick up OBJ_1.",
+        "generated": "Pick up OBJ_1.",
+        "exact": true,
+        "visual": true
+      },
+      {
+        "episode": "8a73e47aa9c92d370ca37806",
+        "family": "subtask_before",
+        "expected": "Pick up OBJ_0.",
+        "generated": "Pick up OBJ_0.",
+        "exact": true,
+        "visual": true
+      },
+      {
+        "episode": "dfaa20a11afa4e9a7221ad55",
+        "family": "subtask_before",
+        "expected": "Pick up OBJ_1.",
+        "generated": "Pick up OBJ_1.",
+        "exact": true,
+        "visual": true
+      },
+      {
+        "episode": "7d02da34438c898381a919fe",
+        "family": "subtask_before",
+        "expected": "Pick up OBJ_0.",
+        "generated": "Pick up OBJ_0.",
+        "exact": true,
+        "visual": true
+      },
+      {
+        "episode": "7d02da34438c898381a919fe",
+        "family": "subtask_before",
+        "expected": "Pick up OBJ_3.",
+        "generated": "Pick up OBJ_3.",
+        "exact": true,
+        "visual": true
+      },
+      {
+        "episode": "66c54cbd120fded5bec9b5b7",
+        "family": "subtask_before",
+        "expected": "Pick up OBJ_2.",
+        "generated": "Pick up OBJ_2.",
+        "exact": true,
+        "visual": true
+      },
+      {
+        "episode": "8ce9cefdbfafe24aab2e9805",
+        "family": "subtask_before",
+        "expected": "Pick up OBJ_1.",
+        "generated": "Pick up OBJ_1.",
+        "exact": true,
+        "visual": true
+      },
+      {
+        "episode": "3e7f4a934272c0ac1dcfa709",
+        "family": "subtask_pick_done_symbolic",
+        "expected": "Done.",
+        "generated": "Done.",
+        "exact": true,
+        "visual": false
+      },
+      {
+        "episode": "a733559f6120147aa83fb6dd",
+        "family": "subtask_pick_done_symbolic",
+        "expected": "Done.",
+        "generated": "Done.",
+        "exact": true,
+        "visual": false
+      },
+      {
+        "episode": "8a73e47aa9c92d370ca37806",
+        "family": "subtask_pick_done_symbolic",
+        "expected": "Done.",
+        "generated": "Done.",
+        "exact": true,
+        "visual": false
+      },
+      {
+        "episode": "dfaa20a11afa4e9a7221ad55",
+        "family": "subtask_pick_done_symbolic",
+        "expected": "Done.",
+        "generated": "Done.",
+        "exact": true,
+        "visual": false
+      },
+      {
+        "episode": "7d02da34438c898381a919fe",
+        "family": "subtask_pick_done_symbolic",
+        "expected": "Done.",
+        "generated": "Done.",
+        "exact": true,
+        "visual": false
+      },
+      {
+        "episode": "7d02da34438c898381a919fe",
+        "family": "subtask_pick_done_symbolic",
+        "expected": "Done.",
+        "generated": "Done.",
+        "exact": true,
+        "visual": false
+      },
+      {
+        "episode": "66c54cbd120fded5bec9b5b7",
+        "family": "subtask_pick_done_symbolic",
+        "expected": "Done.",
+        "generated": "Done.",
+        "exact": true,
+        "visual": false
+      },
+      {
+        "episode": "8ce9cefdbfafe24aab2e9805",
+        "family": "subtask_pick_done_symbolic",
+        "expected": "Done.",
+        "generated": "Done.",
+        "exact": true,
+        "visual": false
+      }
+    ]
+  },
+  "status": "PILOT_COMPLETE_NOT_GENERAL_CAPABILITY_ACCEPTANCE",
+  "off_regression_max_abs": 0.0,
+  "all_base_parameters_frozen": true,
+  "adapters_disabled_after_scope": true,
+  "language_loss_last20": 4.476895837797201e-05,
+  "trainable_parameters": 3022848,
+  "source_episodes": 32,
+  "development_only": true,
+  "actual_after_grasp_images": false,
+  "high_level_gate_passed": false,
+  "remote_job": "/home/oyjt/Scene-aware-BCI-VLA-runs/v4_step03R_language_20261017_v1",
+  "remote_exit_code": 0,
+  "stderr": ""
+}

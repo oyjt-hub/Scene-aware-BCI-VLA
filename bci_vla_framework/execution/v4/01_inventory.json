@@ -1,0 +1,977 @@
+{
+  "step_id": "V4-01",
+  "plan_version": "V4-plan-2",
+  "completed_at_utc": "2026-10-16T16:13:45.619453+00:00",
+  "scope": "read-only inventory, research scope and nearest-neighbor comparison only",
+  "assets": [
+    {
+      "id": "A01",
+      "name": "original server repository",
+      "path": "/home/oyjt/Scene-aware-BCI-VLA",
+      "status": "current_git_and_source_inventory_verified",
+      "evidence": {
+        "head": {
+          "returncode": 0,
+          "stdout": "d2245527a767707c19d7305caacb02fa5de89dc3",
+          "stderr": ""
+        },
+        "branch": {
+          "returncode": 0,
+          "stdout": "main",
+          "stderr": ""
+        },
+        "status": {
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      }
+    },
+    {
+      "id": "A02",
+      "name": "existing modified OpenPI source",
+      "path": "/home/oyjt/openpi",
+      "status": "present_with_existing_changes_preserve_and_isolate",
+      "evidence": {
+        "head": {
+          "returncode": 0,
+          "stdout": "981483dca0fd9acba698fea00aa6e52d56a66c58",
+          "stderr": ""
+        },
+        "branch": {
+          "returncode": 0,
+          "stdout": "main",
+          "stderr": ""
+        },
+        "status": {
+          "returncode": 0,
+          "stdout": "M README.md\nA  scripts/check_index.py\nM  scripts/compute_norm_stats.py\nAM scripts/convert_dataset_v30_to_v21.py\nA  scripts/parquet.py\nM  scripts/serve_policy.py\nM  scripts/train.py\n M src/openpi/models/pi0.py\nM  src/openpi/policies/aloha_policy.py\nA  src/openpi/policies/aloha_policy_old.py\n M src/openpi/policies/policy.py\nM  src/openpi/serving/websocket_policy_server.py\nMM src/openpi/training/config.py\nM  src/openpi/transforms.py\nMM third_party/aloha\n?? docs/rtc_piper_deployment.md",
+          "stderr": ""
+        }
+      }
+    },
+    {
+      "id": "A03",
+      "name": "historical pi05 LIBERO reference",
+      "path": "/home/oyjt/workspace/RLinf-RECAP/models/baseline_sft/RLinf-Pi05-LIBERO-SFT/model.safetensors",
+      "status": "file_and_size_present_current_full_hash_unverified",
+      "metadata": {
+        "path": "/home/oyjt/workspace/RLinf-RECAP/models/baseline_sft/RLinf-Pi05-LIBERO-SFT/model.safetensors",
+        "exists": true,
+        "is_directory": false,
+        "bytes": 7473091464,
+        "mtime_ns": 1790649182006311011,
+        "resolved_path": "/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/RLinf-RECAP/models/baseline_sft/RLinf-Pi05-LIBERO-SFT/model.safetensors"
+      },
+      "sha256_current": null,
+      "sha256_historical": "4616e4c1966a5fb063b442ea5d69857f45e873222d839b794634d87d252ab9e7",
+      "historical_hash_evidence": "execution/15C_current_assets.json",
+      "new_v4_model_selected": false
+    },
+    {
+      "id": "A04",
+      "name": "base/droid/fold/uniform pi05 candidates",
+      "status": "directories_located_not_loaded_or_selected",
+      "paths": [
+        {
+          "path": "/home/oyjt/workspace/checkpoints/pi05_base",
+          "exists": true,
+          "is_directory": true,
+          "bytes": 4096,
+          "mtime_ns": 1767791621490175778,
+          "resolved_path": "/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/checkpoints/pi05_base",
+          "children": [
+            "assets",
+            "params"
+          ]
+        },
+        {
+          "path": "/home/oyjt/workspace/checkpoints/pi05_base/params",
+          "exists": true,
+          "is_directory": true,
+          "bytes": 4096,
+          "mtime_ns": 1767791621497175897,
+          "resolved_path": "/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/checkpoints/pi05_base/params",
+          "children": [
+            "_CHECKPOINT_METADATA",
+            "_METADATA",
+            "_sharding",
+            "array_metadatas",
+            "commit_success.txt",
+            "d",
+            "manifest.ocdbt",
+            "ocdbt.process_0"
+          ]
+        },
+        {
+          "path": "/home/oyjt/workspace/checkpoints/pi05_droid",
+          "exists": true,
+          "is_directory": true,
+          "bytes": 4096,
+          "mtime_ns": 1768931766266042237,
+          "resolved_path": "/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/checkpoints/pi05_droid",
+          "children": [
+            "assets",
+            "params"
+          ]
+        },
+        {
+          "path": "/home/oyjt/workspace/checkpoints/pi05_droid/params",
+          "exists": true,
+          "is_directory": true,
+          "bytes": 4096,
+          "mtime_ns": 1768931766270042285,
+          "resolved_path": "/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/checkpoints/pi05_droid/params",
+          "children": [
+            "_CHECKPOINT_METADATA",
+            "_METADATA",
+            "_sharding",
+            "array_metadatas",
+            "d",
+            "manifest.ocdbt",
+            "ocdbt.process_0"
+          ]
+        },
+        {
+          "path": "/home/oyjt/workspace/checkpoints/pi05_fold_clothes",
+          "exists": true,
+          "is_directory": true,
+          "bytes": 4096,
+          "mtime_ns": 1768324591556691099,
+          "resolved_path": "/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/checkpoints/pi05_fold_clothes",
+          "children": [
+            "pi05_fold_cloth_0112",
+            "pi05_fold_cloth_0114"
+          ]
+        },
+        {
+          "path": "/home/oyjt/workspace/checkpoints/uniform",
+          "exists": true,
+          "is_directory": true,
+          "bytes": 4096,
+          "mtime_ns": 1774528509996747185,
+          "resolved_path": "/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/checkpoints/uniform",
+          "children": [
+            "uniform24_horizon100_0326",
+            "uniform_horizon100_0320"
+          ]
+        },
+        {
+          "path": "/home/oyjt/workspace/checkpoints/uniform_rtc_v2",
+          "exists": true,
+          "is_directory": true,
+          "bytes": 4096,
+          "mtime_ns": 1790927568943279769,
+          "resolved_path": "/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/checkpoints/uniform_rtc_v2",
+          "children": [
+            "uniform24_rtc_v2"
+          ]
+        },
+        {
+          "path": "/home/oyjt/workspace/checkpoints/uniform_table_rtc_v2",
+          "exists": true,
+          "is_directory": true,
+          "bytes": 4096,
+          "mtime_ns": 1791411484465569732,
+          "resolved_path": "/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/checkpoints/uniform_table_rtc_v2",
+          "children": [
+            "uniform24_table_rtc_v2",
+            "uniform24_table_rtc_v2_clean_20261008"
+          ]
+        }
+      ],
+      "full_shard_integrity_verified": false
+    },
+    {
+      "id": "A05",
+      "name": "Paligemma tokenizer",
+      "status": "file_and_current_sha256_verified_decode_capability_pending",
+      "path": "/home/oyjt/.cache/openpi/big_vision/paligemma_tokenizer.model",
+      "bytes": 4264023,
+      "sha256": "8986bb4f423f07f8c7f70d0dbe3526fb2316056c17bae71b1ea975e77a168fc6"
+    },
+    {
+      "id": "A06",
+      "name": "Florence visual weights",
+      "path": "/home/oyjt/Grounded-SAM-2/Florence-2-large/model.safetensors",
+      "status": "actual_file_located_elsewhere_frontend_binding_unverified",
+      "metadata": {
+        "path": "/home/oyjt/Grounded-SAM-2/Florence-2-large/model.safetensors",
+        "exists": true,
+        "is_directory": false,
+        "bytes": 1553563458,
+        "mtime_ns": 1777296689865901444,
+        "resolved_path": "/home/oyjt/Grounded-SAM-2/Florence-2-large/model.safetensors"
+      },
+      "sha256_current": null,
+      "former_repository_relative_path_missing": true
+    },
+    {
+      "id": "A07",
+      "name": "SAM2.1 visual weights",
+      "path": "/home/oyjt/Grounded-SAM-2/checkpoints/sam2.1_hiera_large.pt",
+      "status": "actual_file_located_elsewhere_frontend_binding_unverified",
+      "metadata": {
+        "path": "/home/oyjt/Grounded-SAM-2/checkpoints/sam2.1_hiera_large.pt",
+        "exists": true,
+        "is_directory": false,
+        "bytes": 898083611,
+        "mtime_ns": 1776512051924241119,
+        "resolved_path": "/home/oyjt/Grounded-SAM-2/checkpoints/sam2.1_hiera_large.pt"
+      },
+      "sha256_current": null,
+      "former_repository_relative_path_missing": true
+    },
+    {
+      "id": "A08",
+      "name": "LIBERO environments and historical adapters",
+      "status": "paths_and_distribution_metadata_present_no_import_or_rollout_this_step",
+      "paths": [
+        {
+          "path": "/home/oyjt/workspace/miniconda3/envs/libero",
+          "exists": true,
+          "is_directory": true,
+          "bytes": 4096,
+          "mtime_ns": 1769794973489535878,
+          "resolved_path": "/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/miniconda3/envs/libero",
+          "children": [
+            "bin",
+            "compiler_compat",
+            "conda-meta",
+            "doc",
+            "etc",
+            "include",
+            "lib",
+            "man",
+            "sbin",
+            "share",
+            "ssl",
+            "x86_64-conda-linux-gnu"
+          ]
+        },
+        {
+          "path": "/home/oyjt/openpi/.venv",
+          "exists": true,
+          "is_directory": true,
+          "bytes": 4096,
+          "mtime_ns": 1767846957509103319,
+          "resolved_path": "/home/oyjt/openpi/.venv",
+          "children": [
+            ".gitignore",
+            ".lock",
+            "CACHEDIR.TAG",
+            "bin",
+            "etc",
+            "lib",
+            "lib64",
+            "pyvenv.cfg",
+            "share"
+          ]
+        },
+        {
+          "path": "/home/oyjt/LIBERO",
+          "exists": true,
+          "is_directory": true,
+          "bytes": 4096,
+          "mtime_ns": 1767859650272165158,
+          "resolved_path": "/home/oyjt/LIBERO",
+          "children": [
+            ".git",
+            ".gitignore",
+            "LICENSE",
+            "README.md",
+            "benchmark_scripts",
+            "images",
+            "libero",
+            "libero.egg-info",
+            "notebooks",
+            "requirements.txt",
+            "scripts",
+            "setup.py",
+            "templates"
+          ]
+        }
+      ],
+      "environments": [
+        {
+          "root": "/home/oyjt/openpi/.venv",
+          "distribution_metadata": [
+            "/home/oyjt/openpi/.venv/lib/python3.11/site-packages/torch-2.7.1.dist-info",
+            "/home/oyjt/openpi/.venv/lib/python3.11/site-packages/transformers-4.53.2.dist-info",
+            "/home/oyjt/openpi/.venv/lib/python3.11/site-packages/safetensors-0.5.3.dist-info",
+            "/home/oyjt/openpi/.venv/lib/python3.11/site-packages/jax-0.5.3.dist-info",
+            "/home/oyjt/openpi/.venv/lib/python3.11/site-packages/mujoco-2.3.7.dist-info"
+          ],
+          "import_or_environment_activation_performed": false
+        },
+        {
+          "root": "/home/oyjt/workspace/miniconda3/envs/libero",
+          "distribution_metadata": [
+            "/home/oyjt/workspace/miniconda3/envs/libero/lib/python3.1/site-packages/torch-2.4.0+cu124.dist-info",
+            "/home/oyjt/workspace/miniconda3/envs/libero/lib/python3.1/site-packages/transformers-4.39.3.dist-info",
+            "/home/oyjt/workspace/miniconda3/envs/libero/lib/python3.1/site-packages/safetensors-0.7.0.dist-info",
+            "/home/oyjt/workspace/miniconda3/envs/libero/lib/python3.1/site-packages/mujoco-3.4.0.dist-info",
+            "/home/oyjt/workspace/miniconda3/envs/libero/lib/python3.1/site-packages/robosuite-1.4.0.dist-info",
+            "/home/oyjt/workspace/miniconda3/envs/libero/lib/python3.10/site-packages/torch-2.4.0+cu124.dist-info",
+            "/home/oyjt/workspace/miniconda3/envs/libero/lib/python3.10/site-packages/transformers-4.39.3.dist-info",
+            "/home/oyjt/workspace/miniconda3/envs/libero/lib/python3.10/site-packages/safetensors-0.7.0.dist-info",
+            "/home/oyjt/workspace/miniconda3/envs/libero/lib/python3.10/site-packages/mujoco-3.4.0.dist-info",
+            "/home/oyjt/workspace/miniconda3/envs/libero/lib/python3.10/site-packages/robosuite-1.4.0.dist-info",
+            "/home/oyjt/workspace/miniconda3/envs/libero/lib/python3.8/site-packages/torch-1.11.0+cu113.dist-info",
+            "/home/oyjt/workspace/miniconda3/envs/libero/lib/python3.8/site-packages/transformers-4.21.1.dist-info",
+            "/home/oyjt/workspace/miniconda3/envs/libero/lib/python3.8/site-packages/mujoco-3.2.3.dist-info",
+            "/home/oyjt/workspace/miniconda3/envs/libero/lib/python3.8/site-packages/robosuite-1.4.0.dist-info"
+          ],
+          "import_or_environment_activation_performed": false
+        }
+      ]
+    },
+    {
+      "id": "A09",
+      "name": "historical Qwen GR00T reference",
+      "path": "/home/oyjt/workspace/Qwen2.5-VL-GR00T-LIBERO-4in1/checkpoints/steps_30000_pytorch_model.pt",
+      "status": "file_and_size_present_current_hash_unverified",
+      "metadata": {
+        "path": "/home/oyjt/workspace/Qwen2.5-VL-GR00T-LIBERO-4in1/checkpoints/steps_30000_pytorch_model.pt",
+        "exists": true,
+        "is_directory": false,
+        "bytes": 8442334155,
+        "mtime_ns": 1769791388892120525,
+        "resolved_path": "/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/Qwen2.5-VL-GR00T-LIBERO-4in1/checkpoints/steps_30000_pytorch_model.pt"
+      },
+      "sha256_current": null,
+      "sha256_historical": "26b36799a702ca920467c987096a8ccb5f476c6965af6c7f2fd419ecb6893bf2"
+    },
+    {
+      "id": "A10",
+      "name": "early context_intent prototype",
+      "path": "D:\\Scene_Aware\\context_intent",
+      "status": "source_only_untrained_not_v4_internal_connector",
+      "trained_weight_files": []
+    },
+    {
+      "id": "A11",
+      "name": "V2 interaction and authorization code",
+      "status": "local_source_available_historical_research_gates_unchanged",
+      "source_files": [
+        {
+          "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\core\\joint_belief.py",
+          "exists": true,
+          "bytes": 16649,
+          "sha256": "54665ff8c8a4dd0e1d47efce4c2684a91ca9676d5a1ac1dc0e81724abe8896a3",
+          "classes": [
+            {
+              "name": "GoalVocabulary",
+              "line": 16
+            },
+            {
+              "name": "TaskQuestionBinding",
+              "line": 49
+            },
+            {
+              "name": "JointBeliefFilter",
+              "line": 76
+            }
+          ],
+          "functions": [
+            {
+              "name": "__init__",
+              "line": 18
+            },
+            {
+              "name": "confirmation_symbols",
+              "line": 40
+            },
+            {
+              "name": "__init__",
+              "line": 50
+            },
+            {
+              "name": "validate_request",
+              "line": 67
+            },
+            {
+              "name": "__init__",
+              "line": 83
+            },
+            {
+              "name": "audit_log",
+              "line": 106
+            },
+            {
+              "name": "_view",
+              "line": 108
+            },
+            {
+              "name": "snapshot",
+              "line": 111
+            },
+            {
+              "name": "_predict",
+              "line": 115
+            },
+            {
+              "name": "update",
+              "line": 123
+            }
+          ]
+        },
+        {
+          "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\core\\diagnostic_policy.py",
+          "exists": true,
+          "bytes": 16859,
+          "sha256": "5214c9b94e8eb512c32fd658cb4ac34c88fd03dd2525a6b2259d7fa385e16e83",
+          "classes": [
+            {
+              "name": "PlanningState",
+              "line": 15
+            },
+            {
+              "name": "DiagnosticPolicy",
+              "line": 75
+            }
+          ],
+          "functions": [
+            {
+              "name": "__post_init__",
+              "line": 32
+            },
+            {
+              "name": "from_filter_snapshot",
+              "line": 53
+            },
+            {
+              "name": "advance",
+              "line": 61
+            },
+            {
+              "name": "__init__",
+              "line": 76
+            },
+            {
+              "name": "_vector",
+              "line": 111
+            },
+            {
+              "name": "_predict",
+              "line": 116
+            },
+            {
+              "name": "_terminal_loss",
+              "line": 120
+            },
+            {
+              "name": "_branches",
+              "line": 124
+            },
+            {
+              "name": "_tv",
+              "line": 150
+            },
+            {
+              "name": "_evaluate",
+              "line": 161
+            },
+            {
+              "name": "plan",
+              "line": 219
+            },
+            {
+              "name": "carry_channel_to_new_task",
+              "line": 266
+            }
+          ]
+        },
+        {
+          "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\contracts\\session.py",
+          "exists": true,
+          "bytes": 32057,
+          "sha256": "7d46d82290e675e6fb7ecf580bbeaa6a0a152755b714acaff8a0b5e9607fc325",
+          "classes": [
+            {
+              "name": "InteractionSession",
+              "line": 28
+            }
+          ],
+          "functions": [
+            {
+              "name": "at",
+              "line": 21
+            },
+            {
+              "name": "replay_session_state",
+              "line": 400
+            },
+            {
+              "name": "__init__",
+              "line": 29
+            },
+            {
+              "name": "_active_model_refs",
+              "line": 63
+            },
+            {
+              "name": "_now",
+              "line": 70
+            },
+            {
+              "name": "snapshot",
+              "line": 75
+            },
+            {
+              "name": "_record",
+              "line": 86
+            },
+            {
+              "name": "_revoke",
+              "line": 90
+            },
+            {
+              "name": "_current_contract",
+              "line": 93
+            },
+            {
+              "name": "_prediction_copy",
+              "line": 105
+            },
+            {
+              "name": "propose",
+              "line": 118
+            },
+            {
+              "name": "begin_interaction",
+              "line": 136
+            },
+            {
+              "name": "ingest",
+              "line": 175
+            },
+            {
+              "name": "authorize",
+              "line": 212
+            },
+            {
+              "name": "dispatch",
+              "line": 237
+            },
+            {
+              "name": "_validate_reply",
+              "line": 276
+            },
+            {
+              "name": "refresh_submission",
+              "line": 286
+            },
+            {
+              "name": "verify_endpoint",
+              "line": 316
+            },
+            {
+              "name": "_stop",
+              "line": 338
+            },
+            {
+              "name": "request_stop",
+              "line": 346
+            },
+            {
+              "name": "cancel",
+              "line": 349
+            },
+            {
+              "name": "expire",
+              "line": 352
+            },
+            {
+              "name": "revise_context",
+              "line": 362
+            },
+            {
+              "name": "invalidate_models",
+              "line": 378
+            },
+            {
+              "name": "request_policy",
+              "line": 384
+            }
+          ]
+        },
+        {
+          "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\adapters\\vla\\libero_pi05.py",
+          "exists": true,
+          "bytes": 1108,
+          "sha256": "4ef32592e647bc0824029b314d051e106d081f67769def02ae9a164784083222",
+          "classes": [],
+          "functions": [
+            {
+              "name": "controller_actions",
+              "line": 4
+            }
+          ]
+        },
+        {
+          "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\adapters\\bci\\ssvep.py",
+          "exists": true,
+          "bytes": 253,
+          "sha256": "e304c9921854dfebdb8261909f2d9339b099183a127a709440d9ad7bb30165ad",
+          "classes": [
+            {
+              "name": "SSVEPAdapterShell",
+              "line": 5
+            }
+          ],
+          "functions": []
+        },
+        {
+          "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\adapters\\bci\\packet_replay.py",
+          "exists": true,
+          "bytes": 1831,
+          "sha256": "c3a6549d39c92a16aa8d9973c3fdcd89df97dbbf1371fd6a809e93b45b0707b4",
+          "classes": [
+            {
+              "name": "PacketReplayTransport",
+              "line": 5
+            }
+          ],
+          "functions": [
+            {
+              "name": "__init__",
+              "line": 6
+            },
+            {
+              "name": "encode",
+              "line": 10
+            },
+            {
+              "name": "_check",
+              "line": 14
+            },
+            {
+              "name": "feed",
+              "line": 20
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A12",
+      "name": "new neural interaction V4",
+      "status": "not_implemented_not_trained",
+      "directory_exists": false,
+      "high_level_text_verified": false,
+      "semantic_subtask_verified": false,
+      "prefix_injection_verified": false
+    },
+    {
+      "id": "A13",
+      "name": "current local inspection interpreter",
+      "status": "metadata_only_not_a_verified_training_environment",
+      "evidence": {
+        "checked_at": "2026-10-16T15:50:24.119700+00:00",
+        "python_executable": "C:\\Program Files\\Python313\\python.exe",
+        "python_version": "3.13.0",
+        "platform": "Windows-11-10.0.22631-SP0",
+        "packages": {
+          "torch": {
+            "distribution_version": null,
+            "import_executed": false
+          },
+          "numpy": {
+            "distribution_version": "2.2.4",
+            "import_executed": false
+          },
+          "transformers": {
+            "distribution_version": null,
+            "import_executed": false
+          },
+          "paramiko": {
+            "distribution_version": "5.0.0",
+            "import_executed": false
+          },
+          "safetensors": {
+            "distribution_version": null,
+            "import_executed": false
+          },
+          "pytest": {
+            "distribution_version": null,
+            "import_executed": false
+          }
+        },
+        "network_or_device_access": false
+      }
+    }
+  ],
+  "remote_source_hashes": [
+    {
+      "path": "/home/oyjt/Scene-aware-BCI-VLA/scripts/inference.py",
+      "sha256": "324797b38d1a3b6fa2f5ed0528a62a0dfd7f812b1e96464f349d3c73211b0e0c",
+      "exists": true
+    },
+    {
+      "path": "/home/oyjt/Scene-aware-BCI-VLA/scripts/server_api.py",
+      "sha256": "9af52c0364aad6771e73184831bf46b1706b78bbe4c3136ddc9160eb281ce977",
+      "exists": true
+    },
+    {
+      "path": "/home/oyjt/Scene-aware-BCI-VLA/interface.py",
+      "sha256": null,
+      "exists": false
+    },
+    {
+      "path": "/home/oyjt/Scene-aware-BCI-VLA/scripts/robot/RTC_inference.py",
+      "sha256": "bb14d4b9fe152c2e8c34ebe31b81ff454f7a822122f0528619553c2d39763d0c",
+      "exists": true
+    },
+    {
+      "path": "/home/oyjt/openpi/src/openpi/models/pi0.py",
+      "sha256": "90a01ad302af250c79dad336b9f8351ec1578c88a8b64e53f89c219d8cee7a30",
+      "exists": true
+    },
+    {
+      "path": "/home/oyjt/openpi/src/openpi/models/pi0_config.py",
+      "sha256": "e15d71586f1a561b35c5651227607613fb16d2df411f3708b1c9d36b02544285",
+      "exists": true
+    },
+    {
+      "path": "/home/oyjt/openpi/src/openpi/models/tokenizer.py",
+      "sha256": "965be8b3c393a6811875bbc32da9e01a5d01cc2f87802de801cf7293e049748c",
+      "exists": true
+    },
+    {
+      "path": "/home/oyjt/openpi/src/openpi/models_pytorch/pi0_pytorch.py",
+      "sha256": "0c7b9f1de02ed886da49035e3fa1b38efea46eb6209489cb4f594f777f97b70c",
+      "exists": true
+    },
+    {
+      "path": "/home/oyjt/openpi/src/openpi/models_pytorch/gemma_pytorch.py",
+      "sha256": "08fd8d750519f0fb44fc5173311e50a30f4c8f32c02e51244b4f8e47b32cd52f",
+      "exists": true
+    },
+    {
+      "path": "/home/oyjt/openpi/src/openpi/policies/policy.py",
+      "sha256": "3b77d897aeb04a91ca37e54e854d67d8dec23bffa255249faecfbe44f87d7053",
+      "exists": true
+    },
+    {
+      "path": "/home/oyjt/openpi/src/openpi/policies/policy_config.py",
+      "sha256": "aaf42ab04a33b6c91d2447926211646c33ebd8ebfa427f026d7b6c4f7c45ec52",
+      "exists": true
+    },
+    {
+      "path": "/home/oyjt/openpi/src/openpi/policies/libero_policy.py",
+      "sha256": "ad01e5be74516d9ec9aeb1f76294d5c9f7f7179a60f1f7fbbb35e7646534f81a",
+      "exists": true
+    },
+    {
+      "path": "/home/oyjt/openpi/src/openpi/training/config.py",
+      "sha256": "58d3d091b2e8f3abd85dfbb2d7ed955f932cfebd7b0cd31355d8f547bc0b8bf6",
+      "exists": true
+    },
+    {
+      "path": "/home/oyjt/workspace/RLinf-RECAP/models/baseline_sft/RLinf-Pi05-LIBERO-SFT/config.json",
+      "sha256": null,
+      "exists": false
+    },
+    {
+      "path": "/home/oyjt/workspace/RLinf-RECAP/models/baseline_sft/RLinf-Pi05-LIBERO-SFT/assets/physical-intelligence/libero/norm_stats.json",
+      "sha256": "dae37d79a22108af83df9189c6710a3ec8e077d65b28e34bdf1da724e5ae30f1",
+      "exists": true
+    },
+    {
+      "path": "/home/oyjt/Scene-aware-BCI-VLA/Grounded-SAM-2/grounded_sam2_dinox_demo.py",
+      "sha256": "509ba0e79a41cd45d8240a7c4ea406b23a9f3c47a1cc80b9ff0761f6fa1d7286",
+      "exists": true
+    },
+    {
+      "path": "/home/oyjt/Scene-aware-BCI-VLA/Grounded-SAM-2/grounded_sam2_florence2_autolabel_pipeline.py",
+      "sha256": "d76d82e3161df0577eac0be63ac51103f6fbc4e93d930decd077aec6e105cb6c",
+      "exists": true
+    },
+    {
+      "path": "/home/oyjt/Scene-aware-BCI-VLA/Grounded-SAM-2/grounded_sam2_florence2_image_demo.py",
+      "sha256": "be0f1c01cde4d57c80b15775067eb61b03b181a75fe8857f6a6da499046c0b78",
+      "exists": true
+    },
+    {
+      "path": "/home/oyjt/Scene-aware-BCI-VLA/Grounded-SAM-2/grounded_sam2_gd1.5_demo.py",
+      "sha256": "8b3c92eaa136235b65b6c4f92127208b1bd4f326aaf7181a7edc41f19b50bb6a",
+      "exists": true
+    },
+    {
+      "path": "/home/oyjt/Scene-aware-BCI-VLA/Grounded-SAM-2/grounded_sam2_hf_model_demo.py",
+      "sha256": "80cbbb95ec0dd7e9b6873dc74380258f1139695d2d8ad0aafc5fb1181c62c26c",
+      "exists": true
+    },
+    {
+      "path": "/home/oyjt/Scene-aware-BCI-VLA/Grounded-SAM-2/grounded_sam2_local_demo.py",
+      "sha256": "8035887cef2316aad34fb3a7fc374ec81751f82a6548eb0e8a5a8732fb65cfa5",
+      "exists": true
+    },
+    {
+      "path": "/home/oyjt/Scene-aware-BCI-VLA/Grounded-SAM-2/grounded_sam2_tracking_camera_with_continuous_id.py",
+      "sha256": "2004cf2f02e2ca7ff05ca678a1a26754fd3504586b1c5c7f585e713708730b35",
+      "exists": true
+    },
+    {
+      "path": "/home/oyjt/Scene-aware-BCI-VLA/Grounded-SAM-2/grounded_sam2_tracking_demo.py",
+      "sha256": "78ad63898d8ba577e8cc160f4256153e324daf24d5ceea6dad1594c689869dba",
+      "exists": true
+    },
+    {
+      "path": "/home/oyjt/Scene-aware-BCI-VLA/Grounded-SAM-2/grounded_sam2_tracking_demo_custom_video_input_dinox.py",
+      "sha256": "47b9ee8f09d6e01c6ccac02ca405991459656fb0bd700c1d9c34b0e80f300ee4",
+      "exists": true
+    },
+    {
+      "path": "/home/oyjt/Scene-aware-BCI-VLA/Grounded-SAM-2/grounded_sam2_tracking_demo_custom_video_input_gd1.0_hf_model.py",
+      "sha256": "0b45f9309f83e6647ffd2dc2cef0b3650e10ac6cb563a7345551e2de064c1a13",
+      "exists": true
+    },
+    {
+      "path": "/home/oyjt/Scene-aware-BCI-VLA/Grounded-SAM-2/grounded_sam2_tracking_demo_custom_video_input_gd1.0_local_model.py",
+      "sha256": "53f20fcbe90897fc33453c9b38886b5f917ce539b0cd1749017a46980176f36a",
+      "exists": true
+    },
+    {
+      "path": "/home/oyjt/Scene-aware-BCI-VLA/Grounded-SAM-2/grounded_sam2_tracking_demo_custom_video_input_gd1.5.py",
+      "sha256": "051350955f985b3e9d51b85df754eb6826a1ec15642105e0415f9cc7d05d7820",
+      "exists": true
+    },
+    {
+      "path": "/home/oyjt/Scene-aware-BCI-VLA/Grounded-SAM-2/grounded_sam2_tracking_demo_with_continuous_id.py",
+      "sha256": "56bd91def27a8a80fe8d3b55f508124f9ad3d8b5cb3c77a66d2f3413c23f7597",
+      "exists": true
+    },
+    {
+      "path": "/home/oyjt/Scene-aware-BCI-VLA/Grounded-SAM-2/grounded_sam2_tracking_demo_with_continuous_id_gd1.5.py",
+      "sha256": "61b72d8e9878883ce6fcf75a3af3ef4ed560a29c85d6c9f9af3ef0f7b2f0b609",
+      "exists": true
+    },
+    {
+      "path": "/home/oyjt/Scene-aware-BCI-VLA/Grounded-SAM-2/grounded_sam2_tracking_demo_with_continuous_id_plus.py",
+      "sha256": "972b594ddc587b820e071605f6b2b8fa2788acaaf86712c15633987fe7b4e6de",
+      "exists": true
+    },
+    {
+      "path": "/home/oyjt/Scene-aware-BCI-VLA/Grounded-SAM-2/grounded_sam2_tracking_demo_with_gd1.5.py",
+      "sha256": "96c8fa0b42a79e6bf8857b8893c876bae03b104d21046330820946ff4dba308b",
+      "exists": true
+    },
+    {
+      "path": "/home/oyjt/Scene-aware-BCI-VLA/Scene-aware-BCI-VLA/interface.py",
+      "sha256": "74c7011c304b0b89f9a6e39801a4aeda7bceea3c30229b02b964725ce7de093a",
+      "exists": true
+    },
+    {
+      "path": "/home/oyjt/Grounded-SAM-2/Florence-2-large/config.json",
+      "sha256": "6f8a8f92a74ce18b5c1e5646b4a8222477dd1ac49f31b953e75d6fc3e0f8583a",
+      "exists": true
+    },
+    {
+      "path": "/home/oyjt/Grounded-SAM-2/Florence-2-large/tokenizer_config.json",
+      "sha256": "79ffcf43af8ebda99d165f61d243180da2e2639952e41e71e11611c18770489c",
+      "exists": true
+    },
+    {
+      "path": "/home/oyjt/Grounded-SAM-2/grounded_sam2_florence2_image_demo.py",
+      "sha256": "be0f1c01cde4d57c80b15775067eb61b03b181a75fe8857f6a6da499046c0b78",
+      "exists": true
+    }
+  ],
+  "gpu_snapshot": {
+    "observed_at_utc": "2026-10-16T15:52:11.424532+00:00",
+    "returncode": 0,
+    "stdout": "0, NVIDIA GeForce RTX 4090, 49140, 65, 48444, 0\n1, NVIDIA GeForce RTX 4090, 49140, 9871, 38638, 53\n2, NVIDIA GeForce RTX 4090, 49140, 16, 48493, 0\n3, NVIDIA GeForce RTX 4090, 49140, 17, 48492, 0\n4, NVIDIA GeForce RTX 4090, 49140, 16, 48493, 0\n5, NVIDIA GeForce RTX 4090, 49140, 17, 48492, 0\n6, NVIDIA GeForce RTX 4090, 49140, 1514, 46995, 1\n7, NVIDIA GeForce RTX 4090, 49140, 10691, 37818, 0",
+    "stderr": "",
+    "resource_reserved": false,
+    "hardware_memory_capacity_independently_verified": false
+  },
+  "capability_claims": {
+    "new_neural_network_implemented": false,
+    "trained_v4_weights_available": false,
+    "pi05_high_level_generation_verified": false,
+    "subtask_planning_verified": false,
+    "current_full_pi05_weight_hash_verified": false,
+    "actual_visual_weight_files_located": true,
+    "real_eeg_calibrated": false
+  },
+  "historical_gates": {
+    "G2": "未通过",
+    "G3": "未验证",
+    "G4": "未通过"
+  },
+  "gaps": [
+    {
+      "id": "I01",
+      "gap": "high-level text and semantic subtask capability unverified",
+      "owner_step": "V4-03",
+      "blocks_schema_step02": false
+    },
+    {
+      "id": "I02",
+      "gap": "new connector, object binding and gradient path not implemented",
+      "owner_step": "V4-02/06/07"
+    },
+    {
+      "id": "I03",
+      "gap": "large current checkpoint integrity not reverified; candidate shards not audited",
+      "owner_step": "V4-03"
+    },
+    {
+      "id": "I04",
+      "gap": "actual Florence/SAM weights located; frontend path/runtime binding pending",
+      "owner_step": "V4-12"
+    },
+    {
+      "id": "I05",
+      "gap": "multiple source copies and existing OpenPI changes require isolation",
+      "owner_step": "V4-03"
+    },
+    {
+      "id": "I06",
+      "gap": "local default interpreter lacks torch metadata; runtime compatibility pending",
+      "owner_step": "V4-06"
+    },
+    {
+      "id": "I07",
+      "gap": "new visual interaction data, subtask labels and formal splits not built",
+      "owner_step": "V4-04"
+    },
+    {
+      "id": "I08",
+      "gap": "diagnostic conditions, masks and risk rules require protocol freeze",
+      "owner_step": "V4-02/09/10"
+    },
+    {
+      "id": "I09",
+      "gap": "compute costs and reservations not verified by pilot",
+      "owner_step": "V4-03/08/12"
+    },
+    {
+      "id": "I10",
+      "gap": "method advantage and novelty not established",
+      "owner_step": "V4-13"
+    }
+  ],
+  "next_step": "V4-02",
+  "new_v4_model_selected": false,
+  "credentials_recorded": false,
+  "model_loads": 0,
+  "service_launches": 0,
+  "training_runs": 0,
+  "EEG_connections": 0,
+  "robot_connections": 0,
+  "raw_evidence": [
+    "01_git_before.json",
+    "01_remote_inventory.json",
+    "01_remote_supplement.json",
+    "01_remote_paths.json",
+    "01_workspace_weights.json",
+    "01_candidate_weights.json",
+    "01_local_environment.json",
+    "01_local_sources.json",
+    "01_literature.json",
+    "01_command_log.json"
+  ]
+}

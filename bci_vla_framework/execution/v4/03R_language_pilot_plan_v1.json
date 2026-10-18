@@ -1,0 +1,35 @@
+{
+  "scope": "user-requested Step03 high-level gap remediation; bounded LoRA pilot",
+  "remote_job": "/home/oyjt/Scene-aware-BCI-VLA-runs/v4_step03R_language_20261017_v1",
+  "steps": 240,
+  "wall_timeout_s": 900,
+  "GPU": 7,
+  "rank": 16,
+  "alpha": 32,
+  "targets": [
+    "q_proj",
+    "v_proj",
+    "o_proj"
+  ],
+  "learning_rate": 0.001,
+  "source": "existing server LIBERO train/validation captures only; labels generated from explicit selections and declared symbolic state",
+  "no_local_project_data_upload": true,
+  "no_old_private_labels_read": true,
+  "after_grasp_examples": "symbolic text-only; no matching real grasp images, not expert demos",
+  "formal_test_sealed": true,
+  "base_weights_frozen": true,
+  "action_calls": false,
+  "acceptance": "pilot is not automatic gate pass; independent contrast checks and scope audit required",
+  "files": [
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\step03R_language_pilot.py",
+      "sha256": "6818f15d7cafd35b438272fad5bb32fc8395c208a62b88e1cb7d42e1b54c6aca",
+      "remote_name": "pilot.py"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\high_level_v4\\lora.py",
+      "sha256": "a0c09c942d0821f1aaba85f26c6e6f18bc05c53235c84c0f6e9ad3c0f27f6880",
+      "remote_name": "high_level_lora.py"
+    }
+  ]
+}

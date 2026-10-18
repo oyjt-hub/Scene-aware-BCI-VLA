@@ -1,0 +1,8 @@
+{
+  "execution_status": "failed",
+  "error": "No structured probe output",
+  "remote_exit_code": 124,
+  "existing_overlay_used": true,
+  "stdout_before_marker": "V4_STAGE_JSON={\"name\": \"runtime_source\", \"gemma_path\": \"/home/oyjt/Scene-aware-BCI-VLA-runs/step15C_full_20261016_v1/deps/transformers/models/gemma/modeling_gemma.py\", \"gemma_sha256\": \"17eeb54e277939e58cd6f8a92719a275e36baf0c9f463b2754227d42f87aedde\"}\nV4_STAGE_JSON={\"name\": \"skeleton_constructed\", \"seconds\": 3.289044207893312, \"random_init_skipped\": true}\n",
+  "stderr": ""
+}

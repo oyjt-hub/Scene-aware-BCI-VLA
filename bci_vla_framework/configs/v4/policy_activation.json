@@ -1,0 +1,17 @@
+{
+  "status": "SIMULATED_DEVELOPMENT_READY",
+  "selected_policy_id": "fixed_i6_c4_recheck",
+  "enabled": true,
+  "simulated_interaction_only": true,
+  "VLA_execution_enabled": false,
+  "physical_actions": false,
+  "formal_test_accessed": false,
+  "report": "execution\\v4\\09_calibration_attempt7.json",
+  "binding": {
+    "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+    "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+    "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+    "policy_sha256": "48b556069f0384346692b3294cddc293cc958f1bf2f6262a86e2fc893d117339"
+  },
+  "audit_role": "previously inspected development regression; not a fresh independent test"
+}

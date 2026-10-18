@@ -1,0 +1,9 @@
+﻿V4-06已完成：CPU模块工程验收，非训练/推理能力验收。
+主模块7,281,930参数，B3 7,269,034，B4 7,281,930；输出8×2048 prefix，尚未接入π0.5。
+66条LIBERO train/validation public及68条模拟private，20项本地CPU机制/梯度测试通过。
+本机复验：在D:\Scene_Aware\bci_vla_framework运行python execution/v4/run_step06_local.py。
+代码bci_vla/neural_interaction_v4；审计execution/v4/06_module_audit.json；说明docs/v4/06_module.txt。
+私有标签仅用于loss；PROBE物体语义不进入诊断支路；STOP/CANCEL走既有直接控制路由；任何输出不授权执行。
+自动审批拒绝扩展仿真标签上传，已改为本地CPU完成，不再需要外发这批数据。
+未训练/未校准/未调用VLA/未推进新仿真动力学/未开test。03高层门槛未通过，04主任务/放置监督缺口仍在。
+下一步07须先补齐03门槛；不能直接宣称07/08完成。真实脑机、实体动作仍排除，后续平台LIBERO。

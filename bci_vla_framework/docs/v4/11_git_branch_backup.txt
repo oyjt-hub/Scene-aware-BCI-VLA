@@ -1,0 +1,16 @@
+源码备份分支：codex/step11-upstream-subtask-20261018
+远程仓库：https://github.com/oyjt-hub/Scene-aware-BCI-VLA
+
+本分支将前次备份后积累的V3/V4源码、计划、配置、测试、总结报告和指定上游子任务源码整理入库。
+上游：LisavilaLee/openpi_with_subtask，提交99c738a322300166499efa0b614ffa95dbb9b21e。
+上游源码保留原许可证。本项目只新增PyTorch互操作和脑机证据/逐步授权接口。
+本地步骤11测试入口：python execution/v4/verify_step11_local.py。
+测试使用显式替身模型，28项通过；不代表真实VLM子任务能力验收。
+
+步骤11尚未整体完成：服务器真实权重/JAX互操作复验未运行，现有LoRA对新Task/Subtask格式的能力未确认。
+步骤09/10冻结结论不变；正式test封存；不含真实脑机采集和实体机器人执行。
+服务器上传被自动审批拒绝的事项与GitHub分支推送是两个不同操作，本次分支推送不自动执行服务器探针。
+
+仅包含本地机制测试必需的两个显式声明协议validation夹具；完整训练/校准数据、大型结果归档、权重、缓存、原始EEG不在此源码备份中。
+因此历史清单中引用的本地/服务器文件需要在原位置恢复后才能验证全部历史记录。
+execution/v4/11_git_backup_manifest.json列出上传文件及SHA256；清单不包含自身的散列。

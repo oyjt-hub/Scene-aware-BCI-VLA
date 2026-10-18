@@ -1,0 +1,256 @@
+{
+  "scope": "read_only_exact_workspace_checkpoint_and_visual_weight_metadata",
+  "checked_at_utc": "2026-10-16T16:09:39.434997+00:00",
+  "paths": [
+    {
+      "path": "/home/oyjt/workspace/checkpoints/pi05_base",
+      "exists": true,
+      "is_directory": true,
+      "bytes": 4096,
+      "mtime_ns": 1767791621490175778,
+      "resolved_path": "/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/checkpoints/pi05_base",
+      "children": [
+        "assets",
+        "params"
+      ]
+    },
+    {
+      "path": "/home/oyjt/workspace/checkpoints/pi05_base/params",
+      "exists": true,
+      "is_directory": true,
+      "bytes": 4096,
+      "mtime_ns": 1767791621497175897,
+      "resolved_path": "/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/checkpoints/pi05_base/params",
+      "children": [
+        "_CHECKPOINT_METADATA",
+        "_METADATA",
+        "_sharding",
+        "array_metadatas",
+        "commit_success.txt",
+        "d",
+        "manifest.ocdbt",
+        "ocdbt.process_0"
+      ]
+    },
+    {
+      "path": "/home/oyjt/workspace/checkpoints/pi05_droid",
+      "exists": true,
+      "is_directory": true,
+      "bytes": 4096,
+      "mtime_ns": 1768931766266042237,
+      "resolved_path": "/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/checkpoints/pi05_droid",
+      "children": [
+        "assets",
+        "params"
+      ]
+    },
+    {
+      "path": "/home/oyjt/workspace/checkpoints/pi05_droid/params",
+      "exists": true,
+      "is_directory": true,
+      "bytes": 4096,
+      "mtime_ns": 1768931766270042285,
+      "resolved_path": "/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/checkpoints/pi05_droid/params",
+      "children": [
+        "_CHECKPOINT_METADATA",
+        "_METADATA",
+        "_sharding",
+        "array_metadatas",
+        "d",
+        "manifest.ocdbt",
+        "ocdbt.process_0"
+      ]
+    },
+    {
+      "path": "/home/oyjt/workspace/checkpoints/pi05_fold_clothes",
+      "exists": true,
+      "is_directory": true,
+      "bytes": 4096,
+      "mtime_ns": 1768324591556691099,
+      "resolved_path": "/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/checkpoints/pi05_fold_clothes",
+      "children": [
+        "pi05_fold_cloth_0112",
+        "pi05_fold_cloth_0114"
+      ]
+    },
+    {
+      "path": "/home/oyjt/workspace/checkpoints/uniform",
+      "exists": true,
+      "is_directory": true,
+      "bytes": 4096,
+      "mtime_ns": 1774528509996747185,
+      "resolved_path": "/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/checkpoints/uniform",
+      "children": [
+        "uniform24_horizon100_0326",
+        "uniform_horizon100_0320"
+      ]
+    },
+    {
+      "path": "/home/oyjt/workspace/checkpoints/uniform_rtc_v2",
+      "exists": true,
+      "is_directory": true,
+      "bytes": 4096,
+      "mtime_ns": 1790927568943279769,
+      "resolved_path": "/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/checkpoints/uniform_rtc_v2",
+      "children": [
+        "uniform24_rtc_v2"
+      ]
+    },
+    {
+      "path": "/home/oyjt/workspace/checkpoints/uniform_table_rtc_v2",
+      "exists": true,
+      "is_directory": true,
+      "bytes": 4096,
+      "mtime_ns": 1791411484465569732,
+      "resolved_path": "/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/checkpoints/uniform_table_rtc_v2",
+      "children": [
+        "uniform24_table_rtc_v2",
+        "uniform24_table_rtc_v2_clean_20261008"
+      ]
+    },
+    {
+      "path": "/home/oyjt/Grounded-SAM-2/Florence-2-large/model.safetensors",
+      "exists": true,
+      "is_directory": false,
+      "bytes": 1553563458,
+      "mtime_ns": 1777296689865901444,
+      "resolved_path": "/home/oyjt/Grounded-SAM-2/Florence-2-large/model.safetensors"
+    },
+    {
+      "path": "/home/oyjt/Grounded-SAM-2/Florence-2-large/tokenizer.json",
+      "exists": true,
+      "is_directory": false,
+      "bytes": 1355863,
+      "mtime_ns": 1777296497052761683,
+      "resolved_path": "/home/oyjt/Grounded-SAM-2/Florence-2-large/tokenizer.json"
+    },
+    {
+      "path": "/home/oyjt/Grounded-SAM-2/checkpoints/sam2.1_hiera_large.pt",
+      "exists": true,
+      "is_directory": false,
+      "bytes": 898083611,
+      "mtime_ns": 1776512051924241119,
+      "resolved_path": "/home/oyjt/Grounded-SAM-2/checkpoints/sam2.1_hiera_large.pt"
+    }
+  ],
+  "small_sources": [
+    {
+      "path": "/home/oyjt/Grounded-SAM-2/Florence-2-large/config.json",
+      "exists": true,
+      "is_directory": false,
+      "bytes": 2445,
+      "mtime_ns": 1777296496340743369,
+      "resolved_path": "/home/oyjt/Grounded-SAM-2/Florence-2-large/config.json",
+      "sha256": "6f8a8f92a74ce18b5c1e5646b4a8222477dd1ac49f31b953e75d6fc3e0f8583a"
+    },
+    {
+      "path": "/home/oyjt/Grounded-SAM-2/Florence-2-large/tokenizer_config.json",
+      "exists": true,
+      "is_directory": false,
+      "bytes": 34,
+      "mtime_ns": 1777296496879757233,
+      "resolved_path": "/home/oyjt/Grounded-SAM-2/Florence-2-large/tokenizer_config.json",
+      "sha256": "79ffcf43af8ebda99d165f61d243180da2e2639952e41e71e11611c18770489c"
+    },
+    {
+      "path": "/home/oyjt/Grounded-SAM-2/grounded_sam2_florence2_image_demo.py",
+      "exists": true,
+      "is_directory": false,
+      "bytes": 37642,
+      "mtime_ns": 1782450900387293557,
+      "resolved_path": "/home/oyjt/Grounded-SAM-2/grounded_sam2_florence2_image_demo.py",
+      "sha256": "be0f1c01cde4d57c80b15775067eb61b03b181a75fe8857f6a6da499046c0b78",
+      "classes": [],
+      "relevant_methods": [
+        {
+          "name": "single_mask_to_rle",
+          "line": 69
+        },
+        {
+          "name": "object_detection_and_segmentation",
+          "line": 110
+        },
+        {
+          "name": "dense_region_caption_and_segmentation",
+          "line": 186
+        },
+        {
+          "name": "region_proposal_and_segmentation",
+          "line": 263
+        },
+        {
+          "name": "phrase_grounding_and_segmentation",
+          "line": 512
+        },
+        {
+          "name": "referring_expression_segmentation",
+          "line": 707
+        },
+        {
+          "name": "open_vocabulary_detection_and_segmentation",
+          "line": 816
+        }
+      ],
+      "model_reference_calls": [
+        {
+          "line": 63,
+          "function": "AutoModelForCausalLM.from_pretrained(FLORENCE2_MODEL_ID, trust_remote_code=True, torch_dtype='auto').eval().to",
+          "literal_args": [],
+          "public_kwargs": {}
+        },
+        {
+          "line": 64,
+          "function": "AutoProcessor.from_pretrained",
+          "literal_args": [],
+          "public_kwargs": {}
+        },
+        {
+          "line": 67,
+          "function": "build_sam2",
+          "literal_args": [],
+          "public_kwargs": {}
+        },
+        {
+          "line": 63,
+          "function": "AutoModelForCausalLM.from_pretrained(FLORENCE2_MODEL_ID, trust_remote_code=True, torch_dtype='auto').eval",
+          "literal_args": [],
+          "public_kwargs": {}
+        },
+        {
+          "line": 63,
+          "function": "AutoModelForCausalLM.from_pretrained",
+          "literal_args": [],
+          "public_kwargs": {}
+        }
+      ],
+      "public_model_constants": [
+        {
+          "line": 46,
+          "name": "FLORENCE2_MODEL_ID",
+          "value": "./Florence-2-large"
+        },
+        {
+          "line": 47,
+          "name": "SAM2_CHECKPOINT",
+          "value": "./checkpoints/sam2.1_hiera_large.pt"
+        },
+        {
+          "line": 48,
+          "name": "SAM2_CONFIG",
+          "value": "configs/sam2.1/sam2.1_hiera_l.yaml"
+        }
+      ]
+    }
+  ],
+  "candidate_selected_for_v4": false,
+  "large_weights_hashed": false,
+  "not_performed": [
+    "model_load",
+    "inference",
+    "training",
+    "service_launch",
+    "remote_write",
+    "EEG_connection",
+    "robot_connection"
+  ]
+}

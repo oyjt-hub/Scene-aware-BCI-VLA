@@ -1,0 +1,44 @@
+﻿V4-06 小型交互Transformer CPU原型（2026-10-17）
+
+一、这一步完成了什么
+输入仍为步骤04实际LIBERO图像裁剪统计、位置、模拟选择证据和公共交互历史。
+输出8个2048维内部token以及候选/候选外/缺槽/弃权/可靠性/询问辅助头。token尚未送入π0.5。
+Full实际7,281,930参数；B3池化MLP 7,269,034参数（宽992）；B4共享查询7,281,930参数。
+B3相差约0.1771%，B4完全相同，未添加虚假占位参数。这只匹配参数，不表示计算量或时延相同。
+
+二、代码入口与逐步调用
+1. 先调用bci_vla.neural_interaction_v4.control.route_control(public)。STOP/CANCEL返回已有直接控制路径，call_neural_module=false；不得继续调用模型。
+2. collate_public([public])先执行4.1/4.0合同校验，然后返回张量和独立metadata。
+3. IntentChannelConnector()(tensors)返回原始可微输出。metadata中的ID/alias/sample hash不传给forward，只在输出与loss绑定使用。
+4. 实例化matched_models()可取得Full、B3_aux、B4_aux。无aux对照B3/B4复用相同模型结构，之后训练时关闭辅助损失。
+5. auxiliary_losses(output,publics,private_labels,metadata)在loss端验证私有标签和公开输入哈希；forward拒绝额外key。
+6. inspect_prediction生成module-inspection/0.1调试记录，不能作为冻结执行合同或机器人执行指令。
+
+三、架构
+d=256，4头，FFN=1024，H<=8，N<=16。bbox、角色、时间通过输入数值/one-hot联合投影编码；没有ID或别名数字嵌入。
+任务与诊断先分组，再分别做一层历史Transformer；4个意图query与4个通道query各经过两个融合块。
+通道只读去物体语义的PROBE统计、分数、时效和公开诊断摘要，不能读取TASK选择、对象ROI或任务历史。
+只有有字段定义的12维摘要可经4个投影token单向送入意图分支。原始通道query不送VLM。
+最终prefix前4个来自意图query，后4个来自摘要。不同角色在self-attention前就分开，所有融合层保持隔离。
+全mask组使用有效EMPTY哨兵，padding在投影前归零；有效非有限值或超出归一化范围的值报错。
+没有诊断历史且没有未过期摘要时，可靠性有效mask=false，导出值为null；任何结果均uncalibrated。
+窗口外已确认任务通过public_state独立编码，不依赖它是否仍在8条历史中。
+STOP/CANCEL依赖既有直接路由；模型只能提出建议，execution_authorized恒为false。
+
+四、数据与验证范围
+最终66条public、68条private，均来自冻结train/validation，含真实同公开输入/不同隐藏目标的反事实对。
+这些private仅是程序生成的仿真监督，不含EEG或受试者数据。正式test和校准集未读取。
+20项CPU测试全部通过：输出形状/有限值/候选概率；参数匹配；空输入与N/H=0；批次隔离；对象重排等变及梯度等变；别名不进入特征；padding NaN；非法值/字段/维度；逐层通道隔离；PROBE物体引用变化不变性；诊断数值正向影响；单向梯度；持久摘要/证据不足；9次PROBE后确认任务保留；STOP/CANCEL无torch旁路；私有反事实标签隔离；全部模型反传；选项重排；超限历史；普通共享基线负对照。
+来源特征仍只是6维实际RGB均值/标准差，semantic缺失并mask=false；不是Florence/SAM或预训练视觉向量。
+空历史、控制与>H机制测试另使用步骤02的明确合成夹具，不视为新LIBERO任务结果。
+反向传播含真实辅助loss和显式机制测试目标；没有optimizer.step，没有训练、保存权重或性能评价。
+
+五、必须保留的限制
+当前保守intent SET包含全部候选和outside，loss没有区分目标的信息；不能据此开始有效目标绑定训练。
+缺槽与弃权目前只有输出及梯度接线测试，没有对应私有监督；语言损失也尚未接入。
+首次17项测试有两项夹具错误，修正后服务器19项通过。扩展反事实上传被自动审批拒绝后，最终20项改在本机CPU完成。
+本机CPU依赖位于D:\Scene_Aware\.runtime\step06_cpu；项目脚本不修改全局Python包，不上传测试数据。
+复验命令（项目目录）：python execution/v4/run_step06_local.py；该命令会刷新CPU结果和输入哈希清单。
+审计：execution/v4/06_module_audit.json；逐项日志：execution/v4/06_cpu_local.log；原始结果：execution/v4/06_cpu_result.json。
+下一步07仍依赖03高层文本能力通过。现有π0.5生成探针未证明主任务/子任务能力，不能把06原型通过称为接入或完整LIBERO动作闭环成功。
+真实EEG、实体机器人、GPU训练、正式test均未运行。历史G2/G3/G4及01–05冻结证据保持不变。

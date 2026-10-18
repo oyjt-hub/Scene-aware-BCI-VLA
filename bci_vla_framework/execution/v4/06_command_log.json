@@ -1,0 +1,27 @@
+[
+  {
+    "command": "python execution/v4/prepare_step06.py",
+    "final_public_records": 66,
+    "final_private_records": 68
+  },
+  {
+    "command": "python execution/v4/run_step06_cpu.py --attempt 1",
+    "status": "17 tests, 2 fixture failures"
+  },
+  {
+    "command": "python execution/v4/run_step06_cpu.py --attempt 2",
+    "status": "PASS 19 CPU tests"
+  },
+  {
+    "command": "python execution/v4/run_step06_cpu.py --attempt 3",
+    "status": "NOT EXECUTED; auto-review rejected expanded synthetic-private upload twice"
+  },
+  {
+    "command": "python -m pip install --target D:\\Scene_Aware\\.runtime\\step06_cpu --index-url https://download.pytorch.org/whl/cpu torch==2.7.1",
+    "scope": "public official CPU dependency download, no project data transfer"
+  },
+  {
+    "command": "python execution/v4/run_step06_local.py",
+    "status": "PASS 20 local CPU tests"
+  }
+]

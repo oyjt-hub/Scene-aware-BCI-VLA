@@ -1,0 +1,203 @@
+{
+  "checkpoints": [
+    {
+      "path": "/home/oyjt/workspace/RLinf-RECAP/models/openpi_pytorch/pi05_base/model.safetensors",
+      "bytes": 7233650408,
+      "metadata": {
+        "paligemma_with_expert.paligemma.model.language_model.embed_tokens.weight": "paligemma_with_expert.paligemma.lm_head.weight"
+      },
+      "num_tensors": 812,
+      "selected_tensors": {
+        "action_out_proj.weight": {
+          "dtype": "BF16",
+          "shape": [
+            32,
+            1024
+          ]
+        },
+        "paligemma_with_expert.gemma_expert.lm_head.weight": {
+          "dtype": "BF16",
+          "shape": [
+            257152,
+            1024
+          ]
+        },
+        "paligemma_with_expert.gemma_expert.model.layers.0.mlp.gate_proj.weight": {
+          "dtype": "BF16",
+          "shape": [
+            4096,
+            1024
+          ]
+        },
+        "paligemma_with_expert.gemma_expert.model.layers.0.self_attn.k_proj.weight": {
+          "dtype": "BF16",
+          "shape": [
+            256,
+            1024
+          ]
+        },
+        "paligemma_with_expert.gemma_expert.model.layers.0.self_attn.q_proj.weight": {
+          "dtype": "BF16",
+          "shape": [
+            2048,
+            1024
+          ]
+        },
+        "paligemma_with_expert.paligemma.lm_head.weight": {
+          "dtype": "BF16",
+          "shape": [
+            257152,
+            2048
+          ]
+        },
+        "paligemma_with_expert.paligemma.model.language_model.layers.0.mlp.gate_proj.weight": {
+          "dtype": "BF16",
+          "shape": [
+            16384,
+            2048
+          ]
+        },
+        "paligemma_with_expert.paligemma.model.language_model.layers.0.self_attn.k_proj.weight": {
+          "dtype": "BF16",
+          "shape": [
+            256,
+            2048
+          ]
+        },
+        "paligemma_with_expert.paligemma.model.language_model.layers.0.self_attn.q_proj.weight": {
+          "dtype": "BF16",
+          "shape": [
+            2048,
+            2048
+          ]
+        },
+        "paligemma_with_expert.paligemma.model.vision_tower.vision_model.encoder.layers.0.self_attn.k_proj.weight": {
+          "dtype": "BF16",
+          "shape": [
+            1152,
+            1152
+          ]
+        },
+        "paligemma_with_expert.paligemma.model.vision_tower.vision_model.encoder.layers.0.self_attn.q_proj.weight": {
+          "dtype": "BF16",
+          "shape": [
+            1152,
+            1152
+          ]
+        }
+      },
+      "configs": {
+        "config.json": {
+          "action_dim": 32,
+          "action_horizon": 10,
+          "paligemma_variant": "gemma_2b",
+          "action_expert_variant": "gemma_300m",
+          "precision": "bfloat16"
+        }
+      },
+      "siblings": [
+        "physical-intelligence",
+        "model.safetensors",
+        "config.json"
+      ]
+    },
+    {
+      "path": "/home/oyjt/workspace/RLinf-RECAP/models/baseline_sft/RLinf-Pi05-LIBERO-SFT/model.safetensors",
+      "bytes": 7473091464,
+      "metadata": {
+        "paligemma_with_expert.paligemma.model.language_model.embed_tokens.weight": "paligemma_with_expert.paligemma.lm_head.weight"
+      },
+      "num_tensors": 812,
+      "selected_tensors": {
+        "action_out_proj.weight": {
+          "dtype": "F32",
+          "shape": [
+            32,
+            1024
+          ]
+        },
+        "paligemma_with_expert.gemma_expert.lm_head.weight": {
+          "dtype": "BF16",
+          "shape": [
+            257152,
+            1024
+          ]
+        },
+        "paligemma_with_expert.gemma_expert.model.layers.0.mlp.gate_proj.weight": {
+          "dtype": "BF16",
+          "shape": [
+            4096,
+            1024
+          ]
+        },
+        "paligemma_with_expert.gemma_expert.model.layers.0.self_attn.k_proj.weight": {
+          "dtype": "BF16",
+          "shape": [
+            256,
+            1024
+          ]
+        },
+        "paligemma_with_expert.gemma_expert.model.layers.0.self_attn.q_proj.weight": {
+          "dtype": "BF16",
+          "shape": [
+            2048,
+            1024
+          ]
+        },
+        "paligemma_with_expert.paligemma.lm_head.weight": {
+          "dtype": "BF16",
+          "shape": [
+            257152,
+            2048
+          ]
+        },
+        "paligemma_with_expert.paligemma.model.language_model.layers.0.mlp.gate_proj.weight": {
+          "dtype": "BF16",
+          "shape": [
+            16384,
+            2048
+          ]
+        },
+        "paligemma_with_expert.paligemma.model.language_model.layers.0.self_attn.k_proj.weight": {
+          "dtype": "BF16",
+          "shape": [
+            256,
+            2048
+          ]
+        },
+        "paligemma_with_expert.paligemma.model.language_model.layers.0.self_attn.q_proj.weight": {
+          "dtype": "BF16",
+          "shape": [
+            2048,
+            2048
+          ]
+        },
+        "paligemma_with_expert.paligemma.model.vision_tower.vision_model.encoder.layers.0.self_attn.k_proj.weight": {
+          "dtype": "BF16",
+          "shape": [
+            1152,
+            1152
+          ]
+        },
+        "paligemma_with_expert.paligemma.model.vision_tower.vision_model.encoder.layers.0.self_attn.q_proj.weight": {
+          "dtype": "BF16",
+          "shape": [
+            1152,
+            1152
+          ]
+        }
+      },
+      "configs": {},
+      "siblings": [
+        "README.md",
+        "physical-intelligence",
+        ".cache",
+        "assets",
+        ".gitattributes",
+        "model.safetensors"
+      ]
+    }
+  ],
+  "exit_code": 0,
+  "stderr": ""
+}

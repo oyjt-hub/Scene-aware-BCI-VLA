@@ -1,0 +1,22 @@
+{
+  "status": "PASS_PREWORK_ONLY",
+  "tests_run": 37,
+  "elapsed_s": 1.6091172695159912,
+  "failures": [],
+  "errors": [],
+  "torch": "2.7.1+cpu",
+  "python": "3.13.0",
+  "device": "cpu",
+  "cuda_initialized": false,
+  "backend": "tiny random attention reference with audited Pi05 two-stream API, NOT real Gemma/checkpoint",
+  "actual_LIBERO_pixels_and_public_features": true,
+  "private_labels_uploaded": false,
+  "checkpoint_loaded": false,
+  "high_level_capability_passed": false,
+  "step07_acceptance_passed": false,
+  "optimizer_steps": 0,
+  "training_run": false,
+  "LoRA_used": false,
+  "action_expert_called": false,
+  "formal_test_accessed": false
+}

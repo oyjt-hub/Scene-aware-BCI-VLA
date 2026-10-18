@@ -1,0 +1,739 @@
+{
+  "scope": "read_only_current_metadata_and_source_inventory_no_model_load",
+  "checked_at_utc": "2026-10-16T15:52:11.424532+00:00",
+  "host": "lc-NC546AC6",
+  "inspection_python": "3.10.12",
+  "git": {
+    "/home/oyjt/Scene-aware-BCI-VLA": {
+      "head": {
+        "returncode": 0,
+        "stdout": "d2245527a767707c19d7305caacb02fa5de89dc3",
+        "stderr": ""
+      },
+      "branch": {
+        "returncode": 0,
+        "stdout": "main",
+        "stderr": ""
+      },
+      "status": {
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    "/home/oyjt/openpi": {
+      "head": {
+        "returncode": 0,
+        "stdout": "981483dca0fd9acba698fea00aa6e52d56a66c58",
+        "stderr": ""
+      },
+      "branch": {
+        "returncode": 0,
+        "stdout": "main",
+        "stderr": ""
+      },
+      "status": {
+        "returncode": 0,
+        "stdout": "M README.md\nA  scripts/check_index.py\nM  scripts/compute_norm_stats.py\nAM scripts/convert_dataset_v30_to_v21.py\nA  scripts/parquet.py\nM  scripts/serve_policy.py\nM  scripts/train.py\n M src/openpi/models/pi0.py\nM  src/openpi/policies/aloha_policy.py\nA  src/openpi/policies/aloha_policy_old.py\n M src/openpi/policies/policy.py\nM  src/openpi/serving/websocket_policy_server.py\nMM src/openpi/training/config.py\nM  src/openpi/transforms.py\nMM third_party/aloha\n?? docs/rtc_piper_deployment.md",
+        "stderr": ""
+      }
+    }
+  },
+  "gpu": {
+    "returncode": 0,
+    "stdout": "0, NVIDIA GeForce RTX 4090, 49140, 65, 48444, 0\n1, NVIDIA GeForce RTX 4090, 49140, 9871, 38638, 53\n2, NVIDIA GeForce RTX 4090, 49140, 16, 48493, 0\n3, NVIDIA GeForce RTX 4090, 49140, 17, 48492, 0\n4, NVIDIA GeForce RTX 4090, 49140, 16, 48493, 0\n5, NVIDIA GeForce RTX 4090, 49140, 17, 48492, 0\n6, NVIDIA GeForce RTX 4090, 49140, 1514, 46995, 1\n7, NVIDIA GeForce RTX 4090, 49140, 10691, 37818, 0",
+    "stderr": ""
+  },
+  "gpu_processes": {
+    "returncode": 0,
+    "stdout": "GPU-8bf0d360-04d6-7c1f-3dfa-286def787e06, 1002668, /snap/mission-center/18/usr/bin/missioncenter, 17\nGPU-162fda64-7a38-93d1-31f1-e73c1d3b8c9e, 2335795, /data/bjz/nav_demo/route_gallant/env/bin/python, 9820\nGPU-977f0d7f-12b7-6dfe-a905-876ac4890862, 2335542, /data/bjz/nav_demo/route_gallant/env/bin/python, 1490\nGPU-0142143d-aa6a-6112-1fe5-99eb4b1ed350, 2002326, /home/oyjt/workspace/openpi_v2/.venv/bin/python, 10662",
+    "stderr": ""
+  },
+  "listen_ports": {
+    "returncode": 0,
+    "stdout": "State  Recv-Q Send-Q                          Local Address:Port  Peer Address:PortProcess\nLISTEN 0      5                                   127.0.0.1:61209      0.0.0.0:*          \nLISTEN 0      1024                                127.0.0.1:34021      0.0.0.0:*          \nLISTEN 0      1024                                127.0.0.1:34521      0.0.0.0:*          \nLISTEN 0      70                                  127.0.0.1:33060      0.0.0.0:*          \nLISTEN 0      511                                 127.0.0.1:33219      0.0.0.0:*          \nLISTEN 0      128                                 127.0.0.1:33331      0.0.0.0:*          \nLISTEN 0      10                                  127.0.0.1:35600      0.0.0.0:*          \nLISTEN 0      10                                  127.0.0.1:37600      0.0.0.0:*          \nLISTEN 0      128                                 127.0.0.1:40089      0.0.0.0:*          \nLISTEN 0      128                                 127.0.0.1:40519      0.0.0.0:*          \nLISTEN 0      4096                100.119.139.82%tailscale0:54943      0.0.0.0:*          \nLISTEN 0      4096                                127.0.0.1:40751      0.0.0.0:*          \nLISTEN 0      511                                 127.0.0.1:41517      0.0.0.0:*          \nLISTEN 0      128                                 127.0.0.1:44727      0.0.0.0:*          \nLISTEN 0      4096                                127.0.0.1:45389      0.0.0.0:*          \nLISTEN 0      128                                 127.0.0.1:17890      0.0.0.0:*          \nLISTEN 0      4096                                  0.0.0.0:6098       0.0.0.0:*          \nLISTEN 0      128                                   0.0.0.0:6006       0.0.0.0:*          \nLISTEN 0      4096                                  0.0.0.0:8080       0.0.0.0:*          \nLISTEN 0      50                                    0.0.0.0:139        0.0.0.0:*          \nLISTEN 0      128                                   0.0.0.0:22         0.0.0.0:*          \nLISTEN 0      50                                    0.0.0.0:445        0.0.0.0:*          \nLISTEN 0      151                                   0.0.0.0:3306       0.0.0.0:*          \nLISTEN 0      4096                            127.0.0.53%lo:53         0.0.0.0:*          \nLISTEN 0      100                                   0.0.0.0:9000       0.0.0.0:*          \nLISTEN 0      128                                 127.0.0.1:631        0.0.0.0:*          \nLISTEN 0      128                                 127.0.0.1:6010       0.0.0.0:*          \nLISTEN 0      511                                 127.0.0.1:4886       0.0.0.0:*          \nLISTEN 0      511                                 127.0.0.1:6379       0.0.0.0:*          \nLISTEN 0      511                                 127.0.0.1:9210       0.0.0.0:*          \nLISTEN 0      4096                                127.0.0.1:9097       0.0.0.0:*          \nLISTEN 0      128                                 127.0.0.1:16067      0.0.0.0:*          \nLISTEN 0      128                                     [::1]:17890         [::]:*          \nLISTEN 0      128                                     [::1]:6010          [::]:*          \nLISTEN 0      511                                     [::1]:6379          [::]:*          \nLISTEN 0      128                                     [::1]:631           [::]:*          \nLISTEN 0      2                                       [::1]:3350          [::]:*          \nLISTEN 0      4096                                     [::]:6098          [::]:*          \nLISTEN 0      4096                                        *:7899             *:*          \nLISTEN 0      4096                                        *:7898             *:*          \nLISTEN 0      4096                                        *:7897             *:*          \nLISTEN 0      4096                                        *:7895             *:*          \nLISTEN 0      4096                                     [::]:8080          [::]:*          \nLISTEN 0      4096                                        *:1053             *:*          \nLISTEN 0      50                                       [::]:139           [::]:*          \nLISTEN 0      128                                      [::]:22            [::]:*          \nLISTEN 0      50                                       [::]:445           [::]:*          \nLISTEN 0      2                                           *:3389             *:*          \nLISTEN 0      4096                                        *:9090             *:*          \nLISTEN 0      4096   [fd7a:115c:a1e0::aa3a:8b53]%tailscale0:63642         [::]:*          \nLISTEN 0      128                                         *:21118            *:*",
+    "stderr": ""
+  },
+  "paths": [
+    {
+      "path": "/home/oyjt/Scene-aware-BCI-VLA",
+      "exists": true,
+      "is_directory": true,
+      "bytes": 4096,
+      "mtime_ns": 1790743799441489600,
+      "resolved_path": "/home/oyjt/Scene-aware-BCI-VLA",
+      "children": [
+        ".git",
+        ".gitignore",
+        "Grounded-SAM-2",
+        "README.md",
+        "Scene-aware-BCI-VLA",
+        "openpi",
+        "scripts",
+        "src"
+      ]
+    },
+    {
+      "path": "/home/oyjt/openpi",
+      "exists": true,
+      "is_directory": true,
+      "bytes": 4096,
+      "mtime_ns": 1767885421249521429,
+      "resolved_path": "/home/oyjt/openpi",
+      "children": [
+        ".dockerignore",
+        ".git",
+        ".github",
+        ".gitignore",
+        ".gitmodules",
+        ".pre-commit-config.yaml",
+        ".python-version",
+        ".venv",
+        ".vscode",
+        "CONTRIBUTING.md",
+        "LICENSE",
+        "LICENSE_GEMMA.txt",
+        "README.md",
+        "assets",
+        "checkpoints",
+        "docs",
+        "examples",
+        "packages",
+        "pyproject.toml",
+        "scripts",
+        "src",
+        "third_party",
+        "uv.lock",
+        "wandb"
+      ]
+    },
+    {
+      "path": "/home/oyjt/workspace/RLinf-RECAP/models/baseline_sft/RLinf-Pi05-LIBERO-SFT",
+      "exists": true,
+      "is_directory": true,
+      "bytes": 4096,
+      "mtime_ns": 1790654513799726338,
+      "resolved_path": "/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/RLinf-RECAP/models/baseline_sft/RLinf-Pi05-LIBERO-SFT",
+      "children": [
+        ".cache",
+        ".gitattributes",
+        "README.md",
+        "assets",
+        "model.safetensors",
+        "physical-intelligence"
+      ]
+    },
+    {
+      "path": "/home/oyjt/workspace/RLinf-RECAP/models/baseline_sft/RLinf-Pi05-LIBERO-SFT/model.safetensors",
+      "exists": true,
+      "is_directory": false,
+      "bytes": 7473091464,
+      "mtime_ns": 1790649182006311011,
+      "resolved_path": "/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/RLinf-RECAP/models/baseline_sft/RLinf-Pi05-LIBERO-SFT/model.safetensors"
+    },
+    {
+      "path": "/home/oyjt/workspace/Qwen2.5-VL-GR00T-LIBERO-4in1",
+      "exists": true,
+      "is_directory": true,
+      "bytes": 4096,
+      "mtime_ns": 1769790911695343233,
+      "resolved_path": "/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/Qwen2.5-VL-GR00T-LIBERO-4in1",
+      "children": [
+        ".git",
+        ".gitattributes",
+        "checkpoints",
+        "config.json",
+        "config.yaml",
+        "dataset_statistics.json",
+        "summary.jsonl"
+      ]
+    },
+    {
+      "path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step15_libero_20261016_v4",
+      "exists": true,
+      "is_directory": true,
+      "bytes": 4096,
+      "mtime_ns": 1792141260704818354,
+      "resolved_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/step15_libero_20261016_v4",
+      "children": [
+        "bci_vla",
+        "deps",
+        "launcher.log",
+        "orchestration.json",
+        "results",
+        "server.log",
+        "step15_libero_worker.py",
+        "step15_pi05_orchestrator.py",
+        "worker.log"
+      ]
+    },
+    {
+      "path": "/home/oyjt/workspace/miniconda3/envs/libero",
+      "exists": true,
+      "is_directory": true,
+      "bytes": 4096,
+      "mtime_ns": 1769794973489535878,
+      "resolved_path": "/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/miniconda3/envs/libero",
+      "children": [
+        "bin",
+        "compiler_compat",
+        "conda-meta",
+        "doc",
+        "etc",
+        "include",
+        "lib",
+        "man",
+        "sbin",
+        "share",
+        "ssl",
+        "x86_64-conda-linux-gnu"
+      ]
+    },
+    {
+      "path": "/home/oyjt/openpi/.venv",
+      "exists": true,
+      "is_directory": true,
+      "bytes": 4096,
+      "mtime_ns": 1767846957509103319,
+      "resolved_path": "/home/oyjt/openpi/.venv",
+      "children": [
+        ".gitignore",
+        ".lock",
+        "CACHEDIR.TAG",
+        "bin",
+        "etc",
+        "lib",
+        "lib64",
+        "pyvenv.cfg",
+        "share"
+      ]
+    },
+    {
+      "path": "/home/oyjt/.cache/huggingface/hub/models--microsoft--Florence-2-large",
+      "exists": true,
+      "is_directory": true,
+      "bytes": 4096,
+      "mtime_ns": 1776866050172376353,
+      "resolved_path": "/home/oyjt/.cache/huggingface/hub/models--microsoft--Florence-2-large",
+      "children": [
+        "blobs",
+        "refs",
+        "snapshots"
+      ]
+    },
+    {
+      "path": "/home/oyjt/.cache/huggingface/hub/models--microsoft--Florence-2-base",
+      "exists": false
+    },
+    {
+      "path": "/home/oyjt/Scene-aware-BCI-VLA/checkpoints",
+      "exists": false
+    },
+    {
+      "path": "/home/oyjt/Scene-aware-BCI-VLA/weights",
+      "exists": false
+    },
+    {
+      "path": "/home/oyjt/Scene-aware-BCI-VLA/models",
+      "exists": false
+    }
+  ],
+  "source_files": [
+    {
+      "path": "/home/oyjt/Scene-aware-BCI-VLA/scripts/inference.py",
+      "exists": true,
+      "is_directory": false,
+      "bytes": 35449,
+      "mtime_ns": 1790706710446644155,
+      "resolved_path": "/home/oyjt/Scene-aware-BCI-VLA/scripts/inference.py",
+      "sha256": "324797b38d1a3b6fa2f5ed0528a62a0dfd7f812b1e96464f349d3c73211b0e0c",
+      "classes": [
+        {
+          "name": "CameraThread",
+          "line": 86
+        },
+        {
+          "name": "InferenceThread",
+          "line": 141
+        }
+      ],
+      "relevant_methods": [
+        {
+          "name": "infer_intent_with_gemini",
+          "line": 347
+        }
+      ],
+      "model_reference_calls": [],
+      "public_model_constants": []
+    },
+    {
+      "path": "/home/oyjt/Scene-aware-BCI-VLA/scripts/server_api.py",
+      "exists": true,
+      "is_directory": false,
+      "bytes": 9837,
+      "mtime_ns": 1790705854864456994,
+      "resolved_path": "/home/oyjt/Scene-aware-BCI-VLA/scripts/server_api.py",
+      "sha256": "9af52c0364aad6771e73184831bf46b1706b78bbe4c3136ddc9160eb281ce977",
+      "classes": [
+        {
+          "name": "BCIResult",
+          "line": 109
+        }
+      ],
+      "relevant_methods": [],
+      "model_reference_calls": [],
+      "public_model_constants": []
+    },
+    {
+      "path": "/home/oyjt/Scene-aware-BCI-VLA/interface.py",
+      "exists": false
+    },
+    {
+      "path": "/home/oyjt/Scene-aware-BCI-VLA/scripts/robot/RTC_inference.py",
+      "exists": true,
+      "is_directory": false,
+      "bytes": 25078,
+      "mtime_ns": 1790706711035659043,
+      "resolved_path": "/home/oyjt/Scene-aware-BCI-VLA/scripts/robot/RTC_inference.py",
+      "sha256": "bb14d4b9fe152c2e8c34ebe31b81ff454f7a822122f0528619553c2d39763d0c",
+      "classes": [
+        {
+          "name": "CameraThread",
+          "line": 64
+        },
+        {
+          "name": "InferenceThread",
+          "line": 116
+        }
+      ],
+      "relevant_methods": [],
+      "model_reference_calls": [],
+      "public_model_constants": []
+    },
+    {
+      "path": "/home/oyjt/openpi/src/openpi/models/pi0.py",
+      "exists": true,
+      "is_directory": false,
+      "bytes": 14816,
+      "mtime_ns": 1790655406939897707,
+      "resolved_path": "/home/oyjt/openpi/src/openpi/models/pi0.py",
+      "sha256": "90a01ad302af250c79dad336b9f8351ec1578c88a8b64e53f89c219d8cee7a30",
+      "classes": [
+        {
+          "name": "Pi0",
+          "line": 66
+        }
+      ],
+      "relevant_methods": [
+        {
+          "name": "make_attn_mask",
+          "line": 19
+        },
+        {
+          "name": "embed_prefix",
+          "line": 108
+        },
+        {
+          "name": "embed_suffix",
+          "line": 142
+        },
+        {
+          "name": "compute_loss",
+          "line": 191
+        },
+        {
+          "name": "sample_actions",
+          "line": 219
+        }
+      ],
+      "model_reference_calls": [],
+      "public_model_constants": []
+    },
+    {
+      "path": "/home/oyjt/openpi/src/openpi/models/pi0_config.py",
+      "exists": true,
+      "is_directory": false,
+      "bytes": 4126,
+      "mtime_ns": 1767846867592963058,
+      "resolved_path": "/home/oyjt/openpi/src/openpi/models/pi0_config.py",
+      "sha256": "e15d71586f1a561b35c5651227607613fb16d2df411f3708b1c9d36b02544285",
+      "classes": [
+        {
+          "name": "Pi0Config",
+          "line": 19
+        }
+      ],
+      "relevant_methods": [],
+      "model_reference_calls": [],
+      "public_model_constants": []
+    },
+    {
+      "path": "/home/oyjt/openpi/src/openpi/models/tokenizer.py",
+      "exists": true,
+      "is_directory": false,
+      "bytes": 17517,
+      "mtime_ns": 1767846867593963070,
+      "resolved_path": "/home/oyjt/openpi/src/openpi/models/tokenizer.py",
+      "sha256": "965be8b3c393a6811875bbc32da9e01a5d01cc2f87802de801cf7293e049748c",
+      "classes": [
+        {
+          "name": "PaligemmaTokenizer",
+          "line": 14
+        },
+        {
+          "name": "FASTTokenizer",
+          "line": 51
+        },
+        {
+          "name": "BinningTokenizer",
+          "line": 148
+        },
+        {
+          "name": "FSQTokenizer",
+          "line": 246
+        }
+      ],
+      "relevant_methods": [
+        {
+          "name": "tokenize",
+          "line": 22
+        },
+        {
+          "name": "tokenize",
+          "line": 64
+        },
+        {
+          "name": "_act_tokens_to_paligemma_tokens",
+          "line": 136
+        },
+        {
+          "name": "tokenize",
+          "line": 164
+        },
+        {
+          "name": "_act_tokens_to_paligemma_tokens",
+          "line": 240
+        },
+        {
+          "name": "tokenize",
+          "line": 300
+        },
+        {
+          "name": "_act_tokens_to_paligemma_tokens",
+          "line": 368
+        }
+      ],
+      "model_reference_calls": [
+        {
+          "line": 61,
+          "function": "AutoProcessor.from_pretrained",
+          "literal_args": [],
+          "public_kwargs": {}
+        }
+      ],
+      "public_model_constants": []
+    },
+    {
+      "path": "/home/oyjt/openpi/src/openpi/models_pytorch/pi0_pytorch.py",
+      "exists": true,
+      "is_directory": false,
+      "bytes": 19014,
+      "mtime_ns": 1767846867594963082,
+      "resolved_path": "/home/oyjt/openpi/src/openpi/models_pytorch/pi0_pytorch.py",
+      "sha256": "0c7b9f1de02ed886da49035e3fa1b38efea46eb6209489cb4f594f777f97b70c",
+      "classes": [
+        {
+          "name": "PI0Pytorch",
+          "line": 84
+        }
+      ],
+      "relevant_methods": [
+        {
+          "name": "create_sinusoidal_pos_embedding",
+          "line": 25
+        },
+        {
+          "name": "sample_beta",
+          "line": 45
+        },
+        {
+          "name": "make_att_2d_masks",
+          "line": 52
+        },
+        {
+          "name": "_prepare_attention_masks_4d",
+          "line": 156
+        },
+        {
+          "name": "sample_noise",
+          "line": 172
+        },
+        {
+          "name": "sample_time",
+          "line": 181
+        },
+        {
+          "name": "embed_prefix",
+          "line": 186
+        },
+        {
+          "name": "embed_suffix",
+          "line": 237
+        },
+        {
+          "name": "forward",
+          "line": 316
+        },
+        {
+          "name": "sample_actions",
+          "line": 376
+        },
+        {
+          "name": "lang_embed_func",
+          "line": 213
+        },
+        {
+          "name": "forward_func",
+          "line": 349
+        },
+        {
+          "name": "image_embed_func",
+          "line": 199
+        }
+      ],
+      "model_reference_calls": [],
+      "public_model_constants": []
+    },
+    {
+      "path": "/home/oyjt/openpi/src/openpi/models_pytorch/gemma_pytorch.py",
+      "exists": true,
+      "is_directory": false,
+      "bytes": 13509,
+      "mtime_ns": 1767846867594963082,
+      "resolved_path": "/home/oyjt/openpi/src/openpi/models_pytorch/gemma_pytorch.py",
+      "sha256": "08fd8d750519f0fb44fc5173311e50a30f4c8f32c02e51244b4f8e47b32cd52f",
+      "classes": [
+        {
+          "name": "PaliGemmaWithExpertModel",
+          "line": 12
+        }
+      ],
+      "relevant_methods": [
+        {
+          "name": "embed_image",
+          "line": 85
+        },
+        {
+          "name": "embed_language_tokens",
+          "line": 88
+        },
+        {
+          "name": "forward",
+          "line": 91
+        }
+      ],
+      "model_reference_calls": [],
+      "public_model_constants": [
+        {
+          "line": 142,
+          "name": "use_gradient_checkpointing",
+          "value": true
+        }
+      ]
+    },
+    {
+      "path": "/home/oyjt/openpi/src/openpi/policies/policy.py",
+      "exists": true,
+      "is_directory": false,
+      "bytes": 9370,
+      "mtime_ns": 1790681116875412013,
+      "resolved_path": "/home/oyjt/openpi/src/openpi/policies/policy.py",
+      "sha256": "3b77d897aeb04a91ca37e54e854d67d8dec23bffa255249faecfbe44f87d7053",
+      "classes": [
+        {
+          "name": "Policy",
+          "line": 24
+        },
+        {
+          "name": "PolicyRecorder",
+          "line": 180
+        }
+      ],
+      "relevant_methods": [
+        {
+          "name": "infer",
+          "line": 69
+        },
+        {
+          "name": "infer",
+          "line": 192
+        }
+      ],
+      "model_reference_calls": [],
+      "public_model_constants": []
+    },
+    {
+      "path": "/home/oyjt/openpi/src/openpi/policies/policy_config.py",
+      "exists": true,
+      "is_directory": false,
+      "bytes": 4107,
+      "mtime_ns": 1767846867598963129,
+      "resolved_path": "/home/oyjt/openpi/src/openpi/policies/policy_config.py",
+      "sha256": "aaf42ab04a33b6c91d2447926211646c33ebd8ebfa427f026d7b6c4f7c45ec52",
+      "classes": [],
+      "relevant_methods": [],
+      "model_reference_calls": [],
+      "public_model_constants": []
+    },
+    {
+      "path": "/home/oyjt/openpi/src/openpi/policies/libero_policy.py",
+      "exists": true,
+      "is_directory": false,
+      "bytes": 4320,
+      "mtime_ns": 1767846867597963117,
+      "resolved_path": "/home/oyjt/openpi/src/openpi/policies/libero_policy.py",
+      "sha256": "ad01e5be74516d9ec9aeb1f76294d5c9f7f7179a60f1f7fbbb35e7646534f81a",
+      "classes": [
+        {
+          "name": "LiberoInputs",
+          "line": 30
+        },
+        {
+          "name": "LiberoOutputs",
+          "line": 87
+        }
+      ],
+      "relevant_methods": [],
+      "model_reference_calls": [],
+      "public_model_constants": []
+    },
+    {
+      "path": "/home/oyjt/openpi/src/openpi/training/config.py",
+      "exists": true,
+      "is_directory": false,
+      "bytes": 71594,
+      "mtime_ns": 1790677406228865952,
+      "resolved_path": "/home/oyjt/openpi/src/openpi/training/config.py",
+      "sha256": "58d3d091b2e8f3abd85dfbb2d7ed955f932cfebd7b0cd31355d8f547bc0b8bf6",
+      "classes": [
+        {
+          "name": "AssetsConfig",
+          "line": 38
+        },
+        {
+          "name": "DataConfig",
+          "line": 65
+        },
+        {
+          "name": "GroupFactory",
+          "line": 101
+        },
+        {
+          "name": "ModelTransformFactory",
+          "line": 107
+        },
+        {
+          "name": "DataConfigFactory",
+          "line": 167
+        },
+        {
+          "name": "FakeDataConfig",
+          "line": 204
+        },
+        {
+          "name": "SimpleDataConfig",
+          "line": 213
+        },
+        {
+          "name": "LeRobotAlohaDataConfig",
+          "line": 229
+        },
+        {
+          "name": "LeRobotRobocoinDataConfig",
+          "line": 281
+        },
+        {
+          "name": "LeRobotLiberoDataConfig",
+          "line": 361
+        },
+        {
+          "name": "RLDSDroidDataConfig",
+          "line": 438
+        },
+        {
+          "name": "LeRobotDROIDDataConfig",
+          "line": 506
+        },
+        {
+          "name": "TrainConfig",
+          "line": 545
+        }
+      ],
+      "relevant_methods": [],
+      "model_reference_calls": [],
+      "public_model_constants": [
+        {
+          "line": 580,
+          "name": "checkpoint_base_dir",
+          "value": "./checkpoints"
+        }
+      ]
+    },
+    {
+      "path": "/home/oyjt/workspace/RLinf-RECAP/models/baseline_sft/RLinf-Pi05-LIBERO-SFT/config.json",
+      "exists": false
+    },
+    {
+      "path": "/home/oyjt/workspace/RLinf-RECAP/models/baseline_sft/RLinf-Pi05-LIBERO-SFT/assets/physical-intelligence/libero/norm_stats.json",
+      "exists": true,
+      "is_directory": false,
+      "bytes": 4507,
+      "mtime_ns": 1790636931751225475,
+      "resolved_path": "/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/RLinf-RECAP/models/baseline_sft/RLinf-Pi05-LIBERO-SFT/physical-intelligence/libero/norm_stats.json",
+      "sha256": "dae37d79a22108af83df9189c6710a3ec8e077d65b28e34bdf1da724e5ae30f1"
+    }
+  ],
+  "environments": [
+    {
+      "root": "/home/oyjt/openpi/.venv",
+      "distribution_metadata": [
+        "/home/oyjt/openpi/.venv/lib/python3.11/site-packages/torch-2.7.1.dist-info",
+        "/home/oyjt/openpi/.venv/lib/python3.11/site-packages/transformers-4.53.2.dist-info",
+        "/home/oyjt/openpi/.venv/lib/python3.11/site-packages/safetensors-0.5.3.dist-info",
+        "/home/oyjt/openpi/.venv/lib/python3.11/site-packages/jax-0.5.3.dist-info",
+        "/home/oyjt/openpi/.venv/lib/python3.11/site-packages/mujoco-2.3.7.dist-info"
+      ],
+      "import_or_environment_activation_performed": false
+    },
+    {
+      "root": "/home/oyjt/workspace/miniconda3/envs/libero",
+      "distribution_metadata": [
+        "/home/oyjt/workspace/miniconda3/envs/libero/lib/python3.1/site-packages/torch-2.4.0+cu124.dist-info",
+        "/home/oyjt/workspace/miniconda3/envs/libero/lib/python3.1/site-packages/transformers-4.39.3.dist-info",
+        "/home/oyjt/workspace/miniconda3/envs/libero/lib/python3.1/site-packages/safetensors-0.7.0.dist-info",
+        "/home/oyjt/workspace/miniconda3/envs/libero/lib/python3.1/site-packages/mujoco-3.4.0.dist-info",
+        "/home/oyjt/workspace/miniconda3/envs/libero/lib/python3.1/site-packages/robosuite-1.4.0.dist-info",
+        "/home/oyjt/workspace/miniconda3/envs/libero/lib/python3.10/site-packages/torch-2.4.0+cu124.dist-info",
+        "/home/oyjt/workspace/miniconda3/envs/libero/lib/python3.10/site-packages/transformers-4.39.3.dist-info",
+        "/home/oyjt/workspace/miniconda3/envs/libero/lib/python3.10/site-packages/safetensors-0.7.0.dist-info",
+        "/home/oyjt/workspace/miniconda3/envs/libero/lib/python3.10/site-packages/mujoco-3.4.0.dist-info",
+        "/home/oyjt/workspace/miniconda3/envs/libero/lib/python3.10/site-packages/robosuite-1.4.0.dist-info",
+        "/home/oyjt/workspace/miniconda3/envs/libero/lib/python3.8/site-packages/torch-1.11.0+cu113.dist-info",
+        "/home/oyjt/workspace/miniconda3/envs/libero/lib/python3.8/site-packages/transformers-4.21.1.dist-info",
+        "/home/oyjt/workspace/miniconda3/envs/libero/lib/python3.8/site-packages/mujoco-3.2.3.dist-info",
+        "/home/oyjt/workspace/miniconda3/envs/libero/lib/python3.8/site-packages/robosuite-1.4.0.dist-info"
+      ],
+      "import_or_environment_activation_performed": false
+    }
+  ],
+  "not_performed": [
+    "model_load",
+    "model_inference",
+    "training",
+    "service_launch",
+    "EEG_connection",
+    "robot_connection",
+    "remote_file_write",
+    "dependency_install"
+  ]
+}

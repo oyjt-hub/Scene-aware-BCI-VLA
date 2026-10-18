@@ -1,0 +1,118 @@
+{
+  "step_id": "V4-03R",
+  "completed_at_utc": "2026-10-17T07:37:47.658030+00:00",
+  "status": "PASS_RESTRICTED_HIGH_LEVEL_LANGUAGE_GATE",
+  "supersedes_only": "original V4-03 main-task/subtask language blocker within stated protocol; frozen original audit retained",
+  "base_checkpoint": {
+    "path": "/home/oyjt/workspace/RLinf-RECAP/models/baseline_sft/RLinf-Pi05-LIBERO-SFT/model.safetensors",
+    "bytes": 7473091464,
+    "sha256": "4616e4c1966a5fb063b442ea5d69857f45e873222d839b794634d87d252ab9e7",
+    "seconds": 9.28375909011811
+  },
+  "adapter": {
+    "local_path": "D:\\Scene_Aware\\bci_vla_framework\\artifacts\\v4\\high_level_lora\\step240.safetensors",
+    "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/v4_step03R_language_20261017_v1/high_level_lora_step240.safetensors",
+    "sha256": "c1dbc8bd23e8e2590ac2670839a068d82423aa0c4620e734d2d99618afaec380",
+    "bytes": 12102152,
+    "rank": 16,
+    "alpha": 32,
+    "targets": [
+      "q_proj",
+      "v_proj",
+      "o_proj"
+    ],
+    "layers": 18,
+    "adapted_linears": 54,
+    "parameters": 3022848,
+    "optimizer_steps": 240,
+    "learning_rate": 0.001,
+    "default_enabled": false
+  },
+  "high_level_main_task_gate": "PASSED",
+  "high_level_subtask_gate": "PASSED",
+  "gate_scope": "canonical observable-public-state language protocol only; explicitly selected object/allowed pick, missing-action clarification, confirmed pick/put + empty/holding-selected gripper -> next subtask/Done",
+  "original_checkpoint_without_adapter_gate": "NOT_PASSED",
+  "general_scene_grounded_planning_gate": "NOT_ESTABLISHED",
+  "same_class_low_level_grounding_gate": "NOT_VERIFIED",
+  "real_pi05_interaction_prefix_gate": "NOT_RUN",
+  "before_after_same_development_subset": {
+    "before": {
+      "exact": 0,
+      "count": 40
+    },
+    "after": {
+      "exact": 40,
+      "count": 40
+    }
+  },
+  "reload_development_metrics": {
+    "all_validation_original": {
+      "exact": 120,
+      "count": 120
+    },
+    "joint_alias_permutation": {
+      "exact": 40,
+      "count": 40
+    },
+    "unseen_wording": {
+      "exact": 40,
+      "count": 40
+    }
+  },
+  "actual_held_phase_metrics": {
+    "actual_held_joint_alias": {
+      "exact": 4,
+      "count": 4
+    },
+    "actual_held_phase": {
+      "exact": 4,
+      "count": 4
+    }
+  },
+  "FP32_math_control": {
+    "max_abs_cached_vs_teacher_logit": 6.4849853515625e-05,
+    "all_argmax_agree": true,
+    "masked_future_difference": 0.0,
+    "unmasked_negative_control_difference": 8.1827392578125,
+    "TF32_disabled": true,
+    "scope": "isolated diagnostic math check only, not change to low-level precision/configuration"
+  },
+  "BF16_math": {
+    "max_abs_logit_difference": 0.9375,
+    "argmax_all_agree": true,
+    "strict_equivalence": false
+  },
+  "off_regression_max_abs": 0.0,
+  "base_checkpoint_full_hash_matches_history": true,
+  "base_optimizer_updates": 0,
+  "training_data": {
+    "train_episodes": 24,
+    "train_scene_groups": 6,
+    "train_prompts": 480,
+    "validation_episodes": 8,
+    "validation_scene_groups": 2,
+    "validation_prompts": 120,
+    "vision": "actual existing LIBERO captures + privileged public object dictionaries; 6D ROI/semantic limitations unchanged",
+    "after_grasp_training": "explicit symbolic text-only examples; real held images used only in later development audit",
+    "old_private_BCI_labels_used": false,
+    "data_uploaded": false
+  },
+  "limitations": [
+    "This is a restricted protocol language gate, not general scene-grounded planning or learned BCI intent inference.",
+    "Main task is demonstrated for an explicitly available pick action with a selected object; unspecified action asks for clarification. Arbitrary main-task/place proposals are not established.",
+    "Next-subtask checks condition on explicit confirmed pick/put task and known public gripper state; the model is not shown to infer grasp state from RGB alone.",
+    "High-level alias correctness does not verify same-class low-level target reaching; that original gate remains NOT_VERIFIED.",
+    "Only two legacy calibration endpoint images support the actual held-state check; eight prompt/alias variants are not eight independent rollouts.",
+    "120 validation prompts use eight frozen LIBERO episodes from two scene groups; template variants are correlated development cases, not independent task-success trials.",
+    "BF16 maximum teacher/cache logit difference is .9375 despite matching greedy argmax; strict BF16 equivalence is NOT claimed. FP32 isolated math control is not a low-level deployment precision change.",
+    "The Step06 interaction connector remains untrained; it was absent from this language pilot. No internal interaction prefix has been accepted on the real model yet.",
+    "No new LIBERO dynamics, placing rollout, EEG, physical action or formal test was run. V4-04 interaction training-data gaps remain.",
+    "All future B2/B3/B4/Full comparisons must use the same high-level language initialization/budget; do not attribute this common LoRA language gain to the interaction connector.",
+    "High-level-only LoRA is disabled by default and scope-restored, but shared-model concurrency/real action regression must still be verified in Step07/11 before mixed use."
+  ],
+  "allowed_next_step": "V4-07 real-checkpoint prefix engineering within this language protocol, adapter loaded/enabled only for high-level calls; no automatic training/performance claim",
+  "formal_test_unsealed": false,
+  "real_EEG": false,
+  "physical_robot": false,
+  "new_dynamics_run": false
+}

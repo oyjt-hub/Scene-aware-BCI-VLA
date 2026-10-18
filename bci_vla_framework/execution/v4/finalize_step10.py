@@ -1,0 +1,166 @@
+"""Deliver Step10 restricted acceptance and a draft, never formal test claims."""
+from collections import Counter, defaultdict
+from datetime import datetime, timezone
+import hashlib
+import json
+from pathlib import Path
+import sys
+import zipfile
+
+ROOT=Path(__file__).resolve().parents[2]
+sys.path[:0]=[str(ROOT.parent/'.runtime/step06_cpu'),str(ROOT)]
+OUT=ROOT/'execution/v4'
+def load(path):return json.loads(Path(path).read_text(encoding='utf-8-sig'))
+def sha(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+def dump(path,value):Path(path).write_text(json.dumps(value,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+
+
+def main():
+    from bci_vla.calibration_v4 import policy_hash
+    from bci_vla.calibration_v4.policy import _validate_config
+    run=ROOT/'runs/step10_development/v2';r=load(run/'result.json')
+    assert r['status']=='PASS_RESTRICTED_DEVELOPMENT_ENGINEERING'
+    assert r['step09_discrete_replays_matched']==32 and r['cross_platform_tensor_pairs_checked']>0
+    assert not r['formal_test_accessed'] and not r['VLA_called'] and not r['training']
+    config=load(ROOT/'configs/v4/calibration_and_policy.json');_validate_config(config)
+    activation=load(ROOT/'configs/v4/policy_activation.json')
+    assert policy_hash(config)==activation['binding']['policy_sha256']
+    assert r['preflight']['config_sha256']['Full_frozen']==policy_hash(config)
+    assert all(sha(ROOT/p)==digest for p,digest in r['preflight']['source_sha256'].items())
+    assert all(sha(ROOT/f['path'])==f['sha256'] for f in r['trace_manifest'])
+    tests=load(OUT/'10_metric_tests.json');assert tests['successful'] and tests['tests']==7
+    assert sha(OUT/'10_metric_tests.log')==tests['log_sha256']
+    per_method={};by_scenario={};max_float_difference=0.
+    for method in r['summary']:
+        audit=Counter();scenarios=defaultdict(lambda:{'resolved':0,'conditions':0,'wrong_conditions':0})
+        for path in (run/'episodes').glob(method+'_*.json'):
+            item=load(path);audit.update(item['audit']);s=item['summary'];v=scenarios[s['scenario']]
+            v['resolved']+=s['resolved'];v['conditions']+=1;v['wrong_conditions']+=s['wrong_episode']
+        per_method[method]=dict(audit);by_scenario[method]=dict(scenarios)
+    previous=load(ROOT/activation['report']);pid=activation['selected_policy_id']
+    def float_delta(a,b):
+        if type(a)!=type(b):raise AssertionError('discrete type changed')
+        if isinstance(a,float):return abs(a-b)
+        if isinstance(a,dict):return max((float_delta(a[k],b[k]) for k in a),default=0.)
+        if isinstance(a,list):return max((float_delta(x,y) for x,y in zip(a,b)),default=0.)
+        return 0.
+    with zipfile.ZipFile(previous['local_evidence_archive']) as z:
+        for p in (run/'episodes').glob('Full_frozen_*.json'):
+            item=load(p);s=item['summary'];old=json.loads(z.read(f"results/artifacts/{pid}/validation/{s['episode_id']}_{s['scenario']}.json"))
+            max_float_difference=max(max_float_difference,float_delta(item['trace']['journal'],old['trace']['journal']))
+    assert max_float_difference<=1e-12
+    formal=load(OUT/'10_evaluation_protocol_draft.json')
+    formal['latency']['future_anchor_options']='A validated probabilistic public change-evidence rule under explicit channel assumptions may be preregistered; label it operational, not noiseless truth. None is validated here.'
+    formal['development_effect_estimate_is_architecture_power_basis']=False
+    dump(OUT/'10_evaluation_protocol_draft.json',formal)
+    gate_counts=per_method['Full_frozen']
+    acceptance={'version':'V4-10-development-acceptance/0.1','status':'PASS_RESTRICTED_DEVELOPMENT_ONLY',
+        'scope':r['scope'],'checks':{'frozen_policy_and_model_unchanged':r['source_and_weights_unchanged'],
+            'reference_replays':r['step09_discrete_replays_matched']==32,
+            'all_wait_control_unresolved':r['summary']['AlwaysWait']['resolution']==0,
+            'all_negative_submissions_rejected':len(r['negative_submissions'])==6 and all(x['rejected'] for x in r['negative_submissions']),
+            'formal_test_sealed':not r['formal_test_accessed'],'no_VLA_or_physical_execution':not r['VLA_called'] and not r['real_dynamics_advanced'],
+            'new_metric_tests_passed':tests['successful']},
+        'summary':r['summary'],'audit_by_method':per_method,'per_scenario':by_scenario,
+        'replay_tolerance':{'bitwise_matches':r['step09_bitwise_replays_matched'],'numeric_and_discrete_matches':32,
+            'max_raw_float_difference':max_float_difference,'registered_absolute_tolerance':1e-12,
+            'actual_model_tensor_pairs_equal':r['cross_platform_tensor_pairs_checked']},
+        'main_conditions':96,'additional_control_runs':r['robustness_runs'],
+        'snapshot_checks':{'ambiguous_public':r['ambiguous_public_cases'],'outside_no_response':r['outside_no_response_cases']},
+        'metric_tests':tests,'frozen_binding':activation['binding'],
+        'full_step08_complete':False,'language_parser_evaluated':False,'language_parsing_failure_rate':None,
+        'formal_evaluation_ready':False,'formal_protocol_status':formal['status'],
+        'statistical_guarantee_claimed':False,'neural_architecture_gain_established':False,
+        'step11_allowed_scope':'adapter and authorization development only, retain known semantic failures as rejection cases',
+        'source_result':'runs/step10_development/v2/result.json','created_at_utc':datetime.now(timezone.utc).isoformat()}
+    assert all(acceptance['checks'].values())
+    dump(OUT/'10_acceptance.json',acceptance)
+    dump(OUT/'10_source_manifest.json',{'source_sha256':r['preflight']['source_sha256'],
+        'reporter_sha256':sha(__file__),'tests_sha256':sha(ROOT/'tests/test_development_acceptance_v4.py'),
+        'frozen_binding':activation['binding'],'source_result_sha256':sha(run/'result.json')})
+    dump(OUT/'10_attempts.json',{'attempts':[
+        {'attempt':1,'status':'FAILED_BINARY_COMPARISON_ON_CROSS_PLATFORM_GAUSSIAN_ROUNDING',
+         'evidence':'runs/step10_development/v1/preflight.json and episodes/',
+         'assertion':'canonical_digest(full journal) == server reference digest',
+         'cause':'Windows/Linux libm Gaussian score differences at floating-point last bits; not a changed policy decision',
+         'training':False},
+        {'attempt':2,'status':r['status'],'evidence':'runs/step10_development/v2/result.json',
+         'fix':'exact non-floating fields, abs float tolerance1e-12 AND exact equality of tensorized model inputs',
+         'max_float_difference':max_float_difference,'training':False}]})
+    f=r['summary']['Full_frozen'];b=r['summary']['Full_no_recheck'];w=r['summary']['AlwaysWait'];lat=r['goal_update_latency']
+    text=['V4-10 开发离线验收与正式评价预案（2026-10-18）','',
+      '一、结论与范围',
+      '受限开发工程验收已完成，可推进步骤11的适配与授权开发。正式评价未开始，正式协议仍为草案。',
+      '范围为公开固定pick动作下的对象选择和确认、实际LIBERO冻结图像与特权物体信息、模拟脑机回答。没有加载高层VLM或动作专家，没有推进机器人动力学。',
+      '步骤08整体仍不完整：原始含噪隐藏意图/放置监督、同新绑定机制的完整基线训练尚缺，声明冲突语言仍8条失败；这些不能由本步软件通过升级。','',
+      '二、预先冻结与复现检查',
+      '权重、温度、阈值、12问/6PROBE预算、8秒选择时效、12秒一致性窗口、2次一致选择+3次正确已知目标检查均沿用步骤09；本步未训练、未拟合、未调策略。',
+      f"原步骤09的32条验证轨迹在离散字段与显式浮点容差下全部复现；逐字节相同{r['step09_bitwise_replays_matched']}/32。",
+      f"最大原始分数差{max_float_difference:.3g}，预登记容差1e-12；{r['cross_platform_tensor_pairs_checked']}对不同原始public的模型张量逐项完全相同。",
+      '第一次按完整JSON哈希比较失败，第二次分别检查浮点与离散决策。失败轨迹、preflight和修复依据均保留，未改动冻结通道生成器或策略。','',
+      '三、开发比较（不是独立测试）',
+      '2个场景组、8个底层回合、4种变化条件；32条件实例不作为32个独立场景。每个方法均包含所有等待、拒绝、无响应与未解决实例。',
+      f"冻结Full：解决{f['resolved_conditions']}/32；错误底层回合{f['wrong_base_episodes']}/8；提交{f['submissions']}次、错误提交{f['wrong_submissions']}次。",
+      f"同权重去复查门控：解决{b['resolved_conditions']}/32；错误底层回合{b['wrong_base_episodes']}/8；提交{b['submissions']}次、错误提交{b['wrong_submissions']}次。",
+      f"始终等待：解决{w['resolved_conditions']}/32；提交0次，不能因零错误被当成任务成功。",
+      '比较只改变确认门控，checkpoint、温度拟合方法、阈值、时效、预算和场景相同。它验证规则门控的风险/覆盖取舍，不能归因为新Transformer结构收益。',
+      f"未加风险约束时Full解决率比去门控低{100*(b['resolution']-f['resolution']):.1f}个百分点；去门控的错误回合率{100*b['wrong_episode_rate']:.1f}%不满足10%开发门槛。",
+      f"Full平均提问{f['mean_questions']:.3f}、等待{f['mean_waits']:.3f}次/条件，无响应{f['no_responses']}次、拒绝{f['rejects']}次；去门控平均提问{b['mean_questions']:.3f}次。",
+      '每个条件固定24秒，问题和等待均计2秒，因此总时钟成本恒定24秒；次数和负担单列，不虚报降低总时长。']
+    for scenario,values in by_scenario['Full_frozen'].items():
+        text.append(f"Full/{scenario}: 解决{values['resolved']}/{values['conditions']}，含错误提交条件{values['wrong_conditions']}。")
+    text.extend(['', '四、协议与控制检查',
+      f"主比较共96次条件运行；另有32次STOP/CANCEL/映射更新检查，不计入主指标独立样本。Full的{gate_counts.get('confirmations',0)}次确认均重新核验公开证据合约，{gate_counts.get('simulated_requests',0)}个模拟请求均绑定具体确认与当前版本，均没有真实执行权限。",
+      '六类变异提交全部拒绝：STOP锁存、错误确认、错suggestion_id、旧mapping、重复receipt、过期任务。负例不是实际策略的非法请求率。',
+      '映射更新后旧诊断收据不进入新版本；停止/取消后没有新的提交。映射更新后的任务恢复能力另列，不能仅用安全暂停证明恢复成功。',
+      '64个歧义公开快照仅检查同public策略一致、不按两个隐藏目标强制POINT猜测；64个候选外/无响应快照未生成CONFIRM。这些是固定历史快照检查，不是额外闭环成功回合。',
+      f"新增统计与验收机制测试{tests['tests']}项通过。VLM语言解析器未进入本轮，解析失败率记不适用，不声称为0%。",'',
+      '五、目标更新与统计限制',
+      f"目标改变条件16个，观察到有效更新{lat['updates_observed']}个、删失{lat['censored']}个；观察到更新者从真实改变时刻起平均延迟{lat['mean_latency_among_observed_s']:.3f}秒。",
+      f"未解决者按16秒观察窗计入受限均值，为{lat['restricted_mean_latency_including_censor_s']:.3f}秒；改变后旧目标提交{lat['old_target_submissions_after_change']}次。",
+      '本数据没有经过验证的可辨识公开换目标锚点，覆盖率0；相应响应延迟为null。两次含噪选择一致是操作规则，不冒充数学上确定的真实意图。',
+      f"按场景配对重采样的无约束解决率差为{r['paired_rule_comparison']['difference']:.3f}；仅2个场景，区间退化，禁止据此作显著性或总体效果结论。",
+      '零错误8个底层回合不能证明总体风险≤10%；即便错误地假设8个完全独立，单侧95%零错上界仍约31.2%，现实只有2个场景组。','',
+      '六、正式评价预案（未锁定）',
+      '正式主比较拟为Full对B4_aux共享查询；B0/B1/B2/B3等另列。所有模型需要同新绑定、同信息/训练预算、相同固定询问协议，分别拟合绑定各自checkpoint的校准参数。',
+      '主指标为给定风险上限/交互预算下的正确确认比例；正式机器人完成率另列，不能用模拟提交代替抓取成功。',
+      '风险预案使用独立scene/task簇的any-error单侧95%上界作保守约束，同时报告episode-any-error和每次提交错误率；前提是场景独立、采样构成锁定。',
+      '零错情形至少29个独立场景簇才能使该上界≤10%。效应量暂拟10个百分点；若假定配对场景差标准差0.25、α=0.05、功效0.8，规划示例需50个场景，预留10%后约56个；这不是从2场景估出的可靠功效。',
+      '标准差0.20/0.35/最坏界1.0的敏感性样本数见JSON。真实留出场景容量尚未确认，正式样本数未锁定，不解封正式测试清单来找有利结果。',
+      '当前规则比较不是架构效应的功效依据。所有训练、开发联调和基线校准齐备后，在步骤13写最终不可变协议，再一次性打开正式test。',
+      '只有一个预声明主比较；次要/消融按预声明族作Holm校正或明确描述性报告。训练seed、同回合多次选择、4种变化条件不作独立样本。','',
+      '七、交接与产物',
+      '验收：execution/v4/10_acceptance.json',
+      '预案：execution/v4/10_evaluation_protocol_draft.json',
+      '逐条件轨迹和控制负例：runs/step10_development/v2/',
+      '尝试记录：execution/v4/10_attempts.json；第一次失败保留在v1/',
+      '下一步只推进V4-11适配/授权开发，保留缺槽、冲突声明、错实例、过期确认等拒绝路径；不启用实体机器人，不将完整VLA闭环标为完成。'])
+    (ROOT/'docs/v4/10_development_report.txt').write_text('\n'.join(text)+'\n',encoding='utf-8')
+    progress_path=ROOT/'execution/v4_plan_progress.json'
+    if not (OUT/'10_progress_before.json').exists():(OUT/'10_progress_before.json').write_bytes(progress_path.read_bytes())
+    progress=load(progress_path)
+    step=next(s for s in progress['steps'] if s['step_id']=='V4-10')
+    step.update(status='受限开发验收与评价预案完成',actual_artifacts=['execution/v4/10_acceptance.json',
+        'execution/v4/10_evaluation_protocol_draft.json','docs/v4/10_development_report.txt','runs/step10_development/v2/'],
+        verification={'status':acceptance['status'],'validation_conditions':96,'extra_control_runs':32,
+            'negative_submit_cases':6,'metric_tests':7,'formal_test':False,'full_VLA_closed_loop':False,
+            'full_step08_complete':False,'scope':'frozen fixed-pick simulated interaction only; formal protocol draft'},
+        completed_at_utc=datetime.now(timezone.utc).isoformat())
+    progress.update(current_stage='V4-10_restricted_development_acceptance_complete',next_step='V4-11',
+        latest_handoff='execution/v4/handoff_step10.txt',authorization_this_turn='步骤10；受限开发验收与正式评价预案，真实EEG/实体动作排除，正式test封存',
+        step10_restricted_development_passed=True,formal_evaluation_ready=False,full_VLA_closed_loop_run=False)
+    dump(progress_path,progress)
+    handoff=('V4-10受限开发验收完成；正式评价预案仍草案，正式test未访问。\n'
+        '冻结Full在validation复跑13/32解决、错误0/8；去门控21/32解决但错误7/8；Wait0/32，不宣称架构增益。\n'
+        '96个主比较条件+32个控制运行、6类非法提交拒绝、64歧义和64候选外快照检查完成；新增7项机制测试通过。\n'
+        '跨平台32条离散轨迹复现，原始浮点末位差以1e-12容差核验，178对实际模型张量完全相同；第一次失败保留。\n'
+        '报告docs/v4/10_development_report.txt；协议execution/v4/10_evaluation_protocol_draft.json；验收execution/v4/10_acceptance.json。\n'
+        '可进入V4-11适配/授权开发；步骤08含噪/放置/完整基线仍缺，声明冲突语言8条失败保留为拒绝路径。\n'
+        '仅固定pick、模拟BCI、LIBERO冻结观察；VLM/动作专家未加载，没有物理动力学或实体执行，旧G2/G3/G4不升级。\n')
+    (OUT/'handoff_step10.txt').write_text(handoff,encoding='utf-8');(OUT/'handoff.txt').write_text(handoff,encoding='utf-8')
+    for rel in ['execution/handoff.txt','execution/worklog.txt','README.txt']:
+        with (ROOT/rel).open('a',encoding='utf-8') as f:f.write('\n2026-10-18 V4-10更新：'+handoff)
+    print(json.dumps({'status':acceptance['status'],'conditions':96,'controls':32,'next_step_scope':'V4-11 adapter development only','formal_test_accessed':False}))
+
+
+if __name__=='__main__':main()

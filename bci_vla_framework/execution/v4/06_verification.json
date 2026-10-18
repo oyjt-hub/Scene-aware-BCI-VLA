@@ -1,0 +1,14 @@
+{
+  "status": "PASS_CPU_ENGINEERING_ONLY",
+  "checks": {
+    "prior_frozen_files_unchanged": 295,
+    "final_tests": 20,
+    "local_CPU_no_cuda": true,
+    "hash_bound_inputs": true,
+    "formal_test_sealed": true,
+    "no_training": true,
+    "no_VLA_or_new_dynamics": true,
+    "parameters_match_within_5_percent": true
+  },
+  "result": "execution/v4/06_cpu_result.json"
+}

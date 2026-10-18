@@ -1,0 +1,26 @@
+{
+  "step_id": "V4-08",
+  "attempt": 3,
+  "status": "PASS_RESTRICTED_DEVELOPMENT_TRAINING_ONLY",
+  "completed_at_utc": "2026-10-17T13:34:53.534703+00:00",
+  "restricted_development_training_complete": true,
+  "full_step08_complete": false,
+  "missing_or_failed_requirements": [],
+  "complete_runs": 12,
+  "verified_selected_local_weights": 21,
+  "general_hidden_intent_robustness_proven": false,
+  "place_phase_ready": false,
+  "external_generalization_proven": false,
+  "historical_gates_unchanged": true,
+  "development_challenges_status": "VERIFIED_DEVELOPMENT_DIAGNOSTICS",
+  "local_cpu_tests": {
+    "status": "PASS_CPU_MECHANICS_ONLY",
+    "tests_run": 39,
+    "elapsed_s": 6.866,
+    "log": "execution\\v4\\08_cpu_tests.log",
+    "sha256": "dc2e3efc7c268b5562311c486eb370b8d1c5d3ac1ab8a78cb6733a955de57403",
+    "new_challenge_generator_tests": 5,
+    "scope": "CPU数据/优化器/B2序列化/challenge生成机制；不是GPU语义或机器人任务性能证据。"
+  },
+  "next_step": "V4-08 remaining supervision/development checks"
+}

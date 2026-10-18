@@ -1,0 +1,30 @@
+{
+  "step_id": "V4-02",
+  "status": "PASS",
+  "scope": "synthetic interface/protocol/software acceptance only",
+  "completed_at_utc": "2026-10-16T16:37:04.101824+00:00",
+  "verification_report": "execution/v4/02_verification.json",
+  "checks": 128,
+  "passed": 128,
+  "failed": 0,
+  "plan_requirements": {
+    "objects_evidence_time_versions_unknown": true,
+    "current_event_once_confirmation_bound": true,
+    "intent_query_vs_probe_no_response": true,
+    "tensor_shapes_and_masks_specified_not_implemented": true,
+    "public_private_examples": true,
+    "persistent_state_invalidation": true,
+    "channel_estimand_and_supervision_masks": true,
+    "empty_outside_ambiguity_missing_abstain_distinct": true,
+    "alias_binding_and_permutation": true
+  },
+  "historical_files_unchanged": true,
+  "source_manifest_files": 27,
+  "neural_module_implemented": false,
+  "models_loaded": false,
+  "training_run": false,
+  "real_eeg": false,
+  "physical_robot": false,
+  "research_gates_upgraded": false,
+  "next_step": "V4-03"
+}

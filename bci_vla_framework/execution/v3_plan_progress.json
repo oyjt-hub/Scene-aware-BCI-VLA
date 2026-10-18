@@ -1,0 +1,85 @@
+{
+  "plan_version": "V3-design-1",
+  "current_stage": "design_written_only",
+  "implementation_started": false,
+  "historical_progress_ref": "execution/progress.json",
+  "V2_current_step": "16",
+  "V2_gates": {
+    "G2": "未通过",
+    "G3": "未验证",
+    "G4": "未通过"
+  },
+  "steps": [
+    {
+      "step_id": "V3-01",
+      "title": "建立新版本与基线清单",
+      "status": "未开始"
+    },
+    {
+      "step_id": "V3-02",
+      "title": "冻结公共接口与任务语法",
+      "status": "未开始"
+    },
+    {
+      "step_id": "V3-03",
+      "title": "核实π0.5高层文本能力",
+      "status": "未开始"
+    },
+    {
+      "step_id": "V3-04",
+      "title": "建立分组数据",
+      "status": "未开始"
+    },
+    {
+      "step_id": "V3-05",
+      "title": "信息匹配基线",
+      "status": "未开始"
+    },
+    {
+      "step_id": "V3-06",
+      "title": "CPU实现显式查询网络",
+      "status": "未开始"
+    },
+    {
+      "step_id": "V3-07",
+      "title": "高层embedding接入",
+      "status": "未开始"
+    },
+    {
+      "step_id": "V3-08",
+      "title": "训练开发版本",
+      "status": "未开始"
+    },
+    {
+      "step_id": "V3-09",
+      "title": "独立离线留出",
+      "status": "未开始"
+    },
+    {
+      "step_id": "V3-10",
+      "title": "subtask与层级约束",
+      "status": "未开始"
+    },
+    {
+      "step_id": "V3-11",
+      "title": "LIBERO闭环",
+      "status": "未开始"
+    },
+    {
+      "step_id": "V3-12",
+      "title": "真实视觉前端",
+      "status": "未开始"
+    },
+    {
+      "step_id": "V3-13",
+      "title": "公平研究验收",
+      "status": "未开始"
+    },
+    {
+      "step_id": "V3-14",
+      "title": "论文与交付",
+      "status": "未开始"
+    }
+  ],
+  "authorization": "rewrite concrete module and executable plan only; no training or deployment"
+}

@@ -1,0 +1,102 @@
+{
+  "version": "V4-06-registry-1",
+  "parent_registry": "configs/v4/baseline_registry.json",
+  "parent_sha256": "617d5f1869bd0635dec124c08878c74cbb116b1b75eca8e5df9fb023506d0135",
+  "status": "implemented_untrained_CPU_only",
+  "methods": [
+    {
+      "id": "B3_aux",
+      "implementation": "PooledMLPConnector",
+      "parameters": 7269034,
+      "component_parameters": {
+        "features": 559104,
+        "reliability": 257,
+        "typed_summary": 266496,
+        "prefix_projection": 526848,
+        "pointer_object": 65792,
+        "pointer_intent": 65792,
+        "outside": 257,
+        "missing_slots": 771,
+        "abstain": 257,
+        "interaction": 1028,
+        "pool_mlp": 5782432
+      },
+      "device": "cpu",
+      "mlp_width": 992,
+      "trainable": true,
+      "trained": false,
+      "prefix_tokens": 8,
+      "aux_labels": "same masked intent/channel/interaction losses; no language loss yet"
+    },
+    {
+      "id": "B4_aux",
+      "implementation": "SharedQueryConnector",
+      "parameters": 7281930,
+      "component_parameters": {
+        "queries": 2048,
+        "features": 559104,
+        "reliability": 257,
+        "typed_summary": 266496,
+        "prefix_projection": 526848,
+        "pointer_object": 65792,
+        "pointer_intent": 65792,
+        "outside": 257,
+        "missing_slots": 771,
+        "abstain": 257,
+        "interaction": 1028,
+        "shared_history": 1579520,
+        "blocks": 4213760
+      },
+      "device": "cpu",
+      "mlp_width": null,
+      "trainable": true,
+      "trained": false,
+      "prefix_tokens": 8,
+      "aux_labels": "same masked intent/channel/interaction losses; no language loss yet"
+    },
+    {
+      "id": "Full",
+      "implementation": "IntentChannelConnector",
+      "parameters": 7281930,
+      "component_parameters": {
+        "intent_queries": 1024,
+        "channel_queries": 1024,
+        "features": 559104,
+        "reliability": 257,
+        "typed_summary": 266496,
+        "prefix_projection": 526848,
+        "pointer_object": 65792,
+        "pointer_intent": 65792,
+        "outside": 257,
+        "missing_slots": 771,
+        "abstain": 257,
+        "interaction": 1028,
+        "task_history": 789760,
+        "diagnostic_history": 789760,
+        "intent_blocks": 2106880,
+        "channel_blocks": 2106880
+      },
+      "device": "cpu",
+      "mlp_width": null,
+      "trainable": true,
+      "trained": false,
+      "prefix_tokens": 8,
+      "aux_labels": "same masked intent/channel/interaction losses; no language loss yet"
+    },
+    {
+      "id": "B3",
+      "same_architecture_as": "B3_aux",
+      "parameters": 7269034,
+      "status": "implemented_architecture_untrained",
+      "auxiliary_losses": "disabled in future no-aux comparison; not trained in Step06"
+    },
+    {
+      "id": "B4",
+      "same_architecture_as": "B4_aux",
+      "parameters": 7281930,
+      "status": "implemented_architecture_untrained",
+      "auxiliary_losses": "disabled in future no-aux comparison; not trained in Step06"
+    }
+  ],
+  "matching": "same tensor inputs, 8x2048 prefix, all actual parameters counted; parameter match only, not equal FLOPs/latency; future training and VLM budget not yet frozen"
+}

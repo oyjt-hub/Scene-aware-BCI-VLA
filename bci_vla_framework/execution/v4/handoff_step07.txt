@@ -1,0 +1,9 @@
+﻿V4-07真实prefix工程接入完成，开启语义仍未通过。
+按用户要求先补齐03R限定高层语言门槛：原SFT＋单独高层LoRA；不是通用规划能力验收。
+真实8×2048内部token接入、off精确回归、因果/缓存/位置/padding、三个结构真实语言CE梯度通过；38本地测试＋28真实GPU工程检查。
+off输出Pick up OBJ_0.；随机未训练prefix on实际输出task task.，保留失败，不作有用推理/实例绑定声明。
+首次错误的on语义通过断言已修正为工程范围，原始失败与源码在07_real_attempt1*；最终证据07_real_attempt2.json。
+模块代码bci_vla/prefix_integration_v4；审计07_integration_audit.json；说明docs/v4/07_integration.txt。
+下一步08前须修复04监督缺口；06小模块仍未训练。对照统一03R高层初始化与预算。
+共享高低层并发/动作回归未完成；动作专家结构未改，未采样动作或推进新LIBERO动力学。
+正式test封存；真实EEG/实体动作排除；同类实例低层执行和完整VLA闭环未验证。

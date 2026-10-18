@@ -1,0 +1,26 @@
+{
+  "scope": "synthetic contract examples, not training data or model predictions",
+  "valid_public_inputs": [
+    "public_input.json",
+    "empty_scene_and_history.json",
+    "missing_roi_feature.json",
+    "no_response_retains_probe_role.json",
+    "mapping_change_invalidates_old_evidence.json",
+    "stop_clears_task.json",
+    "cancel_clears_task.json",
+    "confirmed_task_survives_nine_probes.json",
+    "object_reorder_with_alias_binding.json",
+    "expired_task_evidence.json",
+    "reject_clears_task.json"
+  ],
+  "private_labels": [
+    "private_labels.json",
+    "private_labels_alias_variant.json"
+  ],
+  "module_output": "module_output.json",
+  "additional_module_outputs": [
+    "target_outside_candidates_output.json",
+    "missing_action_slot_output.json",
+    "abstain_without_missing_slot_output.json"
+  ]
+}

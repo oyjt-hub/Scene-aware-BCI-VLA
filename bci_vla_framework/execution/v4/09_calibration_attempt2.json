@@ -1,0 +1,4855 @@
+{
+  "version": "V4-09-connector-calibration-policy/0.2",
+  "status": "NO_POLICY_MEETS_DEVELOPMENT_CONSTRAINTS",
+  "step09_complete": false,
+  "formal_test_accessed": false,
+  "calibration_accessed": true,
+  "VLA_called": false,
+  "VLM_loaded": false,
+  "real_dynamics_advanced": false,
+  "physical_actions": false,
+  "scope": "CPU learned connector outcome calibration and simulated interaction policy development; separate VLM binding gate evidence",
+  "interaction_scope": "publicly declared fixed pick action over all visible candidates; object selection and exact confirmation only; no main-task/missing-action inference claim",
+  "binding_gate": {
+    "passed": true,
+    "choice_group_all_correct_fraction": 1.0,
+    "joint_alias_pair_both_correct_fraction": 1.0,
+    "thresholds": {
+      "choice_group_all_correct_fraction": 0.9,
+      "joint_alias_pair_both_correct_fraction": 0.9,
+      "scope": "development-only readiness, not statistical safety guarantee"
+    },
+    "choice_groups": [
+      {
+        "group_id": "dc653ee3b3a702d7ba0c35df97e1cb6a",
+        "samples": [
+          "52f67a99199073276ff2d975c0be7c3d",
+          "6b5410f15b5ab61ce63a585b3b78d3cf"
+        ],
+        "complete": true,
+        "all_correct": true
+      },
+      {
+        "group_id": "4e29a06758c007240d3522eccfcc19d2",
+        "samples": [
+          "3c88950a39b2c4b000646e6f889726e9",
+          "b3334c712d3fc40ca560620c0e7a6106"
+        ],
+        "complete": true,
+        "all_correct": true
+      },
+      {
+        "group_id": "ae76983ac3676486fcce649f09c84767",
+        "samples": [
+          "451abde2422ad7b0021342d154591215",
+          "e0d2f8b87639020b5d6f642ed97a0a92"
+        ],
+        "complete": true,
+        "all_correct": true
+      },
+      {
+        "group_id": "e8bcb6d438482e5882d368289bc90398",
+        "samples": [
+          "113ca1cebd272837665b175a22ea7201",
+          "2e389a86185c63b56f8526f497782aba"
+        ],
+        "complete": true,
+        "all_correct": true
+      },
+      {
+        "group_id": "6ef1a758856889ef55eb609e078ac0aa",
+        "samples": [
+          "e7b754ff4aee12025d83b79196bc5f87",
+          "6607b6eb991a791a6888f9e24ac46c2f"
+        ],
+        "complete": true,
+        "all_correct": true
+      },
+      {
+        "group_id": "4f7da85f0e51385628ed25499590b78f",
+        "samples": [
+          "9493b062d8aab98b4c9aa4030cbc5987",
+          "840b87a87745e81f3616435605123647"
+        ],
+        "complete": true,
+        "all_correct": true
+      },
+      {
+        "group_id": "e941f4dd20026cef6f91c1a63e2ca873",
+        "samples": [
+          "da0a1d3120029da53fa17277626b9905",
+          "9f55504268bee815e413d35720b1fee7",
+          "fca74301f2ecd49ae0bd6da84ae8d947",
+          "259cdeb42c04a136a6159111e4768fc8"
+        ],
+        "complete": true,
+        "all_correct": true
+      },
+      {
+        "group_id": "f2391449a88224dee7b26268154cca5a",
+        "samples": [
+          "e4e071af17fabf5d63a43d05adc8ecee",
+          "20c8becc0ecf958cfe2c40ffbff39d82",
+          "9b00db5880fb136f2657ff8f127836f7",
+          "efd2ca3364bdc1a2ee5283adab5fda30"
+        ],
+        "complete": true,
+        "all_correct": true
+      },
+      {
+        "group_id": "d1c1281fc65f677a0f7245d1cf2b2068",
+        "samples": [
+          "05b327abc268d67bea183e6d76c68cd4",
+          "fcfb5bd3ffc54051905a9a45dfebb3d4",
+          "82d463b3b6731941118fe78df521d866",
+          "830e1aa65828fcb8fa57f7271b5f9aa8"
+        ],
+        "complete": true,
+        "all_correct": true
+      },
+      {
+        "group_id": "6f2d9b77f6bb6be218b9cfc84dccf88a",
+        "samples": [
+          "702d761d813ba35ff4b8dbb71c58d3bd",
+          "80d35a5443419d7e3fd47b6415cfb1ee",
+          "56d8403dfcd73fd8c178d8dc25e9a244",
+          "943d437d6bb215271b66dd3c5e5f4669"
+        ],
+        "complete": true,
+        "all_correct": true
+      },
+      {
+        "group_id": "bc01a509523fd4ba1d2450785758065e",
+        "samples": [
+          "62d243ff2bd5386c6dda6c53c41914e0",
+          "253c4cd520022f6aa7e50ecc56c43016",
+          "97489e31c50010b4b252174a1f2a5e09",
+          "cae5e3fd89f9cfda071fe0a33882ce94"
+        ],
+        "complete": true,
+        "all_correct": true
+      },
+      {
+        "group_id": "9e494053531db458bea6670edeca3bc6",
+        "samples": [
+          "97b1ff06c054ad47597c691e6396c2f3",
+          "e8312a4ee00868b75268290c83d23b39",
+          "9152f7e38ae3157169e0327735386be2",
+          "902485fb4d8b6c279decfb37f774f666"
+        ],
+        "complete": true,
+        "all_correct": true
+      },
+      {
+        "group_id": "93334f374080a5d7ad95756638adaf2f",
+        "samples": [
+          "8199f50453bd5ff43bd84bf66de5a029",
+          "89b9752504940f53564d3afdbdb42906"
+        ],
+        "complete": true,
+        "all_correct": true
+      },
+      {
+        "group_id": "54369f31776c31a4a169d9140a66faa4",
+        "samples": [
+          "9cb12955e9f9b9ed7a2d7a0792594bab",
+          "0b2ceb5f04c72f71efe308cb62cb98f0"
+        ],
+        "complete": true,
+        "all_correct": true
+      },
+      {
+        "group_id": "b29bd408f94f97779427c611938cd4ad",
+        "samples": [
+          "92ff7e018fe4e2c156c9085604488427",
+          "663ecf7ca7ec907b904a288b39cfd930"
+        ],
+        "complete": true,
+        "all_correct": true
+      },
+      {
+        "group_id": "b0cd877fe530d33af55f31b8997c45d3",
+        "samples": [
+          "2ba3afba47287a72023ce5ccf7751d89",
+          "5156ad33227cba2ee78086cba5fb2c0c",
+          "68d3f8f5acb3ff5190c4f4bef99f2c8c",
+          "fd5afe0fcf5d392d8270a92cea1b72d7"
+        ],
+        "complete": true,
+        "all_correct": true
+      },
+      {
+        "group_id": "f6d2403b0e14b4bd4b662c3d82fb16e7",
+        "samples": [
+          "8d038cf62718b01bee2d7c9a8c072278",
+          "2b0975be463f36f720c942850e6c5e3d",
+          "a610d13eb7c7f6f842a3c54cddb6b9f6",
+          "c93ddd372f1196c3a41c9a8b349233a4"
+        ],
+        "complete": true,
+        "all_correct": true
+      },
+      {
+        "group_id": "b8a7a853be785ca81c54c5e55d8f3ade",
+        "samples": [
+          "ba885992c0609a545126b7f3696e4189",
+          "160374ab93c00cb17f6ca33c77707ce7",
+          "a202b5ffd46e234e6d527a0ace6eab2d",
+          "3b73aa67b0c7bde30f0cb36543cf0d0c"
+        ],
+        "complete": true,
+        "all_correct": true
+      },
+      {
+        "group_id": "16d15f6a87f0272715e71a7fe2baf648",
+        "samples": [
+          "9fa2e63f4d560ad88abea87f802ebf7e",
+          "4c3ec6f6348f7cccac41a5c1b84ea055"
+        ],
+        "complete": true,
+        "all_correct": true
+      },
+      {
+        "group_id": "f4adb25b4e071121695ad43d78a6423c",
+        "samples": [
+          "46b58b6a727a8128e0f6d97789d5da58",
+          "164ff7054e4756be9f438b3b09f43b3f"
+        ],
+        "complete": true,
+        "all_correct": true
+      },
+      {
+        "group_id": "d859c6564d0f6f1e730d26f611bce76e",
+        "samples": [
+          "e448904cbc45baf0ddb46b48ab429646",
+          "6dffcda4e3666e7bb4c77a8317365d50"
+        ],
+        "complete": true,
+        "all_correct": true
+      },
+      {
+        "group_id": "8f64eb95e0210f3c1e2d7539210e3cb2",
+        "samples": [
+          "29133a70abd6ec13e988f4f6efc6ddec",
+          "e3817dd102e25c2dd44b4432bc23355e",
+          "e15d16e8d1dde5babbc8000e6cf1cc6f",
+          "4f3df6153a5057cb315a2f7c1a07cc46"
+        ],
+        "complete": true,
+        "all_correct": true
+      },
+      {
+        "group_id": "dc45412d188ddc0ec0a072dcfd116de3",
+        "samples": [
+          "28e89ac35ac6fc0833839321d3c787af",
+          "c8e6c503b0d2af426664c51fed68e3ef",
+          "10cf5ac6d6684673dfb20f3ff8266509",
+          "12b4e9fdf4cacc0c97e53b8ee690a73f"
+        ],
+        "complete": true,
+        "all_correct": true
+      },
+      {
+        "group_id": "184fe47039e0f6cd0753cdb459669bb2",
+        "samples": [
+          "d1e7aac3bd323539db12564528933805",
+          "51b4aef318c54008032bd1be7a8c3e26",
+          "bbb191f89c93bd088c16e898b13304b1",
+          "3453db74c0b2a92f9c88c115de2313fb"
+        ],
+        "complete": true,
+        "all_correct": true
+      }
+    ],
+    "alias_pairs": [
+      {
+        "pair_id": "06cddcd873a9fa754272a063d75ed7df",
+        "both_correct": true
+      },
+      {
+        "pair_id": "275242d9b8a24c006d829e41a43b80ab",
+        "both_correct": true
+      },
+      {
+        "pair_id": "9fdd90c31e3199db23b4b834c9204eb4",
+        "both_correct": true
+      },
+      {
+        "pair_id": "83140e0a594e406bc3cfb099476f57dd",
+        "both_correct": true
+      },
+      {
+        "pair_id": "d8cb910f296c25b2d466413a59a38ed0",
+        "both_correct": true
+      },
+      {
+        "pair_id": "4adcb1228e2fe362508e56304406c34d",
+        "both_correct": true
+      },
+      {
+        "pair_id": "d7c3e3750fca22e52868bda931561389",
+        "both_correct": true
+      },
+      {
+        "pair_id": "4f0a8401f68835c736d949db3817dcb1",
+        "both_correct": true
+      },
+      {
+        "pair_id": "5200028d08f2a0df0f0969e9455dc89d",
+        "both_correct": true
+      },
+      {
+        "pair_id": "62f8a3ae66b13a41a70ee4aba6400b95",
+        "both_correct": true
+      },
+      {
+        "pair_id": "0b104e9f8b0ab7050a59ca9df44d2c76",
+        "both_correct": true
+      },
+      {
+        "pair_id": "8eb975b85f6732745d1337de034cc332",
+        "both_correct": true
+      },
+      {
+        "pair_id": "c2ec720358be1d401ae93d4a667c772b",
+        "both_correct": true
+      },
+      {
+        "pair_id": "09da4cd58b9dc2ff6e5ef8dd7a70d18a",
+        "both_correct": true
+      },
+      {
+        "pair_id": "37983a1369f0745a032c87d73fda2437",
+        "both_correct": true
+      },
+      {
+        "pair_id": "48e6646d83b4dcf4a6c446967b05f3ee",
+        "both_correct": true
+      },
+      {
+        "pair_id": "5511a252cd7d184d30b9b74cc52a40b2",
+        "both_correct": true
+      },
+      {
+        "pair_id": "d3eb1071042aa0dbf28e5f46ba237088",
+        "both_correct": true
+      },
+      {
+        "pair_id": "db5d3b8b1a3ad95686f9aacece254d88",
+        "both_correct": true
+      },
+      {
+        "pair_id": "c7cc3539c353c629d4a41cd02f303f07",
+        "both_correct": true
+      },
+      {
+        "pair_id": "d00e763fc554692c58040bdf270c8a8f",
+        "both_correct": true
+      },
+      {
+        "pair_id": "1b7c2ee448fd331d69af6fd3f2ab86f5",
+        "both_correct": true
+      },
+      {
+        "pair_id": "0ca7c6c2bace8d2797486b6923106bc8",
+        "both_correct": true
+      },
+      {
+        "pair_id": "10cb45c5d1c6f026e11b41a13c618835",
+        "both_correct": true
+      }
+    ],
+    "trace_count": 120,
+    "source_manifest_sha256": "2e305cc91b97e2d134f20f70e3f5fe4967186b07ac57bd1c0890212d308b8208",
+    "scope": "independent repair-job selected VLM validation traces; not re-generated here"
+  },
+  "binding_training_report_sha256": "719474ab0ac5ab5e348b9411f5cd6d8631219fec7b1250f00efaa7cbbd4b6d07",
+  "checkpoint": "/home/oyjt/Scene-aware-BCI-VLA-runs/v4_step09_binding_20261018_v3/results/Full_seed0/step2400",
+  "selected_step": 2400,
+  "model_binding": {
+    "checkpoint_files": {
+      "connector.safetensors": "427fba987ad3b8a6b0b4e3dafb133f86980345706698b8b8ba48a41969f72464",
+      "language_lora.safetensors": "28c18b8f262e234b49953dda81e732191df3f1700064e61d89813aba4bbf7c3b"
+    },
+    "binding": {
+      "version": "public-object-reference/0.1",
+      "mode": "reference",
+      "prefix_order": "diagnostic[4],bound_intent[4]",
+      "residual_scale": 0.1,
+      "reference_scale": 1.0,
+      "source": "predicted candidate weights and public aliases in frozen native VLM embeddings; no target text"
+    },
+    "binding_config_version": "V4-09-binding-repair-3",
+    "base_sha256": "4616e4c1966a5fb063b442ea5d69857f45e873222d839b794634d87d252ab9e7",
+    "connector_code_sha256": "2854765aa0fe57ff9392e773ee8c8a5e45d65dd15ce61710437d005a2e2810dc",
+    "tensorizer_code_sha256": "78e09bda4daa7df830c2381f839b12a99351b147e2a62c28630819e6f10c624a"
+  },
+  "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+  "data_binding": {
+    "capture_manifest_sha256": "3d6c103bceb6fd4cdf5f75b11ab909bb04dd74dedf76681888915902a1871fdb",
+    "row_generator_version": "libero-simulated-outcome-rows/0.1",
+    "variants": [
+      "stable",
+      "goal_change",
+      "channel_change",
+      "both_change",
+      "no_response",
+      "feature_dropout",
+      "mapping_change",
+      "candidate_miss",
+      "cancel",
+      "stop",
+      "ambiguous"
+    ],
+    "splits": [
+      "calibration_fit",
+      "calibration_audit",
+      "validation"
+    ],
+    "scope": "actual LIBERO captures; fixed historical questions; simulated latent-outcome calibration",
+    "row_generator_code_sha256": "4df9a570bebb674e9d429744bc76581e286f68861433c4db2492eb7156d39bcb",
+    "dependency_sha256": {
+      "execution/v4/build_step04_data.py": "5e8dfe8ce697ca5710687d9c469c6fe568890413df8287c170317e19df51887a",
+      "bci_vla/data_v4/channel.py": "4e1dbb76ee44ef8a563f5e565b5d6f69da29888d26ab89c86aa0f625d59e15ec",
+      "bci_vla/evaluation_v4/runner.py": "7a2ad06ccf184e48af8123f043f0cc91a9d85ac7697811a1fc5eb7570e8ab6b1",
+      "bci_vla/neural_interaction_v4/tensorizer.py": "78e09bda4daa7df830c2381f839b12a99351b147e2a62c28630819e6f10c624a",
+      "bci_vla/training_v4/text_baseline.py": "f0a1dcc2a38226e251a5d8b0d803db56bde60dfc5c490f0ccb98951c05c0598e"
+    }
+  },
+  "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+  "verified_allowed_frames": 48,
+  "source_partition_counts": {
+    "calibration_fit": 8,
+    "calibration_audit": 8,
+    "validation": 8
+  },
+  "source_scene_groups": {
+    "calibration_fit": [
+      "4e83d096e1c77386f94f",
+      "c8d0d491da5a64dca115"
+    ],
+    "calibration_audit": [
+      "7e4bde885f3fc2929e55",
+      "f52e2e1abd05724127c1"
+    ],
+    "validation": [
+      "be407422cd63db52190d",
+      "c643a21fa2fbdfc32c20"
+    ]
+  },
+  "online_audit_preregistered_criteria": {
+    "max_wrong_episode_rate": 0.1,
+    "min_resolved_fraction": 0.0,
+    "resolution_field": "condition_resolution_fraction",
+    "require_positive_resolution": true,
+    "min_probability_samples": 8,
+    "min_probability_groups": 2,
+    "nll_tolerance": 1e-08,
+    "probability_diagnostic": "report calibrated-vs-raw online NLL; negative result is not an implementation failure",
+    "selection_resolution_rule": "within-base condition mean, then scene/episode macro; any wrong submission per base; all-four secondary",
+    "no_audit_retuning": true
+  },
+  "calibrations": {
+    "fixed_i4_c4_b8": {
+      "binding": {
+        "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+        "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+        "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+        "policy_sha256": "d0f8c2bd70b6bfe9a26a2ffb293dbb011b1bf39cf7246ac9813df79c4fee9c10"
+      },
+      "temperatures": {
+        "intent": {
+          "version": "bci-vla-temperature/0.2",
+          "task": "intent",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "d0f8c2bd70b6bfe9a26a2ffb293dbb011b1bf39cf7246ac9813df79c4fee9c10"
+          },
+          "fit_split": "calibration_fit",
+          "fit_groups": [
+            "4e83d096e1c77386f94f",
+            "c8d0d491da5a64dca115"
+          ],
+          "fit_episodes": [
+            "4e83d096e1c77386f94f::389bd0cd546eb2dd1c59be96",
+            "4e83d096e1c77386f94f::66ef3be961d17a889d947544",
+            "4e83d096e1c77386f94f::78bcd6a1fbf96117e96c58a0",
+            "4e83d096e1c77386f94f::c777e572b2cd48a617e18044",
+            "c8d0d491da5a64dca115::14d082de49bc8047a0112724",
+            "c8d0d491da5a64dca115::3c99faa62d8837c0a03dc323",
+            "c8d0d491da5a64dca115::7853000cdec12ff4721d82c0",
+            "c8d0d491da5a64dca115::e4ec97847818bc2afe594b34"
+          ],
+          "samples": 349,
+          "skipped": {
+            "masked": 0,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "temperature": 4.547229301350837,
+          "status": "FITTED",
+          "scope": "synthetic_BCI_domain_only",
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "bounds": [
+            0.05,
+            20.0
+          ],
+          "nll_before": 1.634004644610541,
+          "nll_after": 0.6107145119554532,
+          "total_rows": 349,
+          "support_fraction": 1.0,
+          "target_modes": [
+            "PROBABILITY"
+          ],
+          "outcome_calibration_not_identifiability_supervision": true,
+          "optimum_at_boundary": false
+        },
+        "channel": {
+          "version": "bci-vla-temperature/0.2",
+          "task": "channel",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "d0f8c2bd70b6bfe9a26a2ffb293dbb011b1bf39cf7246ac9813df79c4fee9c10"
+          },
+          "fit_split": "calibration_fit",
+          "fit_groups": [
+            "4e83d096e1c77386f94f",
+            "c8d0d491da5a64dca115"
+          ],
+          "fit_episodes": [
+            "4e83d096e1c77386f94f::389bd0cd546eb2dd1c59be96",
+            "4e83d096e1c77386f94f::66ef3be961d17a889d947544",
+            "4e83d096e1c77386f94f::78bcd6a1fbf96117e96c58a0",
+            "4e83d096e1c77386f94f::c777e572b2cd48a617e18044",
+            "c8d0d491da5a64dca115::14d082de49bc8047a0112724",
+            "c8d0d491da5a64dca115::3c99faa62d8837c0a03dc323",
+            "c8d0d491da5a64dca115::7853000cdec12ff4721d82c0",
+            "c8d0d491da5a64dca115::e4ec97847818bc2afe594b34"
+          ],
+          "samples": 177,
+          "skipped": {
+            "masked": 172,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "temperature": 1.74927935792352,
+          "status": "FITTED",
+          "scope": "synthetic_BCI_domain_only",
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "bounds": [
+            0.05,
+            20.0
+          ],
+          "nll_before": 0.6406291613553718,
+          "nll_after": 0.603041530884802,
+          "total_rows": 349,
+          "support_fraction": 0.5071633237822349,
+          "target_modes": [
+            "PROBABILITY"
+          ],
+          "outcome_calibration_not_identifiability_supervision": true,
+          "optimum_at_boundary": false
+        }
+      },
+      "fixed_history_audit": {
+        "intent": {
+          "split": "calibration_audit",
+          "task": "intent",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "d0f8c2bd70b6bfe9a26a2ffb293dbb011b1bf39cf7246ac9813df79c4fee9c10"
+          },
+          "samples": 349,
+          "skipped": {
+            "masked": 0,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "before": {
+            "brier": 0.5561451884629849,
+            "distribution_brier": 0.5108542102099256,
+            "nll": 1.5275909468044742,
+            "ece": 0.2892312426744795,
+            "ece_bins": 10,
+            "ece_kind": "top_label_confidence"
+          },
+          "after": {
+            "brier": 0.36141775076831273,
+            "distribution_brier": 0.3161267725152539,
+            "nll": 0.588108278036388,
+            "ece": 0.15516000407541788,
+            "ece_bins": 10,
+            "ece_kind": "top_label_confidence"
+          },
+          "scope": "synthetic_BCI_domain_only",
+          "fit_performed": false,
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "total_rows": 349,
+          "support_fraction": 1.0,
+          "groups": 2,
+          "episodes": 8,
+          "status": "AUDITED"
+        },
+        "channel": {
+          "split": "calibration_audit",
+          "task": "channel",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "d0f8c2bd70b6bfe9a26a2ffb293dbb011b1bf39cf7246ac9813df79c4fee9c10"
+          },
+          "samples": 178,
+          "skipped": {
+            "masked": 171,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "before": {
+            "brier": 0.259024218022314,
+            "distribution_brier": 0.2581561624667585,
+            "nll": 0.7359749737971836,
+            "ece": 0.19587050957149735,
+            "ece_bins": 10,
+            "ece_kind": "success_probability"
+          },
+          "after": {
+            "brier": 0.23347961538578368,
+            "distribution_brier": 0.2326115598302282,
+            "nll": 0.6589312358277808,
+            "ece": 0.0973147128762136,
+            "ece_bins": 10,
+            "ece_kind": "success_probability"
+          },
+          "scope": "synthetic_BCI_domain_only",
+          "fit_performed": false,
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "total_rows": 349,
+          "support_fraction": 0.5100286532951289,
+          "groups": 2,
+          "episodes": 8,
+          "status": "AUDITED"
+        }
+      },
+      "scope": "historical schedule only; online policy distribution audit still required"
+    },
+    "fixed_i4_c4_b12": {
+      "binding": {
+        "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+        "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+        "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+        "policy_sha256": "472d8ced2d6d01b012f3fba7a540cabb6d9c97c66fc837f46d949d8a18debb85"
+      },
+      "temperatures": {
+        "intent": {
+          "version": "bci-vla-temperature/0.2",
+          "task": "intent",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "472d8ced2d6d01b012f3fba7a540cabb6d9c97c66fc837f46d949d8a18debb85"
+          },
+          "fit_split": "calibration_fit",
+          "fit_groups": [
+            "4e83d096e1c77386f94f",
+            "c8d0d491da5a64dca115"
+          ],
+          "fit_episodes": [
+            "4e83d096e1c77386f94f::389bd0cd546eb2dd1c59be96",
+            "4e83d096e1c77386f94f::66ef3be961d17a889d947544",
+            "4e83d096e1c77386f94f::78bcd6a1fbf96117e96c58a0",
+            "4e83d096e1c77386f94f::c777e572b2cd48a617e18044",
+            "c8d0d491da5a64dca115::14d082de49bc8047a0112724",
+            "c8d0d491da5a64dca115::3c99faa62d8837c0a03dc323",
+            "c8d0d491da5a64dca115::7853000cdec12ff4721d82c0",
+            "c8d0d491da5a64dca115::e4ec97847818bc2afe594b34"
+          ],
+          "samples": 349,
+          "skipped": {
+            "masked": 0,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "temperature": 4.547229301350837,
+          "status": "FITTED",
+          "scope": "synthetic_BCI_domain_only",
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "bounds": [
+            0.05,
+            20.0
+          ],
+          "nll_before": 1.634004644610541,
+          "nll_after": 0.6107145119554532,
+          "total_rows": 349,
+          "support_fraction": 1.0,
+          "target_modes": [
+            "PROBABILITY"
+          ],
+          "outcome_calibration_not_identifiability_supervision": true,
+          "optimum_at_boundary": false
+        },
+        "channel": {
+          "version": "bci-vla-temperature/0.2",
+          "task": "channel",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "472d8ced2d6d01b012f3fba7a540cabb6d9c97c66fc837f46d949d8a18debb85"
+          },
+          "fit_split": "calibration_fit",
+          "fit_groups": [
+            "4e83d096e1c77386f94f",
+            "c8d0d491da5a64dca115"
+          ],
+          "fit_episodes": [
+            "4e83d096e1c77386f94f::389bd0cd546eb2dd1c59be96",
+            "4e83d096e1c77386f94f::66ef3be961d17a889d947544",
+            "4e83d096e1c77386f94f::78bcd6a1fbf96117e96c58a0",
+            "4e83d096e1c77386f94f::c777e572b2cd48a617e18044",
+            "c8d0d491da5a64dca115::14d082de49bc8047a0112724",
+            "c8d0d491da5a64dca115::3c99faa62d8837c0a03dc323",
+            "c8d0d491da5a64dca115::7853000cdec12ff4721d82c0",
+            "c8d0d491da5a64dca115::e4ec97847818bc2afe594b34"
+          ],
+          "samples": 177,
+          "skipped": {
+            "masked": 172,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "temperature": 1.74927935792352,
+          "status": "FITTED",
+          "scope": "synthetic_BCI_domain_only",
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "bounds": [
+            0.05,
+            20.0
+          ],
+          "nll_before": 0.6406291613553718,
+          "nll_after": 0.603041530884802,
+          "total_rows": 349,
+          "support_fraction": 0.5071633237822349,
+          "target_modes": [
+            "PROBABILITY"
+          ],
+          "outcome_calibration_not_identifiability_supervision": true,
+          "optimum_at_boundary": false
+        }
+      },
+      "fixed_history_audit": {
+        "intent": {
+          "split": "calibration_audit",
+          "task": "intent",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "472d8ced2d6d01b012f3fba7a540cabb6d9c97c66fc837f46d949d8a18debb85"
+          },
+          "samples": 349,
+          "skipped": {
+            "masked": 0,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "before": {
+            "brier": 0.5561451884629849,
+            "distribution_brier": 0.5108542102099256,
+            "nll": 1.5275909468044742,
+            "ece": 0.2892312426744795,
+            "ece_bins": 10,
+            "ece_kind": "top_label_confidence"
+          },
+          "after": {
+            "brier": 0.36141775076831273,
+            "distribution_brier": 0.3161267725152539,
+            "nll": 0.588108278036388,
+            "ece": 0.15516000407541788,
+            "ece_bins": 10,
+            "ece_kind": "top_label_confidence"
+          },
+          "scope": "synthetic_BCI_domain_only",
+          "fit_performed": false,
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "total_rows": 349,
+          "support_fraction": 1.0,
+          "groups": 2,
+          "episodes": 8,
+          "status": "AUDITED"
+        },
+        "channel": {
+          "split": "calibration_audit",
+          "task": "channel",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "472d8ced2d6d01b012f3fba7a540cabb6d9c97c66fc837f46d949d8a18debb85"
+          },
+          "samples": 178,
+          "skipped": {
+            "masked": 171,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "before": {
+            "brier": 0.259024218022314,
+            "distribution_brier": 0.2581561624667585,
+            "nll": 0.7359749737971836,
+            "ece": 0.19587050957149735,
+            "ece_bins": 10,
+            "ece_kind": "success_probability"
+          },
+          "after": {
+            "brier": 0.23347961538578368,
+            "distribution_brier": 0.2326115598302282,
+            "nll": 0.6589312358277808,
+            "ece": 0.0973147128762136,
+            "ece_bins": 10,
+            "ece_kind": "success_probability"
+          },
+          "scope": "synthetic_BCI_domain_only",
+          "fit_performed": false,
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "total_rows": 349,
+          "support_fraction": 0.5100286532951289,
+          "groups": 2,
+          "episodes": 8,
+          "status": "AUDITED"
+        }
+      },
+      "scope": "historical schedule only; online policy distribution audit still required"
+    },
+    "fixed_i4_c6_b8": {
+      "binding": {
+        "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+        "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+        "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+        "policy_sha256": "b401f66d2bf94fd42c00362a3ed09d3c50c3df34ceb182fb5f4b91926981033f"
+      },
+      "temperatures": {
+        "intent": {
+          "version": "bci-vla-temperature/0.2",
+          "task": "intent",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "b401f66d2bf94fd42c00362a3ed09d3c50c3df34ceb182fb5f4b91926981033f"
+          },
+          "fit_split": "calibration_fit",
+          "fit_groups": [
+            "4e83d096e1c77386f94f",
+            "c8d0d491da5a64dca115"
+          ],
+          "fit_episodes": [
+            "4e83d096e1c77386f94f::389bd0cd546eb2dd1c59be96",
+            "4e83d096e1c77386f94f::66ef3be961d17a889d947544",
+            "4e83d096e1c77386f94f::78bcd6a1fbf96117e96c58a0",
+            "4e83d096e1c77386f94f::c777e572b2cd48a617e18044",
+            "c8d0d491da5a64dca115::14d082de49bc8047a0112724",
+            "c8d0d491da5a64dca115::3c99faa62d8837c0a03dc323",
+            "c8d0d491da5a64dca115::7853000cdec12ff4721d82c0",
+            "c8d0d491da5a64dca115::e4ec97847818bc2afe594b34"
+          ],
+          "samples": 349,
+          "skipped": {
+            "masked": 0,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "temperature": 4.547229301350837,
+          "status": "FITTED",
+          "scope": "synthetic_BCI_domain_only",
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "bounds": [
+            0.05,
+            20.0
+          ],
+          "nll_before": 1.634004644610541,
+          "nll_after": 0.6107145119554532,
+          "total_rows": 349,
+          "support_fraction": 1.0,
+          "target_modes": [
+            "PROBABILITY"
+          ],
+          "outcome_calibration_not_identifiability_supervision": true,
+          "optimum_at_boundary": false
+        },
+        "channel": {
+          "version": "bci-vla-temperature/0.2",
+          "task": "channel",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "b401f66d2bf94fd42c00362a3ed09d3c50c3df34ceb182fb5f4b91926981033f"
+          },
+          "fit_split": "calibration_fit",
+          "fit_groups": [
+            "4e83d096e1c77386f94f",
+            "c8d0d491da5a64dca115"
+          ],
+          "fit_episodes": [
+            "4e83d096e1c77386f94f::389bd0cd546eb2dd1c59be96",
+            "4e83d096e1c77386f94f::66ef3be961d17a889d947544",
+            "4e83d096e1c77386f94f::78bcd6a1fbf96117e96c58a0",
+            "4e83d096e1c77386f94f::c777e572b2cd48a617e18044",
+            "c8d0d491da5a64dca115::14d082de49bc8047a0112724",
+            "c8d0d491da5a64dca115::3c99faa62d8837c0a03dc323",
+            "c8d0d491da5a64dca115::7853000cdec12ff4721d82c0",
+            "c8d0d491da5a64dca115::e4ec97847818bc2afe594b34"
+          ],
+          "samples": 177,
+          "skipped": {
+            "masked": 172,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "temperature": 1.74927935792352,
+          "status": "FITTED",
+          "scope": "synthetic_BCI_domain_only",
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "bounds": [
+            0.05,
+            20.0
+          ],
+          "nll_before": 0.6406291613553718,
+          "nll_after": 0.603041530884802,
+          "total_rows": 349,
+          "support_fraction": 0.5071633237822349,
+          "target_modes": [
+            "PROBABILITY"
+          ],
+          "outcome_calibration_not_identifiability_supervision": true,
+          "optimum_at_boundary": false
+        }
+      },
+      "fixed_history_audit": {
+        "intent": {
+          "split": "calibration_audit",
+          "task": "intent",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "b401f66d2bf94fd42c00362a3ed09d3c50c3df34ceb182fb5f4b91926981033f"
+          },
+          "samples": 349,
+          "skipped": {
+            "masked": 0,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "before": {
+            "brier": 0.5561451884629849,
+            "distribution_brier": 0.5108542102099256,
+            "nll": 1.5275909468044742,
+            "ece": 0.2892312426744795,
+            "ece_bins": 10,
+            "ece_kind": "top_label_confidence"
+          },
+          "after": {
+            "brier": 0.36141775076831273,
+            "distribution_brier": 0.3161267725152539,
+            "nll": 0.588108278036388,
+            "ece": 0.15516000407541788,
+            "ece_bins": 10,
+            "ece_kind": "top_label_confidence"
+          },
+          "scope": "synthetic_BCI_domain_only",
+          "fit_performed": false,
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "total_rows": 349,
+          "support_fraction": 1.0,
+          "groups": 2,
+          "episodes": 8,
+          "status": "AUDITED"
+        },
+        "channel": {
+          "split": "calibration_audit",
+          "task": "channel",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "b401f66d2bf94fd42c00362a3ed09d3c50c3df34ceb182fb5f4b91926981033f"
+          },
+          "samples": 178,
+          "skipped": {
+            "masked": 171,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "before": {
+            "brier": 0.259024218022314,
+            "distribution_brier": 0.2581561624667585,
+            "nll": 0.7359749737971836,
+            "ece": 0.19587050957149735,
+            "ece_bins": 10,
+            "ece_kind": "success_probability"
+          },
+          "after": {
+            "brier": 0.23347961538578368,
+            "distribution_brier": 0.2326115598302282,
+            "nll": 0.6589312358277808,
+            "ece": 0.0973147128762136,
+            "ece_bins": 10,
+            "ece_kind": "success_probability"
+          },
+          "scope": "synthetic_BCI_domain_only",
+          "fit_performed": false,
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "total_rows": 349,
+          "support_fraction": 0.5100286532951289,
+          "groups": 2,
+          "episodes": 8,
+          "status": "AUDITED"
+        }
+      },
+      "scope": "historical schedule only; online policy distribution audit still required"
+    },
+    "fixed_i4_c6_b12": {
+      "binding": {
+        "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+        "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+        "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+        "policy_sha256": "56789ab43909cfe2e48526337da6aad23874d2fc39309f831de23b222e30bb57"
+      },
+      "temperatures": {
+        "intent": {
+          "version": "bci-vla-temperature/0.2",
+          "task": "intent",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "56789ab43909cfe2e48526337da6aad23874d2fc39309f831de23b222e30bb57"
+          },
+          "fit_split": "calibration_fit",
+          "fit_groups": [
+            "4e83d096e1c77386f94f",
+            "c8d0d491da5a64dca115"
+          ],
+          "fit_episodes": [
+            "4e83d096e1c77386f94f::389bd0cd546eb2dd1c59be96",
+            "4e83d096e1c77386f94f::66ef3be961d17a889d947544",
+            "4e83d096e1c77386f94f::78bcd6a1fbf96117e96c58a0",
+            "4e83d096e1c77386f94f::c777e572b2cd48a617e18044",
+            "c8d0d491da5a64dca115::14d082de49bc8047a0112724",
+            "c8d0d491da5a64dca115::3c99faa62d8837c0a03dc323",
+            "c8d0d491da5a64dca115::7853000cdec12ff4721d82c0",
+            "c8d0d491da5a64dca115::e4ec97847818bc2afe594b34"
+          ],
+          "samples": 349,
+          "skipped": {
+            "masked": 0,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "temperature": 4.547229301350837,
+          "status": "FITTED",
+          "scope": "synthetic_BCI_domain_only",
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "bounds": [
+            0.05,
+            20.0
+          ],
+          "nll_before": 1.634004644610541,
+          "nll_after": 0.6107145119554532,
+          "total_rows": 349,
+          "support_fraction": 1.0,
+          "target_modes": [
+            "PROBABILITY"
+          ],
+          "outcome_calibration_not_identifiability_supervision": true,
+          "optimum_at_boundary": false
+        },
+        "channel": {
+          "version": "bci-vla-temperature/0.2",
+          "task": "channel",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "56789ab43909cfe2e48526337da6aad23874d2fc39309f831de23b222e30bb57"
+          },
+          "fit_split": "calibration_fit",
+          "fit_groups": [
+            "4e83d096e1c77386f94f",
+            "c8d0d491da5a64dca115"
+          ],
+          "fit_episodes": [
+            "4e83d096e1c77386f94f::389bd0cd546eb2dd1c59be96",
+            "4e83d096e1c77386f94f::66ef3be961d17a889d947544",
+            "4e83d096e1c77386f94f::78bcd6a1fbf96117e96c58a0",
+            "4e83d096e1c77386f94f::c777e572b2cd48a617e18044",
+            "c8d0d491da5a64dca115::14d082de49bc8047a0112724",
+            "c8d0d491da5a64dca115::3c99faa62d8837c0a03dc323",
+            "c8d0d491da5a64dca115::7853000cdec12ff4721d82c0",
+            "c8d0d491da5a64dca115::e4ec97847818bc2afe594b34"
+          ],
+          "samples": 177,
+          "skipped": {
+            "masked": 172,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "temperature": 1.74927935792352,
+          "status": "FITTED",
+          "scope": "synthetic_BCI_domain_only",
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "bounds": [
+            0.05,
+            20.0
+          ],
+          "nll_before": 0.6406291613553718,
+          "nll_after": 0.603041530884802,
+          "total_rows": 349,
+          "support_fraction": 0.5071633237822349,
+          "target_modes": [
+            "PROBABILITY"
+          ],
+          "outcome_calibration_not_identifiability_supervision": true,
+          "optimum_at_boundary": false
+        }
+      },
+      "fixed_history_audit": {
+        "intent": {
+          "split": "calibration_audit",
+          "task": "intent",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "56789ab43909cfe2e48526337da6aad23874d2fc39309f831de23b222e30bb57"
+          },
+          "samples": 349,
+          "skipped": {
+            "masked": 0,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "before": {
+            "brier": 0.5561451884629849,
+            "distribution_brier": 0.5108542102099256,
+            "nll": 1.5275909468044742,
+            "ece": 0.2892312426744795,
+            "ece_bins": 10,
+            "ece_kind": "top_label_confidence"
+          },
+          "after": {
+            "brier": 0.36141775076831273,
+            "distribution_brier": 0.3161267725152539,
+            "nll": 0.588108278036388,
+            "ece": 0.15516000407541788,
+            "ece_bins": 10,
+            "ece_kind": "top_label_confidence"
+          },
+          "scope": "synthetic_BCI_domain_only",
+          "fit_performed": false,
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "total_rows": 349,
+          "support_fraction": 1.0,
+          "groups": 2,
+          "episodes": 8,
+          "status": "AUDITED"
+        },
+        "channel": {
+          "split": "calibration_audit",
+          "task": "channel",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "56789ab43909cfe2e48526337da6aad23874d2fc39309f831de23b222e30bb57"
+          },
+          "samples": 178,
+          "skipped": {
+            "masked": 171,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "before": {
+            "brier": 0.259024218022314,
+            "distribution_brier": 0.2581561624667585,
+            "nll": 0.7359749737971836,
+            "ece": 0.19587050957149735,
+            "ece_bins": 10,
+            "ece_kind": "success_probability"
+          },
+          "after": {
+            "brier": 0.23347961538578368,
+            "distribution_brier": 0.2326115598302282,
+            "nll": 0.6589312358277808,
+            "ece": 0.0973147128762136,
+            "ece_bins": 10,
+            "ece_kind": "success_probability"
+          },
+          "scope": "synthetic_BCI_domain_only",
+          "fit_performed": false,
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "total_rows": 349,
+          "support_fraction": 0.5100286532951289,
+          "groups": 2,
+          "episodes": 8,
+          "status": "AUDITED"
+        }
+      },
+      "scope": "historical schedule only; online policy distribution audit still required"
+    },
+    "fixed_i6_c4_b8": {
+      "binding": {
+        "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+        "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+        "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+        "policy_sha256": "eeff6ad3ad96548aac35314343169b4b25475aeac2b025ac5a1c70fb0d3190dc"
+      },
+      "temperatures": {
+        "intent": {
+          "version": "bci-vla-temperature/0.2",
+          "task": "intent",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "eeff6ad3ad96548aac35314343169b4b25475aeac2b025ac5a1c70fb0d3190dc"
+          },
+          "fit_split": "calibration_fit",
+          "fit_groups": [
+            "4e83d096e1c77386f94f",
+            "c8d0d491da5a64dca115"
+          ],
+          "fit_episodes": [
+            "4e83d096e1c77386f94f::389bd0cd546eb2dd1c59be96",
+            "4e83d096e1c77386f94f::66ef3be961d17a889d947544",
+            "4e83d096e1c77386f94f::78bcd6a1fbf96117e96c58a0",
+            "4e83d096e1c77386f94f::c777e572b2cd48a617e18044",
+            "c8d0d491da5a64dca115::14d082de49bc8047a0112724",
+            "c8d0d491da5a64dca115::3c99faa62d8837c0a03dc323",
+            "c8d0d491da5a64dca115::7853000cdec12ff4721d82c0",
+            "c8d0d491da5a64dca115::e4ec97847818bc2afe594b34"
+          ],
+          "samples": 349,
+          "skipped": {
+            "masked": 0,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "temperature": 4.547229301350837,
+          "status": "FITTED",
+          "scope": "synthetic_BCI_domain_only",
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "bounds": [
+            0.05,
+            20.0
+          ],
+          "nll_before": 1.634004644610541,
+          "nll_after": 0.6107145119554532,
+          "total_rows": 349,
+          "support_fraction": 1.0,
+          "target_modes": [
+            "PROBABILITY"
+          ],
+          "outcome_calibration_not_identifiability_supervision": true,
+          "optimum_at_boundary": false
+        },
+        "channel": {
+          "version": "bci-vla-temperature/0.2",
+          "task": "channel",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "eeff6ad3ad96548aac35314343169b4b25475aeac2b025ac5a1c70fb0d3190dc"
+          },
+          "fit_split": "calibration_fit",
+          "fit_groups": [
+            "4e83d096e1c77386f94f",
+            "c8d0d491da5a64dca115"
+          ],
+          "fit_episodes": [
+            "4e83d096e1c77386f94f::389bd0cd546eb2dd1c59be96",
+            "4e83d096e1c77386f94f::66ef3be961d17a889d947544",
+            "4e83d096e1c77386f94f::78bcd6a1fbf96117e96c58a0",
+            "4e83d096e1c77386f94f::c777e572b2cd48a617e18044",
+            "c8d0d491da5a64dca115::14d082de49bc8047a0112724",
+            "c8d0d491da5a64dca115::3c99faa62d8837c0a03dc323",
+            "c8d0d491da5a64dca115::7853000cdec12ff4721d82c0",
+            "c8d0d491da5a64dca115::e4ec97847818bc2afe594b34"
+          ],
+          "samples": 177,
+          "skipped": {
+            "masked": 172,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "temperature": 1.74927935792352,
+          "status": "FITTED",
+          "scope": "synthetic_BCI_domain_only",
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "bounds": [
+            0.05,
+            20.0
+          ],
+          "nll_before": 0.6406291613553718,
+          "nll_after": 0.603041530884802,
+          "total_rows": 349,
+          "support_fraction": 0.5071633237822349,
+          "target_modes": [
+            "PROBABILITY"
+          ],
+          "outcome_calibration_not_identifiability_supervision": true,
+          "optimum_at_boundary": false
+        }
+      },
+      "fixed_history_audit": {
+        "intent": {
+          "split": "calibration_audit",
+          "task": "intent",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "eeff6ad3ad96548aac35314343169b4b25475aeac2b025ac5a1c70fb0d3190dc"
+          },
+          "samples": 349,
+          "skipped": {
+            "masked": 0,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "before": {
+            "brier": 0.5561451884629849,
+            "distribution_brier": 0.5108542102099256,
+            "nll": 1.5275909468044742,
+            "ece": 0.2892312426744795,
+            "ece_bins": 10,
+            "ece_kind": "top_label_confidence"
+          },
+          "after": {
+            "brier": 0.36141775076831273,
+            "distribution_brier": 0.3161267725152539,
+            "nll": 0.588108278036388,
+            "ece": 0.15516000407541788,
+            "ece_bins": 10,
+            "ece_kind": "top_label_confidence"
+          },
+          "scope": "synthetic_BCI_domain_only",
+          "fit_performed": false,
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "total_rows": 349,
+          "support_fraction": 1.0,
+          "groups": 2,
+          "episodes": 8,
+          "status": "AUDITED"
+        },
+        "channel": {
+          "split": "calibration_audit",
+          "task": "channel",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "eeff6ad3ad96548aac35314343169b4b25475aeac2b025ac5a1c70fb0d3190dc"
+          },
+          "samples": 178,
+          "skipped": {
+            "masked": 171,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "before": {
+            "brier": 0.259024218022314,
+            "distribution_brier": 0.2581561624667585,
+            "nll": 0.7359749737971836,
+            "ece": 0.19587050957149735,
+            "ece_bins": 10,
+            "ece_kind": "success_probability"
+          },
+          "after": {
+            "brier": 0.23347961538578368,
+            "distribution_brier": 0.2326115598302282,
+            "nll": 0.6589312358277808,
+            "ece": 0.0973147128762136,
+            "ece_bins": 10,
+            "ece_kind": "success_probability"
+          },
+          "scope": "synthetic_BCI_domain_only",
+          "fit_performed": false,
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "total_rows": 349,
+          "support_fraction": 0.5100286532951289,
+          "groups": 2,
+          "episodes": 8,
+          "status": "AUDITED"
+        }
+      },
+      "scope": "historical schedule only; online policy distribution audit still required"
+    },
+    "fixed_i6_c4_b12": {
+      "binding": {
+        "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+        "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+        "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+        "policy_sha256": "7d610e9c8b4425e0558dc02de1c480d4367db52cb22e309b8e27c5e92b12ddcf"
+      },
+      "temperatures": {
+        "intent": {
+          "version": "bci-vla-temperature/0.2",
+          "task": "intent",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "7d610e9c8b4425e0558dc02de1c480d4367db52cb22e309b8e27c5e92b12ddcf"
+          },
+          "fit_split": "calibration_fit",
+          "fit_groups": [
+            "4e83d096e1c77386f94f",
+            "c8d0d491da5a64dca115"
+          ],
+          "fit_episodes": [
+            "4e83d096e1c77386f94f::389bd0cd546eb2dd1c59be96",
+            "4e83d096e1c77386f94f::66ef3be961d17a889d947544",
+            "4e83d096e1c77386f94f::78bcd6a1fbf96117e96c58a0",
+            "4e83d096e1c77386f94f::c777e572b2cd48a617e18044",
+            "c8d0d491da5a64dca115::14d082de49bc8047a0112724",
+            "c8d0d491da5a64dca115::3c99faa62d8837c0a03dc323",
+            "c8d0d491da5a64dca115::7853000cdec12ff4721d82c0",
+            "c8d0d491da5a64dca115::e4ec97847818bc2afe594b34"
+          ],
+          "samples": 349,
+          "skipped": {
+            "masked": 0,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "temperature": 4.547229301350837,
+          "status": "FITTED",
+          "scope": "synthetic_BCI_domain_only",
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "bounds": [
+            0.05,
+            20.0
+          ],
+          "nll_before": 1.634004644610541,
+          "nll_after": 0.6107145119554532,
+          "total_rows": 349,
+          "support_fraction": 1.0,
+          "target_modes": [
+            "PROBABILITY"
+          ],
+          "outcome_calibration_not_identifiability_supervision": true,
+          "optimum_at_boundary": false
+        },
+        "channel": {
+          "version": "bci-vla-temperature/0.2",
+          "task": "channel",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "7d610e9c8b4425e0558dc02de1c480d4367db52cb22e309b8e27c5e92b12ddcf"
+          },
+          "fit_split": "calibration_fit",
+          "fit_groups": [
+            "4e83d096e1c77386f94f",
+            "c8d0d491da5a64dca115"
+          ],
+          "fit_episodes": [
+            "4e83d096e1c77386f94f::389bd0cd546eb2dd1c59be96",
+            "4e83d096e1c77386f94f::66ef3be961d17a889d947544",
+            "4e83d096e1c77386f94f::78bcd6a1fbf96117e96c58a0",
+            "4e83d096e1c77386f94f::c777e572b2cd48a617e18044",
+            "c8d0d491da5a64dca115::14d082de49bc8047a0112724",
+            "c8d0d491da5a64dca115::3c99faa62d8837c0a03dc323",
+            "c8d0d491da5a64dca115::7853000cdec12ff4721d82c0",
+            "c8d0d491da5a64dca115::e4ec97847818bc2afe594b34"
+          ],
+          "samples": 177,
+          "skipped": {
+            "masked": 172,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "temperature": 1.74927935792352,
+          "status": "FITTED",
+          "scope": "synthetic_BCI_domain_only",
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "bounds": [
+            0.05,
+            20.0
+          ],
+          "nll_before": 0.6406291613553718,
+          "nll_after": 0.603041530884802,
+          "total_rows": 349,
+          "support_fraction": 0.5071633237822349,
+          "target_modes": [
+            "PROBABILITY"
+          ],
+          "outcome_calibration_not_identifiability_supervision": true,
+          "optimum_at_boundary": false
+        }
+      },
+      "fixed_history_audit": {
+        "intent": {
+          "split": "calibration_audit",
+          "task": "intent",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "7d610e9c8b4425e0558dc02de1c480d4367db52cb22e309b8e27c5e92b12ddcf"
+          },
+          "samples": 349,
+          "skipped": {
+            "masked": 0,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "before": {
+            "brier": 0.5561451884629849,
+            "distribution_brier": 0.5108542102099256,
+            "nll": 1.5275909468044742,
+            "ece": 0.2892312426744795,
+            "ece_bins": 10,
+            "ece_kind": "top_label_confidence"
+          },
+          "after": {
+            "brier": 0.36141775076831273,
+            "distribution_brier": 0.3161267725152539,
+            "nll": 0.588108278036388,
+            "ece": 0.15516000407541788,
+            "ece_bins": 10,
+            "ece_kind": "top_label_confidence"
+          },
+          "scope": "synthetic_BCI_domain_only",
+          "fit_performed": false,
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "total_rows": 349,
+          "support_fraction": 1.0,
+          "groups": 2,
+          "episodes": 8,
+          "status": "AUDITED"
+        },
+        "channel": {
+          "split": "calibration_audit",
+          "task": "channel",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "7d610e9c8b4425e0558dc02de1c480d4367db52cb22e309b8e27c5e92b12ddcf"
+          },
+          "samples": 178,
+          "skipped": {
+            "masked": 171,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "before": {
+            "brier": 0.259024218022314,
+            "distribution_brier": 0.2581561624667585,
+            "nll": 0.7359749737971836,
+            "ece": 0.19587050957149735,
+            "ece_bins": 10,
+            "ece_kind": "success_probability"
+          },
+          "after": {
+            "brier": 0.23347961538578368,
+            "distribution_brier": 0.2326115598302282,
+            "nll": 0.6589312358277808,
+            "ece": 0.0973147128762136,
+            "ece_bins": 10,
+            "ece_kind": "success_probability"
+          },
+          "scope": "synthetic_BCI_domain_only",
+          "fit_performed": false,
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "total_rows": 349,
+          "support_fraction": 0.5100286532951289,
+          "groups": 2,
+          "episodes": 8,
+          "status": "AUDITED"
+        }
+      },
+      "scope": "historical schedule only; online policy distribution audit still required"
+    },
+    "fixed_i6_c6_b8": {
+      "binding": {
+        "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+        "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+        "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+        "policy_sha256": "f540a9c937b16fb2265828b2bfce8c8577789ace59d505213ea426cf09cfb5f4"
+      },
+      "temperatures": {
+        "intent": {
+          "version": "bci-vla-temperature/0.2",
+          "task": "intent",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "f540a9c937b16fb2265828b2bfce8c8577789ace59d505213ea426cf09cfb5f4"
+          },
+          "fit_split": "calibration_fit",
+          "fit_groups": [
+            "4e83d096e1c77386f94f",
+            "c8d0d491da5a64dca115"
+          ],
+          "fit_episodes": [
+            "4e83d096e1c77386f94f::389bd0cd546eb2dd1c59be96",
+            "4e83d096e1c77386f94f::66ef3be961d17a889d947544",
+            "4e83d096e1c77386f94f::78bcd6a1fbf96117e96c58a0",
+            "4e83d096e1c77386f94f::c777e572b2cd48a617e18044",
+            "c8d0d491da5a64dca115::14d082de49bc8047a0112724",
+            "c8d0d491da5a64dca115::3c99faa62d8837c0a03dc323",
+            "c8d0d491da5a64dca115::7853000cdec12ff4721d82c0",
+            "c8d0d491da5a64dca115::e4ec97847818bc2afe594b34"
+          ],
+          "samples": 349,
+          "skipped": {
+            "masked": 0,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "temperature": 4.547229301350837,
+          "status": "FITTED",
+          "scope": "synthetic_BCI_domain_only",
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "bounds": [
+            0.05,
+            20.0
+          ],
+          "nll_before": 1.634004644610541,
+          "nll_after": 0.6107145119554532,
+          "total_rows": 349,
+          "support_fraction": 1.0,
+          "target_modes": [
+            "PROBABILITY"
+          ],
+          "outcome_calibration_not_identifiability_supervision": true,
+          "optimum_at_boundary": false
+        },
+        "channel": {
+          "version": "bci-vla-temperature/0.2",
+          "task": "channel",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "f540a9c937b16fb2265828b2bfce8c8577789ace59d505213ea426cf09cfb5f4"
+          },
+          "fit_split": "calibration_fit",
+          "fit_groups": [
+            "4e83d096e1c77386f94f",
+            "c8d0d491da5a64dca115"
+          ],
+          "fit_episodes": [
+            "4e83d096e1c77386f94f::389bd0cd546eb2dd1c59be96",
+            "4e83d096e1c77386f94f::66ef3be961d17a889d947544",
+            "4e83d096e1c77386f94f::78bcd6a1fbf96117e96c58a0",
+            "4e83d096e1c77386f94f::c777e572b2cd48a617e18044",
+            "c8d0d491da5a64dca115::14d082de49bc8047a0112724",
+            "c8d0d491da5a64dca115::3c99faa62d8837c0a03dc323",
+            "c8d0d491da5a64dca115::7853000cdec12ff4721d82c0",
+            "c8d0d491da5a64dca115::e4ec97847818bc2afe594b34"
+          ],
+          "samples": 177,
+          "skipped": {
+            "masked": 172,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "temperature": 1.74927935792352,
+          "status": "FITTED",
+          "scope": "synthetic_BCI_domain_only",
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "bounds": [
+            0.05,
+            20.0
+          ],
+          "nll_before": 0.6406291613553718,
+          "nll_after": 0.603041530884802,
+          "total_rows": 349,
+          "support_fraction": 0.5071633237822349,
+          "target_modes": [
+            "PROBABILITY"
+          ],
+          "outcome_calibration_not_identifiability_supervision": true,
+          "optimum_at_boundary": false
+        }
+      },
+      "fixed_history_audit": {
+        "intent": {
+          "split": "calibration_audit",
+          "task": "intent",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "f540a9c937b16fb2265828b2bfce8c8577789ace59d505213ea426cf09cfb5f4"
+          },
+          "samples": 349,
+          "skipped": {
+            "masked": 0,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "before": {
+            "brier": 0.5561451884629849,
+            "distribution_brier": 0.5108542102099256,
+            "nll": 1.5275909468044742,
+            "ece": 0.2892312426744795,
+            "ece_bins": 10,
+            "ece_kind": "top_label_confidence"
+          },
+          "after": {
+            "brier": 0.36141775076831273,
+            "distribution_brier": 0.3161267725152539,
+            "nll": 0.588108278036388,
+            "ece": 0.15516000407541788,
+            "ece_bins": 10,
+            "ece_kind": "top_label_confidence"
+          },
+          "scope": "synthetic_BCI_domain_only",
+          "fit_performed": false,
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "total_rows": 349,
+          "support_fraction": 1.0,
+          "groups": 2,
+          "episodes": 8,
+          "status": "AUDITED"
+        },
+        "channel": {
+          "split": "calibration_audit",
+          "task": "channel",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "f540a9c937b16fb2265828b2bfce8c8577789ace59d505213ea426cf09cfb5f4"
+          },
+          "samples": 178,
+          "skipped": {
+            "masked": 171,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "before": {
+            "brier": 0.259024218022314,
+            "distribution_brier": 0.2581561624667585,
+            "nll": 0.7359749737971836,
+            "ece": 0.19587050957149735,
+            "ece_bins": 10,
+            "ece_kind": "success_probability"
+          },
+          "after": {
+            "brier": 0.23347961538578368,
+            "distribution_brier": 0.2326115598302282,
+            "nll": 0.6589312358277808,
+            "ece": 0.0973147128762136,
+            "ece_bins": 10,
+            "ece_kind": "success_probability"
+          },
+          "scope": "synthetic_BCI_domain_only",
+          "fit_performed": false,
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "total_rows": 349,
+          "support_fraction": 0.5100286532951289,
+          "groups": 2,
+          "episodes": 8,
+          "status": "AUDITED"
+        }
+      },
+      "scope": "historical schedule only; online policy distribution audit still required"
+    },
+    "fixed_i6_c6_b12": {
+      "binding": {
+        "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+        "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+        "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+        "policy_sha256": "8a2002bfde77d8808b44823ec31b1acea7c30991c52a14448888e6b3abb347f4"
+      },
+      "temperatures": {
+        "intent": {
+          "version": "bci-vla-temperature/0.2",
+          "task": "intent",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "8a2002bfde77d8808b44823ec31b1acea7c30991c52a14448888e6b3abb347f4"
+          },
+          "fit_split": "calibration_fit",
+          "fit_groups": [
+            "4e83d096e1c77386f94f",
+            "c8d0d491da5a64dca115"
+          ],
+          "fit_episodes": [
+            "4e83d096e1c77386f94f::389bd0cd546eb2dd1c59be96",
+            "4e83d096e1c77386f94f::66ef3be961d17a889d947544",
+            "4e83d096e1c77386f94f::78bcd6a1fbf96117e96c58a0",
+            "4e83d096e1c77386f94f::c777e572b2cd48a617e18044",
+            "c8d0d491da5a64dca115::14d082de49bc8047a0112724",
+            "c8d0d491da5a64dca115::3c99faa62d8837c0a03dc323",
+            "c8d0d491da5a64dca115::7853000cdec12ff4721d82c0",
+            "c8d0d491da5a64dca115::e4ec97847818bc2afe594b34"
+          ],
+          "samples": 349,
+          "skipped": {
+            "masked": 0,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "temperature": 4.547229301350837,
+          "status": "FITTED",
+          "scope": "synthetic_BCI_domain_only",
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "bounds": [
+            0.05,
+            20.0
+          ],
+          "nll_before": 1.634004644610541,
+          "nll_after": 0.6107145119554532,
+          "total_rows": 349,
+          "support_fraction": 1.0,
+          "target_modes": [
+            "PROBABILITY"
+          ],
+          "outcome_calibration_not_identifiability_supervision": true,
+          "optimum_at_boundary": false
+        },
+        "channel": {
+          "version": "bci-vla-temperature/0.2",
+          "task": "channel",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "8a2002bfde77d8808b44823ec31b1acea7c30991c52a14448888e6b3abb347f4"
+          },
+          "fit_split": "calibration_fit",
+          "fit_groups": [
+            "4e83d096e1c77386f94f",
+            "c8d0d491da5a64dca115"
+          ],
+          "fit_episodes": [
+            "4e83d096e1c77386f94f::389bd0cd546eb2dd1c59be96",
+            "4e83d096e1c77386f94f::66ef3be961d17a889d947544",
+            "4e83d096e1c77386f94f::78bcd6a1fbf96117e96c58a0",
+            "4e83d096e1c77386f94f::c777e572b2cd48a617e18044",
+            "c8d0d491da5a64dca115::14d082de49bc8047a0112724",
+            "c8d0d491da5a64dca115::3c99faa62d8837c0a03dc323",
+            "c8d0d491da5a64dca115::7853000cdec12ff4721d82c0",
+            "c8d0d491da5a64dca115::e4ec97847818bc2afe594b34"
+          ],
+          "samples": 177,
+          "skipped": {
+            "masked": 172,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "temperature": 1.74927935792352,
+          "status": "FITTED",
+          "scope": "synthetic_BCI_domain_only",
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "bounds": [
+            0.05,
+            20.0
+          ],
+          "nll_before": 0.6406291613553718,
+          "nll_after": 0.603041530884802,
+          "total_rows": 349,
+          "support_fraction": 0.5071633237822349,
+          "target_modes": [
+            "PROBABILITY"
+          ],
+          "outcome_calibration_not_identifiability_supervision": true,
+          "optimum_at_boundary": false
+        }
+      },
+      "fixed_history_audit": {
+        "intent": {
+          "split": "calibration_audit",
+          "task": "intent",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "8a2002bfde77d8808b44823ec31b1acea7c30991c52a14448888e6b3abb347f4"
+          },
+          "samples": 349,
+          "skipped": {
+            "masked": 0,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "before": {
+            "brier": 0.5561451884629849,
+            "distribution_brier": 0.5108542102099256,
+            "nll": 1.5275909468044742,
+            "ece": 0.2892312426744795,
+            "ece_bins": 10,
+            "ece_kind": "top_label_confidence"
+          },
+          "after": {
+            "brier": 0.36141775076831273,
+            "distribution_brier": 0.3161267725152539,
+            "nll": 0.588108278036388,
+            "ece": 0.15516000407541788,
+            "ece_bins": 10,
+            "ece_kind": "top_label_confidence"
+          },
+          "scope": "synthetic_BCI_domain_only",
+          "fit_performed": false,
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "total_rows": 349,
+          "support_fraction": 1.0,
+          "groups": 2,
+          "episodes": 8,
+          "status": "AUDITED"
+        },
+        "channel": {
+          "split": "calibration_audit",
+          "task": "channel",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "8a2002bfde77d8808b44823ec31b1acea7c30991c52a14448888e6b3abb347f4"
+          },
+          "samples": 178,
+          "skipped": {
+            "masked": 171,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "before": {
+            "brier": 0.259024218022314,
+            "distribution_brier": 0.2581561624667585,
+            "nll": 0.7359749737971836,
+            "ece": 0.19587050957149735,
+            "ece_bins": 10,
+            "ece_kind": "success_probability"
+          },
+          "after": {
+            "brier": 0.23347961538578368,
+            "distribution_brier": 0.2326115598302282,
+            "nll": 0.6589312358277808,
+            "ece": 0.0973147128762136,
+            "ece_bins": 10,
+            "ece_kind": "success_probability"
+          },
+          "scope": "synthetic_BCI_domain_only",
+          "fit_performed": false,
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "total_rows": 349,
+          "support_fraction": 0.5100286532951289,
+          "groups": 2,
+          "episodes": 8,
+          "status": "AUDITED"
+        }
+      },
+      "scope": "historical schedule only; online policy distribution audit still required"
+    },
+    "fixed_i8_c4_b8": {
+      "binding": {
+        "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+        "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+        "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+        "policy_sha256": "0d6e6f475a46e1e3e7496b6e884e419d4499f96ca8d6fb3d1259e13699398587"
+      },
+      "temperatures": {
+        "intent": {
+          "version": "bci-vla-temperature/0.2",
+          "task": "intent",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "0d6e6f475a46e1e3e7496b6e884e419d4499f96ca8d6fb3d1259e13699398587"
+          },
+          "fit_split": "calibration_fit",
+          "fit_groups": [
+            "4e83d096e1c77386f94f",
+            "c8d0d491da5a64dca115"
+          ],
+          "fit_episodes": [
+            "4e83d096e1c77386f94f::389bd0cd546eb2dd1c59be96",
+            "4e83d096e1c77386f94f::66ef3be961d17a889d947544",
+            "4e83d096e1c77386f94f::78bcd6a1fbf96117e96c58a0",
+            "4e83d096e1c77386f94f::c777e572b2cd48a617e18044",
+            "c8d0d491da5a64dca115::14d082de49bc8047a0112724",
+            "c8d0d491da5a64dca115::3c99faa62d8837c0a03dc323",
+            "c8d0d491da5a64dca115::7853000cdec12ff4721d82c0",
+            "c8d0d491da5a64dca115::e4ec97847818bc2afe594b34"
+          ],
+          "samples": 349,
+          "skipped": {
+            "masked": 0,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "temperature": 4.547229301350837,
+          "status": "FITTED",
+          "scope": "synthetic_BCI_domain_only",
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "bounds": [
+            0.05,
+            20.0
+          ],
+          "nll_before": 1.634004644610541,
+          "nll_after": 0.6107145119554532,
+          "total_rows": 349,
+          "support_fraction": 1.0,
+          "target_modes": [
+            "PROBABILITY"
+          ],
+          "outcome_calibration_not_identifiability_supervision": true,
+          "optimum_at_boundary": false
+        },
+        "channel": {
+          "version": "bci-vla-temperature/0.2",
+          "task": "channel",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "0d6e6f475a46e1e3e7496b6e884e419d4499f96ca8d6fb3d1259e13699398587"
+          },
+          "fit_split": "calibration_fit",
+          "fit_groups": [
+            "4e83d096e1c77386f94f",
+            "c8d0d491da5a64dca115"
+          ],
+          "fit_episodes": [
+            "4e83d096e1c77386f94f::389bd0cd546eb2dd1c59be96",
+            "4e83d096e1c77386f94f::66ef3be961d17a889d947544",
+            "4e83d096e1c77386f94f::78bcd6a1fbf96117e96c58a0",
+            "4e83d096e1c77386f94f::c777e572b2cd48a617e18044",
+            "c8d0d491da5a64dca115::14d082de49bc8047a0112724",
+            "c8d0d491da5a64dca115::3c99faa62d8837c0a03dc323",
+            "c8d0d491da5a64dca115::7853000cdec12ff4721d82c0",
+            "c8d0d491da5a64dca115::e4ec97847818bc2afe594b34"
+          ],
+          "samples": 177,
+          "skipped": {
+            "masked": 172,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "temperature": 1.74927935792352,
+          "status": "FITTED",
+          "scope": "synthetic_BCI_domain_only",
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "bounds": [
+            0.05,
+            20.0
+          ],
+          "nll_before": 0.6406291613553718,
+          "nll_after": 0.603041530884802,
+          "total_rows": 349,
+          "support_fraction": 0.5071633237822349,
+          "target_modes": [
+            "PROBABILITY"
+          ],
+          "outcome_calibration_not_identifiability_supervision": true,
+          "optimum_at_boundary": false
+        }
+      },
+      "fixed_history_audit": {
+        "intent": {
+          "split": "calibration_audit",
+          "task": "intent",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "0d6e6f475a46e1e3e7496b6e884e419d4499f96ca8d6fb3d1259e13699398587"
+          },
+          "samples": 349,
+          "skipped": {
+            "masked": 0,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "before": {
+            "brier": 0.5561451884629849,
+            "distribution_brier": 0.5108542102099256,
+            "nll": 1.5275909468044742,
+            "ece": 0.2892312426744795,
+            "ece_bins": 10,
+            "ece_kind": "top_label_confidence"
+          },
+          "after": {
+            "brier": 0.36141775076831273,
+            "distribution_brier": 0.3161267725152539,
+            "nll": 0.588108278036388,
+            "ece": 0.15516000407541788,
+            "ece_bins": 10,
+            "ece_kind": "top_label_confidence"
+          },
+          "scope": "synthetic_BCI_domain_only",
+          "fit_performed": false,
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "total_rows": 349,
+          "support_fraction": 1.0,
+          "groups": 2,
+          "episodes": 8,
+          "status": "AUDITED"
+        },
+        "channel": {
+          "split": "calibration_audit",
+          "task": "channel",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "0d6e6f475a46e1e3e7496b6e884e419d4499f96ca8d6fb3d1259e13699398587"
+          },
+          "samples": 178,
+          "skipped": {
+            "masked": 171,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "before": {
+            "brier": 0.259024218022314,
+            "distribution_brier": 0.2581561624667585,
+            "nll": 0.7359749737971836,
+            "ece": 0.19587050957149735,
+            "ece_bins": 10,
+            "ece_kind": "success_probability"
+          },
+          "after": {
+            "brier": 0.23347961538578368,
+            "distribution_brier": 0.2326115598302282,
+            "nll": 0.6589312358277808,
+            "ece": 0.0973147128762136,
+            "ece_bins": 10,
+            "ece_kind": "success_probability"
+          },
+          "scope": "synthetic_BCI_domain_only",
+          "fit_performed": false,
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "total_rows": 349,
+          "support_fraction": 0.5100286532951289,
+          "groups": 2,
+          "episodes": 8,
+          "status": "AUDITED"
+        }
+      },
+      "scope": "historical schedule only; online policy distribution audit still required"
+    },
+    "fixed_i8_c4_b12": {
+      "binding": {
+        "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+        "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+        "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+        "policy_sha256": "47b6e2fa0a07c93b2f248834248cef1ff5a5b7de872f3fc1eba3ae5fb4607906"
+      },
+      "temperatures": {
+        "intent": {
+          "version": "bci-vla-temperature/0.2",
+          "task": "intent",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "47b6e2fa0a07c93b2f248834248cef1ff5a5b7de872f3fc1eba3ae5fb4607906"
+          },
+          "fit_split": "calibration_fit",
+          "fit_groups": [
+            "4e83d096e1c77386f94f",
+            "c8d0d491da5a64dca115"
+          ],
+          "fit_episodes": [
+            "4e83d096e1c77386f94f::389bd0cd546eb2dd1c59be96",
+            "4e83d096e1c77386f94f::66ef3be961d17a889d947544",
+            "4e83d096e1c77386f94f::78bcd6a1fbf96117e96c58a0",
+            "4e83d096e1c77386f94f::c777e572b2cd48a617e18044",
+            "c8d0d491da5a64dca115::14d082de49bc8047a0112724",
+            "c8d0d491da5a64dca115::3c99faa62d8837c0a03dc323",
+            "c8d0d491da5a64dca115::7853000cdec12ff4721d82c0",
+            "c8d0d491da5a64dca115::e4ec97847818bc2afe594b34"
+          ],
+          "samples": 349,
+          "skipped": {
+            "masked": 0,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "temperature": 4.547229301350837,
+          "status": "FITTED",
+          "scope": "synthetic_BCI_domain_only",
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "bounds": [
+            0.05,
+            20.0
+          ],
+          "nll_before": 1.634004644610541,
+          "nll_after": 0.6107145119554532,
+          "total_rows": 349,
+          "support_fraction": 1.0,
+          "target_modes": [
+            "PROBABILITY"
+          ],
+          "outcome_calibration_not_identifiability_supervision": true,
+          "optimum_at_boundary": false
+        },
+        "channel": {
+          "version": "bci-vla-temperature/0.2",
+          "task": "channel",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "47b6e2fa0a07c93b2f248834248cef1ff5a5b7de872f3fc1eba3ae5fb4607906"
+          },
+          "fit_split": "calibration_fit",
+          "fit_groups": [
+            "4e83d096e1c77386f94f",
+            "c8d0d491da5a64dca115"
+          ],
+          "fit_episodes": [
+            "4e83d096e1c77386f94f::389bd0cd546eb2dd1c59be96",
+            "4e83d096e1c77386f94f::66ef3be961d17a889d947544",
+            "4e83d096e1c77386f94f::78bcd6a1fbf96117e96c58a0",
+            "4e83d096e1c77386f94f::c777e572b2cd48a617e18044",
+            "c8d0d491da5a64dca115::14d082de49bc8047a0112724",
+            "c8d0d491da5a64dca115::3c99faa62d8837c0a03dc323",
+            "c8d0d491da5a64dca115::7853000cdec12ff4721d82c0",
+            "c8d0d491da5a64dca115::e4ec97847818bc2afe594b34"
+          ],
+          "samples": 177,
+          "skipped": {
+            "masked": 172,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "temperature": 1.74927935792352,
+          "status": "FITTED",
+          "scope": "synthetic_BCI_domain_only",
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "bounds": [
+            0.05,
+            20.0
+          ],
+          "nll_before": 0.6406291613553718,
+          "nll_after": 0.603041530884802,
+          "total_rows": 349,
+          "support_fraction": 0.5071633237822349,
+          "target_modes": [
+            "PROBABILITY"
+          ],
+          "outcome_calibration_not_identifiability_supervision": true,
+          "optimum_at_boundary": false
+        }
+      },
+      "fixed_history_audit": {
+        "intent": {
+          "split": "calibration_audit",
+          "task": "intent",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "47b6e2fa0a07c93b2f248834248cef1ff5a5b7de872f3fc1eba3ae5fb4607906"
+          },
+          "samples": 349,
+          "skipped": {
+            "masked": 0,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "before": {
+            "brier": 0.5561451884629849,
+            "distribution_brier": 0.5108542102099256,
+            "nll": 1.5275909468044742,
+            "ece": 0.2892312426744795,
+            "ece_bins": 10,
+            "ece_kind": "top_label_confidence"
+          },
+          "after": {
+            "brier": 0.36141775076831273,
+            "distribution_brier": 0.3161267725152539,
+            "nll": 0.588108278036388,
+            "ece": 0.15516000407541788,
+            "ece_bins": 10,
+            "ece_kind": "top_label_confidence"
+          },
+          "scope": "synthetic_BCI_domain_only",
+          "fit_performed": false,
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "total_rows": 349,
+          "support_fraction": 1.0,
+          "groups": 2,
+          "episodes": 8,
+          "status": "AUDITED"
+        },
+        "channel": {
+          "split": "calibration_audit",
+          "task": "channel",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "47b6e2fa0a07c93b2f248834248cef1ff5a5b7de872f3fc1eba3ae5fb4607906"
+          },
+          "samples": 178,
+          "skipped": {
+            "masked": 171,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "before": {
+            "brier": 0.259024218022314,
+            "distribution_brier": 0.2581561624667585,
+            "nll": 0.7359749737971836,
+            "ece": 0.19587050957149735,
+            "ece_bins": 10,
+            "ece_kind": "success_probability"
+          },
+          "after": {
+            "brier": 0.23347961538578368,
+            "distribution_brier": 0.2326115598302282,
+            "nll": 0.6589312358277808,
+            "ece": 0.0973147128762136,
+            "ece_bins": 10,
+            "ece_kind": "success_probability"
+          },
+          "scope": "synthetic_BCI_domain_only",
+          "fit_performed": false,
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "total_rows": 349,
+          "support_fraction": 0.5100286532951289,
+          "groups": 2,
+          "episodes": 8,
+          "status": "AUDITED"
+        }
+      },
+      "scope": "historical schedule only; online policy distribution audit still required"
+    },
+    "fixed_i8_c6_b8": {
+      "binding": {
+        "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+        "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+        "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+        "policy_sha256": "fe25d0a3875580e24b02ef6c96e00f9261a30db3e50cf9c6c7372875fd134e31"
+      },
+      "temperatures": {
+        "intent": {
+          "version": "bci-vla-temperature/0.2",
+          "task": "intent",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "fe25d0a3875580e24b02ef6c96e00f9261a30db3e50cf9c6c7372875fd134e31"
+          },
+          "fit_split": "calibration_fit",
+          "fit_groups": [
+            "4e83d096e1c77386f94f",
+            "c8d0d491da5a64dca115"
+          ],
+          "fit_episodes": [
+            "4e83d096e1c77386f94f::389bd0cd546eb2dd1c59be96",
+            "4e83d096e1c77386f94f::66ef3be961d17a889d947544",
+            "4e83d096e1c77386f94f::78bcd6a1fbf96117e96c58a0",
+            "4e83d096e1c77386f94f::c777e572b2cd48a617e18044",
+            "c8d0d491da5a64dca115::14d082de49bc8047a0112724",
+            "c8d0d491da5a64dca115::3c99faa62d8837c0a03dc323",
+            "c8d0d491da5a64dca115::7853000cdec12ff4721d82c0",
+            "c8d0d491da5a64dca115::e4ec97847818bc2afe594b34"
+          ],
+          "samples": 349,
+          "skipped": {
+            "masked": 0,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "temperature": 4.547229301350837,
+          "status": "FITTED",
+          "scope": "synthetic_BCI_domain_only",
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "bounds": [
+            0.05,
+            20.0
+          ],
+          "nll_before": 1.634004644610541,
+          "nll_after": 0.6107145119554532,
+          "total_rows": 349,
+          "support_fraction": 1.0,
+          "target_modes": [
+            "PROBABILITY"
+          ],
+          "outcome_calibration_not_identifiability_supervision": true,
+          "optimum_at_boundary": false
+        },
+        "channel": {
+          "version": "bci-vla-temperature/0.2",
+          "task": "channel",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "fe25d0a3875580e24b02ef6c96e00f9261a30db3e50cf9c6c7372875fd134e31"
+          },
+          "fit_split": "calibration_fit",
+          "fit_groups": [
+            "4e83d096e1c77386f94f",
+            "c8d0d491da5a64dca115"
+          ],
+          "fit_episodes": [
+            "4e83d096e1c77386f94f::389bd0cd546eb2dd1c59be96",
+            "4e83d096e1c77386f94f::66ef3be961d17a889d947544",
+            "4e83d096e1c77386f94f::78bcd6a1fbf96117e96c58a0",
+            "4e83d096e1c77386f94f::c777e572b2cd48a617e18044",
+            "c8d0d491da5a64dca115::14d082de49bc8047a0112724",
+            "c8d0d491da5a64dca115::3c99faa62d8837c0a03dc323",
+            "c8d0d491da5a64dca115::7853000cdec12ff4721d82c0",
+            "c8d0d491da5a64dca115::e4ec97847818bc2afe594b34"
+          ],
+          "samples": 177,
+          "skipped": {
+            "masked": 172,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "temperature": 1.74927935792352,
+          "status": "FITTED",
+          "scope": "synthetic_BCI_domain_only",
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "bounds": [
+            0.05,
+            20.0
+          ],
+          "nll_before": 0.6406291613553718,
+          "nll_after": 0.603041530884802,
+          "total_rows": 349,
+          "support_fraction": 0.5071633237822349,
+          "target_modes": [
+            "PROBABILITY"
+          ],
+          "outcome_calibration_not_identifiability_supervision": true,
+          "optimum_at_boundary": false
+        }
+      },
+      "fixed_history_audit": {
+        "intent": {
+          "split": "calibration_audit",
+          "task": "intent",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "fe25d0a3875580e24b02ef6c96e00f9261a30db3e50cf9c6c7372875fd134e31"
+          },
+          "samples": 349,
+          "skipped": {
+            "masked": 0,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "before": {
+            "brier": 0.5561451884629849,
+            "distribution_brier": 0.5108542102099256,
+            "nll": 1.5275909468044742,
+            "ece": 0.2892312426744795,
+            "ece_bins": 10,
+            "ece_kind": "top_label_confidence"
+          },
+          "after": {
+            "brier": 0.36141775076831273,
+            "distribution_brier": 0.3161267725152539,
+            "nll": 0.588108278036388,
+            "ece": 0.15516000407541788,
+            "ece_bins": 10,
+            "ece_kind": "top_label_confidence"
+          },
+          "scope": "synthetic_BCI_domain_only",
+          "fit_performed": false,
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "total_rows": 349,
+          "support_fraction": 1.0,
+          "groups": 2,
+          "episodes": 8,
+          "status": "AUDITED"
+        },
+        "channel": {
+          "split": "calibration_audit",
+          "task": "channel",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "fe25d0a3875580e24b02ef6c96e00f9261a30db3e50cf9c6c7372875fd134e31"
+          },
+          "samples": 178,
+          "skipped": {
+            "masked": 171,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "before": {
+            "brier": 0.259024218022314,
+            "distribution_brier": 0.2581561624667585,
+            "nll": 0.7359749737971836,
+            "ece": 0.19587050957149735,
+            "ece_bins": 10,
+            "ece_kind": "success_probability"
+          },
+          "after": {
+            "brier": 0.23347961538578368,
+            "distribution_brier": 0.2326115598302282,
+            "nll": 0.6589312358277808,
+            "ece": 0.0973147128762136,
+            "ece_bins": 10,
+            "ece_kind": "success_probability"
+          },
+          "scope": "synthetic_BCI_domain_only",
+          "fit_performed": false,
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "total_rows": 349,
+          "support_fraction": 0.5100286532951289,
+          "groups": 2,
+          "episodes": 8,
+          "status": "AUDITED"
+        }
+      },
+      "scope": "historical schedule only; online policy distribution audit still required"
+    },
+    "fixed_i8_c6_b12": {
+      "binding": {
+        "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+        "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+        "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+        "policy_sha256": "cddc9c6b2619b0476a53a759f3b6e31b9b9011d7224e1511ea721cc55adb76e1"
+      },
+      "temperatures": {
+        "intent": {
+          "version": "bci-vla-temperature/0.2",
+          "task": "intent",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "cddc9c6b2619b0476a53a759f3b6e31b9b9011d7224e1511ea721cc55adb76e1"
+          },
+          "fit_split": "calibration_fit",
+          "fit_groups": [
+            "4e83d096e1c77386f94f",
+            "c8d0d491da5a64dca115"
+          ],
+          "fit_episodes": [
+            "4e83d096e1c77386f94f::389bd0cd546eb2dd1c59be96",
+            "4e83d096e1c77386f94f::66ef3be961d17a889d947544",
+            "4e83d096e1c77386f94f::78bcd6a1fbf96117e96c58a0",
+            "4e83d096e1c77386f94f::c777e572b2cd48a617e18044",
+            "c8d0d491da5a64dca115::14d082de49bc8047a0112724",
+            "c8d0d491da5a64dca115::3c99faa62d8837c0a03dc323",
+            "c8d0d491da5a64dca115::7853000cdec12ff4721d82c0",
+            "c8d0d491da5a64dca115::e4ec97847818bc2afe594b34"
+          ],
+          "samples": 349,
+          "skipped": {
+            "masked": 0,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "temperature": 4.547229301350837,
+          "status": "FITTED",
+          "scope": "synthetic_BCI_domain_only",
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "bounds": [
+            0.05,
+            20.0
+          ],
+          "nll_before": 1.634004644610541,
+          "nll_after": 0.6107145119554532,
+          "total_rows": 349,
+          "support_fraction": 1.0,
+          "target_modes": [
+            "PROBABILITY"
+          ],
+          "outcome_calibration_not_identifiability_supervision": true,
+          "optimum_at_boundary": false
+        },
+        "channel": {
+          "version": "bci-vla-temperature/0.2",
+          "task": "channel",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "cddc9c6b2619b0476a53a759f3b6e31b9b9011d7224e1511ea721cc55adb76e1"
+          },
+          "fit_split": "calibration_fit",
+          "fit_groups": [
+            "4e83d096e1c77386f94f",
+            "c8d0d491da5a64dca115"
+          ],
+          "fit_episodes": [
+            "4e83d096e1c77386f94f::389bd0cd546eb2dd1c59be96",
+            "4e83d096e1c77386f94f::66ef3be961d17a889d947544",
+            "4e83d096e1c77386f94f::78bcd6a1fbf96117e96c58a0",
+            "4e83d096e1c77386f94f::c777e572b2cd48a617e18044",
+            "c8d0d491da5a64dca115::14d082de49bc8047a0112724",
+            "c8d0d491da5a64dca115::3c99faa62d8837c0a03dc323",
+            "c8d0d491da5a64dca115::7853000cdec12ff4721d82c0",
+            "c8d0d491da5a64dca115::e4ec97847818bc2afe594b34"
+          ],
+          "samples": 177,
+          "skipped": {
+            "masked": 172,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "temperature": 1.74927935792352,
+          "status": "FITTED",
+          "scope": "synthetic_BCI_domain_only",
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "bounds": [
+            0.05,
+            20.0
+          ],
+          "nll_before": 0.6406291613553718,
+          "nll_after": 0.603041530884802,
+          "total_rows": 349,
+          "support_fraction": 0.5071633237822349,
+          "target_modes": [
+            "PROBABILITY"
+          ],
+          "outcome_calibration_not_identifiability_supervision": true,
+          "optimum_at_boundary": false
+        }
+      },
+      "fixed_history_audit": {
+        "intent": {
+          "split": "calibration_audit",
+          "task": "intent",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "cddc9c6b2619b0476a53a759f3b6e31b9b9011d7224e1511ea721cc55adb76e1"
+          },
+          "samples": 349,
+          "skipped": {
+            "masked": 0,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "before": {
+            "brier": 0.5561451884629849,
+            "distribution_brier": 0.5108542102099256,
+            "nll": 1.5275909468044742,
+            "ece": 0.2892312426744795,
+            "ece_bins": 10,
+            "ece_kind": "top_label_confidence"
+          },
+          "after": {
+            "brier": 0.36141775076831273,
+            "distribution_brier": 0.3161267725152539,
+            "nll": 0.588108278036388,
+            "ece": 0.15516000407541788,
+            "ece_bins": 10,
+            "ece_kind": "top_label_confidence"
+          },
+          "scope": "synthetic_BCI_domain_only",
+          "fit_performed": false,
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "total_rows": 349,
+          "support_fraction": 1.0,
+          "groups": 2,
+          "episodes": 8,
+          "status": "AUDITED"
+        },
+        "channel": {
+          "split": "calibration_audit",
+          "task": "channel",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "cddc9c6b2619b0476a53a759f3b6e31b9b9011d7224e1511ea721cc55adb76e1"
+          },
+          "samples": 178,
+          "skipped": {
+            "masked": 171,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "before": {
+            "brier": 0.259024218022314,
+            "distribution_brier": 0.2581561624667585,
+            "nll": 0.7359749737971836,
+            "ece": 0.19587050957149735,
+            "ece_bins": 10,
+            "ece_kind": "success_probability"
+          },
+          "after": {
+            "brier": 0.23347961538578368,
+            "distribution_brier": 0.2326115598302282,
+            "nll": 0.6589312358277808,
+            "ece": 0.0973147128762136,
+            "ece_bins": 10,
+            "ece_kind": "success_probability"
+          },
+          "scope": "synthetic_BCI_domain_only",
+          "fit_performed": false,
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "total_rows": 349,
+          "support_fraction": 0.5100286532951289,
+          "groups": 2,
+          "episodes": 8,
+          "status": "AUDITED"
+        }
+      },
+      "scope": "historical schedule only; online policy distribution audit still required"
+    },
+    "entropy_e4_c4_b8": {
+      "binding": {
+        "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+        "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+        "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+        "policy_sha256": "1f8a9b65bbc7d1c670158b729a2422c0815f0e2f290ee050cf901439db2b63db"
+      },
+      "temperatures": {
+        "intent": {
+          "version": "bci-vla-temperature/0.2",
+          "task": "intent",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "1f8a9b65bbc7d1c670158b729a2422c0815f0e2f290ee050cf901439db2b63db"
+          },
+          "fit_split": "calibration_fit",
+          "fit_groups": [
+            "4e83d096e1c77386f94f",
+            "c8d0d491da5a64dca115"
+          ],
+          "fit_episodes": [
+            "4e83d096e1c77386f94f::389bd0cd546eb2dd1c59be96",
+            "4e83d096e1c77386f94f::66ef3be961d17a889d947544",
+            "4e83d096e1c77386f94f::78bcd6a1fbf96117e96c58a0",
+            "4e83d096e1c77386f94f::c777e572b2cd48a617e18044",
+            "c8d0d491da5a64dca115::14d082de49bc8047a0112724",
+            "c8d0d491da5a64dca115::3c99faa62d8837c0a03dc323",
+            "c8d0d491da5a64dca115::7853000cdec12ff4721d82c0",
+            "c8d0d491da5a64dca115::e4ec97847818bc2afe594b34"
+          ],
+          "samples": 349,
+          "skipped": {
+            "masked": 0,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "temperature": 4.547229301350837,
+          "status": "FITTED",
+          "scope": "synthetic_BCI_domain_only",
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "bounds": [
+            0.05,
+            20.0
+          ],
+          "nll_before": 1.634004644610541,
+          "nll_after": 0.6107145119554532,
+          "total_rows": 349,
+          "support_fraction": 1.0,
+          "target_modes": [
+            "PROBABILITY"
+          ],
+          "outcome_calibration_not_identifiability_supervision": true,
+          "optimum_at_boundary": false
+        },
+        "channel": {
+          "version": "bci-vla-temperature/0.2",
+          "task": "channel",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "1f8a9b65bbc7d1c670158b729a2422c0815f0e2f290ee050cf901439db2b63db"
+          },
+          "fit_split": "calibration_fit",
+          "fit_groups": [
+            "4e83d096e1c77386f94f",
+            "c8d0d491da5a64dca115"
+          ],
+          "fit_episodes": [
+            "4e83d096e1c77386f94f::389bd0cd546eb2dd1c59be96",
+            "4e83d096e1c77386f94f::66ef3be961d17a889d947544",
+            "4e83d096e1c77386f94f::78bcd6a1fbf96117e96c58a0",
+            "4e83d096e1c77386f94f::c777e572b2cd48a617e18044",
+            "c8d0d491da5a64dca115::14d082de49bc8047a0112724",
+            "c8d0d491da5a64dca115::3c99faa62d8837c0a03dc323",
+            "c8d0d491da5a64dca115::7853000cdec12ff4721d82c0",
+            "c8d0d491da5a64dca115::e4ec97847818bc2afe594b34"
+          ],
+          "samples": 177,
+          "skipped": {
+            "masked": 172,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "temperature": 1.74927935792352,
+          "status": "FITTED",
+          "scope": "synthetic_BCI_domain_only",
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "bounds": [
+            0.05,
+            20.0
+          ],
+          "nll_before": 0.6406291613553718,
+          "nll_after": 0.603041530884802,
+          "total_rows": 349,
+          "support_fraction": 0.5071633237822349,
+          "target_modes": [
+            "PROBABILITY"
+          ],
+          "outcome_calibration_not_identifiability_supervision": true,
+          "optimum_at_boundary": false
+        }
+      },
+      "fixed_history_audit": {
+        "intent": {
+          "split": "calibration_audit",
+          "task": "intent",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "1f8a9b65bbc7d1c670158b729a2422c0815f0e2f290ee050cf901439db2b63db"
+          },
+          "samples": 349,
+          "skipped": {
+            "masked": 0,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "before": {
+            "brier": 0.5561451884629849,
+            "distribution_brier": 0.5108542102099256,
+            "nll": 1.5275909468044742,
+            "ece": 0.2892312426744795,
+            "ece_bins": 10,
+            "ece_kind": "top_label_confidence"
+          },
+          "after": {
+            "brier": 0.36141775076831273,
+            "distribution_brier": 0.3161267725152539,
+            "nll": 0.588108278036388,
+            "ece": 0.15516000407541788,
+            "ece_bins": 10,
+            "ece_kind": "top_label_confidence"
+          },
+          "scope": "synthetic_BCI_domain_only",
+          "fit_performed": false,
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "total_rows": 349,
+          "support_fraction": 1.0,
+          "groups": 2,
+          "episodes": 8,
+          "status": "AUDITED"
+        },
+        "channel": {
+          "split": "calibration_audit",
+          "task": "channel",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "1f8a9b65bbc7d1c670158b729a2422c0815f0e2f290ee050cf901439db2b63db"
+          },
+          "samples": 178,
+          "skipped": {
+            "masked": 171,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "before": {
+            "brier": 0.259024218022314,
+            "distribution_brier": 0.2581561624667585,
+            "nll": 0.7359749737971836,
+            "ece": 0.19587050957149735,
+            "ece_bins": 10,
+            "ece_kind": "success_probability"
+          },
+          "after": {
+            "brier": 0.23347961538578368,
+            "distribution_brier": 0.2326115598302282,
+            "nll": 0.6589312358277808,
+            "ece": 0.0973147128762136,
+            "ece_bins": 10,
+            "ece_kind": "success_probability"
+          },
+          "scope": "synthetic_BCI_domain_only",
+          "fit_performed": false,
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "total_rows": 349,
+          "support_fraction": 0.5100286532951289,
+          "groups": 2,
+          "episodes": 8,
+          "status": "AUDITED"
+        }
+      },
+      "scope": "historical schedule only; online policy distribution audit still required"
+    },
+    "entropy_e4_c4_b12": {
+      "binding": {
+        "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+        "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+        "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+        "policy_sha256": "8d2372df133d28c256120faa731dea8449efa00f3863ba26bae6554d2c10295f"
+      },
+      "temperatures": {
+        "intent": {
+          "version": "bci-vla-temperature/0.2",
+          "task": "intent",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "8d2372df133d28c256120faa731dea8449efa00f3863ba26bae6554d2c10295f"
+          },
+          "fit_split": "calibration_fit",
+          "fit_groups": [
+            "4e83d096e1c77386f94f",
+            "c8d0d491da5a64dca115"
+          ],
+          "fit_episodes": [
+            "4e83d096e1c77386f94f::389bd0cd546eb2dd1c59be96",
+            "4e83d096e1c77386f94f::66ef3be961d17a889d947544",
+            "4e83d096e1c77386f94f::78bcd6a1fbf96117e96c58a0",
+            "4e83d096e1c77386f94f::c777e572b2cd48a617e18044",
+            "c8d0d491da5a64dca115::14d082de49bc8047a0112724",
+            "c8d0d491da5a64dca115::3c99faa62d8837c0a03dc323",
+            "c8d0d491da5a64dca115::7853000cdec12ff4721d82c0",
+            "c8d0d491da5a64dca115::e4ec97847818bc2afe594b34"
+          ],
+          "samples": 349,
+          "skipped": {
+            "masked": 0,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "temperature": 4.547229301350837,
+          "status": "FITTED",
+          "scope": "synthetic_BCI_domain_only",
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "bounds": [
+            0.05,
+            20.0
+          ],
+          "nll_before": 1.634004644610541,
+          "nll_after": 0.6107145119554532,
+          "total_rows": 349,
+          "support_fraction": 1.0,
+          "target_modes": [
+            "PROBABILITY"
+          ],
+          "outcome_calibration_not_identifiability_supervision": true,
+          "optimum_at_boundary": false
+        },
+        "channel": {
+          "version": "bci-vla-temperature/0.2",
+          "task": "channel",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "8d2372df133d28c256120faa731dea8449efa00f3863ba26bae6554d2c10295f"
+          },
+          "fit_split": "calibration_fit",
+          "fit_groups": [
+            "4e83d096e1c77386f94f",
+            "c8d0d491da5a64dca115"
+          ],
+          "fit_episodes": [
+            "4e83d096e1c77386f94f::389bd0cd546eb2dd1c59be96",
+            "4e83d096e1c77386f94f::66ef3be961d17a889d947544",
+            "4e83d096e1c77386f94f::78bcd6a1fbf96117e96c58a0",
+            "4e83d096e1c77386f94f::c777e572b2cd48a617e18044",
+            "c8d0d491da5a64dca115::14d082de49bc8047a0112724",
+            "c8d0d491da5a64dca115::3c99faa62d8837c0a03dc323",
+            "c8d0d491da5a64dca115::7853000cdec12ff4721d82c0",
+            "c8d0d491da5a64dca115::e4ec97847818bc2afe594b34"
+          ],
+          "samples": 177,
+          "skipped": {
+            "masked": 172,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "temperature": 1.74927935792352,
+          "status": "FITTED",
+          "scope": "synthetic_BCI_domain_only",
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "bounds": [
+            0.05,
+            20.0
+          ],
+          "nll_before": 0.6406291613553718,
+          "nll_after": 0.603041530884802,
+          "total_rows": 349,
+          "support_fraction": 0.5071633237822349,
+          "target_modes": [
+            "PROBABILITY"
+          ],
+          "outcome_calibration_not_identifiability_supervision": true,
+          "optimum_at_boundary": false
+        }
+      },
+      "fixed_history_audit": {
+        "intent": {
+          "split": "calibration_audit",
+          "task": "intent",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "8d2372df133d28c256120faa731dea8449efa00f3863ba26bae6554d2c10295f"
+          },
+          "samples": 349,
+          "skipped": {
+            "masked": 0,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "before": {
+            "brier": 0.5561451884629849,
+            "distribution_brier": 0.5108542102099256,
+            "nll": 1.5275909468044742,
+            "ece": 0.2892312426744795,
+            "ece_bins": 10,
+            "ece_kind": "top_label_confidence"
+          },
+          "after": {
+            "brier": 0.36141775076831273,
+            "distribution_brier": 0.3161267725152539,
+            "nll": 0.588108278036388,
+            "ece": 0.15516000407541788,
+            "ece_bins": 10,
+            "ece_kind": "top_label_confidence"
+          },
+          "scope": "synthetic_BCI_domain_only",
+          "fit_performed": false,
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "total_rows": 349,
+          "support_fraction": 1.0,
+          "groups": 2,
+          "episodes": 8,
+          "status": "AUDITED"
+        },
+        "channel": {
+          "split": "calibration_audit",
+          "task": "channel",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "8d2372df133d28c256120faa731dea8449efa00f3863ba26bae6554d2c10295f"
+          },
+          "samples": 178,
+          "skipped": {
+            "masked": 171,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "before": {
+            "brier": 0.259024218022314,
+            "distribution_brier": 0.2581561624667585,
+            "nll": 0.7359749737971836,
+            "ece": 0.19587050957149735,
+            "ece_bins": 10,
+            "ece_kind": "success_probability"
+          },
+          "after": {
+            "brier": 0.23347961538578368,
+            "distribution_brier": 0.2326115598302282,
+            "nll": 0.6589312358277808,
+            "ece": 0.0973147128762136,
+            "ece_bins": 10,
+            "ece_kind": "success_probability"
+          },
+          "scope": "synthetic_BCI_domain_only",
+          "fit_performed": false,
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "total_rows": 349,
+          "support_fraction": 0.5100286532951289,
+          "groups": 2,
+          "episodes": 8,
+          "status": "AUDITED"
+        }
+      },
+      "scope": "historical schedule only; online policy distribution audit still required"
+    },
+    "entropy_e4_c6_b8": {
+      "binding": {
+        "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+        "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+        "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+        "policy_sha256": "7e228361fda6918d2d4f5b715ed96ab494927b93eb2186493e799234c6dc42ed"
+      },
+      "temperatures": {
+        "intent": {
+          "version": "bci-vla-temperature/0.2",
+          "task": "intent",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "7e228361fda6918d2d4f5b715ed96ab494927b93eb2186493e799234c6dc42ed"
+          },
+          "fit_split": "calibration_fit",
+          "fit_groups": [
+            "4e83d096e1c77386f94f",
+            "c8d0d491da5a64dca115"
+          ],
+          "fit_episodes": [
+            "4e83d096e1c77386f94f::389bd0cd546eb2dd1c59be96",
+            "4e83d096e1c77386f94f::66ef3be961d17a889d947544",
+            "4e83d096e1c77386f94f::78bcd6a1fbf96117e96c58a0",
+            "4e83d096e1c77386f94f::c777e572b2cd48a617e18044",
+            "c8d0d491da5a64dca115::14d082de49bc8047a0112724",
+            "c8d0d491da5a64dca115::3c99faa62d8837c0a03dc323",
+            "c8d0d491da5a64dca115::7853000cdec12ff4721d82c0",
+            "c8d0d491da5a64dca115::e4ec97847818bc2afe594b34"
+          ],
+          "samples": 349,
+          "skipped": {
+            "masked": 0,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "temperature": 4.547229301350837,
+          "status": "FITTED",
+          "scope": "synthetic_BCI_domain_only",
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "bounds": [
+            0.05,
+            20.0
+          ],
+          "nll_before": 1.634004644610541,
+          "nll_after": 0.6107145119554532,
+          "total_rows": 349,
+          "support_fraction": 1.0,
+          "target_modes": [
+            "PROBABILITY"
+          ],
+          "outcome_calibration_not_identifiability_supervision": true,
+          "optimum_at_boundary": false
+        },
+        "channel": {
+          "version": "bci-vla-temperature/0.2",
+          "task": "channel",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "7e228361fda6918d2d4f5b715ed96ab494927b93eb2186493e799234c6dc42ed"
+          },
+          "fit_split": "calibration_fit",
+          "fit_groups": [
+            "4e83d096e1c77386f94f",
+            "c8d0d491da5a64dca115"
+          ],
+          "fit_episodes": [
+            "4e83d096e1c77386f94f::389bd0cd546eb2dd1c59be96",
+            "4e83d096e1c77386f94f::66ef3be961d17a889d947544",
+            "4e83d096e1c77386f94f::78bcd6a1fbf96117e96c58a0",
+            "4e83d096e1c77386f94f::c777e572b2cd48a617e18044",
+            "c8d0d491da5a64dca115::14d082de49bc8047a0112724",
+            "c8d0d491da5a64dca115::3c99faa62d8837c0a03dc323",
+            "c8d0d491da5a64dca115::7853000cdec12ff4721d82c0",
+            "c8d0d491da5a64dca115::e4ec97847818bc2afe594b34"
+          ],
+          "samples": 177,
+          "skipped": {
+            "masked": 172,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "temperature": 1.74927935792352,
+          "status": "FITTED",
+          "scope": "synthetic_BCI_domain_only",
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "bounds": [
+            0.05,
+            20.0
+          ],
+          "nll_before": 0.6406291613553718,
+          "nll_after": 0.603041530884802,
+          "total_rows": 349,
+          "support_fraction": 0.5071633237822349,
+          "target_modes": [
+            "PROBABILITY"
+          ],
+          "outcome_calibration_not_identifiability_supervision": true,
+          "optimum_at_boundary": false
+        }
+      },
+      "fixed_history_audit": {
+        "intent": {
+          "split": "calibration_audit",
+          "task": "intent",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "7e228361fda6918d2d4f5b715ed96ab494927b93eb2186493e799234c6dc42ed"
+          },
+          "samples": 349,
+          "skipped": {
+            "masked": 0,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "before": {
+            "brier": 0.5561451884629849,
+            "distribution_brier": 0.5108542102099256,
+            "nll": 1.5275909468044742,
+            "ece": 0.2892312426744795,
+            "ece_bins": 10,
+            "ece_kind": "top_label_confidence"
+          },
+          "after": {
+            "brier": 0.36141775076831273,
+            "distribution_brier": 0.3161267725152539,
+            "nll": 0.588108278036388,
+            "ece": 0.15516000407541788,
+            "ece_bins": 10,
+            "ece_kind": "top_label_confidence"
+          },
+          "scope": "synthetic_BCI_domain_only",
+          "fit_performed": false,
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "total_rows": 349,
+          "support_fraction": 1.0,
+          "groups": 2,
+          "episodes": 8,
+          "status": "AUDITED"
+        },
+        "channel": {
+          "split": "calibration_audit",
+          "task": "channel",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "7e228361fda6918d2d4f5b715ed96ab494927b93eb2186493e799234c6dc42ed"
+          },
+          "samples": 178,
+          "skipped": {
+            "masked": 171,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "before": {
+            "brier": 0.259024218022314,
+            "distribution_brier": 0.2581561624667585,
+            "nll": 0.7359749737971836,
+            "ece": 0.19587050957149735,
+            "ece_bins": 10,
+            "ece_kind": "success_probability"
+          },
+          "after": {
+            "brier": 0.23347961538578368,
+            "distribution_brier": 0.2326115598302282,
+            "nll": 0.6589312358277808,
+            "ece": 0.0973147128762136,
+            "ece_bins": 10,
+            "ece_kind": "success_probability"
+          },
+          "scope": "synthetic_BCI_domain_only",
+          "fit_performed": false,
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "total_rows": 349,
+          "support_fraction": 0.5100286532951289,
+          "groups": 2,
+          "episodes": 8,
+          "status": "AUDITED"
+        }
+      },
+      "scope": "historical schedule only; online policy distribution audit still required"
+    },
+    "entropy_e4_c6_b12": {
+      "binding": {
+        "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+        "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+        "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+        "policy_sha256": "88b15584d508d5f4d19646316f47feae581629f5dc476815fce695904d134d4b"
+      },
+      "temperatures": {
+        "intent": {
+          "version": "bci-vla-temperature/0.2",
+          "task": "intent",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "88b15584d508d5f4d19646316f47feae581629f5dc476815fce695904d134d4b"
+          },
+          "fit_split": "calibration_fit",
+          "fit_groups": [
+            "4e83d096e1c77386f94f",
+            "c8d0d491da5a64dca115"
+          ],
+          "fit_episodes": [
+            "4e83d096e1c77386f94f::389bd0cd546eb2dd1c59be96",
+            "4e83d096e1c77386f94f::66ef3be961d17a889d947544",
+            "4e83d096e1c77386f94f::78bcd6a1fbf96117e96c58a0",
+            "4e83d096e1c77386f94f::c777e572b2cd48a617e18044",
+            "c8d0d491da5a64dca115::14d082de49bc8047a0112724",
+            "c8d0d491da5a64dca115::3c99faa62d8837c0a03dc323",
+            "c8d0d491da5a64dca115::7853000cdec12ff4721d82c0",
+            "c8d0d491da5a64dca115::e4ec97847818bc2afe594b34"
+          ],
+          "samples": 349,
+          "skipped": {
+            "masked": 0,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "temperature": 4.547229301350837,
+          "status": "FITTED",
+          "scope": "synthetic_BCI_domain_only",
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "bounds": [
+            0.05,
+            20.0
+          ],
+          "nll_before": 1.634004644610541,
+          "nll_after": 0.6107145119554532,
+          "total_rows": 349,
+          "support_fraction": 1.0,
+          "target_modes": [
+            "PROBABILITY"
+          ],
+          "outcome_calibration_not_identifiability_supervision": true,
+          "optimum_at_boundary": false
+        },
+        "channel": {
+          "version": "bci-vla-temperature/0.2",
+          "task": "channel",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "88b15584d508d5f4d19646316f47feae581629f5dc476815fce695904d134d4b"
+          },
+          "fit_split": "calibration_fit",
+          "fit_groups": [
+            "4e83d096e1c77386f94f",
+            "c8d0d491da5a64dca115"
+          ],
+          "fit_episodes": [
+            "4e83d096e1c77386f94f::389bd0cd546eb2dd1c59be96",
+            "4e83d096e1c77386f94f::66ef3be961d17a889d947544",
+            "4e83d096e1c77386f94f::78bcd6a1fbf96117e96c58a0",
+            "4e83d096e1c77386f94f::c777e572b2cd48a617e18044",
+            "c8d0d491da5a64dca115::14d082de49bc8047a0112724",
+            "c8d0d491da5a64dca115::3c99faa62d8837c0a03dc323",
+            "c8d0d491da5a64dca115::7853000cdec12ff4721d82c0",
+            "c8d0d491da5a64dca115::e4ec97847818bc2afe594b34"
+          ],
+          "samples": 177,
+          "skipped": {
+            "masked": 172,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "temperature": 1.74927935792352,
+          "status": "FITTED",
+          "scope": "synthetic_BCI_domain_only",
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "bounds": [
+            0.05,
+            20.0
+          ],
+          "nll_before": 0.6406291613553718,
+          "nll_after": 0.603041530884802,
+          "total_rows": 349,
+          "support_fraction": 0.5071633237822349,
+          "target_modes": [
+            "PROBABILITY"
+          ],
+          "outcome_calibration_not_identifiability_supervision": true,
+          "optimum_at_boundary": false
+        }
+      },
+      "fixed_history_audit": {
+        "intent": {
+          "split": "calibration_audit",
+          "task": "intent",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "88b15584d508d5f4d19646316f47feae581629f5dc476815fce695904d134d4b"
+          },
+          "samples": 349,
+          "skipped": {
+            "masked": 0,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "before": {
+            "brier": 0.5561451884629849,
+            "distribution_brier": 0.5108542102099256,
+            "nll": 1.5275909468044742,
+            "ece": 0.2892312426744795,
+            "ece_bins": 10,
+            "ece_kind": "top_label_confidence"
+          },
+          "after": {
+            "brier": 0.36141775076831273,
+            "distribution_brier": 0.3161267725152539,
+            "nll": 0.588108278036388,
+            "ece": 0.15516000407541788,
+            "ece_bins": 10,
+            "ece_kind": "top_label_confidence"
+          },
+          "scope": "synthetic_BCI_domain_only",
+          "fit_performed": false,
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "total_rows": 349,
+          "support_fraction": 1.0,
+          "groups": 2,
+          "episodes": 8,
+          "status": "AUDITED"
+        },
+        "channel": {
+          "split": "calibration_audit",
+          "task": "channel",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "88b15584d508d5f4d19646316f47feae581629f5dc476815fce695904d134d4b"
+          },
+          "samples": 178,
+          "skipped": {
+            "masked": 171,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "before": {
+            "brier": 0.259024218022314,
+            "distribution_brier": 0.2581561624667585,
+            "nll": 0.7359749737971836,
+            "ece": 0.19587050957149735,
+            "ece_bins": 10,
+            "ece_kind": "success_probability"
+          },
+          "after": {
+            "brier": 0.23347961538578368,
+            "distribution_brier": 0.2326115598302282,
+            "nll": 0.6589312358277808,
+            "ece": 0.0973147128762136,
+            "ece_bins": 10,
+            "ece_kind": "success_probability"
+          },
+          "scope": "synthetic_BCI_domain_only",
+          "fit_performed": false,
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "total_rows": 349,
+          "support_fraction": 0.5100286532951289,
+          "groups": 2,
+          "episodes": 8,
+          "status": "AUDITED"
+        }
+      },
+      "scope": "historical schedule only; online policy distribution audit still required"
+    },
+    "entropy_e6_c4_b8": {
+      "binding": {
+        "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+        "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+        "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+        "policy_sha256": "3434694c07f9eff88857e9a9dd78b0f10ba42ca6d0f3b7385bb554b6c80c5046"
+      },
+      "temperatures": {
+        "intent": {
+          "version": "bci-vla-temperature/0.2",
+          "task": "intent",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "3434694c07f9eff88857e9a9dd78b0f10ba42ca6d0f3b7385bb554b6c80c5046"
+          },
+          "fit_split": "calibration_fit",
+          "fit_groups": [
+            "4e83d096e1c77386f94f",
+            "c8d0d491da5a64dca115"
+          ],
+          "fit_episodes": [
+            "4e83d096e1c77386f94f::389bd0cd546eb2dd1c59be96",
+            "4e83d096e1c77386f94f::66ef3be961d17a889d947544",
+            "4e83d096e1c77386f94f::78bcd6a1fbf96117e96c58a0",
+            "4e83d096e1c77386f94f::c777e572b2cd48a617e18044",
+            "c8d0d491da5a64dca115::14d082de49bc8047a0112724",
+            "c8d0d491da5a64dca115::3c99faa62d8837c0a03dc323",
+            "c8d0d491da5a64dca115::7853000cdec12ff4721d82c0",
+            "c8d0d491da5a64dca115::e4ec97847818bc2afe594b34"
+          ],
+          "samples": 349,
+          "skipped": {
+            "masked": 0,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "temperature": 4.547229301350837,
+          "status": "FITTED",
+          "scope": "synthetic_BCI_domain_only",
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "bounds": [
+            0.05,
+            20.0
+          ],
+          "nll_before": 1.634004644610541,
+          "nll_after": 0.6107145119554532,
+          "total_rows": 349,
+          "support_fraction": 1.0,
+          "target_modes": [
+            "PROBABILITY"
+          ],
+          "outcome_calibration_not_identifiability_supervision": true,
+          "optimum_at_boundary": false
+        },
+        "channel": {
+          "version": "bci-vla-temperature/0.2",
+          "task": "channel",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "3434694c07f9eff88857e9a9dd78b0f10ba42ca6d0f3b7385bb554b6c80c5046"
+          },
+          "fit_split": "calibration_fit",
+          "fit_groups": [
+            "4e83d096e1c77386f94f",
+            "c8d0d491da5a64dca115"
+          ],
+          "fit_episodes": [
+            "4e83d096e1c77386f94f::389bd0cd546eb2dd1c59be96",
+            "4e83d096e1c77386f94f::66ef3be961d17a889d947544",
+            "4e83d096e1c77386f94f::78bcd6a1fbf96117e96c58a0",
+            "4e83d096e1c77386f94f::c777e572b2cd48a617e18044",
+            "c8d0d491da5a64dca115::14d082de49bc8047a0112724",
+            "c8d0d491da5a64dca115::3c99faa62d8837c0a03dc323",
+            "c8d0d491da5a64dca115::7853000cdec12ff4721d82c0",
+            "c8d0d491da5a64dca115::e4ec97847818bc2afe594b34"
+          ],
+          "samples": 177,
+          "skipped": {
+            "masked": 172,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "temperature": 1.74927935792352,
+          "status": "FITTED",
+          "scope": "synthetic_BCI_domain_only",
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "bounds": [
+            0.05,
+            20.0
+          ],
+          "nll_before": 0.6406291613553718,
+          "nll_after": 0.603041530884802,
+          "total_rows": 349,
+          "support_fraction": 0.5071633237822349,
+          "target_modes": [
+            "PROBABILITY"
+          ],
+          "outcome_calibration_not_identifiability_supervision": true,
+          "optimum_at_boundary": false
+        }
+      },
+      "fixed_history_audit": {
+        "intent": {
+          "split": "calibration_audit",
+          "task": "intent",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "3434694c07f9eff88857e9a9dd78b0f10ba42ca6d0f3b7385bb554b6c80c5046"
+          },
+          "samples": 349,
+          "skipped": {
+            "masked": 0,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "before": {
+            "brier": 0.5561451884629849,
+            "distribution_brier": 0.5108542102099256,
+            "nll": 1.5275909468044742,
+            "ece": 0.2892312426744795,
+            "ece_bins": 10,
+            "ece_kind": "top_label_confidence"
+          },
+          "after": {
+            "brier": 0.36141775076831273,
+            "distribution_brier": 0.3161267725152539,
+            "nll": 0.588108278036388,
+            "ece": 0.15516000407541788,
+            "ece_bins": 10,
+            "ece_kind": "top_label_confidence"
+          },
+          "scope": "synthetic_BCI_domain_only",
+          "fit_performed": false,
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "total_rows": 349,
+          "support_fraction": 1.0,
+          "groups": 2,
+          "episodes": 8,
+          "status": "AUDITED"
+        },
+        "channel": {
+          "split": "calibration_audit",
+          "task": "channel",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "3434694c07f9eff88857e9a9dd78b0f10ba42ca6d0f3b7385bb554b6c80c5046"
+          },
+          "samples": 178,
+          "skipped": {
+            "masked": 171,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "before": {
+            "brier": 0.259024218022314,
+            "distribution_brier": 0.2581561624667585,
+            "nll": 0.7359749737971836,
+            "ece": 0.19587050957149735,
+            "ece_bins": 10,
+            "ece_kind": "success_probability"
+          },
+          "after": {
+            "brier": 0.23347961538578368,
+            "distribution_brier": 0.2326115598302282,
+            "nll": 0.6589312358277808,
+            "ece": 0.0973147128762136,
+            "ece_bins": 10,
+            "ece_kind": "success_probability"
+          },
+          "scope": "synthetic_BCI_domain_only",
+          "fit_performed": false,
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "total_rows": 349,
+          "support_fraction": 0.5100286532951289,
+          "groups": 2,
+          "episodes": 8,
+          "status": "AUDITED"
+        }
+      },
+      "scope": "historical schedule only; online policy distribution audit still required"
+    },
+    "entropy_e6_c4_b12": {
+      "binding": {
+        "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+        "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+        "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+        "policy_sha256": "774026091b8b24a8ade58e8e5121f18aac1057a093263a1a63e7f8f84f0d3a2c"
+      },
+      "temperatures": {
+        "intent": {
+          "version": "bci-vla-temperature/0.2",
+          "task": "intent",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "774026091b8b24a8ade58e8e5121f18aac1057a093263a1a63e7f8f84f0d3a2c"
+          },
+          "fit_split": "calibration_fit",
+          "fit_groups": [
+            "4e83d096e1c77386f94f",
+            "c8d0d491da5a64dca115"
+          ],
+          "fit_episodes": [
+            "4e83d096e1c77386f94f::389bd0cd546eb2dd1c59be96",
+            "4e83d096e1c77386f94f::66ef3be961d17a889d947544",
+            "4e83d096e1c77386f94f::78bcd6a1fbf96117e96c58a0",
+            "4e83d096e1c77386f94f::c777e572b2cd48a617e18044",
+            "c8d0d491da5a64dca115::14d082de49bc8047a0112724",
+            "c8d0d491da5a64dca115::3c99faa62d8837c0a03dc323",
+            "c8d0d491da5a64dca115::7853000cdec12ff4721d82c0",
+            "c8d0d491da5a64dca115::e4ec97847818bc2afe594b34"
+          ],
+          "samples": 349,
+          "skipped": {
+            "masked": 0,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "temperature": 4.547229301350837,
+          "status": "FITTED",
+          "scope": "synthetic_BCI_domain_only",
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "bounds": [
+            0.05,
+            20.0
+          ],
+          "nll_before": 1.634004644610541,
+          "nll_after": 0.6107145119554532,
+          "total_rows": 349,
+          "support_fraction": 1.0,
+          "target_modes": [
+            "PROBABILITY"
+          ],
+          "outcome_calibration_not_identifiability_supervision": true,
+          "optimum_at_boundary": false
+        },
+        "channel": {
+          "version": "bci-vla-temperature/0.2",
+          "task": "channel",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "774026091b8b24a8ade58e8e5121f18aac1057a093263a1a63e7f8f84f0d3a2c"
+          },
+          "fit_split": "calibration_fit",
+          "fit_groups": [
+            "4e83d096e1c77386f94f",
+            "c8d0d491da5a64dca115"
+          ],
+          "fit_episodes": [
+            "4e83d096e1c77386f94f::389bd0cd546eb2dd1c59be96",
+            "4e83d096e1c77386f94f::66ef3be961d17a889d947544",
+            "4e83d096e1c77386f94f::78bcd6a1fbf96117e96c58a0",
+            "4e83d096e1c77386f94f::c777e572b2cd48a617e18044",
+            "c8d0d491da5a64dca115::14d082de49bc8047a0112724",
+            "c8d0d491da5a64dca115::3c99faa62d8837c0a03dc323",
+            "c8d0d491da5a64dca115::7853000cdec12ff4721d82c0",
+            "c8d0d491da5a64dca115::e4ec97847818bc2afe594b34"
+          ],
+          "samples": 177,
+          "skipped": {
+            "masked": 172,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "temperature": 1.74927935792352,
+          "status": "FITTED",
+          "scope": "synthetic_BCI_domain_only",
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "bounds": [
+            0.05,
+            20.0
+          ],
+          "nll_before": 0.6406291613553718,
+          "nll_after": 0.603041530884802,
+          "total_rows": 349,
+          "support_fraction": 0.5071633237822349,
+          "target_modes": [
+            "PROBABILITY"
+          ],
+          "outcome_calibration_not_identifiability_supervision": true,
+          "optimum_at_boundary": false
+        }
+      },
+      "fixed_history_audit": {
+        "intent": {
+          "split": "calibration_audit",
+          "task": "intent",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "774026091b8b24a8ade58e8e5121f18aac1057a093263a1a63e7f8f84f0d3a2c"
+          },
+          "samples": 349,
+          "skipped": {
+            "masked": 0,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "before": {
+            "brier": 0.5561451884629849,
+            "distribution_brier": 0.5108542102099256,
+            "nll": 1.5275909468044742,
+            "ece": 0.2892312426744795,
+            "ece_bins": 10,
+            "ece_kind": "top_label_confidence"
+          },
+          "after": {
+            "brier": 0.36141775076831273,
+            "distribution_brier": 0.3161267725152539,
+            "nll": 0.588108278036388,
+            "ece": 0.15516000407541788,
+            "ece_bins": 10,
+            "ece_kind": "top_label_confidence"
+          },
+          "scope": "synthetic_BCI_domain_only",
+          "fit_performed": false,
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "total_rows": 349,
+          "support_fraction": 1.0,
+          "groups": 2,
+          "episodes": 8,
+          "status": "AUDITED"
+        },
+        "channel": {
+          "split": "calibration_audit",
+          "task": "channel",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "774026091b8b24a8ade58e8e5121f18aac1057a093263a1a63e7f8f84f0d3a2c"
+          },
+          "samples": 178,
+          "skipped": {
+            "masked": 171,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "before": {
+            "brier": 0.259024218022314,
+            "distribution_brier": 0.2581561624667585,
+            "nll": 0.7359749737971836,
+            "ece": 0.19587050957149735,
+            "ece_bins": 10,
+            "ece_kind": "success_probability"
+          },
+          "after": {
+            "brier": 0.23347961538578368,
+            "distribution_brier": 0.2326115598302282,
+            "nll": 0.6589312358277808,
+            "ece": 0.0973147128762136,
+            "ece_bins": 10,
+            "ece_kind": "success_probability"
+          },
+          "scope": "synthetic_BCI_domain_only",
+          "fit_performed": false,
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "total_rows": 349,
+          "support_fraction": 0.5100286532951289,
+          "groups": 2,
+          "episodes": 8,
+          "status": "AUDITED"
+        }
+      },
+      "scope": "historical schedule only; online policy distribution audit still required"
+    },
+    "entropy_e6_c6_b8": {
+      "binding": {
+        "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+        "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+        "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+        "policy_sha256": "977baacd96c35166bf539e96b8c2b7c30283f6af7a3e83371dc0e6b5610de793"
+      },
+      "temperatures": {
+        "intent": {
+          "version": "bci-vla-temperature/0.2",
+          "task": "intent",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "977baacd96c35166bf539e96b8c2b7c30283f6af7a3e83371dc0e6b5610de793"
+          },
+          "fit_split": "calibration_fit",
+          "fit_groups": [
+            "4e83d096e1c77386f94f",
+            "c8d0d491da5a64dca115"
+          ],
+          "fit_episodes": [
+            "4e83d096e1c77386f94f::389bd0cd546eb2dd1c59be96",
+            "4e83d096e1c77386f94f::66ef3be961d17a889d947544",
+            "4e83d096e1c77386f94f::78bcd6a1fbf96117e96c58a0",
+            "4e83d096e1c77386f94f::c777e572b2cd48a617e18044",
+            "c8d0d491da5a64dca115::14d082de49bc8047a0112724",
+            "c8d0d491da5a64dca115::3c99faa62d8837c0a03dc323",
+            "c8d0d491da5a64dca115::7853000cdec12ff4721d82c0",
+            "c8d0d491da5a64dca115::e4ec97847818bc2afe594b34"
+          ],
+          "samples": 349,
+          "skipped": {
+            "masked": 0,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "temperature": 4.547229301350837,
+          "status": "FITTED",
+          "scope": "synthetic_BCI_domain_only",
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "bounds": [
+            0.05,
+            20.0
+          ],
+          "nll_before": 1.634004644610541,
+          "nll_after": 0.6107145119554532,
+          "total_rows": 349,
+          "support_fraction": 1.0,
+          "target_modes": [
+            "PROBABILITY"
+          ],
+          "outcome_calibration_not_identifiability_supervision": true,
+          "optimum_at_boundary": false
+        },
+        "channel": {
+          "version": "bci-vla-temperature/0.2",
+          "task": "channel",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "977baacd96c35166bf539e96b8c2b7c30283f6af7a3e83371dc0e6b5610de793"
+          },
+          "fit_split": "calibration_fit",
+          "fit_groups": [
+            "4e83d096e1c77386f94f",
+            "c8d0d491da5a64dca115"
+          ],
+          "fit_episodes": [
+            "4e83d096e1c77386f94f::389bd0cd546eb2dd1c59be96",
+            "4e83d096e1c77386f94f::66ef3be961d17a889d947544",
+            "4e83d096e1c77386f94f::78bcd6a1fbf96117e96c58a0",
+            "4e83d096e1c77386f94f::c777e572b2cd48a617e18044",
+            "c8d0d491da5a64dca115::14d082de49bc8047a0112724",
+            "c8d0d491da5a64dca115::3c99faa62d8837c0a03dc323",
+            "c8d0d491da5a64dca115::7853000cdec12ff4721d82c0",
+            "c8d0d491da5a64dca115::e4ec97847818bc2afe594b34"
+          ],
+          "samples": 177,
+          "skipped": {
+            "masked": 172,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "temperature": 1.74927935792352,
+          "status": "FITTED",
+          "scope": "synthetic_BCI_domain_only",
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "bounds": [
+            0.05,
+            20.0
+          ],
+          "nll_before": 0.6406291613553718,
+          "nll_after": 0.603041530884802,
+          "total_rows": 349,
+          "support_fraction": 0.5071633237822349,
+          "target_modes": [
+            "PROBABILITY"
+          ],
+          "outcome_calibration_not_identifiability_supervision": true,
+          "optimum_at_boundary": false
+        }
+      },
+      "fixed_history_audit": {
+        "intent": {
+          "split": "calibration_audit",
+          "task": "intent",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "977baacd96c35166bf539e96b8c2b7c30283f6af7a3e83371dc0e6b5610de793"
+          },
+          "samples": 349,
+          "skipped": {
+            "masked": 0,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "before": {
+            "brier": 0.5561451884629849,
+            "distribution_brier": 0.5108542102099256,
+            "nll": 1.5275909468044742,
+            "ece": 0.2892312426744795,
+            "ece_bins": 10,
+            "ece_kind": "top_label_confidence"
+          },
+          "after": {
+            "brier": 0.36141775076831273,
+            "distribution_brier": 0.3161267725152539,
+            "nll": 0.588108278036388,
+            "ece": 0.15516000407541788,
+            "ece_bins": 10,
+            "ece_kind": "top_label_confidence"
+          },
+          "scope": "synthetic_BCI_domain_only",
+          "fit_performed": false,
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "total_rows": 349,
+          "support_fraction": 1.0,
+          "groups": 2,
+          "episodes": 8,
+          "status": "AUDITED"
+        },
+        "channel": {
+          "split": "calibration_audit",
+          "task": "channel",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "977baacd96c35166bf539e96b8c2b7c30283f6af7a3e83371dc0e6b5610de793"
+          },
+          "samples": 178,
+          "skipped": {
+            "masked": 171,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "before": {
+            "brier": 0.259024218022314,
+            "distribution_brier": 0.2581561624667585,
+            "nll": 0.7359749737971836,
+            "ece": 0.19587050957149735,
+            "ece_bins": 10,
+            "ece_kind": "success_probability"
+          },
+          "after": {
+            "brier": 0.23347961538578368,
+            "distribution_brier": 0.2326115598302282,
+            "nll": 0.6589312358277808,
+            "ece": 0.0973147128762136,
+            "ece_bins": 10,
+            "ece_kind": "success_probability"
+          },
+          "scope": "synthetic_BCI_domain_only",
+          "fit_performed": false,
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "total_rows": 349,
+          "support_fraction": 0.5100286532951289,
+          "groups": 2,
+          "episodes": 8,
+          "status": "AUDITED"
+        }
+      },
+      "scope": "historical schedule only; online policy distribution audit still required"
+    },
+    "entropy_e6_c6_b12": {
+      "binding": {
+        "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+        "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+        "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+        "policy_sha256": "01484200789f9d0aca3804570274eb9cd6f80f078db4138cfea6adf02022c067"
+      },
+      "temperatures": {
+        "intent": {
+          "version": "bci-vla-temperature/0.2",
+          "task": "intent",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "01484200789f9d0aca3804570274eb9cd6f80f078db4138cfea6adf02022c067"
+          },
+          "fit_split": "calibration_fit",
+          "fit_groups": [
+            "4e83d096e1c77386f94f",
+            "c8d0d491da5a64dca115"
+          ],
+          "fit_episodes": [
+            "4e83d096e1c77386f94f::389bd0cd546eb2dd1c59be96",
+            "4e83d096e1c77386f94f::66ef3be961d17a889d947544",
+            "4e83d096e1c77386f94f::78bcd6a1fbf96117e96c58a0",
+            "4e83d096e1c77386f94f::c777e572b2cd48a617e18044",
+            "c8d0d491da5a64dca115::14d082de49bc8047a0112724",
+            "c8d0d491da5a64dca115::3c99faa62d8837c0a03dc323",
+            "c8d0d491da5a64dca115::7853000cdec12ff4721d82c0",
+            "c8d0d491da5a64dca115::e4ec97847818bc2afe594b34"
+          ],
+          "samples": 349,
+          "skipped": {
+            "masked": 0,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "temperature": 4.547229301350837,
+          "status": "FITTED",
+          "scope": "synthetic_BCI_domain_only",
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "bounds": [
+            0.05,
+            20.0
+          ],
+          "nll_before": 1.634004644610541,
+          "nll_after": 0.6107145119554532,
+          "total_rows": 349,
+          "support_fraction": 1.0,
+          "target_modes": [
+            "PROBABILITY"
+          ],
+          "outcome_calibration_not_identifiability_supervision": true,
+          "optimum_at_boundary": false
+        },
+        "channel": {
+          "version": "bci-vla-temperature/0.2",
+          "task": "channel",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "01484200789f9d0aca3804570274eb9cd6f80f078db4138cfea6adf02022c067"
+          },
+          "fit_split": "calibration_fit",
+          "fit_groups": [
+            "4e83d096e1c77386f94f",
+            "c8d0d491da5a64dca115"
+          ],
+          "fit_episodes": [
+            "4e83d096e1c77386f94f::389bd0cd546eb2dd1c59be96",
+            "4e83d096e1c77386f94f::66ef3be961d17a889d947544",
+            "4e83d096e1c77386f94f::78bcd6a1fbf96117e96c58a0",
+            "4e83d096e1c77386f94f::c777e572b2cd48a617e18044",
+            "c8d0d491da5a64dca115::14d082de49bc8047a0112724",
+            "c8d0d491da5a64dca115::3c99faa62d8837c0a03dc323",
+            "c8d0d491da5a64dca115::7853000cdec12ff4721d82c0",
+            "c8d0d491da5a64dca115::e4ec97847818bc2afe594b34"
+          ],
+          "samples": 177,
+          "skipped": {
+            "masked": 172,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "temperature": 1.74927935792352,
+          "status": "FITTED",
+          "scope": "synthetic_BCI_domain_only",
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "bounds": [
+            0.05,
+            20.0
+          ],
+          "nll_before": 0.6406291613553718,
+          "nll_after": 0.603041530884802,
+          "total_rows": 349,
+          "support_fraction": 0.5071633237822349,
+          "target_modes": [
+            "PROBABILITY"
+          ],
+          "outcome_calibration_not_identifiability_supervision": true,
+          "optimum_at_boundary": false
+        }
+      },
+      "fixed_history_audit": {
+        "intent": {
+          "split": "calibration_audit",
+          "task": "intent",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "01484200789f9d0aca3804570274eb9cd6f80f078db4138cfea6adf02022c067"
+          },
+          "samples": 349,
+          "skipped": {
+            "masked": 0,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "before": {
+            "brier": 0.5561451884629849,
+            "distribution_brier": 0.5108542102099256,
+            "nll": 1.5275909468044742,
+            "ece": 0.2892312426744795,
+            "ece_bins": 10,
+            "ece_kind": "top_label_confidence"
+          },
+          "after": {
+            "brier": 0.36141775076831273,
+            "distribution_brier": 0.3161267725152539,
+            "nll": 0.588108278036388,
+            "ece": 0.15516000407541788,
+            "ece_bins": 10,
+            "ece_kind": "top_label_confidence"
+          },
+          "scope": "synthetic_BCI_domain_only",
+          "fit_performed": false,
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "total_rows": 349,
+          "support_fraction": 1.0,
+          "groups": 2,
+          "episodes": 8,
+          "status": "AUDITED"
+        },
+        "channel": {
+          "split": "calibration_audit",
+          "task": "channel",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "01484200789f9d0aca3804570274eb9cd6f80f078db4138cfea6adf02022c067"
+          },
+          "samples": 178,
+          "skipped": {
+            "masked": 171,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "before": {
+            "brier": 0.259024218022314,
+            "distribution_brier": 0.2581561624667585,
+            "nll": 0.7359749737971836,
+            "ece": 0.19587050957149735,
+            "ece_bins": 10,
+            "ece_kind": "success_probability"
+          },
+          "after": {
+            "brier": 0.23347961538578368,
+            "distribution_brier": 0.2326115598302282,
+            "nll": 0.6589312358277808,
+            "ece": 0.0973147128762136,
+            "ece_bins": 10,
+            "ece_kind": "success_probability"
+          },
+          "scope": "synthetic_BCI_domain_only",
+          "fit_performed": false,
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "total_rows": 349,
+          "support_fraction": 0.5100286532951289,
+          "groups": 2,
+          "episodes": 8,
+          "status": "AUDITED"
+        }
+      },
+      "scope": "historical schedule only; online policy distribution audit still required"
+    },
+    "auxiliary_i6_c4_b8": {
+      "binding": {
+        "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+        "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+        "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+        "policy_sha256": "e432a6ad5439def9339749d3826e5a5e848d57a24b9f217368e72978130139bb"
+      },
+      "temperatures": {
+        "intent": {
+          "version": "bci-vla-temperature/0.2",
+          "task": "intent",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "e432a6ad5439def9339749d3826e5a5e848d57a24b9f217368e72978130139bb"
+          },
+          "fit_split": "calibration_fit",
+          "fit_groups": [
+            "4e83d096e1c77386f94f",
+            "c8d0d491da5a64dca115"
+          ],
+          "fit_episodes": [
+            "4e83d096e1c77386f94f::389bd0cd546eb2dd1c59be96",
+            "4e83d096e1c77386f94f::66ef3be961d17a889d947544",
+            "4e83d096e1c77386f94f::78bcd6a1fbf96117e96c58a0",
+            "4e83d096e1c77386f94f::c777e572b2cd48a617e18044",
+            "c8d0d491da5a64dca115::14d082de49bc8047a0112724",
+            "c8d0d491da5a64dca115::3c99faa62d8837c0a03dc323",
+            "c8d0d491da5a64dca115::7853000cdec12ff4721d82c0",
+            "c8d0d491da5a64dca115::e4ec97847818bc2afe594b34"
+          ],
+          "samples": 349,
+          "skipped": {
+            "masked": 0,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "temperature": 4.547229301350837,
+          "status": "FITTED",
+          "scope": "synthetic_BCI_domain_only",
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "bounds": [
+            0.05,
+            20.0
+          ],
+          "nll_before": 1.634004644610541,
+          "nll_after": 0.6107145119554532,
+          "total_rows": 349,
+          "support_fraction": 1.0,
+          "target_modes": [
+            "PROBABILITY"
+          ],
+          "outcome_calibration_not_identifiability_supervision": true,
+          "optimum_at_boundary": false
+        },
+        "channel": {
+          "version": "bci-vla-temperature/0.2",
+          "task": "channel",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "e432a6ad5439def9339749d3826e5a5e848d57a24b9f217368e72978130139bb"
+          },
+          "fit_split": "calibration_fit",
+          "fit_groups": [
+            "4e83d096e1c77386f94f",
+            "c8d0d491da5a64dca115"
+          ],
+          "fit_episodes": [
+            "4e83d096e1c77386f94f::389bd0cd546eb2dd1c59be96",
+            "4e83d096e1c77386f94f::66ef3be961d17a889d947544",
+            "4e83d096e1c77386f94f::78bcd6a1fbf96117e96c58a0",
+            "4e83d096e1c77386f94f::c777e572b2cd48a617e18044",
+            "c8d0d491da5a64dca115::14d082de49bc8047a0112724",
+            "c8d0d491da5a64dca115::3c99faa62d8837c0a03dc323",
+            "c8d0d491da5a64dca115::7853000cdec12ff4721d82c0",
+            "c8d0d491da5a64dca115::e4ec97847818bc2afe594b34"
+          ],
+          "samples": 177,
+          "skipped": {
+            "masked": 172,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "temperature": 1.74927935792352,
+          "status": "FITTED",
+          "scope": "synthetic_BCI_domain_only",
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "bounds": [
+            0.05,
+            20.0
+          ],
+          "nll_before": 0.6406291613553718,
+          "nll_after": 0.603041530884802,
+          "total_rows": 349,
+          "support_fraction": 0.5071633237822349,
+          "target_modes": [
+            "PROBABILITY"
+          ],
+          "outcome_calibration_not_identifiability_supervision": true,
+          "optimum_at_boundary": false
+        }
+      },
+      "fixed_history_audit": {
+        "intent": {
+          "split": "calibration_audit",
+          "task": "intent",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "e432a6ad5439def9339749d3826e5a5e848d57a24b9f217368e72978130139bb"
+          },
+          "samples": 349,
+          "skipped": {
+            "masked": 0,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "before": {
+            "brier": 0.5561451884629849,
+            "distribution_brier": 0.5108542102099256,
+            "nll": 1.5275909468044742,
+            "ece": 0.2892312426744795,
+            "ece_bins": 10,
+            "ece_kind": "top_label_confidence"
+          },
+          "after": {
+            "brier": 0.36141775076831273,
+            "distribution_brier": 0.3161267725152539,
+            "nll": 0.588108278036388,
+            "ece": 0.15516000407541788,
+            "ece_bins": 10,
+            "ece_kind": "top_label_confidence"
+          },
+          "scope": "synthetic_BCI_domain_only",
+          "fit_performed": false,
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "total_rows": 349,
+          "support_fraction": 1.0,
+          "groups": 2,
+          "episodes": 8,
+          "status": "AUDITED"
+        },
+        "channel": {
+          "split": "calibration_audit",
+          "task": "channel",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "e432a6ad5439def9339749d3826e5a5e848d57a24b9f217368e72978130139bb"
+          },
+          "samples": 178,
+          "skipped": {
+            "masked": 171,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "before": {
+            "brier": 0.259024218022314,
+            "distribution_brier": 0.2581561624667585,
+            "nll": 0.7359749737971836,
+            "ece": 0.19587050957149735,
+            "ece_bins": 10,
+            "ece_kind": "success_probability"
+          },
+          "after": {
+            "brier": 0.23347961538578368,
+            "distribution_brier": 0.2326115598302282,
+            "nll": 0.6589312358277808,
+            "ece": 0.0973147128762136,
+            "ece_bins": 10,
+            "ece_kind": "success_probability"
+          },
+          "scope": "synthetic_BCI_domain_only",
+          "fit_performed": false,
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "total_rows": 349,
+          "support_fraction": 0.5100286532951289,
+          "groups": 2,
+          "episodes": 8,
+          "status": "AUDITED"
+        }
+      },
+      "scope": "historical schedule only; online policy distribution audit still required"
+    },
+    "auxiliary_i6_c4_b12": {
+      "binding": {
+        "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+        "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+        "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+        "policy_sha256": "da9b35c0ddde7f8955775d6b9cdd4b60d1bb147489900e82aeff79e9edbeddda"
+      },
+      "temperatures": {
+        "intent": {
+          "version": "bci-vla-temperature/0.2",
+          "task": "intent",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "da9b35c0ddde7f8955775d6b9cdd4b60d1bb147489900e82aeff79e9edbeddda"
+          },
+          "fit_split": "calibration_fit",
+          "fit_groups": [
+            "4e83d096e1c77386f94f",
+            "c8d0d491da5a64dca115"
+          ],
+          "fit_episodes": [
+            "4e83d096e1c77386f94f::389bd0cd546eb2dd1c59be96",
+            "4e83d096e1c77386f94f::66ef3be961d17a889d947544",
+            "4e83d096e1c77386f94f::78bcd6a1fbf96117e96c58a0",
+            "4e83d096e1c77386f94f::c777e572b2cd48a617e18044",
+            "c8d0d491da5a64dca115::14d082de49bc8047a0112724",
+            "c8d0d491da5a64dca115::3c99faa62d8837c0a03dc323",
+            "c8d0d491da5a64dca115::7853000cdec12ff4721d82c0",
+            "c8d0d491da5a64dca115::e4ec97847818bc2afe594b34"
+          ],
+          "samples": 349,
+          "skipped": {
+            "masked": 0,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "temperature": 4.547229301350837,
+          "status": "FITTED",
+          "scope": "synthetic_BCI_domain_only",
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "bounds": [
+            0.05,
+            20.0
+          ],
+          "nll_before": 1.634004644610541,
+          "nll_after": 0.6107145119554532,
+          "total_rows": 349,
+          "support_fraction": 1.0,
+          "target_modes": [
+            "PROBABILITY"
+          ],
+          "outcome_calibration_not_identifiability_supervision": true,
+          "optimum_at_boundary": false
+        },
+        "channel": {
+          "version": "bci-vla-temperature/0.2",
+          "task": "channel",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "da9b35c0ddde7f8955775d6b9cdd4b60d1bb147489900e82aeff79e9edbeddda"
+          },
+          "fit_split": "calibration_fit",
+          "fit_groups": [
+            "4e83d096e1c77386f94f",
+            "c8d0d491da5a64dca115"
+          ],
+          "fit_episodes": [
+            "4e83d096e1c77386f94f::389bd0cd546eb2dd1c59be96",
+            "4e83d096e1c77386f94f::66ef3be961d17a889d947544",
+            "4e83d096e1c77386f94f::78bcd6a1fbf96117e96c58a0",
+            "4e83d096e1c77386f94f::c777e572b2cd48a617e18044",
+            "c8d0d491da5a64dca115::14d082de49bc8047a0112724",
+            "c8d0d491da5a64dca115::3c99faa62d8837c0a03dc323",
+            "c8d0d491da5a64dca115::7853000cdec12ff4721d82c0",
+            "c8d0d491da5a64dca115::e4ec97847818bc2afe594b34"
+          ],
+          "samples": 177,
+          "skipped": {
+            "masked": 172,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "temperature": 1.74927935792352,
+          "status": "FITTED",
+          "scope": "synthetic_BCI_domain_only",
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "bounds": [
+            0.05,
+            20.0
+          ],
+          "nll_before": 0.6406291613553718,
+          "nll_after": 0.603041530884802,
+          "total_rows": 349,
+          "support_fraction": 0.5071633237822349,
+          "target_modes": [
+            "PROBABILITY"
+          ],
+          "outcome_calibration_not_identifiability_supervision": true,
+          "optimum_at_boundary": false
+        }
+      },
+      "fixed_history_audit": {
+        "intent": {
+          "split": "calibration_audit",
+          "task": "intent",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "da9b35c0ddde7f8955775d6b9cdd4b60d1bb147489900e82aeff79e9edbeddda"
+          },
+          "samples": 349,
+          "skipped": {
+            "masked": 0,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "before": {
+            "brier": 0.5561451884629849,
+            "distribution_brier": 0.5108542102099256,
+            "nll": 1.5275909468044742,
+            "ece": 0.2892312426744795,
+            "ece_bins": 10,
+            "ece_kind": "top_label_confidence"
+          },
+          "after": {
+            "brier": 0.36141775076831273,
+            "distribution_brier": 0.3161267725152539,
+            "nll": 0.588108278036388,
+            "ece": 0.15516000407541788,
+            "ece_bins": 10,
+            "ece_kind": "top_label_confidence"
+          },
+          "scope": "synthetic_BCI_domain_only",
+          "fit_performed": false,
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "total_rows": 349,
+          "support_fraction": 1.0,
+          "groups": 2,
+          "episodes": 8,
+          "status": "AUDITED"
+        },
+        "channel": {
+          "split": "calibration_audit",
+          "task": "channel",
+          "binding": {
+            "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+            "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+            "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+            "policy_sha256": "da9b35c0ddde7f8955775d6b9cdd4b60d1bb147489900e82aeff79e9edbeddda"
+          },
+          "samples": 178,
+          "skipped": {
+            "masked": 171,
+            "unsupported": 0,
+            "nonpoint": 0
+          },
+          "before": {
+            "brier": 0.259024218022314,
+            "distribution_brier": 0.2581561624667585,
+            "nll": 0.7359749737971836,
+            "ece": 0.19587050957149735,
+            "ece_bins": 10,
+            "ece_kind": "success_probability"
+          },
+          "after": {
+            "brier": 0.23347961538578368,
+            "distribution_brier": 0.2326115598302282,
+            "nll": 0.6589312358277808,
+            "ece": 0.0973147128762136,
+            "ece_bins": 10,
+            "ece_kind": "success_probability"
+          },
+          "scope": "synthetic_BCI_domain_only",
+          "fit_performed": false,
+          "weighting": "equal scene groups, then equal base episodes, then rows",
+          "total_rows": 349,
+          "support_fraction": 0.5100286532951289,
+          "groups": 2,
+          "episodes": 8,
+          "status": "AUDITED"
+        }
+      },
+      "scope": "historical schedule only; online policy distribution audit still required"
+    }
+  },
+  "validation_selection": {
+    "split": "validation",
+    "selected_policy_id": null,
+    "scores": {
+      "fixed_i4_c4_b8": {
+        "resolved_fraction": 0.5625,
+        "all_conditions_resolved_fraction": 0.0,
+        "wrong_episode_rate": 0.75,
+        "interaction_cost": 96.0,
+        "episodes": 8,
+        "groups": 2,
+        "variant": "fixed_threshold",
+        "config_sha256": "d0f8c2bd70b6bfe9a26a2ffb293dbb011b1bf39cf7246ac9813df79c4fee9c10"
+      },
+      "fixed_i4_c4_b12": {
+        "resolved_fraction": 0.59375,
+        "all_conditions_resolved_fraction": 0.0,
+        "wrong_episode_rate": 0.75,
+        "interaction_cost": 96.0,
+        "episodes": 8,
+        "groups": 2,
+        "variant": "fixed_threshold",
+        "config_sha256": "472d8ced2d6d01b012f3fba7a540cabb6d9c97c66fc837f46d949d8a18debb85"
+      },
+      "fixed_i4_c6_b8": {
+        "resolved_fraction": 0.5,
+        "all_conditions_resolved_fraction": 0.0,
+        "wrong_episode_rate": 0.75,
+        "interaction_cost": 96.0,
+        "episodes": 8,
+        "groups": 2,
+        "variant": "fixed_threshold",
+        "config_sha256": "b401f66d2bf94fd42c00362a3ed09d3c50c3df34ceb182fb5f4b91926981033f"
+      },
+      "fixed_i4_c6_b12": {
+        "resolved_fraction": 0.59375,
+        "all_conditions_resolved_fraction": 0.0,
+        "wrong_episode_rate": 0.75,
+        "interaction_cost": 96.0,
+        "episodes": 8,
+        "groups": 2,
+        "variant": "fixed_threshold",
+        "config_sha256": "56789ab43909cfe2e48526337da6aad23874d2fc39309f831de23b222e30bb57"
+      },
+      "fixed_i6_c4_b8": {
+        "resolved_fraction": 0.5625,
+        "all_conditions_resolved_fraction": 0.0,
+        "wrong_episode_rate": 0.75,
+        "interaction_cost": 96.0,
+        "episodes": 8,
+        "groups": 2,
+        "variant": "fixed_threshold",
+        "config_sha256": "eeff6ad3ad96548aac35314343169b4b25475aeac2b025ac5a1c70fb0d3190dc"
+      },
+      "fixed_i6_c4_b12": {
+        "resolved_fraction": 0.59375,
+        "all_conditions_resolved_fraction": 0.0,
+        "wrong_episode_rate": 0.75,
+        "interaction_cost": 96.0,
+        "episodes": 8,
+        "groups": 2,
+        "variant": "fixed_threshold",
+        "config_sha256": "7d610e9c8b4425e0558dc02de1c480d4367db52cb22e309b8e27c5e92b12ddcf"
+      },
+      "fixed_i6_c6_b8": {
+        "resolved_fraction": 0.5,
+        "all_conditions_resolved_fraction": 0.0,
+        "wrong_episode_rate": 0.75,
+        "interaction_cost": 96.0,
+        "episodes": 8,
+        "groups": 2,
+        "variant": "fixed_threshold",
+        "config_sha256": "f540a9c937b16fb2265828b2bfce8c8577789ace59d505213ea426cf09cfb5f4"
+      },
+      "fixed_i6_c6_b12": {
+        "resolved_fraction": 0.59375,
+        "all_conditions_resolved_fraction": 0.0,
+        "wrong_episode_rate": 0.75,
+        "interaction_cost": 96.0,
+        "episodes": 8,
+        "groups": 2,
+        "variant": "fixed_threshold",
+        "config_sha256": "8a2002bfde77d8808b44823ec31b1acea7c30991c52a14448888e6b3abb347f4"
+      },
+      "fixed_i8_c4_b8": {
+        "resolved_fraction": 0.3125,
+        "all_conditions_resolved_fraction": 0.0,
+        "wrong_episode_rate": 0.375,
+        "interaction_cost": 96.0,
+        "episodes": 8,
+        "groups": 2,
+        "variant": "fixed_threshold",
+        "config_sha256": "0d6e6f475a46e1e3e7496b6e884e419d4499f96ca8d6fb3d1259e13699398587"
+      },
+      "fixed_i8_c4_b12": {
+        "resolved_fraction": 0.375,
+        "all_conditions_resolved_fraction": 0.0,
+        "wrong_episode_rate": 0.375,
+        "interaction_cost": 96.0,
+        "episodes": 8,
+        "groups": 2,
+        "variant": "fixed_threshold",
+        "config_sha256": "47b6e2fa0a07c93b2f248834248cef1ff5a5b7de872f3fc1eba3ae5fb4607906"
+      },
+      "fixed_i8_c6_b8": {
+        "resolved_fraction": 0.3125,
+        "all_conditions_resolved_fraction": 0.0,
+        "wrong_episode_rate": 0.375,
+        "interaction_cost": 96.0,
+        "episodes": 8,
+        "groups": 2,
+        "variant": "fixed_threshold",
+        "config_sha256": "fe25d0a3875580e24b02ef6c96e00f9261a30db3e50cf9c6c7372875fd134e31"
+      },
+      "fixed_i8_c6_b12": {
+        "resolved_fraction": 0.375,
+        "all_conditions_resolved_fraction": 0.0,
+        "wrong_episode_rate": 0.375,
+        "interaction_cost": 96.0,
+        "episodes": 8,
+        "groups": 2,
+        "variant": "fixed_threshold",
+        "config_sha256": "cddc9c6b2619b0476a53a759f3b6e31b9b9011d7224e1511ea721cc55adb76e1"
+      },
+      "entropy_e4_c4_b8": {
+        "resolved_fraction": 0.0,
+        "all_conditions_resolved_fraction": 0.0,
+        "wrong_episode_rate": 0.0,
+        "interaction_cost": 96.0,
+        "episodes": 8,
+        "groups": 2,
+        "variant": "entropy_threshold",
+        "config_sha256": "1f8a9b65bbc7d1c670158b729a2422c0815f0e2f290ee050cf901439db2b63db"
+      },
+      "entropy_e4_c4_b12": {
+        "resolved_fraction": 0.0,
+        "all_conditions_resolved_fraction": 0.0,
+        "wrong_episode_rate": 0.125,
+        "interaction_cost": 96.0,
+        "episodes": 8,
+        "groups": 2,
+        "variant": "entropy_threshold",
+        "config_sha256": "8d2372df133d28c256120faa731dea8449efa00f3863ba26bae6554d2c10295f"
+      },
+      "entropy_e4_c6_b8": {
+        "resolved_fraction": 0.0,
+        "all_conditions_resolved_fraction": 0.0,
+        "wrong_episode_rate": 0.0,
+        "interaction_cost": 96.0,
+        "episodes": 8,
+        "groups": 2,
+        "variant": "entropy_threshold",
+        "config_sha256": "7e228361fda6918d2d4f5b715ed96ab494927b93eb2186493e799234c6dc42ed"
+      },
+      "entropy_e4_c6_b12": {
+        "resolved_fraction": 0.0,
+        "all_conditions_resolved_fraction": 0.0,
+        "wrong_episode_rate": 0.125,
+        "interaction_cost": 96.0,
+        "episodes": 8,
+        "groups": 2,
+        "variant": "entropy_threshold",
+        "config_sha256": "88b15584d508d5f4d19646316f47feae581629f5dc476815fce695904d134d4b"
+      },
+      "entropy_e6_c4_b8": {
+        "resolved_fraction": 0.375,
+        "all_conditions_resolved_fraction": 0.0,
+        "wrong_episode_rate": 0.375,
+        "interaction_cost": 96.0,
+        "episodes": 8,
+        "groups": 2,
+        "variant": "entropy_threshold",
+        "config_sha256": "3434694c07f9eff88857e9a9dd78b0f10ba42ca6d0f3b7385bb554b6c80c5046"
+      },
+      "entropy_e6_c4_b12": {
+        "resolved_fraction": 0.4375,
+        "all_conditions_resolved_fraction": 0.125,
+        "wrong_episode_rate": 0.5,
+        "interaction_cost": 96.0,
+        "episodes": 8,
+        "groups": 2,
+        "variant": "entropy_threshold",
+        "config_sha256": "774026091b8b24a8ade58e8e5121f18aac1057a093263a1a63e7f8f84f0d3a2c"
+      },
+      "entropy_e6_c6_b8": {
+        "resolved_fraction": 0.34375,
+        "all_conditions_resolved_fraction": 0.0,
+        "wrong_episode_rate": 0.375,
+        "interaction_cost": 96.0,
+        "episodes": 8,
+        "groups": 2,
+        "variant": "entropy_threshold",
+        "config_sha256": "977baacd96c35166bf539e96b8c2b7c30283f6af7a3e83371dc0e6b5610de793"
+      },
+      "entropy_e6_c6_b12": {
+        "resolved_fraction": 0.40625,
+        "all_conditions_resolved_fraction": 0.125,
+        "wrong_episode_rate": 0.5,
+        "interaction_cost": 96.0,
+        "episodes": 8,
+        "groups": 2,
+        "variant": "entropy_threshold",
+        "config_sha256": "01484200789f9d0aca3804570274eb9cd6f80f078db4138cfea6adf02022c067"
+      },
+      "auxiliary_i6_c4_b8": {
+        "resolved_fraction": 0.0,
+        "all_conditions_resolved_fraction": 0.0,
+        "wrong_episode_rate": 0.0,
+        "interaction_cost": 96.0,
+        "episodes": 8,
+        "groups": 2,
+        "variant": "auxiliary",
+        "config_sha256": "e432a6ad5439def9339749d3826e5a5e848d57a24b9f217368e72978130139bb"
+      },
+      "auxiliary_i6_c4_b12": {
+        "resolved_fraction": 0.0,
+        "all_conditions_resolved_fraction": 0.0,
+        "wrong_episode_rate": 0.0,
+        "interaction_cost": 96.0,
+        "episodes": 8,
+        "groups": 2,
+        "variant": "auxiliary",
+        "config_sha256": "da9b35c0ddde7f8955775d6b9cdd4b60d1bb147489900e82aeff79e9edbeddda"
+      }
+    },
+    "resolution_field": "condition_resolution_fraction",
+    "retained_fixed_rule": false,
+    "risk_basis": "scene-macro episode point estimate; no statistical guarantee",
+    "all_wait_counts_as_unresolved": true,
+    "requires_rebinding_and_calibration_audit": true
+  },
+  "predictor_forward_calls": 1492,
+  "predictor_cache_hits": 7654,
+  "online_policy_audit": {
+    "status": "NOT_RUN_NO_SELECTED_POLICY",
+    "split": "calibration_audit"
+  },
+  "elapsed_s": 138.29485314385965,
+  "remote_job": "/home/oyjt/Scene-aware-BCI-VLA-runs/v4_step09_calibration_20261018_v2",
+  "remote_exit_code": 1,
+  "stderr": "",
+  "local_evidence_archive": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\09_calibration_results2.zip",
+  "local_evidence_archive_sha256": "700e022bae5a3929875fe92f71245696ea8e95b3954d6e3ba5ede8f90be201e0"
+}

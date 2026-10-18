@@ -1,0 +1,561 @@
+{
+  "step": "V4-04",
+  "files": [
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\data_v4\\__init__.py",
+      "sha256": "073d6dec761c49e5186558017c5830a68f0f1316f73da4ac57ea70331223f8ac"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\data_v4\\channel.py",
+      "sha256": "4e1dbb76ee44ef8a563f5e565b5d6f69da29888d26ab89c86aa0f625d59e15ec"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\bci_vla\\data_v4\\contracts.py",
+      "sha256": "4638b75b1db24a7512ee1325e11f74ad74e927f564bb32cf8f6b8672b6c96f40"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\configs\\v4\\interfaces_data_4_1.json",
+      "sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\configs\\v4\\platform_binding.json",
+      "sha256": "cd1105b21a31163fe7f8e64b89cd2923983d3546b292ac5cfab683b676fee4b3"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\annotation_rules.txt",
+      "sha256": "a420773880821a11999a3358bc33dc7224423ee9dbd156cdf7141f0299553bba"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\calibration_audit\\private_future_probe.jsonl",
+      "sha256": "2341d2f22235a8720a64d04db0580b69e72891109d7a6735dc4d93a4408e69d2"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\calibration_audit\\private_labels.jsonl",
+      "sha256": "31ed371c9a0fda162f5bb091df2dee09f25736cbd4a1d86637b6080c1502b94a"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\calibration_audit\\public_input.jsonl",
+      "sha256": "fa15fa39516bd9be09d22983def6ca46108d57cce7df266fc80f131bfa811f0b"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\calibration_fit\\private_future_probe.jsonl",
+      "sha256": "ceb4d780c8161be89cdbffc7cb0fd326a8c808e82cc2ea193dc81c22e1c4f395"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\calibration_fit\\private_labels.jsonl",
+      "sha256": "d969f0d2de09fec7257bdd902d898e10fdf17139ea9506c0a57a91b86cfcd99b"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\calibration_fit\\public_input.jsonl",
+      "sha256": "c4ff49ea449322adcbf183fd561c01ee52a767fe1f42e77656e299bba1bcf937"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\capture_manifest.json",
+      "sha256": "3d6c103bceb6fd4cdf5f75b11ab909bb04dd74dedf76681888915902a1871fdb"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\04154e43d8656849881935c8_0.png",
+      "sha256": "7c26e311706497ca62a6652cc5cdfc720c607787f2bdc6562382fb1a9a8c86a1"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\04154e43d8656849881935c8_1.png",
+      "sha256": "247e3bdfe8b9910a493af4392eb5be3597519700c86460a124a656a581540b8a"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\0984040b886020f7c7d38775_0.png",
+      "sha256": "f74dcdaf158724415a549e6b35c67dc860ff4ecf0af6986798bc01790cd0f990"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\0984040b886020f7c7d38775_1.png",
+      "sha256": "e9d0759c2d53062e7bd8c0c4bfbe7faff21ac410b58368f6859faa2d49323c18"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\09b8103eb9900503cd143c36_0.png",
+      "sha256": "866902c040ec89b13682ad59b653f3f33354de1e2e8c7feeb66fce1078a3b7c7"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\09b8103eb9900503cd143c36_1.png",
+      "sha256": "aab87c7773c082ec77b399c59c83cd76793ef94563a2f5617af9c5fc9645503c"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\14d082de49bc8047a0112724_0.png",
+      "sha256": "5673d17c9dfef8dcf39ea1412bde65d3528f0ad5d801cae75c7c7c73accb4905"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\14d082de49bc8047a0112724_1.png",
+      "sha256": "46fed0a9e584b068b1e4e57ac991bc1a8ad46bbcc733c7b4c80c36181a313081"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\17243b91180af53121bbb044_0.png",
+      "sha256": "c29b874a2364b75e0b7e0738f705dbc9b55593fbbfedacbca4a3c1b296a12e2c"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\17243b91180af53121bbb044_1.png",
+      "sha256": "88b47f3db6da238d57d9fb77baccfc01bb92c1118df4d0f77b507aff5a1eab99"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\1f78b94654ffba049895ff20_0.png",
+      "sha256": "8a93a848f0522735349c9b6c80da251b4304f0727fefc2f5c14d3d020c27899c"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\1f78b94654ffba049895ff20_1.png",
+      "sha256": "54484fb8380f5f8cf7aad4e15b2e18e21e2b8d020d360fe9086fff4c81150e4f"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\223d74563971711fb916a384_0.png",
+      "sha256": "d533555ad96f5c93ed1872cda7bedb2822a3f417c34407132711ad015fba145d"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\223d74563971711fb916a384_1.png",
+      "sha256": "cdbceac6fc5b65c09f3b417c94af333b4f1ad3ca0b768badc6d5fab249579faa"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\29e708d5a05f0918b4eb0a98_0.png",
+      "sha256": "e29c505dae0df163bd11bf264c74e0d07c9b4af426e4d8703da7cbf5fb4ab9c6"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\29e708d5a05f0918b4eb0a98_1.png",
+      "sha256": "a53e2131cc7e727f8195fed839bce87ca2a2375b7edfe0e70b2dc3a12e0098d3"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\2a97a8cf372c38008bb97a22_0.png",
+      "sha256": "b06f328bbc42c5dcedfe8b70d6514c87a11847c7e99340ac6834e0865903f108"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\2a97a8cf372c38008bb97a22_1.png",
+      "sha256": "1e2e75b208ea25d954a6414191c1b54aea1529bf92c494c011f6d334f7b8f836"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\2db4ddf92e39816c249d5b8c_0.png",
+      "sha256": "a9349c5464126196d4b9f09e38e3946556c8e097381d9e32b7f2b3d02d506505"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\2db4ddf92e39816c249d5b8c_1.png",
+      "sha256": "7c191eb9a6fb40608b9c894bdebe21c63d4301a3a70166fac53531a64e54ba90"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\389bd0cd546eb2dd1c59be96_0.png",
+      "sha256": "42337bce0b6f28610d1d4d207ce4db70673974d3d4ae26241ffedf5aa4b6dae7"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\389bd0cd546eb2dd1c59be96_1.png",
+      "sha256": "c8fabf86d2071034f6aa844be5b662928edc6801333571722d3b533f4d91c217"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\3c99faa62d8837c0a03dc323_0.png",
+      "sha256": "deda99f402a83fb65236fb0ddd11dc985ce83bfb4c9065e79cdddf876fb4a0be"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\3c99faa62d8837c0a03dc323_1.png",
+      "sha256": "e04ed6e41e2a20db5520374a7b6dbf9fd3e93eb1468fa2cd70c8139cf9416030"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\3ca46f06f2e98c7585e4453d_0.png",
+      "sha256": "a9ec504cb31644a1ccfc98e659e00e17c715f66f8f35e7656b062c7d4ea2f74e"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\3ca46f06f2e98c7585e4453d_1.png",
+      "sha256": "4cf7d4448212498da9294d2b330ced79b70955820786f014fe509de1172e176c"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\3e7f4a934272c0ac1dcfa709_0.png",
+      "sha256": "679828cf82849782b1af1d081cdf31325b303e1b9124ad8e74c9078352fd27fa"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\3e7f4a934272c0ac1dcfa709_1.png",
+      "sha256": "aaf2c82d91131889ee5b9dfffac788ac658db334b5656e99573f5ad3bcad641c"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\46090868d3ca5183d06c31d4_0.png",
+      "sha256": "81e1e38138c222eec8c9339fcce2963a41d6b0bac54ec9f26a768dfb77858f0a"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\46090868d3ca5183d06c31d4_1.png",
+      "sha256": "f8381cd86771c3cdb91134b8ea560f40799fabbef335990a67192d0cd8436267"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\4e9f98b02d0aa8f685be49dd_0.png",
+      "sha256": "973bf2ed6e4b194d1dc4f14c3b4aa3daa5791151997eebd6db58efc31bf8248c"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\4e9f98b02d0aa8f685be49dd_1.png",
+      "sha256": "535990d0a8c9099b13593a89db1b4454976c8bfa78aee38ee83318df12c8a3b9"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\5d1f6264a4adb79b3e423b36_0.png",
+      "sha256": "a559a536c810ffc0767bb2ceb8bf729381e2dd3935123a7d032f326927d240fe"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\5d1f6264a4adb79b3e423b36_1.png",
+      "sha256": "4bcfa8315e557fa4619b5034355d616734276e936acb53608bfc43a4d5e553d7"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\64fcf448cd902179694b3865_0.png",
+      "sha256": "e16b6c94a5f357ce50e662b559a630c16b41831b0f9957383ea29f8e0a29322f"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\64fcf448cd902179694b3865_1.png",
+      "sha256": "e1a4c548688a827265225423e493edd84990e6ce8102b4a971e1fab94a634362"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\65f82be576efd9a4d3381acc_0.png",
+      "sha256": "204188f9af279d6dff77851f4f346b3d12375d9a0045e5e2d4693b6c2a1b3e21"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\65f82be576efd9a4d3381acc_1.png",
+      "sha256": "64afa6a85c711b7e358d3be19b289d71affcace08d3d701eb121ec97e1a261a9"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\6601432a410389a03c224d0b_0.png",
+      "sha256": "5f5651e630b084c5bdf44f606e4ffaf044b8568c76b0ea234edc84c06b8b4456"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\6601432a410389a03c224d0b_1.png",
+      "sha256": "103dfccff34c15ef9e8fd07a7893bd52d22b263cdebbd8044d2044aec47e4c36"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\66c54cbd120fded5bec9b5b7_0.png",
+      "sha256": "d406eaeb8f26f6900631ef76eb8637453a6ccf8a4872b574cd33dddf280e069b"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\66c54cbd120fded5bec9b5b7_1.png",
+      "sha256": "886c166dc8740c6fc890529e6f38f73374c55a4069d8e9fbf6e02f1509be9f5b"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\66ef3be961d17a889d947544_0.png",
+      "sha256": "2495c0cf67a7fdafeaf3f738214742169554e7a9079366e1b4c390fae697c5a7"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\66ef3be961d17a889d947544_1.png",
+      "sha256": "9d826792ce661b6cfe37c6e1f528d6d0bf8a33e815a6e8d4d77b95618b09bc14"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\67c5dafe72c0b3ace0f3fd3e_0.png",
+      "sha256": "2c799fd8ff6d18c4a16d1a0584cc5d88671c683b4d75593bd191f97e31a03264"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\67c5dafe72c0b3ace0f3fd3e_1.png",
+      "sha256": "63209c61af6926d82e2e19661ed296ac04cd26e359532274621c24b87cd1b570"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\6914de021eca3ca8b3623068_0.png",
+      "sha256": "a40e4f45c9b6964441f8fa51e0a1c4dbb58a07d9ac737bd3b1a8fcde6eee5e85"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\6914de021eca3ca8b3623068_1.png",
+      "sha256": "65ff92689bc5e670c39ec2d88bc5882b6bf3ca9cdbf39ab8b2f8379bbe8f01c5"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\6c8727dd8d0fbad1eabe4812_0.png",
+      "sha256": "2ed61a4a60728dcfc7d70d42ddd2d6c4fc80cbc10d64d299dabda2e37bf0b88a"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\6c8727dd8d0fbad1eabe4812_1.png",
+      "sha256": "b9a13e31b805563b258ba08c5d6118da5e84bffffc877ef71918a3519a9bd023"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\6d0170acdb81587a5592a8e1_0.png",
+      "sha256": "87c566e197d44b3ac853b494e47562f77ce44ff00514c4df63290d5d760cfd51"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\6d0170acdb81587a5592a8e1_1.png",
+      "sha256": "768cae138e82f7d9472dce53164bbc3e167bcb05f9d1d1684d72d8e04f64c62b"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\70ccc7920d34f4976ad77fdb_0.png",
+      "sha256": "dda10fac95e8e4f9b85c0504e54da7296574a329ebd689701c0479c1a3fbbb6b"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\70ccc7920d34f4976ad77fdb_1.png",
+      "sha256": "b27a906206948309c2ef91c7ce946878fde4c6245629002644c40846810d6990"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\7174f73d7055530f63773963_0.png",
+      "sha256": "59e8969855ed98ac25db5266c86b689f7373f19736098ba6f8937eefd6ec6438"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\7174f73d7055530f63773963_1.png",
+      "sha256": "b3c3a5cf935170610adaf88f1dfcc28d340f8195d07db04147220edb20822f9b"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\7853000cdec12ff4721d82c0_0.png",
+      "sha256": "14b68874807af6b3474c9d486f10a19215f64fcd798e75a2049b58f501b75ef0"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\7853000cdec12ff4721d82c0_1.png",
+      "sha256": "0ff7a3ee7737a369d6b3e78948bc31a8db06043b1bddfa8096fb9e43b56f7968"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\78bcd6a1fbf96117e96c58a0_0.png",
+      "sha256": "c8b2b80f5193258e16235ec54c485ff15ccc55cad301bf56df68d624f1369aed"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\78bcd6a1fbf96117e96c58a0_1.png",
+      "sha256": "30de896d008cba160958d742db700b66737b825e0b3bc5a3464efabcaff1ce98"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\7c1b421e001fe3762a4d33fe_0.png",
+      "sha256": "d9dcf5513bd38790272ecf7f608cf75110ee855e902cf3ba6142233a82e8c80f"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\7c1b421e001fe3762a4d33fe_1.png",
+      "sha256": "6553a5640d6c4506e5b36feb4de8cb52556a5eb2dc823e600797fa17ce976c4c"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\7d02da34438c898381a919fe_0.png",
+      "sha256": "96d44fb7b7bb260b5b72c3bafdbe07ef7724cc5ee347d64ac4ad4831a5c37286"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\7d02da34438c898381a919fe_1.png",
+      "sha256": "9fda586d4e8cb6f8a7c3e63f3185e34abd385f50c09c51bdd81b1d363b0896ea"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\89662819c6a1025773fec0d4_0.png",
+      "sha256": "8785670180abe921763b8690e56a33a36473237353a075f6e2fc2195ad2557b8"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\89662819c6a1025773fec0d4_1.png",
+      "sha256": "a0cae1adfe81126aa9a789c0e2cc3700f655c355b1cf665da3bde417204fcdcb"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\8a73e47aa9c92d370ca37806_0.png",
+      "sha256": "065e1bf92ca2c47b5aa97363ba841714945d60a975de5f708749a3f985cec270"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\8a73e47aa9c92d370ca37806_1.png",
+      "sha256": "6d2f231c856c3f536ac1802bf7f9eef78e15467d5d2f375e09a45cf7a6ea18b2"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\8ce9cefdbfafe24aab2e9805_0.png",
+      "sha256": "6c8b0f1f2f2f82880888ba2de96a8bdedbed9ae636bd5a790abeeb3421da73d0"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\8ce9cefdbfafe24aab2e9805_1.png",
+      "sha256": "4da698b983ca3dd55486e653087747bc73661ab90ccce098f32631430391f3a8"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\91d9a10410845c55cbc2cefc_0.png",
+      "sha256": "f41bbf5cadae7fe830c72748ddbb3411318463005b8518fa759693165491d3c0"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\91d9a10410845c55cbc2cefc_1.png",
+      "sha256": "66dd69b5726c821f9004e0dca266878ec91b655f4840bfa34a6810fd811858cc"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\a733559f6120147aa83fb6dd_0.png",
+      "sha256": "8435982ecb1ab00b8178d57e2e07616b7b441b50529e66109861441c1762b6c8"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\a733559f6120147aa83fb6dd_1.png",
+      "sha256": "b446a812f80903dae44072277c4a3e9071a7383b33d32915521f4443ac4cbe10"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\b1340504dff3a8b97fdd4ff9_0.png",
+      "sha256": "07129adf4dc3642c55c08b05d295cb0dfa65bd010dfa3482c1d47f8558dff6ff"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\b1340504dff3a8b97fdd4ff9_1.png",
+      "sha256": "8796a6ab1358a4b81d9cf4cf89407d0abd4a1d2e1361f4c1d2b1a11e256e6453"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\b3822826721b2af0c156cace_0.png",
+      "sha256": "35a977e9fe6bd64b3e63ec3d14b3956867a7ab27fd3c10d4c6d08c67e7121b59"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\b3822826721b2af0c156cace_1.png",
+      "sha256": "1612bb94f007ad7d1129746cf5b9934a05cad99d29bba53d72978ae817d29c4e"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\bcaaaade5149b94f01a42ed9_0.png",
+      "sha256": "23a652f2e142b115312997e2ba3fecadc2d8d07776abf59aaed05d0b12549407"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\bcaaaade5149b94f01a42ed9_1.png",
+      "sha256": "b94ab2da869c5c34054a0756b5c135342e0c9603d665c90f0b8073bc09b96b36"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\c777e572b2cd48a617e18044_0.png",
+      "sha256": "cecf6f9ba0b794f9356c3cde5c018fae93efef5cfbea1839e31499b373aace26"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\c777e572b2cd48a617e18044_1.png",
+      "sha256": "5512dfc576df8ebce08c9860758024a49e438d30d8eace522ee83472445ec859"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\ca3b07c2533c3c18c1047dea_0.png",
+      "sha256": "67dbbae9779b32821e8e5698316dbc041ac50cb7db0f3bdf2be5707f3089b057"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\ca3b07c2533c3c18c1047dea_1.png",
+      "sha256": "04c961a8bdfdf21058b92dc5d5b7e1c2d0e48ed16139f5b51c988933f05498de"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\d5a72e8178af177f104dc7f6_0.png",
+      "sha256": "accee7cfbc685b1dbb83f67c1d9cf0d7ebdaa9072d0e1eeec8cac7069cb6ba25"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\d5a72e8178af177f104dc7f6_1.png",
+      "sha256": "20e47be971416054b2da18c472c9fb69643029b6d338301c3effaa652d682546"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\dfaa20a11afa4e9a7221ad55_0.png",
+      "sha256": "fcbfa81e987d451c7722652633200ea19577e59d467231607c38deac5b0d6481"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\dfaa20a11afa4e9a7221ad55_1.png",
+      "sha256": "4ad885003a6e5d9a340e4f3224a9e7eeaec8714461c9e56f79521dfbbd909ad0"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\e356a9fe34621accf867531b_0.png",
+      "sha256": "7e95eb6343d18de2c6aceb439b36f2603882045cd39bee8999406b0c810767f3"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\e356a9fe34621accf867531b_1.png",
+      "sha256": "20b57ca068a49c4969ddc29580af275c6a15f866e361b9062c43f13834da1820"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\e4ec97847818bc2afe594b34_0.png",
+      "sha256": "e7c43fda55dd1380ddf589f79845c71804c5b3a273a15bacdac68b3fa2c2690d"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\e4ec97847818bc2afe594b34_1.png",
+      "sha256": "cc3540eb70803cbe03786c3ba32cbe92ac79ee8465957e3dbf21e05c756005e9"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\e59a2ecd6fcdc4f613abd127_0.png",
+      "sha256": "7638138e63d19e4cbf639d48dfee207346f7adcc1999ae465299f741b96c67a4"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\e59a2ecd6fcdc4f613abd127_1.png",
+      "sha256": "bf619e422e590a2161bd751f73b260af315ee7b09978b99fa564ed7483a8d9c9"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\f286c7db45beae1e42c827f0_0.png",
+      "sha256": "0eee8395d4dee4feaa6ae445d36f87a1b89eba2032c5c611dbb07d321197322f"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\captures\\images\\f286c7db45beae1e42c827f0_1.png",
+      "sha256": "c0d197645c4f90e99d36dcec8e45c79f1602caf077cd2d3e90ceaeac90b8c852"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\counterfactual_pairs.jsonl",
+      "sha256": "90e80ae565b709aca3c074a6c948ab5f773e0daa27a765ad8b9193432d44add8"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\data_manifest.json",
+      "sha256": "2259a7bf60baf4483dea7d592be319aa4f313faa96d920d611f93f8def02e4d2"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\language_annotations.jsonl",
+      "sha256": "c733cc40da052ff54c8a25469575800b9910811f327756ad30169b640d61db8c"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\lineage.jsonl",
+      "sha256": "e01eb4cc138d204b6268abbf52f3a3d25bab4757e43e4513ba4dd33157671205"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\private_worlds.jsonl",
+      "sha256": "4a1bde8439944682fdf2f10b04b94b94c1fb0eed9db17f58bbbcef6a289f7673"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\split_manifest.json",
+      "sha256": "2dc993a6910a4717b4a13d195c47b817c85d526afb7d4b06830276ec8cace8b1"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\train\\private_future_probe.jsonl",
+      "sha256": "f62c2b4c108a37a1e6dd400e5afe507637afe8871d1a72531fb5b1e24d5f9365"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\train\\private_labels.jsonl",
+      "sha256": "cbb754130d82da5d7ebcb6ed0ac0d3f775ade856af9822fe9ce5f88e43b61a62"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\train\\public_input.jsonl",
+      "sha256": "2453a89a63ef0b6058086c731d96cfaa6074065b7c46fa195382dfe3edbc01ca"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\validation\\private_future_probe.jsonl",
+      "sha256": "72b40ac710c46bb7b514cb26961c0815694b680d9d4391672c837f36c0a91a4d"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\validation\\private_labels.jsonl",
+      "sha256": "4e74188a1c533057eb48bb02bf3ad530a5674594e2853a86f4c18d5d026f973b"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\data\\v4\\validation\\public_input.jsonl",
+      "sha256": "f15bbb141048c8524c6c9700f5b6f7f12779ce1e332c70dda85c16ee6877d06d"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\docs\\v4\\04_data_status.txt",
+      "sha256": "24d66b099727d78940491f6435a862e970624db4748272ef009925b10ee8c4c5"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\04_acceptance.json",
+      "sha256": "19dfd493e9c81e724278944f364088c75ab83bdcad0ec3584500162141cad45e"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\04_before_manifest.json",
+      "sha256": "2f49d3d029838d4f4679e74ac18da26b4b82ea313fc08285b3b00ab02f677265"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\04_capture_job.json",
+      "sha256": "388e064dbb2496983a36761b7c48e16ae744fabf96056eeeedf91f989a482ff6"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\04_capture_plan.json",
+      "sha256": "d64e46ad890a819844880c4cc03ca04198ddd7a37711da85ab1210a15e8bf798"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\04_command_log.json",
+      "sha256": "b4fbed2fa85585fce7ea2c39de26822a28f8911933af1be6feb6e462639c5925"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\04_dataset_paths.json",
+      "sha256": "6f488387dc94cdbb50ff9d35dbbafeed687854747674d2b05c034dc76319596e"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\04_libero_catalog.json",
+      "sha256": "8df7e351ad8566c3aecdad205ed16e8719a3c3c72c999c34b05f60dda10c4d55"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\04_progress_before.json",
+      "sha256": "9bbf230b0076cab9310416130417a29ba4e2ee40914ca08f365348e9643a9333"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\04_verification.json",
+      "sha256": "893ee516fc6e3b42baaae3143555c584fa02a9c48ad4917449e830a10ae81b9a"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\build_step04_data.py",
+      "sha256": "5e8dfe8ce697ca5710687d9c469c6fe568890413df8287c170317e19df51887a"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\finalize_step04.py",
+      "sha256": "978c8b00f0ac7322e1206b382cac7340f5abf20c3df543e38cff9a02bce46e8f"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\handoff_step04.txt",
+      "sha256": "24d66b099727d78940491f6435a862e970624db4748272ef009925b10ee8c4c5"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\inspect_step04.py",
+      "sha256": "b58732a817f1a9b66d2aa8da29f25ddc0a9222bac2b323370f1da16ecd220c99"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\prepare_step04.py",
+      "sha256": "04ad6f5f9dae137676b0b6c3e8813ee3f77113752371d6e9e76f7f5aef207708"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\run_step04_capture.py",
+      "sha256": "e3fa66a2f586b802c072cc0c0fc5e5131a7f1b49cd1a7091da55088b587794de"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\step04_libero_capture.py",
+      "sha256": "315d1c28ceabced3fb82639339a0376dc51f35fcadbaa2f1ae74d95584a1cbd1"
+    },
+    {
+      "path": "D:\\Scene_Aware\\bci_vla_framework\\execution\\v4\\verify_step04.py",
+      "sha256": "5bbb1b751ab22f241115ca965a88c8816181f51a5ce8a43dc6cfa4253c7df5ba"
+    }
+  ]
+}

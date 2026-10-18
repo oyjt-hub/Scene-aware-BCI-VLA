@@ -1,0 +1,58 @@
+{
+  "step": "V4-11",
+  "status": "PARTIAL_LOCAL_MECHANISMS_PASSED_REMOTE_REAL_WEIGHTS_PENDING",
+  "upstream": {
+    "url": "https://github.com/LisavilaLee/openpi_with_subtask",
+    "commit": "99c738a322300166499efa0b614ffa95dbb9b21e",
+    "source_unchanged": true,
+    "method_reuse": "exact AST method bodies with PyTorch backend interop",
+    "native_JAX_checkpoint_run": false,
+    "upstream_joint_training_reproduced": false
+  },
+  "local_tests": {
+    "tests": 28,
+    "successful": true,
+    "failures": 0,
+    "errors": 0,
+    "log_sha256": "b55fb0ee16b3c36301f693c4aa81784b418e55299dfcb6811dc43d35dabe1803",
+    "scope": "local authorization and exact upstream method mechanics using explicit scripted tiny-model stubs",
+    "actual_VLM_inference": false,
+    "upstream_trained_checkpoint": false,
+    "formal_test_accessed": false,
+    "action_sampling": false
+  },
+  "prior_step10_sources_unchanged": true,
+  "step11_overall_complete": false,
+  "actual_VLM_inference": false,
+  "same_VLM_real_language_gate": "NOT_RUN",
+  "formal_test_accessed": false,
+  "action_sampling": false,
+  "real_EEG": false,
+  "physical_actions": false,
+  "server_upload_status": {
+    "action": "upload current project source/schema/config plus pinned upstream methods and run isolated development probe",
+    "destination": "/home/oyjt/Scene-aware-BCI-VLA-runs/v4_step11_upstream_probe_20261018_v1",
+    "decision": "REJECTED_BY_AUTOMATIC_APPROVAL_REVIEW",
+    "reason": "用户未明确授权将这批私有源代码外传到该具体目的地",
+    "upload_performed": false,
+    "probe_executed": false,
+    "pending_human_authorization": true,
+    "source_files": 35,
+    "bundle_bytes": 102810,
+    "bundle_sha256": "653994401e5142fd4aaa3b05caef40dcedfd1a47ae06877fc9760c71743f9d59",
+    "excluded_uploads": [
+      "data",
+      "images",
+      "EEG",
+      "weights",
+      "credentials"
+    ]
+  },
+  "next_command_after_authorization": "python execution/v4/run_step11_upstream.py 1 --execute-prepared",
+  "known_gaps": [
+    "real JAX/Torch interop execution",
+    "current LoRA transfer to upstream prompt format",
+    "Step08 full training and ablation coverage",
+    "placement/multistep/dynamic action grounding"
+  ]
+}

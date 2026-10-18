@@ -1,0 +1,166 @@
+{
+  "step_id": "V4-07",
+  "status": "PASS_REAL_PREFIX_ENGINEERING_ONLY",
+  "completed_at_utc": "2026-10-17T07:46:35.819426+00:00",
+  "dependency": "V4-03R conditional high-level language LoRA; original checkpoint alone still NOT_PASSED",
+  "dependency_report": "execution/v4/03R_text_capability.json",
+  "dependency_scope": "canonical observable-public-state language protocol only; explicitly selected object/allowed pick, missing-action clarification, confirmed pick/put + empty/holding-selected gripper -> next subtask/Done",
+  "actual_checkpoint": {
+    "path": "/home/oyjt/workspace/RLinf-RECAP/models/baseline_sft/RLinf-Pi05-LIBERO-SFT/model.safetensors",
+    "bytes": 7473091464,
+    "sha256": "4616e4c1966a5fb063b442ea5d69857f45e873222d839b794634d87d252ab9e7",
+    "seconds": 9.28375909011811
+  },
+  "high_level_language_adapter": {
+    "local_path": "D:\\Scene_Aware\\bci_vla_framework\\artifacts\\v4\\high_level_lora\\step240.safetensors",
+    "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/v4_step03R_language_20261017_v1/high_level_lora_step240.safetensors",
+    "sha256": "c1dbc8bd23e8e2590ac2670839a068d82423aa0c4620e734d2d99618afaec380",
+    "bytes": 12102152,
+    "rank": 16,
+    "alpha": 32,
+    "targets": [
+      "q_proj",
+      "v_proj",
+      "o_proj"
+    ],
+    "layers": 18,
+    "adapted_linears": 54,
+    "parameters": 3022848,
+    "optimizer_steps": 240,
+    "learning_rate": 0.001,
+    "default_enabled": false
+  },
+  "local_tests": 38,
+  "real_GPU_engineering_checks": 28,
+  "real_report": "execution/v4/07_real_attempt2.json",
+  "token_path": {
+    "native": "unchanged native image+prompt prefix",
+    "boundary": "append 8 evidence vectors after native image+prompt and before causal answer inputs",
+    "shape": [
+      1,
+      8,
+      2048
+    ],
+    "connector_dtype": "float32",
+    "VLM_dtype": "bfloat16",
+    "casting": "differentiable, without extra sqrt(D)",
+    "on_context_length": 400,
+    "off_context_length": 392,
+    "off_semantics": "physically remove 8 tokens, native mask/position/cache restored; eight zero vectors are NOT off"
+  },
+  "backward": {
+    "real_language_gradient_Full": {
+      "name": "real_language_gradient_Full",
+      "passed": true,
+      "CE_loss": 1.260680913925171,
+      "prefix_gradient_L1": 608.1027221679688,
+      "component_gradient_L1": {
+        "intent_queries": 1315.443359375,
+        "channel_queries": 17.895183563232422,
+        "features": 6374.798566736281,
+        "reliability": 9.906634986400604,
+        "typed_summary": 38775.927810668945,
+        "prefix_projection": 69190.50009155273,
+        "task_history": 2234.7471861839294,
+        "diagnostic_history": 220.07619596645236,
+        "intent_blocks": 56916.63440698385,
+        "channel_blocks": 1200.0647654645145
+      }
+    },
+    "real_language_gradient_B3_aux": {
+      "name": "real_language_gradient_B3_aux",
+      "passed": true,
+      "CE_loss": 10.493568420410156,
+      "prefix_gradient_L1": 1857.1201171875,
+      "component_gradient_L1": {
+        "features": 29386.34614753723,
+        "reliability": 3.154428720474243,
+        "typed_summary": 182067.2660522461,
+        "prefix_projection": 261711.73049926758,
+        "pool_mlp": 495255.9850921631
+      }
+    },
+    "real_language_gradient_B4_aux": {
+      "name": "real_language_gradient_B4_aux",
+      "passed": true,
+      "CE_loss": 1.1228018999099731,
+      "prefix_gradient_L1": 377.8090515136719,
+      "component_gradient_L1": {
+        "queries": 3324.30224609375,
+        "features": 20853.532655715942,
+        "reliability": 2.197442015632987,
+        "typed_summary": 1734.7494893074036,
+        "prefix_projection": 38121.61502838135,
+        "shared_history": 71025.71138763428,
+        "blocks": 235661.3576145172
+      }
+    }
+  },
+  "off_regression": {
+    "name": "off_exact_native_regression",
+    "passed": true,
+    "max_abs_logits": 0.0,
+    "native_length": 392,
+    "off_length": 392
+  },
+  "causal_control": {
+    "name": "real_on_causal_future_barrier",
+    "passed": true,
+    "masked_future_difference": 0.0,
+    "unmasked_negative_difference": 2.75
+  },
+  "BF16_cache_control": {
+    "teacher_KV_argmax_False": {
+      "name": "teacher_KV_argmax_False",
+      "passed": true,
+      "max_abs_logits": 1.75,
+      "strict_BF16_numeric_equivalence": false
+    },
+    "teacher_KV_argmax_True": {
+      "name": "teacher_KV_argmax_True",
+      "passed": true,
+      "max_abs_logits": 1.0,
+      "strict_BF16_numeric_equivalence": false
+    }
+  },
+  "cache_key": [
+    "full public input digest including scene/mapping/goal/history",
+    "base checkpoint sha",
+    "language adapter sha",
+    "on/off mode",
+    "image+prompt+soft-embedding digest",
+    "valid/ar mask digest"
+  ],
+  "scope_isolation": "trained language LoRA enabled only around high-level VLM forward, restored after every call; no action entry monkey patch; shared-model mixed-call concurrency remains to be implemented/verified before deployment",
+  "instance_binding": {
+    "neural_object_row_equivariance": "PASS",
+    "neural_alias_independent_prefix_and_physical_ID_metadata": "PASS",
+    "native_trained_language_joint_alias_generation": "PASS",
+    "on_untrained_prefix_semantic_instance_binding": "NOT_PASSED_NOT_CLAIMED; revisit after Step08"
+  },
+  "untrained_prefix_generation": {
+    "generated": "task task.",
+    "expected": "Pick up OBJ_0.",
+    "semantic_match": false,
+    "status": "NOT_A_TRAINED_CAPABILITY_RESULT"
+  },
+  "semantics_status": "ON_SEMANTICS_NOT_PASSED; engineering-only acceptance, not trained reasoning",
+  "first_attempt": "Preserved as FAIL: incorrect acceptance assertion expected meaningful language from random untrained prefix. Off native answer was correct; on returned task task. Corrected test scope without hiding this observed failure.",
+  "action_expert": {
+    "name": "base_and_action_expert_immutable",
+    "passed": true,
+    "action_expert_parameters": 691256320,
+    "action_sampling_run": false
+  },
+  "action_sampling_run": false,
+  "new_simulation_dynamics": false,
+  "full_VLA_closed_loop": false,
+  "training_run_this_step": false,
+  "optimizer_steps_this_step": 0,
+  "training_data_ready": false,
+  "formal_test_unsealed": false,
+  "real_EEG": false,
+  "physical_robot": false,
+  "peak_GPU_bytes": 8716902400,
+  "next_gate": "V4-08 needs V4-04 intent/language/slot/abstention supervision repaired; no automatic training; all baselines use same high-level LoRA initialization/budget"
+}

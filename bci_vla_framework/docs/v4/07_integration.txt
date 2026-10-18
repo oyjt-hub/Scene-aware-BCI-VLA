@@ -1,0 +1,51 @@
+﻿V4-07 真实π0.5内部token接入工程验收（2026-10-17）
+
+一、结论与明确限制
+真实π0.5高层VLM已经接收小模块输出的8×2048内部向量，关闭回归、梯度、缓存、mask/位置与工程绑定检查通过。
+这是接入工程完成，不是小模块已学会理解脑机。开启随机未训练prefix时实际输出“task task.”，语义未通过，必须保留到08训练后再验。
+原计划07验收允许“尚无性能结论”。首次把开启后也必须输出正确任务写成断言，超出了本步工程边界；首次失败和代码保留。
+后续修正只区分工程正确与未训练语义，没有训练小模块或将错误输出改写成答案。
+
+二、先补齐的03依赖
+用户要求优先修复03后，已用实际LIBERO开发图像/公开字典进行高层LoRA补训并完成独立复验。
+使用原LIBERO SFT＋rank16/alpha32语言q/v/o LoRA，302万参数；并非原checkpoint突然具备可靠任务文字能力。
+新高层门槛只覆盖显式选中对象/可用pick/缺动作澄清及确认pick/put＋明确夹爪状态，详见docs/v4/03R_backbone_remediation.txt。
+通用规划、从RGB自行识别抓取状态、同类物体低层执行仍未证明。
+
+三、实际接入路径
+先从PI0Pytorch.embed_prefix得到原图像与prompt embedding。
+在其后、因果answer输入之前追加8个小模块向量；输入不经过字符串tokenizer，不额外乘sqrt(D)。
+小模块float32输出经可微cast变为实际VLM bfloat16。图像、原prompt、原生语言token缩放保持原路径。
+上下文为bidirectional prefix；teacher forcing输入target[:-1]，最后有效context位置预测target[0]，answer位置逐个预测后续token，EOS有监督。
+padding/attention/position_ids随真实token数量重建；KV decode区分物理cache长度与有效逻辑位置。
+off真的移除8个token并清理cache，而不是把8个token置零留在序列中。
+每个高层forward在high_level_scope中启用已训练语言LoRA，结束恢复关闭。动作采样入口没有被patch。
+共享模型并发的高低层调用仍需后续串行化/加锁和真实动作回归，本步不宣称部署安全或动作成功。
+
+四、实际结果
+本地38项测试通过，包含18项prefix工程测试和步骤06的20项回归。
+真实GPU模型28项工程检查通过，来源为服务器已有public LIBERO夹具和对应真实图像，只上传代码/schema，没有上传数据或私有标签。
+原生上下文392 token；on为400。off与原生logits最大差0；八个零token与off最大差32.5，证明确实必须移除token。
+原生off输出Pick up OBJ_0.；随机prefix on输出task task.。这不是可执行指令，不授予动作权限。
+Full/B3/B4均实际通过语言CE反传，小模块prefix梯度L1分别约608.10/1857.12/377.81；底座/高层LoRA/动作专家均冻结、无梯度和优化器更新。
+同样的目标变化、映射变化、prefix变动、on/off切换都会拒绝旧KV并清空，之后需要重新prefill。
+padding与对象行重排保持输出/输入绑定一致；联合alias变换在已训练原生off语言分支正确，on训练后语义绑定尚未通过。
+真实on未来答案屏蔽影响0，解除屏蔽负对照影响2.75；teacher/cache greedy argmax一致。
+BF16最大logits差off=1.75、on=1.0，保留原值，不宣称严格数值等价。03R的FP32隔离因果/缓存数学检查另有证据。
+所有基座参数版本计数与冻结状态保持不变；动作专家结构/参数形状未改，实际动作采样未运行。
+实测peak GPU allocated约8.72GB，仅此开发形状，不能据此推断多样本训练成本。
+
+五、代码与调用约束
+bci_vla/prefix_integration_v4/adapter.py；配置configs/v4/prefix_integration_step07.json。
+构造时必须使用03R能力报告、正确base SHA和已加载高层LoRA SHA；不允许拿原始未适配checkpoint搭配“通过”报告。
+先安装/加载高层语言LoRA，再构造Pi05HighLevelPrefix；传入high_level_adapters和adapter_sha256，底座会被冻结但不会以整体no_grad截断teacher-forcing梯度。
+prepare处理原图/原prompt及可选soft_tokens；teacher_forcing返回可微CE；generate只返回有界原始token，execution_authorized始终false。
+本步没有构建可靠的on语义输出校验/确认执行器；其输出不得直接送给机器人。
+复现：本地python execution/v4/run_step07_local.py；真实脚本execution/v4/step07_real_integration.py。
+为保留证据，远程runner要求新的attempt编号并新建隔离目录；现有1/2次结果不可覆盖。
+
+六、接下来
+步骤08前仍要补齐04的监督缺口：当前保守intent SET包括所有候选和outside，不能形成有效目标区分；缺槽/弃权及放置监督也不完整。
+所有对照必须共用本轮03R高层初始化/预算，不得把它的语言能力增益算成交互小模块贡献。
+本步没有optimizer.step、小模块训练、正式test、新仿真动力学、真实EEG或实体机器人动作。旧G2/G3/G4不升级。
+完整VLA闭环、on语义实例绑定和任务成功率仍需要后续训练与LIBERO验证。

@@ -1,0 +1,12 @@
+test_always_wait_is_not_success_and_has_no_conditional_submission_estimate (test_development_acceptance_v4.DevelopmentAcceptanceTests.test_always_wait_is_not_success_and_has_no_conditional_submission_estimate) ... ok
+test_duplicate_conditions_rejected_instead_of_increasing_sample_size (test_development_acceptance_v4.DevelopmentAcceptanceTests.test_duplicate_conditions_rejected_instead_of_increasing_sample_size) ... ok
+test_floating_tolerance_never_hides_a_different_choice_or_context (test_development_acceptance_v4.DevelopmentAcceptanceTests.test_floating_tolerance_never_hides_a_different_choice_or_context) ... ok
+test_goal_update_is_censored_without_a_trusted_public_anchor (test_development_acceptance_v4.DevelopmentAcceptanceTests.test_goal_update_is_censored_without_a_trusted_public_anchor) ... ok
+test_interval_resamples_paired_scenes_not_variants (test_development_acceptance_v4.DevelopmentAcceptanceTests.test_interval_resamples_paired_scenes_not_variants) ... ok
+test_waits_and_failure_cases_stay_in_resolution_and_risk_denominators (test_development_acceptance_v4.DevelopmentAcceptanceTests.test_waits_and_failure_cases_stay_in_resolution_and_risk_denominators) ... ok
+test_zero_errors_eight_episodes_does_not_prove_ten_percent_population_risk (test_development_acceptance_v4.DevelopmentAcceptanceTests.test_zero_errors_eight_episodes_does_not_prove_ten_percent_population_risk) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.001s
+
+OK

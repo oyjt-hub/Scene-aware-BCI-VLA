@@ -1,0 +1,13 @@
+{
+  "version": "v4-platform-binding-1",
+  "user_requirement": "Use LIBERO throughout the simulation pipeline",
+  "development_data": "actual LIBERO rendering and simulator state",
+  "interaction_evaluation": "LIBERO, with explicitly simulated noisy BCI",
+  "VLA_closed_loop": "LIBERO actual dynamics and independent task predicates",
+  "unit_test_fixtures_allowed": true,
+  "toy_environment_counts_as_LIBERO": false,
+  "real_EEG": false,
+  "physical_robot": false,
+  "high_level_capability_gate_passed": false,
+  "training_data_ready": false
+}

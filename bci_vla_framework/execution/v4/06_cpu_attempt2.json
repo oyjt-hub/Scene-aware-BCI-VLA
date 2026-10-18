@@ -1,0 +1,138 @@
+{
+  "status": "PASS",
+  "tests_run": 19,
+  "failures": [],
+  "errors": [],
+  "elapsed_s": 2.7879562377929688,
+  "python": "3.11.14",
+  "torch": "2.7.1+cu126",
+  "cuda_initialized": false,
+  "device": "cpu",
+  "models": {
+    "Full": {
+      "parameters": 7281930,
+      "component_parameters": {
+        "intent_queries": 1024,
+        "channel_queries": 1024,
+        "features": 559104,
+        "reliability": 257,
+        "typed_summary": 266496,
+        "prefix_projection": 526848,
+        "pointer_object": 65792,
+        "pointer_intent": 65792,
+        "outside": 257,
+        "missing_slots": 771,
+        "abstain": 257,
+        "interaction": 1028,
+        "task_history": 789760,
+        "diagnostic_history": 789760,
+        "intent_blocks": 2106880,
+        "channel_blocks": 2106880
+      },
+      "device": "cpu",
+      "mlp_width": null,
+      "trainable": true,
+      "trained": false,
+      "prefix_tokens": 8,
+      "aux_labels": "same masked intent/channel/interaction losses; no language loss yet"
+    },
+    "B3_aux": {
+      "parameters": 7269034,
+      "component_parameters": {
+        "features": 559104,
+        "reliability": 257,
+        "typed_summary": 266496,
+        "prefix_projection": 526848,
+        "pointer_object": 65792,
+        "pointer_intent": 65792,
+        "outside": 257,
+        "missing_slots": 771,
+        "abstain": 257,
+        "interaction": 1028,
+        "pool_mlp": 5782432
+      },
+      "device": "cpu",
+      "mlp_width": 992,
+      "trainable": true,
+      "trained": false,
+      "prefix_tokens": 8,
+      "aux_labels": "same masked intent/channel/interaction losses; no language loss yet"
+    },
+    "B4_aux": {
+      "parameters": 7281930,
+      "component_parameters": {
+        "queries": 2048,
+        "features": 559104,
+        "reliability": 257,
+        "typed_summary": 266496,
+        "prefix_projection": 526848,
+        "pointer_object": 65792,
+        "pointer_intent": 65792,
+        "outside": 257,
+        "missing_slots": 771,
+        "abstain": 257,
+        "interaction": 1028,
+        "shared_history": 1579520,
+        "blocks": 4213760
+      },
+      "device": "cpu",
+      "mlp_width": null,
+      "trainable": true,
+      "trained": false,
+      "prefix_tokens": 8,
+      "aux_labels": "same masked intent/channel/interaction losses; no language loss yet"
+    }
+  },
+  "sample_prediction": {
+    "schema_version": "bci-vla-module-inspection/0.1",
+    "sample_id": "3d98c049653cb1f795b520c459e4c946",
+    "input_sha256": "029d74236d7d982e9ac95a1897cc9c5ac073d33e18506b6fdc4278314124de96",
+    "prefix_shape": [
+      8,
+      2048
+    ],
+    "candidates": [
+      {
+        "instance_id": "akita_black_bowl_1",
+        "raw_probability": 0.21707940101623535
+      },
+      {
+        "instance_id": "akita_black_bowl_2",
+        "raw_probability": 0.1412852704524994
+      },
+      {
+        "instance_id": "chocolate_pudding_1",
+        "raw_probability": 0.1406223475933075
+      },
+      {
+        "instance_id": "new_salad_dressing_1",
+        "raw_probability": 0.1644451916217804
+      },
+      {
+        "instance_id": "wooden_tray_1",
+        "raw_probability": 0.179306760430336
+      }
+    ],
+    "outside_raw_probability": 0.15726099908351898,
+    "channel_raw_probability": null,
+    "channel_status": "INSUFFICIENT_OR_EXPIRED",
+    "interaction_raw_action": "ASK_INTENT",
+    "model_trained": false,
+    "probability_calibrated": false,
+    "execution_authorized": false,
+    "scope": "Random-weight CPU interface inspection only; no language generation or VLA dispatch"
+  },
+  "uploaded_files_verified": 38,
+  "optimizer_steps": 0,
+  "weights_saved": false,
+  "VLA_loaded": false,
+  "simulation_dynamics_advanced": false,
+  "real_LIBERO_capture_inputs": true,
+  "real_EEG": false,
+  "physical_robot": false,
+  "formal_test_accessed": false,
+  "training_run": false,
+  "remote_job": "/home/oyjt/Scene-aware-BCI-VLA-runs/v4_step06_cpu_20261017_v2",
+  "remote_exit_code": 0,
+  "bundle_sha256": "b6578b4a94cb430b5d8dbe9a43752d45132117dd781db3498f1bbd489ca7bc7a"
+}

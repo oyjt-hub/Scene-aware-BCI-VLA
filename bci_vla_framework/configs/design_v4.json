@@ -1,0 +1,267 @@
+{
+  "version": "V4-plan-2",
+  "status": "design_only_not_implemented",
+  "plan_file": "D:\\Scene_Aware\\BCI_VLA框架_意图更新与澄清_执行计划_V4.txt",
+  "research_question": "Intent update and clarification under noisy BCI interaction",
+  "architecture": {
+    "hidden_dim": 256,
+    "attention_heads": 4,
+    "history_transformer_layers": 1,
+    "fusion_blocks": 2,
+    "ffn_dim": 1024,
+    "queries": 8,
+    "intent_queries": 4,
+    "channel_queries": 4,
+    "history_events": 8,
+    "max_objects": 16,
+    "inputs": [
+      "all scene candidates with frozen ROI/semantic features and bbox",
+      "typed selection evidence",
+      "past public events with role, time and version"
+    ],
+    "query_routing": "channel queries read only deidentified diagnostic evidence; groups have separate self-attention; channel-to-intent and VLM only through a typed diagnostic summary; no reverse path",
+    "outputs": [
+      "8 soft tokens from intent and typed summary",
+      "candidate distribution or admissible set",
+      "target outside candidate set",
+      "missing task slots",
+      "abstention proposal",
+      "diagnostic-condition reliability and evidence insufficiency",
+      "interaction proposal"
+    ],
+    "injection": "pi05 high-level VLM inputs_embeds",
+    "action_expert_modified": false,
+    "vlm_hidden_dim": "read from verified model config",
+    "defaults_are_unvalidated": true,
+    "history_transformer_groups": 2,
+    "history_attention": "block diagonal by task/diagnostic group; optional shared weights, never shared cross-role attention",
+    "diagnostic_inputs": [
+      "known-target match and score",
+      "non-target score statistics",
+      "response duration",
+      "evidence age",
+      "mapping validity",
+      "coverage and count"
+    ],
+    "diagnostic_input_excludes": [
+      "PROBE object name",
+      "PROBE ROI/semantic features",
+      "PROBE OBJ_i",
+      "TASK selection evidence",
+      "intent queries"
+    ],
+    "prefix_sources": {
+      "intent_query_tokens": 4,
+      "typed_diagnostic_summary_projections": 4,
+      "raw_channel_queries_to_vlm": false
+    },
+    "persistent_state": {
+      "outside_recent_event_window": true,
+      "public_fields": [
+        "confirmed task and versions",
+        "pending suggestion",
+        "unanswered question",
+        "raw diagnostic summary with age, count, coverage and mapping version"
+      ],
+      "learned_cache": "method/checkpoint scoped, never shared as oracle truth",
+      "reset_rules": "freeze task, scene and mapping reset semantics in V4-02"
+    },
+    "object_binding": {
+      "alias": "scene-local OBJ_i",
+      "shared_key_in": [
+        "object feature representation",
+        "VLM-readable name/bbox dictionary",
+        "selection evidence and output labels"
+      ],
+      "tests": [
+        "joint alias permutation",
+        "candidate reorder",
+        "same-class multiple instances",
+        "pointer/text/confirmation consistency"
+      ]
+    },
+    "input_empty_sentinel_is_not_semantic_unknown": true
+  },
+  "event_roles": [
+    "TASK",
+    "INTENT_QUERY",
+    "PROBE",
+    "CONFIRM",
+    "REJECT",
+    "CANCEL",
+    "STOP",
+    "NO_RESPONSE_with_original_role"
+  ],
+  "clarification": {
+    "intent_query": "updates task candidates based on response evidence",
+    "known_target_probe": "diagnoses channel; probe target is not user task choice",
+    "responses_use_same_noisy_channel": true,
+    "no_diagnostic_evidence": "evidence insufficient unless a valid unexpired diagnostic summary exists",
+    "observational_aliasing": "retain ambiguity and ask; do not force hidden-state guesses",
+    "final_policy_implementation": "undecided until validation; rules must be reported as rules",
+    "channel_estimand": "probability next known-target response is decoded correctly under specified mapping, covered diagnostic conditions and time window",
+    "channel_estimand_limits": "not hidden-fault oracle; not automatic TASK accuracy or unseen-option calibration",
+    "role_specific_stimulus_noise": true,
+    "mvp_policy": "fixed rule shared by structural comparisons; learned query policy is an additional branch",
+    "paired_simulator": {
+      "latent_trajectory": "pre-generated goal/channel trajectory on common clock",
+      "query_consumes_time": true,
+      "rng_key": [
+        "episode",
+        "time_slot",
+        "role",
+        "stimulus_mapping",
+        "canonical_query",
+        "repeat_index"
+      ],
+      "method_name_in_rng_key": false
+    }
+  },
+  "training": {
+    "initial_backbone": "frozen with gradient through high-level VLM to prefix",
+    "lora_if_needed": "separate equally budgeted branch for all relevant comparisons",
+    "action_expert_updates": false,
+    "loss_candidates": [
+      "masked candidate-set/probabilistic target and outside-candidate supervision",
+      "separate slot-missing and abstention supervision",
+      "diagnostic-outcome reliability supervision",
+      "high-level main-task CE on identifiable or set-valued targets",
+      "subtask CE if existing capability is not verified",
+      "optional interaction policy and counterfactual branches"
+    ],
+    "split_before_augmentation": true,
+    "private_labels_never_features": true,
+    "development_episode_range": [
+      32,
+      64
+    ],
+    "development_scale_is_not_formal_sample_size": true,
+    "subtask_requirement": "verify source capability at V4-03 or add confirmed-main-task/current-observation to next-subtask labels and matched training at V4-08",
+    "lora_call_scope": "enable on high-level call only and isolate cache; otherwise declare shared-VLM adaptation and re-evaluate low-level behavior",
+    "private_fault_class_is_mandatory_label": false,
+    "calibration": {
+      "fit_group": "calibration-fit",
+      "audit_group": "calibration-audit",
+      "policy_selection_group": "validation",
+      "bound_to": [
+        "checkpoint",
+        "input_schema",
+        "policy_version"
+      ],
+      "invalidate_on_changed_final_model_or_policy": true
+    }
+  },
+  "baselines": [
+    "latest selection and fixed clarification threshold",
+    "existing joint belief/diagnostic interaction",
+    "same-information text",
+    "pooled MLP prefix",
+    "standard shared-query prefix",
+    "Full role-routed query module"
+  ],
+  "evaluation": {
+    "primary": "correctly confirmed goal/task proportion under preregistered wrong-start and interaction-budget constraints",
+    "thresholds": "set from development justification and lock before test",
+    "secondary": [
+      "wrong-goal start",
+      "update delay",
+      "false switch",
+      "persistence on old goal",
+      "useful clarification",
+      "full interaction cost",
+      "task completion",
+      "latency and calibration"
+    ],
+    "pause_all": "count as unresolved in denominator",
+    "paired_unit": "independent underlying episode/scene, not augmented rows",
+    "formal_sample_size": "not set; determine and lock before formal evaluation",
+    "formal_test_open_step": "V4-13",
+    "development_only_steps": [
+      "V4-01",
+      "V4-02",
+      "V4-03",
+      "V4-04",
+      "V4-05",
+      "V4-06",
+      "V4-07",
+      "V4-08",
+      "V4-09",
+      "V4-10",
+      "V4-11",
+      "V4-12"
+    ],
+    "protocol_draft_step": "V4-10",
+    "risk_constraint_unit": "independent episode with >=1 wrong simulated/actual submit; all episodes in denominator",
+    "secondary_conditional_risk": "wrong submits / all submits, with count and abstention/coverage reported",
+    "risk_test_rule": "predeclare point estimate vs one-sided confidence bound; only bound-based claim can assert that form of statistical support",
+    "update_delay": [
+      "total delay since private true change",
+      "response delay since first predeclared publicly identifiable change evidence, with censored episodes and coverage reported"
+    ],
+    "final_freeze_includes": [
+      "all method and ablation checkpoints",
+      "schema",
+      "calibration",
+      "policy",
+      "LoRA call scope",
+      "code",
+      "task/scene/seed manifest",
+      "metrics and analysis"
+    ],
+    "late_ablation_training": "train/validation only; redo applicable calibration before final freeze"
+  },
+  "scope": {
+    "plan_only_this_turn": true,
+    "network_implemented": false,
+    "weights_trained": false,
+    "new_experiments_run": false,
+    "real_eeg_included": false,
+    "physical_robot_actions_included": false,
+    "early_visual_source": "fixed annotations or privileged LIBERO, explicitly tagged",
+    "future_visual_frontend": "Florence/SAM after separate checks; not real EEG validation"
+  },
+  "pi05_high_level_text_capability_verified": false,
+  "historical_v2_gates": {
+    "G2": "未通过",
+    "G3": "未验证",
+    "G4": "未通过"
+  },
+  "prior_literature_search_reused_not_refreshed_this_turn": true,
+  "literature": [
+    "https://arxiv.org/abs/2301.12597",
+    "https://arxiv.org/abs/2103.03206",
+    "https://arxiv.org/abs/2511.17335",
+    "https://arxiv.org/abs/2311.01454",
+    "https://arxiv.org/abs/2511.20848",
+    "https://arxiv.org/abs/2605.30282",
+    "https://arxiv.org/abs/2504.16054",
+    "https://arxiv.org/abs/2602.22474"
+  ],
+  "baseline_fairness": {
+    "B0_B1": "engineering references with input limits disclosed",
+    "B2": "same external images and public information, different representation and token cost",
+    "B3_B4_Full": "same input tensors, auxiliary labels and controlled train/inference budget",
+    "all_methods": "same protocol and public source fields; own predictions are not oracle public state",
+    "history_ablation": "recent raw events removed; retained confirmed state/diagnostic summaries listed separately"
+  },
+  "capability_gates": {
+    "text_generation": false,
+    "semantic_subtask_generation": false,
+    "low_level_same_class_instance_grounding": false
+  },
+  "schedule": {
+    "old_total_15_to_22_workdays_estimate": "withdrawn; no measured multi-run costs",
+    "two_to_three_weeks": "controlled MVP target only, conditional on capability and resources",
+    "reestimate_after": [
+      "V4-03 throughput/memory audit",
+      "V4-08 per-method training pilot",
+      "V4-12 per-episode simulation pilot"
+    ]
+  },
+  "review": {
+    "date": "2026-10-16",
+    "source_version": "V4-plan-1",
+    "status": "planning_gaps_repaired_not_empirically_validated",
+    "report": "D:\\Scene_Aware\\BCI_VLA框架_意图更新与澄清_计划审查_V4.txt"
+  }
+}

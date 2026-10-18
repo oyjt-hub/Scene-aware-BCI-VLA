@@ -1,0 +1,156 @@
+{
+  "record_type": "PUBLIC_INPUT",
+  "schema_version": "bci-vla-interaction/4.0",
+  "sample_id": "fixture-001",
+  "context": {
+    "session_id": "fixture-session",
+    "scene_id": "table-1",
+    "scene_revision": 1,
+    "mapping_id": "screen-map",
+    "mapping_revision": 1
+  },
+  "as_of_s": 12.0,
+  "provenance": {
+    "bci": "synthetic_fixture",
+    "vision": "annotated_fixture",
+    "feature_profile_id": "fixture-4x3",
+    "real_eeg": false,
+    "physical_robot": false
+  },
+  "scene": {
+    "observed_at_s": 11.0,
+    "image_ref": null,
+    "image_valid": false,
+    "roi_dim": 4,
+    "semantic_dim": 3,
+    "objects": [
+      {
+        "instance_id": "cup-blue",
+        "alias": "OBJ_0",
+        "label": "cup",
+        "bbox_xyxy": [
+          0.1,
+          0.2,
+          0.3,
+          0.6
+        ],
+        "object_valid": true,
+        "roi_feature": [
+          0.1,
+          0.2,
+          0.3,
+          0.4
+        ],
+        "roi_valid": true,
+        "semantic_feature": [
+          0.2,
+          0.3,
+          0.4
+        ],
+        "semantic_valid": true
+      },
+      {
+        "instance_id": "cup-red",
+        "alias": "OBJ_1",
+        "label": "cup",
+        "bbox_xyxy": [
+          0.4,
+          0.2,
+          0.6,
+          0.6
+        ],
+        "object_valid": true,
+        "roi_feature": [
+          1.1,
+          0.2,
+          0.3,
+          0.4
+        ],
+        "roi_valid": true,
+        "semantic_feature": [
+          0.2,
+          0.3,
+          0.4
+        ],
+        "semantic_valid": true
+      },
+      {
+        "instance_id": "tray",
+        "alias": "OBJ_2",
+        "label": "tray",
+        "bbox_xyxy": [
+          0.7,
+          0.3,
+          0.95,
+          0.8
+        ],
+        "object_valid": true,
+        "roi_feature": [
+          2.1,
+          0.2,
+          0.3,
+          0.4
+        ],
+        "roi_valid": true,
+        "semantic_feature": [
+          0.2,
+          0.3,
+          0.4
+        ],
+        "semantic_valid": true
+      }
+    ],
+    "truncation": {
+      "original_count": 3,
+      "retained_count": 3,
+      "policy": "none",
+      "target_recall_known": false
+    }
+  },
+  "history": [
+    {
+      "event_id": "e-control",
+      "sequence": 3,
+      "role": "CANCEL",
+      "original_role": null,
+      "question": null,
+      "started_at_s": 11.5,
+      "ended_at_s": 11.5,
+      "valid": true,
+      "invalid_reason": null,
+      "evidence": null
+    }
+  ],
+  "current_event_id": "e-control",
+  "selection_event_id": null,
+  "task_options": [],
+  "public_state": {
+    "confirmed_task": null,
+    "pending_suggestion": null,
+    "pending_question": null,
+    "diagnostics": {
+      "context": {
+        "session_id": "fixture-session",
+        "scene_id": "table-1",
+        "scene_revision": 1,
+        "mapping_id": "screen-map",
+        "mapping_revision": 1
+      },
+      "layout_id": "probe-3",
+      "window_s": 30,
+      "ttl_s": 15,
+      "min_attempts": 3,
+      "min_covered_symbols": 2,
+      "receipts": [],
+      "attempt_count": 0,
+      "correct_count": 0,
+      "no_response_count": 0,
+      "covered_symbols": [],
+      "latest_ended_at_s": null,
+      "status": "INSUFFICIENT",
+      "truncated": false
+    },
+    "stop_latched": false,
+    "execution_authorized": false
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "status": "PASS_CPU_MECHANISMS_ONLY",
+  "tests_run": 79,
+  "failures": 0,
+  "errors": 0,
+  "elapsed_s": 27.405,
+  "log": "bci_vla_framework\\execution\\v4\\09_cpu_tests_final.log",
+  "log_sha256": "9b05e79db6357c3e349a4f7260753cd945a75a0863f6022713597906666aa7e9",
+  "scope": "Binding/loss/data/partition isolation/calibration/clarification/online-audit mechanisms only; not real EEG or robot performance"
+}

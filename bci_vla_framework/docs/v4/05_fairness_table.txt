@@ -1,0 +1,70 @@
+﻿V4-05 对照登记与LIBERO公共交互评估器
+日期：2026-10-17（Asia/Hong_Kong）。
+
+1. 已实现范围
+输入来自步骤04冻结的实际LIBERO场景图像与物理状态。图像读取前核验SHA256。
+runner在当前策略提出问题后才生成带噪回应，维护公共交互时钟、角色、映射、历史与确认，不回放固定问答答案。
+当前模式为LIBERO_CAPTURE_INTERACTION_ONLY：场景状态采集回放，脑机模拟，实际LIBERO动力学未在交互期间推进，VLA动作未调用。
+这符合本步公共纯仿真交互runner的范围；后续实际动作、成功终点和持续物理时钟闭环仍由步骤11/12完成。
+正式test与校准分区不用于本runner开发对照，入口只接受train/validation。
+
+2. 方法对照表
+方法                         当前状态             信息/结构与适用范围
+B0                           已运行规则参考       最近一次有效选择，raw margin阈值0.5，4秒新鲜度，含噪确认后模拟提交。
+B1_binary_filter_fixed_policy 已运行双候选适配     调用原JointBeliefFilter，V4事件转V2分类观测，共享固定询问规则。
+B2                           文本序列化已实现     同一VLM与实际图像来源；对象字典、数值ROI、全部分数/角色/历史/会话状态序列化。
+B3                           已登记、待实现       相同张量输入，经池化MLP产生8个prefix。
+B4                           已登记、待实现       相同张量输入，普通共享query连接器产生8个prefix。
+Full                         已登记、待实现       分角色历史/意图与通道query、单向诊断摘要，4+4个prefix。
+B3_aux / B4_aux               已登记、待实现       与Full相同辅助头、监督mask及loss权重，主要用于结构比较。
+
+3. B1复用边界
+实际复用bci_vla/core/joint_belief.py的JointBeliefFilter、GoalVocabulary、TaskQuestionBinding及原ChannelModel/JointTransitionModel。
+原始过滤器要求两个任务目标。多候选场景明确不适用，不能删除候选后伪装全候选公平对照。
+本步适配将公开分类解码结果映射到0/1，丢弃原始分数幅度；NO_RESPONSE保留，PROBE不使用任务绑定。
+旧V2侧样本窗口为1秒的模拟观测，回复消息TTL与问题超时分开；不是实测EEG采样记录。
+模拟channel模型族预先声明stable/degraded的0.9/0.35正确率及0.03/0.25遗漏率；当前隐藏状态从未输入过滤器。
+该全局模拟假设作为共享配置登记，可供全部方法使用。它不是现场校准的脑机概率。
+原完整DiagnosticPolicy所需匹配的机器人后果表当前缺失，因此本步使用fixed_inquiry，不声称已运行完整原规划器。
+确认和提交由公共V4检查独立负责；旧V2桥仅用于信念更新，不调用旧执行授权。
+
+4. 公平比较与预算
+B0/B1是信息处理能力不同的工程参考，不能只靠它们证明神经结构优越。
+B1仅在双候选匹配子集与其他方法比较；不能直接比较32轮B0与16轮B1的总提交数。
+B2属于相同外部信息源的系统对照。即使把ROI浮点数完整写成JSON，文本与内部视觉/张量表示的处理代价仍不同。
+B2样例保留数值ROI及完整历史，不做静默截断。utf8_bytes可实测，token_count保持null；步骤07必须用已核验tokenizer计算真实token数。
+B2计划文本上限2048token尚未验证；现有动作配置较短，不能截掉一半输入后继续声称公平。超长需明确拒绝/标记，并先完成上下文能力检查。
+B3/B4/Full采用相同张量、数据、8×2048前缀、可训练主干范围、优化器、batch和最终训练步数。
+主比较使用B3_aux/B4_aux与Full同辅助监督。无aux对照单列，分开估计结构、角色信息与额外loss的作用。
+参数量在步骤06实现后实测，目标适配器预算差异不超过5%；当前记录null，不编造参数量。
+计划pilot=100步、种子[0,1,2]，当前均未运行。最终步数/训练预算由步骤08试跑成本确定后共同冻结。
+当前training_data_ready=false、步骤03高层门槛未通过，因此没有训练或用规则输出冒充B2/B3/B4/Full结果。
+MVP公共询问策略为固定代码。学习询问策略另开分支，不能把fixed_inquiry称为学得的策略。
+没有登记可运行的NOIR实现/数据，本步不生成其数值。
+
+5. 公共时钟、模拟确认与提交
+每次交互统一消耗2秒，horizon=24秒；设置/采样/超时留在该时间块内。世界变化固定在8秒，与方法提问次数无关。
+计算耗时以compute_ns记录，当前没有把各次壁钟耗时逐次写入虚拟时钟。进入神经正式评价前须共同冻结推理延时/排队计费规则。
+随机流沿用步骤04的规范化问题键、时间槽和重复次数，不包含方法名、question_id或会话名称；多问一次不改变后续问题的随机流。
+每个policy只接收当前公开snapshot；私有世界与事后评分留在runner侧。该API隔离不等于操作系统级安全隔离。
+用户目标与通道只影响模拟回答生成和独立评分；不能喂给控制器用作真值。
+只有匹配精确proposal/context/任务版本且未过期的实际CONFIRM接受观测，才生成SIMULATED_SUBMISSION_REQUEST。
+每个run内同一确认幂等；拒绝、超时、旧映射、过期或STOP状态无法提交。
+提交记录execution_authorized=false、VLA_called=false、physical_dispatched=false，不依赖步骤11真实执行适配。
+STOP/CANCEL先于策略调用处理；映射变化清除旧确认并使旧观测失效。PROBE不替换已确认任务。
+
+6. 本轮开发结果与解释
+B0：32轮（8个LIBERO验证底层回合×4种目标/通道变化条件），53个模拟提交请求。
+B1二候选适配：16轮，12个模拟提交请求，原过滤器176次joint_bayes_update，最终均ready。
+另16个多候选B1条件显式记录不适用。两个方法覆盖范围和询问策略不同，总提交数不用于优劣排名。
+这些是交互软件开发输出，不是独立正式实验、抓取成功率、真实脑机性能或完整LIBERO任务完成结果。
+神经基线未运行，模型/仿真动作未调用，test未解封；步骤03/04缺口继续保留。
+
+7. 文件与复验
+登记：configs/v4/baseline_registry.json。
+实现：bci_vla/evaluation_v4/runner.py、policies.py、legacy.py。
+开发输出：execution/v4/05_runs/summary.json及逐轮日志；B2_text_serialization_example.json只展示输入序列化。
+复验：在D:\Scene_Aware\bci_vla_framework运行python execution/v4/verify_step05.py。
+测试覆盖重放、真实旧过滤器调用、控制独立性、确认绑定、版本/映射/超时、重复提交、噪声顺序无关和原来源保护。
+验收冻结后禁止--refresh-unfrozen覆盖；修改策略/输入/时钟或预算应建立新版本，重新登记并保存旧开发结果。
+下一步06实现CPU神经模块与匹配MLP/共享query结构；07/08仍需先解决高层能力与训练监督缺口。

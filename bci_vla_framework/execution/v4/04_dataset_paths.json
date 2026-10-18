@@ -1,0 +1,61 @@
+{
+  "scope": "bounded existing dataset path search, not exhaustive",
+  "roots": [
+    {
+      "root": "/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/Isaac-GR00T/external_dependencies/LIBERO/libero/libero/../datasets",
+      "exists": false,
+      "hdf5_files": []
+    },
+    {
+      "root": "/home/oyjt/workspace/datasets",
+      "exists": true,
+      "hdf5_files": [],
+      "children": [
+        ".download-venv",
+        "12e21",
+        "AtomBench",
+        "Autobrik",
+        "GabrielNing",
+        "HCHoongChing",
+        "HITdongdong",
+        "Hoshipu",
+        "Ishan-Axibo",
+        "JohnnyXing",
+        "LAFAN1_Retargeting_Dataset",
+        "NONHUMAN-RESEARCH",
+        "RoboCOIN",
+        "RoboSynChallenge",
+        "X-Humanoid",
+        "_control",
+        "_curation",
+        "agilexsupport",
+        "axiboai",
+        "chen45954",
+        "czc20033",
+        "g1_dex3_trash_real",
+        "g1_dex3_trash_real_normal",
+        "g1_sonic_orange_to_plate_mani",
+        "gauravpradeep",
+        "libero_10_no_noops_1.0.0_lerobot",
+        "mjung11",
+        "motions",
+        "murobotics",
+        "rhos-ai",
+        "richardshkim",
+        "robopoint",
+        "robotics-diffusion-transformer",
+        "x-humanoid-robomind"
+      ]
+    },
+    {
+      "root": "/home/oyjt/LIBERO/libero/datasets",
+      "exists": false,
+      "hdf5_files": []
+    },
+    {
+      "root": "/home/oyjt/datasets",
+      "exists": false,
+      "hdf5_files": []
+    }
+  ]
+}

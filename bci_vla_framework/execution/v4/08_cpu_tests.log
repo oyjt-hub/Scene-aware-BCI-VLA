@@ -1,0 +1,12 @@
+Recorded from the actual local test invocation, tool chunk 82ead4.
+Working directory: D:\Scene_Aware\bci_vla_framework
+Command: python -c "import sys; sys.path.insert(0,r'D:\Scene_Aware\.runtime\step06_cpu'); import unittest; s=unittest.defaultTestLoader.loadTestsFromNames(['tests.test_training_data_v4','tests.test_training_engine_v4','tests.test_training_text_v4','tests.test_training_challenges_v4']); r=unittest.TextTestRunner().run(s); sys.exit(not r.wasSuccessful())"
+
+.......................................
+----------------------------------------------------------------------
+Ran 39 tests in 6.866s
+
+OK
+
+Scope: Local CPU schema/loss/optimizer/serializer/challenge mechanism tests.
+This is not real-checkpoint inference accuracy or LIBERO action success.

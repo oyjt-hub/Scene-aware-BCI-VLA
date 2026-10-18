@@ -1,0 +1,10 @@
+{
+  "status": "PASS_CPU_MECHANISMS_ONLY",
+  "tests_run": 88,
+  "failures": 0,
+  "errors": 0,
+  "elapsed_s": 26.935,
+  "log": "execution\\v4\\09_cpu_tests_repair3.log",
+  "log_sha256": "7336d2abd1c3016133a07e488571f3241555ab14e8f232b70ebff4349e27a60e",
+  "scope": "CPU public evidence contract, calibration, partition isolation, and routing mechanics; no real EEG or robot success"
+}

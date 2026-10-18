@@ -1,0 +1,56 @@
+﻿V4-03R 高层文字能力修复与限定验收（2026-10-17）
+
+一、结论
+已补齐阻止步骤07工程接入的“限定协议下主任务/下一子任务文字输出”缺口。
+本次不是让未训练的步骤06小Transformer变聪明，而是先补训π0.5共享PaliGemma高层语言支路。
+原checkpoint本身仍没有通过；新的可用分支是“原LIBERO SFT＋单独可开关的高层LoRA”。
+只对本文件列出的协议给出通过，开放式规划、真实脑机去噪与低层执行能力不随之升级。
+
+二、诊断与分支选择
+原始π0.5 PyTorch权重和LIBERO SFT均经过原生caption/answer格式、纯文本因果、少样例提示对照。
+两者都能输出自然语言，但仍无法稳定保留OBJ实例或给出正确的抓取后子任务。
+因此不是简单“没文本头”，也不能把此前数字输出全归咎于接入错误；选择原计划允许的高层LoRA补训分支。
+第一轮双权重探针360秒总超时，只保留了原始权重结果；后续SFT单独复验完成，未改原始失败证据。
+
+三、实际训练
+基座：/home/oyjt/workspace/RLinf-RECAP/models/baseline_sft/RLinf-Pi05-LIBERO-SFT/model.safetensors。
+完整SHA256仍为4616e4c1966a5fb063b442ea5d69857f45e873222d839b794634d87d252ab9e7，和历史一致。
+高层18层语言self-attention的q/v/o共54个线性层，rank16、alpha32，共3,022,848个可训练参数。
+240步AdamW、lr=0.001；基座/视觉塔/embedding/文本头/动作专家不参加优化。
+24个LIBERO train底层回合、6个场景组、480条模板监督；validation为8回合、2场景组、120条。
+监督在服务器根据已有公开物体字典、明确选择、确认任务与显式状态生成，没有上传本地私有标签或读取旧隐藏真值。
+抓取后训练样例是纯文本符号状态，不伪装成真实抓取图像。实际抓取端点图只用于后续开发检查。
+本次从240步模型取得结果；120步和240步都在预定40条开发样例上40/40。
+
+四、通过范围
+1. 主任务：明确可用动作pick及选中OBJ_i，输出Pick up OBJ_i.
+2. 缺动作：已经选对象但没有指定动作，输出Which task do you want?；不能偷偷猜任意动作。
+3. 已确认pick/put任务＋明确公开夹爪状态：空夹爪输出Pick up；持有目标且put任务输出Place；持有目标且pick任务输出Done。
+4. gripper state必须由可观察状态提供；本轮没有证明模型能仅从RGB识别抓取状态，也没有证明任意任务/场景分解。
+5. 高层协议提供清楚的对象别名、当前状态和任务字段；本轮是语言能力启动，不是含噪BCI意图推断评测。
+后续Full/B3/B4的意图证据须按计划经内部token提供；不能把训练时显式选中对象当成不可观测真值泄漏到正式评估。
+
+五、开发检查结果
+补训前同一40条开发样例0/40，补训后40/40。
+独立重新加载：120/120原始验证样例、40/40联合别名置换、40/40未见措辞改写。
+实际抓取端点：来自既有LIBERO校准init0的两个端点图，接触且抬升>0.03m、末3步持有成立；4/4原始状态问法和4/4别名变体通过。
+这些是2张端点图的8种问法，不是8次独立机器人实验；没有新动作或新的成功轨迹。
+FP32隔离数学检查：cache/teacher最大logits差约6.485e-5，argmax全部一致；屏蔽未来答案改动影响0，解除屏蔽负对照影响8.183。
+BF16缓存与teacher的greedy argmax一致，但最大logits差0.9375，不宣称严格等价。FP32审计没有改变低层部署配置。
+LoRA关闭后原始sentinel logits差0；原基座参数版本计数不变，原checkpoint完整哈希不变。
+
+六、权重和复现入口
+本地适配权重：D:\Scene_Aware\bci_vla_framework\artifacts\v4\high_level_lora\step240.safetensors，12,102,152字节。
+SHA256：c1dbc8bd23e8e2590ac2670839a068d82423aa0c4620e734d2d99618afaec380。
+服务器：/home/oyjt/Scene-aware-BCI-VLA-runs/v4_step03R_language_20261017_v1/high_level_lora_step240.safetensors。
+配置configs/v4/high_level_branch_step03R.json；能力审计execution/v4/03R_text_capability.json；原始结果03R_language_pilot_v1.json、03R_reload_audit.json、03R_state_precision_audit.json。
+代码bci_vla/high_level_v4/lora.py；复现训练脚本execution/v4/step03R_language_pilot.py；独立重载脚本step03R_reload_audit.py。
+加载同一基座，install_high_level_lora(rank=16,alpha=32)，严格匹配safetensors中的A/B键和形状，冻结后只在high_level_scope中启用。
+默认关闭并在异常退出时恢复开关。后续共享模型并发必须串行化/加锁，并测试低层实际动作回归，不能认为语言off检查等于动作验收。
+
+七、后续约束
+步骤07仍未完成：此前只有37项本地预备/回归测试，下一步必须实际接入8个内部token并跑真实模型on/off、梯度、cache和实例绑定测试。
+步骤06模块未训练；V4-04保守intent SET、任务/放置监督缺口仍在，不能直接宣布步骤08训练就绪。
+所有B2/B3/B4/Full后续比较必须共享本轮高层语言初始化及预算，单列共同的302万LoRA参数，不能把它的语言增益归给小模块结构。
+同类多实例的低层到达/抓取仍NOT_VERIFIED；高层ID正确不等于动作专家会对准实例。
+正式test未解封，真实EEG与实体机器人未运行，原G2/G3/G4保持原结论。训练数据变体和措辞样例不是独立机器人回合。

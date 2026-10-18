@@ -1,0 +1,26 @@
+[
+  {
+    "command": "python execution/v4/inspect_step04.py",
+    "purpose": "existing LIBERO task catalogue"
+  },
+  {
+    "command": "python execution/v4/prepare_step04.py",
+    "purpose": "scene groups and split frozen before capture/noise"
+  },
+  {
+    "command": "python execution/v4/run_step04_capture.py",
+    "purpose": "actual 48 LIBERO reset/neutral-step captures"
+  },
+  {
+    "command": "python execution/v4/build_step04_data.py --rebuild-unfrozen",
+    "purpose": "last unfrozen data generation with canonical option order/covered future probe"
+  },
+  {
+    "command": "python execution/v4/inspect_step04.py --datasets",
+    "purpose": "bounded demonstration path search"
+  },
+  {
+    "command": "python execution/v4/verify_step04.py",
+    "result": "PASS; 222 checks"
+  }
+]

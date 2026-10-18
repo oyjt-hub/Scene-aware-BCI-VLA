@@ -1,0 +1,114 @@
+﻿V4-02 输入输出与意图澄清/通道检查协议
+日期：2026-10-17（Asia/Hong_Kong）
+版本：V4-02-contract-1；schema_version=bci-vla-interaction/4.0。
+
+一、范围与执行边界
+本步冻结开发接口、合成夹具和标准库参考校验器。不实现Transformer，不加载权重，不训练，不启动EEG/机器人，不证明推理能力。
+当前schema仅接受带明确synthetic_fixture标记的脑机证据和模块输出。真实日志、训练数据和模型预测需要后续版本及相应来源检查；不得直接去掉标记冒充实测。
+pick/place只是语法夹具。capability_verified始终为false。π0.5高层文本生成、子任务语义以及同类实例落地能力，仍须步骤03核实。
+本协议与旧V2事件并非线兼容；步骤11才实现适配。TASK映射TASK_QUERY，INTENT_QUERY也需保留独立问题来源，PROBE映射CHANNEL_PROBE，CONFIRM映射CONFIRM。原有授权检查不得被协议中的确认观测代替。
+
+二、文件与复验入口
+机器接口：configs/v4/interfaces.json。
+样例索引：examples/v4/fixture_index.json。
+参考实现：bci_vla/interaction_contract_v4/validation.py。
+校验命令：在D:\Scene_Aware\bci_vla_framework运行 python execution/v4/verify_step02.py。
+结果：execution/v4/02_verification.json；逐项保留接受/拒绝与原因。
+本说明和x-protocol定义跨字段语义。schema的required/additionalProperties约束字段，标准库校验器实现本项目使用的JSON Schema子集及语义绑定，不是通用JSON Schema引擎。
+
+三、PUBLIC_INPUT与时钟/版本
+PUBLIC_INPUT保存当前可在线取得的信息：context、as_of_s、scene、已发生history、公开task_options和public_state。
+context包括session_id、scene_id、scene_revision、mapping_id、mapping_revision。时间统一为会话内单调秒；as_of_s为当前观察截点，不采用混合设备时钟。
+sample_id仅用于样本/标签关联，不进入模型特征。provenance明确合成脑机、视觉来源、特征版本；real_eeg和physical_robot为false。
+scene.observed_at_s不得晚于as_of_s。image_ref为空时image_valid=false；该状态只表示没有图像输入，不表示场景中没有目标。
+scene_revision变化表示当前实例绑定/场景状态需要重新核验；不得每帧随意加版本而把历史全作废。对图像帧变化与实例绑定变化的划分由后续适配器明确。
+
+四、物体、别名与选择证据
+每个物体包含instance_id、场景局部alias=OBJ_0..OBJ_15、label、归一化bbox_xyxy、object_valid、roi_feature/roi_valid、semantic_feature/semantic_valid。
+instance_id来自跟踪/场景管理，不是类别名称；同类的两个杯子必须有不同ID。alias只在当前context绑定到该实例。
+bbox为[x1,y1,x2,y2]，范围[0,1]，须x1<x2且y1<y2；有效物体必须有框。特征缺失用null及false掩码，不能拿零向量冒充有效观测。
+VLM可读对象字典必须由同一物体表构造：OBJ_i->类别、位置及对应视觉区域。对象特征、选项reference、任务源/目的地和输出指针共享此绑定。
+neural_view按alias数字排序，删除原始instance_id，把对象引用换成alias；历史TASK选项换成action/source_alias/destination_alias，不输入任意任务ID。
+分数按option_id与question.options连接，不按JSON数组行号猜对应关系。保存selected_index及选择对象的alias。
+selection_event_id只可指向历史中有效TASK或全为OBJECT选项的INTENT_QUERY。selection视图与history是同一事件的两种视图；不能再次追加成第二次独立选择。
+对象上限16。超过上限时只按公开检测顺序截断，记录original_count/retained_count和policy；不能根据隐藏目标挑候选。target_recall_known=false不允许用私有真值宣称目标召回。
+纯行重排不得改变绑定；alias置换应使特征、选项及输出同步置换。校验覆盖行重排不变性及别名置换等变性，不代表已验证神经网络等变性。
+
+五、score_kind不能混淆
+RAW_SCORE：有限的原始解码分数，允许不归一化，不称为概率。
+CALIBRATED_PROBABILITY：每项在[0,1]、总和为1，必须附calibration；校准来源绑定角色、layout、mapping版本、有效截止时间与独立calibration-fit分区。本步只有合成校准夹具，不代表实测校准有效。
+HARD_LABEL：所选项为1、其他为0，只是硬标签编码，不能当作校准概率。
+NONE：无响应，没有values、selected_option_id或calibration。
+观察到回应时，每个问题选项必须恰有一条分数；不能默默删除低分候选。selected_option_id为解码器的实际输出，不要求一定等于分数最大项。
+JSON拒绝重复键、NaN及Infinity；schema拒绝未声明字段和数值越界。
+
+六、问题、事件与两类询问
+question绑定question_id、role、context、layout_id、issued_at_s、expires_at_s、presentation_ack和选项表。符号symbol与option_id在同一问题内唯一。
+TASK：呈现候选物体并收集选择证据；不直接覆盖已确认任务。
+INTENT_QUERY：问“哪个物体/哪个任务”，选项是OBJECT或公开TASK候选；回答可以有噪声，不提供真实目标。
+PROBE：让用户注视指定的已知目标，diagnostic_option_id明确给出该目标，选项类型只能为DIAGNOSTIC。用于判断输入通道是否可靠，目标语义不得充当任务目标。
+CONFIRM：询问是否接受某个精确proposal；proposal带task_id、task_revision、suggestion_id、context、action、source_id、destination_id和有效期。确认选项只能是accept/reject。
+REJECT：拒绝对应CONFIRM，original_role=CONFIRM；清空当前/待定任务及问题，暂停，不能自动恢复旧任务。
+NO_RESPONSE：保留original_role及原问题，等待到expires_at_s后才产生；无选择证据。TASK无响应不是PROBE结果，PROBE无响应也不是用户任务选择。
+CANCEL：直接走原有撤销路径，清除任务、问题、建议并要求队列/cache失效。
+STOP：直接走原有停止路径并置stop_latched，独立于神经网络和VLM；本步control_route仅返回路由名称，不执行设备控制。
+event_id唯一，sequence严格递增，结束时间不倒退；所有结束时间<=as_of_s。current_event_id等于history最后一项，不在history外重复放一个当前观测。
+同一question_id不能关联两次独立回答。历史与诊断收据中的同一event_id只允许完全一致的审计副本，不作为重复观测计数。
+过期正常回答标EXPIRED；旧context标STALE_CONTEXT；未确认呈现标PRESENTATION_UNACKNOWLEDGED。invalid事件仅审计，不进入neural_view，也不能作为selection。
+NO_RESPONSE可在超时后稍晚记录；只要context/呈现有效，就记录超时本身，不把记账延迟误判为一次过期的用户回答。
+不能把正在预测的确认/下一次回答放进history或public_state；已发生的过去确认可作为公开历史。
+
+七、窗口外会话状态及重置
+history只保存最近8条事件，TASK与PROBE总数共同受限。public_state独立保存confirmed_task及其精确confirmation_receipt、pending_suggestion、pending_question、diagnostics、stop_latched。
+确认收据可在8条窗口外；不能因多次PROBE把已确认任务挤掉。夹具包含确认后连续9次PROBE，任务仍在。
+pending_question为已发出且未回答、未到期的问题，不能引用已回答question_id；CONFIRM问题必须精确绑定pending_suggestion。等待时不得再发另一问题。
+映射/context变化：清空待定问题/建议、确认有效性和诊断适用性，暂停后重新确认；旧记录留作invalid审计。
+实例ID、别名绑定或相关场景版本变化：旧任务/授权失效，执行适配器应先清队列/cache再恢复。不能靠同类名称把旧目标自动迁移到新实例。
+任务超时可清除；CANCEL/STOP/REJECT清除任务及待定状态。PROBE不能新增、替换或清除已确认任务。
+同一context内STOP不得自行解除；需要独立恢复协议/新会话。实际设备安全恢复未在本步实现。
+状态转换校验并非实时状态机：后续适配器还需处理实际完成事件、超时调度和队列/cache操作，本步只规定其边界。
+
+八、通道预测与诊断摘要
+估计对象：在相同mapping/layout及已覆盖刺激条件下，下一次近期已知目标PROBE能否正确识别。不是用户意图，也不是潜在故障类别的完美识别。
+工程初值：window_s=30、ttl_s=15、min_attempts=3、min_covered_symbols=2、最多64条公开收据。这些是原型默认值，未由实验确定，后续只能用允许的开发/校准数据选择。
+摘要由有效PROBE或原角色为PROBE的NO_RESPONSE收据重新计算：attempt_count、correct_count、no_response_count、covered_symbols、latest_ended_at_s。
+已知目标未响应计一次失败；无效/旧映射事件不计入。收据必须在窗口内；过旧收据由上游裁剪，不能留下后声称当前统计。
+SUFFICIENT需满足次数、覆盖、TTL且未truncated；否则INSUFFICIENT或EXPIRED。证据不足/过期时输出probability=null；0表示预测极低成功率，不能代替“未知”。
+摘要溢出显式truncated并保守判不足，不根据隐藏目标挑保留项。上述支持状态仅表示可估计，不代表概率已经校准。
+通道查询允许特征：已知目标是否匹配、目标分数、排序后的非目标分数、score_kind、时长、年龄和去身份统计。不允许物体名称、ROI、OBJ_i、TASK证据或注入故障日程。
+潜在channel_injected_mode仅留private_labels供评估分层，不能输入网络或直接监督成可观测故障类型。
+channel标签有mask；支持充分时才可监督next_probe_success及其未来target_time_s。未来标签与问题/回答必须只出现在私有文件，不能写入public_input。
+原型不宣称通道概率跨layout、跨设备或超出TTL泛化。实际监督来源与独立数据划分在步骤04，概率校准在步骤09。
+
+九、张量与掩码约定（网络实现留步骤06）
+对象：ROI [B,16,D_roi]、语义[B,16,D_sem]、框[B,16,4]；candidate_mask、roi_mask、semantic_mask均[B,16]，true表示有效。ROI/语义有效掩码要与candidate_mask相与。
+选择：依当前对象alias轴对齐scores、score_kind及selected_alias，未观测项显式掩码，不把缺失值当分数0；各证据类型分别编码。
+历史：先分TASK/INTENT_QUERY/CONFIRM/REJECT及相应NO_RESPONSE、与PROBE及对应NO_RESPONSE，再分别构造[B,8,D_task]、[B,8,D_diag]。两个组各自padding，但真实历史事件总数<=8。
+每组history_valid_mask为[B,8]；时间/角色与选项有效掩码随事件保存。分组在自注意力之前完成，避免通道组先看到任务信息。
+空场景/空历史：输入使用类型为EMPTY_INPUT的哨兵和显式空状态，候选/事件有效mask全false，监督mask为false。若注意力实现不支持全mask，单独启用一个EMPTY注意力位置；该位置不能当候选、outside或标签。
+前缀：[B,8,D_vlm]，4个意图查询投影+4个去身份通道摘要投影。原始4个通道query不直接送入VLM。前缀8槽保留，缺诊断证据时以显式未知摘要表示，不伪造可靠通道token。
+内部设计d_model=256、4头、2个融合块、FFN=1024是设计初值。真实D_roi/D_sem依特征源冻结，D_vlm须步骤03读实际embedding，步骤07才验证inputs_embeds接入。
+本步JSON夹具只有D_roi=4、D_sem=3、D_vlm=6及全零前缀占位；不是π0.5真实维数或网络输出。neural_view只是白名单特征视图，没有张量化、梯度或神经计算。
+
+十、五种不同的“不确定”
+1. 输入哨兵EMPTY_INPUT：无有效输入的工程表示。样例empty_scene_and_history.json。
+2. outside_probability：模型认为目标不在当前候选集合中的质量；候选集合非空也可发生。样例target_outside_candidates_output.json。
+3. 候选歧义：公开证据无法区分两个杯子；意图标签允许SET，不强迫猜某个私有真值。样例public_input.json和两份private_labels。
+4. missing_slots：物体已选但缺ACTION或DESTINATION等任务信息。样例missing_action_slot_output.json。
+5. abstain：当前不提交任务的决策，不能反推“输入为空”或“目标不存在”。样例abstain_without_missing_slot_output.json，missing_slots为空而仍弃权。
+上述输出仅展示字段格式，分数均为人为夹具，不证明系统能识别这些状态。
+
+十一、PRIVATE_LABELS与MODULE_OUTPUT
+private_labels绑定public_input的canonical SHA256与sample_id，禁止输入模型。隐藏goal、注入噪声和变化时刻只供评估；训练目标按公开可辨识性决定。
+意图POINT只允许IDENTIFIED且单一对象/单一outside目标；AMBIGUOUS用SET；UNOBSERVABLE必须mask=false并置NONE。任务不明确时可监督CLARIFICATION文本，不能强制具体TASK。
+同一公开输入、不同隐藏真值的两份标签采用相同训练监督，用来检查不凭隐藏真值强迫猜测。
+interaction教师只允许public_rule_v1或可见历史标注，并绑定输入哈希；当前MVP询问策略仍是固定规则设计，不能宣称已训练策略。
+MODULE_OUTPUT绑定输入哈希、context和as_of_s，包含soft_prefix、候选分布+outside、allowed_candidate_ids、abstain、missing_slots、channel、task_proposal和interaction。
+interaction包括PROPOSE_TASK、ASK_INTENT、CHECK_CHANNEL、WAIT；两类询问分别绑定INTENT_QUERY/PROBE问题。STOP或已有pending_question时必须WAIT且无新任务。
+提议任务必须引用有效对象，source_id在allowed_candidate_ids中，不能同时弃权或缺槽。主任务文本生成、对象字典与指针一致性还需后续模型接入测试；此步只检查结构化任务约束。
+execution_authorized始终false，requires_confirmation=true，raw_robot_command=null。观察到接受确认不等于执行授权；实际授权与动作队列仍沿用独立旧路径。
+
+十二、验收与后续
+执行verify_step02.py检查合法/异常夹具、掩码、分数类型、时间版本、确认与状态转换、公开/私有隔离、物体重排/别名绑定、STOP路由，以及步骤01和历史来源文件哈希未改。
+通过范围只限协议及软件校验；不能从合成样例或白名单检查推导Transformer性能、真实脑机可靠性、训练无泄漏或机器人安全性能。
+下一步V4-03：核实已有π0.5 checkpoint的文本头、embedding、最小文本解码与下一子任务语义，分别记录能力通过或缺口。没有通过前，不宣称内部token已接入VLA。

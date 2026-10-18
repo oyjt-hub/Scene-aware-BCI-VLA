@@ -1,0 +1,21 @@
+{
+  "source_sha256": {
+    "bci_vla/evaluation_v4/development.py": "104d978fe13c66361834fc0d7ed479bd0074caadd95216d28bed0e968aa78e85",
+    "execution/v4/run_step10.py": "0c0948829e6552a02d62e63a52d3426f425c4aab0f285e39a7cdcb5e14f42475",
+    "bci_vla/calibration_v4/policy.py": "cbf2bd561888281bd9c3f521c1880c8834c42534c763412927a4b007ede531d8",
+    "bci_vla/calibration_v4/calibration.py": "dd9c93ce8664bdbf889b79b8b4a0c6e6b4dff9cff0d8e5bea6c2f75985842ddb",
+    "bci_vla/calibration_v4/evidence_gate.py": "9da639d3788bc36555a288c4df2829f054ed4c37e3c90ce6c830bd7a592749b7",
+    "bci_vla/evaluation_v4/runner.py": "7a2ad06ccf184e48af8123f043f0cc91a9d85ac7697811a1fc5eb7570e8ab6b1",
+    "bci_vla/data_v4/channel.py": "4e1dbb76ee44ef8a563f5e565b5d6f69da29888d26ab89c86aa0f625d59e15ec",
+    "execution/v4/step09_calibrate_and_policy.py": "7d655f2a33303dff514f6ca62343b41fd74d5a92bcd1f3a2a163f81671504d2a"
+  },
+  "reporter_sha256": "b26106bf8dc9d9b70fbb20c00738c110befd8ce64fb38def6eac86847b818167",
+  "tests_sha256": "e896b5593c22759ade60f95a8f9175b5002cd658881e35eb789aa1673284cf91",
+  "frozen_binding": {
+    "model_sha256": "c884c3942b8bfa37f8ab096843c3048b86285b6b9196cdbd075b573ec36034ba",
+    "data_sha256": "c471a8567024689bb0d6c63104967ecf5b45c511a6b4a33be40223281d260136",
+    "input_schema_sha256": "b4cf05891d6702185cd770e73bf050d9e315e7cca0169ab6336a96dd2e8e1b31",
+    "policy_sha256": "48b556069f0384346692b3294cddc293cc958f1bf2f6262a86e2fc893d117339"
+  },
+  "source_result_sha256": "70161db38ef623ba2c243f0b5975b2708bd982f9e84f8524e914936053597dc2"
+}

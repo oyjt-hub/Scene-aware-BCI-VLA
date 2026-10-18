@@ -1,0 +1,33 @@
+{
+  "checked_at": "2026-10-16T15:50:24.119700+00:00",
+  "python_executable": "C:\\Program Files\\Python313\\python.exe",
+  "python_version": "3.13.0",
+  "platform": "Windows-11-10.0.22631-SP0",
+  "packages": {
+    "torch": {
+      "distribution_version": null,
+      "import_executed": false
+    },
+    "numpy": {
+      "distribution_version": "2.2.4",
+      "import_executed": false
+    },
+    "transformers": {
+      "distribution_version": null,
+      "import_executed": false
+    },
+    "paramiko": {
+      "distribution_version": "5.0.0",
+      "import_executed": false
+    },
+    "safetensors": {
+      "distribution_version": null,
+      "import_executed": false
+    },
+    "pytest": {
+      "distribution_version": null,
+      "import_executed": false
+    }
+  },
+  "network_or_device_access": false
+}

@@ -1,0 +1,1149 @@
+{
+  "scope": "read_only_workspace_top_level_and_known_weight_paths",
+  "checked_at_utc": "2026-10-16T16:08:42.868048+00:00",
+  "workspace_top_level": [
+    {
+      "name": "._____temp",
+      "path": "/home/oyjt/workspace/._____temp",
+      "is_symlink": false
+    },
+    {
+      "name": ".cache",
+      "path": "/home/oyjt/workspace/.cache",
+      "is_symlink": false
+    },
+    {
+      "name": ".lerobot_cache",
+      "path": "/home/oyjt/workspace/.lerobot_cache",
+      "is_symlink": false
+    },
+    {
+      "name": ".tmp",
+      "path": "/home/oyjt/workspace/.tmp",
+      "is_symlink": false
+    },
+    {
+      "name": "GMR",
+      "path": "/home/oyjt/workspace/GMR",
+      "is_symlink": false
+    },
+    {
+      "name": "GMR-limx",
+      "path": "/home/oyjt/workspace/GMR-limx",
+      "is_symlink": false
+    },
+    {
+      "name": "GR00T-N1.7-3B",
+      "path": "/home/oyjt/workspace/GR00T-N1.7-3B",
+      "is_symlink": false
+    },
+    {
+      "name": "GR00T-WholeBodyControl",
+      "path": "/home/oyjt/workspace/GR00T-WholeBodyControl",
+      "is_symlink": false
+    },
+    {
+      "name": "Isaac-GR00T",
+      "path": "/home/oyjt/workspace/Isaac-GR00T",
+      "is_symlink": false
+    },
+    {
+      "name": "IsaacLab-2.1.0",
+      "path": "/home/oyjt/workspace/IsaacLab-2.1.0",
+      "is_symlink": false
+    },
+    {
+      "name": "IsaacLab-2.3.0",
+      "path": "/home/oyjt/workspace/IsaacLab-2.3.0",
+      "is_symlink": false
+    },
+    {
+      "name": "IsaacLab-converted-assets",
+      "path": "/home/oyjt/workspace/IsaacLab-converted-assets",
+      "is_symlink": false
+    },
+    {
+      "name": "IsaacLab-v2.3.0.zip",
+      "path": "/home/oyjt/workspace/IsaacLab-v2.3.0.zip",
+      "is_symlink": false
+    },
+    {
+      "name": "LIBERO",
+      "path": "/home/oyjt/workspace/LIBERO",
+      "is_symlink": false
+    },
+    {
+      "name": "LIBERO-openwam",
+      "path": "/home/oyjt/workspace/LIBERO-openwam",
+      "is_symlink": false
+    },
+    {
+      "name": "Miniconda3-latest-Linux-x86_64.sh",
+      "path": "/home/oyjt/workspace/Miniconda3-latest-Linux-x86_64.sh",
+      "is_symlink": false
+    },
+    {
+      "name": "Piper_rl",
+      "path": "/home/oyjt/workspace/Piper_rl",
+      "is_symlink": false
+    },
+    {
+      "name": "Qwen2.5-VL-GR00T-LIBERO-4in1",
+      "path": "/home/oyjt/workspace/Qwen2.5-VL-GR00T-LIBERO-4in1",
+      "is_symlink": false
+    },
+    {
+      "name": "Qwen3-VL-4B-Instruct",
+      "path": "/home/oyjt/workspace/Qwen3-VL-4B-Instruct",
+      "is_symlink": false
+    },
+    {
+      "name": "RLinf-RECAP",
+      "path": "/home/oyjt/workspace/RLinf-RECAP",
+      "is_symlink": false
+    },
+    {
+      "name": "TensorRT-10.13-dev",
+      "path": "/home/oyjt/workspace/TensorRT-10.13-dev",
+      "is_symlink": false
+    },
+    {
+      "name": "__pycache__",
+      "path": "/home/oyjt/workspace/__pycache__",
+      "is_symlink": false
+    },
+    {
+      "name": "archives",
+      "path": "/home/oyjt/workspace/archives",
+      "is_symlink": false
+    },
+    {
+      "name": "audit_recap_data_20261008.py",
+      "path": "/home/oyjt/workspace/audit_recap_data_20261008.py",
+      "is_symlink": false
+    },
+    {
+      "name": "backups",
+      "path": "/home/oyjt/workspace/backups",
+      "is_symlink": false
+    },
+    {
+      "name": "benchmark_pi05_memory_latency.py",
+      "path": "/home/oyjt/workspace/benchmark_pi05_memory_latency.py",
+      "is_symlink": false
+    },
+    {
+      "name": "benchmark_pi05_w8a16.py",
+      "path": "/home/oyjt/workspace/benchmark_pi05_w8a16.py",
+      "is_symlink": false
+    },
+    {
+      "name": "checkpoints",
+      "path": "/home/oyjt/workspace/checkpoints",
+      "is_symlink": false
+    },
+    {
+      "name": "cobot_data",
+      "path": "/home/oyjt/workspace/cobot_data",
+      "is_symlink": false
+    },
+    {
+      "name": "continue_rtc_v2.py",
+      "path": "/home/oyjt/workspace/continue_rtc_v2.py",
+      "is_symlink": false
+    },
+    {
+      "name": "cosmos_dl.log",
+      "path": "/home/oyjt/workspace/cosmos_dl.log",
+      "is_symlink": false
+    },
+    {
+      "name": "cosmos_ms_dl.log",
+      "path": "/home/oyjt/workspace/cosmos_ms_dl.log",
+      "is_symlink": false
+    },
+    {
+      "name": "datasets",
+      "path": "/home/oyjt/workspace/datasets",
+      "is_symlink": false
+    },
+    {
+      "name": "dreamzero",
+      "path": "/home/oyjt/workspace/dreamzero",
+      "is_symlink": false
+    },
+    {
+      "name": "dreamzero_assets",
+      "path": "/home/oyjt/workspace/dreamzero_assets",
+      "is_symlink": false
+    },
+    {
+      "name": "dreamzero_benchmark_4000",
+      "path": "/home/oyjt/workspace/dreamzero_benchmark_4000",
+      "is_symlink": false
+    },
+    {
+      "name": "dreamzero_retrain_10k",
+      "path": "/home/oyjt/workspace/dreamzero_retrain_10k",
+      "is_symlink": false
+    },
+    {
+      "name": "dreamzero_tools",
+      "path": "/home/oyjt/workspace/dreamzero_tools",
+      "is_symlink": false
+    },
+    {
+      "name": "envs",
+      "path": "/home/oyjt/workspace/envs",
+      "is_symlink": false
+    },
+    {
+      "name": "fix_orbax_reshard.py",
+      "path": "/home/oyjt/workspace/fix_orbax_reshard.py",
+      "is_symlink": false
+    },
+    {
+      "name": "fix_single_gpu_restore.py",
+      "path": "/home/oyjt/workspace/fix_single_gpu_restore.py",
+      "is_symlink": false
+    },
+    {
+      "name": "g00t_sync.log",
+      "path": "/home/oyjt/workspace/g00t_sync.log",
+      "is_symlink": false
+    },
+    {
+      "name": "g00t_sync2.log",
+      "path": "/home/oyjt/workspace/g00t_sync2.log",
+      "is_symlink": false
+    },
+    {
+      "name": "g00t_sync3.log",
+      "path": "/home/oyjt/workspace/g00t_sync3.log",
+      "is_symlink": false
+    },
+    {
+      "name": "g1-jetpack-upgrade",
+      "path": "/home/oyjt/workspace/g1-jetpack-upgrade",
+      "is_symlink": false
+    },
+    {
+      "name": "g12_flashattn.log",
+      "path": "/home/oyjt/workspace/g12_flashattn.log",
+      "is_symlink": false
+    },
+    {
+      "name": "g12_python.log",
+      "path": "/home/oyjt/workspace/g12_python.log",
+      "is_symlink": false
+    },
+    {
+      "name": "g17_weights.log",
+      "path": "/home/oyjt/workspace/g17_weights.log",
+      "is_symlink": false
+    },
+    {
+      "name": "g17_weights2.log",
+      "path": "/home/oyjt/workspace/g17_weights2.log",
+      "is_symlink": false
+    },
+    {
+      "name": "g1_connection",
+      "path": "/home/oyjt/workspace/g1_connection",
+      "is_symlink": false
+    },
+    {
+      "name": "g1_dex3_real_download_train.log",
+      "path": "/home/oyjt/workspace/g1_dex3_real_download_train.log",
+      "is_symlink": false
+    },
+    {
+      "name": "g1_dex3_real_manifest.json",
+      "path": "/home/oyjt/workspace/g1_dex3_real_manifest.json",
+      "is_symlink": false
+    },
+    {
+      "name": "g1_dex3_single_camera",
+      "path": "/home/oyjt/workspace/g1_dex3_single_camera",
+      "is_symlink": false
+    },
+    {
+      "name": "g1_ssd_backups",
+      "path": "/home/oyjt/workspace/g1_ssd_backups",
+      "is_symlink": false
+    },
+    {
+      "name": "gr00t_clone.log",
+      "path": "/home/oyjt/workspace/gr00t_clone.log",
+      "is_symlink": false
+    },
+    {
+      "name": "gr00t_finetune.log",
+      "path": "/home/oyjt/workspace/gr00t_finetune.log",
+      "is_symlink": false
+    },
+    {
+      "name": "gr00t_finetune_g1_dex3_real",
+      "path": "/home/oyjt/workspace/gr00t_finetune_g1_dex3_real",
+      "is_symlink": false
+    },
+    {
+      "name": "gr00t_finetune_libero10",
+      "path": "/home/oyjt/workspace/gr00t_finetune_libero10",
+      "is_symlink": false
+    },
+    {
+      "name": "gr00t_finetune_so100",
+      "path": "/home/oyjt/workspace/gr00t_finetune_so100",
+      "is_symlink": false
+    },
+    {
+      "name": "gr00t_finetune_sonic",
+      "path": "/home/oyjt/workspace/gr00t_finetune_sonic",
+      "is_symlink": false
+    },
+    {
+      "name": "gr00t_server.log",
+      "path": "/home/oyjt/workspace/gr00t_server.log",
+      "is_symlink": false
+    },
+    {
+      "name": "gr00t_server_ft.log",
+      "path": "/home/oyjt/workspace/gr00t_server_ft.log",
+      "is_symlink": false
+    },
+    {
+      "name": "gr00t_smoke_sonic",
+      "path": "/home/oyjt/workspace/gr00t_smoke_sonic",
+      "is_symlink": false
+    },
+    {
+      "name": "grab_sonic_frames.py",
+      "path": "/home/oyjt/workspace/grab_sonic_frames.py",
+      "is_symlink": false
+    },
+    {
+      "name": "hf_home",
+      "path": "/home/oyjt/workspace/hf_home",
+      "is_symlink": false
+    },
+    {
+      "name": "holosoma-main",
+      "path": "/home/oyjt/workspace/holosoma-main",
+      "is_symlink": false
+    },
+    {
+      "name": "holosoma-main.zip",
+      "path": "/home/oyjt/workspace/holosoma-main.zip",
+      "is_symlink": false
+    },
+    {
+      "name": "holosoma_runs",
+      "path": "/home/oyjt/workspace/holosoma_runs",
+      "is_symlink": false
+    },
+    {
+      "name": "jetpack6_prepare",
+      "path": "/home/oyjt/workspace/jetpack6_prepare",
+      "is_symlink": false
+    },
+    {
+      "name": "just_dl.log",
+      "path": "/home/oyjt/workspace/just_dl.log",
+      "is_symlink": false
+    },
+    {
+      "name": "lfs_pull.log",
+      "path": "/home/oyjt/workspace/lfs_pull.log",
+      "is_symlink": false
+    },
+    {
+      "name": "libero10_dl.log",
+      "path": "/home/oyjt/workspace/libero10_dl.log",
+      "is_symlink": false
+    },
+    {
+      "name": "libero10_smoke.log",
+      "path": "/home/oyjt/workspace/libero10_smoke.log",
+      "is_symlink": false
+    },
+    {
+      "name": "libero10_train.log",
+      "path": "/home/oyjt/workspace/libero10_train.log",
+      "is_symlink": false
+    },
+    {
+      "name": "libero_client.log",
+      "path": "/home/oyjt/workspace/libero_client.log",
+      "is_symlink": false
+    },
+    {
+      "name": "libero_client_a.log",
+      "path": "/home/oyjt/workspace/libero_client_a.log",
+      "is_symlink": false
+    },
+    {
+      "name": "libero_client_b.log",
+      "path": "/home/oyjt/workspace/libero_client_b.log",
+      "is_symlink": false
+    },
+    {
+      "name": "libero_env.log",
+      "path": "/home/oyjt/workspace/libero_env.log",
+      "is_symlink": false
+    },
+    {
+      "name": "libero_env2.log",
+      "path": "/home/oyjt/workspace/libero_env2.log",
+      "is_symlink": false
+    },
+    {
+      "name": "libero_env3.log",
+      "path": "/home/oyjt/workspace/libero_env3.log",
+      "is_symlink": false
+    },
+    {
+      "name": "libero_eval_videos",
+      "path": "/home/oyjt/workspace/libero_eval_videos",
+      "is_symlink": false
+    },
+    {
+      "name": "libero_server.log",
+      "path": "/home/oyjt/workspace/libero_server.log",
+      "is_symlink": false
+    },
+    {
+      "name": "libero_server_a.log",
+      "path": "/home/oyjt/workspace/libero_server_a.log",
+      "is_symlink": false
+    },
+    {
+      "name": "libero_server_b.log",
+      "path": "/home/oyjt/workspace/libero_server_b.log",
+      "is_symlink": false
+    },
+    {
+      "name": "libero_server_smoke.log",
+      "path": "/home/oyjt/workspace/libero_server_smoke.log",
+      "is_symlink": false
+    },
+    {
+      "name": "logs",
+      "path": "/home/oyjt/workspace/logs",
+      "is_symlink": false
+    },
+    {
+      "name": "merge_uniform_table.py",
+      "path": "/home/oyjt/workspace/merge_uniform_table.py",
+      "is_symlink": false
+    },
+    {
+      "name": "miniconda3",
+      "path": "/home/oyjt/workspace/miniconda3",
+      "is_symlink": false
+    },
+    {
+      "name": "ms_weights.log",
+      "path": "/home/oyjt/workspace/ms_weights.log",
+      "is_symlink": false
+    },
+    {
+      "name": "openpi",
+      "path": "/home/oyjt/workspace/openpi",
+      "is_symlink": false
+    },
+    {
+      "name": "openpi_v2",
+      "path": "/home/oyjt/workspace/openpi_v2",
+      "is_symlink": false
+    },
+    {
+      "name": "openwam_30k",
+      "path": "/home/oyjt/workspace/openwam_30k",
+      "is_symlink": false
+    },
+    {
+      "name": "openwam_assets",
+      "path": "/home/oyjt/workspace/openwam_assets",
+      "is_symlink": false
+    },
+    {
+      "name": "openwam_checkpoints",
+      "path": "/home/oyjt/workspace/openwam_checkpoints",
+      "is_symlink": false
+    },
+    {
+      "name": "openwam_continue_to_20k.sh",
+      "path": "/home/oyjt/workspace/openwam_continue_to_20k.sh",
+      "is_symlink": false
+    },
+    {
+      "name": "openwam_deployment",
+      "path": "/home/oyjt/workspace/openwam_deployment",
+      "is_symlink": false
+    },
+    {
+      "name": "ov",
+      "path": "/home/oyjt/workspace/ov",
+      "is_symlink": false
+    },
+    {
+      "name": "pi05_language_w8a16.py",
+      "path": "/home/oyjt/workspace/pi05_language_w8a16.py",
+      "is_symlink": false
+    },
+    {
+      "name": "pi05_language_w8a16_20261008",
+      "path": "/home/oyjt/workspace/pi05_language_w8a16_20261008",
+      "is_symlink": false
+    },
+    {
+      "name": "pi05_libero_comparison_progress.py",
+      "path": "/home/oyjt/workspace/pi05_libero_comparison_progress.py",
+      "is_symlink": false
+    },
+    {
+      "name": "pi05_libero_prune_comparison_20261008",
+      "path": "/home/oyjt/workspace/pi05_libero_prune_comparison_20261008",
+      "is_symlink": false
+    },
+    {
+      "name": "pi05_libero_pruning_eval.py",
+      "path": "/home/oyjt/workspace/pi05_libero_pruning_eval.py",
+      "is_symlink": false
+    },
+    {
+      "name": "pi05_libero_w8a16_eval.py",
+      "path": "/home/oyjt/workspace/pi05_libero_w8a16_eval.py",
+      "is_symlink": false
+    },
+    {
+      "name": "pi05_native_benchmark_20261008",
+      "path": "/home/oyjt/workspace/pi05_native_benchmark_20261008",
+      "is_symlink": false
+    },
+    {
+      "name": "pi05_w8a16_deps",
+      "path": "/home/oyjt/workspace/pi05_w8a16_deps",
+      "is_symlink": false
+    },
+    {
+      "name": "pi05_w8a16_progress.py",
+      "path": "/home/oyjt/workspace/pi05_w8a16_progress.py",
+      "is_symlink": false
+    },
+    {
+      "name": "planner_dl.log",
+      "path": "/home/oyjt/workspace/planner_dl.log",
+      "is_symlink": false
+    },
+    {
+      "name": "policy_5k_backup.onnx",
+      "path": "/home/oyjt/workspace/policy_5k_backup.onnx",
+      "is_symlink": false
+    },
+    {
+      "name": "prepare_g1_dex3_real.py",
+      "path": "/home/oyjt/workspace/prepare_g1_dex3_real.py",
+      "is_symlink": false
+    },
+    {
+      "name": "real-time-chunking-kinetix",
+      "path": "/home/oyjt/workspace/real-time-chunking-kinetix",
+      "is_symlink": false
+    },
+    {
+      "name": "record_sonic_stream.py",
+      "path": "/home/oyjt/workspace/record_sonic_stream.py",
+      "is_symlink": false
+    },
+    {
+      "name": "robopoint_eval",
+      "path": "/home/oyjt/workspace/robopoint_eval",
+      "is_symlink": false
+    },
+    {
+      "name": "ros2_jazzy",
+      "path": "/home/oyjt/workspace/ros2_jazzy",
+      "is_symlink": false
+    },
+    {
+      "name": "rtc-reproduction",
+      "path": "/home/oyjt/workspace/rtc-reproduction",
+      "is_symlink": false
+    },
+    {
+      "name": "rtc_v2_prune16",
+      "path": "/home/oyjt/workspace/rtc_v2_prune16",
+      "is_symlink": false
+    },
+    {
+      "name": "rtc_v2_prune16.py",
+      "path": "/home/oyjt/workspace/rtc_v2_prune16.py",
+      "is_symlink": false
+    },
+    {
+      "name": "rtc_v2_prune16_bench.py",
+      "path": "/home/oyjt/workspace/rtc_v2_prune16_bench.py",
+      "is_symlink": false
+    },
+    {
+      "name": "rtc_v2_prune16_setup.py",
+      "path": "/home/oyjt/workspace/rtc_v2_prune16_setup.py",
+      "is_symlink": false
+    },
+    {
+      "name": "run_g1_dex3_real_finetune.sh",
+      "path": "/home/oyjt/workspace/run_g1_dex3_real_finetune.sh",
+      "is_symlink": false
+    },
+    {
+      "name": "run_libero10_eval.sh",
+      "path": "/home/oyjt/workspace/run_libero10_eval.sh",
+      "is_symlink": false
+    },
+    {
+      "name": "run_libero10_extend.sh",
+      "path": "/home/oyjt/workspace/run_libero10_extend.sh",
+      "is_symlink": false
+    },
+    {
+      "name": "run_libero10_train.sh",
+      "path": "/home/oyjt/workspace/run_libero10_train.sh",
+      "is_symlink": false
+    },
+    {
+      "name": "run_pi05_libero_comparison.py",
+      "path": "/home/oyjt/workspace/run_pi05_libero_comparison.py",
+      "is_symlink": false
+    },
+    {
+      "name": "run_pi05_w8a16_comparison.py",
+      "path": "/home/oyjt/workspace/run_pi05_w8a16_comparison.py",
+      "is_symlink": false
+    },
+    {
+      "name": "run_sonic_sim2sim.sh",
+      "path": "/home/oyjt/workspace/run_sonic_sim2sim.sh",
+      "is_symlink": false
+    },
+    {
+      "name": "run_sonic_vla_finetuned.sh",
+      "path": "/home/oyjt/workspace/run_sonic_vla_finetuned.sh",
+      "is_symlink": false
+    },
+    {
+      "name": "run_sonic_vla_sim.sh",
+      "path": "/home/oyjt/workspace/run_sonic_vla_sim.sh",
+      "is_symlink": false
+    },
+    {
+      "name": "sim-evals",
+      "path": "/home/oyjt/workspace/sim-evals",
+      "is_symlink": false
+    },
+    {
+      "name": "sim2sim.log",
+      "path": "/home/oyjt/workspace/sim2sim.log",
+      "is_symlink": false
+    },
+    {
+      "name": "so100_eval.log",
+      "path": "/home/oyjt/workspace/so100_eval.log",
+      "is_symlink": false
+    },
+    {
+      "name": "so100_eval.png",
+      "path": "/home/oyjt/workspace/so100_eval.png",
+      "is_symlink": false
+    },
+    {
+      "name": "so100_eval_ckpt1000.png",
+      "path": "/home/oyjt/workspace/so100_eval_ckpt1000.png",
+      "is_symlink": false
+    },
+    {
+      "name": "so100_eval_ckpt1500.png",
+      "path": "/home/oyjt/workspace/so100_eval_ckpt1500.png",
+      "is_symlink": false
+    },
+    {
+      "name": "so100_eval_ckpt500.png",
+      "path": "/home/oyjt/workspace/so100_eval_ckpt500.png",
+      "is_symlink": false
+    },
+    {
+      "name": "so100_eval_trend.log",
+      "path": "/home/oyjt/workspace/so100_eval_trend.log",
+      "is_symlink": false
+    },
+    {
+      "name": "sonic_blackj_training",
+      "path": "/home/oyjt/workspace/sonic_blackj_training",
+      "is_symlink": false
+    },
+    {
+      "name": "sonic_build.log",
+      "path": "/home/oyjt/workspace/sonic_build.log",
+      "is_symlink": false
+    },
+    {
+      "name": "sonic_build2.log",
+      "path": "/home/oyjt/workspace/sonic_build2.log",
+      "is_symlink": false
+    },
+    {
+      "name": "sonic_data_dl.log",
+      "path": "/home/oyjt/workspace/sonic_data_dl.log",
+      "is_symlink": false
+    },
+    {
+      "name": "sonic_deploy.log",
+      "path": "/home/oyjt/workspace/sonic_deploy.log",
+      "is_symlink": false
+    },
+    {
+      "name": "sonic_frames",
+      "path": "/home/oyjt/workspace/sonic_frames",
+      "is_symlink": false
+    },
+    {
+      "name": "sonic_onboard_prepare",
+      "path": "/home/oyjt/workspace/sonic_onboard_prepare",
+      "is_symlink": false
+    },
+    {
+      "name": "sonic_onnx_dl.log",
+      "path": "/home/oyjt/workspace/sonic_onnx_dl.log",
+      "is_symlink": false
+    },
+    {
+      "name": "sonic_onnx_dl2.log",
+      "path": "/home/oyjt/workspace/sonic_onnx_dl2.log",
+      "is_symlink": false
+    },
+    {
+      "name": "sonic_sim.log",
+      "path": "/home/oyjt/workspace/sonic_sim.log",
+      "is_symlink": false
+    },
+    {
+      "name": "sonic_simenv.log",
+      "path": "/home/oyjt/workspace/sonic_simenv.log",
+      "is_symlink": false
+    },
+    {
+      "name": "sonic_simenv2.log",
+      "path": "/home/oyjt/workspace/sonic_simenv2.log",
+      "is_symlink": false
+    },
+    {
+      "name": "sonic_smoke.log",
+      "path": "/home/oyjt/workspace/sonic_smoke.log",
+      "is_symlink": false
+    },
+    {
+      "name": "sonic_train.log",
+      "path": "/home/oyjt/workspace/sonic_train.log",
+      "is_symlink": false
+    },
+    {
+      "name": "sonic_videos",
+      "path": "/home/oyjt/workspace/sonic_videos",
+      "is_symlink": false
+    },
+    {
+      "name": "teacher_stage1_rtc_v2_audit",
+      "path": "/home/oyjt/workspace/teacher_stage1_rtc_v2_audit",
+      "is_symlink": false
+    },
+    {
+      "name": "unifolm-vla",
+      "path": "/home/oyjt/workspace/unifolm-vla",
+      "is_symlink": false
+    },
+    {
+      "name": "unifolm_vla_deploy",
+      "path": "/home/oyjt/workspace/unifolm_vla_deploy",
+      "is_symlink": false
+    },
+    {
+      "name": "unifolm_vla_finetune_g1_joint28",
+      "path": "/home/oyjt/workspace/unifolm_vla_finetune_g1_joint28",
+      "is_symlink": false
+    },
+    {
+      "name": "uv-python",
+      "path": "/home/oyjt/workspace/uv-python",
+      "is_symlink": false
+    },
+    {
+      "name": "vla_launch.log",
+      "path": "/home/oyjt/workspace/vla_launch.log",
+      "is_symlink": false
+    },
+    {
+      "name": "vla_launch_ft.log",
+      "path": "/home/oyjt/workspace/vla_launch_ft.log",
+      "is_symlink": false
+    },
+    {
+      "name": "wandb",
+      "path": "/home/oyjt/workspace/wandb",
+      "is_symlink": false
+    },
+    {
+      "name": "wbt_export.log",
+      "path": "/home/oyjt/workspace/wbt_export.log",
+      "is_symlink": false
+    },
+    {
+      "name": "wheels",
+      "path": "/home/oyjt/workspace/wheels",
+      "is_symlink": false
+    },
+    {
+      "name": "whole_body_dataset",
+      "path": "/home/oyjt/workspace/whole_body_dataset",
+      "is_symlink": false
+    },
+    {
+      "name": "whole_body_tracking",
+      "path": "/home/oyjt/workspace/whole_body_tracking",
+      "is_symlink": false
+    }
+  ],
+  "candidate_roots": [
+    {
+      "path": "/home/oyjt/workspace/vla_launch_ft.log",
+      "exists": true,
+      "is_directory": false,
+      "bytes": 1907,
+      "mtime_ns": 1790965928746801116,
+      "resolved_path": "/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/vla_launch_ft.log"
+    },
+    {
+      "path": "/home/oyjt/workspace/ms_weights.log",
+      "exists": true,
+      "is_directory": false,
+      "bytes": 713315,
+      "mtime_ns": 1790812429379010909,
+      "resolved_path": "/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/ms_weights.log"
+    },
+    {
+      "path": "/home/oyjt/workspace/g17_weights.log",
+      "exists": true,
+      "is_directory": false,
+      "bytes": 3089,
+      "mtime_ns": 1790804517890316815,
+      "resolved_path": "/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/g17_weights.log"
+    },
+    {
+      "path": "/home/oyjt/workspace/openpi",
+      "exists": true,
+      "is_directory": true,
+      "bytes": 4096,
+      "mtime_ns": 1767797205705369733,
+      "resolved_path": "/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/openpi",
+      "children": [
+        ".dockerignore",
+        ".git",
+        ".github",
+        ".gitignore",
+        ".gitmodules",
+        ".pre-commit-config.yaml",
+        ".python-version",
+        ".venv",
+        ".vscode",
+        "CONTRIBUTING.md",
+        "LICENSE",
+        "LICENSE_GEMMA.txt",
+        "README.md",
+        "assets",
+        "checkpoints",
+        "docs",
+        "examples",
+        "packages",
+        "pyproject.toml",
+        "scripts",
+        "src",
+        "third_party",
+        "uv.lock",
+        "wandb"
+      ]
+    },
+    {
+      "path": "/home/oyjt/workspace/unifolm-vla",
+      "exists": true,
+      "is_directory": true,
+      "bytes": 4096,
+      "mtime_ns": 1791648282552578018,
+      "resolved_path": "/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/unifolm-vla",
+      "children": [
+        ".git",
+        ".gitignore",
+        "README.md",
+        "README_cn.md",
+        "assets",
+        "deployment",
+        "experiments",
+        "prepare_data",
+        "pyproject.toml",
+        "scripts",
+        "src"
+      ]
+    },
+    {
+      "path": "/home/oyjt/workspace/run_sonic_vla_finetuned.sh",
+      "exists": true,
+      "is_directory": false,
+      "bytes": 1568,
+      "mtime_ns": 1790912439856458146,
+      "resolved_path": "/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/run_sonic_vla_finetuned.sh"
+    },
+    {
+      "path": "/home/oyjt/workspace/checkpoints",
+      "exists": true,
+      "is_directory": true,
+      "bytes": 4096,
+      "mtime_ns": 1791440827939427451,
+      "resolved_path": "/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/checkpoints",
+      "children": [
+        "._____temp",
+        ".cache",
+        ".msc",
+        ".mv",
+        "LICENSE",
+        "Qwen2.5-VL-3B-Instruct",
+        "Qwen2.5-VL-3B-Instruct-Action",
+        "Qwen3-VL-4B-Instruct-Action",
+        "Qwen3VL-OFT-Bridge-RT-1",
+        "README.md",
+        "capsule",
+        "cherry_0123",
+        "cloth",
+        "config.json",
+        "configuration.json",
+        "dataset",
+        "generation_config.json",
+        "merges.txt",
+        "model-00001-of-00004.safetensors",
+        "model-00002-of-00004.safetensors",
+        "model-00003-of-00004.safetensors",
+        "model-00004-of-00004.safetensors",
+        "model.safetensors.index.json",
+        "models--Qwen--Qwen3-VL-4B-Instruct",
+        "pi05_base",
+        "pi05_droid",
+        "pi05_fold_clothes",
+        "pi0_aloha_towel",
+        "pi0_cherry",
+        "pick",
+        "pour_water_0312",
+        "table",
+        "test",
+        "test_0319",
+        "tokenizer.json",
+        "tokenizer_config.json",
+        "uniform",
+        "uniform_rtc_v2",
+        "uniform_table_rtc_v2",
+        "uniform_table_rtc_v2_pruned16",
+        "vocab.json"
+      ]
+    },
+    {
+      "path": "/home/oyjt/workspace/g17_weights2.log",
+      "exists": true,
+      "is_directory": false,
+      "bytes": 35195,
+      "mtime_ns": 1790817915465192323,
+      "resolved_path": "/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/g17_weights2.log"
+    },
+    {
+      "path": "/home/oyjt/workspace/openpi_v2",
+      "exists": true,
+      "is_directory": true,
+      "bytes": 4096,
+      "mtime_ns": 1791192881908561006,
+      "resolved_path": "/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/openpi_v2",
+      "children": [
+        ".dockerignore",
+        ".github",
+        ".gitignore",
+        ".gitmodules",
+        ".pre-commit-config.yaml",
+        ".python-version",
+        ".venv",
+        ".vscode",
+        "CONTRIBUTING.md",
+        "LICENSE",
+        "LICENSE_GEMMA.txt",
+        "README.md",
+        "assets",
+        "deployment_logs",
+        "docs",
+        "examples",
+        "packages",
+        "pyproject.toml",
+        "rtc_v2_watch.sh",
+        "scripts",
+        "smoke_15000.py",
+        "smoke_test.py",
+        "src",
+        "third_party",
+        "uv.lock",
+        "wandb"
+      ]
+    },
+    {
+      "path": "/home/oyjt/workspace/RLinf-RECAP",
+      "exists": true,
+      "is_directory": true,
+      "bytes": 4096,
+      "mtime_ns": 1792165878764349172,
+      "resolved_path": "/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/RLinf-RECAP",
+      "children": [
+        "README_training.md",
+        "cache",
+        "configs",
+        "datasets",
+        "env.sh",
+        "eval_baseline10_h520_1790660576.json",
+        "eval_baseline50_h520_1790688971.json",
+        "eval_baseline50_h520_r256_1790690134.json",
+        "latest_value_run.json",
+        "logs",
+        "models",
+        "scripts",
+        "tmp"
+      ]
+    },
+    {
+      "path": "/home/oyjt/workspace/vla_launch.log",
+      "exists": true,
+      "is_directory": false,
+      "bytes": 1890,
+      "mtime_ns": 1790824278183550370,
+      "resolved_path": "/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/vla_launch.log"
+    },
+    {
+      "path": "/home/oyjt/workspace/openwam_checkpoints",
+      "exists": true,
+      "is_directory": true,
+      "bytes": 4096,
+      "mtime_ns": 1791109066455459213,
+      "resolved_path": "/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/openwam_checkpoints",
+      "children": [
+        "2026-09-30_20-28-59_debug",
+        "2026-09-30_20-32-23_debug",
+        "2026-09-30_23-35-55",
+        "2026-10-01_09-14-45",
+        "2026-10-01_13-55-38",
+        "2026-10-01_16-21-49",
+        "2026-10-02_00-53-38",
+        "2026-10-02_02-31-20",
+        "2026-10-02_16-08-31",
+        "2026-10-03_03-59-00",
+        "2026-10-03_04-55-59",
+        "2026-10-04_18-17-46"
+      ]
+    },
+    {
+      "path": "/home/oyjt/workspace/unifolm_vla_deploy",
+      "exists": true,
+      "is_directory": true,
+      "bytes": 4096,
+      "mtime_ns": 1791739530819598859,
+      "resolved_path": "/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/unifolm_vla_deploy",
+      "children": [
+        ".venv",
+        "README.md",
+        "cache",
+        "checkpoint_shapes.json",
+        "download_models.py",
+        "download_parallel.py",
+        "env.sh",
+        "finish_deploy.sh",
+        "install_env.sh",
+        "install_flash.sh",
+        "installed_versions.txt",
+        "logs",
+        "models",
+        "serve.py",
+        "start.sh",
+        "status.sh",
+        "stop.sh"
+      ]
+    },
+    {
+      "path": "/home/oyjt/workspace/run_sonic_vla_sim.sh",
+      "exists": true,
+      "is_directory": false,
+      "bytes": 1788,
+      "mtime_ns": 1790822829250560330,
+      "resolved_path": "/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/run_sonic_vla_sim.sh"
+    },
+    {
+      "path": "/home/oyjt/workspace/unifolm_vla_finetune_g1_joint28",
+      "exists": true,
+      "is_directory": true,
+      "bytes": 4096,
+      "mtime_ns": 1791740160843160862,
+      "resolved_path": "/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/unifolm_vla_finetune_g1_joint28",
+      "children": [
+        ".venv",
+        "README.md",
+        "accelerate.yaml",
+        "cache",
+        "checkpoint_adaptation.json",
+        "deepspeed.json",
+        "joint28_statistics.json",
+        "logs",
+        "runs",
+        "start.sh",
+        "train.pid",
+        "train.yaml",
+        "train_joint28.py"
+      ]
+    }
+  ],
+  "weight_and_config_matches": [
+    {
+      "path": "/home/oyjt/workspace/RLinf-RECAP/models/baseline_sft/RLinf-Pi05-LIBERO-SFT/model.safetensors",
+      "exists": true,
+      "is_directory": false,
+      "bytes": 7473091464,
+      "mtime_ns": 1790649182006311011,
+      "resolved_path": "/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/RLinf-RECAP/models/baseline_sft/RLinf-Pi05-LIBERO-SFT/model.safetensors"
+    },
+    {
+      "path": "/home/oyjt/workspace/Qwen2.5-VL-GR00T-LIBERO-4in1/checkpoints/steps_30000_pytorch_model.pt",
+      "exists": true,
+      "is_directory": false,
+      "bytes": 8442334155,
+      "mtime_ns": 1769791388892120525,
+      "resolved_path": "/mnt/20e266f0-6466-4ef3-a875-5959cd1015d7/oyjt/Qwen2.5-VL-GR00T-LIBERO-4in1/checkpoints/steps_30000_pytorch_model.pt"
+    },
+    {
+      "path": "/home/oyjt/workspace/Grounded-SAM-2/checkpoints/sam2.1_hiera_large.pt",
+      "exists": false
+    },
+    {
+      "path": "/home/oyjt/workspace/Grounded-SAM-2/Florence-2-large/model.safetensors",
+      "exists": false
+    }
+  ],
+  "entries_examined": 162,
+  "scan_is_exhaustive": false,
+  "weight_contents_loaded": false,
+  "not_performed": [
+    "model_load",
+    "inference",
+    "training",
+    "service_launch",
+    "remote_write",
+    "EEG_connection",
+    "robot_connection"
+  ]
+}

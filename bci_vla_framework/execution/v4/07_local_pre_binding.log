@@ -1,0 +1,43 @@
+test_01_default_capability_gate_denies_real_use (test_prefix_integration_v4.PrefixTests.test_01_default_capability_gate_denies_real_use) ... ok
+test_02_source_API_binding_and_mask_equivalence (test_prefix_integration_v4.PrefixTests.test_02_source_API_binding_and_mask_equivalence) ... ok
+test_03_native_inputs_retained_and_off_has_no_extra_tokens (test_prefix_integration_v4.PrefixTests.test_03_native_inputs_retained_and_off_has_no_extra_tokens) ... ok
+test_04_position_padding_and_causal_answer_masks (test_prefix_integration_v4.PrefixTests.test_04_position_padding_and_causal_answer_masks) ... ok
+test_05_teacher_forcing_and_KV_cache_logits (test_prefix_integration_v4.PrefixTests.test_05_teacher_forcing_and_KV_cache_logits) ... ok
+test_06_future_target_does_not_leak (test_prefix_integration_v4.PrefixTests.test_06_future_target_does_not_leak) ... ok
+test_07_true_language_CE_gradient_into_each_connector (test_prefix_integration_v4.PrefixTests.test_07_true_language_CE_gradient_into_each_connector) ... ok
+test_08_target_and_scene_changes_invalidate_cache (test_prefix_integration_v4.PrefixTests.test_08_target_and_scene_changes_invalidate_cache) ... ok
+test_09_new_session_prefill_resets_old_cache (test_prefix_integration_v4.PrefixTests.test_09_new_session_prefill_resets_old_cache) ... ok
+test_10_batched_padding_matches_individual_rows (test_prefix_integration_v4.PrefixTests.test_10_batched_padding_matches_individual_rows) ... ok
+test_11_language_target_binding_and_input_validation (test_prefix_integration_v4.PrefixTests.test_11_language_target_binding_and_input_validation) ... ok
+test_12_no_action_call_or_backbone_mutation (test_prefix_integration_v4.PrefixTests.test_12_no_action_call_or_backbone_mutation) ... ok
+test_13_bounded_generation_and_finally_cache_reset (test_prefix_integration_v4.PrefixTests.test_13_bounded_generation_and_finally_cache_reset) ... ok
+test_14_dtype_cast_keeps_prefix_gradient (test_prefix_integration_v4.PrefixTests.test_14_dtype_cast_keeps_prefix_gradient) ... ok
+test_15_joint_object_permutation_keeps_high_level_logits (test_prefix_integration_v4.PrefixTests.test_15_joint_object_permutation_keeps_high_level_logits) ... ok
+test_16_stop_and_decode_failure_clear_cached_state (test_prefix_integration_v4.PrefixTests.test_16_stop_and_decode_failure_clear_cached_state) ... ok
+test_17_mask_dtype_is_finite (test_prefix_integration_v4.PrefixTests.test_17_mask_dtype_is_finite) ... ok
+test_01_actual_LIBERO_shapes_all_controls (test_neural_interaction_v4.ConnectorTests.test_01_actual_LIBERO_shapes_all_controls) ... ok
+test_02_actual_parameter_budget (test_neural_interaction_v4.ConnectorTests.test_02_actual_parameter_budget) ... ok
+test_03_empty_observation_and_zero_N_H (test_neural_interaction_v4.ConnectorTests.test_03_empty_observation_and_zero_N_H) ... ok
+test_04_batch_isolation (test_neural_interaction_v4.ConnectorTests.test_04_batch_isolation) ... ok
+test_05_joint_object_permutation (test_neural_interaction_v4.ConnectorTests.test_05_joint_object_permutation) ... ok
+test_06_alias_label_not_numeric_features (test_neural_interaction_v4.ConnectorTests.test_06_alias_label_not_numeric_features) ... ok
+test_07_padding_NaN_ignored_valid_illegal_rejected (test_neural_interaction_v4.ConnectorTests.test_07_padding_NaN_ignored_valid_illegal_rejected) ... ok
+test_08_channel_barrier_at_every_layer (test_neural_interaction_v4.ConnectorTests.test_08_channel_barrier_at_every_layer) ... ok
+test_09_PROBE_object_semantics_invariance (test_neural_interaction_v4.ConnectorTests.test_09_PROBE_object_semantics_invariance) ... ok
+test_10_diagnostic_numeric_effect_and_oneway_gradient (test_neural_interaction_v4.ConnectorTests.test_10_diagnostic_numeric_effect_and_oneway_gradient) ... ok
+test_11_persistent_summary_or_insufficient (test_neural_interaction_v4.ConnectorTests.test_11_persistent_summary_or_insufficient) ... ok
+test_12_long_probe_history_preserves_confirmed_task (test_neural_interaction_v4.ConnectorTests.test_12_long_probe_history_preserves_confirmed_task) ... ok
+test_13_STOP_CANCEL_no_torch_import (test_neural_interaction_v4.ConnectorTests.test_13_STOP_CANCEL_no_torch_import) ... ok
+test_14_private_loss_binding_no_forward_label (test_neural_interaction_v4.ConnectorTests.test_14_private_loss_binding_no_forward_label) ... ok
+test_15_backward_all_models_and_components (test_neural_interaction_v4.ConnectorTests.test_15_backward_all_models_and_components) ... ok
+test_16_public_hidden_field_and_feature_profile_rejected (test_neural_interaction_v4.ConnectorTests.test_16_public_hidden_field_and_feature_profile_rejected) ... ok
+test_17_option_order_invariance (test_neural_interaction_v4.ConnectorTests.test_17_option_order_invariance) ... ok
+test_18_object_gradient_equivariance (test_neural_interaction_v4.ConnectorTests.test_18_object_gradient_equivariance) ... ok
+test_19_tensor_history_bound_and_pending_mask (test_neural_interaction_v4.ConnectorTests.test_19_tensor_history_bound_and_pending_mask) ... ok
+test_20_shared_controls_do_not_have_Full_barrier (test_neural_interaction_v4.ConnectorTests.test_20_shared_controls_do_not_have_Full_barrier) ... ok
+
+----------------------------------------------------------------------
+Ran 37 tests in 1.609s
+
+OK
+{"status": "PASS_PREWORK_ONLY", "tests_run": 37, "elapsed_s": 1.6091172695159912, "checkpoint_loaded": false, "step07_acceptance_passed": false}

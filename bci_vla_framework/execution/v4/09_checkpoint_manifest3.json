@@ -1,0 +1,26 @@
+{
+  "attempt": 3,
+  "method": "Full",
+  "seed": 0,
+  "selected_step": 2400,
+  "files": [
+    {
+      "name": "connector.safetensors",
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/v4_step09_binding_20261018_v3/results/Full_seed0/step2400/connector.safetensors",
+      "local_path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\neural_interaction_v4\\dev\\step09_attempt3\\Full_seed0\\step2400\\connector.safetensors",
+      "bytes": 29142496,
+      "sha256": "427fba987ad3b8a6b0b4e3dafb133f86980345706698b8b8ba48a41969f72464",
+      "verified": true
+    },
+    {
+      "name": "language_lora.safetensors",
+      "remote_path": "/home/oyjt/Scene-aware-BCI-VLA-runs/v4_step09_binding_20261018_v3/results/Full_seed0/step2400/language_lora.safetensors",
+      "local_path": "D:\\Scene_Aware\\bci_vla_framework\\runs\\neural_interaction_v4\\dev\\step09_attempt3\\Full_seed0\\step2400\\language_lora.safetensors",
+      "bytes": 12101928,
+      "sha256": "28c18b8f262e234b49953dda81e732191df3f1700064e61d89813aba4bbf7c3b",
+      "verified": true
+    }
+  ],
+  "all_verified": true,
+  "scope": "selected development weights; not formal model acceptance"
+}

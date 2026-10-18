@@ -1,0 +1,153 @@
+{
+  "scope": "development reload and contrast audit of restricted language pilot",
+  "training": false,
+  "formal_test_accessed": false,
+  "actual_after_grasp_images": true,
+  "stages": [
+    {
+      "name": "adaptation_reloaded",
+      "parameters": 3022848,
+      "weights_sha256": "c1dbc8bd23e8e2590ac2670839a068d82423aa0c4620e734d2d99618afaec380"
+    },
+    {
+      "name": "actual_held_image",
+      "label": "calibration-init0-target0",
+      "image_sha256": "4f1720eba11d2504b1f32b035ab62bfb15fae97d15261e4c79ef5d7d5d75cedc",
+      "predicates": {
+        "cream_cheese_1": {
+          "grasp_contact": true,
+          "lift_m": 0.04466852502945129,
+          "held": true
+        },
+        "wine_bottle_1": {
+          "grasp_contact": false,
+          "lift_m": 3.731459585765151e-13,
+          "held": false
+        }
+      },
+      "trace_step": 67,
+      "source": "existing calibration rollout endpoint, no new action sampling"
+    },
+    {
+      "name": "actual_held_image",
+      "label": "calibration-init0-target1",
+      "image_sha256": "a62028fc471f30734773eadfecd08f65b21e33ac00c7af869d03373d8610eee9",
+      "predicates": {
+        "cream_cheese_1": {
+          "grasp_contact": false,
+          "lift_m": 1.6209256159527285e-14,
+          "held": false
+        },
+        "wine_bottle_1": {
+          "grasp_contact": true,
+          "lift_m": 0.05293750735441949,
+          "held": true
+        }
+      },
+      "trace_step": 71,
+      "source": "existing calibration rollout endpoint, no new action sampling"
+    }
+  ],
+  "fp32_math_control": {
+    "max_abs_cached_vs_teacher_logit": 6.4849853515625e-05,
+    "all_argmax_agree": true,
+    "masked_future_difference": 0.0,
+    "unmasked_negative_control_difference": 8.1827392578125,
+    "TF32_disabled": true,
+    "scope": "isolated diagnostic math check only, not change to low-level precision/configuration"
+  },
+  "status": "AUDIT_COMPLETE",
+  "metrics": {
+    "actual_held_joint_alias": {
+      "exact": 4,
+      "count": 4
+    },
+    "actual_held_phase": {
+      "exact": 4,
+      "count": 4
+    }
+  },
+  "cases": [
+    {
+      "group": "actual_held_phase",
+      "family": "actual_grasp_pick_done",
+      "episode": "calibration-init0-target0",
+      "expected": "Done.",
+      "generated": "Done.",
+      "exact": true,
+      "visual": true
+    },
+    {
+      "group": "actual_held_joint_alias",
+      "family": "actual_grasp_pick_done",
+      "episode": "calibration-init0-target0",
+      "expected": "Done.",
+      "generated": "Done.",
+      "exact": true,
+      "visual": true
+    },
+    {
+      "group": "actual_held_phase",
+      "family": "actual_grasp_next_place",
+      "episode": "calibration-init0-target0",
+      "expected": "Place OBJ_0 into OBJ_2.",
+      "generated": "Place OBJ_0 into OBJ_2.",
+      "exact": true,
+      "visual": true
+    },
+    {
+      "group": "actual_held_joint_alias",
+      "family": "actual_grasp_next_place",
+      "episode": "calibration-init0-target0",
+      "expected": "Place OBJ_1 into OBJ_3.",
+      "generated": "Place OBJ_1 into OBJ_3.",
+      "exact": true,
+      "visual": true
+    },
+    {
+      "group": "actual_held_phase",
+      "family": "actual_grasp_pick_done",
+      "episode": "calibration-init0-target1",
+      "expected": "Done.",
+      "generated": "Done.",
+      "exact": true,
+      "visual": true
+    },
+    {
+      "group": "actual_held_joint_alias",
+      "family": "actual_grasp_pick_done",
+      "episode": "calibration-init0-target1",
+      "expected": "Done.",
+      "generated": "Done.",
+      "exact": true,
+      "visual": true
+    },
+    {
+      "group": "actual_held_phase",
+      "family": "actual_grasp_next_place",
+      "episode": "calibration-init0-target1",
+      "expected": "Place OBJ_1 into OBJ_2.",
+      "generated": "Place OBJ_1 into OBJ_2.",
+      "exact": true,
+      "visual": true
+    },
+    {
+      "group": "actual_held_joint_alias",
+      "family": "actual_grasp_next_place",
+      "episode": "calibration-init0-target1",
+      "expected": "Place OBJ_0 into OBJ_3.",
+      "generated": "Place OBJ_0 into OBJ_3.",
+      "exact": true,
+      "visual": true
+    }
+  ],
+  "cache_max_abs_logit_difference": 0.9375,
+  "cache_argmax_all_agree": true,
+  "off_regression_max_abs": 0.0,
+  "adapters_disabled": true,
+  "checkpoint_loaded": true,
+  "high_level_gate_passed": false,
+  "optimizer_steps": 0,
+  "remote_exit_code": 0,
+  "stderr": ""
+}

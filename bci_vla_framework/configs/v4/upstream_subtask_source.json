@@ -1,0 +1,17 @@
+{
+  "url": "https://github.com/LisavilaLee/openpi_with_subtask",
+  "commit": "99c738a322300166499efa0b614ffa95dbb9b21e",
+  "download": "https://codeload.github.com/LisavilaLee/openpi_with_subtask/zip/refs/heads/main",
+  "archive_sha256": "efecd412d4f9004bea49ca0d0b1d0541e7de41ee2c45b29d71e786d7f377c432",
+  "sha256": {
+    "src/openpi/models/pi0.py": "cf16ad2a89882cfa4f0642edb7a3290806165811fd63a4f94ad1f33c99d3ecc1",
+    "src/openpi/models/tokenizer.py": "841e6e5c2cb7230e68a40c10243c9ff0405fdd41dfca9e93881d1a3d3a16f1e5",
+    "src/openpi/policies/policy.py": "c625fecf880ca22d8b6fd822722950fd6c00ef42b26f1206ec3efd81fbc9dbb0",
+    "src/openpi/models/pi0_config.py": "946efc284ed074941497bfdafe499f0bbc103b4903474727d5868546a85614b1",
+    "LICENSE": "43070e2d4e532684de521b885f385d0841030efa2b1a20bafb76133a5e1379c1",
+    "LICENSE_GEMMA.txt": "3e2c24001f9ef57bf7ec959a3658fbb49cdad113cdf394c264da9d16f9bdd132"
+  },
+  "upstream_files_modified": false,
+  "runtime": "upstream exact methods with PyTorch interop; NOT upstream JAX native checkpoint",
+  "subtask_training_reproduced": false
+}

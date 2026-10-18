@@ -1,0 +1,75 @@
+{
+  "scope": "Restricted public declaration curriculum, actual LIBERO images, simulated BCI; not formal hidden-intent or action evaluation",
+  "status": "FAIL",
+  "config": {
+    "version": "V4-08-development-pilot-1",
+    "scope": "Restricted public declaration curriculum, actual LIBERO images, simulated BCI; not formal hidden-intent or action evaluation",
+    "methods": [
+      "Full",
+      "B3_aux",
+      "B4_aux",
+      "B2"
+    ],
+    "seeds": [
+      0
+    ],
+    "optimizer_steps": 100,
+    "smoke_steps": 6,
+    "batch_size": 1,
+    "connector_learning_rate": 0.0002,
+    "language_lora_learning_rate": 0.0003,
+    "weight_decay": 0.0,
+    "max_grad_norm": 1.0,
+    "loss_weights": {
+      "language": 1.0,
+      "intent": 0.25,
+      "channel": 0.25,
+      "interaction": 0.1,
+      "missing_slots": 0.1,
+      "abstain": 0.1
+    },
+    "checkpoint_steps": [
+      50,
+      100
+    ],
+    "validation_examples": 32,
+    "selection": "Lowest equally weighted validation scene-group language CE; ties select earliest step",
+    "max_text_tokens": 3072,
+    "max_answer_tokens": 32,
+    "no_truncation": true,
+    "shared_language_lora": {
+      "rank": 16,
+      "alpha": 32,
+      "targets": [
+        "q_proj",
+        "v_proj",
+        "o_proj"
+      ],
+      "initialization": "V4-03R step240",
+      "trainable_for_all_methods": true
+    },
+    "base_sha256": "4616e4c1966a5fb063b442ea5d69857f45e873222d839b794634d87d252ab9e7",
+    "initial_language_adapter_sha256": "c1dbc8bd23e8e2590ac2670839a068d82423aa0c4620e734d2d99618afaec380",
+    "test_access": false,
+    "calibration_access": false,
+    "action_sampling": false,
+    "inquiry_policy": "Existing common fixed rule; interaction-head loss is auxiliary, not a deployed learned inquiry policy",
+    "remaining_scope": [
+      "Seeds 1 and 2 and final budget require measured pilot cost",
+      "Real placement phase remains missing",
+      "No claim of general noisy hidden-intent robustness",
+      "B2 has different representation, parameter count and token cost"
+    ]
+  },
+  "formal_test_accessed": false,
+  "calibration_accessed": false,
+  "action_sampling": false,
+  "physical_actions": false,
+  "runs": [],
+  "error": "complete B2 prompt needs 4089 text tokens, budget 3072; no truncation",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/oyjt/Scene-aware-BCI-VLA-runs/v4_step08_training_20261017_v1/execution/v4/step08_real_training.py\", line 212, in main\n    prompt = build_b2_prompt(row['public'], prompt, tokenizer=encode,\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/oyjt/Scene-aware-BCI-VLA-runs/v4_step08_training_20261017_v1/bci_vla/training_v4/text_baseline.py\", line 116, in build_b2_prompt\n    raise ValueError(f\"complete B2 prompt needs {count} text tokens, budget {max_tokens}; no truncation\")\nValueError: complete B2 prompt needs 4089 text tokens, budget 3072; no truncation\n",
+  "elapsed_s": 55.4699007270392,
+  "remote_job": "/home/oyjt/Scene-aware-BCI-VLA-runs/v4_step08_training_20261017_v1",
+  "remote_exit_code": 1,
+  "stderr": ""
+}

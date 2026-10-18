@@ -1,0 +1,961 @@
+{
+  "version": "step09-balanced-public-binding/0.1",
+  "parent": "frozen step04 4.1 train/validation; prior04/08 untouched",
+  "source_mode": "host_local_capture_reconstruction",
+  "counts": {
+    "train": {
+      "public_rows": 432,
+      "private_variants": 456,
+      "base_episodes": 24,
+      "scene_groups": 6,
+      "family_counts": {
+        "declared_pick": 144,
+        "next_pick_symbolic": 144,
+        "missing_action": 24,
+        "missing_source": 24,
+        "conflicting_declarations": 24,
+        "no_response": 24,
+        "missing_destination": 24,
+        "noisy_ambiguous": 24
+      },
+      "binding_rows": 288,
+      "choice_groups": 72,
+      "complete_choice_pairs": 480,
+      "alias_groups": 192,
+      "alias_group_size_distribution": {
+        "2": 96,
+        "1": 96
+      },
+      "joint_alias_pairs": 96,
+      "joint_alias_pairs_by_family": {
+        "declared_pick": 48,
+        "next_pick_symbolic": 48
+      },
+      "binding_language_targets_by_family": {
+        "declared_pick": {
+          "Pick up OBJ_0.": 36,
+          "Pick up OBJ_1.": 36,
+          "Pick up OBJ_2.": 30,
+          "Pick up OBJ_3.": 24,
+          "Pick up OBJ_4.": 18
+        },
+        "next_pick_symbolic": {
+          "Pick up OBJ_0.": 36,
+          "Pick up OBJ_1.": 36,
+          "Pick up OBJ_2.": 30,
+          "Pick up OBJ_3.": 24,
+          "Pick up OBJ_4.": 18
+        }
+      },
+      "physical_target_counts_by_episode_and_family_audit_only": {
+        "04154e43d8656849881935c8": {
+          "declared_pick": {
+            "plate_1": 2,
+            "plate_2": 2,
+            "porcelain_mug_1": 2,
+            "red_coffee_mug_1": 2,
+            "white_yellow_mug_1": 2
+          },
+          "next_pick_symbolic": {
+            "plate_1": 1,
+            "plate_2": 1,
+            "porcelain_mug_1": 1,
+            "red_coffee_mug_1": 1,
+            "white_yellow_mug_1": 1
+          }
+        },
+        "0984040b886020f7c7d38775": {
+          "declared_pick": {
+            "plate_1": 1,
+            "plate_2": 1,
+            "porcelain_mug_1": 1,
+            "red_coffee_mug_1": 1,
+            "white_yellow_mug_1": 1
+          },
+          "next_pick_symbolic": {
+            "plate_1": 2,
+            "plate_2": 2,
+            "porcelain_mug_1": 2,
+            "red_coffee_mug_1": 2,
+            "white_yellow_mug_1": 2
+          }
+        },
+        "09b8103eb9900503cd143c36": {
+          "declared_pick": {
+            "black_book_1": 2,
+            "red_coffee_mug_1": 2
+          },
+          "next_pick_symbolic": {
+            "black_book_1": 1,
+            "red_coffee_mug_1": 1
+          }
+        },
+        "1f78b94654ffba049895ff20": {
+          "declared_pick": {
+            "akita_black_bowl_1": 2,
+            "akita_black_bowl_2": 2,
+            "akita_black_bowl_3": 2,
+            "plate_1": 2
+          },
+          "next_pick_symbolic": {
+            "akita_black_bowl_1": 1,
+            "akita_black_bowl_2": 1,
+            "akita_black_bowl_3": 1,
+            "plate_1": 1
+          }
+        },
+        "223d74563971711fb916a384": {
+          "declared_pick": {
+            "akita_black_bowl_1": 2,
+            "akita_black_bowl_2": 2,
+            "chocolate_pudding_1": 2,
+            "new_salad_dressing_1": 2,
+            "wooden_tray_1": 2
+          },
+          "next_pick_symbolic": {
+            "akita_black_bowl_1": 1,
+            "akita_black_bowl_2": 1,
+            "chocolate_pudding_1": 1,
+            "new_salad_dressing_1": 1,
+            "wooden_tray_1": 1
+          }
+        },
+        "2a97a8cf372c38008bb97a22": {
+          "declared_pick": {
+            "black_book_1": 2,
+            "porcelain_mug_1": 2,
+            "red_coffee_mug_1": 2
+          },
+          "next_pick_symbolic": {
+            "black_book_1": 1,
+            "porcelain_mug_1": 1,
+            "red_coffee_mug_1": 1
+          }
+        },
+        "2db4ddf92e39816c249d5b8c": {
+          "declared_pick": {
+            "alphabet_soup_1": 2,
+            "basket_1": 2,
+            "cream_cheese_1": 2,
+            "ketchup_1": 2,
+            "tomato_sauce_1": 2
+          },
+          "next_pick_symbolic": {
+            "alphabet_soup_1": 1,
+            "basket_1": 1,
+            "cream_cheese_1": 1,
+            "ketchup_1": 1,
+            "tomato_sauce_1": 1
+          }
+        },
+        "46090868d3ca5183d06c31d4": {
+          "declared_pick": {
+            "plate_1": 2,
+            "plate_2": 2,
+            "porcelain_mug_1": 2,
+            "red_coffee_mug_1": 2,
+            "white_yellow_mug_1": 2
+          },
+          "next_pick_symbolic": {
+            "plate_1": 1,
+            "plate_2": 1,
+            "porcelain_mug_1": 1,
+            "red_coffee_mug_1": 1,
+            "white_yellow_mug_1": 1
+          }
+        },
+        "4e9f98b02d0aa8f685be49dd": {
+          "declared_pick": {
+            "alphabet_soup_1": 1,
+            "basket_1": 1,
+            "cream_cheese_1": 1,
+            "ketchup_1": 1,
+            "tomato_sauce_1": 1
+          },
+          "next_pick_symbolic": {
+            "alphabet_soup_1": 2,
+            "basket_1": 2,
+            "cream_cheese_1": 2,
+            "ketchup_1": 2,
+            "tomato_sauce_1": 2
+          }
+        },
+        "64fcf448cd902179694b3865": {
+          "declared_pick": {
+            "black_book_1": 1,
+            "red_coffee_mug_1": 1
+          },
+          "next_pick_symbolic": {
+            "black_book_1": 2,
+            "red_coffee_mug_1": 2
+          }
+        },
+        "65f82be576efd9a4d3381acc": {
+          "declared_pick": {
+            "akita_black_bowl_1": 1,
+            "akita_black_bowl_2": 1,
+            "akita_black_bowl_3": 1,
+            "plate_1": 1
+          },
+          "next_pick_symbolic": {
+            "akita_black_bowl_1": 2,
+            "akita_black_bowl_2": 2,
+            "akita_black_bowl_3": 2,
+            "plate_1": 2
+          }
+        },
+        "6601432a410389a03c224d0b": {
+          "declared_pick": {
+            "alphabet_soup_1": 2,
+            "basket_1": 2,
+            "cream_cheese_1": 2,
+            "ketchup_1": 2,
+            "tomato_sauce_1": 2
+          },
+          "next_pick_symbolic": {
+            "alphabet_soup_1": 1,
+            "basket_1": 1,
+            "cream_cheese_1": 1,
+            "ketchup_1": 1,
+            "tomato_sauce_1": 1
+          }
+        },
+        "67c5dafe72c0b3ace0f3fd3e": {
+          "declared_pick": {
+            "black_book_1": 2,
+            "red_coffee_mug_1": 2
+          },
+          "next_pick_symbolic": {
+            "black_book_1": 1,
+            "red_coffee_mug_1": 1
+          }
+        },
+        "6914de021eca3ca8b3623068": {
+          "declared_pick": {
+            "akita_black_bowl_1": 2,
+            "akita_black_bowl_2": 2,
+            "akita_black_bowl_3": 2,
+            "plate_1": 2
+          },
+          "next_pick_symbolic": {
+            "akita_black_bowl_1": 1,
+            "akita_black_bowl_2": 1,
+            "akita_black_bowl_3": 1,
+            "plate_1": 1
+          }
+        },
+        "6c8727dd8d0fbad1eabe4812": {
+          "declared_pick": {
+            "akita_black_bowl_1": 1,
+            "akita_black_bowl_2": 1,
+            "chocolate_pudding_1": 1,
+            "new_salad_dressing_1": 1,
+            "wooden_tray_1": 1
+          },
+          "next_pick_symbolic": {
+            "akita_black_bowl_1": 2,
+            "akita_black_bowl_2": 2,
+            "chocolate_pudding_1": 2,
+            "new_salad_dressing_1": 2,
+            "wooden_tray_1": 2
+          }
+        },
+        "70ccc7920d34f4976ad77fdb": {
+          "declared_pick": {
+            "alphabet_soup_1": 1,
+            "basket_1": 1,
+            "cream_cheese_1": 1,
+            "ketchup_1": 1,
+            "tomato_sauce_1": 1
+          },
+          "next_pick_symbolic": {
+            "alphabet_soup_1": 2,
+            "basket_1": 2,
+            "cream_cheese_1": 2,
+            "ketchup_1": 2,
+            "tomato_sauce_1": 2
+          }
+        },
+        "7174f73d7055530f63773963": {
+          "declared_pick": {
+            "black_book_1": 1,
+            "red_coffee_mug_1": 1
+          },
+          "next_pick_symbolic": {
+            "black_book_1": 2,
+            "red_coffee_mug_1": 2
+          }
+        },
+        "7c1b421e001fe3762a4d33fe": {
+          "declared_pick": {
+            "akita_black_bowl_1": 1,
+            "akita_black_bowl_2": 1,
+            "akita_black_bowl_3": 1,
+            "plate_1": 1
+          },
+          "next_pick_symbolic": {
+            "akita_black_bowl_1": 2,
+            "akita_black_bowl_2": 2,
+            "akita_black_bowl_3": 2,
+            "plate_1": 2
+          }
+        },
+        "91d9a10410845c55cbc2cefc": {
+          "declared_pick": {
+            "akita_black_bowl_1": 2,
+            "akita_black_bowl_2": 2,
+            "chocolate_pudding_1": 2,
+            "new_salad_dressing_1": 2,
+            "wooden_tray_1": 2
+          },
+          "next_pick_symbolic": {
+            "akita_black_bowl_1": 1,
+            "akita_black_bowl_2": 1,
+            "chocolate_pudding_1": 1,
+            "new_salad_dressing_1": 1,
+            "wooden_tray_1": 1
+          }
+        },
+        "b3822826721b2af0c156cace": {
+          "declared_pick": {
+            "akita_black_bowl_1": 1,
+            "akita_black_bowl_2": 1,
+            "chocolate_pudding_1": 1,
+            "new_salad_dressing_1": 1,
+            "wooden_tray_1": 1
+          },
+          "next_pick_symbolic": {
+            "akita_black_bowl_1": 2,
+            "akita_black_bowl_2": 2,
+            "chocolate_pudding_1": 2,
+            "new_salad_dressing_1": 2,
+            "wooden_tray_1": 2
+          }
+        },
+        "bcaaaade5149b94f01a42ed9": {
+          "declared_pick": {
+            "plate_1": 1,
+            "plate_2": 1,
+            "porcelain_mug_1": 1,
+            "red_coffee_mug_1": 1,
+            "white_yellow_mug_1": 1
+          },
+          "next_pick_symbolic": {
+            "plate_1": 2,
+            "plate_2": 2,
+            "porcelain_mug_1": 2,
+            "red_coffee_mug_1": 2,
+            "white_yellow_mug_1": 2
+          }
+        },
+        "ca3b07c2533c3c18c1047dea": {
+          "declared_pick": {
+            "black_book_1": 1,
+            "porcelain_mug_1": 1,
+            "red_coffee_mug_1": 1
+          },
+          "next_pick_symbolic": {
+            "black_book_1": 2,
+            "porcelain_mug_1": 2,
+            "red_coffee_mug_1": 2
+          }
+        },
+        "e59a2ecd6fcdc4f613abd127": {
+          "declared_pick": {
+            "black_book_1": 2,
+            "porcelain_mug_1": 2,
+            "red_coffee_mug_1": 2
+          },
+          "next_pick_symbolic": {
+            "black_book_1": 1,
+            "porcelain_mug_1": 1,
+            "red_coffee_mug_1": 1
+          }
+        },
+        "f286c7db45beae1e42c827f0": {
+          "declared_pick": {
+            "black_book_1": 1,
+            "porcelain_mug_1": 1,
+            "red_coffee_mug_1": 1
+          },
+          "next_pick_symbolic": {
+            "black_book_1": 2,
+            "porcelain_mug_1": 2,
+            "red_coffee_mug_1": 2
+          }
+        }
+      },
+      "point_target_alias_distribution_including_auxiliary": {
+        "OBJ_0": 86,
+        "OBJ_1": 86,
+        "OBJ_2": 68,
+        "OBJ_3": 54,
+        "OBJ_4": 42
+      },
+      "channel_targets": 24,
+      "channel_outcomes": {
+        "True": 18,
+        "False": 6
+      },
+      "counterfactual_anchors": 24,
+      "episode_counts": {
+        "04154e43d8656849881935c8": 21,
+        "0984040b886020f7c7d38775": 21,
+        "09b8103eb9900503cd143c36": 12,
+        "1f78b94654ffba049895ff20": 18,
+        "223d74563971711fb916a384": 21,
+        "2a97a8cf372c38008bb97a22": 15,
+        "2db4ddf92e39816c249d5b8c": 21,
+        "46090868d3ca5183d06c31d4": 21,
+        "4e9f98b02d0aa8f685be49dd": 21,
+        "64fcf448cd902179694b3865": 12,
+        "65f82be576efd9a4d3381acc": 18,
+        "6601432a410389a03c224d0b": 21,
+        "67c5dafe72c0b3ace0f3fd3e": 12,
+        "6914de021eca3ca8b3623068": 18,
+        "6c8727dd8d0fbad1eabe4812": 21,
+        "70ccc7920d34f4976ad77fdb": 21,
+        "7174f73d7055530f63773963": 12,
+        "7c1b421e001fe3762a4d33fe": 18,
+        "91d9a10410845c55cbc2cefc": 21,
+        "b3822826721b2af0c156cace": 21,
+        "bcaaaade5149b94f01a42ed9": 21,
+        "ca3b07c2533c3c18c1047dea": 15,
+        "e59a2ecd6fcdc4f613abd127": 15,
+        "f286c7db45beae1e42c827f0": 15
+      }
+    },
+    "validation": {
+      "public_rows": 120,
+      "private_variants": 128,
+      "base_episodes": 8,
+      "scene_groups": 2,
+      "family_counts": {
+        "declared_pick": 36,
+        "next_pick_symbolic": 36,
+        "missing_action": 8,
+        "missing_source": 8,
+        "conflicting_declarations": 8,
+        "no_response": 8,
+        "missing_destination": 8,
+        "noisy_ambiguous": 8
+      },
+      "binding_rows": 72,
+      "choice_groups": 24,
+      "complete_choice_pairs": 84,
+      "alias_groups": 48,
+      "alias_group_size_distribution": {
+        "2": 24,
+        "1": 24
+      },
+      "joint_alias_pairs": 24,
+      "joint_alias_pairs_by_family": {
+        "declared_pick": 12,
+        "next_pick_symbolic": 12
+      },
+      "binding_language_targets_by_family": {
+        "declared_pick": {
+          "Pick up OBJ_0.": 12,
+          "Pick up OBJ_1.": 12,
+          "Pick up OBJ_2.": 6,
+          "Pick up OBJ_3.": 6
+        },
+        "next_pick_symbolic": {
+          "Pick up OBJ_0.": 12,
+          "Pick up OBJ_1.": 12,
+          "Pick up OBJ_2.": 6,
+          "Pick up OBJ_3.": 6
+        }
+      },
+      "physical_target_counts_by_episode_and_family_audit_only": {
+        "3ca46f06f2e98c7585e4453d": {
+          "declared_pick": {
+            "plate_1": 2,
+            "white_bowl_1": 2
+          },
+          "next_pick_symbolic": {
+            "plate_1": 1,
+            "white_bowl_1": 1
+          }
+        },
+        "3e7f4a934272c0ac1dcfa709": {
+          "declared_pick": {
+            "plate_1": 1,
+            "white_bowl_1": 1
+          },
+          "next_pick_symbolic": {
+            "plate_1": 2,
+            "white_bowl_1": 2
+          }
+        },
+        "66c54cbd120fded5bec9b5b7": {
+          "declared_pick": {
+            "chocolate_pudding_1": 2,
+            "plate_1": 2,
+            "porcelain_mug_1": 2,
+            "red_coffee_mug_1": 2
+          },
+          "next_pick_symbolic": {
+            "chocolate_pudding_1": 1,
+            "plate_1": 1,
+            "porcelain_mug_1": 1,
+            "red_coffee_mug_1": 1
+          }
+        },
+        "7d02da34438c898381a919fe": {
+          "declared_pick": {
+            "chocolate_pudding_1": 1,
+            "plate_1": 1,
+            "porcelain_mug_1": 1,
+            "red_coffee_mug_1": 1
+          },
+          "next_pick_symbolic": {
+            "chocolate_pudding_1": 2,
+            "plate_1": 2,
+            "porcelain_mug_1": 2,
+            "red_coffee_mug_1": 2
+          }
+        },
+        "8a73e47aa9c92d370ca37806": {
+          "declared_pick": {
+            "plate_1": 2,
+            "white_bowl_1": 2
+          },
+          "next_pick_symbolic": {
+            "plate_1": 1,
+            "white_bowl_1": 1
+          }
+        },
+        "8ce9cefdbfafe24aab2e9805": {
+          "declared_pick": {
+            "chocolate_pudding_1": 2,
+            "plate_1": 2,
+            "porcelain_mug_1": 2,
+            "red_coffee_mug_1": 2
+          },
+          "next_pick_symbolic": {
+            "chocolate_pudding_1": 1,
+            "plate_1": 1,
+            "porcelain_mug_1": 1,
+            "red_coffee_mug_1": 1
+          }
+        },
+        "a733559f6120147aa83fb6dd": {
+          "declared_pick": {
+            "plate_1": 1,
+            "white_bowl_1": 1
+          },
+          "next_pick_symbolic": {
+            "plate_1": 2,
+            "white_bowl_1": 2
+          }
+        },
+        "dfaa20a11afa4e9a7221ad55": {
+          "declared_pick": {
+            "chocolate_pudding_1": 1,
+            "plate_1": 1,
+            "porcelain_mug_1": 1,
+            "red_coffee_mug_1": 1
+          },
+          "next_pick_symbolic": {
+            "chocolate_pudding_1": 2,
+            "plate_1": 2,
+            "porcelain_mug_1": 2,
+            "red_coffee_mug_1": 2
+          }
+        }
+      },
+      "point_target_alias_distribution_including_auxiliary": {
+        "OBJ_0": 30,
+        "OBJ_1": 28,
+        "OBJ_2": 14,
+        "OBJ_3": 16
+      },
+      "channel_targets": 8,
+      "channel_outcomes": {
+        "True": 6,
+        "False": 2
+      },
+      "counterfactual_anchors": 8,
+      "episode_counts": {
+        "3ca46f06f2e98c7585e4453d": 12,
+        "3e7f4a934272c0ac1dcfa709": 12,
+        "66c54cbd120fded5bec9b5b7": 18,
+        "7d02da34438c898381a919fe": 18,
+        "8a73e47aa9c92d370ca37806": 12,
+        "8ce9cefdbfafe24aab2e9805": 18,
+        "a733559f6120147aa83fb6dd": 12,
+        "dfaa20a11afa4e9a7221ad55": 18
+      }
+    }
+  },
+  "config": {
+    "version": "step09-balanced-public-binding/0.1",
+    "max_rows": {
+      "train": 512,
+      "validation": 128
+    },
+    "source_partitions": [
+      "train",
+      "validation"
+    ],
+    "binding_families": [
+      "declared_pick",
+      "next_pick_symbolic"
+    ],
+    "target_balance": "Every physical candidate exactly once per family and fixed native prompt",
+    "alias_policy": "Complete non-identity cyclic permutation for alternating family within each scene's episode sequence",
+    "auxiliary_families": [
+      "missing_action",
+      "missing_source",
+      "conflicting_declarations",
+      "no_response",
+      "missing_destination",
+      "noisy_ambiguous"
+    ],
+    "selection": "Keep every original episode; fail before writing if complete groups exceed cap",
+    "same_prompt_multi_choice_groups": true,
+    "private_variants_weighted_once": true,
+    "public_only_teacher": true,
+    "frozen04_and08_overwrite": false,
+    "calibration_or_test_access": false,
+    "general_hidden_intent_supervision_ready": false,
+    "place_phase_supervision_ready": false
+  },
+  "source_files_read": [
+    {
+      "path": "captures/capture_manifest.json",
+      "sha256": "3d6c103bceb6fd4cdf5f75b11ab909bb04dd74dedf76681888915902a1871fdb",
+      "usage": "cross-partition metadata; filter before example/image processing"
+    },
+    {
+      "path": "captures/images/04154e43d8656849881935c8_0.png",
+      "sha256": "7c26e311706497ca62a6652cc5cdfc720c607787f2bdc6562382fb1a9a8c86a1"
+    },
+    {
+      "path": "captures/images/04154e43d8656849881935c8_1.png",
+      "sha256": "247e3bdfe8b9910a493af4392eb5be3597519700c86460a124a656a581540b8a"
+    },
+    {
+      "path": "captures/images/0984040b886020f7c7d38775_0.png",
+      "sha256": "f74dcdaf158724415a549e6b35c67dc860ff4ecf0af6986798bc01790cd0f990"
+    },
+    {
+      "path": "captures/images/0984040b886020f7c7d38775_1.png",
+      "sha256": "e9d0759c2d53062e7bd8c0c4bfbe7faff21ac410b58368f6859faa2d49323c18"
+    },
+    {
+      "path": "captures/images/09b8103eb9900503cd143c36_0.png",
+      "sha256": "866902c040ec89b13682ad59b653f3f33354de1e2e8c7feeb66fce1078a3b7c7"
+    },
+    {
+      "path": "captures/images/09b8103eb9900503cd143c36_1.png",
+      "sha256": "aab87c7773c082ec77b399c59c83cd76793ef94563a2f5617af9c5fc9645503c"
+    },
+    {
+      "path": "captures/images/1f78b94654ffba049895ff20_0.png",
+      "sha256": "8a93a848f0522735349c9b6c80da251b4304f0727fefc2f5c14d3d020c27899c"
+    },
+    {
+      "path": "captures/images/1f78b94654ffba049895ff20_1.png",
+      "sha256": "54484fb8380f5f8cf7aad4e15b2e18e21e2b8d020d360fe9086fff4c81150e4f"
+    },
+    {
+      "path": "captures/images/223d74563971711fb916a384_0.png",
+      "sha256": "d533555ad96f5c93ed1872cda7bedb2822a3f417c34407132711ad015fba145d"
+    },
+    {
+      "path": "captures/images/223d74563971711fb916a384_1.png",
+      "sha256": "cdbceac6fc5b65c09f3b417c94af333b4f1ad3ca0b768badc6d5fab249579faa"
+    },
+    {
+      "path": "captures/images/2a97a8cf372c38008bb97a22_0.png",
+      "sha256": "b06f328bbc42c5dcedfe8b70d6514c87a11847c7e99340ac6834e0865903f108"
+    },
+    {
+      "path": "captures/images/2a97a8cf372c38008bb97a22_1.png",
+      "sha256": "1e2e75b208ea25d954a6414191c1b54aea1529bf92c494c011f6d334f7b8f836"
+    },
+    {
+      "path": "captures/images/2db4ddf92e39816c249d5b8c_0.png",
+      "sha256": "a9349c5464126196d4b9f09e38e3946556c8e097381d9e32b7f2b3d02d506505"
+    },
+    {
+      "path": "captures/images/2db4ddf92e39816c249d5b8c_1.png",
+      "sha256": "7c191eb9a6fb40608b9c894bdebe21c63d4301a3a70166fac53531a64e54ba90"
+    },
+    {
+      "path": "captures/images/46090868d3ca5183d06c31d4_0.png",
+      "sha256": "81e1e38138c222eec8c9339fcce2963a41d6b0bac54ec9f26a768dfb77858f0a"
+    },
+    {
+      "path": "captures/images/46090868d3ca5183d06c31d4_1.png",
+      "sha256": "f8381cd86771c3cdb91134b8ea560f40799fabbef335990a67192d0cd8436267"
+    },
+    {
+      "path": "captures/images/4e9f98b02d0aa8f685be49dd_0.png",
+      "sha256": "973bf2ed6e4b194d1dc4f14c3b4aa3daa5791151997eebd6db58efc31bf8248c"
+    },
+    {
+      "path": "captures/images/4e9f98b02d0aa8f685be49dd_1.png",
+      "sha256": "535990d0a8c9099b13593a89db1b4454976c8bfa78aee38ee83318df12c8a3b9"
+    },
+    {
+      "path": "captures/images/64fcf448cd902179694b3865_0.png",
+      "sha256": "e16b6c94a5f357ce50e662b559a630c16b41831b0f9957383ea29f8e0a29322f"
+    },
+    {
+      "path": "captures/images/64fcf448cd902179694b3865_1.png",
+      "sha256": "e1a4c548688a827265225423e493edd84990e6ce8102b4a971e1fab94a634362"
+    },
+    {
+      "path": "captures/images/65f82be576efd9a4d3381acc_0.png",
+      "sha256": "204188f9af279d6dff77851f4f346b3d12375d9a0045e5e2d4693b6c2a1b3e21"
+    },
+    {
+      "path": "captures/images/65f82be576efd9a4d3381acc_1.png",
+      "sha256": "64afa6a85c711b7e358d3be19b289d71affcace08d3d701eb121ec97e1a261a9"
+    },
+    {
+      "path": "captures/images/6601432a410389a03c224d0b_0.png",
+      "sha256": "5f5651e630b084c5bdf44f606e4ffaf044b8568c76b0ea234edc84c06b8b4456"
+    },
+    {
+      "path": "captures/images/6601432a410389a03c224d0b_1.png",
+      "sha256": "103dfccff34c15ef9e8fd07a7893bd52d22b263cdebbd8044d2044aec47e4c36"
+    },
+    {
+      "path": "captures/images/67c5dafe72c0b3ace0f3fd3e_0.png",
+      "sha256": "2c799fd8ff6d18c4a16d1a0584cc5d88671c683b4d75593bd191f97e31a03264"
+    },
+    {
+      "path": "captures/images/67c5dafe72c0b3ace0f3fd3e_1.png",
+      "sha256": "63209c61af6926d82e2e19661ed296ac04cd26e359532274621c24b87cd1b570"
+    },
+    {
+      "path": "captures/images/6914de021eca3ca8b3623068_0.png",
+      "sha256": "a40e4f45c9b6964441f8fa51e0a1c4dbb58a07d9ac737bd3b1a8fcde6eee5e85"
+    },
+    {
+      "path": "captures/images/6914de021eca3ca8b3623068_1.png",
+      "sha256": "65ff92689bc5e670c39ec2d88bc5882b6bf3ca9cdbf39ab8b2f8379bbe8f01c5"
+    },
+    {
+      "path": "captures/images/6c8727dd8d0fbad1eabe4812_0.png",
+      "sha256": "2ed61a4a60728dcfc7d70d42ddd2d6c4fc80cbc10d64d299dabda2e37bf0b88a"
+    },
+    {
+      "path": "captures/images/6c8727dd8d0fbad1eabe4812_1.png",
+      "sha256": "b9a13e31b805563b258ba08c5d6118da5e84bffffc877ef71918a3519a9bd023"
+    },
+    {
+      "path": "captures/images/70ccc7920d34f4976ad77fdb_0.png",
+      "sha256": "dda10fac95e8e4f9b85c0504e54da7296574a329ebd689701c0479c1a3fbbb6b"
+    },
+    {
+      "path": "captures/images/70ccc7920d34f4976ad77fdb_1.png",
+      "sha256": "b27a906206948309c2ef91c7ce946878fde4c6245629002644c40846810d6990"
+    },
+    {
+      "path": "captures/images/7174f73d7055530f63773963_0.png",
+      "sha256": "59e8969855ed98ac25db5266c86b689f7373f19736098ba6f8937eefd6ec6438"
+    },
+    {
+      "path": "captures/images/7174f73d7055530f63773963_1.png",
+      "sha256": "b3c3a5cf935170610adaf88f1dfcc28d340f8195d07db04147220edb20822f9b"
+    },
+    {
+      "path": "captures/images/7c1b421e001fe3762a4d33fe_0.png",
+      "sha256": "d9dcf5513bd38790272ecf7f608cf75110ee855e902cf3ba6142233a82e8c80f"
+    },
+    {
+      "path": "captures/images/7c1b421e001fe3762a4d33fe_1.png",
+      "sha256": "6553a5640d6c4506e5b36feb4de8cb52556a5eb2dc823e600797fa17ce976c4c"
+    },
+    {
+      "path": "captures/images/91d9a10410845c55cbc2cefc_0.png",
+      "sha256": "f41bbf5cadae7fe830c72748ddbb3411318463005b8518fa759693165491d3c0"
+    },
+    {
+      "path": "captures/images/91d9a10410845c55cbc2cefc_1.png",
+      "sha256": "66dd69b5726c821f9004e0dca266878ec91b655f4840bfa34a6810fd811858cc"
+    },
+    {
+      "path": "captures/images/b3822826721b2af0c156cace_0.png",
+      "sha256": "35a977e9fe6bd64b3e63ec3d14b3956867a7ab27fd3c10d4c6d08c67e7121b59"
+    },
+    {
+      "path": "captures/images/b3822826721b2af0c156cace_1.png",
+      "sha256": "1612bb94f007ad7d1129746cf5b9934a05cad99d29bba53d72978ae817d29c4e"
+    },
+    {
+      "path": "captures/images/bcaaaade5149b94f01a42ed9_0.png",
+      "sha256": "23a652f2e142b115312997e2ba3fecadc2d8d07776abf59aaed05d0b12549407"
+    },
+    {
+      "path": "captures/images/bcaaaade5149b94f01a42ed9_1.png",
+      "sha256": "b94ab2da869c5c34054a0756b5c135342e0c9603d665c90f0b8073bc09b96b36"
+    },
+    {
+      "path": "captures/images/ca3b07c2533c3c18c1047dea_0.png",
+      "sha256": "67dbbae9779b32821e8e5698316dbc041ac50cb7db0f3bdf2be5707f3089b057"
+    },
+    {
+      "path": "captures/images/ca3b07c2533c3c18c1047dea_1.png",
+      "sha256": "04c961a8bdfdf21058b92dc5d5b7e1c2d0e48ed16139f5b51c988933f05498de"
+    },
+    {
+      "path": "captures/images/e59a2ecd6fcdc4f613abd127_0.png",
+      "sha256": "7638138e63d19e4cbf639d48dfee207346f7adcc1999ae465299f741b96c67a4"
+    },
+    {
+      "path": "captures/images/e59a2ecd6fcdc4f613abd127_1.png",
+      "sha256": "bf619e422e590a2161bd751f73b260af315ee7b09978b99fa564ed7483a8d9c9"
+    },
+    {
+      "path": "captures/images/f286c7db45beae1e42c827f0_0.png",
+      "sha256": "0eee8395d4dee4feaa6ae445d36f87a1b89eba2032c5c611dbb07d321197322f"
+    },
+    {
+      "path": "captures/images/f286c7db45beae1e42c827f0_1.png",
+      "sha256": "c0d197645c4f90e99d36dcec8e45c79f1602caf077cd2d3e90ceaeac90b8c852"
+    },
+    {
+      "path": "captures/images/3ca46f06f2e98c7585e4453d_0.png",
+      "sha256": "a9ec504cb31644a1ccfc98e659e00e17c715f66f8f35e7656b062c7d4ea2f74e"
+    },
+    {
+      "path": "captures/images/3ca46f06f2e98c7585e4453d_1.png",
+      "sha256": "4cf7d4448212498da9294d2b330ced79b70955820786f014fe509de1172e176c"
+    },
+    {
+      "path": "captures/images/3e7f4a934272c0ac1dcfa709_0.png",
+      "sha256": "679828cf82849782b1af1d081cdf31325b303e1b9124ad8e74c9078352fd27fa"
+    },
+    {
+      "path": "captures/images/3e7f4a934272c0ac1dcfa709_1.png",
+      "sha256": "aaf2c82d91131889ee5b9dfffac788ac658db334b5656e99573f5ad3bcad641c"
+    },
+    {
+      "path": "captures/images/66c54cbd120fded5bec9b5b7_0.png",
+      "sha256": "d406eaeb8f26f6900631ef76eb8637453a6ccf8a4872b574cd33dddf280e069b"
+    },
+    {
+      "path": "captures/images/66c54cbd120fded5bec9b5b7_1.png",
+      "sha256": "886c166dc8740c6fc890529e6f38f73374c55a4069d8e9fbf6e02f1509be9f5b"
+    },
+    {
+      "path": "captures/images/7d02da34438c898381a919fe_0.png",
+      "sha256": "96d44fb7b7bb260b5b72c3bafdbe07ef7724cc5ee347d64ac4ad4831a5c37286"
+    },
+    {
+      "path": "captures/images/7d02da34438c898381a919fe_1.png",
+      "sha256": "9fda586d4e8cb6f8a7c3e63f3185e34abd385f50c09c51bdd81b1d363b0896ea"
+    },
+    {
+      "path": "captures/images/8a73e47aa9c92d370ca37806_0.png",
+      "sha256": "065e1bf92ca2c47b5aa97363ba841714945d60a975de5f708749a3f985cec270"
+    },
+    {
+      "path": "captures/images/8a73e47aa9c92d370ca37806_1.png",
+      "sha256": "6d2f231c856c3f536ac1802bf7f9eef78e15467d5d2f375e09a45cf7a6ea18b2"
+    },
+    {
+      "path": "captures/images/8ce9cefdbfafe24aab2e9805_0.png",
+      "sha256": "6c8b0f1f2f2f82880888ba2de96a8bdedbed9ae636bd5a790abeeb3421da73d0"
+    },
+    {
+      "path": "captures/images/8ce9cefdbfafe24aab2e9805_1.png",
+      "sha256": "4da698b983ca3dd55486e653087747bc73661ab90ccce098f32631430391f3a8"
+    },
+    {
+      "path": "captures/images/a733559f6120147aa83fb6dd_0.png",
+      "sha256": "8435982ecb1ab00b8178d57e2e07616b7b441b50529e66109861441c1762b6c8"
+    },
+    {
+      "path": "captures/images/a733559f6120147aa83fb6dd_1.png",
+      "sha256": "b446a812f80903dae44072277c4a3e9071a7383b33d32915521f4443ac4cbe10"
+    },
+    {
+      "path": "captures/images/dfaa20a11afa4e9a7221ad55_0.png",
+      "sha256": "fcbfa81e987d451c7722652633200ea19577e59d467231607c38deac5b0d6481"
+    },
+    {
+      "path": "captures/images/dfaa20a11afa4e9a7221ad55_1.png",
+      "sha256": "4ad885003a6e5d9a340e4f3224a9e7eeaec8714461c9e56f79521dfbbd909ad0"
+    }
+  ],
+  "files": [
+    {
+      "path": "train/public_input.jsonl",
+      "sha256": "779c0775089e48905047864e128bf31baef8cc254e8e0e7e4ae43c64ab5948b3"
+    },
+    {
+      "path": "train/private_labels.jsonl",
+      "sha256": "12b98845f07d5acf24ee6e5a94eada2c61aa79192b7e8a3e65b94059928cb230"
+    },
+    {
+      "path": "train/supervision.jsonl",
+      "sha256": "3e1a1b74d26777dd2ffc0c2da444f2753c37fc220a8fb911ca560adaa7046d4e"
+    },
+    {
+      "path": "train/choice_groups.jsonl",
+      "sha256": "f75d36b369ab9d434bbb60bca8fa451394f72e7fd64e058faf17105d396a5379"
+    },
+    {
+      "path": "train/joint_alias_pairs.jsonl",
+      "sha256": "510b218afd9a669157a458e86f79c1b38952b7822b21f7ac7be057f48f16afa7"
+    },
+    {
+      "path": "validation/public_input.jsonl",
+      "sha256": "d68508602f8f98a4f76d56cae6d20bc60a231791626e34792557b9ef653d3897"
+    },
+    {
+      "path": "validation/private_labels.jsonl",
+      "sha256": "1185af372720612c3f48f83943231530ba973084c826441a8b3593b04803a6c8"
+    },
+    {
+      "path": "validation/supervision.jsonl",
+      "sha256": "1f21d82847be6e605d081dcd834bf4f64b4db254d448241d08b776ae9103eb1a"
+    },
+    {
+      "path": "validation/choice_groups.jsonl",
+      "sha256": "3ad2e69016c7f41ab4f7df12a37a2965cf1a553576daac3cb1c96261302ea478"
+    },
+    {
+      "path": "validation/joint_alias_pairs.jsonl",
+      "sha256": "0da83ec5d85ab2ed538bc0d021e7e1e12fbd769702c66fd0c01f1e0e455fc7c9"
+    }
+  ],
+  "cross_partition_capture_metadata_read": true,
+  "calibration_examples_processed": false,
+  "test_examples_processed": false,
+  "calibration_accessed": false,
+  "formal_test_accessed": false,
+  "real_EEG": false,
+  "physical_robot": false,
+  "new_dynamics_rollout": false,
+  "actual_LIBERO_images": true,
+  "simulated_BCI_only": true,
+  "source_data_modified": false,
+  "same_public_hidden_variants_weighted_once": true,
+  "complete_episode_candidate_alias_groups_never_truncated": true,
+  "module_alias_ID_features_added": false,
+  "shared_prompt_contains_selected_answer": false,
+  "same_information_for_methods": [
+    "Full",
+    "B2",
+    "B3",
+    "B4"
+  ],
+  "general_hidden_intent_supervision_ready": false,
+  "place_phase_supervision_ready": false,
+  "scope": "public-only explicit declaration teaching for token-language binding repair",
+  "limitations": [
+    "Balanced declaration targets do not establish hidden intent under arbitrary EEG decoder noise.",
+    "next_pick_symbolic remains TEXT ONLY with declared empty gripper, not manipulation phase evidence.",
+    "Target/alias/pair sidecars are sampler/loss audit metadata, never connector forward features.",
+    "Alias counts across all scenes reflect varying candidate counts; within each fixed prompt all candidates are exactly balanced.",
+    "More rows/pairs/aliases reuse the same 24 train and 8 validation episodes and are not new independent robot experiments."
+  ]
+}
